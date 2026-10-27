@@ -36,17 +36,18 @@ module hub75_scan #(
     reg [ROW_W-1:0] dwell_count;
     reg [PIX_W-1:0] pixel_count;
     reg [4:0] row_count;
+    reg [6:0] anim_phase;
 
+    // Three color bands circulate horizontally. The 7-bit arithmetic wraps at 128.
     function [2:0] test_pixel;
         input [6:0] x;
-        input [4:0] y;
+        input [6:0] phase;
+        reg [6:0] pos;
         begin
-            case (x[6:5])
-                2'd0: test_pixel = 3'b100;
-                2'd1: test_pixel = 3'b010;
-                2'd2: test_pixel = 3'b001;
-                default: test_pixel = (y[0] ? 3'b111 : 3'b000);
-            endcase
+            pos = x + phase;
+            if (pos < 7'd43) test_pixel = 3'b100;
+            else if (pos < 7'd86) test_pixel = 3'b010;
+            else test_pixel = 3'b001;
         end
     endfunction
 
@@ -63,12 +64,13 @@ module hub75_scan #(
             hub_lat    <= 0;
             hub_oe_n   <= 1;
             hub_addr   <= 0;
+            anim_phase <= 0;
         end else begin
             case (state)
                 S_SHIFT_LOW: begin
                     hub_oe_n <= 1;
-                    rgb1 <= test_pixel(SHIFT_PIXELS-1-pixel_count, row_count);
-                    rgb2 <= test_pixel(SHIFT_PIXELS-1-pixel_count, row_count + 5'd7);
+                    rgb1 <= test_pixel(SHIFT_PIXELS-1-pixel_count, anim_phase);
+                    rgb2 <= test_pixel(SHIFT_PIXELS-1-pixel_count, anim_phase);
                     if (div_count == HALF_DIV-1) begin
                         div_count <= 0;
                         hub_clk <= 1;
@@ -108,8 +110,10 @@ module hub75_scan #(
                     else begin
                         dwell_count <= 0;
                         hub_oe_n <= 1;
-                        if (row_count == SCAN_ROWS-1) row_count <= 0;
-                        else row_count <= row_count + 1'b1;
+                        if (row_count == SCAN_ROWS-1) begin
+                            row_count <= 0;
+                            anim_phase <= anim_phase + 7'd1;
+                        end else row_count <= row_count + 1'b1;
                         state <= S_SHIFT_LOW;
                     end
                     if (dwell_count == OE_ON_TICK) hub_oe_n <= 0;

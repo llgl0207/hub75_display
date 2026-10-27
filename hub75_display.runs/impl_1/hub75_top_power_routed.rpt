@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
-| Date             : Tue Oct 27 20:09:52 2026
+| Date             : Tue Oct 27 22:32:03 2026
 | Host             : llgl-YILONG running 64-bit major release  (build 9200)
 | Command          : report_power -file hub75_top_power_routed.rpt -pb hub75_top_power_summary_routed.pb -rpx hub75_top_power_routed.rpx
 | Design           : hub75_top
@@ -53,12 +53,12 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      116 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       38 |     53200 |            0.07 |
-|   Register     |    <0.001 |       51 |    106400 |            0.05 |
-|   CARRY4       |    <0.001 |        4 |     13300 |            0.03 |
+| Slice Logic    |    <0.001 |      139 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       52 |     53200 |            0.10 |
+|   Register     |    <0.001 |       58 |    106400 |            0.05 |
+|   CARRY4       |    <0.001 |        6 |     13300 |            0.05 |
 |   Others       |     0.000 |        4 |       --- |             --- |
-| Signals        |    <0.001 |       88 |       --- |             --- |
+| Signals        |    <0.001 |      110 |       --- |             --- |
 | I/O            |     0.005 |       16 |       125 |           12.80 |
 | Static Power   |     0.106 |          |           |                 |
 | Total          |     0.111 |          |           |                 |
