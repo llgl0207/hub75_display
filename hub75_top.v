@@ -1,6 +1,11 @@
 `timescale 1ns/1ps
 
-module hub75_top (
+module hub75_top #(
+    // 0:2200 Hz through 20:2400 Hz, in 10 Hz steps
+    parameter integer START_RATE_INDEX = 0,
+    parameter integer AUTO_TEST = 1,
+    parameter integer HOLD_SECONDS = 1
+) (
     input  wire       clk_in,
     input  wire       reset_n, // Active-low PL_KEY1
     output wire [2:0] rgb1,
@@ -21,8 +26,9 @@ module hub75_top (
 
     hub75_scan #(
         .CLK_HZ(50_000_000),
-        .PIXEL_CLK_HZ(5_000_000),
-        .FRAME_HZ(120)
+        .START_RATE_INDEX(START_RATE_INDEX),
+        .AUTO_TEST(AUTO_TEST),
+        .HOLD_SECONDS(HOLD_SECONDS)
     ) u_scan (
         .clk(clk_in),
         .rst(reset_sync),

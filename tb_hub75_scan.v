@@ -13,8 +13,9 @@ module tb_hub75_scan;
 
     hub75_scan #(
         .CLK_HZ(50_000_000),
-        .PIXEL_CLK_HZ(5_000_000),
-        .FRAME_HZ(120)
+        .START_RATE_INDEX(0),
+        .AUTO_TEST(0),
+        .HOLD_SECONDS(1)
     ) dut (
         .clk(clk), .rst(rst), .rgb1(rgb1), .rgb2(rgb2),
         .hub_clk(hub_clk), .hub_lat(hub_lat), .hub_oe_n(hub_oe_n), .hub_addr(hub_addr)
