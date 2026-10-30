@@ -9,13 +9,13 @@ module tb_hub75_scan;
     integer rising_clks = 0;
     integer latches = 0;
 
-    always #5 clk = ~clk;
+    time last_rgb_change = 0;
+    always #10 clk = ~clk;
+    always @(rgb1 or rgb2) last_rgb_change = $time;
 
     hub75_scan #(
         .CLK_HZ(50_000_000),
-        .START_RATE_INDEX(0),
-        .AUTO_TEST(0),
-        .HOLD_SECONDS(1)
+        .FIELD_HZ(2280)
     ) dut (
         .clk(clk), .rst(rst), .rgb1(rgb1), .rgb2(rgb2),
         .hub_clk(hub_clk), .hub_lat(hub_lat), .hub_oe_n(hub_oe_n), .hub_addr(hub_addr)
@@ -23,6 +23,7 @@ module tb_hub75_scan;
 
     always @(posedge hub_clk) begin
         if (!hub_oe_n) $fatal(1, "OE must be inactive while shifting");
+        if ($time - last_rgb_change < 20) $fatal(1, "RGB setup time below one PL clock");
         rising_clks = rising_clks + 1;
     end
 

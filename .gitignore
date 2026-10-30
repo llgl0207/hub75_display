@@ -1,0 +1,5 @@
+# Local standalone XSim regression output
+/ir_test/
+/board_test/
+/xvlog.log
+/xvlog.pb

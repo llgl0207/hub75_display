@@ -2,9 +2,7 @@
 
 module hub75_scan #(
     parameter integer CLK_HZ = 50_000_000,
-    parameter integer START_RATE_INDEX = 0,
-    parameter integer AUTO_TEST = 1,
-    parameter integer HOLD_SECONDS = 1,
+    parameter integer FIELD_HZ = 2280,
     parameter integer SHIFT_PIXELS = 128,
     parameter integer SCAN_ROWS = 32
 ) (
@@ -17,51 +15,20 @@ module hub75_scan #(
     output reg        hub_oe_n,
     output reg  [4:0] hub_addr
 );
-    localparam integer RATE_COUNT = 21;
-    localparam integer HOLD_TICKS = CLK_HZ * HOLD_SECONDS;
-    localparam integer HOLD_W = 28;
+    localparam integer ROW_TICKS = CLK_HZ / (FIELD_HZ * SCAN_ROWS);
+    localparam integer HALF_DIV_RAW = (ROW_TICKS * 3) / (4 * SHIFT_PIXELS * 2);
+    localparam integer PIXEL_HALF_DIV = (HALF_DIV_RAW < 1) ? 1 : HALF_DIV_RAW;
+    localparam integer DWELL_TICKS = ROW_TICKS - SHIFT_PIXELS*(2*PIXEL_HALF_DIV+1) - 3;
     localparam [2:0] S_SHIFT_LOW=3'd0, S_SHIFT_HIGH=3'd1,
                      S_ADDR_SETUP=3'd2, S_LATCH_HIGH=3'd3,
-                     S_LATCH_LOW=3'd4, S_DWELL=3'd5;
+                     S_LATCH_LOW=3'd4, S_DWELL=3'd5,
+                     S_PIXEL_SETUP=3'd6;
 
     reg [2:0] state;
-    reg [15:0] row_ticks;
-    reg [15:0] pixel_half_div;
     reg [15:0] dwell_count;
     reg [15:0] div_count;
     reg [7:0] pixel_count;
     reg [4:0] row_count;
-    reg [6:0] pattern_phase;
-    reg [3:0] rate_index;
-    reg [15:0] current_rate;
-    reg [HOLD_W-1:0] hold_count;
-    integer dwell_limit;
-
-    function integer rate_value;
-        input integer index;
-        begin rate_value = 2200 + (index * 10); end
-    endfunction
-
-    function integer row_ticks_value;
-        input integer index;
-        integer rate;
-        begin
-            rate = rate_value(index);
-            row_ticks_value = CLK_HZ / (rate * SCAN_ROWS);
-        end
-    endfunction
-
-    // Use about 75% of each row for shifting. As the field rate rises,
-    // the divider decreases and HUB75 CLK rises with it.
-    function integer half_div_value;
-        input integer index;
-        integer rt;
-        begin
-            rt = row_ticks_value(index);
-            half_div_value = (rt * 3) / (4 * SHIFT_PIXELS * 2);
-            if (half_div_value < 1) half_div_value = 1;
-        end
-    endfunction
 
     function [4:0] font_row;
         input integer digit;
@@ -122,34 +89,30 @@ module hub75_scan #(
         end
     endfunction
 
-    always @* begin
-        dwell_limit = row_ticks - (SHIFT_PIXELS * 2 * pixel_half_div) - 8;
-        if (dwell_limit < 8) dwell_limit = 8;
-    end
-
     always @(posedge clk) begin
         if (rst) begin
             state <= S_SHIFT_LOW;
-            row_count <= 0; pixel_count <= 0; pattern_phase <= 0;
-            div_count <= 0; dwell_count <= 0; hold_count <= 0;
-            rate_index <= (START_RATE_INDEX < RATE_COUNT) ? START_RATE_INDEX : 0;
-            row_ticks <= row_ticks_value((START_RATE_INDEX < RATE_COUNT) ? START_RATE_INDEX : 0);
-            pixel_half_div <= half_div_value((START_RATE_INDEX < RATE_COUNT) ? START_RATE_INDEX : 0);
-            current_rate <= rate_value((START_RATE_INDEX < RATE_COUNT) ? START_RATE_INDEX : 0);
+            row_count <= 0; pixel_count <= 0;
+            div_count <= 0; dwell_count <= 0;
             rgb1 <= 0; rgb2 <= 0; hub_clk <= 0; hub_lat <= 0; hub_oe_n <= 1; hub_addr <= 0;
         end else begin
-            if (hold_count < HOLD_TICKS-1) hold_count <= hold_count + 1'b1;
             case (state)
                 S_SHIFT_LOW: begin
                     hub_oe_n <= 1;
-                    rgb1 <= pixel_value(7'd127-pixel_count, row_count, current_rate, pattern_phase);
-                    rgb2 <= pixel_value(7'd127-pixel_count, row_count, current_rate, pattern_phase);
-                    if (div_count >= pixel_half_div-1) begin div_count<=0; hub_clk<=1; state<=S_SHIFT_HIGH; end
+                    rgb1 <= pixel_value(7'd127-pixel_count, row_count, FIELD_HZ, 7'd0);
+                    rgb2 <= pixel_value(7'd127-pixel_count, row_count, FIELD_HZ, 7'd0);
+                    div_count <= 0;
+                    state <= S_PIXEL_SETUP;
+                end
+                S_PIXEL_SETUP: begin
+                    // Data changes one full PL clock before CLK can rise,
+                    // including the fastest PIXEL_HALF_DIV=1 setting.
+                    if (div_count >= PIXEL_HALF_DIV-1) begin div_count<=0; hub_clk<=1; state<=S_SHIFT_HIGH; end
                     else div_count<=div_count+1'b1;
                 end
                 S_SHIFT_HIGH: begin
                     hub_clk <= 1;
-                    if (div_count >= pixel_half_div-1) begin
+                    if (div_count >= PIXEL_HALF_DIV-1) begin
                         div_count<=0; hub_clk<=0;
                         if (pixel_count==127) begin pixel_count<=0; state<=S_ADDR_SETUP; end
                         else begin pixel_count<=pixel_count+1'b1; state<=S_SHIFT_LOW; end
@@ -159,24 +122,15 @@ module hub75_scan #(
                 S_LATCH_HIGH: begin hub_lat<=1; state<=S_LATCH_LOW; end
                 S_LATCH_LOW: begin hub_lat<=0; dwell_count<=0; state<=S_DWELL; end
                 S_DWELL: begin
-                    if (dwell_count < dwell_limit-1) dwell_count<=dwell_count+1'b1;
+                    if (dwell_count < DWELL_TICKS-1) dwell_count<=dwell_count+1'b1;
                     else begin
                         dwell_count<=0; hub_oe_n<=1;
                         if (row_count==31) begin
                             row_count<=0;
-                            if (AUTO_TEST && hold_count >= HOLD_TICKS-1) begin
-                                hold_count<=0;
-                                if (rate_index==RATE_COUNT-1) rate_index<=0;
-                                else rate_index<=rate_index+1'b1;
-                                row_ticks<=row_ticks_value((rate_index==RATE_COUNT-1)?0:rate_index+1'b1);
-                                pixel_half_div<=half_div_value((rate_index==RATE_COUNT-1)?0:rate_index+1'b1);
-                                current_rate<=rate_value((rate_index==RATE_COUNT-1)?0:rate_index+1'b1);
-                                pattern_phase<=pattern_phase+7'd1;
-                            end
                         end else row_count<=row_count+1'b1;
                         state<=S_SHIFT_LOW;
                     end
-                    if (dwell_count >= (dwell_limit*7)/8) hub_oe_n<=0;
+                    if (dwell_count >= (DWELL_TICKS*7)/8) hub_oe_n<=0;
                 end
                 default: state<=S_SHIFT_LOW;
             endcase
@@ -185,6 +139,6 @@ module hub75_scan #(
 
     initial begin
         if (SHIFT_PIXELS != 128 || SCAN_ROWS != 32) $error("Test pattern assumes 128x64 1/32 scan");
-        if (HOLD_SECONDS < 1) $error("HOLD_SECONDS must be >= 1");
+        if (DWELL_TICKS < 8 || ROW_TICKS > 65535) $error("FIELD_HZ outside supported scan budget");
     end
 endmodule
