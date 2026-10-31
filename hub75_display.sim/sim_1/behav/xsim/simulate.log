@@ -1,3 +1,0 @@
-Time resolution is 1 ps
-PASS: 32 rows latched, 128 pixel clocks per row
-$finish called at time : 4047515 ns : File "E:/0Files_Bin/EE/vivado/hub75_display/tb_hub75_scan.v" Line 36

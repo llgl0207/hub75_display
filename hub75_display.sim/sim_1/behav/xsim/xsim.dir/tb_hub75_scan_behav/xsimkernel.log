@@ -1,4 +1,0 @@
-Running: xsim.dir/tb_hub75_scan_behav/xsimk.exe -simmode gui -wdb tb_hub75_scan_behav.wdb -simrunnum 0 -socket 52934
-Design successfully loaded
-Design Loading Memory Usage: 16452 KB (Peak: 16452 KB)
-Design Loading CPU Usage: 233 ms
