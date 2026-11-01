@@ -3,16 +3,20 @@
  *
  * The PS renders 64 complete 128x64 slices into a non-active DDR frame buffer,
  * flushes the data cache, writes frame_base through AXI GPIO, then toggles the
- * submit bit. The PL latches the new base only at an IR revolution boundary.
+ * submit bit. The PL latches the new base only at an IR revolution boundary
+ * (with no IR, the reader's bench fallback uses the 1800 RPM slice wrap).
  *
- * Test pattern:
- *   slice 0        : both halves white (angular anchor)
- *   other slices   : 4-pixel red bar on the rgb1/upper half,
- *                    4-pixel blue bar on the rgb2/lower half,
- *                    column = 2*slice
- * The upper/lower colours are deliberately different so the panel wiring can
- * be identified; if the halves are swapped, swap the rgb_upper/rgb_lower
- * arguments in render_pattern().
+ * Stationary animation:
+ *   All 64 slices show the same 128x64 image, so a non-rotating panel shows a
+ *   stable 2D picture (no IR and no motor needed). A white border and crosshair
+ *   stay fixed; a coloured ball bounces across the full 64-row panel and its
+ *   colour cycles every four frames. The image is rendered once and memcpy'd
+ *   into the other 63 slices.
+ *
+ * For the rotating/volumetric version, render a different image per slice
+ * (for example the original angular anchor + red/blue bars) instead of copying.
+ * If the upper/lower halves appear swapped, swap the rgb_upper/rgb_lower
+ * arguments at the call site.
  *
  * Build: create a Vitis application from board/output/hub75_ps_stage1.xsa,
  * add the sw/common C/H files and this file to the app src, build, and run
@@ -26,6 +30,7 @@
 #include "sleep.h"
 #include <stdarg.h>
 #include <stdint.h>
+#include <string.h>
 
 #include "hub75_frame.h"
 #include "hub75_regs.h"
@@ -184,35 +189,81 @@ static int ddr_test(volatile uint32_t *base, uint32_t bytes)
     return 1;
 }
 
-static void render_pattern(uint8_t *frame, uint32_t frame_no)
+/* Static background: white frame around each 32-row half plus a dim cyan
+ * crosshair. Both halves get the same pattern so the 2D image is symmetric. */
+static void background_pixel(int row_addr, int col,
+                             uint8_t *upper, uint8_t *lower)
 {
-    int slice, row_addr, col;
+    *upper = 0;
+    *lower = 0;
+    if (row_addr < 2 || row_addr >= HUB75_ROW_ADDRS - 2 ||
+        col < 2 || col >= HUB75_COLS - 2) {
+        *upper = 7;
+        *lower = 7;
+    } else if (row_addr == HUB75_ROW_ADDRS / 2 ||
+               col == HUB75_COLS / 2) {
+        *upper = 3;
+        *lower = 3;
+    }
+}
 
-    (void)frame_no;
-    hub75_frame_clear(frame);
+static uint8_t background_slice[HUB75_SLICE_BYTES];
 
-    for (slice = 0; slice < HUB75_SLICES; slice++) {
-        int bar_start = 2 * slice;
-        for (row_addr = 0; row_addr < HUB75_ROW_ADDRS; row_addr++) {
-            for (col = 0; col < HUB75_COLS; col++) {
-                uint8_t upper;
-                uint8_t lower;
+static void build_background(void)
+{
+    int row, col;
 
-                if (slice == 0) {
-                    upper = 7;
-                    lower = 7;
-                } else if (col >= bar_start && col < bar_start + 4) {
-                    upper = 4;   /* red */
-                    lower = 1;   /* blue */
-                } else {
-                    upper = 0;
-                    lower = 0;
-                }
-                hub75_frame_set_pixel(frame, slice, row_addr, col,
-                                      upper, lower);
-            }
+    memset(background_slice, 0, sizeof(background_slice));
+    for (row = 0; row < HUB75_ROW_ADDRS; row++)
+        for (col = 0; col < HUB75_COLS; col++) {
+            uint8_t upper, lower;
+            background_pixel(row, col, &upper, &lower);
+            hub75_frame_set_pixel(background_slice, 0, row, col,
+                                  upper, lower);
+        }
+}
+
+/*
+ * Stationary 2D animation. All 64 slices get the same image, so a non-rotating
+ * panel shows one stable picture. The ball moves over the full 64-row panel:
+ * row 0..31 is the rgb1/upper half, row 32..63 is the rgb2/lower half.
+ * Only the ball's 15x15 bounding box is updated; the background is copied in.
+ */
+static void render_frame(uint8_t *frame, uint32_t frame_no)
+{
+    static const uint8_t ball_colours[3] = { 4, 2, 1 }; /* red, green, blue */
+    const int ball_r2 = 7 * 7;
+    int t = (int)((frame_no * 2u) % 198u);
+    int bx = 10 + (t < 99 ? t : 197 - t);          /* 10..108, bounces */
+    int u = (int)(frame_no % 126u);
+    int by = (u < 64) ? u : 125 - u;               /* 0..63, full panel */
+    uint8_t colour = ball_colours[(frame_no >> 2) % 3u];
+    int pr, pc, slice;
+
+    memcpy(frame, background_slice, HUB75_SLICE_BYTES);
+
+    for (pr = by - 7; pr <= by + 7; pr++) {
+        int row_addr;
+        int dy;
+        if (pr < 0 || pr >= HUB75_ROWS) continue;
+        row_addr = pr % HUB75_ROW_ADDRS;
+        dy = pr - by;
+        for (pc = bx - 7; pc <= bx + 7; pc++) {
+            uint8_t upper, lower;
+            int dx;
+            if (pc < 0 || pc >= HUB75_COLS) continue;
+            dx = pc - bx;
+            if (dx * dx + dy * dy > ball_r2) continue;
+            background_pixel(row_addr, pc, &upper, &lower);
+            if (pr < HUB75_ROW_ADDRS) upper = colour;
+            else lower = colour;
+            hub75_frame_set_pixel(frame, 0, row_addr, pc, upper, lower);
         }
     }
+
+    for (slice = 1; slice < HUB75_SLICES; slice++)
+        memcpy(frame + slice * HUB75_SLICE_BYTES,
+               frame, HUB75_SLICE_BYTES);
 }
 
 int main(void)
@@ -245,6 +296,7 @@ int main(void)
     hub75_frame_clear(frames[1]);
     Xil_DCacheFlushRange((UINTPTR)frames[0], HUB75_FRAME_BYTES);
     Xil_DCacheFlushRange((UINTPTR)frames[1], HUB75_FRAME_BYTES);
+    build_background();
 
     for (;;) {
         uint8_t *frame = frames[frame_no & 1u];
@@ -259,7 +311,7 @@ int main(void)
         }
         last_done = (status & HUB75_ST_FRAME_DONE) ? 1u : 0u;
 
-        render_pattern(frame, frame_no);
+        render_frame(frame, frame_no);
         Xil_DCacheFlushRange((UINTPTR)frame, HUB75_FRAME_BYTES);
 
         XGpio_DiscreteWrite(&gpio_ctrl, HUB75_GPIO_CH1, (uint32_t)(UINTPTR)frame);
@@ -277,7 +329,7 @@ int main(void)
                    period_read());
 
         frame_no++;
-        sleep(1);
+        usleep(50000);
     }
 
     return 0;

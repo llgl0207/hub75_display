@@ -50,7 +50,7 @@ hub75_display/
   sim/                    testbenches and regression scripts
   build/                  reproducible Tcl, PS7 BD builder, generated reports/work
   board/                  constraints, bitstreams, XSAs and board-test procedure
-  sw/                     Vitis bare-metal renderer/hello sources and README
+  sw/                     Vitis bare-metal renderer sources; PS_DEVELOPER_GUIDE.md is the PS control/API guide
   data/                   measured data and reference captures; currently TBD
   report/                 design report, PS development log and AI collaboration log
   skill/                  skill package extraction; intentionally deferred until project completion
@@ -136,7 +136,8 @@ frame format, AXI GPIO contract and the remaining board checks.
 Vitis 2026.1 has XSCT disabled; create the platform/application in the GUI using
 `board/output/hub75_ps_stage1.xsa`, add `sw/renderer/main.c` and `sw/common/*`,
 and run with Program FPGA + Reset entire system. Full steps and troubleshooting
-are in `sw/README.md`.
+are in `sw/README.md`; the PS control interface, frame format, submit protocol
+and rendering examples are in `sw/PS_DEVELOPER_GUIDE.md`.
 
 ### Program and test the board (scripted)
 

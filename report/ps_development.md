@@ -107,7 +107,8 @@ word[5:3] = rgb2 (lower half)
 | Stage 1 DRC | `build/reports/ps_stage1/drc.rpt` | 0 errors（`ZPS7-1` 消失） |
 | Stage 1 资源 | `build/reports/ps_stage1/utilization.rpt` | 2240 LUT，2723 FF，2 × BRAM36 |
 | XSA | `board/output/hub75_ps_stage1.xsa` | 含 PS7、AXI GPIO、HP0；**不含 bitstream** |
-| Stage 1 上板 | `build/jtag_run_app.tcl` + COM11 | `HUB75 PS renderer` / `DDR PASS`；`frame 0..27` 每秒递增；状态 `buf_ready=1`，`frame_id`/`frame_done` 翻转；面板照片 TBD |
+| Stage 1 上板 | `build/jtag_run_app.tcl` + COM11 | `HUB75 PS renderer` / `DDR PASS`；状态 `buf_ready=1`，`frame_id`/`frame_done` 翻转；面板照片 TBD |
+| 静止动画 | 无 IR、无旋转，64 slice 同图（白边框 + 十字线 + 反弹小球） | COM11 5 s 内 98 行（约 20 fps），`period 0`（无 IR 属正常），DDR 读回确认边框与 slice 复制；面板目视 TBD |
 
 - XSA 用 `write_hw_platform -fixed` 导出（不含 bitstream），因为本脚本用显式
   opt/place/route 流程；Vitis Run Configuration 里单独选 `.bit`。

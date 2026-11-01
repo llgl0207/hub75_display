@@ -1,5 +1,9 @@
 # PS 软件（Vitis 2026.1 裸机）
 
+> PS 开发者先读 **[PS_DEVELOPER_GUIDE.md](PS_DEVELOPER_GUIDE.md)**：AXI GPIO 寄存器、
+> DDR 帧格式、submit/frame_done 协议、静止/旋转显示示例和排障表都在那里。
+> 本文只讲 Vitis 平台/应用怎么建和怎么下载。
+
 ## 产物与前提
 
 | 项 | 值 |
