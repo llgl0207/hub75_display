@@ -1,0 +1,36 @@
+﻿frame 710 base 10000000 status c61002 slice 16 id 198
+frame 711 base 10200000 status c73709 slice 55 id 199
+frame 712 base 10000000 status c81f02 slice 31 id 200
+frame 713 base 10200000 status c90609 slice 6 id 201
+
+HUB75 PS renderer
+DDR test ...
+DDR PASS
+frame 0 base 10000000 status 2300 slice 35 id 0
+frame 1 base 10200000 status 10b0d slice 11 id 1
+frame 2 base 10000000 status 23204 slice 50 id 2
+frame 3 base 10200000 status 31a0d slice 26 id 3
+frame 4 base 10000000 status 40104 slice 1 id 4
+frame 5 base 10200000 status 5290d slice 41 id 5
+frame 6 base 10000000 status 61004 slice 16 id 6
+frame 7 base 10200000 status 7380d slice 56 id 7
+frame 8 base 10000000 status 82006 slice 32 id 8
+frame 9 base 10200000 status 9070d slice 7 id 9
+frame 10 base 10000000 status a2f06 slice 47 id 10
+frame 11 base 10200000 status b160d slice 22 id 11
+frame 12 base 10000000 status c3e06 slice 62 id 12
+frame 13 base 10200000 status d250d slice 37 id 13
+frame 14 base 10000000 status e0d04 slice 13 id 14
+frame 15 base 10200000 status f340d slice 52 id 15
+frame 16 base 10000000 status 101c04 slice 28 id 16
+frame 17 base 10200000 status 11030d slice 3 id 17
+frame 18 base 10000000 status 122b04 slice 43 id 18
+frame 19 base 10200000 status 13120d slice 18 id 19
+frame 20 base 10000000 status 143a04 slice 58 id 20
+frame 21 base 10200000 status 15220f slice 34 id 21
+frame 22 base 10000000 status 160904 slice 9 id 22
+frame 23 base 10200000 status 17310f slice 49 id 23
+frame 24 base 10000000 status 181804 slice 24 id 24
+frame 25 base 10200000 status 19000f slice 0 id 25
+frame 26 base 10000000 status 1a2704 slice 39 id 26
+frame 27 base 10200000 status 1b0f0d slice 15 id 27

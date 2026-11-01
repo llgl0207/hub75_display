@@ -1,0 +1,63 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "tcf-debug",
+      "request": "launch",
+      "name": "hub75_renderer_app_hw_1",
+      "debugType": "baremetal-zynq",
+      "attachToRunningTargetOptions": {
+        "targetSetupMode": "standalone",
+        "executeScript": true,
+        "scriptPath": ""
+      },
+      "autoAttachProcessChildren": false,
+      "target": {
+        "targetConnectionId": "Local",
+        "peersIniPath": "../../_ide/.peers.ini",
+        "context": "zynq"
+      },
+      "pathMap": [],
+      "targetSetup": {
+        "resetSystem": false,
+        "programDevice": true,
+        "partialBitstream": false,
+        "skipRevisionCheck": false,
+        "device": {
+          "plDevice": "Auto Detect",
+          "psDevice": "Auto Detect"
+        },
+        "resetAPU": false,
+        "bitstreamFile": "C:\\Users\\210\\Documents\\intcode\\123\\hub75_display\\board\\output\\hub75_ps_stage1.bit",
+        "zynqInitialization": {
+          "isFsbl": false,
+          "usingFSBL": {
+            "initWithFSBL": false,
+            "fsblFile": "${workspaceFolder}\\platform\\export\\platform\\sw\\boot\\fsbl.elf",
+            "fsblExitSymbol": "FsblHandoffJtagExit"
+          },
+          "usingPs7Init": {
+            "runPs7Init": true,
+            "runPs7PostInit": true,
+            "ps7InitTclFile": "${workspaceFolder}\\hub75_renderer\\_ide\\psinit\\ps7_init.tcl"
+          }
+        },
+        "downloadElf": [
+          {
+            "core": "ps7_cortexa9_0",
+            "resetProcessor": false,
+            "elfFile": "${workspaceFolder}\\hub75_renderer\\build\\hub75_renderer.elf",
+            "stopAtEntry": false,
+            "isSelfRelocatingApp": false,
+            "relativeAddress": ""
+          }
+        ],
+        "crossTriggerBreakpoints": {
+          "isSelected": false,
+          "breakpoints": []
+        }
+      },
+      "internalConsoleOptions": "openOnSessionStart"
+    }
+  ]
+}

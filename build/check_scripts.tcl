@@ -2,7 +2,7 @@
 set repo_dir [file dirname [file dirname [file normalize [info script]]]]
 set failures 0
 set scripts [list]
-foreach name {program_board.tcl probe_hw.tcl check_project.tcl build_board_test.tcl check_ir_synthesis.tcl add_sources.tcl verify_bitstream.tcl} {
+foreach name {program_board.tcl probe_hw.tcl check_project.tcl build_board_test.tcl check_ir_synthesis.tcl add_sources.tcl verify_bitstream.tcl create_ps_bd.tcl build_ps_system.tcl} {
     lappend scripts [list $name [file join $repo_dir build $name]]
 }
 foreach name {gui_program.tcl} {

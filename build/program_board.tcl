@@ -31,7 +31,12 @@ proc config_state {dev} {
 }
 
 open_hw_manager
-connect_hw_server -url localhost:3121
+# Vitis 2026.1 may start its hardware server on a dynamic port (observed 3122);
+# try the classic 3121 first, then 3122.
+if {[catch {connect_hw_server -url localhost:3121} hw_err]} {
+    puts "localhost:3121 failed ($hw_err); trying localhost:3122"
+    connect_hw_server -url localhost:3122
+}
 set programmed 0
 foreach tgt [get_hw_targets] {
     if {[catch {current_hw_target $tgt; open_hw_target -quiet} err]} {

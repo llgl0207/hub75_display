@@ -15,6 +15,7 @@
 # Reproducible build and simulation work areas
 /build/work/
 /build/reports/*.dcp
+/build/reports/*/*.dcp
 /sim/output/
 /board/output/previous_build/
 /board/output/*.dcp

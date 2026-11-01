@@ -18,12 +18,17 @@
 // the same columns, only the colour differs (rgb1 red, rgb2 green), so any
 // offset, mirror or row step seen on the panel is a property of the panel or
 // its wiring rather than of the pattern.
+// PATTERN_MODE=3 reads a 6-bit slice word from BRAM: [2:0] = rgb1 (upper),
+// [5:3] = rgb2 (lower). The word is addressed by (row_count, column); the PS
+// renderer pre-shifts the rgb2 half if the panel wiring needs a column offset.
+// The address is launched in S_SHIFT_LOW and the BRAM output is registered into
+// rgb1/rgb2 one cycle later in S_PIXEL_SETUP, still before CLK can rise.
 module hub75_scan #(
     parameter integer SHIFT_PIXELS    = 128,
     parameter integer SCAN_ROWS       = 32,
     parameter integer SLICE_BITS      = 6,
     parameter integer PIXEL_HALF_DIV  = 2,   // 10 MHz pixel clock at 50 MHz
-    parameter integer PATTERN_MODE    = 1,   // 0: bars+label, 1: sweep, 2: group diagnostic
+    parameter integer PATTERN_MODE    = 1,   // 0: bars+label, 1: sweep, 2: group diagnostic, 3: slice RAM
     parameter integer LABEL_VALUE     = 2280,
     // Column offset applied to the rgb2 bus only, modulo 128. Positive values
     // make the rgb2 half show columns that the rgb1 half shows N pixels later.
@@ -35,6 +40,8 @@ module hub75_scan #(
     input  wire [15:0]             row_ticks,
     input  wire                    slot_start,
     input  wire [SLICE_BITS-1:0]   slice_index,
+    input  wire [5:0]              pix_data,
+    output wire [12:0]             pix_addr,
     output reg  [2:0]              rgb1,
     output reg  [2:0]              rgb2,
     output reg                     hub_clk,
@@ -60,6 +67,12 @@ module hub75_scan #(
     reg [7:0]  pixel_count;
     reg [4:0]  row_count;
     reg        restart_pending;
+
+    // Combinational slice-RAM address for the current pixel. It must be stable
+    // during S_SHIFT_LOW so the synchronous RAM output is ready in S_PIXEL_SETUP
+    // (one full clock before CLK can rise).
+    assign pix_addr = {1'b0, row_count, 7'd0} +
+                      ({5'd0, 8'd127} - {5'd0, pixel_count});
 
     // Runtime dwell budget and blanking: the OE window follows the same 1/8-of-
     // dwell rule as the verified build, but scaled to the current row budget.
@@ -175,15 +188,21 @@ module hub75_scan #(
                 end
                 S_SHIFT_LOW: begin
                     hub_oe_n <= 1;
-                    rgb1 <= pixel_value(7'd127 - pixel_count, row_count,
-                                        slice_index, 1'b0);
-                    rgb2 <= pixel_value((7'd127 - pixel_count) + RGB2_OFFSET,
-                                        row_count, slice_index, 1'b1);
+                    if (PATTERN_MODE != 3) begin
+                        rgb1 <= pixel_value(7'd127 - pixel_count, row_count,
+                                            slice_index, 1'b0);
+                        rgb2 <= pixel_value((7'd127 - pixel_count) + RGB2_OFFSET,
+                                            row_count, slice_index, 1'b1);
+                    end
                     div_count <= 0;
                     state <= S_PIXEL_SETUP;
                 end
                 S_PIXEL_SETUP: begin
                     // Data changes one full PL clock before CLK can rise.
+                    if (PATTERN_MODE == 3) begin
+                        rgb1 <= pix_data[2:0];
+                        rgb2 <= pix_data[5:3];
+                    end
                     if (div_count >= PIXEL_HALF_DIV-1) begin div_count<=0; hub_clk<=1; state<=S_SHIFT_HIGH; end
                     else div_count<=div_count+1'b1;
                 end

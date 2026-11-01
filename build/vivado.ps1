@@ -30,6 +30,8 @@ function Find-VivadoBin {
     if ($onPath) { return (Split-Path -Parent $onPath.Source) }
 
     $patterns = @(
+        'AMD\*\Vivado\bin',
+        'AMD\Vivado\bin',
         'AMDDesignTools\*\Vivado\bin',
         'AMDDesignTools\Vivado\bin',
         'Xilinx\Vivado\*\bin',
@@ -59,6 +61,9 @@ if (-not (Test-Path -LiteralPath $TclScript)) { throw "Tcl script not found: $Tc
 
 $bin = Find-VivadoBin -Explicit $VivadoBin
 $exe = Join-Path $bin 'vivado.bat'
+# XSim's generated compile.bat calls xvlog by name. Put the Vivado bin on PATH
+# for this process so launch_simulation inherits it and can spawn xvlog.
+$env:Path = "$bin;$env:Path"
 Write-Host "VIVADO = $exe"
 Write-Host "SCRIPT = $TclScript"
 

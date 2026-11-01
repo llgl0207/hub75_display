@@ -1,0 +1,10 @@
+﻿frame 89 base 10200000 status 590e09 slice 14 id 89
+frame 90 base 10000000 status 5a3500 slice 53 id 90
+frame 91 base 10200000 status 5b1d09 slice 29 id 91
+frame 92 base 10000000 status 5c0400 slice 4 id 92
+frame 93 base 10200000 status 5d2c09 slice 44 id 93
+frame 94 base 10000000 status 5e1300 slice 19 id 94
+frame 95 base 10200000 status 5f3b09 slice 59 id 95
+frame 96 base 10000000 status 602200 slice 34 id 96
+frame 97 base 10200000 status 610a09 slice 10 id 97
+frame 98 base 10000000 status 623100 slice 49 id 98

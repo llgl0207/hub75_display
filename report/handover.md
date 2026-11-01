@@ -13,7 +13,7 @@
 | 题目 / 应用场景 | **TBD（团队决定暂不补）** |
 | 板卡 | 用户称 MIZAR R7；工程实际按 Mizar-Z7 手册与 `xc7z020clg400-2` 构建，**确切丝印版本仍未确认** |
 | 工具 | Vivado 2026.1（`F:\AMDDesignTools\2026.1\Vivado`），BASIC 许可证 |
-| 实现方式 | 纯 Verilog RTL（PL）；PS/Vitis 尚未开始 |
+| 实现方式 | Verilog RTL（PL）+ Vitis 裸机源码（`sw/`）；PS+DDR 构建/仿真通过，上板未验证 |
 | 许可证 | MIT（`LICENSE`，版权人待团队确认） |
 | 目标 | 旋转体积显示：128×64 HUB75 作为旋转扫描平面，红外每圈对齐 |
 
@@ -24,6 +24,8 @@
 ## 2. 当前状态一句话
 
 **红外消抖与"一次照射一个触发"已在真板实测通过（T004）；红外周期驱动的切片调度（闭环）已实现并通过仿真与构建，等待上板做锁角验证。**
+
+**PS+DDR 增量（PS7 + AXI GPIO + S_AXI_HP0 + DDR reader + slice RAM）已构建、7/7 回归通过；Vitis 应用源码与 GUI 步骤就绪，平台/应用构建和 DDR 图像上板仍未验证。**
 
 ---
 
@@ -71,18 +73,20 @@
 | LED / UART 诊断 | ✅ 仿真通过；D6/D8 实测符合预期 |
 | **红外 → 扫描节奏闭环** | ✅ 已实现（`hub75_sched` + 切片驱动扫描），仿真与构建通过；**用户在机上报告锚点不漂（口述）** |
 | 半屏列对齐（rgb1/rgb2） | ⚠️ 发现错位，原因未定；已有 `PATTERN_MODE=2` 诊断图案与 `RGB2_COLUMN_OFFSET` 修正参数，等实测数据 |
-| DDR AXI 读取 / 整片 BRAM 乒乓 | ❌ 未开始 |
-| PS 渲染与帧提交、Vitis | ❌ 未开始 |
+| DDR AXI 读取 / 整片 BRAM 乒乓 | ✅ RTL 仿真（`tb_hub75_ddr_reader`）+ 构建通过；上板 TBD |
+| PS 渲染与帧提交、Vitis | 🟡 `sw/` 源码与 GUI 步骤就绪；平台/应用构建 + 上板 TBD |
+| PS7 / UART0 / DDR 基线 | ✅ Stage 0 构建；UART/DDR memtest 上板 TBD |
 | 加速补显（零度缺片） | ❌ 未开始，用户要求后续考虑 |
 
 ---
 
 ## 6. 下一步推荐顺序
 
-1. **先解决半屏列错位**：下载当前诊断构建（`PATTERN_MODE=2`，15:14 生成，959 LUT / WNS +6.722 ns），按 `board_test_procedure.md` 的判读表回报：颜色↔半屏对应、偏移方向与像素数、是否镜像、接缝处是否有行台阶。测得 N 后只改 `RGB2_COLUMN_OFFSET` 重建。
-2. **恢复闭环图案**：把 `build_board_test.tcl` 的 `PATTERN_MODE` 改回 `1` 重建，重跑锁角判据并**按定量记录**（转速、锚点方位、漂移片数）填 `data/board_test_log.csv` 的 T005。
-3. 若锁角定量成立，下一步接 DDR + 整片 BRAM 乒乓；若漂移超判据，先按判读表定位（周期估计/消抖/截断/亮度）。
-4. 之后做 PS 渲染与帧提交，最后考虑加速补显。
+1. **Vitis 基线**：按 `sw/README.md` 用 GUI 从 `board/output/hub75_ps_stage0.xsa` 建 platform + Hello/OCM 应用，确认 CH340 COM 口 115200 有输出；再跑 DDR memtest。若 DDR 不过，先降到 333.333 MHz。
+2. **DDR 图像上屏**：用 `hub75_ps_stage1.xsa` + `hub75_ps_stage1.bit`，加入 `sw/renderer/main.c` 和 `sw/common/*`；Run Configuration 勾 Program FPGA + Reset entire system。预期 `HUB75 PS renderer` + `DDR PASS` + `frame ...`；面板 slice 0 全白锚点，其余片上半红条/下半蓝条随 slice 移动。
+3. **记录 PS 实测**：DDR memtest、实际 DDR 频率、UART 日志、status（ack/busy/slice/frame_id）、面板照片；确认 `frame_done` 后 A/B 复用无撕裂。通过后再把 DDR 400→533.333 复测。
+4. **半屏列错位/锁角**：PS 红/蓝测试图可直接判读 rgb1/rgb2 半屏对应与列偏移；测得后改渲染端的 upper/lower 或列预移。锁角定量仍按 `board_test_procedure.md` 的判据记录。
+5. 400 片容量、76 片/圈、后半圈镜像复用、加速补显留到基线稳定之后。
 
 ---
 
@@ -108,8 +112,20 @@
 | `src/ir_debug_uart.v` | 115200 8N1，10 字节包：`55 AA` + 间隔 LE32 + 均值 LE32 |
 | `sim/tb_ir_debounce.v` | 消抖专项：抖动串、脉冲内跌落、窄脉冲拒绝、周期精度、闭锁、复位静默对齐 |
 | `sim/tb_hub75_sched.v` | 调度器：64 片/圈、触发锚定、周期锁存、零周期回落、MIN/MAX 夹紧 |
-| `sim/run_regression.tcl` | 一条命令跑 5 个 testbench；读 `simulate.log` 判定，`$fatal` 不再被忽略 |
-| `build/build_board_test.tcl` | 独立构建 + 报告 + bitstream（**含 USERID 0x48554237**） |
+| `src/hub75_ps_top.v` | PS 版顶层：`hub75_scan`/`hub75_sched`/IR/UART + `pix_data`/`pix_addr` + 调度观测输出；`PATTERN_MODE=3` |
+| `src/hub75_ddr_reader.v` | PL AXI3 读 master：16-beat × 24 突发/片，6-bit 解包，乒乓 buffer tag/epoch，帧基址在 `revolution_start` 锁存 |
+| `src/hub75_slice_ram.v` | 2 × 4096×6 bit BRAM36 乒乓；一写一读，读缓冲由 reader 的 `rd_buf` 选择 |
+| `src/hub75_system.v` | 组合 `hub75_ps_top` + reader + slice RAM；打包 status/period；AXI 读端口 |
+| `src/system_top.v` | 顶层：`design_1_wrapper` + `hub75_system`；DDR/FIXED_IO 直通；写通道 tie-off |
+| `sim/tb_hub75_scan_mem.v` | PATTERN_MODE=3 像素顺序、6-bit 分组、行递增检查 |
+| `sim/tb_hub75_ddr_reader.v` | 行为 AXI3 slave + 6-bit 打包数据；检查两片 4096 字写入 |
+| `sim/run_regression.tcl` | 一条命令跑 7 个 testbench；用绝对路径直接调 `xvlog/xelab/xsim.bat`，读 transcript 判定 |
+| `build/build_board_test.tcl` | PL-only 独立构建 + 报告 + bitstream（**含 USERID 0x48554237**） |
+| `build/create_ps_bd.tcl` | PS7 BD：UART0/DDR/FCLK/AXI GPIO/HP0/proc_sys_reset；Stage 0 只 PS7 |
+| `build/build_ps_system.tcl` | Stage 0/1 PS 系统构建 + 报告 + bit/XSA（`-TclArgs 1` 为 Stage 1） |
+| `board/constraints/hub75_ps.xdc` | PS 版 PL 引脚；无 H16 时钟，FCLK 由 PS7 提供 |
+| `sw/README.md` | Vitis 2026.1 GUI 建 platform/app、JTAG Run Configuration、故障表 |
+| `report/ps_development.md` | PS7 配置、帧格式、AXI GPIO 契约、构建/仿真结果、TBD |
 | `build/program_board.tcl` | JTAG 下载，用 DONE/EOS 判据（非 IS_PROGRAMMED） |
 | `build/verify_bitstream.tcl` | 读 `REGISTER.USERCODE` 自证构建来源 |
 | `build/probe_hw.tcl` | 只读枚举 JTAG 链 |
@@ -118,7 +134,7 @@
 | `build/vivado.ps1` | 自动定位 Vivado 并跑任意 Tcl（`vivado` 不在 PATH 时用这个） |
 | `AGENTS.md`（上一级目录） | 架构总纲与工程约束 |
 
-**注意**：`AGENTS.md` 位于仓库**上一级** `E:\0Files_Bin\EE\vivado\AGENTS.md`，所以 `report/` 内引用它要用 `../../AGENTS.md`。
+**注意**：旧文档引用的 `E:\0Files_Bin\EE\vivado\AGENTS.md` 在本机**不存在**（`E:\0Files_Bin` 整个目录都没有）；本仓库的约束以 `report/` 内文档为准。`build/vivado.ps1` 已改为能匹配本机的 `E:\AMD\2026.1\Vivado\bin`。
 
 ---
 
@@ -129,5 +145,12 @@
 3. **BASIC 许可证不支持 `create_debug_core`**（ILA/VIO 均不可用），只能用 LED、UART、USERCODE 读回和离线报告。
 4. `BITSTREAM.CONFIG.USERID` 可为 bitstream 写入唯一标识，配合 `REGISTER.USERCODE` 读回，在无 ILA 条件下客观证明"板上跑的是哪次构建"——本项目已用 `0x48554237`。
 5. `Move-Item` 到尚不存在的父目录会报 `DirectoryNotFoundException`；批量移动脚本必须先 `New-Item -ItemType Directory`。
+6. **Vitis 2026.1 禁用了 XSCT**：`xsct -eval ...` 直接报 `XSCT is disabled in Vitis 2026.1 release`；脚本化要用 Vitis Python Console/API，或直接用 GUI。
+7. **Vitis Python API 在中文 Windows 上可能在 `vitis.create_client()` 报 UTF-8 解码错误**（`'utf-8' codec can't decode byte 0xd5`）：client 按 UTF-8 读本机子进程输出。改用 GUI；这是 `build/build_sw.py` 未打通的原因。
+8. **Vivado 2026.1 的 `launch_simulation` 可能报 `Common 17-180 Spawn failed`**：生成的 `compile.bat` 调 `xvlog` 时子进程 PATH 找不到 Vivado bin。`build/vivado.ps1` 加 PATH 仍不够；`sim/run_regression.tcl` 改为用绝对路径直接 `xvlog/xelab/xsim.bat`，绕开 `launch_simulation`。
+9. Zynq PS7 的 `S_AXI_HP0` 是 **AXI3**；BD 里 `create_bd_intf_port` 的 `aximm_rtl` 默认 AXI4，直接连会报协议不兼容。必须设 `CONFIG.PROTOCOL {AXI3}`、`FREQ_HZ 50000000`、64-bit data、6-bit ID，且 `ARLEN` 最大 16 beats。
+10. `proc_sys_reset` 的 `ext_reset_in` 是**高有效**，且 `C_EXT_RESET_HIGH` 在 BD 里只读；把 `FCLK_RESET0_N` 经 `util_vector_logic` 反相后再接，AXI 复位才正确。**注意 `aux_reset_in` 默认是低有效（`C_AUX_RESET_HIGH=0`）**：接常量 0 会让 `peripheral_aresetn` 永远为低，A9 首次访问 AXI GPIO 就挂死（本次已修：置 `C_AUX_RESET_HIGH=1`，再与 `mb_debug_sys_rst` 一起接 0）。
+11. **板载 CP2102 实际接 UART1 的 MIO48(TX)/MIO49(RX)**，不是手册/旧文档写的 UART0 MIO14/15（实测 UART0 收发均无数据，UART1 强制发送 CP2102 完整收到）。需要 MIO48/49 的 L3_SEL=7、`UART_CLK_CTRL` 的 CLKACT1、`APER_CLK_CTRL[21]` 和 UART1 @0xE0001000；`hub75_renderer/main.c` 的 `console_init()` 已全部处理。BD 现在同时启用 UART0 和 UART1。
+12. `write_hw_platform -include_bit` 需要 `impl_1` run 已跑到 write_bitstream；本工程的显式 opt/place/route 流程下会报 “Unable to get BIT file”。当前导出 XSA 不带 bitstream，Vitis Run Configuration 里单独选 `.bit`；若要走 run 流程，用 `launch_runs impl_1 -to_step write_bitstream` 再导出。
 
 以上均为本次真实踩坑，可作为 `skill/` 候选条目，但按团队决定，技能包仍在项目完成后统一提炼。

@@ -22,7 +22,8 @@
 - 图案由 PL 按切片序号生成（`PATTERN_MODE=1`）：**第 0 片整屏白**（角度锚点），其余 63 片是一条 4 像素宽的红条，列号随切片移动。`PATTERN_MODE=0` 可回到已验证的彩条 + “2280” 参考图。
 - 红外默认上升沿；通过 IR_FALLING_EDGE 参数可改下降沿，需重新构建。
 - **红外输入消抖 1 ms + 闭锁 1 ms**（`IR_DEBOUNCE_US`、`IR_HOLDOFF_US`）：一次照射只应产生一个触发。两个窗口都是综合参数，改后需重新构建。
-- DDR、体积帧读取、整片 BRAM 乒乓和补显尚未实现；当前图案不来自 DDR。
+- 本 `hub75_ir_test.bit` 是 PL-only 镜像，不含 DDR 读取；当前图案由 PL 按 slice 生成。
+- PS+DDR 增量是**另一个构建**（`board/output/hub75_ps_stage1.bit/.xsa`），RTL 仿真/构建通过但未上板；Vitis 渲染器步骤见 `../sw/README.md`，配置与契约见 `../report/ps_development.md`。
 - BASIC 许可证拒绝 create_debug_core，未插入 ILA，无 ltx 文件；使用 LED 与自编 RTL 串口观测。
 
 ## 已完成检查

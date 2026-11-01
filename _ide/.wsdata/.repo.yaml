@@ -1,0 +1,705 @@
+paths:
+  E:\AMD\2026.1\Vitis\data\embeddedsw: {}
+os:
+  freertos10_xilinx:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\ThirdParty\bsp\freertos10_xilinx_v1_18
+  standalone:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\bsp\standalone_v9_5
+driver:
+  aiefal:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\aiefal_v2_0
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\aiefal_v1_9
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\aiefal_v1_8
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\aiefal_v1_7
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\aiefal_v1_6
+  aienginev2:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\aienginev2_v3_9
+  asu_ram_ecc:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\asu_ram_ecc
+  audio_formatter:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\audio_formatter_v1_4
+  avbuf:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\avbuf_v2_7
+  axicdma:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\axicdma_v4_16
+  axidma:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\axidma_v9_21
+  axiethernet:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\axiethernet_v5_19
+  axipcie:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\axipcie_v3_5
+  axipmon:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\axipmon_v6_14
+  axis_switch:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\axis_switch_v1_8
+  axivdma:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\axivdma_v6_17
+  bram:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\bram_v4_14
+  can:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\can_v3_12
+  canfd:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\canfd_v2_12
+  canps:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\canps_v3_12
+  cframe:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\cframe_v2_0
+  cfupmc:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\cfupmc_v2_0
+  clk_wiz:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\clk_wiz_v1_11
+  clockps:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\clockps_v1_7
+  common:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\common_v1_5
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\common_v1_4
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\common_v1_3
+  coresightps_dcc:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\coresightps_dcc_v1_13
+  csi2tx:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\csi2tx_v1_6
+  csi2txss:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\csi2txss_v1_9
+  csi:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\csi_v1_9
+  csudma:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\csudma_v1_19
+  dcsub:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dcsub
+  ddrcpsu:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\ddrcpsu_v1_8
+  devcfg:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\devcfg_v3_10
+  dfeccf:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dfeccf_v1_10
+  dfeequ:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dfeequ_v1_7
+  dfemix:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dfemix_v1_8
+  dfeofdm:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dfeofdm_v1_6
+  dfeprach:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dfeprach_v1_9
+  dfxasm:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dfxasm_v1_3
+  dmaps:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dmaps_v2_12
+  dp12:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dp12_v7_7
+  dp12rxss:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dp12rxss_v4_9
+  dp12txss:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dp12txss_v5_9
+  dp14:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dp14_v7_12
+  dp14rxss:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dp14rxss_v8_5
+  dp14txss:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dp14txss_v6_15
+  dp21:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dp21_v2_6
+  dp21rxss:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dp21rxss_v1_6
+  dp21txss:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dp21txss_v2_7
+  dpdma:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dpdma_v1_7
+  dphy:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dphy_v1_9
+  dppsu:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dppsu_v1_8
+  dsi2rx:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dsi2rx_v1_1
+  dsi:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dsi_v1_6
+  dsirxss:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dsirxss_v1_2
+  dsitxss:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dsitxss_v2_7
+  dual_splitter:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dual_splitter_v1_3
+  emaclite:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\emaclite_v4_13
+  emacps:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\emacps_v3_24
+  emc:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\emc_v4_6
+  gpio:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\gpio_v4_13
+  gpiops:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\gpiops_v3_15
+  hdcp1x:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\hdcp1x_v4_10
+  hdcp22_cipher_dp:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\hdcp22_cipher_dp_v2_3
+  hdcp22_cipher:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\hdcp22_cipher_v1_5
+  hdcp22_common:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\hdcp22_common_v2_4
+  hdcp22_mmult:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\hdcp22_mmult_v1_6
+  hdcp22_rng:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\hdcp22_rng_v1_6
+  hdcp22_rx_dp:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\hdcp22_rx_dp_v3_2
+  hdcp22_rx:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\hdcp22_rx_v3_3
+  hdcp22_tx_dp:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\hdcp22_tx_dp_v3_3
+  hdcp22_tx:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\hdcp22_tx_v3_2
+  hwicap:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\hwicap_v11_8
+  i2srx:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\i2srx_v2_5
+  i2stx:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\i2stx_v2_5
+  i3c:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\i3c_v1_3
+  i3cpsx:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\i3cpsx_v1_7
+  iic:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\iic_v3_15
+  iicps:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\iicps_v3_23
+  intc:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\intc_v3_22
+  iomodule:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\iomodule_v2_20
+  ipipsu:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\ipipsu_v2_19
+  llfifo:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\llfifo_v6_1
+  mbox:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\mbox_v4_10
+  mcdma:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\mcdma_v1_14
+  mipi_rx_phy:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\mipi_rx_phy_v1_2
+  mipi_tx_phy:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\mipi_tx_phy_v1_1
+  mipicsiss:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\mipicsiss_v1_15
+  mmidp:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\mmidp
+  mutex:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\mutex_v4_11
+  nandps:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\nandps_v2_11
+  nandpsu:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\nandpsu_v1_16
+  ospipsv:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\ospipsv_v1_14
+  pciepsu:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\pciepsu_v2_3
+  prc:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\prc_v2_4
+  prd:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\prd_v2_4
+  qspips:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\qspips_v3_15
+  qspipsu:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\qspipsu_v1_23
+  resetps:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\resetps_v1_8
+  rfdc:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\rfdc_v13_1
+  rtcpsu:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\rtcpsu_v1_17
+  scugic:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\scugic_v5_7
+  scutimer:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\scutimer_v2_8
+  scuwdt:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\scuwdt_v2_7
+  sd_fec:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\sd_fec_v1_5
+  sdi_common:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\sdi_common_v1_4
+  sdiaud:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\sdiaud_v2_4
+  sdps:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\sdps_v4_6
+  spdif:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\spdif_v1_3
+  spi:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\spi_v4_16
+  spips:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\spips_v3_14
+  srio:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\srio_v1_8
+  sysmon:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\sysmon_v8_0
+  sysmonpsu:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\sysmonpsu_v3_3
+  sysmonpsv:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\sysmonpsv_v5_3
+  tft:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\tft_v6_8
+  tmr_inject:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\tmr_inject_v1_8
+  tmr_manager:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\tmr_manager_v1_9
+  tmrctr:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\tmrctr_v4_15
+  trafgen:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\trafgen_v4_9
+  trngpsv:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\trngpsv_v1_8
+  trngpsx:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\trngpsx_v1_6
+  ttcps:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\ttcps_v3_23
+  uartlite:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\uartlite_v3_13
+  uartns550:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\uartns550_v3_14
+  uartps:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\uartps_v3_18
+  uartpsv:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\uartpsv_v1_14
+  ufspsxc:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\ufspsxc_v1_2
+  usb:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\usb_v5_8
+  usbps:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\usbps_v2_11
+  usbpsu:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\usbpsu_v1_19
+  v_axi4s_remap:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_axi4s_remap_v1_5
+  v_csc:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_csc_v2_8
+  v_deinterlacer:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_deinterlacer_v7_4
+  v_demosaic:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_demosaic_v1_5
+  v_frmbuf_rd:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_frmbuf_rd_v5_2
+  v_frmbuf_wr:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_frmbuf_wr_v5_2
+  v_gamma_lut:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_gamma_lut_v1_6
+  v_hcresampler:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_hcresampler_v3_5
+  v_hdmi_common:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_hdmi_common_v1_10
+  v_hdmiphy1:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_hdmiphy1_v2_12
+  v_hdmirx1:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_hdmirx1_v1_11
+  v_hdmirx:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_hdmirx_v2_10
+  v_hdmirxss1:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_hdmirxss1_v3_9
+  v_hdmirxss:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_hdmirxss_v6_9
+  v_hdmitx1:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_hdmitx1_v2_7
+  v_hdmitx:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_hdmitx_v2_9
+  v_hdmitxss1:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_hdmitxss1_v3_9
+  v_hdmitxss:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_hdmitxss_v6_8
+  v_hscaler:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_hscaler_v3_7
+  v_letterbox:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_letterbox_v2_5
+  v_mix:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_mix_v7_1
+  v_multi_scaler:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_multi_scaler_v1_6
+  v_scenechange:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_scenechange_v1_6
+  v_sdirx:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_sdirx_v2_7
+  v_sdirxss:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_sdirxss_v3_6
+  v_sditx:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_sditx_v3_5
+  v_sditxss:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_sditxss_v4_7
+  v_tpg:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_tpg_v8_7
+  v_vcresampler:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_vcresampler_v3_4
+  v_vscaler:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_vscaler_v3_5
+  v_warp_filter:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_warp_filter_v1_5
+  v_warp_init:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\v_warp_init_v1_6
+  video_common:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\video_common_v4_19
+  visp_ss:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\visp_ss_v2_1
+  vphy:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\vphy_v1_19
+  vprocss:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\vprocss_v2_16
+  vtc:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\vtc_v8_8
+  wdtps:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\wdtps_v3_9
+  wdttb:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\wdttb_v5_12
+  xadcps:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\xadcps_v2_8
+  xdmapcie:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\xdmapcie_v3_2
+  xxvethernet:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\xxvethernet_v1_13
+  zdma:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\zdma_v1_22
+library:
+  libmetal:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\ThirdParty\sw_services\libmetal_v2_10
+  libmetal_xlnx_extension:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\ThirdParty\sw_services\libmetal_xlnx_extension
+  openamp:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\ThirdParty\sw_services\openamp_v1_13
+  aiebaremetal:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\aiebaremetal_v1_0
+  xilasu:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_services\xilasu
+  xilcert:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_services\xilcert_v1_6
+  xilffs:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_services\xilffs_v5_6
+  xilflash:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_services\xilflash_v4_13
+  xilfpga:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_services\xilfpga_v6_10
+  xilloader:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_services\xilloader_v2_4
+  xilmailbox:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_services\xilmailbox_v1_13
+  xilnvm:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_services\xilnvm_v3_7
+  xilocp:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_services\xilocp_v1_7
+  xilpdi:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_services\xilpdi_v1_13
+  xilpki:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_services\xilpki_v2_4
+  xilplmi:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_services\xilplmi_v2_4
+  xilpm_ng:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_services\xilpm_ng
+  xilpm:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_services\xilpm_v7_0
+  xilpuf:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_services\xilpuf_v2_7
+  xilrsa:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_services\xilrsa_v1_8
+  xilsecure:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_services\xilsecure_v5_7
+  xilsem:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_services\xilsem_v1_13
+  xilsfl:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_services\xilsfl_v1_3
+  xilskey:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_services\xilskey_v7_9
+  xiltimer:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_services\xiltimer_v2_4
+  xiltpm:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_services\xiltpm_v1_2
+apps:
+  asufw:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\asufw
+  ddr_self_refresh:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\ddr_self_refresh
+  dhrystone:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\dhrystone
+  empty_application:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\empty_application
+  freertos_hello_world:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\freertos_hello_world
+  freertos_lwip_echo_server:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\freertos_lwip_echo_server
+  freertos_lwip_tcp_perf_client:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\freertos_lwip_tcp_perf_client
+  freertos_lwip_tcp_perf_server:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\freertos_lwip_tcp_perf_server
+  freertos_lwip_udp_perf_client:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\freertos_lwip_udp_perf_client
+  freertos_lwip_udp_perf_server:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\freertos_lwip_udp_perf_server
+  hello_world:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\hello_world
+  img_rcvry:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\img_rcvry
+  libmetal_echo_demo:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\libmetal_echo_demo
+  lwip_echo_server:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\lwip_echo_server
+  lwip_tcp_perf_client:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\lwip_tcp_perf_client
+  lwip_tcp_perf_server:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\lwip_tcp_perf_server
+  lwip_udp_perf_client:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\lwip_udp_perf_client
+  lwip_udp_perf_server:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\lwip_udp_perf_server
+  memory_tests:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\memory_tests
+  openamp_echo_test:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\openamp_echo_test
+  openamp_matrix_multiply:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\openamp_matrix_multiply
+  openamp_rpc_demo:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\openamp_rpc_demo
+  peripheral_tests:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\peripheral_tests
+  rsa_auth_app:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\rsa_auth_app
+  srec_bootloader:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\srec_bootloader
+  srec_spi_bootloader:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\srec_spi_bootloader
+  versal_plm:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\versal_plm
+  versal_psmfw:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\versal_psmfw
+  zynq_dram_test:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\zynq_dram_test
+  zynq_fsbl:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\zynq_fsbl
+  zynqmp_dram_test:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\zynqmp_dram_test
+  zynqmp_fsbl:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\zynqmp_fsbl
+  zynqmp_pmufw:
+    path:
+    - E:\AMD\2026.1\Vitis\data\embeddedsw\lib\sw_apps\zynqmp_pmufw

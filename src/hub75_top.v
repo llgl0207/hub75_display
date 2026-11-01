@@ -127,6 +127,9 @@ module hub75_top #(
         .row_ticks(row_ticks),
         .slot_start(slot_start),
         .slice_index(slice_index),
+        // PATTERN_MODE 0..2 ignores the slice-RAM interface; tie it off.
+        .pix_data(6'b000000),
+        .pix_addr(),
         .rgb1(rgb1),
         .rgb2(rgb2),
         .hub_clk(hub_clk),

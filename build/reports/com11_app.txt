@@ -1,0 +1,29 @@
+﻿
+HUB75 PS renderer
+DDR test ...
+DDR PASS
+frame 0 base 10000000 status 1500 slice 21 id 0
+frame 1 base 10200000 status 13c09 slice 60 id 1
+frame 2 base 10000000 status 22400 slice 36 id 2
+frame 3 base 10200000 status 30b09 slice 11 id 3
+frame 4 base 10000000 status 43300 slice 51 id 4
+frame 5 base 10200000 status 51a09 slice 26 id 5
+frame 6 base 10000000 status 60202 slice 2 id 6
+frame 7 base 10200000 status 72909 slice 41 id 7
+frame 8 base 10000000 status 81102 slice 17 id 8
+frame 9 base 10200000 status 93809 slice 56 id 9
+frame 10 base 10000000 status a2002 slice 32 id 10
+frame 11 base 10200000 status b0709 slice 7 id 11
+frame 12 base 10000000 status c2e00 slice 46 id 12
+frame 13 base 10200000 status d1609 slice 22 id 13
+frame 14 base 10000000 status e3d00 slice 61 id 14
+frame 15 base 10200000 status f2509 slice 37 id 15
+frame 16 base 10000000 status 100c00 slice 12 id 16
+frame 17 base 10200000 status 113409 slice 52 id 17
+frame 18 base 10000000 status 121b00 slice 27 id 18
+frame 19 base 10200000 status 130309 slice 3 id 19
+frame 20 base 10000000 status 142a00 slice 42 id 20
+frame 21 base 10200000 status 151209 slice 18 id 21
+frame 22 base 10000000 status 163900 slice 57 id 22
+frame 23 base 10200000 status 17210b slice 33 id 23
+frame 24 base 10000000 status 180800 slice 8 id 24

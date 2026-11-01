@@ -1,0 +1,14 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Sun Nov  1 20:47:47 2026
+| Host         : DESKTOP210 running 64-bit major release  (build 9200)
+| Command      : report_cdc -file C:/Users/210/Documents/intcode/123/hub75_display/build/reports/ps_stage0/cdc.rpt
+| Design       : design_1_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -2  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+CDC Report
+
