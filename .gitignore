@@ -1,5 +1,29 @@
-# Local standalone XSim regression output
-/ir_test/
-/board_test/
+# Generated Vivado/XSim work products.
+# Kept in the repo: src/, sim/*.v + *.tcl, build/*.tcl, build/reports/*.rpt,
+# board/constraints/, board/output/*.bit, docs, LICENSE.
+# Ignored: run directories, caches, checkpoints and tool logs.
+
+# Vivado project run/cache/hardware artefacts
+/hub75_display.cache/
+/hub75_display.hw/
+/hub75_display.ip_user_files/
+/hub75_display.runs/
+/hub75_display.sim/
+/hub75_display.gen/
+/clockInfo.txt
+
+# Reproducible build and simulation work areas
+/build/work/
+/build/reports/*.dcp
+/sim/output/
+/board/output/previous_build/
+/board/output/*.dcp
+
+# Tool logs and ad-hoc simulator output
+*.jou
+*.log
+/xsim.dir/
 /xvlog.log
 /xvlog.pb
+/xelab.log
+/xsim.log

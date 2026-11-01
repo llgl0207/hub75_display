@@ -12,7 +12,11 @@ module tb_ir_revolution_sync;
     wire rising_start, rising_valid, rising_update;
     wire [15:0] rising_last, rising_period;
     wire [2:0] rising_count;
-    ir_revolution_sync #(.COUNTER_BITS(16)) rising_dut (
+    // Legacy measurement test: the input conditioning windows are scaled down
+    // to one clock so this stimulus (four-clock pulses) is still accepted.
+    // Debounce/hold-off behaviour at realistic widths is covered by
+    // tb_ir_debounce.v.
+    ir_revolution_sync #(.COUNTER_BITS(16), .DEBOUNCE_CYCLES(1), .HOLDOFF_CYCLES(1)) rising_dut (
         .clk(clk), .rst(rst), .ir_in(~ir_in), .ir_level(),
         .revolution_start(rising_start), .last_interval_ticks(rising_last),
         .period_ticks(rising_period), .period_valid(rising_valid),
@@ -24,7 +28,8 @@ module tb_ir_revolution_sync;
             {rising_start, rising_valid, rising_update, rising_last, rising_period, rising_count})
             $fatal(1,"Rising/falling polarity mismatch");
     end
-    ir_revolution_sync #(.FALLING_EDGE(1), .COUNTER_BITS(16)) dut (
+    ir_revolution_sync #(.FALLING_EDGE(1), .COUNTER_BITS(16),
+                         .DEBOUNCE_CYCLES(1), .HOLDOFF_CYCLES(1)) dut (
         .clk(clk), .rst(rst), .ir_in(ir_in), .ir_level(),
         .revolution_start(start), .last_interval_ticks(last_ticks),
         .period_ticks(period), .period_valid(valid),
