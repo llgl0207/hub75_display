@@ -1,1 +1,5 @@
-﻿
+﻿DDR PASS
+render two-ball volume ...
+volume submitted base 10000000
+status 100 slice 1 id 0 period 0
+status 13f0d slice 63 id 1 period 0

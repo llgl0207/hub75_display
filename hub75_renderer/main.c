@@ -1,26 +1,55 @@
 /*
  * HUB75 rotating-display PS renderer (bare-metal, Vitis 2026.1).
  *
- * The PS renders 64 complete 128x64 slices into a non-active DDR frame buffer,
- * flushes the data cache, writes frame_base through AXI GPIO, then toggles the
- * submit bit. The PL latches the new base only at an IR revolution boundary
- * (with no IR, the reader's bench fallback uses the 1800 RPM slice wrap).
+ * HUB75_VOLUMETRIC_TEST = 1 (default): two-ball rotating volume.
+ *   The PS renders 64 angular slices of a static 3D scene into a DDR frame
+ *   buffer. Slice s is drawn on the panel while the panel is at approximately
+ *   s * 360/64 degrees after the IR anchor. The PL latches the frame at an IR
+ *   revolution boundary and scans slice s in slot s; the eye integrates the
+ *   planar cuts into a solid volume.
  *
- * Stationary animation:
- *   All 64 slices show the same 128x64 image, so a non-rotating panel shows a
- *   stable 2D picture (no IR and no motor needed). A white border and crosshair
- *   stay fixed; a coloured ball bounces across the full 64-row panel and its
- *   colour cycles every four frames. The image is rendered once and memcpy'd
- *   into the other 63 slices.
+ *   Scene, in panel coordinates (x = 0..128 left-to-right, y = 0..64 top-to-
+ *   bottom, rotation axis at x = 64 and y = 32):
+ *     left ball   centre (-24, 32, 0), radius 12, red
+ *     right ball  centre (+24, 32, 0), radius 12, green
  *
- * For the rotating/volumetric version, render a different image per slice
- * (for example the original angular anchor + red/blue bars) instead of copying.
+ *   The topmost panel row can show a one-row ghost of the previous slot's
+ *   last row (row 31). The colour diagnostic confirmed the upper/lower data
+ *   and row mapping are correct; the ghost is a scan/panel first-row artifact,
+ *   not a frame error. Leaving it for now; the PL can blank row 0 later by
+ *   holding OE off for row_addr 0.
+ *
+ *   For slice angle theta and a point on the panel at horizontal radius r
+ *   (r = x - 64) and height y, the point is inside a sphere centred at
+ *   (x0, y0, 0) when
+ *       (r - x0*cos(theta))^2 + (y - y0)^2 + (x0*sin(theta))^2 <= radius^2.
+ *   The 64-entry Q15 sine table avoids linking libm into the bare-metal app.
+ *
+ *   Row addresses: normal 1/32 mapping. For the upper/rgb1 half row_addr is the
+ *   physical y within the half (0 = panel top); for the lower/rgb2 half
+ *   row_addr is physical y - 32 (0 = just below the seam). The upper ball is
+ *   written at rows 20..31, the lower at 0..11, so both meet at the seam.
+ *   The topmost panel row can ghost the previous slot's last row (row 31);
+ *   that is a scan/panel first-row artifact, not a row-mapping error.
+ *
+ *   The frame is submitted once and never rewritten, so the PS cannot tear
+ *   the buffer the PL is displaying. The PL keeps re-reading the same base
+ *   every revolution. Start the motor after the frame is submitted; the first
+ *   revolution may miss slice 0 (the reader prefetches slice 0 during the
+ *   previous revolution's last slot), which is the known start-up limitation.
+ *
+ * HUB75_VOLUMETRIC_TEST = 0:
+ *   Previous stationary 2D animation. All 64 slices are identical, so a
+ *   non-rotating panel shows a stable picture for no-IR bench bring-up.
+ *
  * If the upper/lower halves appear swapped, swap the rgb_upper/rgb_lower
- * arguments at the call site.
+ * arguments at the hub75_frame_set_pixel call. If the panel is column-mirrored,
+ * the two balls swap left/right; the 3D shape is unaffected.
  *
  * Build: create a Vitis application from board/output/hub75_ps_stage1.xsa,
- * add the sw/common C/H files and this file to the app src, build, and run
- * with Program FPGA + Reset entire system. See sw/README.md.
+ * add hub75_frame.c/h and hub75_regs.h plus this file to the app src, build,
+ * and run with Program FPGA + Reset entire system, or regenerate BOOT.BIN with
+ * build/run_build_sd_boot.bat for standalone SD boot. See sw/README.md.
  */
 
 #include "xgpio.h"
@@ -34,6 +63,8 @@
 
 #include "hub75_frame.h"
 #include "hub75_regs.h"
+
+#define HUB75_VOLUMETRIC_TEST 1
 
 static XGpio gpio_ctrl;
 static XGpio gpio_status;
@@ -189,6 +220,110 @@ static int ddr_test(volatile uint32_t *base, uint32_t bytes)
     return 1;
 }
 
+/* Submit one completed frame. The PL stores frame_base as pending and latches
+ * it at the next IR revolution boundary; frame_ctrl[0] is a toggle, not a
+ * pulse. The read-back guarantees frame_base arrives before the submit bit. */
+static void submit_frame(uint8_t *frame, uint32_t *toggle)
+{
+    Xil_DCacheFlushRange((UINTPTR)frame, HUB75_FRAME_BYTES);
+
+    XGpio_DiscreteWrite(&gpio_ctrl, HUB75_GPIO_CH1, (uint32_t)(UINTPTR)frame);
+    (void)XGpio_DiscreteRead(&gpio_ctrl, HUB75_GPIO_CH1);
+
+    *toggle ^= 1u;
+    XGpio_DiscreteWrite(&gpio_ctrl, HUB75_GPIO_CH2,
+                        HUB75_CTRL_ENABLE |
+                        HUB75_CTRL_SLICES(HUB75_SLICES) | *toggle);
+}
+
+#if HUB75_VOLUMETRIC_TEST
+
+/* sin(2*pi*s/64) * 32767 for s = 0..63. cos(theta) is
+ * sin_q15[(s + 16) & 63]. This keeps the renderer free of libm. */
+static const int16_t sin_q15[64] = {
+         0,   3212,   6393,   9512,  12539,  15446,  18204,  20787,
+     23170,  25329,  27245,  28898,  30273,  31356,  32137,  32609,
+     32767,  32609,  32137,  31356,  30273,  28898,  27245,  25329,
+     23170,  20787,  18204,  15446,  12539,   9512,   6393,   3212,
+         0,  -3212,  -6393,  -9512, -12539, -15446, -18204, -20787,
+    -23170, -25329, -27245, -28898, -30273, -31356, -32137, -32609,
+    -32767, -32609, -32137, -31356, -30273, -28898, -27245, -25329,
+    -23170, -20787, -18204, -15446, -12539,  -9512,  -6393,  -3212
+};
+
+#define BALL_RADIUS_PX   12.0f
+#define BALL_DISTANCE_PX 24.0f
+#define BALL_CENTER_Y    32.0f
+#define PANEL_CENTER_X   64.0f
+#define BALL_R2          (BALL_RADIUS_PX * BALL_RADIUS_PX)
+#define BALL_COUNT       2
+
+typedef struct {
+    float x;        /* world x, panel centre is the rotation axis */
+    float z;        /* world z; 0 keeps both balls in the anchor plane  */
+    uint8_t colour; /* 3-bit HUB75 colour: 1 blue, 2 green, 4 red, 7 white */
+} ball_t;
+
+static const ball_t balls[BALL_COUNT] = {
+    { -BALL_DISTANCE_PX, 0.0f, 4u }, /* left: red */
+    {  BALL_DISTANCE_PX, 0.0f, 2u }, /* right: green */
+};
+
+/* Render all 64 angular slices of the two-sphere volume. Each slice is the
+ * intersection of the rotating panel plane with the spheres. Upper data goes
+ * to rows 20..31 (above the seam), lower data to rows 0..11 (below it). */
+static void render_volume(uint8_t *frame)
+{
+    int slice, row, col, b;
+
+    hub75_frame_clear(frame);
+
+    for (slice = 0; slice < HUB75_SLICES; slice++) {
+        float st = (float)sin_q15[slice] / 32768.0f;
+        float ct = (float)sin_q15[(slice + 16) & 63] / 32768.0f;
+        float p[BALL_COUNT];
+        float d2[BALL_COUNT];
+
+        for (b = 0; b < BALL_COUNT; b++) {
+            float d = balls[b].x * st - balls[b].z * ct;
+            p[b]  = balls[b].x * ct + balls[b].z * st;
+            d2[b] = d * d;
+        }
+
+        for (row = 0; row < HUB75_ROW_ADDRS; row++) {
+            /* Normal panel row mapping: row_addr is the physical y within the
+             * upper half (0 = top), and the lower half is row_addr+32. The
+             * topmost row can ghost the previous slot's last upper row
+             * (row 31); that is a scan/panel first-row artifact, left alone
+             * for now. */
+            float yu = ((float)row + 0.5f) - BALL_CENTER_Y;
+            float yl = ((float)row + (float)HUB75_ROW_ADDRS + 0.5f) -
+                       BALL_CENTER_Y;
+            float dyu2 = yu * yu;
+            float dyl2 = yl * yl;
+
+            for (col = 0; col < HUB75_COLS; col++) {
+                float rx = ((float)col + 0.5f) - PANEL_CENTER_X;
+                uint8_t upper = 0u;
+                uint8_t lower = 0u;
+
+                for (b = 0; b < BALL_COUNT; b++) {
+                    float dx = rx - p[b];
+                    float base = dx * dx + d2[b];
+                    if (base + dyu2 <= BALL_R2) upper = balls[b].colour;
+                    if (base + dyl2 <= BALL_R2) lower = balls[b].colour;
+                }
+
+                if (upper != 0u || lower != 0u)
+                    hub75_frame_set_pixel(frame, slice, row, col,
+                                          upper, lower);
+            }
+        }
+    }
+}
+
+#else
+
 /* Static background: white frame around each 32-row half plus a dim cyan
  * crosshair. Both halves get the same pattern so the 2D image is symmetric. */
 static void background_pixel(int row_addr, int col,
@@ -266,13 +401,13 @@ static void render_frame(uint8_t *frame, uint32_t frame_no)
                frame, HUB75_SLICE_BYTES);
 }
 
+#endif
+
 int main(void)
 {
     uint8_t *frames[2] = { (uint8_t *)HUB75_FRAME_A,
                            (uint8_t *)HUB75_FRAME_B };
-    uint32_t frame_no = 0;
     uint32_t toggle = 0;
-    uint32_t last_done = 0;
 
     console_init();
     console_printf("\r\nHUB75 PS renderer\r\n");
@@ -291,6 +426,25 @@ int main(void)
     }
     console_printf("DDR PASS\r\n");
     Xil_DCacheEnable();
+
+#if HUB75_VOLUMETRIC_TEST
+    /* One static volume: render once, submit once, never touch the buffer
+     * again. The PL re-reads the same base every revolution. */
+    console_printf("render two-ball volume ...\r\n");
+    render_volume(frames[0]);
+    submit_frame(frames[0], &toggle);
+    console_printf("volume submitted base %x\r\n", (unsigned)(UINTPTR)frames[0]);
+
+    for (;;) {
+        uint32_t status = status_read();
+        console_printf("status %x slice %u id %u period %u\r\n",
+                       status, HUB75_ST_SLICE(status),
+                       HUB75_ST_FRAME_ID(status), period_read());
+        usleep(1000000);
+    }
+#else
+    uint32_t frame_no = 0;
+    uint32_t last_done = 0;
 
     hub75_frame_clear(frames[0]);
     hub75_frame_clear(frames[1]);
@@ -312,25 +466,18 @@ int main(void)
         last_done = (status & HUB75_ST_FRAME_DONE) ? 1u : 0u;
 
         render_frame(frame, frame_no);
-        Xil_DCacheFlushRange((UINTPTR)frame, HUB75_FRAME_BYTES);
-
-        XGpio_DiscreteWrite(&gpio_ctrl, HUB75_GPIO_CH1, (uint32_t)(UINTPTR)frame);
-        (void)XGpio_DiscreteRead(&gpio_ctrl, HUB75_GPIO_CH1);
-
-        toggle ^= 1u;
-        XGpio_DiscreteWrite(&gpio_ctrl, HUB75_GPIO_CH2,
-                            HUB75_CTRL_ENABLE |
-                            HUB75_CTRL_SLICES(HUB75_SLICES) | toggle);
+        submit_frame(frame, &toggle);
 
         status = status_read();
         console_printf("frame %u base %x status %x slice %u id %u period %u\r\n",
-                   frame_no, (unsigned)(UINTPTR)frame, status,
-                   HUB75_ST_SLICE(status), HUB75_ST_FRAME_ID(status),
-                   period_read());
+                       frame_no, (unsigned)(UINTPTR)frame, status,
+                       HUB75_ST_SLICE(status), HUB75_ST_FRAME_ID(status),
+                       period_read());
 
         frame_no++;
         usleep(50000);
     }
+#endif
 
     return 0;
 }

@@ -18,6 +18,30 @@
 
 原有 `hub75_top`（PL-only 板级测试）保持不动，仍可用 `build/build_board_test.tcl` 构建。
 
+### 两球旋转体应用（2026-11-02）
+
+`hub75_renderer/main.c` 默认 `HUB75_VOLUMETRIC_TEST=1`，用于第一次真实旋转测试：
+
+- 场景：旋转轴 `x=64, y=32`；左球世界坐标 `(-24, 32, 0)` 半径 12（红），
+  右球 `(+24, 32, 0)` 半径 12（绿）。
+- 64 个 slice 分别按 `theta = 2*pi*s/64` 求旋转平面与两个球的交线：
+  `(r - x0*cosθ)^2 + (y - y0)^2 + (x0*sinθ)^2 <= R^2`。
+  `sin_q15[64]` 提供 Q15 正余弦，不链接 libm。
+- 静态帧只提交一次；PS 不再改写 DDR，因此不会撕裂。PL 每圈重复读取同一基址。
+- `HUB75_VOLUMETRIC_TEST=0` 保留原静止动画（64 slice 同图，无 IR 时靠
+  `BENCH_FALLBACK` 的 1800 RPM 合成 revolution）。
+- 64 片 = 5.625°/片，两个球每次经过约 10 个 slice，体显示边缘会有分片感；
+  20~30 rev/s 可靠视觉暂留融合，20~30 RPM 则一圈 2~3 s，只能看到逐片扫描。
+- **行映射/顶部 ghost 实测（2026-11-02）**：先用同色两球、再做“上半绿/下半红”
+  颜色诊断上板。结果是**绿在上、红在下**，说明上半球数据应写在
+  `row_addr=20..31`、下半球在 `0..11`；面板行映射就是普通的半屏内物理行号，
+  **不是 center-out**。首版的“顶部条纹”不是行映射错位，而是每个 slot 第 0 行
+  ghost 上一槽最后一行（row 31）的单行 artifact；颜色诊断里最上一行是绿色，
+  正好是 row 31 的上半数据。当前先保留该单行 ghost；要消除需在 PL 扫描器里
+  对 `row_addr=0` 保持 OE 关闭并重建位流。
+- 最终 app 恢复左红/右绿并重建 BOOT.BIN（2026-11-02，4,195,816 B）；上板
+  旋转结果 TBD。
+
 ## 2. 板卡事实与关键修正
 
 | 项 | 值 |
@@ -41,7 +65,9 @@ BD 仍同时启用 UART0（MIO14/15）和 UART1（MIO48/49）；渲染应用在 
 - DDR3：`MT41K256M16RE-125`（H5TQ4G63FFR-RD 的 4 Gb×16 等效型号），32-bit，
   4096 Mbit/片，`DDR3_1066F`，CL7/CWL6/tRCD7/tRP7/tRC48.91/tRAS34/tFAW25，
   外部 VREF，**DDR 时钟先 400 MHz**（800 MT/s），memtest 通过后再升 533.333（1066 MT/s）。
-- UART0 MIO14..15 + UART1 MIO48..49（板载 CP2102 在 UART1）；QSPI/SD/ENET/USB 关闭。
+- UART0 MIO14..15 + UART1 MIO48..49（板载 CP2102 在 UART1）；QSPI/ENET/USB 关闭。
+- SD0 MIO40..45（Zynq BootROM 的 SD 启动固定映射；SD1 会与 UART1 MIO48/49 冲突），
+  CD/WP/POW 未接；FAT/MBR microSD 可直接脱机启动。
 - `M_AXI_GP0`、`S_AXI_HP0`：50 MHz，64-bit data，6-bit ID。
 - `proc_sys_reset` 产生同步于 FCLK 的 AXI 复位；`FCLK_RESET0_N` 经反相接 `ext_reset_in`。
 - BD 只导出 `S_AXI_HP0`、FCLK/复位、GPIO 端口、DDR/FIXED_IO；PL 顶层是手写
@@ -108,7 +134,9 @@ word[5:3] = rgb2 (lower half)
 | Stage 1 资源 | `build/reports/ps_stage1/utilization.rpt` | 2240 LUT，2723 FF，2 × BRAM36 |
 | XSA | `board/output/hub75_ps_stage1.xsa` | 含 PS7、AXI GPIO、HP0；**不含 bitstream** |
 | Stage 1 上板 | `build/jtag_run_app.tcl` + COM11 | `HUB75 PS renderer` / `DDR PASS`；状态 `buf_ready=1`，`frame_id`/`frame_done` 翻转；面板照片 TBD |
-| 静止动画 | 无 IR、无旋转，64 slice 同图（白边框 + 十字线 + 反弹小球） | COM11 5 s 内 98 行（约 20 fps），`period 0`（无 IR 属正常），DDR 读回确认边框与 slice 复制；面板目视 TBD |
+| 静止动画 | 无 IR、无旋转，64 slice 同图（白边框 + 十字线 + 反弹小球） | COM11 5 s 内 98 行（约 20 fps），`period 0`（无 IR 属正常），DDR 读回确认边框与 slice 复制；面板目视通过 |
+| 脱机 SD 启动 | `build\run_build_sd_boot.bat` → `BOOT.BIN`（FSBL + bitstream + ELF）；SW4=SD，断电上电 | 上电直接显示动画；COM11 5 s 98 行（约 20 fps），`buf_ready=1`，`period 0`；无需 JTAG |
+| 两球体应用 | `HUB75_VOLUMETRIC_TEST=1`；app 与 `BOOT.BIN` 重建（4,195,816 B）；`build\jtag_run_app.tcl` 下载 | 颜色诊断（上绿下红）确认上半球/下半球数据与行映射正确；顶部单行 ghost 为扫描首行 artifact，暂保留；最终左红/右绿已重载，提交后等待下一次 IR 锁存 |
 
 - XSA 用 `write_hw_platform -fixed` 导出（不含 bitstream），因为本脚本用显式
   opt/place/route 流程；Vitis Run Configuration 里单独选 `.bit`。
@@ -123,13 +151,12 @@ word[5:3] = rgb2 (lower half)
 
 ## 8. 尚未完成（TBD）
 
-- **Vitis platform/app 的 GUI 构建**：源码与步骤见 `sw/README.md`；本机 Vitis
-  Python client 在中文 Windows 上 `create_client()` 报 UTF-8 解码错误，未脚本化。
-- **上板**：UART1 控制台输出、DDR memtest、面板 DDR 图案、帧切换、半屏颜色映射。
 - DDR 实际频率从 400 升到 533.333 后的 memtest。
 - 400 片容量、76 片/圈、后半圈镜像、加速补显。
-- 面板实际列偏移、rgb1/rgb2 半屏对应（用渲染器的红/蓝测试图判读）。
-- 帧率/带宽实测、UART 日志、照片文件名。
+- 面板最终列偏移与 artwork；当前测试图案已确认上下半屏和列方向可用。
+- 完整帧率/HP0 带宽的定量测量、照片/日志归档。
+- FSBL 启动日志：当前 FSBL BSP 的 stdout 仍是 UART0（板载不可见）；需要时把
+  FSBL 域的 `standalone_stdout` 落到 BSP 或直接改 BSP 为 `ps7_uart_1` 再重建。
 
 ## 9. Vitis 运行步骤摘要
 
@@ -137,6 +164,12 @@ word[5:3] = rgb2 (lower half)
 2. app 用 `Empty Application (C)`，加入 `sw/renderer/main.c` + `sw/common/*`。
 3. Run Configuration：Program FPGA 选 `hub75_ps_stage1.bit`，Reset entire system。
 4. CP2102（UART1 MIO48/49）COM 口 115200；预期 `HUB75 PS renderer` + `DDR PASS` + `frame ...`。
-5. 面板：slice 0 全白锚点；其余片上半红条/下半蓝条随 slice 移动。
+5. 面板：当前动画为 64 slice 同图（白边框 + 十字线 + 反弹球），静止可见；
+   旋转体图案需按 slice 分别渲染。
+6. 脱机 SD 启动：`build\run_build_sd_boot.bat` 生成 `board/output/BOOT.BIN`
+   （FSBL + bitstream + ELF），`build\copy_boot_to_sd.ps1 -Drive F:` 写卡，
+   SW4 拨到 SD 行，断电上电。该流程已在板上验证（约 20 fps，无需 JTAG）。
+   Vitis Python API 在中文 Windows 上需 `chcp 65001 + PYTHONUTF8`（批处理已带）。
 
-更详细的 GUI 步骤和故障表见 `sw/README.md`。
+更详细的 GUI 步骤和故障表见 `sw/README.md`；PS 控制接口与渲染示例见
+`sw/PS_DEVELOPER_GUIDE.md`。

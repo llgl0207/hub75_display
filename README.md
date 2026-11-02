@@ -1,6 +1,6 @@
 # Rotating Volumetric HUB75 Display
 
-> Competition submission status: **in progress**. The verified PL-only closed-loop HUB75 scan is still the board-tested baseline. A separate PS+DDR build (Zynq PS7 + AXI GPIO + S_AXI_HP0 + slice RAM + AXI reader) now compiles, passes RTL simulation and runs on board: UART1 console, `DDR PASS`, advancing frame handshake and `buf_ready=1` are recorded. Panel photograph of the PS-rendered image is still TBD.
+> Competition submission status: **in progress**. The verified PL-only closed-loop HUB75 scan is the board-tested baseline. A separate PS+DDR build (Zynq PS7 + AXI GPIO + S_AXI_HP0 + slice RAM + AXI reader) compiles, passes RTL simulation, runs on board with a UART1 console, `DDR PASS`, advancing frame handshake and `buf_ready=1`, and now **boots standalone from a microSD card** (`BOOT.BIN`, no JTAG). The stationary animation is visible on the panel. The renderer's default app renders a **two-ball rotating volume** (64 angular slices, left red / right green, one static frame submitted once); the user has seen the two balls on the rotating panel. A single-row ghost of the previous slot's last row (row 31) remains at the panel's top edge; it is a scan/panel first-row artifact and is left for now.
 
 ## Competition Metadata
 
@@ -35,7 +35,7 @@ This is a separate build; it does not change `hub75_ir_test.bit`:
 - The reader prefetches one 3072-byte slice per display slot over 16-beat AXI3 bursts, unpacks the packed 6-bit pixels into two 4096x6 BRAM36 buffers, and switches buffers only at slot boundaries when the requested slice and frame epoch match.
 - The PS frame base is accepted as pending and latched only at `revolution_start`; the PS waits for a frame-done toggle before reusing a buffer.
 - First-version geometry is 64 slices/frame, frame A at `0x10000000` and frame B at `0x10200000`; 400-slice storage, 76 slots/revolution and second-half mirroring remain future work.
-- Vitis renderer source is under `sw/`; `build/build_ps_system.tcl -tclargs 1` builds the hardware. The renderer now runs on board: `HUB75 PS renderer`, `DDR PASS`, one `frame ...` line per second, `status` bit2 (`buf_ready`) asserts after the first revolution, and `frame_id`/`frame_done` advance. The ping-pong handoff prefetches `slice_index+1` every slot; the earlier conditional prefetch deadlocked start-up and left the scan reading an empty BRAM (black panel). The panel photograph of the PS image is still TBD.
+- Vitis renderer source is under `sw/`; `build/build_ps_system.tcl -tclargs 1` builds the hardware. The renderer runs on board: `HUB75 PS renderer`, `DDR PASS`, `frame ...` lines at about 20 fps in the stationary-animation app, `status` bit2 (`buf_ready`) asserts after the first revolution, and `frame_id`/`frame_done` advance. The ping-pong handoff prefetches `slice_index+1` every slot; the earlier conditional prefetch deadlocked start-up and left the scan reading an empty BRAM (black panel). It also boots standalone from a microSD card via `build/run_build_sd_boot.bat` (FSBL + bitstream + ELF in `BOOT.BIN`). The renderer's default `HUB75_VOLUMETRIC_TEST=1` app renders two spheres at `x = -24` (red) and `x = +24` (green), radius 12, as 64 angular slices; it submits the static frame once and the PL re-reads it every revolution. The two balls have been displayed on the rotating panel; the upper/lower data and normal row mapping were confirmed with an upper-green/lower-red diagnostic. A single-row ghost of row 31 at the panel's top edge remains and is left for now. `HUB75_VOLUMETRIC_TEST=0` keeps the stationary 2D animation.
 
 The 1 ms windows exist because the board showed several edges from one illumination. They are synthesis parameters (`IR_DEBOUNCE_US`, `IR_HOLDOFF_US` in `src/hub75_top.v`); changing them requires a rebuild. A pulse narrower than the debounce window is discarded, so the illuminated pulse at full speed must stay wider than 1 ms.
 
@@ -138,6 +138,20 @@ Vitis 2026.1 has XSCT disabled; create the platform/application in the GUI using
 and run with Program FPGA + Reset entire system. Full steps and troubleshooting
 are in `sw/README.md`; the PS control interface, frame format, submit protocol
 and rendering examples are in `sw/PS_DEVELOPER_GUIDE.md`.
+
+### Build a standalone SD boot image (bare metal)
+
+```powershell
+.\build\run_build_sd_boot.bat            # platform + FSBL + app -> board/output/BOOT.BIN
+.\build\copy_boot_to_sd.ps1 -Drive F:    # FAT/FAT32 removable drive, BOOT.BIN only
+```
+
+Insert the microSD, set **SW4 to the SD row** of the manual's BOOTMODE diagram,
+and power-cycle; the boot mode is sampled at POR. SD0 is on MIO40..45 (the Zynq
+BootROM's fixed SD0 mapping; SD1 would collide with UART1 on MIO48/49). UART1
+MIO48/49 remains the console (COM11). Back up any existing `BOOT.bin` first; the
+Linux image originally on the test card is preserved at
+`build/work/sd_backup/BOOT.bin.original`.
 
 ### Program and test the board (scripted)
 

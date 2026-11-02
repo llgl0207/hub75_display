@@ -14,6 +14,11 @@
 #   UART1 MIO48/49 output was received on the CP2102 COM port, UART0 MIO14/15
 #   was silent). Both UARTs are enabled here; the renderer console uses UART1.
 #
+#   SD boot: SD0 is enabled on MIO40..45 (the standard Zynq SD0 mapping; SD1
+#   would collide with UART1 on MIO48/49). Card detect, write protect and power
+#   are not connected. The BOOT.BIN (FSBL + bitstream + ELF) is built by
+#   build/build_sd_boot.py and written to a FAT32 microSD; SW4 selects SD boot.
+#
 # The DDR part is not in the Xilinx preset list for this board. MT41K256M16RE-125
 # is used as the closest 4Gb x16 Micron equivalent; its 1066 timings match the
 # hynix part. Start at 400 MHz and raise to 533.333 after memtest passes.
@@ -35,7 +40,11 @@ set_property -dict [list \
     CONFIG.PCW_UART1_PERIPHERAL_ENABLE {1} \
     CONFIG.PCW_UART1_UART1_IO {MIO 48 .. 49} \
     CONFIG.PCW_QSPI_PERIPHERAL_ENABLE {0} \
-    CONFIG.PCW_SD0_PERIPHERAL_ENABLE {0} \
+    CONFIG.PCW_SD0_PERIPHERAL_ENABLE {1} \
+    CONFIG.PCW_SD0_SD0_IO {MIO 40 .. 45} \
+    CONFIG.PCW_SD0_GRP_CD_ENABLE {0} \
+    CONFIG.PCW_SD0_GRP_WP_ENABLE {0} \
+    CONFIG.PCW_SD0_GRP_POW_ENABLE {0} \
     CONFIG.PCW_SD1_PERIPHERAL_ENABLE {0} \
     CONFIG.PCW_ENET0_PERIPHERAL_ENABLE {0} \
     CONFIG.PCW_ENET1_PERIPHERAL_ENABLE {0} \

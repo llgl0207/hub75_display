@@ -13,7 +13,7 @@
 | 题目 / 应用场景 | **TBD（团队决定暂不补）** |
 | 板卡 | 用户称 MIZAR R7；工程实际按 Mizar-Z7 手册与 `xc7z020clg400-2` 构建，**确切丝印版本仍未确认** |
 | 工具 | Vivado 2026.1（`F:\AMDDesignTools\2026.1\Vivado`），BASIC 许可证 |
-| 实现方式 | Verilog RTL（PL）+ Vitis 裸机源码（`sw/`）；PS+DDR 构建/仿真通过，上板未验证 |
+| 实现方式 | Verilog RTL（PL）+ Vitis 裸机源码（`sw/`）；PS+DDR 已上板验证（UART1/DDR/帧握手/静止动画），支持 SD 脱机启动 |
 | 许可证 | MIT（`LICENSE`，版权人待团队确认） |
 | 目标 | 旋转体积显示：128×64 HUB75 作为旋转扫描平面，红外每圈对齐 |
 
@@ -25,7 +25,7 @@
 
 **红外消抖与"一次照射一个触发"已在真板实测通过（T004）；红外周期驱动的切片调度（闭环）已实现并通过仿真与构建，等待上板做锁角验证。**
 
-**PS+DDR 增量（PS7 + AXI GPIO + S_AXI_HP0 + DDR reader + slice RAM）已构建、7/7 回归通过；Vitis 应用源码与 GUI 步骤就绪，平台/应用构建和 DDR 图像上板仍未验证。**
+**PS+DDR 增量（PS7 + AXI GPIO + S_AXI_HP0 + DDR reader + slice RAM）已上板验证：UART1 控制台、DDR PASS、约 20 fps 静止动画、`buf_ready=1`，并支持 SD 脱机启动（BOOT.BIN = FSBL + bitstream + ELF）。两球旋转体（64 slice、左红右绿、静态帧只提交一次）已在旋转面板上显示，用户目视效果正常；上半球/下半球数据和普通半屏行映射经“上绿下红”颜色诊断确认。顶部最上一行仍有单行 ghost（每个 slot 第 0 行重影上一槽 row 31），是扫描/面板首行 artifact，暂留。**
 
 ---
 
@@ -74,19 +74,19 @@
 | **红外 → 扫描节奏闭环** | ✅ 已实现（`hub75_sched` + 切片驱动扫描），仿真与构建通过；**用户在机上报告锚点不漂（口述）** |
 | 半屏列对齐（rgb1/rgb2） | ⚠️ 发现错位，原因未定；已有 `PATTERN_MODE=2` 诊断图案与 `RGB2_COLUMN_OFFSET` 修正参数，等实测数据 |
 | DDR AXI 读取 / 整片 BRAM 乒乓 | ✅ RTL 仿真（`tb_hub75_ddr_reader`）+ 构建通过；上板 TBD |
-| PS 渲染与帧提交、Vitis | 🟡 `sw/` 源码与 GUI 步骤就绪；平台/应用构建 + 上板 TBD |
-| PS7 / UART0 / DDR 基线 | ✅ Stage 0 构建；UART/DDR memtest 上板 TBD |
+| PS 渲染与帧提交、Vitis | ✅ 上板验证：UART1 COM11、DDR PASS、帧握手、20 fps 静止动画；两球体（64 slice，左红/右绿）已上板显示，顶部单行 ghost 暂留 |
+| PS7 / UART1 / DDR 基线 / SD 启动 | ✅ 上板验证；SD 脱机启动（BOOT.BIN）已跑通 |
 | 加速补显（零度缺片） | ❌ 未开始，用户要求后续考虑 |
 
 ---
 
 ## 6. 下一步推荐顺序
 
-1. **Vitis 基线**：按 `sw/README.md` 用 GUI 从 `board/output/hub75_ps_stage0.xsa` 建 platform + Hello/OCM 应用，确认 CH340 COM 口 115200 有输出；再跑 DDR memtest。若 DDR 不过，先降到 333.333 MHz。
-2. **DDR 图像上屏**：用 `hub75_ps_stage1.xsa` + `hub75_ps_stage1.bit`，加入 `sw/renderer/main.c` 和 `sw/common/*`；Run Configuration 勾 Program FPGA + Reset entire system。预期 `HUB75 PS renderer` + `DDR PASS` + `frame ...`；面板 slice 0 全白锚点，其余片上半红条/下半蓝条随 slice 移动。
-3. **记录 PS 实测**：DDR memtest、实际 DDR 频率、UART 日志、status（ack/busy/slice/frame_id）、面板照片；确认 `frame_done` 后 A/B 复用无撕裂。通过后再把 DDR 400→533.333 复测。
-4. **半屏列错位/锁角**：PS 红/蓝测试图可直接判读 rgb1/rgb2 半屏对应与列偏移；测得后改渲染端的 upper/lower 或列预移。锁角定量仍按 `board_test_procedure.md` 的判据记录。
-5. 400 片容量、76 片/圈、后半圈镜像复用、加速补显留到基线稳定之后。
+1. **两球旋转体已显示**：`HUB75_VOLUMETRIC_TEST=1` 左红/右绿、静态帧只提交一次；上板目视效果正常，颜色诊断确认上/下半球数据与普通行映射正确。顶部最上一行仍有单行 ghost（上一槽 row 31），暂留；可选在 PL 扫描器里对 `row_addr=0` 保持 OE 关闭并重建位流来消除。继续记录转动后的 `period`、20~30 rev/s 下的 3D 效果和面板照片/视频。
+2. **记录 PS 实测**：DDR memtest、实际 DDR 频率、UART 日志、status（ack/busy/slice/frame_id）、面板照片；确认 `frame_done` 后 A/B 复用无撕裂。通过后再把 DDR 400→533.333 复测。
+3. **半屏列错位/锁角**：PS 红/蓝测试图可直接判读 rgb1/rgb2 半屏对应与列偏移；测得后改渲染端的 upper/lower 或列预移。锁角定量仍按 `board_test_procedure.md` 的判据记录。
+4. 400 片容量、76 片/圈、后半圈镜像复用、加速补显留到基线稳定之后。
+5. **Linux 评估**：若改用 Linux，先解决帧缓冲预留（0x10000000/0x10200000 起 4 MiB）、HP0 非一致性的 cache flush/uncached 映射、AXI GPIO mmap/UIO；显示实时性仍由 PL 保证。
 
 ---
 
@@ -121,10 +121,13 @@
 | `sim/tb_hub75_ddr_reader.v` | 行为 AXI3 slave + 6-bit 打包数据；检查两片 4096 字写入 |
 | `sim/run_regression.tcl` | 一条命令跑 7 个 testbench；用绝对路径直接调 `xvlog/xelab/xsim.bat`，读 transcript 判定 |
 | `build/build_board_test.tcl` | PL-only 独立构建 + 报告 + bitstream（**含 USERID 0x48554237**） |
-| `build/create_ps_bd.tcl` | PS7 BD：UART0/DDR/FCLK/AXI GPIO/HP0/proc_sys_reset；Stage 0 只 PS7 |
+| `build/create_ps_bd.tcl` | PS7 BD：UART0+UART1、DDR/FCLK、AXI GPIO/HP0、SD0 MIO40..45、proc_sys_reset；Stage 0 只 PS7 |
+| `build/build_sd_boot.py` / `run_build_sd_boot.bat` | Vitis Python：platform + FSBL + app + bootgen → `BOOT.BIN`（中文 Windows 需批处理里的 UTF-8 设置） |
+| `build/copy_boot_to_sd.ps1` | 只向 FAT32 可移动盘根目录写 `BOOT.BIN` |
 | `build/build_ps_system.tcl` | Stage 0/1 PS 系统构建 + 报告 + bit/XSA（`-TclArgs 1` 为 Stage 1） |
 | `board/constraints/hub75_ps.xdc` | PS 版 PL 引脚；无 H16 时钟，FCLK 由 PS7 提供 |
 | `sw/README.md` | Vitis 2026.1 GUI 建 platform/app、JTAG Run Configuration、故障表 |
+| `sw/PS_DEVELOPER_GUIDE.md` | PS 控制接口、帧格式、submit/frame_done 协议、静止/旋转渲染、SD 脱机启动 |
 | `report/ps_development.md` | PS7 配置、帧格式、AXI GPIO 契约、构建/仿真结果、TBD |
 | `build/program_board.tcl` | JTAG 下载，用 DONE/EOS 判据（非 IS_PROGRAMMED） |
 | `build/verify_bitstream.tcl` | 读 `REGISTER.USERCODE` 自证构建来源 |
@@ -146,11 +149,12 @@
 4. `BITSTREAM.CONFIG.USERID` 可为 bitstream 写入唯一标识，配合 `REGISTER.USERCODE` 读回，在无 ILA 条件下客观证明"板上跑的是哪次构建"——本项目已用 `0x48554237`。
 5. `Move-Item` 到尚不存在的父目录会报 `DirectoryNotFoundException`；批量移动脚本必须先 `New-Item -ItemType Directory`。
 6. **Vitis 2026.1 禁用了 XSCT**：`xsct -eval ...` 直接报 `XSCT is disabled in Vitis 2026.1 release`；脚本化要用 Vitis Python Console/API，或直接用 GUI。
-7. **Vitis Python API 在中文 Windows 上可能在 `vitis.create_client()` 报 UTF-8 解码错误**（`'utf-8' codec can't decode byte 0xd5`）：client 按 UTF-8 读本机子进程输出。改用 GUI；这是 `build/build_sw.py` 未打通的原因。
+7. **Vitis Python API 在中文 Windows 上会在 `vitis.create_client()` 报 UTF-8 解码错误**（`'utf-8' codec can't decode byte 0xd5`）：client 按 UTF-8 读本机子进程输出。解决办法是在批处理里先 `chcp 65001` 并设 `PYTHONUTF8=1`、`PYTHONIOENCODING=utf-8`；`build/run_build_sd_boot.bat` 已验证可完整建 platform/FSBL/app 并生成 BOOT.BIN。
 8. **Vivado 2026.1 的 `launch_simulation` 可能报 `Common 17-180 Spawn failed`**：生成的 `compile.bat` 调 `xvlog` 时子进程 PATH 找不到 Vivado bin。`build/vivado.ps1` 加 PATH 仍不够；`sim/run_regression.tcl` 改为用绝对路径直接 `xvlog/xelab/xsim.bat`，绕开 `launch_simulation`。
 9. Zynq PS7 的 `S_AXI_HP0` 是 **AXI3**；BD 里 `create_bd_intf_port` 的 `aximm_rtl` 默认 AXI4，直接连会报协议不兼容。必须设 `CONFIG.PROTOCOL {AXI3}`、`FREQ_HZ 50000000`、64-bit data、6-bit ID，且 `ARLEN` 最大 16 beats。
 10. `proc_sys_reset` 的 `ext_reset_in` 是**高有效**，且 `C_EXT_RESET_HIGH` 在 BD 里只读；把 `FCLK_RESET0_N` 经 `util_vector_logic` 反相后再接，AXI 复位才正确。**注意 `aux_reset_in` 默认是低有效（`C_AUX_RESET_HIGH=0`）**：接常量 0 会让 `peripheral_aresetn` 永远为低，A9 首次访问 AXI GPIO 就挂死（本次已修：置 `C_AUX_RESET_HIGH=1`，再与 `mb_debug_sys_rst` 一起接 0）。
 11. **板载 CP2102 实际接 UART1 的 MIO48(TX)/MIO49(RX)**，不是手册/旧文档写的 UART0 MIO14/15（实测 UART0 收发均无数据，UART1 强制发送 CP2102 完整收到）。需要 MIO48/49 的 L3_SEL=7、`UART_CLK_CTRL` 的 CLKACT1、`APER_CLK_CTRL[21]` 和 UART1 @0xE0001000；`hub75_renderer/main.c` 的 `console_init()` 已全部处理。BD 现在同时启用 UART0 和 UART1。
 12. `write_hw_platform -include_bit` 需要 `impl_1` run 已跑到 write_bitstream；本工程的显式 opt/place/route 流程下会报 “Unable to get BIT file”。当前导出 XSA 不带 bitstream，Vitis Run Configuration 里单独选 `.bit`；若要走 run 流程，用 `launch_runs impl_1 -to_step write_bitstream` 再导出。
+13. **SD 脱机启动**：SD0 固定在 MIO40..45（Zynq BootROM 的 SD 映射；SD1 会与 UART1 MIO48/49 冲突），CD/WP/POW 可不接。`build/run_build_sd_boot.bat` 生成 `BOOT.BIN`（FSBL + bitstream + ELF）；卡需 MBR + FAT/FAT32，`BOOT.BIN` 在根目录；SW4 拨到 SD 行并**断电上电**（boot mode 在 POR 采样，按复位键不保证）。换卡前备份原 `BOOT.bin`；测试卡的原 Linux 镜像在 `build/work/sd_backup/BOOT.bin.original`。
 
 以上均为本次真实踩坑，可作为 `skill/` 候选条目，但按团队决定，技能包仍在项目完成后统一提炼。
