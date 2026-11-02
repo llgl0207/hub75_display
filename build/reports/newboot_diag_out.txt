@@ -1,0 +1,22 @@
+﻿
+Public key portion is:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCX6d+UBkq8DoQRxm/sx9t9i5Kg0WTas2+CYFzzGpRbz7dCkIxGHFN/hHOlS00lzLtfuNq/QZC0Kyu9/czNNDm6e5U4p7OgibFWJ9ANboh4JkPilPuEqGuLKg9YT8nC5HLMefCcjIqqSsRpA+t8ubg2bRyiZ7N9HCY77ClsJOVtZnP9+rdh2Z0mcbw1E1sx2vO+dp6yJlEdhR1w4K18blTpK1Eg/1CFWzy9gfQSLCSIqcB08cjfq5wBhgco0ZYE6K5r9Qnu6sUa6sAMfOlKwUyJ37+LN4AS9BKHdz2KldO33vAWOJ6o96wtiCJTiSto+iIffgWSI3LFq/n0cNQ9pT1h root@petalinux_boot_from_sd
+Fingerprint: md5 75:62:0b:46:3a:ec:53:2d:fc:24:6a:2a:59:9c:ae:a3
+dropbear.
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Starting syslogd/klogd: done
+Starting tcf-agent: OK
+
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+7[r[999;999H[6nroot@petalinux_boot_from_sd:~# ls /run/media/mmcblk0p1
+BOOT.bin                   hub75_pattern_bram         hub75_probe
+System Volume Information  hub75_pattern_bram32       image.ub
+hub75_diag                 hub75_pattern_ocm          uEnv.txt
+hub75_pattern              hub75_pattern_ocm4k
+root@petalinux_boot_from_sd:~# /run/media/mmcblk0p1/hub75_diag
+ctrl frame_base=0x00000000 frame_ctrl=0x00000000 tri1=4294967295 tri2=0
+initial st=0x00002700 ack=0 busy=0 buf=0 done=0 ir=0 pend=0 act=0 en=0 slice=39 id=  0 submit=0 pvalid=0 period=0
+devmem 0x41210000 32

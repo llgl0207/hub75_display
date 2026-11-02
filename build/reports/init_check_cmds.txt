@@ -1,0 +1,6 @@
+cat /etc/inittab
+ls /etc/init.d
+cat /etc/init.d/rcS 2>/dev/null | head -20
+cat /etc/init.d/S99* 2>/dev/null | head -10
+which start_getty
+cat /bin/start_getty 2>/dev/null | head -20

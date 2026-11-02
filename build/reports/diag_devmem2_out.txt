@@ -1,0 +1,90 @@
+﻿
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+7[r[999;999H[6nroot@petalinux_boot_from_sd:~# cat /proc/uptime
+62.50 52.74
+root@petalinux_boot_from_sd:~# cat /proc/cmdline
+console=ttyPS0,115200 earlyprintk mem=256M clk_ignore_unused cpuidle.off=1 idle=poll maxcpus=1
+root@petalinux_boot_from_sd:~# devmem 0x41210000 32
+0x00002D00
+root@petalinux_boot_from_sd:~# devmem 0x41210008 32
+0x00000000
+root@petalinux_boot_from_sd:~# devmem 0x41200000 32
+0x00000000
+root@petalinux_boot_from_sd:~# devmem 0x41200008 32
+0x00000000
+root@petalinux_boot_from_sd:~# for i in $(seq 1 20); do devmem 0x41210000 32; uslleep 50000; done
+0x00002000
+0x00001500
+0x00000A00
+0x00003E00
+0x00003300
+0x00002800
+0x00001C00
+0x00001100
+0x00000600
+0x00003A00
+0x00002F00
+0x00002400
+0x00001900
+0x00000D00
+0x00000200
+0x00003700
+0x00002C00
+0x00002100
+0x00001600
+0x00000A00
+root@petalinux_boot_from_sd:~# devmem 0x41210008 32
+0x00000000
+root@petalinux_boot_from_sd:~# devmem 0x41200004 32 0
+root@petalinux_boot_from_sd:~# devmem 0x4120000C 32 0
+root@petalinux_boot_from_sd:~# devmem 0x41200000 32 0x42000000
+root@petalinux_boot_from_sd:~# v=$(devmem 0x41200008 32); echo "ctrl2_before=$v";; w=$(( (v ^ 1) | 2 )); echo "ctrl2_submit=$(printf '0x%08x' $w)"; devmem 0x412000008 32 $(printf '0x%08x' $w)
+ctrl2_before=0x00000000
+ctrl2_submit=0x00000003
+root@petalinux_boot_from_sd:~# for i in $(seq 1 40); do devmem 0x41210000 32; uslleep 50000; done
+0x400107CD
+0x40013CCD
+0x400131CD
+0x400126CD
+0x40011BCD
+0x400110CF
+0x400105CD
+0x40013ACD
+0x40012FCF
+0x400124CF
+0x400119CF
+0x40010ECD
+0x400103CF
+0x400138CD
+0x40012DCD
+0x400122CF
+0x400117CF
+0x40010BCD
+0x400100CD
+0x400135CD
+0x40012ACD
+0x40011FCD
+0x400114CD
+0x400109CD
+0x40013ECD
+0x400133CD
+0x400128CF
+0x40011DCF
+0x400112CF
+0x400106CD
+0x40013BCD
+0x400130CD
+0x400125CD
+0x40011ACD
+0x40010FCD
+0x400104CD
+0x400139CD
+0x40012ECD
+0x400123CD
+0x400118CD
+root@petalinux_boot_from_sd:~# devmem 0x41210000 32
+0x400127CD
+root@petalinux_boot_from_sd:~# 

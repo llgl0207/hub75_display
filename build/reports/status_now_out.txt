@@ -1,0 +1,10 @@
+﻿
+root@petalinux_boot_from_sd:~# devmem 0x41210000 32
+0x77013FCD
+root@petalinux_boot_from_sd:~# usleep 100000
+root@petalinux_boot_from_sd:~# devmem 0x41210000 32
+0x7F0132CD
+root@petalinux_boot_from_sd:~# usleep 100000
+root@petalinux_boot_from_sd:~# devmem 0x41210000 32
+0x48010CCD
+root@petalinux_boot_from_sd:~# 

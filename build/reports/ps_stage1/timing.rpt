@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
-| Date         : Mon Nov  2 03:22:39 2026
+| Date         : Tue Nov  3 03:37:50 2026
 | Host         : DESKTOP210 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -file C:/Users/210/Documents/intcode/123/hub75_display/build/reports/ps_stage1/timing.rpt
 | Design       : system_top
@@ -138,7 +138,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      6.382        0.000                      0                 6615        0.048        0.000                      0                 6615        8.870        0.000                       0                  2883  
+      6.611        0.000                      0                 6658        0.055        0.000                      0                 6658        8.870        0.000                       0                  2905  
 
 
 All user specified timing constraints are met.
@@ -161,7 +161,7 @@ clk_fpga_0  {0.000 10.000}     20.000          50.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-clk_fpga_0          6.382        0.000                      0                 6615        0.048        0.000                      0                 6615        8.870        0.000                       0                  2883  
+clk_fpga_0          6.611        0.000                      0                 6658        0.055        0.000                      0                 6658        8.870        0.000                       0                  2905  
 
 
 ------------------------------------------------------------------------------------------------
@@ -192,28 +192,28 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  clk_fpga_0
   To Clock:  clk_fpga_0
 
-Setup :            0  Failing Endpoints,  Worst Slack        6.382ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.048ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        6.611ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.055ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        8.870ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             6.382ns  (required time - arrival time)
-  Source:                 u_system/u_top/u_ir_revolution_sync/interval_sum_reg[5]/C
+Slack (MET) :             6.611ns  (required time - arrival time)
+  Source:                 u_system/u_top/u_ir_revolution_sync/interval_sum_reg[11]/C
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
   Destination:            u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]/D
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
   Path Group:             clk_fpga_0
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            20.000ns  (clk_fpga_0 rise@20.000ns - clk_fpga_0 rise@0.000ns)
-  Data Path Delay:        13.233ns  (logic 6.299ns (47.600%)  route 6.934ns (52.400%))
-  Logic Levels:           24  (CARRY4=17 LUT2=1 LUT3=3 LUT4=2 LUT5=1)
-  Clock Path Skew:        -0.115ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    2.207ns = ( 22.207 - 20.000 ) 
-    Source Clock Delay      (SCD):    2.514ns
-    Clock Pessimism Removal (CPR):    0.192ns
+  Data Path Delay:        12.977ns  (logic 6.331ns (48.786%)  route 6.646ns (51.214%))
+  Logic Levels:           25  (CARRY4=18 LUT2=1 LUT3=3 LUT4=2 LUT5=1)
+  Clock Path Skew:        -0.142ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.208ns = ( 22.208 - 20.000 ) 
+    Source Clock Delay      (SCD):    2.458ns
+    Clock Pessimism Removal (CPR):    0.109ns
   Clock Uncertainty:      0.302ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.600ns
@@ -227,77 +227,80 @@ Slack (MET) :             6.382ns  (required time - arrival time)
     PS7_X0Y0             PS7                          0.000     0.000 r  u_bd/design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           0.994     0.994    u_bd/design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     1.079 r  u_bd/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=2884, routed)        1.435     2.514    u_system/u_top/u_ir_revolution_sync/clk
-    SLICE_X60Y83         FDRE                                         r  u_system/u_top/u_ir_revolution_sync/interval_sum_reg[5]/C
+                         net (fo=2906, routed)        1.379     2.458    u_system/u_top/u_ir_revolution_sync/clk
+    SLICE_X49Y84         FDRE                                         r  u_system/u_top/u_ir_revolution_sync/interval_sum_reg[11]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X60Y83         FDRE (Prop_fdre_C_Q)         0.379     2.893 r  u_system/u_top/u_ir_revolution_sync/interval_sum_reg[5]/Q
-                         net (fo=53, routed)          1.231     4.124    u_system/u_top/u_ir_revolution_sync/interval_sum[5]
-    SLICE_X53Y91         LUT3 (Prop_lut3_I1_O)        0.105     4.229 r  u_system/u_top/u_ir_revolution_sync/period_ticks[4]_i_25/O
-                         net (fo=3, routed)           0.763     4.992    u_system/u_top/u_ir_revolution_sync/period_ticks[4]_i_25_n_0
-    SLICE_X54Y84         CARRY4 (Prop_carry4_DI[0]_CO[3])
-                                                      0.457     5.449 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]_i_187/CO[3]
-                         net (fo=1, routed)           0.000     5.449    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]_i_187_n_0
-    SLICE_X54Y85         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.100     5.549 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]_i_147/CO[3]
-                         net (fo=1, routed)           0.000     5.549    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]_i_147_n_0
-    SLICE_X54Y86         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.100     5.649 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]_i_102/CO[3]
-                         net (fo=1, routed)           0.000     5.649    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]_i_102_n_0
-    SLICE_X54Y87         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.100     5.749 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]_i_68/CO[3]
-                         net (fo=1, routed)           0.000     5.749    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]_i_68_n_0
-    SLICE_X54Y88         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.100     5.849 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]_i_33/CO[3]
-                         net (fo=1, routed)           0.000     5.849    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]_i_33_n_0
-    SLICE_X54Y89         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.100     5.949 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[4]_i_38/CO[3]
-                         net (fo=1, routed)           0.000     5.949    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[4]_i_38_n_0
-    SLICE_X54Y90         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.262     6.211 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[8]_i_38/O[3]
-                         net (fo=3, routed)           0.897     7.108    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[8]_i_38_n_4
-    SLICE_X53Y91         LUT3 (Prop_lut3_I1_O)        0.264     7.372 r  u_system/u_top/u_ir_revolution_sync/period_ticks[8]_i_17/O
-                         net (fo=1, routed)           0.709     8.080    u_system/u_top/u_ir_revolution_sync/period_ticks[8]_i_17_n_0
-    SLICE_X59Y91         CARRY4 (Prop_carry4_DI[0]_CO[3])
-                                                      0.605     8.685 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[8]_i_11/CO[3]
-                         net (fo=1, routed)           0.000     8.685    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[8]_i_11_n_0
-    SLICE_X59Y92         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.098     8.783 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[12]_i_11/CO[3]
-                         net (fo=1, routed)           0.000     8.783    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[12]_i_11_n_0
-    SLICE_X59Y93         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.098     8.881 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[16]_i_11/CO[3]
-                         net (fo=1, routed)           0.000     8.881    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[16]_i_11_n_0
-    SLICE_X59Y94         CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.265     9.146 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[20]_i_11/O[1]
-                         net (fo=2, routed)           0.519     9.666    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[20]_i_11_n_6
-    SLICE_X57Y94         LUT3 (Prop_lut3_I1_O)        0.269     9.935 r  u_system/u_top/u_ir_revolution_sync/period_ticks[20]_i_5/O
-                         net (fo=2, routed)           0.695    10.629    u_system/u_top/u_ir_revolution_sync/period_ticks[20]_i_5_n_0
-    SLICE_X57Y94         LUT4 (Prop_lut4_I3_O)        0.267    10.896 r  u_system/u_top/u_ir_revolution_sync/period_ticks[20]_i_9/O
-                         net (fo=1, routed)           0.000    10.896    u_system/u_top/u_ir_revolution_sync/period_ticks[20]_i_9_n_0
-    SLICE_X57Y94         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.457    11.353 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[20]_i_2/CO[3]
-                         net (fo=1, routed)           0.000    11.353    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[20]_i_2_n_0
-    SLICE_X57Y95         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.181    11.534 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[24]_i_2/O[0]
-                         net (fo=5, routed)           0.631    12.165    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[24]_i_2_n_7
-    SLICE_X54Y97         LUT2 (Prop_lut2_I0_O)        0.249    12.414 r  u_system/u_top/u_ir_revolution_sync/period_ticks[31]_i_90/O
-                         net (fo=1, routed)           0.000    12.414    u_system/u_top/u_ir_revolution_sync/period_ticks[31]_i_90_n_0
-    SLICE_X54Y97         CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.423    12.837 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[31]_i_68/CO[3]
-                         net (fo=1, routed)           0.000    12.837    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[31]_i_68_n_0
-    SLICE_X54Y98         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.262    13.099 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[31]_i_35/O[3]
-                         net (fo=3, routed)           0.670    13.769    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[31]_i_35_n_4
-    SLICE_X53Y99         LUT4 (Prop_lut4_I1_O)        0.250    14.019 r  u_system/u_top/u_ir_revolution_sync/period_ticks[31]_i_33/O
-                         net (fo=1, routed)           0.000    14.019    u_system/u_top/u_ir_revolution_sync/period_ticks[31]_i_33_n_0
-    SLICE_X53Y99         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.457    14.476 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[31]_i_13/CO[3]
-                         net (fo=1, routed)           0.001    14.477    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[31]_i_13_n_0
-    SLICE_X53Y100        CARRY4 (Prop_carry4_CI_CO[2])
-                                                      0.190    14.667 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[31]_i_3/CO[2]
-                         net (fo=32, routed)          0.819    15.486    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[31]_i_3_n_1
-    SLICE_X51Y90         LUT5 (Prop_lut5_I1_O)        0.261    15.747 r  u_system/u_top/u_ir_revolution_sync/period_ticks[0]_i_1/O
-                         net (fo=1, routed)           0.000    15.747    u_system/u_top/u_ir_revolution_sync/period_ticks[0]_i_1_n_0
-    SLICE_X51Y90         FDRE                                         r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]/D
+    SLICE_X49Y84         FDRE (Prop_fdre_C_Q)         0.379     2.837 r  u_system/u_top/u_ir_revolution_sync/interval_sum_reg[11]/Q
+                         net (fo=48, routed)          1.173     4.010    u_system/u_top/u_ir_revolution_sync/interval_sum[11]
+    SLICE_X37Y86         LUT3 (Prop_lut3_I2_O)        0.121     4.131 r  u_system/u_top/u_ir_revolution_sync/period_ticks[4]_i_24/O
+                         net (fo=3, routed)           0.649     4.780    u_system/u_top/u_ir_revolution_sync/period_ticks[4]_i_24_n_0
+    SLICE_X44Y84         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.581     5.361 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]_i_187/CO[3]
+                         net (fo=1, routed)           0.000     5.361    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]_i_187_n_0
+    SLICE_X44Y85         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     5.459 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]_i_147/CO[3]
+                         net (fo=1, routed)           0.000     5.459    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]_i_147_n_0
+    SLICE_X44Y86         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     5.557 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]_i_102/CO[3]
+                         net (fo=1, routed)           0.000     5.557    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]_i_102_n_0
+    SLICE_X44Y87         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     5.655 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]_i_68/CO[3]
+                         net (fo=1, routed)           0.000     5.655    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]_i_68_n_0
+    SLICE_X44Y88         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     5.753 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]_i_33/CO[3]
+                         net (fo=1, routed)           0.000     5.753    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]_i_33_n_0
+    SLICE_X44Y89         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     5.851 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[4]_i_38/CO[3]
+                         net (fo=1, routed)           0.000     5.851    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[4]_i_38_n_0
+    SLICE_X44Y90         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     5.949 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[8]_i_38/CO[3]
+                         net (fo=1, routed)           0.000     5.949    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[8]_i_38_n_0
+    SLICE_X44Y91         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180     6.129 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[31]_i_76/O[0]
+                         net (fo=3, routed)           0.784     6.913    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[31]_i_76_n_7
+    SLICE_X45Y84         LUT3 (Prop_lut3_I1_O)        0.270     7.183 r  u_system/u_top/u_ir_revolution_sync/period_ticks[8]_i_16/O
+                         net (fo=1, routed)           0.830     8.013    u_system/u_top/u_ir_revolution_sync/period_ticks[8]_i_16_n_0
+    SLICE_X44Y97         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.588     8.601 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[8]_i_11/CO[3]
+                         net (fo=1, routed)           0.000     8.601    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[8]_i_11_n_0
+    SLICE_X44Y98         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.260     8.861 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[12]_i_11/O[3]
+                         net (fo=2, routed)           0.801     9.662    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[12]_i_11_n_4
+    SLICE_X42Y93         LUT3 (Prop_lut3_I1_O)        0.280     9.942 r  u_system/u_top/u_ir_revolution_sync/period_ticks[12]_i_3/O
+                         net (fo=2, routed)           0.581    10.523    u_system/u_top/u_ir_revolution_sync/period_ticks[12]_i_3_n_0
+    SLICE_X42Y93         LUT4 (Prop_lut4_I3_O)        0.268    10.791 r  u_system/u_top/u_ir_revolution_sync/period_ticks[12]_i_7/O
+                         net (fo=1, routed)           0.000    10.791    u_system/u_top/u_ir_revolution_sync/period_ticks[12]_i_7_n_0
+    SLICE_X42Y93         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.314    11.105 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[12]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.105    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[12]_i_2_n_0
+    SLICE_X42Y94         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.262    11.367 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[16]_i_2/O[3]
+                         net (fo=5, routed)           0.539    11.906    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[16]_i_2_n_4
+    SLICE_X41Y95         LUT2 (Prop_lut2_I1_O)        0.250    12.156 r  u_system/u_top/u_ir_revolution_sync/period_ticks[31]_i_107/O
+                         net (fo=1, routed)           0.000    12.156    u_system/u_top/u_ir_revolution_sync/period_ticks[31]_i_107_n_0
+    SLICE_X41Y95         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.457    12.613 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[31]_i_86/CO[3]
+                         net (fo=1, routed)           0.000    12.613    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[31]_i_86_n_0
+    SLICE_X41Y96         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    12.793 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[31]_i_68/O[0]
+                         net (fo=3, routed)           0.609    13.402    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[31]_i_68_n_7
+    SLICE_X40Y95         LUT4 (Prop_lut4_I2_O)        0.249    13.651 r  u_system/u_top/u_ir_revolution_sync/period_ticks[31]_i_84/O
+                         net (fo=1, routed)           0.000    13.651    u_system/u_top/u_ir_revolution_sync/period_ticks[31]_i_84_n_0
+    SLICE_X40Y95         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.457    14.108 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[31]_i_59/CO[3]
+                         net (fo=1, routed)           0.000    14.108    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[31]_i_59_n_0
+    SLICE_X40Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    14.206 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[31]_i_26/CO[3]
+                         net (fo=1, routed)           0.000    14.206    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[31]_i_26_n_0
+    SLICE_X40Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    14.304 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[31]_i_13/CO[3]
+                         net (fo=1, routed)           0.000    14.304    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[31]_i_13_n_0
+    SLICE_X40Y98         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.190    14.494 r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[31]_i_3/CO[2]
+                         net (fo=32, routed)          0.680    15.174    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[31]_i_3_n_1
+    SLICE_X51Y92         LUT5 (Prop_lut5_I1_O)        0.261    15.435 r  u_system/u_top/u_ir_revolution_sync/period_ticks[0]_i_1/O
+                         net (fo=1, routed)           0.000    15.435    u_system/u_top/u_ir_revolution_sync/period_ticks[0]_i_1_n_0
+    SLICE_X51Y92         FDRE                                         r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_0 rise edge)
@@ -305,16 +308,16 @@ Slack (MET) :             6.382ns  (required time - arrival time)
     PS7_X0Y0             PS7                          0.000    20.000 r  u_bd/design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           0.905    20.906    u_bd/design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    20.983 r  u_bd/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=2884, routed)        1.224    22.207    u_system/u_top/u_ir_revolution_sync/clk
-    SLICE_X51Y90         FDRE                                         r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]/C
-                         clock pessimism              0.192    22.399    <hidden>
-                         clock uncertainty           -0.302    22.097    <hidden>
-    SLICE_X51Y90         FDRE (Setup_fdre_C_D)        0.032    22.129    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]
+                         net (fo=2906, routed)        1.225    22.208    u_system/u_top/u_ir_revolution_sync/clk
+    SLICE_X51Y92         FDRE                                         r  u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]/C
+                         clock pessimism              0.109    22.316    <hidden>
+                         clock uncertainty           -0.302    22.014    <hidden>
+    SLICE_X51Y92         FDRE (Setup_fdre_C_D)        0.032    22.046    u_system/u_top/u_ir_revolution_sync/period_ticks_reg[0]
   -------------------------------------------------------------------
-                         required time                         22.129    <hidden>
-                         arrival time                         -15.747    <hidden>
+                         required time                         22.046    <hidden>
+                         arrival time                         -15.435    <hidden>
   -------------------------------------------------------------------
-                         slack                                  6.382    <hidden>
+                         slack                                  6.611    <hidden>
 
 
 
@@ -322,20 +325,20 @@ Slack (MET) :             6.382ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.048ns  (arrival time - required time)
-  Source:                 u_bd/design_1_i/axi_gpio_status/U0/ip2bus_data_i_D1_reg[9]/C
+Slack (MET) :             0.055ns  (arrival time - required time)
+  Source:                 u_system/u_reader/wr_addr_reg[3]/C
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
-  Destination:            u_bd/design_1_i/axi_gpio_status/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[22]/D
-                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_system/u_slice_ram/mem_b_reg/ADDRARDADDR[6]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
   Path Group:             clk_fpga_0
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
-  Data Path Delay:        0.300ns  (logic 0.141ns (47.012%)  route 0.159ns (52.988%))
+  Data Path Delay:        0.293ns  (logic 0.141ns (48.118%)  route 0.152ns (51.882%))
   Logic Levels:           0  
-  Clock Path Skew:        0.181ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.191ns
-    Source Clock Delay      (SCD):    0.975ns
-    Clock Pessimism Removal (CPR):    0.035ns
+  Clock Path Skew:        0.055ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.229ns
+    Source Clock Delay      (SCD):    0.893ns
+    Clock Pessimism Removal (CPR):    0.281ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -344,12 +347,12 @@ Slack (MET) :             0.048ns  (arrival time - required time)
     PS7_X0Y0             PS7                          0.000     0.000 r  u_bd/design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           0.310     0.310    u_bd/design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  u_bd/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=2884, routed)        0.639     0.975    u_bd/design_1_i/axi_gpio_status/U0/s_axi_aclk
-    SLICE_X43Y100        FDRE                                         r  u_bd/design_1_i/axi_gpio_status/U0/ip2bus_data_i_D1_reg[9]/C
+                         net (fo=2906, routed)        0.557     0.893    u_system/u_reader/CLK
+    SLICE_X33Y58         FDRE                                         r  u_system/u_reader/wr_addr_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X43Y100        FDRE (Prop_fdre_C_Q)         0.141     1.116 r  u_bd/design_1_i/axi_gpio_status/U0/ip2bus_data_i_D1_reg[9]/Q
-                         net (fo=1, routed)           0.159     1.275    u_bd/design_1_i/axi_gpio_status/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[31]_0[22]
-    SLICE_X39Y98         FDRE                                         r  u_bd/design_1_i/axi_gpio_status/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[22]/D
+    SLICE_X33Y58         FDRE (Prop_fdre_C_Q)         0.141     1.034 r  u_system/u_reader/wr_addr_reg[3]/Q
+                         net (fo=2, routed)           0.152     1.186    u_system/u_slice_ram/mem_a_reg_0[3]
+    RAMB36_X2Y11         RAMB36E1                                     r  u_system/u_slice_ram/mem_b_reg/ADDRARDADDR[6]
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_0 rise edge)
@@ -357,15 +360,16 @@ Slack (MET) :             0.048ns  (arrival time - required time)
     PS7_X0Y0             PS7                          0.000     0.000 r  u_bd/design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           0.337     0.337    u_bd/design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  u_bd/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=2884, routed)        0.825     1.191    u_bd/design_1_i/axi_gpio_status/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_aclk
-    SLICE_X39Y98         FDRE                                         r  u_bd/design_1_i/axi_gpio_status/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[22]/C
-                         clock pessimism             -0.035     1.156    <hidden>
-    SLICE_X39Y98         FDRE (Hold_fdre_C_D)         0.071     1.227    u_bd/design_1_i/axi_gpio_status/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[22]
+                         net (fo=2906, routed)        0.863     1.229    u_system/u_slice_ram/CLK
+    RAMB36_X2Y11         RAMB36E1                                     r  u_system/u_slice_ram/mem_b_reg/CLKARDCLK
+                         clock pessimism             -0.281     0.947    <hidden>
+    RAMB36_X2Y11         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ADDRARDADDR[6])
+                                                      0.183     1.130    u_system/u_slice_ram/mem_b_reg
   -------------------------------------------------------------------
-                         required time                         -1.227    <hidden>
-                         arrival time                           1.275    <hidden>
+                         required time                         -1.130    <hidden>
+                         arrival time                           1.186    <hidden>
   -------------------------------------------------------------------
-                         slack                                  0.048    <hidden>
+                         slack                                  0.055    <hidden>
 
 
 
@@ -379,9 +383,9 @@ Period(ns):         20.000
 Sources:            { u_bd/design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0] }
 
 Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.472         20.000      17.528     RAMB36_X2Y11  u_system/u_slice_ram/mem_a_reg/CLKARDCLK
-Low Pulse Width   Slow    RAMD32/CLK          n/a            1.130         10.000      8.870      SLICE_X30Y50  u_system/u_reader/fifo_reg_0_15_0_5/RAMA/CLK
-High Pulse Width  Slow    RAMD32/CLK          n/a            1.130         10.000      8.870      SLICE_X30Y50  u_system/u_reader/fifo_reg_0_15_0_5/RAMA/CLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.472         20.000      17.528     RAMB36_X2Y12  u_system/u_slice_ram/mem_a_reg/CLKARDCLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.130         10.000      8.870      SLICE_X26Y49  u_system/u_reader/fifo_reg_0_15_0_5/RAMA/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.130         10.000      8.870      SLICE_X26Y49  u_system/u_reader/fifo_reg_0_15_0_5/RAMA/CLK
 
 
 

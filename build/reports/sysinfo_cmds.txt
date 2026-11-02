@@ -1,0 +1,10 @@
+dmesg | tail -50
+cat /proc/partitions
+ls -l /dev/mem /dev/mmcblk0p1 /dev/mmcblk0p2
+cat /proc/mounts
+ls /sys/class/fpga_manager
+cat /sys/class/fpga_manager/fpga0/state
+mkdir -p /mnt/boot
+mount -t vfat /dev/mmcblk0p1 /mnt/boot
+ls -la /mnt/boot
+df -h

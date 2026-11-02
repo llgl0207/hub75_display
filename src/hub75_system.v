@@ -105,6 +105,10 @@ module hub75_system (
     wire        buf_ready;
     wire [7:0]  frame_id;
     wire [5:0]  active_slice;
+    wire        ir_active;
+    wire        pending_valid;
+    wire        active_valid;
+    wire [5:0]  bench_count;
 
     hub75_ddr_reader u_reader (
         .clk(clk),
@@ -126,6 +130,10 @@ module hub75_system (
         .frame_id(frame_id),
         .buf_ready(buf_ready),
         .rd_buf(rd_buf),
+        .ir_active(ir_active),
+        .pending_valid(pending_valid),
+        .active_valid(active_valid),
+        .bench_count(bench_count),
         .m_axi_araddr(m_axi_araddr),
         .m_axi_arlen(m_axi_arlen),
         .m_axi_arsize(m_axi_arsize),
@@ -146,8 +154,15 @@ module hub75_system (
 
     // AXI GPIO status word:
     //   [0] frame_ack, [1] reader_busy, [2] buf_ready, [3] frame_done_toggle,
-    //   [15:8] active slice, [23:16] frame id, [31:24] reserved.
-    assign status = {8'd0, frame_id, 2'b00, active_slice, 4'd0,
+    //   [4] ir_active (IR edge within the timeout), [5] pending_valid,
+    //   [6] active_valid, [7] enable (frame_ctrl[1] as seen by the PL),
+    //   [15:8] active slice, [23:16] frame id,
+    //   [29:24] synthetic revolution count (mod 64), [30] submit_toggle
+    //   (frame_ctrl[0] as seen by the PL), [31] period_valid.
+    assign status = {period_valid, frame_ctrl[0], bench_count,
+                     frame_id,
+                     2'b00, active_slice,
+                     frame_ctrl[1], active_valid, pending_valid, ir_active,
                      frame_done_toggle, buf_ready, reader_busy, frame_ack};
     assign period = period_ticks;
 endmodule

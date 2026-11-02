@@ -1,0 +1,1 @@
+ls -la /run/media/mmcblk0p1

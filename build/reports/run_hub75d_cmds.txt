@@ -1,0 +1,1 @@
+P=/run/media/mmcblk0p1; [ -x $P/hub75d ] || { mkdir -p /mnt/boot; mount /dev/mmcblk0p1 /mnt/boot; P=/mnt/boot; }; echo DAEMON_PATH=$P; $P/hub75d

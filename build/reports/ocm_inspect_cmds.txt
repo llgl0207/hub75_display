@@ -1,0 +1,5 @@
+ls /sys/bus/platform/drivers | grep -i ocm
+ls -l /sys/bus/platform/drivers/xilinx-ocmc 2>/dev/null
+ls -l /sys/class/sram 2>/dev/null
+cat /proc/iomem | grep -i ocm
+ps | grep -i tcf

@@ -1,0 +1,7 @@
+printf '#!/bin/sh\nmkdir -p /mnt/boot\nmount -t vfat /dev/mmcblk0p1 /mnt/boot 2>/dev/null\nif [ -x /mnt/boot/hub75d ]; then\n  /mnt/boot/hub75d\nfi\nexec /bin/start_getty 115200 ttyPS0 vt102\n' > /usr/bin/hub75-console
+chmod +x /usr/bin/hub75-console
+cat /usr/bin/hub75-console
+cp /etc/inittab /etc/inittab.bak
+sed -i 's#^PS0:.*#PS0:12345:respawn:/usr/bin/hub75-console#' /etc/inittab
+grep PS0 /etc/inittab
+sync

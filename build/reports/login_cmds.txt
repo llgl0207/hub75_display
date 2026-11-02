@@ -1,0 +1,9 @@
+root
+root
+echo LOGIN_OK
+uname -a
+id
+cat /proc/version
+cat /proc/cmdline
+free
+ls /dev

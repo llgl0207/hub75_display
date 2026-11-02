@@ -1,0 +1,7 @@
+open_checkpoint "C:/Users/210/Documents/intcode/123/hub75_display/build/reports/ps_stage1/routed.dcp"
+puts "STARTUPCLK=[get_property BITSTREAM.CONFIG.STARTUPCLK [current_design]]"
+puts "UNUSEDPIN=[get_property BITSTREAM.CONFIG.UNUSEDPIN [current_design]]"
+puts "COMPRESS=[get_property BITSTREAM.GENERAL.COMPRESS [current_design]]"
+puts "ENCRYPT=[get_property BITSTREAM.ENCRYPTION.ENCRYPT [current_design]]"
+puts "CFG_DONE=[get_property BITSTREAM.CONFIG.CONFIGRATE [current_design]]"
+puts "CHECK_DONE"

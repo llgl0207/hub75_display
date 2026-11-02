@@ -1,0 +1,15 @@
+﻿
+root@petalinux_boot_from_sd:~# devmem 0x10000000 32 0xCAFEBABE
+root@petalinux_boot_from_sd:~# devmem 0x10000000 32
+0xCAFEBABE
+root@petalinux_boot_from_sd:~# /run/media/mmcblk0p1/hub75_pattern_ddr
+copy: 196608 bytes in 4 ms (chunked)
+pattern written to 0x10000000 (196608 bytes)
+submitted frame_base=0x10000000 ctrl2=0x00004003
+status=0x630001a0 slice=1 id=0 buf_ready=0 done=0 ir=0 pend=1 act=0 en=1 submit=1 pvalid=0 waited_ms=1000
+pattern submitted; PL continues reading the frame
+root@petalinux_boot_from_sd:~# devmem 0x10000000 32
+0xFFFFFFFF
+root@petalinux_boot_from_sd:~# devmem 0x10000004 32
+0xFFFFFFFF
+root@petalinux_boot_from_sd:~# 

@@ -1,5 +1,7 @@
 ﻿DDR PASS
-render two-ball volume ...
+render 3D heart ...
 volume submitted base 10000000
-status 100 slice 1 id 0 period 0
-status 13f0d slice 63 id 1 period 0
+status 1b00 slice 27 id 0 period 0
+status 11a0d slice 26 id 1 period 0
+status 1180d slice 24 id 1 period 0
+status 1160d slice 22 id 1 period 0

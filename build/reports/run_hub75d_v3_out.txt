@@ -1,0 +1,11 @@
+﻿
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+7[r[999;999H[6nroot@petalinux_boot_from_sd:~# P=/run/media/mmcblk0p1; [ -x $P/hub75d ] || { mkdiir -p /mnt/boot; mount /dev/mmcblk0p1 /mnt/boot; P=/mnt/boot; }
+root@petalinux_boot_from_sd:~# printf 'shell=/bin/sh\n' > /etc/hub75.conf
+root@petalinux_boot_from_sd:~# ls -la /etc/hub75.conf
+-rw-r--r--    1 root     root            14 Mar  3 06:25 /etc/hub75.conf
+root@petalinux_boot_from_sd:~# $P/hub75d
+hub75d: pty selftest w=12 poll=1 n=12 mfd=4hub75d: pty [12]hub75d: submit 10000000 15ms st=2c0100e9 id=1hub75d: pty [33]hub75d: submit 10200000 6ms st=6e0228e4 id=2

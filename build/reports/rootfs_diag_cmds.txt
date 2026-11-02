@@ -1,0 +1,6 @@
+cat /proc/cmdline
+ls -la /etc/hub75.conf 2>/dev/null
+cat /proc/mounts | head -12
+ls -la / | head -15
+ls -la /run/media/ 2>/dev/null
+dmesg | grep -i -E "initramfs|ramdisk|EXT4|mmcblk" | head -10

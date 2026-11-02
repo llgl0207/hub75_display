@@ -1,0 +1,33 @@
+﻿
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: 
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: 
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: 
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+7[r[999;999H[6n8root@petalinux_boot_from_sd:~# echo LOGIN_OK
+LOGIN_OK
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# cat /proc/cmdline
+console=ttyPS0,115200 earlyprintk mem=256M clk_ignore_unused cpuidle.off=1 idle=poll
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# devmem 0x41200004 32 0
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# devmem 0x4120000C 32 0
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# /run/media/mmcblk0p1/hub75_pattern
+pattern written to 0x10000000 (196608 bytes)
+submitted frame_base=0x10000000 ctrl2=0x00004003
+status=0x00000300 slice=3 id=0 buf_ready=0 done=0 period=0
+status=0x00000300 slice=3 id=0 buf_ready=0 done=0 period=0
+status=0x00000300 slice=3 id=0 buf_ready=0 done=0 period=0
+status=0x00000300 slice=3 id=0 buf_ready=0 done=0 period=0
+status=0x00000300 slice=3 id=0 buf_ready=0 done=0 period=0
+status=0x0?

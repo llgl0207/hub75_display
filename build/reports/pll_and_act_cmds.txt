@@ -1,0 +1,7 @@
+cat /proc/uptime
+devmem 0xF8000108 32
+devmem 0xF800010C 32
+devmem 0xF8000170 32
+v=$(devmem 0x41200008 32); echo ctrl2_before=$v; w=$(( (v ^ 1) | 2 )); devmem 0x41200008 32 $(printf '0x%08x' $w); echo submitted
+for i in $(seq 1 60); do devmem 0x41210000 32; usleep 100000; done
+devmem 0x41210008 32

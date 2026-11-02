@@ -1,0 +1,26 @@
+﻿
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: 
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: 
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: 
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+7[r[999;999H[6n8root@petalinux_boot_from_sd:~# echo LOGIN_OK
+LOGIN_OK
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# for i in 1 2 3 4 5 6; do devmem 0x41210000 32; sleeep 1; done
+0x00003600
+0x00000B00
+0x00002000
+0x00003500
+0x00000900
+0x00001E00
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# 

@@ -1,0 +1,56 @@
+﻿
+root@petalinux_boot_from_sd:~# ls -l /sys/bus/platform/drivers/zynq-ocm
+total 0
+--w-------    1 root     root          4096 Mar  3 06:26 bind
+lrwxrwxrwx    1 root     root             0 Mar  3 06:26 f800c000.ocmc -> ../../../../devices/soc0/amba/f800c000.ocmc
+--w-------    1 root     root          4096 Mar  3 06:26 uevent
+--w-------    1 root     root          4096 Mar  3 06:26 unbind
+root@petalinux_boot_from_sd:~# echo f800c000.ocmc > /sys/bus/platform/drivers/zynnq-ocm/unbind
+Internal error: Oops - BUG: 0 [#1] PREEMPT SMP ARM
+Modules linked in: uio_pdrv_genirq
+CPU: 0 PID: 1150 Comm: sh Not tainted 4.14.0-xilinx-v2018.3 #1
+Hardware name: Xilinx Zynq Platform
+task: ce9919c0 task.stack: cd466000
+PC is at gen_pool_destroy+0x78/0x90
+LR is at gen_pool_destroy+0x70/0x90
+pc : [<c02f9f80>]    lr : [<c02f9f78>]    psr: 20010013
+sp : cd467e58  ip : 00000000  fp : ce945904
+r10: 00000200  r9 : 00000100  r8 : 00000005
+r7 : ce945904  r6 : ce945900  r5 : 00002000  r4 : ce87b000
+r3 : 00000000  r2 : 00000000  r1 : 00002000  r0 : 00000000
+Flags: nzCv  IRQs on  FIQs on  Mode SVC_32  ISA ARM  Segment none
+Control: 18c5387d  Table: 07d5004a  DAC: 00000051
+Process sh (pid: 1150, stack limit = 0xcd466210)
+Stack: (0xcd467e58 to 0xcd468000)
+7e40:                                                       c02f9f98 ce9457c0
+7e60: cd467e80 ce916c10 00000007 ce82a3c0 00000000 c03b35b4 00000000 c03b3758
+7e80: ce82a3c0 ce8c3680 ce916c10 00000000 c0a09170 ce916c44 00000034 00000051
+7ea0: 00000000 c03b0f2c 0000000e ce916c10 c0a09170 c0a18b68 ceba5010 c03af928
+7ec0: 0000000e ceba5000 cd455480 cd467f88 ceba5010 c022a21c 00000000 00000000
+7ee0: 0000000e c7edd780 c022a0ec 00000000 cd467f88 001040a0 cd466000 c01d3c60
+7f00: 00000000 c01edae0 00000000 c7ff4480 0000000a c7ff4480 c7ff4480 0000000a
+7f20: c7ff4480 00000001 00000002 00000001 c7ff4480 0000000a 00000001 c7edd780
+7f40: cd467f88 0000000e c7edd780 0000000e 00000000 cd467f88 001040a0 c01d3ed4
+7f60: c7edd780 001040a0 0000000e c7edd780 c7edd780 001040a0 0000000e c01071e4
+7f80: cd466000 c01d4044 00000000 00000000 0000000e 0000000e 001040a0 b6ef1da8
+7fa0: 00000004 c0107020 0000000e 001040a0 00000001 001040a0 0000000e 00000000
+7fc0: 0000000e 001040a0 b6ef1da8 00000004 0000000e 0000000e 00000000 00000000
+7fe0: 00000444 be90b9c0 b6e1ea18 b6e766cc 60010010 00000001 00000000 00000000
+[<c02f9f80>] (gen_pool_destroy) from [<c03b3758>] (release_nodes+0x19c/0x1b8)
+[<c03b3758>] (release_nodes) from [<c03b0f2c>] (device_release_driver_internal+0x15c/0x1d4)
+[<c03b0f2c>] (device_release_driver_internal) from [<c03af928>] (unbind_store+0x58/0x8c)
+[<c03af928>] (unbind_store) from [<c022a21c>] (kernfs_fop_write+0x130/0x1a0)
+[<c022a21c>] (kernfs_fop_write) from [<c01d3c60>] (__vfs_write+0x1c/0x11c)
+[<c01d3c60>] (__vfs_write) from [<c01d3ed4>] (vfs_write+0xb8/0x144)
+[<c01d3ed4>] (vfs_write) from [<c01d4044>] (SyS_write+0x3c/0x74)
+[<c01d4044>] (SyS_write) from [<c0107020>] (ret_fast_syscall+0x0/0x48)
+Code: e1a01005 eb0cd7e7 e1550000 da000000 (e7f001f2) 
+---[ end trace 40ff1b1b3d1367f7 ]---
+
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: cat /proc/iomem | grep -i ocm
+Password: 
+
+Login incorrect
+petalinux_boot_from_sd login: 

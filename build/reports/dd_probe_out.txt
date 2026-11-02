@@ -1,0 +1,12 @@
+﻿
+root@petalinux_boot_from_sd:~# devmem 0x42000000 32
+0x00000000
+root@petalinux_boot_from_sd:~# dd if=/dev/zero of=/dev/mem bs=4096 count=1 seek=2270336 2>&1
+dd: writing '/dev/mem': Bad address
+1+0 records in
+0+0 records out
+root@petalinux_boot_from_sd:~# devmem 0x42000000 32
+0x00000000
+root@petalinux_boot_from_sd:~# cat /proc/uptime
+193.73 178.89
+root@petalinux_boot_from_sd:~# 

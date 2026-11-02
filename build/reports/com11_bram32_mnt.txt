@@ -1,0 +1,6 @@
+﻿
+root@petalinux_boot_from_sd:~# /mnt/boot/hub75_pattern_bram32
+pattern written to 0x42000000 (196608 bytes)
+submitted frame_base=0x42000000 ctrl2=0x00004003
+status=0x00002400 slice=36 id=0 buf_ready=0 done=0 period=0
+pattern submitted; PL continues reading the frame?

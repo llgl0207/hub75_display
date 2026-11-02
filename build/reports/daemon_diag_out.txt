@@ -1,0 +1,14 @@
+﻿
+root@petalinux_boot_from_sd:~# devmem 0x41210000 32
+0x35000880
+root@petalinux_boot_from_sd:~# devmem 0x10000000 32
+0x00000000
+root@petalinux_boot_from_sd:~# devmem 0x10000080 32
+0x00000000
+root@petalinux_boot_from_sd:~# devmem 0x10200000 32
+0x28B31631
+root@petalinux_boot_from_sd:~# devmem 0x10200080 32
+0x29B777FD
+root@petalinux_boot_from_sd:~# devmem 0x41200008 32
+0x00000002
+root@petalinux_boot_from_sd:~# 

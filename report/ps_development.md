@@ -18,7 +18,7 @@
 
 原有 `hub75_top`（PL-only 板级测试）保持不动，仍可用 `build/build_board_test.tcl` 构建。
 
-### 两球旋转体应用（2026-11-02）
+### 3D 体显示应用（两球 / 心形，2026-11-02）
 
 `hub75_renderer/main.c` 默认 `HUB75_VOLUMETRIC_TEST=1`，用于第一次真实旋转测试：
 
@@ -37,10 +37,20 @@
   `row_addr=20..31`、下半球在 `0..11`；面板行映射就是普通的半屏内物理行号，
   **不是 center-out**。首版的“顶部条纹”不是行映射错位，而是每个 slot 第 0 行
   ghost 上一槽最后一行（row 31）的单行 artifact；颜色诊断里最上一行是绿色，
-  正好是 row 31 的上半数据。当前先保留该单行 ghost；要消除需在 PL 扫描器里
-  对 `row_addr=0` 保持 OE 关闭并重建位流。
-- 最终 app 恢复左红/右绿并重建 BOOT.BIN（2026-11-02，4,195,816 B）；上板
-  旋转结果 TBD。
+  正好是 row 31 的上半数据。**已修**：`hub75_scan` 对 `row_addr=0` 保持
+  OE 关闭，空白掉面板最上一行；同一地址也是下半屏接缝行，所以接缝下方
+  一行会空掉，上半屏 row31 内容保留。RTL 回归 7/7 PASS。
+
+#### 3D 心形（当前默认，`HUB75_HEART_TEST=1`）
+
+- 旋转平面点 `(r,y)` 映射到 3D
+  `x = r*cosθ/26`、`depth = r*sinθ/18`、`z = (32-y)/20`。
+- 经典心形隐函数
+  `(x² + 9/4 depth² + z² - 1)³ - x² z³ - 9/80 depth² z³ <= 0`；
+  薄白边、洋红顶部叶瓣、红色主体；64 个角度切片合成 3D 心形。
+- 预览：`build/reports/heart_preview_tuned.png`。两球体保留为
+  `HUB75_HEART_TEST=0` 回退。
+- 静态帧只提交一次；PS 每秒打印状态。新 PL 位流 + app 构建后上板 TBD。
 
 ## 2. 板卡事实与关键修正
 
@@ -136,7 +146,7 @@ word[5:3] = rgb2 (lower half)
 | Stage 1 上板 | `build/jtag_run_app.tcl` + COM11 | `HUB75 PS renderer` / `DDR PASS`；状态 `buf_ready=1`，`frame_id`/`frame_done` 翻转；面板照片 TBD |
 | 静止动画 | 无 IR、无旋转，64 slice 同图（白边框 + 十字线 + 反弹小球） | COM11 5 s 内 98 行（约 20 fps），`period 0`（无 IR 属正常），DDR 读回确认边框与 slice 复制；面板目视通过 |
 | 脱机 SD 启动 | `build\run_build_sd_boot.bat` → `BOOT.BIN`（FSBL + bitstream + ELF）；SW4=SD，断电上电 | 上电直接显示动画；COM11 5 s 98 行（约 20 fps），`buf_ready=1`，`period 0`；无需 JTAG |
-| 两球体应用 | `HUB75_VOLUMETRIC_TEST=1`；app 与 `BOOT.BIN` 重建（4,195,816 B）；`build\jtag_run_app.tcl` 下载 | 颜色诊断（上绿下红）确认上半球/下半球数据与行映射正确；顶部单行 ghost 为扫描首行 artifact，暂保留；最终左红/右绿已重载，提交后等待下一次 IR 锁存 |
+| 3D 心形（默认）/两球回退 | `HUB75_HEART_TEST=1`；PL 对 `row_addr=0` 保持 OE 关闭；新 bitstream + app + `BOOT.BIN` 构建 | RTL 回归 7/7 PASS；PL WNS +6.538 ns / WHS +0.056 ns / DRC 0；`BOOT.BIN` 4,195,624 B；JTAG 加载后 COM11 `render 3D heart ...`、`id 1`；心形上板视觉/顶部行 TBD |
 
 - XSA 用 `write_hw_platform -fixed` 导出（不含 bitstream），因为本脚本用显式
   opt/place/route 流程；Vitis Run Configuration 里单独选 `.bit`。

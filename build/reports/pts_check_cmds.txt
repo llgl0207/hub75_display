@@ -1,0 +1,4 @@
+ls -la /dev/pts
+mount | grep -i pts
+ls -la /dev/ptmx
+cat /proc/misc | grep -i ptmx

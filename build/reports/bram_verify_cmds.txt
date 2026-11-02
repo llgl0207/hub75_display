@@ -1,0 +1,8 @@
+P=/run/media/mmcblk0p1; [ -x $P/hub75_pattern_bram32 ] || { mkdir -p /mnt/boot; mount /dev/mmcblk0p1 /mnt/boot; P=/mnt/boot; }; echo PATH=$P; $P/hub75_pattern_bram32
+devmem 0x42000000 32
+devmem 0x42000004 32
+devmem 0x42000008 32
+devmem 0x42000200 32
+devmem 0x41210000 32
+usleep 100000
+devmem 0x41210000 32

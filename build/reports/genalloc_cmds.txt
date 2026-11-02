@@ -1,0 +1,6 @@
+mount -t debugfs none /sys/kernel/debug 2>/dev/null
+ls /sys/kernel/debug/genalloc
+cat /sys/kernel/debug/genalloc
+dmesg | grep -i "ocm\|cpuidle\|suspend"
+cat /proc/iomem | grep -i ocm
+echo INSPECT_DONE

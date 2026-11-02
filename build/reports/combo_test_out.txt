@@ -1,0 +1,39 @@
+﻿
+Public key portion is:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDO6cnRMNV1cCSK+YUttb9r4ahNOGNaOskVBvTzFkc3CNqk9aZifBP4sQiWQZBJMw0UVFFx/ipqdFq8Mel6BSW3i1QRE3WC4JM/WV7u3ZZ8KllLMG0Un65CsO4tLKXOk7WTocC5YxDhWCckYab4U7REiCqnf0TCg4qO+YkZagFhCojpWGiw17CDjkXx+BX7u2taAwE2MQxQzZK71SCQQBr8WtT4hxtOvMyThZeFvG8hQaWyR1RmRD+YucXawryZl3pJuy5yYCSHMELL8kEmCIBIQr3MiiPBYWaYbgaBLgWzl50OQnS0+TO5msh23IpxJtGJd3PjuioRfcS1j6OK6efn root@petalinux_boot_from_sd
+Fingerprint: md5 7c:96:22:53:45:ce:27:be:f8:59:c8:23:ec:6a:38:74
+dropbear.
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Starting syslogd/klogd: done
+Starting tcf-agent: OK
+
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+7[r[999;999H[6nroot@petalinux_boot_from_sd:~# for i in $(seq 1 10); do devmem 0x41210000 32; uslleep 100000; done
+0x13003600
+0x17000A00
+0x1A001F00
+0x1D003300
+0x21000700
+0x24001C00
+0x27003000
+0x2B000500
+0x2E001900
+0x31002E00
+root@petalinux_boot_from_sd:~# /run/media/mmcblk0p1/hub75_diag
+ctrl frame_base=0x00000000 frame_ctrl=0x00000000 tri1=4294967295 tri2=0
+initial st=0x37003800 ack=0 busy=0 buf=0 done=0 ir=0 pend=0 act=0 en=0 slice=56 id=  0 wrap=55 submit=0 pvalid=0 period=0
+scheduler: 193 slice steps in 33333333 ticks (100.0 ms) -> 518.1 us/slot (expect ~521 us at 50 MHz)
+submit: frame_ctrl 0x00000000 -> 0x00000003 (readback 0x00000003)
+change st=0x7a0039a0 ack=0 busy=0 buf=0 done=0 ir=0 pend=1 act=0 en=1 slice=57 id=  0 wrap=58 submit=1 pvalid=0 period=0
+change st=0x7b0100c9 ack=1 busy=0 buf=0 done=1 ir=0 pend=0 act=1 en=1 slice= 0 id=  1 wrap=59 submit=1 pvalid=0 period=0
+change st=0x7b0102cd ack=1 busy=0 buf=1 done=1 ir=0 pend=0 act=1 en=1 slice= 2 id=  1 wrap=59 submit=1 pvalid=0 period=0
+result: seen_pending=1 seen_active=1 seen_ack=1 seen_id=1 seen_buf_ready=1 (polled 2000 ms)
+final  st=0x760139cd ack=1 busy=0 buf=1 done=1 ir=0 pend=0 act=1 en=1 slice=57 id=  1 wrap=54 submit=1 pvalid=0 period=0
+diag done
+root@petalinux_boot_from_sd:~# devmem 0x41210000 32
+0x7A010FCD
+root@petalinux_boot_from_sd:~# /run/media/mmcblk0p1/hub75_pattern_bram32
+copy: 196608 bytes in 17 m?

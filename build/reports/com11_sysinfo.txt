@@ -1,0 +1,120 @@
+﻿dmesg | tail -50
+usbcore: registered new interface driver usb-storage
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+cdns-wdt f8005000.watchdog: Xilinx Watchdog Timer at f0984000 with timeout 10s
+EDAC MC: ECC not enabled
+Xilinx Zynq CpuIdle Driver started
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+mmc0: SDHCI controller on e0100000.mmc [e0100000.mmc] using ADMA
+ledtrig-cpu: registered to indicate activity on CPUs
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+fpga_manager fpga0: Xilinx Zynq FPGA Manager registered
+NET: Registered protocol family 10
+Segment Routing with IPv6
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+can: controller area network core (rev 20170425 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20170425)
+can: broadcast manager protocol (rev 20170425 t)
+can: netlink gateway (rev 20170425) max_hops=1
+Registering SWP/SWPB emulation handler
+hctosys: unable to open rtc device (rtc0)
+of_cfs_init
+of_cfs_init: OK
+ALSA device list:
+  No soundcards found.
+Freeing unused kernel memory: 1024K
+mmc0: new high speed SDHC card at address 0001
+mmcblk0: mmc0:0001 SD 29.1 GiB 
+ mmcblk0: p1 p2
+udevd[706]: starting version 3.2.2
+udevd[707]: starting eudev-3.2.2
+EXT4-fs warning (device mmcblk0p2): ext4_clear_journal_err:4801: Filesystem error recorded from previous mount: IO failure
+EXT4-fs warning (device mmcblk0p2): ext4_clear_journal_err:4802: Marking fs in need of filesystem check.
+FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+EXT4-fs (mmcblk0p2): warning: mounting fs with errors, running e2fsck is recommended
+EXT4-fs (mmcblk0p2): recovery complete
+EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# cat /proc/partitions
+major minor  #blocks  name
+
+   1        0      16384 ram0
+   1        1      16384 ram1
+   1        2      16384 ram2
+   1        3      16384 ram3
+   1        4      16384 ram4
+   1        5      16384 ram5
+   1        6      16384 ram6
+   1        7      16384 ram7
+   1        8      16384 ram8
+   1        9      16384 ram9
+   1       10      16384 ram10
+   1       11      16384 ram11
+   1       12      16384 ram12
+   1       13      16384 ram13
+   1       14      16384 ram14
+   1       15      16384 ram15
+ 179        0   30534656 mmcblk0
+ 179        1      98304 mmcblk0p1
+ 179        2    1465344 mmcblk0p2
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# ls -l /dev/mem /dev/mmcblk0p1 /dev/mmcblk0p2
+crw-r-----    1 root     kmem        1,   1 Jan  1  1970 /dev/mem
+brw-rw----    1 root     disk      179,   1 Jan  1  1970 /dev/mmcblk0p1
+brw-rw----    1 root     disk      179,   2 Jan  1  1970 /dev/mmcblk0p2
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# cat /proc/mounts
+rootfs / rootfs rw,size=503492k,nr_inodes=125873 0 0
+proc /proc proc rw,relatime 0 0
+sysfs /sys sysfs rw,relatime 0 0
+configfs /sys/kernel/config configfs rw,relatime 0 0
+devtmpfs /dev devtmpfs rw,relatime,size=503492k,nr_inodes=125873,mode=755 0 0
+tmpfs /run tmpfs rw,nosuid,nodev,mode=755 0 0
+tmpfs /var/volatile tmpfs rw,relatime 0 0
+/dev/mmcblk0p1 /run/media/mmcblk0p1 vfat rw,relatime,gid=6,fmask=0007,dmask=0007,allow_utime=0020,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro 0 0
+/dev/mmcblk0p2 /run/media/mmcblk0p2 ext4 rw,relatime,data=ordered 0 0
+devpts /dev/pts devpts rw,relatime,gid=5,mode=620,ptmxmode=000 0 0
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# ls /sys/class/fpga_manager
+fpga0
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# cat /sys/class/fpga_manager/fpga0/state
+unknown
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# mkdir -p /mnt/boot
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# mount -t vfat /dev/mmcblk0p1 /mnt/boot
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# ls -la /mnt/boot
+total 10302
+drwxrwx---    3 root     disk         16384 Jan  1  1970 .
+drwxr-xr-x    3 root     root            60 Mar  3 06:28 ..
+-rwxrwx---    1 root     disk        531320 Nov  2  2026 BOOT.bin
+drwxrwx---    2 root     disk          2048 Feb 28  2024 System Volume Information
+-rwxrwx---    1 root     disk       9998060 Nov  2  2026 image.ub
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# df -h
+Filesystem                Size      Used Available Use% Mounted on
+devtmpfs                491.7M      4.0K    491.7M   0% /dev
+tmpfs                   503.1M     76.0K    503.0M   0% /run
+tmpfs                   503.1M     48.0K    503.0M   0% /var/volatile
+/dev/mmcblk0p1           95.8M     12.7M     83.1M  13% /run/media/mmcblk0p1
+/dev/mmcblk0p2            1.3G      1.2G    100.2M  92% /run/media/mmcblk0p2
+/dev/mmcblk0p1           95.8M     12.7M     83.1M  13% /mnt/boot
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# 

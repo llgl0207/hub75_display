@@ -1,0 +1,10 @@
+﻿^C
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# echo SHELL_OK
+SHELL_OK
+root@petalinux_boot_from_sd:~# cat /proc/uptime; usleep 1000000; cat /proc/uptimee; date +%s; usleep 1000000; date +%s
+136.27 14.70
+137.28 15.70
+1583216851
+1583216852
+root@petalinux_boot_from_sd:~# 

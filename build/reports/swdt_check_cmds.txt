@@ -1,0 +1,9 @@
+devmem 0xF8005000 32
+devmem 0xF8005004 32
+devmem 0xF8005008 32
+devmem 0xF800500C 32
+sleep 1
+devmem 0xF8005004 32
+sleep 1
+devmem 0xF8005004 32
+dmesg | grep -i -E "wdt|watchdog|reset"

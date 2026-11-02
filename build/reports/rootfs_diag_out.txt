@@ -1,0 +1,45 @@
+﻿
+root@petalinux_boot_from_sd:~# cat /proc/cmdline
+console=ttyPS0,115200 earlyprintk mem=256M clk_ignore_unused cpuidle.off=1 idle=poll maxcpus=1
+root@petalinux_boot_from_sd:~# ls -la /etc/hub75.conf 2>/dev/null
+root@petalinux_boot_from_sd:~# cat /proc/mounts | head -12
+rootfs / rootfs rw,size=113628k,nr_inodes=28407 0 0
+proc /proc proc rw,relatime 0 0
+sysfs /sys sysfs rw,relatime 0 0
+configfs /sys/kernel/config configfs rw,relatime 0 0
+devtmpfs /dev devtmpfs rw,relatime,size=113628k,nr_inodes=28407,mode=755 0 0
+tmpfs /run tmpfs rw,nosuid,nodev,mode=755 0 0
+tmpfs /var/volatile tmpfs rw,relatime 0 0
+/dev/mmcblk0p1 /run/media/mmcblk0p1 vfat rw,relatime,gid=6,fmask=0007,dmask=0007,allow_utime=0020,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro 0 0
+/dev/mmcblk0p2 /run/media/mmcblk0p2 ext4 rw,relatime,data=ordered 0 0
+devpts /dev/pts devpts rw,relatime,gid=5,mode=620,ptmxmode=000 0 0
+root@petalinux_boot_from_sd:~# ls -la / | head -15
+total 0
+drwxr-xr-x   17 root     root           380 Mar  3 06:25 .
+drwxr-xr-x   17 root     root           380 Mar  3 06:25 ..
+drwxr-xr-x    2 root     root          1420 Mar  3 06:25 bin
+drwxr-xr-x    2 root     root            40 Mar  3 03:30 boot
+drwxr-xr-x    8 root     root          2660 Mar  3 06:25 dev
+drwxr-xr-x   25 root     root          1220 Mar  3 06:25 etc
+drwxr-xr-x    3 root     root            60 Mar  3 06:24 home
+lrwxrwxrwx    1 root     root            10 Mar  3 06:25 init -> /sbin/init
+drwxr-xr-x    5 root     root          1020 Mar  3 06:24 lib
+drwxr-xr-x    2 root     root            40 Mar  3 03:30 media
+drwxr-xr-x    2 root     root            40 Mar  3 03:30 mnt
+dr-xr-xr-x   58 root     root             0 Jan  1  1970 proc
+drwx------    2 root     root            40 Mar  3 03:33 root
+drwxr-xr-x    6 root     root           300 Mar  3 06:25 run
+root@petalinux_boot_from_sd:~# ls -la /run/media/ 2>/dev/null
+total 20
+drwxr-xr-x    4 root     root            80 Jan  1  1970 .
+drwxr-xr-x    6 root     root           300 Mar  3 06:25 ..
+drwxrwx---    3 root     disk         16384 Jan  1  1970 mmcblk0p1
+drwx------   24 1000     1000          4096 Jan  1  1970 mmcblk0p2
+root@petalinux_boot_from_sd:~# dmesg | grep -i -E "initramfs|ramdisk|EXT4|mmcblk"" | head -10
+Trying to unpack rootfs image as initramfs...
+mmcblk0: mmc0:0001 SD 29.1 GiB 
+ mmcblk0: p1 p2
+EXT4-fs (mmcblk0p2): warning: mounting fs with errors, running e2fsck is recommended
+EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+root@petalinux_boot_from_sd:~# 

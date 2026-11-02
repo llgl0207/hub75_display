@@ -1,0 +1,6 @@
+﻿
+root@petalinux_boot_from_sd:~# echo HELLO_PTS > /dev/pts/0
+root@petalinux_boot_from_sd:~# sleep 1
+root@petalinux_boot_from_sd:~# cat /tmp/d.log
+hub75d: pty readyhub75d: submit 10000000 3ms st=280126ed id=1
+root@petalinux_boot_from_sd:~# 

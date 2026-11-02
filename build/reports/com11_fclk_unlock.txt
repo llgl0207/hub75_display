@@ -1,0 +1,30 @@
+﻿root
+
+root
+
+No lease, forking to background
+done.
+Starting Dropbear SSH server: Generating key, this may take a while...
+devmem 0xF8000004 32 0xDF0D
+
+devmem 0xF8000170 32
+
+Public key portion is:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC+AkaRRcCR4eRfx4uX5nP1wlE3xs8wWkTsNU+WK9xLE7+lQMHaKeIJk/7wCDGaEpzsEoQ+M8KvYgrabo2r77VmzdOWL1FPmjo0fJC5/tVpa8dElSFi/aSBdHM+GytsyoxketFttIETs2WKSjsKZji7/isyIGhwU+RqdFWJPXzBgHiuo8/sxMbdIyZkxkwHkhtUfE86Gf6ACL8Ilru0M9LcZmBSeE8iF5egqBxKlUxgMqnZVf7GENCi2LDG+dV7tTjef6O5ycE5km+PQzXCMrEGCO9eEIPoBjkMksvcitz+kgVBh+8EGTFRaFnfwz9ezlatrSVMxC2f5uqUYc9+5NBB root@petalinux_boot_from_sd
+Fingerprint: md5 bb:d7:dc:0f:c0:90:92:35:b6:59:a7:e6:ff:25:85:17
+dropbear.
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Starting syslogd/klogd: done
+Starting tcf-agent: OK
+
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: devmem 0xF8000170 32 0x00400501
+Password: 
+/run/media/mmcblk0p1/hub75_probe
+
+
+Login incorrect
+petalinux_boot_from_sd login: echo PROBE_EXIT=$?
+
+Password: 

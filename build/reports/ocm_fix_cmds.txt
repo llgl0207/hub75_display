@@ -1,0 +1,4 @@
+cat /proc/cmdline
+cat /proc/iomem | grep -i ocm
+/run/media/mmcblk0p1/hub75_pattern_ocm
+devmem 0x41210000 32

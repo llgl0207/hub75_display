@@ -1,0 +1,32 @@
+﻿
+
+
+
+root
+
+Public key portion is:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDeBofa5LCikykJf0XyYkUCHCNIdR67a7dWZ/kfg34QofpDmgGozTaqWk93zVvELpLwx+9HrboIgJ3+l/pmCV9qvvub/cui5TyyeN2KplL/rpWYcuiOHyr4nXBNGrC34QfAOIoenj5GfHI1/FSnyBuJ4l95t0EILO88OM4R5lAMxHvuX4rPnH88ukLHJU3MLMy6i46p9kh0tJMnHscvD+rAH1DDgeQWkaKc/wS5C9w8QpNbPyppZHnOLoGjmXBHCdlP0F2ePQZbYa80a/hXD3btIT/3F1PoUhJluGuFT8IoLzE7VBsxbdqa+B+wc6OJ9j20ejkyyj2akLaoHl+6UB8X root@petalinux_boot_from_sd
+Fingerprint: md5 58:6d:50:54:18:04:df:05:6c:6e:48:76:e7:15:76:c7
+dropbear.
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Starting syslogd/klogd: done
+Starting tcf-agent: OK
+
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+cat /proc/cmdline
+
+
+Login incorrect
+petalinux_boot_from_sd login: devmem 0x41200004 32 0
+
+Password: 
+/run/media/mmcblk0p1/hub75_pattern
+
+
+Login incorrect
+petalinux_boot_from_sd login: devmem 0x41210000 32
+
+Password: 

@@ -1,0 +1,20 @@
+﻿
+root@petalinux_boot_from_sd:~# P=/run/media/mmcblk0p1; [ -x $P/hub75d ] || { mkdiir -p /mnt/boot; mount /dev/mmcblk0p1 /mnt/boot; P=/mnt/boot; }; $P/hub75d 2>/tmpp/d.log &
+[1] 1157
+root@petalinux_boot_from_sd:~# sleep 2
+root@petalinux_boot_from_sd:~# cat /tmp/d.log
+hub75d: pty readyhub75d: submit 10000000 3ms st=280126ed id=1
+root@petalinux_boot_from_sd:~# ps | grep -E "hub75d|sh"
+ 1144 root       0:00 {start_getty} /bin/sh /bin/start_getty 115200 ttyPS0 vt102
+ 1145 root       0:00 {start_getty} /bin/sh /bin/start_getty 38400 tty1
+ 1148 root       0:00 -sh
+ 1157 root       0:02 /run/media/mmcblk0p1/hub75d
+ 1158 root       0:00 /bin/sh -i
+ 1162 root       0:00 grep -E hub75d|sh
+root@petalinux_boot_from_sd:~# ls -la /dev/pts
+total 0
+drwxr-xr-x    2 root     root             0 Jan  1  1970 .
+drwxr-xr-x    8 root     root          2660 Mar  3 06:25 ..
+crw--w----    1 root     tty       136,   0 Mar  3 06:26 0
+c---------    1 root     root        5,   2 Jan  1  1970 ptmx
+root@petalinux_boot_from_sd:~# 

@@ -1,0 +1,22 @@
+﻿
+
+
+
+Login incorrect
+petalinux_boot_from_sd login: root
+
+Password: 
+7[r[999;999H[6n8root@petalinux_boot_from_sd:~# echo LOGIN_OK
+LOGIN_OK
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# devmem 0xF8000004 32 0xDF0D
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# devmem 0xF8000170 32
+0x00400500
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# devmem 0xF8000170 32 0x00400501
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# devmem 0xF8000170 32
+0x00400500
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# /run/media/mmcblk0p1/hub75_probe

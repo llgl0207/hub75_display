@@ -1,0 +1,3 @@
+﻿^C
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# 

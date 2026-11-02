@@ -1,0 +1,16 @@
+﻿sync
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# poweroff
+
+Broadcast message from root@petalinux_boot_from_sd (ttyPS0) (Tue Mar  3 06:27The system is g@Z??down for system halt NOW!
+INIT: Switching to runlevel: 0INIT: Sending processes the TERM signal
+root@petalinux_boot_from_sd:~# Stopping Dropbear SSH server: stopped /usr/sbin/dropbear (pid 1125)
+dropbear.
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Stopping syslogd/klogd: stopped syslogd (pid 1133)
+stopped klogd (pid 1136)
+done
+Stopping tcf-agent: OK
+Deconfiguring network interfaces... done.
+Sending all processes the TERM signal...
+logout

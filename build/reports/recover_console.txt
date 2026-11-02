@@ -1,0 +1,4 @@
+﻿^Cstty sane
+
+echo RECOVER_OK
+ls -la /tmp/hub75_diag.gz; ls -la /tmp/hub75_diag

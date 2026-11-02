@@ -1,0 +1,2 @@
+﻿echo "text HELLO HUB75D" > /run/hub75.cmd
+hub75d: pty [82]hub75d: submit 10000000 6ms st=550206e4 id=2

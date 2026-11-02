@@ -1,0 +1,24 @@
+﻿
+root@petalinux_boot_from_sd:~# ps | head -20
+PID   USER     TIME   COMMAND
+    1 root       0:01 init 
+    2 root       0:00 [kthreadd]
+    3 root       0:00 [kworker/0:0]
+    4 root       0:00 [kworker/0:0H]
+    5 root       0:00 [kworker/u4:0]
+    6 root       0:00 [mm_percpu_wq]
+    7 root       0:00 [ksoftirqd/0]
+    8 root       0:00 [rcu_preempt]
+    9 root       0:00 [rcu_sched]
+   10 root       0:00 [rcu_bh]
+   11 root       0:00 [migration/0]
+   12 root       0:00 [cpuhp/0]
+   13 root       0:00 [kdevtmpfs]
+   14 root       0:00 [kworker/u4:1]
+   27 root       0:00 [kworker/0:1]
+  261 root       0:00 [oom_reaper]
+  262 root       0:00 [writeback]
+  264 root       0:00 [crypto]
+  266 root       0:00 [kblockd]
+root@petalinux_boot_from_sd:~# ls -la /proc/$(ps | grep -v grep | grep -E " sh$|  ash$" | head -1 | awk '{print $1}')/fd 2>/dev/null | head -6
+root@petalinux_boot_from_sd:~# 

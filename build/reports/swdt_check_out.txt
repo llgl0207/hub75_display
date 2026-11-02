@@ -1,0 +1,18 @@
+﻿
+root@petalinux_boot_from_sd:~# devmem 0xF8005000 32
+0x000001C0
+root@petalinux_boot_from_sd:~# devmem 0xF8005004 32
+0x00003FFC
+root@petalinux_boot_from_sd:~# devmem 0xF8005008 32
+0x00000000
+root@petalinux_boot_from_sd:~# devmem 0xF800500C 32
+0x00000001
+root@petalinux_boot_from_sd:~# sleep 1
+root@petalinux_boot_from_sd:~# devmem 0xF8005004 32
+0x00003FFC
+root@petalinux_boot_from_sd:~# sleep 1
+root@petalinux_boot_from_sd:~# devmem 0xF8005004 32
+0x00003FFC
+root@petalinux_boot_from_sd:~# dmesg | grep -i -E "wdt|watchdog|reset"
+cdns-wdt f8005000.watchdog: Xilinx Watchdog Timer at d083c000 with timeout 10s
+root@petalinux_boot_from_sd:~# 

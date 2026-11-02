@@ -1,0 +1,4 @@
+devmem 0x42000000 32
+dd if=/dev/zero of=/dev/mem bs=4096 count=1 seek=270336 2>&1
+devmem 0x42000000 32
+cat /proc/uptime

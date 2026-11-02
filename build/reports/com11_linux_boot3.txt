@@ -1,0 +1,16 @@
+﻿Sending discover...
+Sending discover...
+No lease, forking to background
+done.
+Starting Dropbear SSH server: Generating key, this may take a while...
+Public key portion is:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCuRx6Shp4KCN+Uufq0TVenGvp5jkDwaX4GHIsQOtrhMSQyS45xNF829qBTmcikot0f/B5GwM0N93C6deirxVLkiajnQ1938CFLavu7jICiSVVvVoeIukFyVERzQghRRg+P6cjRRtluDlbVB5D/kiK1HUiDmlDd5DaKjZh6cBJ9z+t9FoNE9O48c3t3mJiTftrUiYPEoO+YbmU7P2onPrlgXPsUvsork1Ow6Ws0jMw7GGX/1jnSfBkmpqxEk9wuzf+SNjl67+4YhaKu9ucDDCTlFs/dPx92sJPUiUKxg1UBf0ovCIht2ADs/87D6qy0sgpAumNZ9+hnsrhdpBj1L5h/ root@petalinux_boot_from_sd
+Fingerprint: md5 39:7b:bd:89:80:42:c3:d9:f6:12:37:8f:52:df:e2:71
+dropbear.
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Starting syslogd/klogd: done
+Starting tcf-agent: OK
+
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: 

@@ -1,0 +1,2 @@
+﻿echo HUB75_OK
+hub75d: pty [60]hub75d: submit 10000000 6ms st=410214e4 id=2

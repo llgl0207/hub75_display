@@ -1,0 +1,8 @@
+
+
+root
+root
+echo LOGIN_OK
+cat /proc/cmdline
+/run/media/mmcblk0p1/hub75_pattern
+echo PATTERN_EXIT=$?

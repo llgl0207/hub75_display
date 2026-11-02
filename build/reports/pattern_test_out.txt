@@ -1,0 +1,8 @@
+﻿
+root@petalinux_boot_from_sd:~# ls /run/media/mmcblk0p1
+BOOT.bin                   hub75_pattern_bram32       image.ub
+System Volume Information  hub75_pattern_ocm          uEnv.txt
+hub75_pattern              hub75_pattern_ocm4k
+hub75_pattern_bram         hub75_probe
+root@petalinux_boot_from_sd:~# /run/media/mmcblk0p1/hub75_pattern_bram32
+pattern written to 0x42000000 (196608 byte?

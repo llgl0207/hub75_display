@@ -237,7 +237,14 @@ module hub75_scan #(
                         end
                     end else begin
                         dwell_count <= dwell_count + 1'b1;
-                        if (dwell_count >= oe_threshold) hub_oe_n <= 0;
+                        // Blank the physical first row of every slot. The panel
+                        // ghosts the previous slot's last row (row 31) there,
+                        // producing the one-row top-edge stripe; hiding row 0
+                        // removes it. The same row address also drives the
+                        // lower half's seam row, which the ghost already made
+                        // unusable, so nothing extra is lost.
+                        if (row_count != 5'd0 && dwell_count >= oe_threshold)
+                            hub_oe_n <= 0;
                     end
                 end
                 default: state <= S_IDLE;

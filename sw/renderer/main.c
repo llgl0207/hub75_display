@@ -1,7 +1,13 @@
 /*
  * HUB75 rotating-display PS renderer (bare-metal, Vitis 2026.1).
  *
- * HUB75_VOLUMETRIC_TEST = 1 (default): two-ball rotating volume.
+ * HUB75_HEART_TEST = 1 (default): 3D heart.
+ *   The classic heart implicit surface is evaluated on each of the 64 rotating
+ *   panel planes. Thin white rim, magenta top lobes, red body; the heart is
+ *   wider than tall and centered on the seam. HUB75_HEART_TEST = 0 falls back
+ *   to the two-ball volume described below.
+ *
+ * HUB75_VOLUMETRIC_TEST = 1 (default): rotating volume.
  *   The PS renders 64 angular slices of a static 3D scene into a DDR frame
  *   buffer. Slice s is drawn on the panel while the panel is at approximately
  *   s * 360/64 degrees after the IR anchor. The PL latches the frame at an IR
@@ -13,11 +19,13 @@
  *     left ball   centre (-24, 32, 0), radius 12, red
  *     right ball  centre (+24, 32, 0), radius 12, green
  *
- *   The topmost panel row can show a one-row ghost of the previous slot's
- *   last row (row 31). The colour diagnostic confirmed the upper/lower data
- *   and row mapping are correct; the ghost is a scan/panel first-row artifact,
- *   not a frame error. Leaving it for now; the PL can blank row 0 later by
- *   holding OE off for row_addr 0.
+ *   The topmost panel row used to ghost the previous slot's last row (row 31).
+ *   The color diagnostic confirmed the upper/lower data and row mapping are
+ *   correct; the ghost was a scan/panel first-row artifact, not a frame error.
+ *   The PL now holds OE off for row_addr 0, hiding that physical row and the
+ *   top-edge stripe. The same row address drives the lower half's seam row, so
+ *   that row is blank as well; the heart/balls lose one seam row, not the
+ *   upper row 31 content.
  *
  *   For slice angle theta and a point on the panel at horizontal radius r
  *   (r = x - 64) and height y, the point is inside a sphere centred at
@@ -65,6 +73,7 @@
 #include "hub75_regs.h"
 
 #define HUB75_VOLUMETRIC_TEST 1
+#define HUB75_HEART_TEST 1
 
 static XGpio gpio_ctrl;
 static XGpio gpio_status;
@@ -251,10 +260,12 @@ static const int16_t sin_q15[64] = {
     -23170, -20787, -18204, -15446, -12539,  -9512,  -6393,  -3212
 };
 
+#define PANEL_CENTER_X   64.0f
+
+#if !HUB75_HEART_TEST
 #define BALL_RADIUS_PX   12.0f
 #define BALL_DISTANCE_PX 24.0f
 #define BALL_CENTER_Y    32.0f
-#define PANEL_CENTER_X   64.0f
 #define BALL_R2          (BALL_RADIUS_PX * BALL_RADIUS_PX)
 #define BALL_COUNT       2
 
@@ -292,10 +303,9 @@ static void render_volume(uint8_t *frame)
 
         for (row = 0; row < HUB75_ROW_ADDRS; row++) {
             /* Normal panel row mapping: row_addr is the physical y within the
-             * upper half (0 = top), and the lower half is row_addr+32. The
-             * topmost row can ghost the previous slot's last upper row
-             * (row 31); that is a scan/panel first-row artifact, left alone
-             * for now. */
+             * upper half (0 = top), and the lower half is row_addr+32. The PL
+             * blanks row_addr 0 to hide the panel's first-row ghost; the
+             * lower-half seam row 0 is therefore blank too. */
             float yu = ((float)row + 0.5f) - BALL_CENTER_Y;
             float yl = ((float)row + (float)HUB75_ROW_ADDRS + 0.5f) -
                        BALL_CENTER_Y;
@@ -313,6 +323,69 @@ static void render_volume(uint8_t *frame)
                     if (base + dyu2 <= BALL_R2) upper = balls[b].colour;
                     if (base + dyl2 <= BALL_R2) lower = balls[b].colour;
                 }
+
+                if (upper != 0u || lower != 0u)
+                    hub75_frame_set_pixel(frame, slice, row, col,
+                                          upper, lower);
+            }
+        }
+    }
+}
+#endif /* !HUB75_HEART_TEST */
+
+/* -------------------------------------------------------------------------
+ * 3D heart (default effect)
+ *
+ * The classic heart implicit surface, evaluated on the rotating panel plane:
+ *   x = r*cos(theta), depth = r*sin(theta), z = (32 - y_physical) / ZS
+ *   f = (x^2 + 9/4 depth^2 + z^2 - 1)^3 - x^2 z^3 - 9/80 depth^2 z^3
+ * f <= 0 is the heart volume. z is positive towards the top of the panel.
+ *
+ * The anisotropic scales make the heart wider than tall (classic shape):
+ *   XS = 26 px/unit horizontal, YS = 18 px/unit depth, ZS = 20 px/unit vertical.
+ * Thin white surface rim, magenta top lobes, red body.
+ * ------------------------------------------------------------------------- */
+#define HEART_XS        26.0f
+#define HEART_YS        18.0f
+#define HEART_ZS        20.0f
+#define HEART_CENTER_Y  32.0f
+
+static uint8_t heart_colour(float x, float depth, float z)
+{
+    float xx = x * x;
+    float yy = depth * depth;
+    float zz = z * z;
+    float a = xx + 2.25f * yy + zz - 1.0f;
+    float f = a * a * a - xx * z * z * z - 0.1125f * yy * z * z * z;
+
+    if (f > 0.0f) return 0u;       /* outside */
+    if (f > -0.02f) return 7u;     /* thin white rim */
+    if (z > 0.40f) return 5u;      /* magenta top lobes */
+    return 4u;                     /* red body */
+}
+
+static void render_heart(uint8_t *frame)
+{
+    int slice, row, col;
+
+    hub75_frame_clear(frame);
+
+    for (slice = 0; slice < HUB75_SLICES; slice++) {
+        float st = (float)sin_q15[slice] / 32768.0f;
+        float ct = (float)sin_q15[(slice + 16) & 63] / 32768.0f;
+
+        for (row = 0; row < HUB75_ROW_ADDRS; row++) {
+            float yu = (float)row + 0.5f;
+            float yl = (float)row + (float)HUB75_ROW_ADDRS + 0.5f;
+            float zu = (HEART_CENTER_Y - yu) / HEART_ZS;
+            float zl = (HEART_CENTER_Y - yl) / HEART_ZS;
+
+            for (col = 0; col < HUB75_COLS; col++) {
+                float r = ((float)col + 0.5f) - PANEL_CENTER_X;
+                float x = (r * ct) / HEART_XS;
+                float depth = (r * st) / HEART_YS;
+                uint8_t upper = heart_colour(x, depth, zu);
+                uint8_t lower = heart_colour(x, depth, zl);
 
                 if (upper != 0u || lower != 0u)
                     hub75_frame_set_pixel(frame, slice, row, col,
@@ -430,8 +503,13 @@ int main(void)
 #if HUB75_VOLUMETRIC_TEST
     /* One static volume: render once, submit once, never touch the buffer
      * again. The PL re-reads the same base every revolution. */
+#if HUB75_HEART_TEST
+    console_printf("render 3D heart ...\r\n");
+    render_heart(frames[0]);
+#else
     console_printf("render two-ball volume ...\r\n");
     render_volume(frames[0]);
+#endif
     submit_frame(frames[0], &toggle);
     console_printf("volume submitted base %x\r\n", (unsigned)(UINTPTR)frames[0]);
 

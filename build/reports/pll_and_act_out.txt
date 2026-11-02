@@ -1,0 +1,27 @@
+﻿
+No lease, forking to background
+done.
+Starting Dropbear SSH server: Generating key, this may take a while...
+Public key portion is:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9B3xPuNGxJr9hpzBLpltn9LnIykl4ztsVva0q4Q39gPn5uCSs/HAH7UHpWN8VL9PEPP469D21QgoqFKiCb2Mo3xI2r7ensentzRwqLRXrqRIgRUqeovwPN8hN+1Y8hL9lSy7VlI39UEsebCHKaqp/4zofFc+BoOUagEi5v8ajef0UASCjT+O77/0PSN/ZBgyxREbYU74ts3PYgU1yQRanzi8WpBRgUkaBR6k29Z2+Cb1+AYGHVxXuvNxKNLDvHXAN/AYfo7wxoxW+GjU+7Wk667o7aOSijBN0REBJE+rI8cgFknhZr+VRk4Q41QyT3tV1a3E2F/dPnBWe9ETMCyLH root@petalinux_boot_from_sd
+Fingerprint: md5 10:35:f4:15:96:d6:0d:e5:0f:87:00:f4:8e:0b:73:84
+dropbear.
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Starting syslogd/klogd: done
+Starting tcf-agent: OK
+
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+7[r[999;999H[6nroot@petalinux_boot_from_sd:~# cat /proc/uptime
+25.36 12.82
+root@petalinux_boot_from_sd:~# devmem 0xF8000108 32
+0x0001E000
+root@petalinux_boot_from_sd:~# devmem 0xF800010C 32
+0x0000003F
+root@petalinux_boot_from_sd:~# devmem 0xF8000170 32
+0x00400500
+root@petalinux_boot_from_sd:~# v=$(devmem 0x41200008 32); echo ctrl2_before=$v; ww=$(( (v ^ 1) | 2 )); devmem 0x41200008 32 $(printf '0x%08x' $w); echo submitted [Aw=$(( (v ^ 1) | 2 )); devmem 0x41200008 32 $(printf '0x%08x' $w); echo submitte[Kd
+ctrl2_before=0x00000000
+submitted

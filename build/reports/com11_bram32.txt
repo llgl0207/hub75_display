@@ -1,0 +1,46 @@
+﻿
+EXT4-fs (mmcblk0p2): warning: mounting fs with errors, running e2fsck is recommended
+FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+EXT4-fs (mmcblk0p2): recovery complete
+EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Tue Mar  3 06:25:20 UTC 2020
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Starting internet superserver: inetd.
+Configuring packages on first boot....
+ (This may take several minutes. Please do not power off the machine.)
+Running postinst /etc/rpm-postinsts/100-sysvinit-inittab...
+update-rc.d: /etc/init.d/run-postinsts exists during rc.d purge (continuing)
+ Removing any system startup links for run-postinsts ...
+  /etc/rcS.d/S99run-postinsts
+INIT: Entering runlevel: 5
+Configuring network interfaces... IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+udhcpc (v1.24.1) started
+Sending discover...
+Sending discover...
+Sending discover...
+No lease, forking to background
+done.
+Starting Dropbear SSH server: Generating key, this may take a while...
+Public key portion is:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCJ9/T+JoO8vFUOkbq97k79b4HwJzqwWIWaG3aC9dmiFDa3ZpZ8Yn22YckMP6guHTu41bp7jRIsm7XZeq00tFwe4sHPunPJQkadtnNa26h7ImFJyC3WqGrasRqUnH99/ieaVE12Sh4mNW3rqvRSHZaJSa1yC2oHqgehXpA3S4cN182CWXXG4P8onmscV2gQoFMa8jLYjkNjWzpnsXSI8JOcH+FvYJ3BLhZcp6iHnp64EfdHh4L8W75vjTFVyr823FZqdoc5fIk4bMqy7S/H2x2oxtp/3diRoy7SepX+LltdW9wHDGHM62NK9VglD0L2qdg9pXTdhtZNseEMc/pKSy81 root@petalinux_boot_from_sd
+Fingerprint: md5 2f:dc:1a:a2:83:4b:59:89:2e:e6:de:e2:3b:d8:61:41
+dropbear.
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Starting syslogd/klogd: done
+Starting tcf-agent: OK
+
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+7[r[999;999H[6nroot@petalinux_boot_from_sd:~# devmem 0x42000000 32 0x12345678
+root@petalinux_boot_from_sd:~# devmem 0x42000000 32
+0x12345678
+root@petalinux_boot_from_sd:~# devmem 0x41200004 32 0
+root@petalinux_boot_from_sd:~# devmem 0x4120000C 32 0
+root@petalinux_boot_from_sd:~# devmem 0x41200000 32 0x42000000
+root@petalinux_boot_from_sd:~# devmem 0x41200008 32 0x4003
+root@petalinux_boot_from_sd:~# devmem 0x41210000 32
+0x0001160D
+root@petalinux_boot_from_sd:~# /run/media/mmcblk0p1/hub75_pattern_bram32

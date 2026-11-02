@@ -25,7 +25,14 @@
 
 **红外消抖与"一次照射一个触发"已在真板实测通过（T004）；红外周期驱动的切片调度（闭环）已实现并通过仿真与构建，等待上板做锁角验证。**
 
-**PS+DDR 增量（PS7 + AXI GPIO + S_AXI_HP0 + DDR reader + slice RAM）已上板验证：UART1 控制台、DDR PASS、约 20 fps 静止动画、`buf_ready=1`，并支持 SD 脱机启动（BOOT.BIN = FSBL + bitstream + ELF）。两球旋转体（64 slice、左红右绿、静态帧只提交一次）已在旋转面板上显示，用户目视效果正常；上半球/下半球数据和普通半屏行映射经“上绿下红”颜色诊断确认。顶部最上一行仍有单行 ghost（每个 slot 第 0 行重影上一槽 row 31），是扫描/面板首行 artifact，暂留。**
+**PS+DDR 增量（PS7 + AXI GPIO + S_AXI_HP0 + DDR reader + slice RAM）已上板验证：UART1 控制台、DDR PASS、约 20 fps 静止动画、`buf_ready=1`，并支持 SD 脱机启动（BOOT.BIN = FSBL + bitstream + ELF）。两球旋转体已上板显示（64 slice、左红右绿），用户目视效果正常；上半球/下半球数据和普通半屏行映射经“上绿下红”颜色诊断确认。默认 app 已升级为 **3D 心形**（红色主体、洋红顶叶、薄白边；两球体保留为 `HUB75_HEART_TEST=0` 回退）。PL 对 `row_addr=0` 保持 OE 关闭，但用户在板上反馈顶部 row31 ghost 仍未消除，疑似面板首行硬件/导光行为，暂不阻塞。新 bitstream/app 已构建（WNS +6.538、WHS +0.056、DRC 0）并 JTAG 加载，COM11 显示 `render 3D heart ...`、`id 1`；`BOOT.BIN` 4,195,624 B。心形上板视觉 TBD。**
+
+**Linux 阶段（新）：目标、路线、接口、风险见 `report/linux_port_plan.md`。**
+2026-11-04 更新：厂商 PetaLinux 2018.3 + 我们的 FSBL/HP0 bitstream（reader ARCACHE=4bx0010）已跑通；
+用户态 `hub75d`（PTY 16x4 + 8x16 字库 + VT100 解析）把 shell 文字实时显示在旋转屏上，
+用户确认可见 `~#` 与刷新。此前所有“卡死/重启”的最终根因是**供电跌落触发 POR**（换电池后全部正常），
+不是看门狗/总线；Vitis 静态 glibc 的 time64 系统调用在 4.14 上返回 ENOSYS（改用全局定时器 + poll）。
+完整结论与下一步见 `report/linux_port_plan.md` §14。本机 Windows 10 无 WSL/PetaLinux；原 SD 卡有厂商 Linux 备份（`build/work/sd_backup/BOOT.bin.original` + 卡上 image.ub/rootfs）。Linux 基础路线待选：PetaLinux 2026.1 + WSL2（开源/资料完整，推荐）、原厂镜像 + 用户态 hub75d（最快）、PYNQ/Ubuntu（板级兼容待试）、Buildroot/mainline（全开源、工作量最大）。**
 
 ---
 
@@ -74,7 +81,7 @@
 | **红外 → 扫描节奏闭环** | ✅ 已实现（`hub75_sched` + 切片驱动扫描），仿真与构建通过；**用户在机上报告锚点不漂（口述）** |
 | 半屏列对齐（rgb1/rgb2） | ⚠️ 发现错位，原因未定；已有 `PATTERN_MODE=2` 诊断图案与 `RGB2_COLUMN_OFFSET` 修正参数，等实测数据 |
 | DDR AXI 读取 / 整片 BRAM 乒乓 | ✅ RTL 仿真（`tb_hub75_ddr_reader`）+ 构建通过；上板 TBD |
-| PS 渲染与帧提交、Vitis | ✅ 上板验证：UART1 COM11、DDR PASS、帧握手、20 fps 静止动画；两球体（64 slice，左红/右绿）已上板显示，顶部单行 ghost 暂留 |
+| PS 渲染与帧提交、Vitis | ✅ 上板验证：UART1 COM11、DDR PASS、帧握手、20 fps 静止动画；两球体已上板；默认 3D 心形与顶部 row0 OE blank 新构建，上板 TBD |
 | PS7 / UART1 / DDR 基线 / SD 启动 | ✅ 上板验证；SD 脱机启动（BOOT.BIN）已跑通 |
 | 加速补显（零度缺片） | ❌ 未开始，用户要求后续考虑 |
 
@@ -82,7 +89,7 @@
 
 ## 6. 下一步推荐顺序
 
-1. **两球旋转体已显示**：`HUB75_VOLUMETRIC_TEST=1` 左红/右绿、静态帧只提交一次；上板目视效果正常，颜色诊断确认上/下半球数据与普通行映射正确。顶部最上一行仍有单行 ghost（上一槽 row 31），暂留；可选在 PL 扫描器里对 `row_addr=0` 保持 OE 关闭并重建位流来消除。继续记录转动后的 `period`、20~30 rev/s 下的 3D 效果和面板照片/视频。
+1. **3D 心形已实现，等待上板**：`HUB75_HEART_TEST=1` 默认 3D 心形（红色主体、洋红顶叶、薄白边），两球体为 `HUB75_HEART_TEST=0` 回退；静态帧只提交一次。PL 已对 `row_addr=0` 保持 OE 关闭，消除顶部 row31 ghost（接缝行会空掉一行）。新 bitstream/app/BOOT.BIN 构建后上板确认心形和顶部条纹；继续记录 `period`、20~30 rev/s 下的 3D 效果和面板照片/视频。
 2. **记录 PS 实测**：DDR memtest、实际 DDR 频率、UART 日志、status（ack/busy/slice/frame_id）、面板照片；确认 `frame_done` 后 A/B 复用无撕裂。通过后再把 DDR 400→533.333 复测。
 3. **半屏列错位/锁角**：PS 红/蓝测试图可直接判读 rgb1/rgb2 半屏对应与列偏移；测得后改渲染端的 upper/lower 或列预移。锁角定量仍按 `board_test_procedure.md` 的判据记录。
 4. 400 片容量、76 片/圈、后半圈镜像复用、加速补显留到基线稳定之后。

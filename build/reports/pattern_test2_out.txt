@@ -1,0 +1,27 @@
+﻿Sending discover...
+
+No lease, forking to background
+done.
+Starting Dropbear SSH server: Generating key, this may take a while...
+Public key portion is:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZ+cI35gb0KaloTiZ7iz8/CCOEjYDNTBb6Ix+prdh0s7trL92PsG2zQsrz8HuWv3sHdIYcE32HS6g3uu9eFL25KpWrzT4M+8O+UhIYvWpKADKSZX333Kc/mvf7+/jrNzMoueXnj/RIBaPVcoW5EmmM03snb9iyOMLZRApRTPnbpG1fqW8gkbFP9y6pxib5x0SPe1MdwwATQciwQu6oHVK5kiW0ovhogd/kww3A/C0JmN1yFMop6mWMTjjPArKjBKpJfbd0PqisiOW4cDa6EVgFaEB94Uwil7P40PfID3/EikinNi9kEmc1J5JCzMD3WfO//bglnR71877k+cL3GF9l root@petalinux_boot_from_sd
+Fingerprint: md5 d1:ff:33:96:53:1f:57:7f:34:2b:3a:34:cc:71:a2:f4
+dropbear.
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Starting syslogd/klogd: done
+Starting tcf-agent: OK
+
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+7[r[999;999H[6nroot@petalinux_boot_from_sd:~# ls /run/media/mmcblk0p1
+BOOT.bin                   hub75_pattern_bram         hub75_probe
+System Volume Information  hub75_pattern_bram32       image.ub
+hub75_diag                 hub75_pattern_ocm          uEnv.txt
+hub75_pattern              hub75_pattern_ocm4k
+root@petalinux_boot_from_sd:~# /run/media/mmcblk0p1/hub75_pattern_bram32
+pattern written to 0x42000000 (196608 bytes)
+submitted frame_base=0x42000000 ctrl2=0x00004003
+status=0x400025a0 slice=37 id=0 buf_ready=0 done=0 ir=0 pend=1 act=0 en=1 submit=1 pvalid=0 waited_ms=1000
+pat?

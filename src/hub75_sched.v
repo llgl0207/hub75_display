@@ -26,6 +26,12 @@ module hub75_sched #(
     parameter integer FALLBACK_RPM  = 1800,   // must be a multiple of 60
     parameter integer MIN_ROW_TICKS = 700,    // 643 fixed overhead + dwell
     parameter integer MAX_ROW_TICKS = 65535,
+    // Plausibility window for the measured IR period. The IR input floats (or
+    // sees sparse noise) when the sensor is absent; one such interval used to
+    // latch a multi-second "period" and stretch a slot to ~20 ms, which looks
+    // like a frozen display. Outside this window the fallback period is used.
+    parameter integer MIN_PERIOD_CYCLES = 250_000,     // 5 ms  at 50 MHz (12k RPM)
+    parameter integer MAX_PERIOD_CYCLES = 50_000_000,  // 1 s   at 50 MHz (60 RPM)
     // Parameter sanity checks. Real builds keep this at 1; unit-test instances
     // that deliberately violate the production floor set it to 0.
     parameter integer CHECK_PARAMS  = 1
@@ -47,8 +53,13 @@ module hub75_sched #(
     reg [31:0] slot_count;
 
     wire [31:0] period_next = period_valid ? period_ticks : FALLBACK_PERIOD[31:0];
-    // A held-valid but zero period would otherwise make every cycle a slot.
-    wire [31:0] period_safe = (period_next == 0) ? FALLBACK_PERIOD[31:0] : period_next;
+    // Reject implausible estimates instead of letting one bad average freeze
+    // the slot timebase: a zero period would make every cycle a slot and a
+    // multi-second period would stretch a slot to milliseconds (which reads
+    // as a frozen panel and starves the bench fallback).
+    wire period_plausible = (period_next >= MIN_PERIOD_CYCLES) &&
+                            (period_next <= MAX_PERIOD_CYCLES);
+    wire [31:0] period_safe = period_plausible ? period_next : FALLBACK_PERIOD[31:0];
     wire [31:0] slot_cycles_l = period_latched >> SLOT_LOG2;
     wire [31:0] row_raw        = slot_cycles_l >> ROW_LOG2;
     wire [15:0] row_clamped    = (row_raw < MIN_ROW_TICKS) ? MIN_ROW_TICKS[15:0]

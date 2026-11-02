@@ -1,0 +1,5 @@
+P=/run/media/mmcblk0p1; [ -x $P/hub75d ] || { mkdir -p /mnt/boot; mount /dev/mmcblk0p1 /mnt/boot; P=/mnt/boot; }; $P/hub75d 2>/tmp/d.log &
+sleep 2
+cat /tmp/d.log
+ps | grep -E "hub75d|sh"
+ls -la /dev/pts

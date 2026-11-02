@@ -19,9 +19,15 @@
 #define HUB75_SLICE_BYTES  3072
 #define HUB75_FRAME_BYTES  (HUB75_SLICES * HUB75_SLICE_BYTES)
 
-/* 2 MiB apart, outside the application's low-DDR linker regions. */
+/* 2 MiB apart, outside the application's low-DDR linker regions. The Linux
+ * bring-up overrides these with -DHUB75_FRAME_A=0x42000000u to target the PL
+ * BRAM frame buffer instead of PS DDR. */
+#ifndef HUB75_FRAME_A
 #define HUB75_FRAME_A      0x10000000u
+#endif
+#ifndef HUB75_FRAME_B
 #define HUB75_FRAME_B      0x10200000u
+#endif
 
 void hub75_frame_clear(uint8_t *frame);
 void hub75_frame_set_pixel(uint8_t *frame, int slice, int row_addr, int col,

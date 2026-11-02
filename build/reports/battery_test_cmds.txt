@@ -1,0 +1,7 @@
+cat /proc/uptime
+/run/media/mmcblk0p1/hub75_pattern_ddr
+cat /proc/uptime
+devmem 0x41210000 32
+sleep 15
+cat /proc/uptime
+devmem 0x41210000 32

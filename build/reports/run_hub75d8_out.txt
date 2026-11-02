@@ -1,0 +1,21 @@
+﻿
+Sending discover...
+Sending discover...
+No lease, forking to background
+done.
+Starting Dropbear SSH server: Generating key, this may take a while...
+Public key portion is:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDL3nd08d+KyeFTR5qonCoWWUt/vJNiWwy/KilDyR8Hoy9r9f84rs+5qZFuCw9CYtgxLZmXHW1+qw7JllfmGPKRgG/8aE5/HVE3VoiAxc425h5O+WgiaTqoOcnExhdNdjvrZQntDX1PJZDcNGlls2ZQsrNaDuhfdStCqJAYWYITsolwzHC2uSu0CabXJIZOQEYHCIs7zTCh3X0e6TAPIBGvuNQ6dQ5TdCeBHShTceYEDP6DCGjLkDk6aBkjKnNSkPucXDuqq4xjRw+xOKm+BQbY8zSIoU/BKE2Xf8p4abICQl3KdkcTIBp9+rMlMbVkrzHLjJwoqV1CqrnPzdSMZiVB root@petalinux_boot_from_sd
+Fingerprint: md5 58:56:63:d9:73:10:32:39:63:8b:a1:e9:c0:e2:79:49
+dropbear.
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Starting syslogd/klogd: done
+Starting tcf-agent: OK
+
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+7[r[999;999H[6nroot@petalinux_boot_from_sd:~# P=/run/media/mmcblk0p1; [ -x $P/hub75d ] || { mkdiir -p /mnt/boot; mount /dev/mmcblk0p1 /mnt/boot; P=/mnt/boot; }; echo DAEMON_PATHH=$P; $P/hub75d
+DAEMON_PATH=/run/media/mmcblk0p1
+hub75d: pty selftest w=12 poll=1 n=12 mfd=4hub75d: pty [12]hub75d: submit 10000000 15ms st=570037a0 id=0hub75d: pty [33]hub75d: submit 10200000 6ms st=1a011fed id=1

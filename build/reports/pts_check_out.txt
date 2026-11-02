@@ -1,0 +1,13 @@
+﻿
+root@petalinux_boot_from_sd:~# ls -la /dev/pts
+total 0
+drwxr-xr-x    2 root     root             0 Jan  1  1970 .
+drwxr-xr-x    8 root     root          2660 Mar  3 06:25 ..
+crw--w----    1 root     tty       136,   0 Mar  3 06:25 0
+c---------    1 root     root        5,   2 Jan  1  1970 ptmx
+root@petalinux_boot_from_sd:~# mount | grep -i pts
+devpts on /dev/pts type devpts (rw,relatime,gid=5,mode=620,ptmxmode=000)
+root@petalinux_boot_from_sd:~# ls -la /dev/ptmx
+crw-rw-rw-    1 root     tty         5,   2 Jan  1  1970 /dev/ptmx
+root@petalinux_boot_from_sd:~# cat /proc/misc | grep -i ptmx
+root@petalinux_boot_from_sd:~# 

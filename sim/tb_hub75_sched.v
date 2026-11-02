@@ -21,9 +21,15 @@ module tb_hub75_sched;
     wire [15:0] row_a;
     wire        slot_a;
 
+    // The plausibility window is expressed in clock cycles, so scale the
+    // production window (5 ms .. 1 s at 50 MHz) down for the 1 MHz test clock.
+    localparam integer MIN_PERIOD_TEST = 250_000 / 50;   // 5,000 cycles
+    localparam integer MAX_PERIOD_TEST = 50_000_000 / 50; // 1,000,000 cycles
     hub75_sched #(
         .CLK_HZ(1_000_000), .SLOT_LOG2(6), .ROW_LOG2(5),
-        .FALLBACK_RPM(1800), .MIN_ROW_TICKS(8), .CHECK_PARAMS(0)
+        .FALLBACK_RPM(1800), .MIN_ROW_TICKS(8), .CHECK_PARAMS(0),
+        .MIN_PERIOD_CYCLES(MIN_PERIOD_TEST),
+        .MAX_PERIOD_CYCLES(MAX_PERIOD_TEST)
     ) dut_a (
         .clk(clk), .rst(rst), .revolution_start(rev_a),
         .period_valid(valid_a), .period_ticks(period_a),
@@ -38,9 +44,15 @@ module tb_hub75_sched;
     wire [15:0] row_b;
     wire        slot_b;
 
+    // Instance B exercises the row-budget clamps. The upper plausibility bound
+    // is opened up here because a period able to overflow 16-bit row_ticks is
+    // necessarily outside the production window (the window would reject it
+    // first, which is exactly the behaviour instance A checks).
     hub75_sched #(
         .CLK_HZ(1_000_000), .SLOT_LOG2(6), .ROW_LOG2(5),
-        .FALLBACK_RPM(1800), .MIN_ROW_TICKS(700)
+        .FALLBACK_RPM(1800), .MIN_ROW_TICKS(700),
+        .MIN_PERIOD_CYCLES(MIN_PERIOD_TEST),
+        .MAX_PERIOD_CYCLES(32'h7FFF_FFFF)
     ) dut_b (
         .clk(clk), .rst(rst), .revolution_start(rev_b),
         .period_valid(valid_b), .period_ticks(period_b),
@@ -131,6 +143,20 @@ module tb_hub75_sched;
         repeat (3) @(negedge clk);
         if (row_a !== FB_ROW[15:0]) $fatal(1, "Zero period did not fall back: row %0d", row_a);
 
+        // E2) implausible estimates must fall back instead of stretching the
+        //     slot timebase (the field failure: a sparse floating-input edge
+        //     latched a 1.45 s period and each slot lasted ~20 ms).
+        period_a = 32'd2_000_000;      // slower than 1 rev/s at the test clock
+        pulse_rev_a();
+        repeat (3) @(negedge clk);
+        if (row_a !== FB_ROW[15:0])
+            $fatal(1, "Slow implausible period did not fall back: row %0d", row_a);
+        period_a = 32'd1_000;          // faster than 12k RPM
+        pulse_rev_a();
+        repeat (3) @(negedge clk);
+        if (row_a !== FB_ROW[15:0])
+            $fatal(1, "Fast implausible period did not fall back: row %0d", row_a);
+
         // F) clamps on instance B: 12,800 cycles would need 6 row cycles.
         period_b = 32'd12800; valid_b = 1;
         pulse_rev_b();
@@ -142,7 +168,7 @@ module tb_hub75_sched;
         if (slot_len_b !== 200) $fatal(1, "Slot %0d cycles, expected 200", slot_len_b);
 
         // G) maximum period must clamp at the 16-bit row budget.
-        period_b = 32'hFFFFFFFF;
+        period_b = 32'h7FFF_FFFF;
         pulse_rev_b();
         repeat (3) @(negedge clk);
         if (row_b !== 16'd65535) $fatal(1, "MAX clamp missing: row %0d", row_b);

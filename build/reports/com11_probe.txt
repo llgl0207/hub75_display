@@ -1,0 +1,10 @@
+﻿root
+Password: 
+7[r[999;999H[6n8root@petalinux_boot_from_sd:~# ls -l /run/media/mmcblk0p1
+total 14678
+-rwxrwx---    1 root     disk       4603128 Nov  2  2026 BOOT.bin
+drwxrwx---    2 root     disk          2048 Feb 28  2024 System Volume Information
+-rwxrwx---    1 root     disk        424204 Nov  2  2026 hub75_probe
+-rwxrwx---    1 root     disk       9998060 Nov  2  2026 image.ub
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# /run/media/mmcblk0p1/hub75_probe

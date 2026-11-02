@@ -1,0 +1,5 @@
+devmem 0x10000000 32 0xCAFEBABE
+devmem 0x10000000 32
+/run/media/mmcblk0p1/hub75_pattern_ddr
+devmem 0x10000000 32
+devmem 0x10000004 32

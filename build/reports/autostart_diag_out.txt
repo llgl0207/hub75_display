@@ -1,0 +1,15 @@
+﻿
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+7[r[999;999H[6nroot@petalinux_boot_from_sd:~# grep PS0 /etc/inittab
+PS0:12345:respawn:/bin/start_getty 115200 ttyPS0 vt102
+root@petalinux_boot_from_sd:~# ls -la /usr/bin/hub75-console
+ls: /usr/bin/hub75-console: No such file or directory
+root@petalinux_boot_from_sd:~# ls /mnt/boot
+ls: /mnt/boot: No such file or directory
+root@petalinux_boot_from_sd:~# mount | grep -i boot
+root@petalinux_boot_from_sd:~# cat /proc/uptime
+64.91 52.47
+root@petalinux_boot_from_sd:~# 

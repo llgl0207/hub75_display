@@ -1,0 +1,5 @@
+ls /run/media/mmcblk0p1
+/run/media/mmcblk0p1/hub75_pattern_bram32
+devmem 0x41210000 32
+sleep 1
+devmem 0x41210000 32

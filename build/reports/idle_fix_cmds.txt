@@ -1,0 +1,4 @@
+echo 'bootargs=console=ttyPS0,115200 earlyprintk mem=256M clk_ignore_unused cpuidle.off=1 idle=poll' > /run/media/mmcblk0p1/uEnv.txt
+cat /run/media/mmcblk0p1/uEnv.txt
+sync
+reboot

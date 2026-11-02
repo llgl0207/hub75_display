@@ -2,10 +2,11 @@
 
 // Top level for the PS + PL HUB75 system.
 //
-// design_1_wrapper contains the Zynq PS7, AXI GP0 -> two AXI GPIOs, and the
-// external S_AXI_HP0 slave port. hub75_system contains the scan/IR/scheduler,
-// the slice RAM ping-pong and the DDR reader. The PS DDR and MIO pins are
-// dedicated PS pins; their package locations are constrained by the PS7 IP.
+// design_1_wrapper contains the Zynq PS7, AXI GP0 -> two AXI GPIOs, the frame
+// BRAM controller and the external M_AXI_READER master port. hub75_system
+// contains the scan/IR/scheduler, the slice RAM ping-pong and the DDR reader;
+// the reader now reads the frame BRAM through M_AXI_READER, not PS DDR. The PS
+// DDR and MIO pins are dedicated PS pins, constrained by the PS7 IP.
 module system_top (
     // Zynq PS DDR / MIO fixed pins (pass-through to the BD wrapper)
     inout  wire [14:0] DDR_addr,
@@ -48,7 +49,7 @@ module system_top (
     wire [31:0] status;
     wire [31:0] period;
 
-    // AXI3 read channels from the reader to the PS7 HP0 slave port.
+    // AXI3 read channels from the reader to the BRAM-controller interconnect.
     wire [31:0] hp0_araddr;
     wire [3:0]  hp0_arlen;
     wire [2:0]  hp0_arsize;
@@ -93,40 +94,40 @@ module system_top (
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .S_AXI_HP0_araddr(hp0_araddr),
-        .S_AXI_HP0_arburst(hp0_arburst),
-        .S_AXI_HP0_arcache(hp0_arcache),
-        .S_AXI_HP0_arid(hp0_arid),
-        .S_AXI_HP0_arlen(hp0_arlen),
-        .S_AXI_HP0_arlock(hp0_arlock),
-        .S_AXI_HP0_arprot(hp0_arprot),
-        .S_AXI_HP0_arqos(4'd0),
-        .S_AXI_HP0_arready(hp0_arready),
-        .S_AXI_HP0_arsize(hp0_arsize),
-        .S_AXI_HP0_arvalid(hp0_arvalid),
+        .M_AXI_READER_araddr(hp0_araddr),
+        .M_AXI_READER_arburst(hp0_arburst),
+        .M_AXI_READER_arcache(hp0_arcache),
+        .M_AXI_READER_arid(hp0_arid),
+        .M_AXI_READER_arlen(hp0_arlen),
+        .M_AXI_READER_arlock(hp0_arlock),
+        .M_AXI_READER_arprot(hp0_arprot),
+        .M_AXI_READER_arqos(4'd0),
+        .M_AXI_READER_arready(hp0_arready),
+        .M_AXI_READER_arsize(hp0_arsize),
+        .M_AXI_READER_arvalid(hp0_arvalid),
         // Read-only master: tie off the write channels.
-        .S_AXI_HP0_awaddr(32'd0),
-        .S_AXI_HP0_awburst(2'd0),
-        .S_AXI_HP0_awcache(4'd0),
-        .S_AXI_HP0_awid(6'd0),
-        .S_AXI_HP0_awlen(4'd0),
-        .S_AXI_HP0_awlock(2'd0),
-        .S_AXI_HP0_awprot(3'd0),
-        .S_AXI_HP0_awqos(4'd0),
-        .S_AXI_HP0_awsize(3'd0),
-        .S_AXI_HP0_awvalid(1'b0),
-        .S_AXI_HP0_bready(1'b1),
-        .S_AXI_HP0_rdata(hp0_rdata),
-        .S_AXI_HP0_rid(hp0_rid),
-        .S_AXI_HP0_rlast(hp0_rlast),
-        .S_AXI_HP0_rready(hp0_rready),
-        .S_AXI_HP0_rresp(hp0_rresp),
-        .S_AXI_HP0_rvalid(hp0_rvalid),
-        .S_AXI_HP0_wdata(64'd0),
-        .S_AXI_HP0_wid(6'd0),
-        .S_AXI_HP0_wlast(1'b0),
-        .S_AXI_HP0_wstrb(8'd0),
-        .S_AXI_HP0_wvalid(1'b0),
+        .M_AXI_READER_awaddr(32'd0),
+        .M_AXI_READER_awburst(2'd0),
+        .M_AXI_READER_awcache(4'd0),
+        .M_AXI_READER_awid(6'd0),
+        .M_AXI_READER_awlen(4'd0),
+        .M_AXI_READER_awlock(2'd0),
+        .M_AXI_READER_awprot(3'd0),
+        .M_AXI_READER_awqos(4'd0),
+        .M_AXI_READER_awsize(3'd0),
+        .M_AXI_READER_awvalid(1'b0),
+        .M_AXI_READER_bready(1'b1),
+        .M_AXI_READER_rdata(hp0_rdata),
+        .M_AXI_READER_rid(hp0_rid),
+        .M_AXI_READER_rlast(hp0_rlast),
+        .M_AXI_READER_rready(hp0_rready),
+        .M_AXI_READER_rresp(hp0_rresp),
+        .M_AXI_READER_rvalid(hp0_rvalid),
+        .M_AXI_READER_wdata(64'd0),
+        .M_AXI_READER_wid(6'd0),
+        .M_AXI_READER_wlast(1'b0),
+        .M_AXI_READER_wstrb(8'd0),
+        .M_AXI_READER_wvalid(1'b0),
         .frame_base(frame_base),
         .frame_ctrl(frame_ctrl),
         .period(period),

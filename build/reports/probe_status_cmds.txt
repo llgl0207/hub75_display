@@ -1,0 +1,13 @@
+cat /proc/uptime
+cat /proc/cmdline
+devmem 0x41210000 32
+sleep 1
+devmem 0x41210000 32
+sleep 1
+devmem 0x41210000 32
+sleep 1
+devmem 0x41210000 32
+devmem 0x41200000 32
+devmem 0x41200008 32
+devmem 0x41200004 32
+devmem 0x4120000C 32

@@ -1,0 +1,17 @@
+﻿
+
+U-Boot 2018.01 (Mar 03 2020 - 06:23:28 +0000) Xilinx Zynq ZC702
+
+Board: Xilinx Zynq
+Silicon: v3.1
+DRAM:  ECC disabled 1 GiB
+MMC:   mmc@e0100000: 0 (SD)
+** No device specified **
+Using default environment
+
+In:    serial@e0001000
+Out:   serial@e0001000
+Err:   serial@e0001000
+Board: Xilinx Zynq
+Silicon: v3.1
+Net:   ZYNQ GEM: e000b000, phyaddr ffffffff, interface rgmii-id

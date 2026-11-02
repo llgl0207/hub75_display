@@ -1,0 +1,18 @@
+﻿
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+7[r[999;999H[6nroot@petalinux_boot_from_sd:~# cat /proc/uptime
+25.05 12.88
+root@petalinux_boot_from_sd:~# echo V > /dev/watchdog
+root@petalinux_boot_from_sd:~# devmem 0xF8005000 32
+0x00000000
+root@petalinux_boot_from_sd:~# sleep 15
+root@petalinux_boot_from_sd:~# cat /proc/uptime
+40.39 28.21
+root@petalinux_boot_from_sd:~# /run/media/mmcblk0p1/hub75_pattern_ddr
+copy: 196608 bytes in 4 ms (chunked)
+pattern written to 0x10000000 (196608 bytes)
+submitted frame_base=0x10000000 ctrl2=0x00004003
+status=0x620020a0 slice=32 id=0 buf_ready=0 done=0 ir=0 pend=1 act=0 en=1 submit=1 pvalid=0 w?

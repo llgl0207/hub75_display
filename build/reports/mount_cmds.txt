@@ -1,0 +1,4 @@
+cat /proc/mounts
+mkdir -p /mnt/boot
+mount -t vfat /dev/mmcblk0p1 /mnt/boot
+ls -la /mnt/boot

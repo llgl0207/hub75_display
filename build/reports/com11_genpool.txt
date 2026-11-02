@@ -1,0 +1,7 @@
+﻿
+root@petalinux_boot_from_sd:~# ls /sys/kernel/debug | head -40
+ls: /sys/kernel/debug: No such file or directory
+root@petalinux_boot_from_sd:~# cat /sys/kernel/debug/genpool 2>/dev/null
+root@petalinux_boot_from_sd:~# echo GENPOOL_DONE
+GENPOOL_DONE
+root@petalinux_boot_from_sd:~# 

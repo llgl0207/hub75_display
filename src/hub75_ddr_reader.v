@@ -35,11 +35,19 @@ module hub75_ddr_reader #(
     parameter integer SLICE_BYTES = 3072,
     parameter integer BURST_BEATS = 16,
     parameter integer BURSTS      = 24,
-    // Bench bring-up: if the IR sensor has never produced a revolution_start,
-    // accept a frame at the scheduler's fallback wrap (slice_index 0). This is
-    // not missed-trigger recovery: any real IR trigger sets ir_seen and turns
-    // the fallback off for the rest of the session. Set to 0 for the final rig.
-    parameter integer BENCH_FALLBACK = 1
+    // Bench bring-up: without live IR, accept a frame at the scheduler's
+    // fallback wrap (slice_index 0). The fallback is suppressed only while the
+    // IR input is actually alive (an edge within IR_TIMEOUT_CYCLES), so a
+    // floating input during boot cannot disable frame latching for the session.
+    parameter integer BENCH_FALLBACK = 1,
+    parameter integer IR_TIMEOUT_CYCLES = 10_000_000,  // 200 ms at 50 MHz
+    // Only the frame BRAM is mapped on the PL's GP0 interconnect. A submit
+    // with any other base (0 at boot, or a stale value when the two AXI GPIO
+    // channels arrive out of order) would make the reader issue an AXI read
+    // to an unmapped address, which wedges the GP0 fabric and stalls the PS
+    // until the watchdog resets it. Reject such submits instead.
+    parameter [31:0] FRAME_BASE_MIN = 32'h4200_0000,
+    parameter [31:0] FRAME_BASE_MAX = 32'h4207_FFFF
 ) (
     input  wire                   clk,
     input  wire                   rst,          // active high, synchronized to clk
@@ -62,6 +70,11 @@ module hub75_ddr_reader #(
     output reg  [7:0]             frame_id,
     output wire                   buf_ready,
     output wire                   rd_buf,       // buffer the scan is reading
+    // Debug observability (status GPIO spare bits)
+    output wire                   ir_active,
+    output reg                    pending_valid,
+    output reg                    active_valid,
+    output reg  [5:0]             bench_count,   // synthetic revolutions (mod 64)
     // AXI3 read master (S_AXI_HP0: 64-bit data, 32-bit address, 6-bit ID)
     output reg  [31:0]            m_axi_araddr,
     output reg  [3:0]             m_axi_arlen,
@@ -97,22 +110,32 @@ module hub75_ddr_reader #(
 
     reg [31:0] active_base;
     reg        active_epoch;
-    reg        active_valid;
     reg [31:0] pending_base;
-    reg        pending_valid;
     wire       pending_epoch = ~active_epoch;
+    wire       frame_base_ok = (frame_base >= FRAME_BASE_MIN) &&
+                               (frame_base <= FRAME_BASE_MAX);
 
     // Bench fallback: the scheduler still wraps slice_index 63->0 at the
-    // 1800 RPM fallback even without IR. Use that wrap as a synthetic
-    // revolution only until the first real IR trigger arrives.
-    reg ir_seen;
-    wire bench_rev = (BENCH_FALLBACK != 0) && !ir_seen &&
+    // fallback period even without IR. Use that wrap as a synthetic revolution
+    // whenever no IR edge has been seen for IR_TIMEOUT_CYCLES. A permanent
+    // ir_seen latch is deliberately avoided: one burst of noise on a floating
+    // input at boot used to disable the fallback for the rest of the session,
+    // which left the PS unable to submit any frame on the bench.
+    reg [31:0] ir_idle;
+    assign ir_active = (ir_idle < IR_TIMEOUT_CYCLES);
+    wire bench_rev = (BENCH_FALLBACK != 0) && !ir_active &&
                      slot_start && (slice_index == {SLICE_BITS{1'b0}});
     wire rev_event = revolution_start || bench_rev;
 
     always @(posedge clk) begin
-        if (rst) ir_seen <= 1'b0;
-        else if (revolution_start) ir_seen <= 1'b1;
+        if (rst)
+            ir_idle <= 32'd0;
+        else if (revolution_start)
+            ir_idle <= 32'd0;
+        else if (!ir_active)
+            ir_idle <= IR_TIMEOUT_CYCLES;
+        else
+            ir_idle <= ir_idle + 1'b1;
     end
 
     always @(posedge clk) begin
@@ -125,8 +148,11 @@ module hub75_ddr_reader #(
             frame_ack         <= 1'b0;
             frame_done_toggle <= 1'b0;
             frame_id          <= 8'd0;
+            bench_count       <= 6'd0;
         end else begin
-            if (submit_pulse) begin
+            if (bench_rev)
+                bench_count <= bench_count + 1'b1;
+            if (submit_pulse && frame_base_ok) begin
                 pending_base  <= frame_base;
                 pending_valid <= 1'b1;
             end
@@ -235,7 +261,10 @@ module hub75_ddr_reader #(
             m_axi_arsize   <= 3'd3;
             m_axi_arburst  <= 2'b01;
             m_axi_arlock   <= 2'b00;
-            m_axi_arcache  <= 4'b0011;
+            // Normal non-cacheable. The bare-metal tests ran with caches off,
+            // so 4'b0011 (cacheable) was harmless there; under Linux the CPU
+            // caches are on and a cacheable HP0 read can deadlock the PS.
+            m_axi_arcache  <= 4'b0010;
             m_axi_arprot   <= 3'b000;
             m_axi_arid     <= 6'd0;
             m_axi_arvalid  <= 1'b0;

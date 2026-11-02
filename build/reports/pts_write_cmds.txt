@@ -1,0 +1,3 @@
+echo HELLO_PTS > /dev/pts/0
+sleep 1
+cat /tmp/d.log

@@ -34,8 +34,12 @@ PS 改显示内容只需要改 DDR 里的像素，然后提交。
 |---|---|---|---|
 | `0x41200000` | ctrl ch1 | PS→PL | `frame_base[31:0]`：当前帧 DDR 物理地址 |
 | `0x41200000` | ctrl ch2 | PS→PL | `frame_ctrl`：bit0 submit 翻转，bit1 enable，bits[15:8] slice 数（当前 RTL 固定 64，保留） |
-| `0x41210000` | status ch1 | PL→PS | `status`：bit0 frame_ack，bit1 reader_busy，bit2 buf_ready，bit3 frame_done 翻转，bits[13:8] active_slice，bits[23:16] frame_id |
+| `0x41210000` | status ch1 | PL→PS | `status`：bit0 frame_ack，bit1 reader_busy，bit2 buf_ready，bit3 frame_done 翻转；bit4 ir_active，bit5 pending_valid，bit6 active_valid，bit7 enable；bits[13:8] active_slice，bits[23:16] frame_id，bits[29:24] bench 合成 revolution 计数（mod 64，每 33 ms 涨 1）；bit30 submit_toggle（PL 实际看到的 `frame_ctrl[0]`），bit31 period_valid |
 | `0x41210000` | status ch2 | PL→PS | `period_ticks[31:0]`：IR 实测周期（最近 5 个间隔的均值，50 MHz tick） |
+
+> 调试位（bit4–7、30、31）用于 `hub75_diag` 定位“提交后不锁帧”：`pend=1`
+> 表示 PS 的 submit 已被 PL 看到、正在等 revolution；`act=1` 表示已有帧基址
+> 被锁存；`ir=1` 表示最近 200 ms 内收到过 IR 边沿（此时 bench 回落关闭）。
 
 `frame_ctrl` 的 enable 为 1 时 PL 才允许 DDR reader 工作。submit 是**翻转位**，不是脉冲：
 每提交一帧把 bit0 取反一次。
@@ -67,10 +71,11 @@ frame B = 0x10200000   (2 MiB apart)
 `row_addr=20..31`（接缝上方），下半球写在 `row_addr=0..11`（接缝下方）；
 面板显示为绿色的上半球在红色的下半球之上，数据通路和行映射正确。
 
-**顶部单行 ghost**：每个 slot 的第 0 行（面板最上一行）会显示上一槽最后
+**顶部单行 ghost**：每个 slot 的第 0 行（面板最上一行）曾显示上一槽最后
 一行（row 31）的数据，形成一条单行彩色条纹。这是扫描/面板首行 artifact，
-不是帧内容或行映射错误。当前先保留；若要消除，可在 PL 扫描器里对
-`row_addr=0` 保持 OE 关闭（空白掉面板最上一行），需要重建位流。
+不是帧内容或行映射错误。**已修**：PL 扫描器现在对 `row_addr=0` 保持
+OE 关闭（`src/hub75_scan.v`），空白掉面板最上一行；同一 `row_addr` 也是
+下半屏的接缝行，所以接缝下方一行也会空掉，上半屏 row31 内容保留。
 
 颜色是 3-bit：`1`=蓝，`2`=绿，`4`=红，`7`=白，组合可混色。
 
@@ -80,7 +85,19 @@ frame B = 0x10200000   (2 MiB apart)
   扫描端每个 slot 都显示同一张 128x64 图，人眼看到一张稳定的 2D 图；
   帧号变化就得到动画。`HUB75_VOLUMETRIC_TEST=0` 保留这个模式。
 - **旋转体显示**：每个 slice 是某个角度上的 128x64 切片。当前 `main.c`
-  默认（`HUB75_VOLUMETRIC_TEST=1`）渲染**左右两个球体**：
+  默认（`HUB75_HEART_TEST=1`，`HUB75_VOLUMETRIC_TEST=1`）渲染 **3D 心形**：
+  旋转平面上的点 `(r, y)` 映射到 3D
+  `x = r*cos(theta)/XS`、`depth = r*sin(theta)/YS`、`z = (32-y)/ZS`，
+  代入经典心形隐函数
+
+  ```text
+  (x^2 + 9/4*depth^2 + z^2 - 1)^3 - x^2*z^3 - 9/80*depth^2*z^3 <= 0
+  ```
+
+  取 XS=26、YS=18、ZS=20 px/单位（心形宽大于高）；f<=0 填充红色主体，
+  表面薄白边，z>0.4 的顶部叶瓣为洋红。64 个角度切片在眼睛里合成 3D 心形。
+- **两球体回退**（`HUB75_HEART_TEST=0`，`HUB75_VOLUMETRIC_TEST=1`）：
+  渲染**左右两个球体**：
 
   ```text
   面板坐标: x = 0..128 (列), y = 0..64 (行), 旋转轴在 x=64, y=32
@@ -137,6 +154,27 @@ void wait_frame_done(void)
 }
 ```
 
+**写帧缓存前的互斥（PS/Linux 必须遵守）**：PS 写帧缓存与 PL reader 读同一块
+BRAM 都经过 GP0。若 CPU 的整帧写入与 reader 的在途 AXI 读重叠，可能把 PS 卡死
+（本板实测触发过系统看门狗 SWDT 复位）。完整顺序：
+
+1. 读回当前 `frame_ctrl`，清 bit1（enable=0），bit0（submit 翻转位）保持不动；
+2. 轮询 `status`，直到 **bit7=0（PL 已看到 enable=0）且 bit1=0（reader_busy=0）**，
+   再等至少 1 个 slot（50 MHz 下约 0.6 ms，建议 2 ms）——确保没有在途读；
+3. 32 位全宽写入帧缓存（不要字节写，BRAM 控制器 `SUPPORTS_NARROW_BURST=0`）；
+4. 写 `frame_base` 并读回，**等 ≥2 ms**（见下）；
+5. 读出当前 `frame_ctrl`，bit0 取反后连同 bit1=1 一起写回（保证只有一次 submit 边沿）；
+6. 轮询 `frame_done_toggle` / `frame_id` 等待锁存。
+
+**基址窗口与写顺序**：PL 只接受 `0x42000000–0x4207FFFF` 的 `frame_base`
+（帧 BRAM 窗口）；窗口外的 submit 会被直接忽略、不会产生 pending，这是为了
+防止 reader 去读 GP0 上不存在的地址把 AXI 总线挂死（实测会触发系统看门狗复位）。
+`frame_base` 与 submit 是同一个 AXI GPIO 的两个通道，AXI 不保证写顺序，所以
+写完基址后要留 ≥2 ms 再提交；提交后先检查 status bit5（pending），没置位就
+再翻转一次 submit。
+
+`hub75_pattern.c` 和 `hub75_diag.c` 已按此实现。
+
 完整的双缓冲循环：
 
 ```c
@@ -165,7 +203,45 @@ for (frame_no = 0;; frame_no++) {
 
 ## 5. 渲染示例
 
-### 两球旋转体（当前 `main.c`，`HUB75_VOLUMETRIC_TEST=1`）
+### 3D 心形（当前 `main.c` 默认，`HUB75_HEART_TEST=1`）
+
+对每个 slice 求旋转平面与心形隐函数的交线。核心：
+
+```c
+static uint8_t heart_colour(float x, float depth, float z)
+{
+    float xx = x*x, yy = depth*depth, zz = z*z;
+    float a = xx + 2.25f*yy + zz - 1.0f;
+    float f = a*a*a - xx*z*z*z - 0.1125f*yy*z*z*z;
+    if (f > 0.0f)  return 0;   /* outside */
+    if (f > -0.02f) return 7;  /* thin white rim */
+    if (z > 0.40f) return 5;   /* magenta top lobes */
+    return 4;                  /* red body */
+}
+
+for (slice = 0; slice < 64; slice++) {
+    float st = sin_q15[slice] / 32768.0f;
+    float ct = sin_q15[(slice + 16) & 63] / 32768.0f;
+    for (row = 0; row < 32; row++) {
+        float zu = (32.0f - (row + 0.5f)) / 20.0f;
+        float zl = (32.0f - (row + 32.5f)) / 20.0f;
+        for (col = 0; col < 128; col++) {
+            float r = (col + 0.5f) - 64.0f;
+            float x = r * ct / 26.0f;
+            float depth = r * st / 18.0f;
+            uint8_t upper = heart_colour(x, depth, zu);
+            uint8_t lower = heart_colour(x, depth, zl);
+            if (upper || lower)
+                hub75_frame_set_pixel(frame, slice, row, col, upper, lower);
+        }
+    }
+}
+```
+
+`HUB75_HEART_TEST=0` 回退到下面的两球体。渲染完成后 `submit_frame()`
+只调用一次；之后 PS 每秒打印状态，不再重写帧。
+
+### 两球体回退（`HUB75_HEART_TEST=0`）
 
 对每个 slice 计算旋转平面与两个球的交线，不再复制同一张图。核心循环：
 
@@ -217,7 +293,8 @@ static void render_frame(uint8_t *frame, uint32_t frame_no)
 
 > 注意：静止模式是早期 2D 示例，`background_pixel` 直接把 `row_addr` 当上下
 > 半屏的 y，和实际面板的行映射一致（上半 0..31、下半 0..31）。顶部单行
-> ghost 只影响面板最上一行，静止图案里可能也可见，但不影响主内容。
+> ghost 已被 PL 的 `row_addr=0` OE blank 消除；同一行也是下半屏接缝行，
+> 静止图案会少一行接缝内容。
 
 ### 体显示切片
 
@@ -243,7 +320,13 @@ for (slice = 0; slice < 64; slice++)
 - 没接红外/不转：`period_valid=0`，调度器用 1800 RPM 回落；
   DDR reader 的 `BENCH_FALLBACK=1` 会把 `slice_index 63→0` 当作合成 revolution
   来锁存新帧。静止动画（`HUB75_VOLUMETRIC_TEST=0`）靠这个模式跑。
-  第一次真实 IR 触发后回落永久关闭。
+  回落只在 IR **活着**时关闭：最近 `IR_TIMEOUT_CYCLES`（默认 200 ms）内收到过
+  IR 边沿才关；IR 静默 200 ms 后自动重新启用。这样浮空输入在开机时偶发的
+  噪声边沿不会把回落永久关掉（曾导致 PS 提交后永远等不到锁帧）。
+- 实测周期带合理性窗口（默认 5 ms–1 s，即 60–12000 RPM）：超出窗口的估计
+  （浮空输入偶尔产生的秒级“周期”）被丢弃并回落到 1800 RPM，避免一个坏
+  估计把 slot 拉长到几十毫秒、看起来像画面卡死。窗口参数
+  `MIN_PERIOD_CYCLES`/`MAX_PERIOD_CYCLES` 在 `hub75_sched`。
 - 体显示模式（`HUB75_VOLUMETRIC_TEST=1`）在不转时，面板会把 64 个 slice
   快速轮流显示，看起来是模糊/闪烁，这是正常的；转起来并锁定 `period` 后才
   能看到两个球。
@@ -351,7 +434,7 @@ Get-Volume | Where-Object DriveType -eq 'Removable'
 | 转起来只看到一片或球很扁 | `period` 是否已非 0；转速太低（20~30 RPM 无法视觉暂留）；或 `slice` 与角度符号反 |
 | 两个球颜色左右互换 | 面板列镜像或旋转方向相反；交换 `balls[]` 的 x 符号/颜色 |
 | 第一圈 slice 0 缺失/黑一竖条 | 已知启动限制：reader 在上一圈最后一槽才预取 slice 0，第二圈起完整 |
-| 最上一行有单行彩色条纹 | 每个 slot 第 0 行 ghost 上一槽 row 31；扫描/面板首行 artifact，可忽略；要消除需 PL 对 row_addr=0 保持 OE 关闭并重建位流 |
+| 最上一行有单行彩色条纹 | 已修：PL 对 row_addr=0 保持 OE 关闭；同一行也是下半屏接缝行，接缝下方一行会空掉 |
 | 上半/下半颜色互换 | 交换 `hub75_frame_set_pixel` 的 upper/lower |
 | 列方向反/偏移 | 面板接线；渲染端预移 col，或改 `RGB2_COLUMN_OFFSET` |
 
@@ -365,7 +448,9 @@ E:\AMD\2026.1\Vitis\bin\xsdb.bat -eval `
 ## 9. 当前限制
 
 - 64 slices/帧，固定 1/32 扫描；400 片、76 slot/圈、后半圈镜像是后续工作。
-- 64 片对应 5.625°/片；两个球靠约 10 片/次的交线重建，边缘会有分片感。
+- 64 片对应 5.625°/片；心形/两个球靠逐片交线重建，边缘会有分片感。
+- PL 对每个 slot 的 `row_addr=0` 关 OE：面板最上一行和下半屏接缝行各空
+  一行；心形/球体中间可能看到一条单行暗线（顶部 row31 ghost 已消除）。
 - `frame_ctrl[15:8]` 的 slice 数当前 RTL 忽略（固定 64）。
 - 当前体显示应用只提交一次静态帧（日志约 1 Hz）；静止模式仍是 20 fps
   （`usleep(50000)`）。要动态体内容时再按 `frame_done` 每圈重绘/提交。

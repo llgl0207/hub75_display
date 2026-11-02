@@ -1,0 +1,8 @@
+devmem 0x41210000 32
+sleep 1
+devmem 0x41210000 32
+sleep 1
+devmem 0x41210000 32
+sleep 1
+devmem 0x41210000 32
+dmesg | grep -i -E "cadence|wdt|reset" | head

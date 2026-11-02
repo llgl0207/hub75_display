@@ -1,0 +1,4 @@
+﻿
+root@petalinux_boot_from_sd:~# ls -la /run/media/mmcblk0p1
+ls: /run/media/mmcblk0p1: No such file or directory
+root@petalinux_boot_from_sd:~# 

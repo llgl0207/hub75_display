@@ -1,0 +1,9 @@
+﻿
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+7[r[999;999H[6nroot@petalinux_boot_from_sd:~# time /run/media/mmcblk0p1/hub75_pattern_bram32
+pattern written to 0x42000000 (196608 bytes)
+submitted frame_base=0x42000000 ctrl2=0x00004003
+status=0x760025a0 slice=37 id=0 buf_ready=0 done=0 ir=0 pend=1 act=0 en=1 submit=1 pvalid=0 waited_ms=10?

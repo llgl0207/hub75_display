@@ -1,0 +1,26 @@
+﻿
+Sending discover...
+Sending discover...
+No lease, forking to background
+done.
+Starting Dropbear SSH server: Generating key, this may take a while...
+Public key portion is:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCUPHRvWcmdQ0Y7uzjoPwWcBbZf+maKmgRTT21n2YrPuMbqObjXwxxcT2RTCBxexejuCZHCC+Q2SjW2bcOLBT+fRt3H3BXlWFbic2t79mp3l51l5fPcb4EivnH/t4+T3H6SVDMtW3ZVhZwrBF9KgCmo/M9cVUHdRhIFwdbYOo69GIO7yJmD5yhWl1bEKTBR6wFN7A8NM0Odfeb/qT6BSEW1Fi1S4OJLDFTB8gkiexVLFW0RTvg30sTBc+0lRQHSOoCwLy52YNbElvEokodurWWFzAgXMiJo5amkuI3TiwaKt7sByhcizS1AVIburXMRsq87pr8p5I7J12fCZx5wpsdt root@petalinux_boot_from_sd
+Fingerprint: md5 8f:82:45:d5:eb:58:a9:28:dd:3e:91:30:10:96:5f:65
+dropbear.
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Starting syslogd/klogd: done
+Starting tcf-agent: OK
+
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+7[r[999;999H[6nroot@petalinux_boot_from_sd:~# cat /proc/cmdline
+console=ttyPS0,115200 earlyprintk mem=256M clk_ignore_unused cpuidle.off=1 idle=poll maxcpus=1
+root@petalinux_boot_from_sd:~# /run/media/mmcblk0p1/hub75_pattern_ocm
+pattern written to 0xfffc0000 (196608 bytes)
+submitted frame_base=0xfffc0000 ctrl2=0x00004003
+status=0x00002200 slice=34 id=0 buf_ready=0 done=0 period=0
+status=0x00002200 slice=34 id=0 buf_ready=0 done=0 period=0
+statu?

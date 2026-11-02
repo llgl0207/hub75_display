@@ -1,0 +1,7 @@
+root
+root
+cat /proc/cmdline
+devmem 0xF8000170 32
+V=$(devmem 0xF8000170 32); echo FCLK0=$V; devmem 0xF8000170 32 $((V | 1)); echo AFTER; devmem 0xF8000170 32
+/run/media/mmcblk0p1/hub75_probe
+echo PROBE_EXIT=$?

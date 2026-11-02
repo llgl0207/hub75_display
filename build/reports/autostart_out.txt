@@ -1,0 +1,17 @@
+﻿
+root@petalinux_boot_from_sd:~# printf '#!/bin/sh\nmkdir -p /mnt/boot\nmount -t vffat /dev/mmcblk0p1 /mnt/boot 2>/dev/null\nif [ -x /mnt/boot/hub75d ]; then\n  /mnnt/boot/hub75d\nfi\nexec /bin/start_getty 115200 ttyPS0 vt102\n' > /usr/bin/hub755-console
+root@petalinux_boot_from_sd:~# chmod +x /usr/bin/hub75-console
+root@petalinux_boot_from_sd:~# cat /usr/bin/hub75-console
+#!/bin/sh
+mkdir -p /mnt/boot
+mount -t vfat /dev/mmcblk0p1 /mnt/boot 2>/dev/null
+if [ -x /mnt/boot/hub75d ]; then
+  /mnt/boot/hub75d
+fi
+exec /bin/start_getty 115200 ttyPS0 vt102
+root@petalinux_boot_from_sd:~# cp /etc/inittab /etc/inittab.bak
+root@petalinux_boot_from_sd:~# sed -i 's#^PS0:.*#PS0:12345:respawn:/usr/bin/hub755-console#' /etc/inittab
+root@petalinux_boot_from_sd:~# grep PS0 /etc/inittab
+PS0:12345:respawn:/usr/bin/hub75-console
+root@petalinux_boot_from_sd:~# sync
+root@petalinux_boot_from_sd:~# 

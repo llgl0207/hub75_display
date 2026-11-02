@@ -1,0 +1,20 @@
+﻿
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+7[r[999;999H[6nroot@petalinux_boot_from_sd:~# dd if=/run/media/mmcblk0p1/hub75_pattern_ocm4k of==/dev/mem bs=4 seek=$((0xFFFC1000/4)) count=49152
+dd: writing '/dev/mem': Bad address
+1+0 records in
+0+0 records out
+root@petalinux_boot_from_sd:~# echo DD_DONE
+DD_DONE
+root@petalinux_boot_from_sd:~# devmem 0x41200004 32 0
+root@petalinux_boot_from_sd:~# devmem 0x4120000C 32 0
+root@petalinux_boot_from_sd:~# devmem 0x41200000 32 0xFFFC1000
+root@petalinux_boot_from_sd:~# devmem 0x41200008 32 0x4003
+root@petalinux_boot_from_sd:~# devmem 0x41210000 32
+0x00013B0D
+root@petalinux_boot_from_sd:~# echo TEST_DONE
+TEST_DONE
+root@petalinux_boot_from_sd:~# 

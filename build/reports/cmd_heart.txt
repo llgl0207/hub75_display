@@ -1,0 +1,2 @@
+﻿echo "mode anim /run/media/mmcblk0p1/hub75_anim_heart" > /run/hub75.cmd
+hub75d: pty [116]hub75d: anim mode -> /run/media/mmcblk0p1/hub75_anim_heart

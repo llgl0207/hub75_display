@@ -1,0 +1,4 @@
+cat /proc/uptime
+ls -la /run/media/mmcblk0p1/hub75_diag
+/run/media/mmcblk0p1/hub75_diag
+devmem 0x41210000 32

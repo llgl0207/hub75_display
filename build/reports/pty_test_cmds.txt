@@ -1,0 +1,4 @@
+busybox --list | grep -E "^(script|socat|expect|setsid)$"
+kill 1157
+sleep 1
+ps | grep hub75d

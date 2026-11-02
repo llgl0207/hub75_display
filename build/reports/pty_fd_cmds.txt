@@ -1,0 +1,3 @@
+ls -la /proc/1158/fd
+ls -la /proc/1157/fd
+cat /proc/1158/cmdline

@@ -1,0 +1,16 @@
+﻿
+root@petalinux_boot_from_sd:~# devmem 0x41210000 32
+0x00000200
+root@petalinux_boot_from_sd:~# sleep 1
+root@petalinux_boot_from_sd:~# devmem 0x41210000 32
+0x00003C00
+root@petalinux_boot_from_sd:~# sleep 1
+root@petalinux_boot_from_sd:~# devmem 0x41210000 32
+0x00002200
+root@petalinux_boot_from_sd:~# sleep 1
+root@petalinux_boot_from_sd:~# devmem 0x41210000 32
+0x00000900
+root@petalinux_boot_from_sd:~# dmesg | grep -i -E "cadence|wdt|reset" | head
+macb e000b000.ethernet eth0: Cadence GEM rev 0x00020118 at 0xe000b000 irq 26 (00:0a:35:00:1e:53)
+cdns-wdt f8005000.watchdog: Xilinx Watchdog Timer at d083c000 with timeout 10s
+root@petalinux_boot_from_sd:~# 

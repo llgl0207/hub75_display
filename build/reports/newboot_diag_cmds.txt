@@ -1,0 +1,3 @@
+ls /run/media/mmcblk0p1
+/run/media/mmcblk0p1/hub75_diag
+devmem 0x41210000 32

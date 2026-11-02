@@ -1,0 +1,59 @@
+﻿root
+Password: 
+7[r[999;999H[6n8root@petalinux_boot_from_sd:~# echo LOGIN_OK
+LOGIN_OK
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# uname -a
+Linux petalinux_boot_from_sd 4.14.0-xilinx-v2018.3 #1 SMP PREEMPT Tue Mar 3 03:43:09 UTC 2020 armv7l GNU/Linux
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# id
+uid=0(root) gid=0(root) groups=0(root)
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# cat /proc/version
+Linux version 4.14.0-xilinx-v2018.3 (oe-user@oe-host) (gcc version 7.3.0 (GCC)) #1 SMP PREEMPT Tue Mar 3 03:43:09 UTC 2020
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# cat /proc/cmdline
+console=ttyPS0,115200 earlyprintk
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# free
+             total       used       free     shared    buffers     cached
+Mem:       1030300      29132    1001168      15216       1052      15216
+-/+ buffers/cache:      12864    1017436
+Swap:            0          0          0
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# ls /dev
+block               ram0                tty18               tty48
+char                ram1                tty19               tty49
+console             ram10               tty2                tty5
+cpu_dma_latency     ram11               tty20               tty50
+disk                ram12               tty21               tty51
+fd                  ram13               tty22               tty52
+full                ram14               tty23               tty53
+gpiochip0           ram15               tty24               tty54
+iio:device0         ram2                tty25               tty55
+initctl             ram3                tty26               tty56
+kmsg                ram4                tty27               tty57
+log                 ram5                tty28               tty58
+loop-control        ram6                tty29               tty59
+loop0               ram7                tty3                tty6
+loop1               ram8                tty30               tty60
+loop2               ram9                tty31               tty61
+loop3               random              tty32               tty62
+loop4               shm                 tty33               tty63
+loop5               snd                 tty34               tty7
+loop6               stderr              tty35               tty8
+loop7               stdin               tty36               tty9
+mem                 stdout              tty37               ttyPS0
+memory_bandwidth    tty                 tty38               udev_network_queue
+mmcblk0             tty0                tty39               urandom
+mmcblk0p1           tty1                tty4                vcs
+mmcblk0p2           tty10               tty40               vcs1
+mtab                tty11               tty41               vcsa
+network_latency     tty12               tty42               vcsa1
+network_throughput  tty13               tty43               vga_arbiter
+null                tty14               tty44               watchdog
+port                tty15               tty45               watchdog0
+ptmx                tty16               tty46               zero
+pts                 tty17               tty47
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# 

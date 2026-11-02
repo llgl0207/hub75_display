@@ -1,0 +1,8 @@
+﻿
+root@petalinux_boot_from_sd:~# busybox --list | grep -E "^(script|socat|expect|seetsid)$"
+root@petalinux_boot_from_sd:~# kill 1157
+root@petalinux_boot_from_sd:~# sleep 1
+[1]+  Terminated              $P/hub75d 2> /tmp/d.log
+root@petalinux_boot_from_sd:~# ps | grep hub75d
+ 1175 root       0:00 grep hub75d
+root@petalinux_boot_from_sd:~# 

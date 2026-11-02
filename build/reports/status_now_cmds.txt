@@ -1,0 +1,5 @@
+devmem 0x41210000 32
+usleep 100000
+devmem 0x41210000 32
+usleep 100000
+devmem 0x41210000 32

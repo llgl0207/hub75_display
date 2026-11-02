@@ -1,0 +1,7 @@
+﻿
+root@petalinux_boot_from_sd:~# sync
+root@petalinux_boot_from_sd:~# poweroff
+INIT: Switching to runlevel: 0?INIT: Sending processes the TERM signal
+
+Broadcast message from root@petalinux_boot_from_sd (ttyPS0) (Tue Mar  3 06:26The system is going down for system halt NOW!
+root@petalinux_boot_from_sd:~# 

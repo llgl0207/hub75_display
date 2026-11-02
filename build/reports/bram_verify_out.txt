@@ -1,0 +1,18 @@
+﻿
+Public key portion is:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCIYvedMO7iVzF4VdnOE3g9XZrFOQtbiUTZyGmBcVyaPHPM414RCtyxVeP5SO6cwwscAabrdEGXloSQ6yLRPDwBhRKNZTEl2lKfkfmPJsTEnIQkfpqvxVjxkMfAdz0XwdN1qEIZHZelT7O4ESs1mfHyIMgU2Ol6mIA+OST+AqhlUe9VMzminqI4r29HAQQfqDCMUsiv+x6BeuJoblVrMaW+3AziDJbDpt94g8pav7RphmclC/rdzV9+/kv4P6Rn+A5LXxCtqOY2E2sHrP6ezAhHncLxi3hloRkCmUFNvlCw8xqW9F4cSSp4s8Z7priLQQ6leQTuR7g0v7b/jM/DnELf root@petalinux_boot_from_sd
+Fingerprint: md5 fa:03:6d:2f:96:ce:a5:e9:1b:76:94:a4:e9:d8:c7:33
+dropbear.
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Starting syslogd/klogd: done
+Starting tcf-agent: OK
+
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+7[r[999;999H[6nroot@petalinux_boot_from_sd:~# P=/run/media/mmcblk0p1; [ -x $P/hub75_pattern_bramm32 ] || { mkdir -p /mnt/boot; mount /dev/mmcblk0p1 /mnt/boot; P=/mnt/boot; }; eccho PATH=$P; $P/hub75_pattern_bram32
+PATH=/run/media/mmcblk0p1
+pattern written to 0x42000000 (196608 bytes)
+submitted frame_base=0x42000000 ctrl2=0x00004003
+status=0x470027a0 slice=39 id=0 buf_ready=0 done=0 ir=0 pend=1 act=0 en=1 submit=1 p?

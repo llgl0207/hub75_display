@@ -1,0 +1,16 @@
+﻿
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+7[r[999;999H[6nroot@petalinux_boot_from_sd:~# ls /sys/bus/platform/drivers | grep -i ocm
+zynq-ocm
+root@petalinux_boot_from_sd:~# ls -l /sys/bus/platform/drivers/xilinx-ocmc 2>/devv/null
+root@petalinux_boot_from_sd:~# ls -l /sys/class/sram 2>/dev/null
+root@petalinux_boot_from_sd:~# cat /proc/iomem | grep -i ocm
+f800c000-f800cfff : /amba/ocmc@f800c000
+fffc0000-ffffffff : f800c000.ocmc
+root@petalinux_boot_from_sd:~# ps | grep -i tcf
+ 1139 root       0:00 /usr/sbin/tcf-agent -d -L- -l0
+ 1161 root       0:00 grep -i tcf
+root@petalinux_boot_from_sd:~# 

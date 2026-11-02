@@ -1,0 +1,10 @@
+
+
+root
+root
+echo LOGIN_OK
+cat /proc/cmdline
+free
+devmem 0xF8000170 32
+/run/media/mmcblk0p1/hub75_probe
+echo PROBE_EXIT=$?

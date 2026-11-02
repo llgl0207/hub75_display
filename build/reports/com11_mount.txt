@@ -1,0 +1,28 @@
+﻿
+root@petalinux_boot_from_sd:~# cat /proc/mounts
+rootfs / rootfs rw,size=113628k,nr_inodes=28407 0 0
+proc /proc proc rw,relatime 0 0
+sysfs /sys sysfs rw,relatime 0 0
+configfs /sys/kernel/config configfs rw,relatime 0 0
+devtmpfs /dev devtmpfs rw,relatime,size=113628k,nr_inodes=28407,mode=755 0 0
+tmpfs /run tmpfs rw,nosuid,nodev,mode=755 0 0
+tmpfs /var/volatile tmpfs rw,relatime 0 0
+devpts /dev/pts devpts rw,relatime,gid=5,mode=620,ptmxmode=000 0 0
+root@petalinux_boot_from_sd:~# mkdir -p /mnt/boot
+root@petalinux_boot_from_sd:~# mount -t vfat /dev/mmcblk0p1 /mnt/boot
+FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+root@petalinux_boot_from_sd:~# ls -la /mnt/boot
+total 16796
+drwxr-xr-x    3 root     root         16384 Jan  1  1970 .
+drwxr-xr-x    3 root     root            60 Mar  3 06:31 ..
+-rwxr-xr-x    1 root     root       4603128 Nov  3  2026 BOOT.bin
+drwxr-xr-x    2 root     root          2048 Feb 28  2024 System Volume Information
+-rwxr-xr-x    1 root     root        424660 Nov  2  2026 hub75_pattern
+-rwxr-xr-x    1 root     root        424660 Nov  2  2026 hub75_pattern_bram
+-rwxr-xr-x    1 root     root        444556 Nov  3  2026 hub75_pattern_bram32
+-rwxr-xr-x    1 root     root        424660 Nov  2  2026 hub75_pattern_ocm
+-rwxr-xr-x    1 root     root        424660 Nov  2  2026 hub75_pattern_ocm4k
+-rwxr-xr-x    1 root     root        424204 Nov  2  2026 hub75_probe
+-rwxr-xr-x    1 root     root       9998060 Nov  2  2026 image.ub
+-rwxr-xr-x    1 root     root           104 Mar  3 06:25 uEnv.txt
+root@petalinux_boot_from_sd:~# 

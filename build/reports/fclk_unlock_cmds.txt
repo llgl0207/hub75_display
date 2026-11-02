@@ -1,0 +1,8 @@
+root
+root
+devmem 0xF8000004 32 0xDF0D
+devmem 0xF8000170 32
+devmem 0xF8000170 32 0x00400501
+devmem 0xF8000170 32
+/run/media/mmcblk0p1/hub75_probe
+echo PROBE_EXIT=$?

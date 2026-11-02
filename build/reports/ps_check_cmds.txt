@@ -1,0 +1,2 @@
+ps | head -20
+ls -la /proc/$(ps | grep -v grep | grep -E " sh$| ash$" | head -1 | awk '{print $1}')/fd 2>/dev/null | head -6

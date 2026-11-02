@@ -1,0 +1,46 @@
+﻿
+
+Public key portion is:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQChp//lyBd2CwhF3kmnJQ6FxwOOmojZrFl1dZNJSIvJbx3RyDTZD9LBdKN+EBpVWw9WG5pQE4gvsxXG431T/l7MVp+/KNa5dfabncUJFwIK4EHL3T3nxEu8Exw+BvMaFhb3XVtl3olo59bh6TdgkuNPw5Q/P3W7/oNRSrnjeYvTZwj4AaIQ7CJ/WfH3hc/gznJwl8kVqdMjhURoZVGNfZIapnfR6jaroj7W4QdcTq8QtOIeJpo4vOYa9JXR56d8wiPfxpMmz4qeSW6uPN2SRHPuCRTD6eUUDj+m1sbgXNg46mbdxd6qrZn/O8DeTcs+VPP5dREh5hz+WRxxFNYE5lld root@petalinux_boot_from_sd
+Fingerprint: md5 ee:19:b3:d3:a2:4d:08:5b:a5:ae:d5:f2:1c:61:b2:c0
+dropbear.
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Starting syslogd/klogd: done
+Starting tcf-agent: OK
+
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: 
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: 
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+7[r[999;999H[6n8root@petalinux_boot_from_sd:~# echo LOGIN_OK
+LOGIN_OK
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# cat /proc/cmdline
+console=ttyPS0,115200 earlyprintk mem=256M clk_ignore_unused
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# free
+             total       used       free     shared    buffers     cached
+Mem:        250568      26980     223588      15212        172      15212
+-/+ buffers/cache:      11596     238972
+Swap:            0          0          0
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# devmem 0xF8000170 32
+0x00400500
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# /run/media/mmcblk0p1/hub75_probe
+ctrl[0..3] = 00000000 ffffffff 00000000 ffffffff
+stat[0..3] = 00002200 ffffffff 00000000 ffffffff
+frame_base written 0x10000000, readback ctrl[0]=10000000
+status now: stat[0]=00002200 period=00000000
+probe done
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# echo PROBE_EXIT=$?
+PROBE_EXIT=0
+root@petalinux_boot_from_sd:~# 
+root@petalinux_boot_from_sd:~# 

@@ -1,0 +1,21 @@
+﻿
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+7[r[999;999H[6nroot@petalinux_boot_from_sd:~# cat /proc/uptime
+35.21 26.41
+root@petalinux_boot_from_sd:~# devmem 0xF8000170 32
+0x00400500
+root@petalinux_boot_from_sd:~# devmem 0xF8000240 32
+0x00000000
+root@petalinux_boot_from_sd:~# mount -t debugfs none /sys/kernel/debug
+mount: mounting none on /sys/kernel/debug failed: No such file or directory
+root@petalinux_boot_from_sd:~# cat /sys/kernel/debug/clk/fclk0/clk_rate
+cat: can't open '/sys/kernel/debug/clk/fclk0/clk_rate': No such file or directory
+root@petalinux_boot_from_sd:~# dmesg | grep -i -E "wdt|watchdog|fclk|fpga"
+FPGA manager framework
+fpga-region fpga-full: FPGA Region probed
+cdns-wdt f8005000.watchdog: Xilinx Watchdog Timer at d083c000 with timeout 10s
+fpga_manager fpga0: Xilinx Zynq FPGA Manager registered
+root@petalinux_boot_from_sd:~# 

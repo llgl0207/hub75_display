@@ -1,0 +1,26 @@
+﻿
+FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+EXT4-fs (mmcblk0p2): warning: mounting fs with errors, running e2fsck is recommended
+EXT4-fs (mmcblk0p2): recovery complete
+EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Tue Mar  3 06:25:20 UTC 2020
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Starting internet superserver: inetd.
+Configuring packages on first boot....
+ (This may take several minutes. Please do not power off the machine.)
+Running postinst /etc/rpm-postinsts/100-sysvinit-inittab...
+update-rc.d: /etc/init.d/run-postinsts exists during rc.d purge (continuing)
+ Removing any system startup links for run-postinsts ...
+  /etc/rcS.d/S99run-postinsts
+INIT: Entering runlevel: 5
+Configuring network interfaces... IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+udhcpc (v1.24.1) started
+Sending discover...
+root
+Sending discover...
+Sending discover...
+root
+No lease, forking to background
+done.
+Starting Dropbear SSH server: Generating key, this may take a while...

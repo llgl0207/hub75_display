@@ -1,0 +1,9 @@
+cat /proc/uptime
+echo V > /dev/watchdog
+dmesg | tail -3
+/run/media/mmcblk0p1/hub75_pattern_ddr
+cat /proc/uptime
+devmem 0x41210000 32
+sleep 10
+cat /proc/uptime
+devmem 0x41210000 32

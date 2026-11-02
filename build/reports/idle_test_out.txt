@@ -1,0 +1,34 @@
+﻿
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+7[r[999;999H[6nroot@petalinux_boot_from_sd:~# cat /proc/uptime
+32.30 19.79
+root@petalinux_boot_from_sd:~# ls -l /dev/watchdog*
+crw-------    1 root     root       10, 130 Jan  1  1970 /dev/watchdog
+crw-------    1 root     root      247,   0 Jan  1  1970 /dev/watchdog0
+root@petalinux_boot_from_sd:~# ps | grep -i watch
+  322 root       0:00 [watchdogd]
+ 1155 root       0:00 grep -i watch
+root@petalinux_boot_from_sd:~# cat /sys/class/watchdog/watchdog0/state
+cat: can't open '/sys/class/watchdog/watchdog0/state': No such file or directory
+root@petalinux_boot_from_sd:~# cat /sys/class/watchdog/watchdog0/timeout
+cat: can't open '/sys/class/watchdog/watchdog0/timeout': No such file or directory
+root@petalinux_boot_from_sd:~# ls /etc/init.d | grep -i -E "watch|wdt"
+root@petalinux_boot_from_sd:~# sleep 20
+root@petalinux_boot_from_sd:~# cat /proc/uptime
+53.00 40.43
+root@petalinux_boot_from_sd:~# sleep 20
+root@petalinux_boot_from_sd:~# cat /proc/uptime
+73.20 60.62
+root@petalinux_boot_from_sd:~# sleep 20
+root@petalinux_boot_from_sd:~# cat /proc/uptime
+93.32 80.71
+root@petalinux_boot_from_sd:~# sleep 20
+root@petalinux_boot_from_sd:~# cat /proc/uptime
+113.44 100.81
+root@petalinux_boot_from_sd:~# sleep 20
+root@petalinux_boot_from_sd:~# cat /proc/uptime
+133.56 120.91
+root@petalinux_boot_from_sd:~# 

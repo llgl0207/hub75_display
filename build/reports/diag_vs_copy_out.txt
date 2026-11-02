@@ -1,0 +1,18 @@
+﻿
+root@petalinux_boot_from_sd:~# /run/media/mmcblk0p1/hub75_diag
+ctrl frame_base=0x00000000 frame_ctrl=0x00000000 tri1=4294967295 tri2=0
+initial st=0x1a001600 ack=0 busy=0 buf=0 done=0 ir=0 pend=0 act=0 en=0 slice=22 id=  0 wrap=26 submit=0 pvalid=0 period=0
+scheduler: 193 slice steps in 33333349 ticks (100.0 ms) -> 518.1 us/slot (expect ~521 us at 50 MHz)
+submit: frame_ctrl 0x00000000 -> 0x00000003 (readback 0x00000003)
+change st=0x5d0017a0 ack=0 busy=0 buf=0 done=0 ir=0 pend=1 act=0 en=1 slice=23 id=  0 wrap=29 submit=1 pvalid=0 period=0
+change st=0x5e0100c9 ack=1 busy=0 buf=0 done=1 ir=0 pend=0 act=1 en=1 slice= 0 id=  1 wrap=30 submit=1 pvalid=0 period=0
+change st=0x5e0102cd ack=1 busy=0 buf=1 done=1 ir=0 pend=0 act=1 en=1 slice= 2 id=  1 wrap=30 submit=1 pvalid=0 period=0
+result: seen_pending=1 seen_active=1 seen_ack=1 seen_id=1 seen_buf_ready=1 (polled 2000 ms)
+final  st=0x590117cd ack=1 busy=0 buf=1 done=1 ir=0 pend=0 act=1 en=1 slice=23 id=  1 wrap=25 submit=1 pvalid=0 period=0
+diag done
+root@petalinux_boot_from_sd:~# cat /proc/uptime
+153.39 138.60
+root@petalinux_boot_from_sd:~# sleep 5
+root@petalinux_boot_from_sd:~# cat /proc/uptime
+158.57 143.78
+root@petalinux_boot_from_sd:~# 

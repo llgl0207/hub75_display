@@ -1,0 +1,8 @@
+devmem 0x42000000 32 0x12345678
+devmem 0x42000000 32
+devmem 0x41200004 32 0
+devmem 0x4120000C 32 0
+devmem 0x41200000 32 0x42000000
+devmem 0x41200008 32 0x4003
+devmem 0x41210000 32
+/run/media/mmcblk0p1/hub75_pattern_bram32

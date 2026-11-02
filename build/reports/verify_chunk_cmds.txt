@@ -1,0 +1,8 @@
+cat /proc/uptime
+/run/media/mmcblk0p1/hub75_pattern_bram32
+cat /proc/uptime
+devmem 0x42000000 32
+devmem 0x41210000 32
+sleep 10
+cat /proc/uptime
+devmem 0x41210000 32

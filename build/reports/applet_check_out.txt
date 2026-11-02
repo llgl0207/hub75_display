@@ -1,0 +1,12 @@
+﻿
+root@petalinux_boot_from_sd:~# busybox --list | grep -E "^(base64|uuencode|uudecoode|gzip|gunzip|xz|bunzip2|od|hexdump)$"
+bunzip2
+gunzip
+gzip
+hexdump
+od
+root@petalinux_boot_from_sd:~# date +%s%N
+1583216791%N
+root@petalinux_boot_from_sd:~# date +%s.%N
+1583216791.%N
+root@petalinux_boot_from_sd:~# 

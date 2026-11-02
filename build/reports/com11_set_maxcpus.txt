@@ -1,0 +1,49 @@
+﻿EXT4-fs (mmcblk0p2): warning: mounting fs with errors, running e2fsck is recommended
+EXT4-fs (mmcblk0p2): recovery complete
+FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+
+EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Tue Mar  3 06:25:20 UTC 2020
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Starting internet superserver: inetd.
+Configuring packages on first boot....
+ (This may take several minutes. Please do not power off the machine.)
+Running postinst /etc/rpm-postinsts/100-sysvinit-inittab...
+update-rc.d: /etc/init.d/run-postinsts exists during rc.d purge (continuing)
+ Removing any system startup links for run-postinsts ...
+  /etc/rcS.d/S99run-postinsts
+INIT: Entering runlevel: 5
+Configuring network interfaces... IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+udhcpc (v1.24.1) started
+Sending discover...
+Sending discover...
+Sending discover...
+No lease, forking to background
+done.
+Starting Dropbear SSH server: Generating key, this may take a while...
+Public key portion is:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCbK4ynQndWBNGrDS2DZe9TmZfvehkX6hSSkHVGj62isQF6QafkLl4AAv9QR4AtA/szGOyp57ls3gEuAzjZanqU5oySltEEAY4jQ3XpiRxH1kbmXsky3EyfWNS/EXroFncLkKZ3sqtAEljpExsKaIQ56rimNWtakN6nGFs5WzE2R3bAjnTX74Ez+3BwM1O/0F/T65mbVw13pCblIhgNmcbQ+piKkAkC0wuEXbO61muy9zZc8L0JgBjfp8u91npPC6uemhwxNXXNWbTNsnSKedw1YDdbdj8d9KzNQXCxb/3y5M2bFTioId7AJJNaeYdRoCLWBts36A4HZEAFBVmRBOPV root@petalinux_boot_from_sd
+Fingerprint: md5 42:63:d6:66:20:b4:7b:c3:d0:45:ff:5b:a4:2f:7a:17
+dropbear.
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Starting syslogd/klogd: done
+Starting tcf-agent: OK
+
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+7[r[999;999H[6nroot@petalinux_boot_from_sd:~# echo 'bootargs=console=ttyPS0,115200 earlyprintk mmem=256M clk_ignore_unused cpuidle.off=1 idle=poll maxcpus=1' > /run/media/mmcblkk0p1/uEnv.txt
+root@petalinux_boot_from_sd:~# cat /run/media/mmcblk0p1/uEnv.txt
+bootargs=console=ttyPS0,115200 earlyprintk mem=256M clk_ignore_unused cpuidle.off=1 idle=poll maxcpus=1
+root@petalinux_boot_from_sd:~# sync
+root@petalinux_boot_from_sd:~# reboot
+
+Broadcast message from root@petalinux_boot_from_sd (ttyPS0) (Tue Mar  3 06:25The system is go`??down for reboot NOW!
+INIT: Switching to runlevel: 6
+INIT: Sending processes the TERM signal
+root@petalinux_boot_from_sd:~# Stopping Dropbear SSH server: stopped /usr/sbin/dropbear (pid 1125)
+dropbear.
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Stopping syslogd/klogd: 

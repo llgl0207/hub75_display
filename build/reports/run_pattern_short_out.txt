@@ -1,0 +1,18 @@
+﻿
+Public key portion is:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCSGxlR0JOW88B4q3SSU/XprA9t/iXvU+nvmZH+sP330o3AzUEwiWJ5xreR1nwZF3OmU7GT73TL0iuVo21oo1wK+PRnqThnov+HngZ10BLNtseOPqSXKzfGk+noZQ6wURMVjuSDiSAwIDMkRUGp0rbwru3AyolK4Brek+a6cjn1usNVF7ecNt+TxzZigsjzC/CBu0+11rJJMxB90GqgWNYbzPKu2/VIjvswzgKiK41NG9bdai+x47nb8eH3/sp/t3GpBzt9qN1Gwr2FRb4/dVGZ7QzrlnTya8uGPYQP6OW1uRWreXEH2MsgKh/cWI0HaQnqF3T7ZlBzISMDzoA2iZFP root@petalinux_boot_from_sd
+Fingerprint: md5 71:1c:7b:58:34:6d:6d:a9:14:28:82:71:66:f0:9e:38
+dropbear.
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Starting syslogd/klogd: done
+Starting tcf-agent: OK
+
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+7[r[999;999H[6nroot@petalinux_boot_from_sd:~# /run/media/mmcblk0p1/hub75_pattern_bram32
+pattern written to 0x42000000 (196608 bytes)
+submitted frame_base=0x42000000 ctrl2=0x00004003
+status=0x6d0010a0 slice=16 id=0 buf_ready=0 done=0 ir=0 pend=1 act=0 en=1 submit=1 pvalid=0 waited_ms=1000
+pattern submitted; PL continues reading the frame

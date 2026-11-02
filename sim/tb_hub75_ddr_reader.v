@@ -8,7 +8,7 @@
 //     arrives, so the scan never reads the initial empty buffer;
 //   - buf_ready only asserts after both buffers hold data.
 module tb_hub75_ddr_reader;
-    localparam [31:0] FRAME_BASE = 32'h1000_0000;
+    localparam [31:0] FRAME_BASE = 32'h4200_0000;  // must be inside the frame BRAM window
     localparam integer SLICE_BYTES = 3072;
     localparam integer NSLICES = 3;
 
@@ -53,7 +53,10 @@ module tb_hub75_ddr_reader;
     reg         rvalid;
     wire        rready;
 
-    hub75_ddr_reader dut (
+    hub75_ddr_reader #(
+        // Short IR timeout so the sim can observe the bench fallback re-arm.
+        .IR_TIMEOUT_CYCLES(50)
+    ) dut (
         .clk(clk), .rst(rst), .enable(enable),
         .frame_base(frame_base), .submit_toggle(submit_toggle),
         .slice_index(slice_index), .slot_start(slot_start),
@@ -143,7 +146,7 @@ module tb_hub75_ddr_reader;
         if (wr_en) begin
             if (fetch_num == 1)      captured[0][wr_addr] <= wr_data;
             else if (fetch_num == 2) captured[1][wr_addr] <= wr_data;
-            else $fatal(1, "unexpected write at fetch_num %0d", fetch_num);
+            // Later fetches (bench-fallback test) are not content-checked.
         end
     end
 
@@ -216,7 +219,41 @@ module tb_hub75_ddr_reader;
         end
         if (frame_ack !== 1'b1)
             $fatal(1, "frame_ack did not toggle after base latching");
-        $display("PASS: DDR reader burst, 6-bit unpack, slice handoff and buf_ready");
+
+        // Bench fallback re-arm: submit another frame, stay silent on the IR
+        // (like a grounded sensor) longer than IR_TIMEOUT_CYCLES, then let the
+        // scheduler wrap to slice 0. The wrap must act as a revolution.
+        @(negedge clk);
+        submit_toggle <= ~submit_toggle;
+        repeat (5) @(negedge clk);
+        if (!dut.pending_valid)
+            $fatal(1, "second submit did not become pending");
+        repeat (200) @(negedge clk);      // IR silent > 50-cycle timeout
+        if (dut.ir_active !== 1'b0)
+            $fatal(1, "IR timeout did not re-arm the bench fallback");
+        slice_index <= 0;
+        slot_start <= 1;
+        @(negedge clk);
+        slot_start <= 0;
+        repeat (3) @(negedge clk);
+        if (frame_ack !== 1'b0)
+            $fatal(1, "bench fallback wrap did not latch the pending frame");
+        if (frame_id !== 8'd2)
+            $fatal(1, "bench fallback latch incremented frame_id to %0d", frame_id);
+
+        // A submit whose frame_base is outside the frame BRAM window must be
+        // ignored: latching it would make the reader read an unmapped GP0
+        // address and wedge the AXI fabric.
+        frame_base <= 32'd0;
+        @(negedge clk);
+        submit_toggle <= ~submit_toggle;
+        repeat (5) @(negedge clk);
+        if (dut.pending_valid !== 1'b0)
+            $fatal(1, "submit with out-of-window frame_base was accepted");
+        if (frame_id !== 8'd2)
+            $fatal(1, "frame_id changed on a rejected submit");
+
+        $display("PASS: DDR reader burst, 6-bit unpack, slice handoff, buf_ready, bench fallback, base check");
         $finish;
     end
 

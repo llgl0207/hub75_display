@@ -1,0 +1,5 @@
+grep PS0 /etc/inittab
+ls -la /usr/bin/hub75-console
+ls /mnt/boot
+mount | grep -i boot
+cat /proc/uptime

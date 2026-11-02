@@ -1,0 +1,22 @@
+﻿
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+7[r[999;999H[6nroot@petalinux_boot_from_sd:~# devmem 0x10000000 32
+0xEDFE0DD0
+root@petalinux_boot_from_sd:~# devmem 0x10000004 32
+0xEC8E9800
+root@petalinux_boot_from_sd:~# devmem 0x10000010 32
+0x28000000
+root@petalinux_boot_from_sd:~# devmem 0x10000040 32
+0x03000000
+root@petalinux_boot_from_sd:~# devmem 0x10000C00 32
+0x16C6C3BD
+root@petalinux_boot_from_sd:~# devmem 0x10000C04 32
+0xFFCB61D4
+root@petalinux_boot_from_sd:~# devmem 0x10001800 32
+0xCFB47DD0
+root@petalinux_boot_from_sd:~# devmem 0x10002400 32
+0xF1C9FDF9
+root@petalinux_boot_from_sd:~# 

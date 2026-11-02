@@ -1,0 +1,12 @@
+﻿
+root@petalinux_boot_from_sd:~# /run/media/mmcblk0p1/hub75_pattern_bram32
+pattern written to 0x42000000 (196608 bytes)
+submitted frame_base=0x42000000 ctrl2=0x00004002
+status=0x3b010eed slice=14 id=1 buf_ready=1 done=1 ir=0 pend=1 act=1 en=1 submit=0 pvalid=0 waited_ms=1000
+pattern submitted; PL continues reading the frame
+root@petalinux_boot_from_sd:~# devmem 0x41210000 32
+0x3F0206C4
+root@petalinux_boot_from_sd:~# usleep 200000
+root@petalinux_boot_from_sd:~# devmem 0x41210000 32
+0x08021AC6
+root@petalinux_boot_from_sd:~# 

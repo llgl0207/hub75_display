@@ -1,0 +1,26 @@
+﻿
+root@petalinux_boot_from_sd:~# for i in $(seq 1 20); do devmem 0x41210000 32; uslleep 100000; done
+0x00002500
+0x00003A00
+0x00000E00
+0x00002300
+0x00003700
+0x00000B00
+0x00002000
+0x00003400
+0x00000900
+0x00001D00
+0x00003200
+0x00000600
+0x00001B00
+0x00003000
+0x00000400
+0x00001900
+0x00002E00
+0x00000200
+0x00001700
+0x00002B00
+root@petalinux_boot_from_sd:~# v=$(devmem 0x41200008 32); echo ctrl2_before=$v; ww=$(( (v ^ 1) | 2 )); devmem 0x41200008 32 $(printf '0x%08x' $w); echo submitted [Aw=$(( (v ^ 1) | 2 )); devmem 0x41200008 32 $(printf '0x%08x' $w); echo submitte[Kd
+ctrl2_before=0x00000000
+submitted
+root@petalinux_boot_from

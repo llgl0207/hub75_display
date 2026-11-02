@@ -1,0 +1,16 @@
+cat /proc/uptime
+ls -l /dev/watchdog*
+ps | grep -i watch
+cat /sys/class/watchdog/watchdog0/state
+cat /sys/class/watchdog/watchdog0/timeout
+ls /etc/init.d | grep -i -E "watch|wdt"
+sleep 20
+cat /proc/uptime
+sleep 20
+cat /proc/uptime
+sleep 20
+cat /proc/uptime
+sleep 20
+cat /proc/uptime
+sleep 20
+cat /proc/uptime

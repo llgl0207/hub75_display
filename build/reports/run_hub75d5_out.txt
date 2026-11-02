@@ -1,0 +1,16 @@
+﻿
+Public key portion is:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0ZPUKTlcrxiD1mcXus1ciOCjvBYAMhp19hNAdNRqmX75HH2kSZ8zneNEEW1iltn8j+s7CUGdM70PRmMKyyuYewMGNTIkuU9p7ffLU49u1S78atSHDmzc8xuk0dJgKOiQS/spN0L6INiRtebPMoLEut9n6hA49KBC1m80w3vaMGO/N/q+khnlpz6B/CaauIN2VG6Ua+yDP3itgHKepV8YxDp1fOPkGyKJ8bl9oQ1WPMawpAQpnHTVlt4pcImnP5IXNrApJ31RdNjwg3T0QwEo0BYjtNl8DuKQxH0kDXoYum7A4xxn94DKHHs1RWKzkTefaRjt2p5Es9ARcSiDSyl5N root@petalinux_boot_from_sd
+Fingerprint: md5 00:6c:82:e6:79:3c:49:e4:a8:01:9c:96:b1:80:d8:d0
+dropbear.
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Starting syslogd/klogd: done
+Starting tcf-agent: OK
+
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: root
+Password: 
+7[r[999;999H[6nroot@petalinux_boot_from_sd:~# P=/run/media/mmcblk0p1; [ -x $P/hub75d ] || { mkdiir -p /mnt/boot; mount /dev/mmcblk0p1 /mnt/boot; P=/mnt/boot; }; echo DAEMON_PATHH=$P; $P/hub75d
+DAEMON_PATH=/run/media/mmcblk0p1
+hub75d: pty readyhub75d: submit 10000000 3ms st=770001a0 id=0

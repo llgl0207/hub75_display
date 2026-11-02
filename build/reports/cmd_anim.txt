@@ -1,0 +1,7 @@
+﻿echo "mode anim /run/media/mmcblk0p1/hub75_pattern_ddr" > /run/hub75.cmd
+hub75d: pty [117]hub75d: anim mode -> /run/media/mmcblk0p1/hub75_pattern_ddrcopy: 196608 bytes in 4 ms (chunked)
+pattern written to 0x10000000 (196608 bytes)
+submitted frame_base=0x10000000 ctrl2=0x00004002
+status=0x010315ef slice=21 id=3 buf_ready=1 done=1 ir=0 pend=1 act=1 en=1 submit=0 pvalid=0 waited_ms=1000
+pattern submitted; PL continues reading the frame
+hub75d: anim exitedhub75d: submit 10200000 6ms st=420408e4 id=4

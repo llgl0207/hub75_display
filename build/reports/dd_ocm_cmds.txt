@@ -1,0 +1,8 @@
+dd if=/run/media/mmcblk0p1/hub75_pattern_ocm4k of=/dev/mem bs=4 seek=$((0xFFFC1000/4)) count=49152
+echo DD_DONE
+devmem 0x41200004 32 0
+devmem 0x4120000C 32 0
+devmem 0x41200000 32 0xFFFC1000
+devmem 0x41200008 32 0x4003
+devmem 0x41210000 32
+echo TEST_DONE

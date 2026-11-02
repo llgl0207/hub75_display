@@ -1,0 +1,3 @@
+ls /sys/kernel/debug | head -40
+cat /sys/kernel/debug/genpool 2>/dev/null
+echo GENPOOL_DONE

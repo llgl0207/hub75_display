@@ -1,0 +1,5 @@
+devmem 0xF8000108 32
+devmem 0xF800010C 32
+devmem 0xF8000118 32
+devmem 0xF8000170 32
+time sh -c 'for i in $(seq 1 100); do devmem 0x41210000 32 >/dev/null; done'

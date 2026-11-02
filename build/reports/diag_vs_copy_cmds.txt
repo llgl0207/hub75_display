@@ -1,0 +1,4 @@
+/run/media/mmcblk0p1/hub75_diag
+cat /proc/uptime
+sleep 5
+cat /proc/uptime

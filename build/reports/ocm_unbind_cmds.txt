@@ -1,0 +1,4 @@
+ls -l /sys/bus/platform/drivers/zynq-ocm
+echo f800c000.ocmc > /sys/bus/platform/drivers/zynq-ocm/unbind
+cat /proc/iomem | grep -i ocm
+echo UNBIND_DONE

@@ -1,0 +1,17 @@
+cat /proc/uptime
+devmem 0x41210000 32
+sleep 1
+devmem 0x41210000 32
+devmem 0x41200000 32
+devmem 0x41200008 32
+devmem 0x41200004 32
+devmem 0x4120000C 32
+devmem 0x41200004 32 0
+devmem 0x4120000C 32 0
+devmem 0x41200000 32 0x42000000
+v=$(devmem 0x41200008 32); echo "ctrl2_before=$v"; w=$(( (v ^ 1) | 2 )); echo "ctrl2_submit=$(printf '0x%08x' $w)"; devmem 0x41200008 32 $(printf '0x%08x' $w)
+devmem 0x41210000 32
+sleep 1
+devmem 0x41210000 32
+sleep 1
+devmem 0x41210000 32

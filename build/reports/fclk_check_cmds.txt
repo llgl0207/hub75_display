@@ -1,0 +1,6 @@
+cat /proc/uptime
+devmem 0xF8000170 32
+devmem 0xF8000240 32
+mount -t debugfs none /sys/kernel/debug
+cat /sys/kernel/debug/clk/fclk0/clk_rate
+dmesg | grep -i -E "wdt|watchdog|fclk|fpga"
