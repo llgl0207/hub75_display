@@ -1,0 +1,5 @@
+echo ===GAMEFILES=== >> /dev/ttyPS0
+ls -l /run/media/mmcblk0p1/fx_tunnel /run/media/mmcblk0p1/hub75_fx /run/media/mmcblk0p1/hub75_game_breakout /run/media/mmcblk0p1/3dplay >> /dev/ttyPS0 2>&1
+echo ===FXSCRIPT=== >> /dev/ttyPS0
+cat /run/media/mmcblk0p1/fx_tunnel >> /dev/ttyPS0 2>&1
+echo ===GAMEFILES_END=== >> /dev/ttyPS0

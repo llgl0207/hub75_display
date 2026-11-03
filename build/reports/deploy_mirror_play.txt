@@ -1,0 +1,15 @@
+﻿echo ===MIRRORDEPLOY=== >> /dev/ttyPS0
+===MIRRORDEPLOY===
+mv /run/media/mmcblk0p1/hub75_game_breakout.new /run/media/mmcblk0p1/hub75_game_breakout
+chmod +x /run/media/mmcblk0p1/hub75_game_breakout
+sync
+md5sum /run/media/mmcblk0p1/hub75_game_breakout >> /dev/ttyPS0 2>&1
+6fb7e832866e1f8cb51ae1d36982dfe8  /run/media/mmcblk0p1/hub75_game_breakout
+echo ===MIRRORDEPLOY_END=== >> /dev/ttyPS0
+===MIRRORDEPLOY_END===
+echo ===PLAY2=== >> /dev/ttyPS0
+===PLAY2===
+3dplay breakout
+hub75d: anim mode -> /run/media/mmcblk0p1/hub75_game_breakoutbreakout: paddle=60 speed=55 slice=0 thick=3 ir_stop=5000breakout: keyboard /dev/input/event0sleep 2
+echo ===PLAY2_END=== >> /dev/ttyPS0
+===PLAY2_END===

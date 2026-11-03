@@ -1,0 +1,24 @@
+﻿echo ===CONF2=== >> /dev/ttyPS0
+===CONF2===
+cp /run/media/mmcblk0p1/breakout.conf /run/media/mmcblk0p1/breakout.conf.bak
+printf '%s\n' '# breakout game config (FAT partition: survives reboots)' '# Edit on the board with:  vi /run/media/mmcblk0p1/breakout.conf' '# Restart the game with:   3dplay breakout' '' '# Paddle speed in pixels per second while LEFT/RIGHT (or A/D) is held.' 'paddle_speed=60' '' '# Ball speed in pixels per second.' 'speed=55' '' '# IR display mode: while rotating, draw the game in thickness slices around' '# terminal_slice (1 = exactly the terminal one-slice rule).  When no IR' '# edge has been seen for ir_stop_ms, every slice carries the game.' 'terminal_slice=0' 'thickness=3' 'ir_stop_ms=5000' > /run/media/mmcblk0p1/breakout.conf
+sync
+cat /run/media/mmcblk0p1/breakout.conf >> /dev/ttyPS0 2>&1
+# breakout game config (FAT partition: survives reboots)
+# Edit on the board with:  vi /run/media/mmcblk0p1/breakout.conf
+# Restart the game with:   3dplay breakout
+
+# Paddle speed in pixels per second while LEFT/RIGHT (or A/D) is held.
+paddle_speed=60
+
+# Ball speed in pixels per second.
+speed=55
+
+# IR display mode: while rotating, draw the game in thickness slices around
+# terminal_slice (1 = exactly the terminal one-slice rule).  When no IR
+# edge has been seen for ir_stop_ms, every slice carries the game.
+terminal_slice=0
+thickness=3
+ir_stop_ms=5000
+echo ===CONF2_END=== >> /dev/ttyPS0
+===CONF2_END===

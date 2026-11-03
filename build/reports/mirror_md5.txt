@@ -1,0 +1,4 @@
+﻿echo ===MIRRORMD5=== >> /dev/ttyPS0; md5sum /run/media/mmcblk0p1/hub75_game_breakout.new >> /dev/ttyPS0 2>&1; echo ===MIRROREND=== >> /dev/ttyPS0
+===MIRRORMD5===
+6fb7e832866e1f8cb51ae1d36982dfe8  /run/media/mmcblk0p1/hub75_game_breakout.new
+===MIRROREND===

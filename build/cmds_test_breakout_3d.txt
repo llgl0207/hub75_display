@@ -1,0 +1,7 @@
+echo ===PLAY=== >> /dev/ttyPS0
+3dplay breakout
+sleep 4
+echo ===PLAY_END=== >> /dev/ttyPS0
+3dplay stop
+sleep 1
+echo ===STOP_END=== >> /dev/ttyPS0

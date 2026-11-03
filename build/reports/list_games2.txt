@@ -1,0 +1,14 @@
+﻿echo ===GAMEFILES=== >> /dev/ttyPS0
+===GAMEFILES===
+ls -l /run/media/mmcblk0p1/fx_tunnel /run/media/mmcblk0p1/hub75_fx /run/media/mmcblk0p1/hub75_game_breakout /run/media/mmcblk0p1/3dplay >> /dev/ttyPS0 2>&1
+-rwxrwx---    1 root     disk           506 Mar  3  2020 /run/media/mmcblk0p1/3dplay
+-rwxrwx---    1 root     disk            52 Mar  3  2020 /run/media/mmcblk0p1/fx_tunnel
+-rwxrwx---    1 root     disk        479436 Mar  3  2020 /run/media/mmcblk0p1/hub75_fx
+-rwxrwx---    1 root     disk        468888 Mar  3 06:27 /run/media/mmcblk0p1/hub75_game_breakout
+echo ===FXSCRIPT=== >> /dev/ttyPS0
+===FXSCRIPT===
+cat /run/media/mmcblk0p1/fx_tunnel >> /dev/ttyPS0 2>&1
+#!/bin/sh
+exec /run/media/mmcblk0p1/hub75_fx tunnel
+echo ===GAMEFILES_END=== >> /dev/ttyPS0
+===GAMEFILES_END===

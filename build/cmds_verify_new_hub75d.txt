@@ -1,0 +1,5 @@
+echo ===MD5NEW=== >> /dev/ttyPS0
+md5sum /run/media/mmcblk0p1/hub75d.new >> /dev/ttyPS0 2>&1
+ls -l /run/media/mmcblk0p1/hub75d.new >> /dev/ttyPS0 2>&1
+df -h /run/media/mmcblk0p1 >> /dev/ttyPS0 2>&1
+echo ===MD5NEW_END=== >> /dev/ttyPS0

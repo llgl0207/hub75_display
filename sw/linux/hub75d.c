@@ -264,6 +264,9 @@ static int anim_pid = -1;
 static int g_dirty = 1;
 static int cmd_fd = -1;
 static int g_submit_ms = 80;        /* console submit throttle */
+static int g_terminal_slice = 0;    /* rotating: only this slice shows the console */
+static int g_ir_stop_ms = 5000;     /* no accepted IR edge for this long -> stopped */
+static int g_rotating;              /* IR edge seen within g_ir_stop_ms */
 
 /* ---------------- USB keyboard (Linux evdev) ----------------
  *
@@ -509,6 +512,8 @@ static void load_config(void)
         else if (!strncmp(line, "shell=", 6)) { key = 2; val = line + 6; }
         else if (!strncmp(line, "font=", 5))  { key = 3; val = line + 5; }
         else if (!strncmp(line, "submit_ms=", 10)) { key = 4; val = line + 10; }
+        else if (!strncmp(line, "terminal_slice=", 15)) { key = 5; val = line + 15; }
+        else if (!strncmp(line, "ir_stop_ms=", 11)) { key = 6; val = line + 11; }
         if (!val) continue;
         int n = (int)strlen(val);
         while (n > 0 && (val[n-1] == '\n' || val[n-1] == '\r' ||
@@ -539,6 +544,18 @@ static void load_config(void)
             if (ms > 2000) ms = 2000;
             g_submit_ms = ms;
             fprintf(stderr, "hub75d: submit_ms %d", ms);
+        } else if (key == 5) {
+            int n = atoi(val);
+            if (n < 0) n = 0;
+            if (n >= SLICES) n = SLICES - 1;
+            g_terminal_slice = n;
+            fprintf(stderr, "hub75d: terminal_slice %d", n);
+        } else if (key == 6) {
+            int ms = atoi(val);
+            if (ms < 500) ms = 500;
+            if (ms > 60000) ms = 60000;
+            g_ir_stop_ms = ms;
+            fprintf(stderr, "hub75d: ir_stop_ms %d", ms);
         }
     }
     fclose(f);
@@ -692,11 +709,23 @@ static int submit_frame(uint8_t *dst, uint32_t phys_base)
     uint64_t t0 = ticks();
     uint32_t pend;
 
-    for (int s = 0; s < SLICES; s++) {
-        uint32_t *d = (uint32_t *)(dst + s * SLICE_BYTES);
-        for (int i = 0; i < SLICE_BYTES / 4; i++)
-            d[i] = src[i];
-        sched_yield();
+    if (g_rotating) {
+        /* Keep one flat panel at a fixed angle; the other 63 slices stay
+         * black so the console is not painted around the whole cylinder. */
+        int keep = g_terminal_slice;
+        if (keep < 0) keep = 0;
+        if (keep >= SLICES) keep = SLICES - 1;
+        memset(dst, 0, FRAME_BYTES);
+        memcpy(dst + keep * SLICE_BYTES, src, SLICE_BYTES);
+    } else {
+        /* Stopped: every slice carries the console, so the stationary panel
+         * shows it without depending on a particular angle. */
+        for (int s = 0; s < SLICES; s++) {
+            uint32_t *d = (uint32_t *)(dst + s * SLICE_BYTES);
+            for (int i = 0; i < SLICE_BYTES / 4; i++)
+                d[i] = src[i];
+            sched_yield();
+        }
     }
 
     ctrl[0] = phys_base;
@@ -901,6 +930,21 @@ int main(int argc, char **argv)
                 g_dirty = 1;
                 last_submit = 0;
                 fprintf(stderr, "hub75d: anim exited");
+            }
+        }
+        {
+            static uint64_t last_ir_seen;
+            static int ir_seen;
+            uint64_t now = ticks();
+            uint32_t st = statp[0];
+            if (st & (1u << 4)) { last_ir_seen = now; ir_seen = 1; }
+            int rotating = ir_seen &&
+                ((now - last_ir_seen) < (uint64_t)g_ir_stop_ms * TICKS_PER_MS);
+            if (rotating != g_rotating) {
+                g_rotating = rotating;
+                g_dirty = 1;
+                last_submit = 0;
+                fprintf(stderr, "hub75d: ir %s", rotating ? "rotating" : "stopped");
             }
         }
         {

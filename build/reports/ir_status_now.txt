@@ -1,0 +1,8 @@
+﻿echo ===STATUS=== >> /dev/ttyPS0
+===STATUS===
+devmem 0x41210000 32 >> /dev/ttyPS0 2>&1
+0x4A1339CD
+devmem 0x41210008 32 >> /dev/ttyPS0 2>&1
+0x00000000
+echo ===STATUS_END=== >> /dev/ttyPS0
+===STATUS_END===

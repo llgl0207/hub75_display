@@ -1,0 +1,10 @@
+echo ===DEPLOY=== >> /dev/ttyPS0
+cp /run/media/mmcblk0p1/hub75.conf /run/media/mmcblk0p1/hub75.conf.bak
+printf '\n# IR terminal mode (added 2026-11-04):\n# no IR edge for ir_stop_ms -> console in all slices (stopped);\n# otherwise only terminal_slice carries the console.\nterminal_slice=0\nir_stop_ms=5000\n' >> /run/media/mmcblk0p1/hub75.conf
+cp /run/media/mmcblk0p1/hub75d /run/media/mmcblk0p1/hub75d.bak
+mv /run/media/mmcblk0p1/hub75d.new /run/media/mmcblk0p1/hub75d
+chmod +x /run/media/mmcblk0p1/hub75d
+sync
+md5sum /run/media/mmcblk0p1/hub75d /run/media/mmcblk0p1/hub75d.bak >> /dev/ttyPS0 2>&1
+tail -8 /run/media/mmcblk0p1/hub75.conf >> /dev/ttyPS0 2>&1
+echo ===DEPLOY_END=== >> /dev/ttyPS0

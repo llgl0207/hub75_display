@@ -1,0 +1,14 @@
+﻿echo ===IRNOW=== >> /dev/ttyPS0
+===IRNOW===
+hub75d: pty [45]hub75d: submit 10200000 7ms st=510238e4 id=2hub75d: usb boot retry 4hub75d: usb recover, USBCMD=00080000chipidea-usb2 e0002000.usb: e0002000.usb supply vbus not found, using dummy regulator
+ci_hdrc ci_hdrc.0: unable to init phy: -110
+ci_hdrc: probe of ci_hdrc.0 failed with error -110
+devmem 0x41210000 32 >> /dev/ttyPS0 2>&1
+devmem 0x41210008 32 >> /dev/ttyPS0 2>&1
+echo ===IRNOW_END=== >> /dev/ttyPS0
+hub75d: pty [70]0x56033FCD
+0x00000000
+hub75d: submit 10000000 19ms st=170309ed id=3hub75d: pty [128]===IRNOW_END===
+hub75d: pty [49]hub75d: submit 10200000 6ms st=580428e4 id=4hub75d: usb boot retry 5hub75d: usb recover, USBCMD=00080000chipidea-usb2 e0002000.usb: e0002000.usb supply vbus not found, using dummy regulator
+ci_hdrc ci_hdrc.0: unable to init phy: -110
+ci_hdrc: probe of ci_hdrc.0 failed with error -110

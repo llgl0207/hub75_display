@@ -1,0 +1,57 @@
+﻿echo ===GAMES=== >> /dev/ttyPS0
+ls -l /run/media/mmcblk0p1/ | grep -E "hub75_|fx_|3dplay|tunnel|breakout|game" >> /dev/ttyPS0 2>&1
+echo ===CONF=== >> /dev/ttyPS0
+===CONF===
+cat /run/media/mmcblk0p1/hub75.conf >> /dev/ttyPS0 2>&1
+# hub75d configuration (FAT partition: survives reboots)
+#
+# Edit on the board with:   vi /run/media/mmcblk0p1/hub75.conf
+# Apply without rebooting:  kill -HUP $(pidof hub75d)
+#
+# The initramfs fallback is /etc/hub75.conf; this FAT file takes priority.
+
+# Shell that runs on the panel (default /bin/sh).
+shell=/bin/sh
+
+# Text size on the 128x64 panel:
+#   font=8x16  -> 16 columns x 4 rows (larger glyphs)
+#   font=8x8   -> 16 columns x 8 rows (smaller glyphs, twice the lines)
+# Apply with: kill -HUP $(pidof hub75d)
+font=8x8
+
+# Optional: animation started at boot and on every reload.
+# Any keyboard key press returns to the shell console.
+#anim=/run/media/mmcblk0p1/hub75_anim_heart
+anim_heart=/run/media/mmcblk0p1/hub75_anim_heart
+anim_spheres=/run/media/mmcblk0p1/hub75_anim_spheres
+submit_ms=150
+anim_helix=/run/media/mmcblk0p1/hub75_anim_helix
+anim_balls=/run/media/mmcblk0p1/hub75_anim_balls
+anim_breakout=/run/media/mmcblk0p1/hub75_game_breakout
+anim_blackhole=/run/media/mmcblk0p1/fx_blackhole
+anim_fireworks=/run/media/mmcblk0p1/fx_fireworks
+anim_vortex=/run/media/mmcblk0p1/fx_vortex
+anim_knot=/run/media/mmcblk0p1/fx_knot
+anim_tunnel=/run/media/mmcblk0p1/fx_tunnel
+
+# IR terminal mode (added 2026-11-04):
+# no IR edge for ir_stop_ms -> console in all slices (stopped);
+# otherwise only terminal_slice carries the console.
+terminal_slice=0
+ir_stop_ms=5000
+echo ===3DPLAY=== >> /dev/ttyPS0
+===3DPLAY===
+cat /run/media/mmcblk0p1/3dplay >> /dev/ttyPS0 2>&1
+#!/bin/sh
+CFG=/run/media/mmcblk0p1/hub75.conf
+if [ "$1" = "stop" ]; then echo "mode console" > /run/hub75.cmd; exit 0; fi
+if [ -z "$1" ]; then echo "usage: hub75-play <name|stop>"; exit 1; fi
+case "$1" in
+  */*) path="$1" ;;
+  *) line=$(grep "^anim_$1=" "$CFG" 2>/dev/null | tail -1); if [ -n "$line" ]; then path=${line#*=}; else path=/run/media/mmcblk0p1/hub75_anim_$1; fi ;;
+esac
+if [ ! -x "$path" ]; then echo "not found: $path"; exit 1; fi
+echo "mode anim $path" > /run/hub75.cmd
+echo "playing $path"
+echo ===GAMES_END=== >> /dev/ttyPS0
+===GAMES_END===

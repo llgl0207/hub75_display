@@ -1,15 +1,25 @@
 /*
- * hub75_game_breakout - mouse-controlled Arkanoid for the rotating display.
+ * hub75_game_breakout - keyboard Arkanoid for the rotating display.
  *
- * The 128x64 game image is replicated on all 64 panel slices (the same 2D
- * trick hub75d uses for its console), so it stays upright and readable from
- * any viewing angle.  The USB mouse drives the paddle through REL_X; the
- * left button serves the ball / restarts.  Any keyboard key makes hub75d
- * kill the game and return to the shell console, as with other animations.
+ * The 128x64 playfield is drawn with extruded bricks/paddle/ball (a little
+ * visual thickness), then packed as one 6-bit slice image.  Unlike the first
+ * version, the frame is not always copied to every slice:
+ *
+ *   stopped (no accepted IR edge for ir_stop_ms):
+ *       all 64 slices carry the image, so the stationary panel is readable
+ *       from any angle, like the hub75d console;
+ *   rotating (IR edge seen):
+ *       only `thickness` slices around `terminal_slice` carry it, forming a
+ *       thick panel at the IR angle that stays playable (thickness=1 is the
+ *       same one-slice rule the terminal uses).
+ *
+ * Controls: LEFT/RIGHT or A/D move the paddle, SPACE/ENTER/UP serves and
+ * restarts, Q/ESC quits.  The keyboard is grabbed with EVIOCGRAB so the
+ * daemon does not treat game keys as "return to console".
  *
  * The evdev record is the 4.14 kernel's 16-byte layout (32-bit timeval);
  * the Vitis static glibc struct input_event is 24 bytes, so the records are
- * parsed by hand (same approach as hub75d's keyboard code).
+ * parsed by hand (same approach as hub75d and fx_tunnel).
  */
 #include <errno.h>
 #include <fcntl.h>
@@ -90,15 +100,23 @@ static float paddle_x;
 static float ball_x, ball_y, ball_vx, ball_vy;
 static float ball_speed;
 
-static float cfg_sens = 0.12f;
+static float cfg_paddle_speed = 60.0f;
 static float cfg_speed = 55.0f;
 
-/* mouse */
-static int mouse_fd = -1;
-static float mouse_accum;
-static int click_pending;
-static unsigned char mouse_acc[16];
-static int mouse_acc_n;
+/* keyboard */
+#define EV_REC_SIZE 16
+static int kbd_fd = -1;
+static int key_left, key_right;
+static int serve_pending;
+static unsigned char key_acc[EV_REC_SIZE];
+static int key_acc_n;
+static uint64_t last_kbd_scan;
+
+/* IR / rotating display mode */
+static int g_rotating;
+static int g_terminal_slice = 0;
+static int g_thickness = 3;
+static int g_ir_stop_ms = 5000;
 
 static uint64_t ticks(void)
 {
@@ -134,6 +152,19 @@ static void rect(int x, int y, int w, int h, uint8_t c)
     for (int j = 0; j < h; j++)
         for (int i = 0; i < w; i++)
             px(x + i, y + j, c);
+}
+
+static uint8_t dim3(uint8_t c) { return (uint8_t)((c >> 1) | (c & 1u)); }
+static uint8_t hi3(uint8_t c)  { return (uint8_t)(c | 1u); }
+
+/* A 2D rectangle with a one-pixel top highlight and bottom/right side, so it
+ * reads as a slightly extruded object on the swept display. */
+static void rect3d(int x, int y, int w, int h, uint8_t c)
+{
+    rect(x, y, w, h, c);
+    rect(x, y, w, 1, hi3(c));
+    rect(x, y + h, w, 1, dim3(c));
+    rect(x + w, y, 1, h, dim3(c));
 }
 
 /* 3x5 score digits */
@@ -316,13 +347,12 @@ static void update_physics(float dt)
     }
 }
 
-/* ---------------- mouse ---------------- */
+/* ---------------- keyboard ---------------- */
 
-static int open_mouse(void)
+static int open_keyboard(void)
 {
     char path[40];
     unsigned long bits[8];
-    unsigned long kbits[32];
 
     for (int i = 0; i < 32; i++) {
         int fd;
@@ -332,31 +362,26 @@ static int open_mouse(void)
 
         memset(bits, 0, sizeof(bits));
         if (ioctl(fd, EVIOCGBIT(0, sizeof(bits)), bits) < 0 ||
-            !(bits[0] & (1UL << EV_REL))) {
+            !(bits[0] & (1UL << EV_KEY))) {
             close(fd);
             continue;
         }
         memset(bits, 0, sizeof(bits));
-        if (ioctl(fd, EVIOCGBIT(EV_REL, sizeof(bits)), bits) < 0 ||
-            !(bits[REL_X / (8 * (int)sizeof(unsigned long))] &
-              (1UL << (REL_X % (8 * (int)sizeof(unsigned long)))))) {
+        if (ioctl(fd, EVIOCGBIT(EV_KEY, sizeof(bits)), bits) < 0 ||
+            !(bits[KEY_A / (8 * (int)sizeof(unsigned long))] &
+              (1UL << (KEY_A % (8 * (int)sizeof(unsigned long)))))) {
             close(fd);
             continue;
         }
-        memset(kbits, 0, sizeof(kbits));
-        if (ioctl(fd, EVIOCGBIT(EV_KEY, sizeof(kbits)), kbits) < 0 ||
-            !(kbits[BTN_LEFT / (8 * (int)sizeof(unsigned long))] &
-              (1UL << (BTN_LEFT % (8 * (int)sizeof(unsigned long)))))) {
-            close(fd);
-            continue;
-        }
-        fprintf(stderr, "breakout: mouse %s", path);
+        if (ioctl(fd, EVIOCGRAB, 1) < 0)
+            fprintf(stderr, "breakout: EVIOCGRAB failed");
+        fprintf(stderr, "breakout: keyboard %s", path);
         return fd;
     }
     return -1;
 }
 
-static void handle_record(const unsigned char *p)
+static void handle_key(const unsigned char *p)
 {
     uint16_t type, code;
     int32_t value;
@@ -364,30 +389,59 @@ static void handle_record(const unsigned char *p)
     memcpy(&type, p + 8, 2);
     memcpy(&code, p + 10, 2);
     memcpy(&value, p + 12, 4);
-    if (type == EV_REL && code == REL_X)
-        mouse_accum += (float)value * cfg_sens;
-    else if (type == EV_KEY && code == BTN_LEFT && value == 1)
-        click_pending = 1;
+    if (type != EV_KEY) return;
+
+    switch (code) {
+    case KEY_LEFT:
+    case KEY_A:
+        key_left = (value != 0);
+        break;
+    case KEY_RIGHT:
+    case KEY_D:
+        key_right = (value != 0);
+        break;
+    case KEY_SPACE:
+    case KEY_ENTER:
+    case KEY_KPENTER:
+    case KEY_UP:
+        if (value == 1) serve_pending = 1;
+        break;
+    case KEY_ESC:
+    case KEY_Q:
+        if (value == 1) stop_flag = 1;
+        break;
+    }
 }
 
-static void poll_mouse(void)
+static void poll_input(void)
 {
-    unsigned char buf[16 * 64];
+    unsigned char buf[EV_REC_SIZE * 64];
 
-    if (mouse_fd < 0) return;
+    if (kbd_fd < 0) {
+        uint64_t now = ticks();
+        if ((now - last_kbd_scan) < 1000ULL * TICKS_PER_MS) return;
+        last_kbd_scan = now;
+        kbd_fd = open_keyboard();
+        if (kbd_fd < 0) return;
+    }
     for (;;) {
-        ssize_t n = read(mouse_fd, buf, sizeof(buf));
+        ssize_t n = read(kbd_fd, buf, sizeof(buf));
         ssize_t off = 0;
+        if (n < 0 && errno != EAGAIN && errno != EWOULDBLOCK) {
+            close(kbd_fd);
+            kbd_fd = -1;
+            return;
+        }
         if (n <= 0) break;
         while (off < n) {
-            ssize_t take = 16 - mouse_acc_n;
+            ssize_t take = EV_REC_SIZE - key_acc_n;
             if (take > n - off) take = n - off;
-            memcpy(mouse_acc + mouse_acc_n, buf + off, (size_t)take);
-            mouse_acc_n += (int)take;
+            memcpy(key_acc + key_acc_n, buf + off, (size_t)take);
+            key_acc_n += (int)take;
             off += take;
-            if (mouse_acc_n == 16) {
-                handle_record(mouse_acc);
-                mouse_acc_n = 0;
+            if (key_acc_n == EV_REC_SIZE) {
+                handle_key(key_acc);
+                key_acc_n = 0;
             }
         }
     }
@@ -400,8 +454,12 @@ static void pack_slice(void)
     memset(slice_img, 0, sizeof(slice_img));
     for (int r = 0; r < 32; r++) {
         for (int c = 0; c < W; c++) {
-            uint8_t up = canvas[r * W + c] & 7u;
-            uint8_t lo = canvas[(r + 32) * W + c] & 7u;
+            /* The panel shifts column 127 out first, so the logical image
+             * must be mirrored into the packed slice (same correction as
+             * hub75d's console renderer). */
+            int x = W - 1 - c;
+            uint8_t up = canvas[r * W + x] & 7u;
+            uint8_t lo = canvas[(r + 32) * W + x] & 7u;
             uint8_t word = (uint8_t)(up | (lo << 3));
             uint32_t bit = (uint32_t)(r * W + c) * 6u;
             uint32_t byte = bit >> 3;
@@ -426,13 +484,26 @@ static void submit_frame(void)
     t0 = ticks();
     while (!stop_flag && ((statp[0] >> 5) & 1u) &&
            (ticks() - t0) < 400ULL * TICKS_PER_MS) {
-        poll_mouse();
+        poll_input();
         sched_yield();
     }
 
     dst = frames + (next_buf ? FRAME_SPAN : 0);
-    for (int s = 0; s < SLICES; s++)
-        memcpy(dst + s * SLICE_BYTES, slice_img, SLICE_BYTES);
+    if (g_rotating) {
+        /* A thick panel at the IR angle instead of a 360-degree smear.
+         * thickness=1 is exactly the terminal's one-slice rule. */
+        int half = g_thickness / 2;
+        memset(dst, 0, HUB75_FRAME_BYTES);
+        for (int i = 0; i < g_thickness; i++) {
+            int s = g_terminal_slice + i - half;
+            s %= SLICES;
+            if (s < 0) s += SLICES;
+            memcpy(dst + s * SLICE_BYTES, slice_img, SLICE_BYTES);
+        }
+    } else {
+        for (int s = 0; s < SLICES; s++)
+            memcpy(dst + s * SLICE_BYTES, slice_img, SLICE_BYTES);
+    }
 
     ctrl[0] = next_buf ? FRAME_B : FRAME_A;
     __sync_synchronize();
@@ -450,7 +521,7 @@ static void submit_frame(void)
     id0 = (statp[0] >> 16) & 0xffu;
     t0 = ticks();
     while (!stop_flag && (ticks() - t0) < 150ULL * TICKS_PER_MS) {
-        poll_mouse();
+        poll_input();
         if (((statp[0] >> 16) & 0xffu) != id0)
             break;
         sched_yield();
@@ -463,37 +534,57 @@ static void draw_scene(void)
 {
     memset(canvas, 0, sizeof(canvas));
 
-    /* HUD */
+    /* HUD with a small drop shadow */
     if (score > 999) score = 999;
+    digit3x5(3, 3, score / 100, dim3(C_WHITE));
+    digit3x5(7, 3, (score / 10) % 10, dim3(C_WHITE));
+    digit3x5(11, 3, score % 10, dim3(C_WHITE));
     digit3x5(2, 2, score / 100, C_WHITE);
     digit3x5(6, 2, (score / 10) % 10, C_WHITE);
     digit3x5(10, 2, score % 10, C_WHITE);
-    for (int i = 0; i < lives; i++)
-        rect(W - 6 - i * 8, 2, 5, 2, C_GREEN);
-    rect(0, 7, W, 1, C_BLUE);
+    for (int i = 0; i < lives; i++) {
+        rect(W - 6 - i * 8, 3, 5, 2, dim3(C_GREEN));
+        rect(W - 7 - i * 8, 2, 5, 2, C_GREEN);
+    }
 
-    /* bricks */
+    /* Playfield walls with visible sides give the panel some depth. */
+    rect3d(0, 7, W, 1, C_BLUE);
+    rect(0, 9, 1, H - 9, dim3(C_BLUE));
+    rect(W - 1, 9, 1, H - 9, dim3(C_BLUE));
+    rect(1, H - 1, W - 2, 1, dim3(C_BLUE));
+
+    /* bricks: extruded blocks */
     for (int r = 0; r < BRICK_ROWS; r++)
         for (int c = 0; c < BRICK_COLS; c++)
             if (brick_alive[r][c])
-                rect(BRICK_X0 + c * (BRICK_W + BRICK_GAPX),
-                     BRICK_Y0 + r * (BRICK_H + BRICK_GAPY),
-                     BRICK_W, BRICK_H, brick_colour[r]);
+                rect3d(BRICK_X0 + c * (BRICK_W + BRICK_GAPX),
+                       BRICK_Y0 + r * (BRICK_H + BRICK_GAPY),
+                       BRICK_W, BRICK_H, brick_colour[r]);
 
-    /* paddle + ball */
-    rect((int)paddle_x, PADDLE_Y, PADDLE_W, PADDLE_H, C_WHITE);
-    rect((int)(ball_x - BALL_R), (int)(ball_y - BALL_R), 3, 3, C_WHITE);
+    /* paddle: a thick bar; ball: shadow + lit block */
+    rect3d((int)paddle_x, PADDLE_Y, PADDLE_W, PADDLE_H, C_WHITE);
+    {
+        int bx = (int)(ball_x - BALL_R);
+        int by = (int)(ball_y - BALL_R);
+        rect(bx + 1, by + 1, 3, 3, dim3(C_WHITE));
+        rect(bx, by, 3, 3, C_WHITE);
+    }
 
-    if (state == ST_READY)
-        text8_center(44, "CLICK TO SERVE", C_WHITE);
-    else if (state == ST_OVER || state == ST_WIN) {
+    if (state == ST_READY) {
+        text8_center(45, "SPACE TO SERVE", dim3(C_WHITE));
+        text8_center(44, "SPACE TO SERVE", C_WHITE);
+    } else if (state == ST_OVER || state == ST_WIN) {
         rect(2, 20, W - 4, 28, 0);   /* readable panel over the bricks */
         if (state == ST_OVER) {
+            text8_center(25, "GAME OVER", dim3(C_RED));
             text8_center(24, "GAME OVER", C_RED);
-            text8_center(36, "CLICK TO PLAY", C_WHITE);
+            text8_center(37, "PRESS SPACE", dim3(C_WHITE));
+            text8_center(36, "PRESS SPACE", C_WHITE);
         } else {
+            text8_center(25, "YOU WIN!", dim3(C_GREEN));
             text8_center(24, "YOU WIN!", C_GREEN);
-            text8_center(36, "CLICK TO PLAY", C_WHITE);
+            text8_center(37, "PRESS SPACE", dim3(C_WHITE));
+            text8_center(36, "PRESS SPACE", C_WHITE);
         }
     }
 }
@@ -513,18 +604,32 @@ static void load_config(void)
         f = fopen(paths[i], "r");
     if (!f) return;
     while (fgets(line, sizeof(line), f)) {
-        if (!strncmp(line, "sens=", 5))
-            cfg_sens = (float)atof(line + 5);
+        if (!strncmp(line, "paddle_speed=", 13))
+            cfg_paddle_speed = (float)atof(line + 13);
         else if (!strncmp(line, "speed=", 6))
             cfg_speed = (float)atof(line + 6);
+        else if (!strncmp(line, "terminal_slice=", 15))
+            g_terminal_slice = atoi(line + 15);
+        else if (!strncmp(line, "thickness=", 10))
+            g_thickness = atoi(line + 10);
+        else if (!strncmp(line, "ir_stop_ms=", 11))
+            g_ir_stop_ms = atoi(line + 11);
     }
     fclose(f);
-    if (cfg_sens < 0.01f) cfg_sens = 0.01f;
-    if (cfg_sens > 1.0f) cfg_sens = 1.0f;
+    if (cfg_paddle_speed < 10.0f) cfg_paddle_speed = 10.0f;
+    if (cfg_paddle_speed > 200.0f) cfg_paddle_speed = 200.0f;
     if (cfg_speed < 20.0f) cfg_speed = 20.0f;
     if (cfg_speed > 90.0f) cfg_speed = 90.0f;
-    fprintf(stderr, "breakout: sens=%.2f speed=%.0f", (double)cfg_sens,
-            (double)cfg_speed);
+    if (g_terminal_slice < 0) g_terminal_slice = 0;
+    if (g_terminal_slice >= SLICES) g_terminal_slice = SLICES - 1;
+    if (g_thickness < 1) g_thickness = 1;
+    if (g_thickness > 9) g_thickness = 9;
+    if (g_ir_stop_ms < 500) g_ir_stop_ms = 500;
+    if (g_ir_stop_ms > 60000) g_ir_stop_ms = 60000;
+    fprintf(stderr,
+            "breakout: paddle=%.0f speed=%.0f slice=%d thick=%d ir_stop=%d",
+            (double)cfg_paddle_speed, (double)cfg_speed, g_terminal_slice,
+            g_thickness, g_ir_stop_ms);
 }
 
 /* ---------------- main ---------------- */
@@ -554,9 +659,10 @@ int main(void)
     __sync_synchronize();
 
     load_config();
-    mouse_fd = open_mouse();
-    if (mouse_fd < 0)
-        fprintf(stderr, "breakout: no mouse found (paddle fixed)");
+    last_kbd_scan = ticks();
+    kbd_fd = open_keyboard();
+    if (kbd_fd < 0)
+        fprintf(stderr, "breakout: no keyboard yet (paddle fixed)");
 
     reset_game();
     last = ticks();
@@ -567,14 +673,34 @@ int main(void)
         if (dt > 0.15f) dt = 0.15f;
         last = now;
 
-        poll_mouse();
-        paddle_x += mouse_accum;
-        mouse_accum = 0.0f;
+        poll_input();
+
+        /* IR activity selects the display mode: all slices when stopped,
+         * a thick panel around terminal_slice when rotating. */
+        {
+            static uint64_t last_ir_seen;
+            static int ir_seen;
+            uint32_t st = statp[0];
+            if (st & (1u << 4)) { last_ir_seen = now; ir_seen = 1; }
+            int rotating = ir_seen &&
+                ((now - last_ir_seen) < (uint64_t)g_ir_stop_ms * TICKS_PER_MS);
+            if (rotating != g_rotating) {
+                g_rotating = rotating;
+                fprintf(stderr, "breakout: ir %s",
+                        rotating ? "rotating" : "stopped");
+            }
+        }
+
+        {
+            int dir = key_right - key_left;
+            if (dir)
+                paddle_x += (float)dir * cfg_paddle_speed * dt;
+        }
         if (paddle_x < 1.0f) paddle_x = 1.0f;
         if (paddle_x > (float)(W - PADDLE_W - 1)) paddle_x = (float)(W - PADDLE_W - 1);
 
-        if (click_pending) {
-            click_pending = 0;
+        if (serve_pending) {
+            serve_pending = 0;
             if (state == ST_READY)
                 launch_ball();
             else if (state == ST_OVER || state == ST_WIN)
@@ -587,6 +713,6 @@ int main(void)
         submit_frame();
     }
 
-    if (mouse_fd >= 0) close(mouse_fd);
+    if (kbd_fd >= 0) close(kbd_fd);
     return 0;
 }

@@ -1,0 +1,11 @@
+﻿echo ===CARD_CHECK=== >> /dev/ttyPS0
+===CARD_CHECK===
+hub75d: pty [50]hub75d: submit 10000000 6ms st=020310ed id=3md5sum /run/media/mmcblk0p1/BOOT.bin /run/media/mmcblk0p1/image.ub /run/media/mmcblk0p1/hub75_fx /run/media/mmcblk0p1/uEnv.txt /run/media/mmcblk0p1/hub75_boot.frm >> /dev/ttyPS0 2>&1
+hub75d: pty [206]hub75d: submit 10200000 11ms st=43043ee4 id=4echo ===CARD_END=== >> /dev/ttyPS0
+hub75d: pty [36]hub75d: submit 10000000 10ms st=050524ed id=5cfb86e100a1505e0d948d31226403a18  /run/media/mmcblk0p1/BOOT.bin
+6f6d15fd5be8433c82d6e54466f192a7  /run/media/mmcblk0p1/image.ub
+46cbca3236db1ac98f46c05f290dac7c  /run/media/mmcblk0p1/hub75_fx
+397805476c96a9802e5da4d0a0725acf  /run/media/mmcblk0p1/uEnv.txt
+6253e458b15d1fa0dab14145766da16e  /run/media/mmcblk0p1/hub75_boot.frm
+===CARD_END===
+hub75d: pty [56]hub75d: submit 10200000 6ms st=4b0615e4 id=6

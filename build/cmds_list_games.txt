@@ -1,0 +1,7 @@
+echo ===GAMES=== >> /dev/ttyPS0
+ls -l /run/media/mmcblk0p1/ | grep -E "hub75_|fx_|3dplay|tunnel|breakout|game" >> /dev/ttyPS0 2>&1
+echo ===CONF=== >> /dev/ttyPS0
+cat /run/media/mmcblk0p1/hub75.conf >> /dev/ttyPS0 2>&1
+echo ===3DPLAY=== >> /dev/ttyPS0
+cat /run/media/mmcblk0p1/3dplay >> /dev/ttyPS0 2>&1
+echo ===GAMES_END=== >> /dev/ttyPS0

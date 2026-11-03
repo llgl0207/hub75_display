@@ -1,0 +1,11 @@
+﻿echo ===MD5NEW=== >> /dev/ttyPS0
+===MD5NEW===
+md5sum /run/media/mmcblk0p1/hub75d.new >> /dev/ttyPS0 2>&1
+d9ac4776b34fcde1e59f6610b8a91160  /run/media/mmcblk0p1/hub75d.new
+ls -l /run/media/mmcblk0p1/hub75d.new >> /dev/ttyPS0 2>&1
+-rwxrwx---    1 root     disk        482440 Mar  3 06:37 /run/media/mmcblk0p1/hub75d.new
+df -h /run/media/mmcblk0p1 >> /dev/ttyPS0 2>&1
+Filesystem                Size      Used Available Use% Mounted on
+/dev/mmcblk0p1           95.8M     66.6M     29.2M  70% /run/media/mmcblk0p1
+echo ===MD5NEW_END=== >> /dev/ttyPS0
+===MD5NEW_END===

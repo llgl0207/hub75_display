@@ -1,0 +1,10 @@
+﻿echo ===PLAY=== >> /dev/ttyPS0
+===PLAY===
+3dplay breakout
+hub75d: anim mode -> /run/media/mmcblk0p1/hub75_game_breakoutbreakout: paddle=60 speed=55 slice=0 thick=3 ir_stop=5000breakout: keyboard /dev/input/event0sleep 4
+echo ===PLAY_END=== >> /dev/ttyPS0
+3dplay stop
+sleep 1
+echo ===STOP_END=== >> /dev/ttyPS0
+===PLAY_END===
+hub75d: console mode===STOP_END===

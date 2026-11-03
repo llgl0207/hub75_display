@@ -1,0 +1,3 @@
+echo ===CARD_CHECK=== >> /dev/ttyPS0
+md5sum /run/media/mmcblk0p1/BOOT.bin /run/media/mmcblk0p1/image.ub /run/media/mmcblk0p1/hub75_fx /run/media/mmcblk0p1/uEnv.txt /run/media/mmcblk0p1/hub75_boot.frm >> /dev/ttyPS0 2>&1
+echo ===CARD_END=== >> /dev/ttyPS0

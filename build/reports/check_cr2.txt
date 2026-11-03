@@ -1,0 +1,2 @@
+﻿echo CHECK_CR2 > /dev/ttyPS0
+CHECK_CR2

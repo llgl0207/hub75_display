@@ -1,0 +1,22 @@
+﻿echo ===DEPLOY=== >> /dev/ttyPS0
+===DEPLOY===
+cp /run/media/mmcblk0p1/hub75.conf /run/media/mmcblk0p1/hub75.conf.bak
+printf '\n# IR terminal mode (added 2026-11-04):\n# no IR edge for ir_stop_ms -> console in all slices (stopped);\n# otherwise only terminal_slice carries the console.\nterminal_slice=0\nir_stop_ms=5000\n' >> /run/media/mmcblk0p1/hub75.conf
+cp /run/media/mmcblk0p1/hub75d /run/media/mmcblk0p1/hub75d.bak
+mv /run/media/mmcblk0p1/hub75d.new /run/media/mmcblk0p1/hub75d
+chmod +x /run/media/mmcblk0p1/hub75d
+sync
+md5sum /run/media/mmcblk0p1/hub75d /run/media/mmcblk0p1/hub75d.bak >> /dev/ttyPS0 2>&1
+d9ac4776b34fcde1e59f6610b8a91160  /run/media/mmcblk0p1/hub75d
+8116655fcbc1fe41b877ec3a8abbf2c1  /run/media/mmcblk0p1/hub75d.bak
+tail -8 /run/media/mmcblk0p1/hub75.conf >> /dev/ttyPS0 2>&1
+anim_knot=/run/media/mmcblk0p1/fx_knot
+anim_tunnel=/run/media/mmcblk0p1/fx_tunnel
+
+# IR terminal mode (added 2026-11-04):
+# no IR edge for ir_stop_ms -> console in all slices (stopped);
+# otherwise only terminal_slice carries the console.
+terminal_slice=0
+ir_stop_ms=5000
+echo ===DEPLOY_END=== >> /dev/ttyPS0
+===DEPLOY_END===

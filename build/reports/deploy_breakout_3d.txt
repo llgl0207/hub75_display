@@ -1,0 +1,11 @@
+﻿echo ===DEPLOY_GAME=== >> /dev/ttyPS0
+===DEPLOY_GAME===
+cp /run/media/mmcblk0p1/hub75_game_breakout /run/media/mmcblk0p1/hub75_game_breakout.bak
+mv /run/media/mmcblk0p1/hub75_game_breakout.new /run/media/mmcblk0p1/hub75_game_breakout
+chmod +x /run/media/mmcblk0p1/hub75_game_breakout
+sync
+md5sum /run/media/mmcblk0p1/hub75_game_breakout /run/media/mmcblk0p1/hub75_game_breakout.bak >> /dev/ttyPS0 2>&1
+52729b8d2565ed38b85c709c49442aa6  /run/media/mmcblk0p1/hub75_game_breakout
+d5e299d1b51d4f1b5bdf15652a3596f2  /run/media/mmcblk0p1/hub75_game_breakout.bak
+echo ===DEPLOY_GAME_END=== >> /dev/ttyPS0
+===DEPLOY_GAME_END===

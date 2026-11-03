@@ -1,0 +1,4 @@
+echo ===IRNOW=== >> /dev/ttyPS0
+devmem 0x41210000 32 >> /dev/ttyPS0 2>&1
+devmem 0x41210008 32 >> /dev/ttyPS0 2>&1
+echo ===IRNOW_END=== >> /dev/ttyPS0

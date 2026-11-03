@@ -1,0 +1,2 @@
+﻿stty sane; stty sane < /dev/ttyPS0; echo RESTORED_LF > /dev/ttyPS0
+RESTORED_LF

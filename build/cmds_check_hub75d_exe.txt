@@ -1,0 +1,5 @@
+echo ===EXE=== >> /dev/ttyPS0
+for p in $(pidof hub75d); do readlink /proc/$p/exe; done >> /dev/ttyPS0 2>&1
+ls -l /run/media/mmcblk0p1/hub75d >> /dev/ttyPS0 2>&1
+md5sum /run/media/mmcblk0p1/hub75d >> /dev/ttyPS0 2>&1
+echo ===EXE_END=== >> /dev/ttyPS0

@@ -1,0 +1,7 @@
+echo ===DEPLOY_GAME=== >> /dev/ttyPS0
+cp /run/media/mmcblk0p1/hub75_game_breakout /run/media/mmcblk0p1/hub75_game_breakout.bak
+mv /run/media/mmcblk0p1/hub75_game_breakout.new /run/media/mmcblk0p1/hub75_game_breakout
+chmod +x /run/media/mmcblk0p1/hub75_game_breakout
+sync
+md5sum /run/media/mmcblk0p1/hub75_game_breakout /run/media/mmcblk0p1/hub75_game_breakout.bak >> /dev/ttyPS0 2>&1
+echo ===DEPLOY_GAME_END=== >> /dev/ttyPS0

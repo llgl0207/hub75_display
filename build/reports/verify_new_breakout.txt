@@ -1,0 +1,8 @@
+﻿echo ===NEWGAME=== >> /dev/ttyPS0
+===NEWGAME===
+md5sum /run/media/mmcblk0p1/hub75_game_breakout.new >> /dev/ttyPS0 2>&1
+52729b8d2565ed38b85c709c49442aa6  /run/media/mmcblk0p1/hub75_game_breakout.new
+ls -l /run/media/mmcblk0p1/hub75_game_breakout.new >> /dev/ttyPS0 2>&1
+-rwxrwx---    1 root     disk        473296 Mar  3 06:33 /run/media/mmcblk0p1/hub75_game_breakout.new
+echo ===NEWGAME_END=== >> /dev/ttyPS0
+===NEWGAME_END===

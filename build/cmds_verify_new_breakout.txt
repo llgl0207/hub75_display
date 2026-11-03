@@ -1,0 +1,4 @@
+echo ===NEWGAME=== >> /dev/ttyPS0
+md5sum /run/media/mmcblk0p1/hub75_game_breakout.new >> /dev/ttyPS0 2>&1
+ls -l /run/media/mmcblk0p1/hub75_game_breakout.new >> /dev/ttyPS0 2>&1
+echo ===NEWGAME_END=== >> /dev/ttyPS0

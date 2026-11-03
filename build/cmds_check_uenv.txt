@@ -1,0 +1,7 @@
+echo ===UENV=== >> /dev/ttyPS0
+cat /run/media/mmcblk0p1/uEnv.txt >> /dev/ttyPS0 2>&1
+echo ===LIST=== >> /dev/ttyPS0
+ls -l /run/media/mmcblk0p1/uEnv.txt /run/media/mmcblk0p1/hub75_boot.frm /run/media/mmcblk0p1/image.ub /run/media/mmcblk0p1/BOOT.bin >> /dev/ttyPS0 2>&1
+echo ===MD5=== >> /dev/ttyPS0
+md5sum /run/media/mmcblk0p1/uEnv.txt /run/media/mmcblk0p1/hub75_boot.frm /run/media/mmcblk0p1/image.ub /run/media/mmcblk0p1/BOOT.bin >> /dev/ttyPS0 2>&1
+echo ===END=== >> /dev/ttyPS0

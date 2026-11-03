@@ -1,0 +1,2 @@
+﻿stty sane; stty sane < /dev/ttyPS0; echo READY_LF2 > /dev/ttyPS0
+READY_LF2

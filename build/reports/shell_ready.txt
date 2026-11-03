@@ -1,0 +1,3 @@
+﻿echo SHELL_READY_20261104 > /dev/ttyPS0
+SHELL_READY_20261104
+hub75d: pty [53]hub75d: submit 10200000 6ms st=0c0131ed id=1

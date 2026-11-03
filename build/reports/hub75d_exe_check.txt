@@ -1,0 +1,10 @@
+﻿echo ===EXE=== >> /dev/ttyPS0
+===EXE===
+for p in $(pidof hub75d); do readlink /proc/$p/exe; done >> /dev/ttyPS0 2>&1
+/run/media/mmcblk0p1/hub75d
+ls -l /run/media/mmcblk0p1/hub75d >> /dev/ttyPS0 2>&1
+-rwxrwx---    1 root     disk        482284 Mar  3 06:27 /run/media/mmcblk0p1/hub75d
+md5sum /run/media/mmcblk0p1/hub75d >> /dev/ttyPS0 2>&1
+8116655fcbc1fe41b877ec3a8abbf2c1  /run/media/mmcblk0p1/hub75d
+echo ===EXE_END=== >> /dev/ttyPS0
+===EXE_END===
