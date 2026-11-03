@@ -1,8 +1,2 @@
-﻿kill $(pidof hub75d)
-FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
-EXT4-fs (mmcblk0p2): warning: mounting fs with errors, running e2fsck is recommended
-EXT4-fs (mmcblk0p2): recovery complete
-EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
-hwclock: can't open '/dev/misc/rtc': No such file or directory
-Tue Mar  3 06:25:20 UTC 2020
-hwclock: can't open '/dev/misc/rtc': No such file or directory
+﻿-rw-r--r--    1 root     root             4 Mar  3 06:31 /tmp/t1
+T1END

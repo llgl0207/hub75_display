@@ -1,0 +1,4 @@
+﻿RAWOK
+[1471ms] TX stty raw -echo; echo R0000 >/dev/ttyPS0; dd bs=1 count=8 >> C:/Users/210/AppData/Local/Temp/tiny2.bin; stty sane; echo D0000 >/dev/ttyPS0
+[1524ms] R0000
+D0000

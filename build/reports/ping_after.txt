@@ -1,0 +1,1 @@
+﻿echo PING_19971 >/dev/ttyPS0 2>&1

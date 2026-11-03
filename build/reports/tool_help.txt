@@ -1,0 +1,24 @@
+﻿(head --help 2>&1 | head -8; echo ---DD---; dd --help 2>&1 | head -12; echo ---END---) >/dev/ttyPS0 2>&1
+hub75d: pty [142]hub75d: submit 10000000 20ms st=080530ed id=5BusyBox v1.24.1 (2020-03-03 03:34:19 UTC) multi-call binary.
+
+Usage: head [OPTIONS] [FILE]...
+
+Print first 10 lines of each FILE (or stdin) to stdout.
+With more than one FILE, precede each with a filename header.
+
+	-n N[kbm]	Print first N lines
+---DD---
+BusyBox v1.24.1 (2020-03-03 03:34:19 UTC) multi-call binary.
+
+Usage: dd [if=FILE] [of=FILE] [bs=N] [count=N] [skip=N]
+	[seek=N]
+
+Copy a file with converting and formatting
+
+	if=FILE		Read from FILE instead of stdin
+	of=FILE		Write to FILE instead of stdout
+	bs=N		Read and write N bytes at a time
+	count=N		Copy only N input blocks
+	skip=N		Skip N input blocks
+---END---
+hub75d: pty [8]hub75d: submit 10200000 6ms st=4a060be4 id=6

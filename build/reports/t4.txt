@@ -1,1 +1,2 @@
-﻿echo READY; ls /run/media/mmcblk0p1/hub75_anim_spheres 2>&1
+﻿R9000
+PRE

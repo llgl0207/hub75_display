@@ -1,0 +1,4 @@
+﻿ls -l /run/media/mmcblk0p1/hub75d /run/media/mmcblk0p1/uEnv.txt >/dev/ttyPS0 2>&1
+hub75d: pty [93]hub75d: submit 10200000 13ms st=660604e4 id=6-rwxrwx---    1 root     disk        477764 Nov  3  2026 /run/media/mmcblk0p1/hub75d
+-rwxrwx---    1 root     disk           317 Nov  3  2026 /run/media/mmcblk0p1/uEnv.txt
+hub75d: pty [8]

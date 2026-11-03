@@ -1,0 +1,13 @@
+﻿RAWOK
+[1467ms] TX stty raw -echo; echo R0000 >/dev/ttyPS0; dd bs=1 count=8 >> /tmp/tiny3.bin; stty sane; echo D0000 >/dev/ttyPS0
+[1520ms] R0000
+[1566ms] D0000
+[1575ms] TX stty raw -echo; echo R0001 >/dev/ttyPS0; dd bs=1 count=8 >> /tmp/tiny3.bin; stty sane; echo D0001 >/dev/ttyPS0
+[1629ms] R0001
+[1675ms] D0001
+[1675ms] TX stty raw -echo; echo R0002 >/dev/ttyPS0; dd bs=1 count=8 >> /tmp/tiny3.bin; stty sane; echo D0002 >/dev/ttyPS0
+[1722ms] R0002
+[1769ms] D0002
+[1769ms] TX stty raw -echo; echo R0003 >/dev/ttyPS0; dd bs=1 count=8 >> /tmp/tiny3.bin; stty sane; echo D0003 >/dev/ttyPS0
+[1816ms] R0003
+[1861ms] D0003

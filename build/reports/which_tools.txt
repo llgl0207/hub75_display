@@ -1,0 +1,2 @@
+﻿which timeout truncate dd md5sum sed; echo --- >/dev/ttyPS0
+---

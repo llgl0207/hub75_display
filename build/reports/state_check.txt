@@ -1,0 +1,49 @@
+﻿(dmesg | tail -20; echo ---INPUT---; cat /proc/bus/input/devices) >/dev/ttyPS0 2>&1; echo QDONE >/dev/ttyPS0
+hub75d: pty [124]hub75d: submit 10200000 20ms st=76022ae4 id=2hctosys: unable to open rtc device (rtc0)
+of_cfs_init
+of_cfs_init: OK
+clk: Not disabling unused clocks
+ALSA device list:
+  No soundcards found.
+mmc0: new high speed SDHC card at address 0001
+mmcblk0: mmc0:0001 SD 29.1 GiB 
+ mmcblk0: p1 p2
+Freeing unused kernel memory: 1024K
+udevd[709]: starting version 3.2.2
+udevd[710]: starting eudev-3.2.2
+usb 1-1: new full-speed USB device number 2 using ci_hdrc
+input: 2.4G Composite Devic as /devices/soc0/amba/e0002000.usb/ci_hdrc.0/usb1/1-1/1-1:1.0/0003:4037:2804.0001/input/input0
+hid-generic 0003:4037:2804.0001: input: USB HID v1.10 Keyboard [2.4G Composite Devic] on usb-ci_hdrc.0-1/input0
+input: 2.4G Composite Devic as /devices/soc0/amba/e0002000.usb/ci_hdrc.0/usb1/1-1/1-1:1.1/0003:4037:2804.0002/input/input1
+hid-generic 0003:4037:2804.0002: input: USB HID v1.10 Mouse [2.4G Composite Devic] on usb-ci_hdrc.0-1/input1
+FAT-fs (mmcblk0p2): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+---INPUT---
+I: Bus=0003 Vendor=4037 Product=2804 Version=0110
+N: Name="2.4G Composite Devic"
+P: Phys=usb-ci_hdrc.0-1/input0
+S: Sysfs=/devices/soc0/amba/e0002000.usb/ci_hdrc.0/usb1/1-1/1-1:1.0/0003:4037:2804.0001/input/input0
+U: Uniq=
+H: Handlers=kbd leds event0 
+B: PROP=0
+B: EV=120013
+B: KEY=10000 7 ff9f207a c14057ff febeffdf ffefffff ffffffff fffffffe
+B: MSC=10
+B: LED=1f
+
+I: Bus=0003 Vendor=4037 Product=2804 Version=0110
+N: Name="2.4G Composite Devic"
+P: Phys=usb-ci_hdrc.0-1/input1
+S: Sysfs=/devices/soc0/amba/e0002000.usb/ci_hdrc.0/usb1/1-1/1-1:1.1/0003:4037:2804.0002/input/input1
+U: Uniq=
+H: Handlers=kbd event1 
+B: PROP=0
+B: EV=1f
+B: KEY=3f 3007f 0 0 0 0 483ffff 17aff32d bf544446 0 0 1f0001 130f93 8b17c000 677bfa d941dfed 9ed680 4400 0 10000002
+B: REL=1c3
+B: ABS=1 0
+B: MSC=10
+
+QDONE
+hub75d: pty [8]hub75d: submit 10000000 6ms st=38030eed id=3

@@ -1,0 +1,5 @@
+﻿(which timeout truncate dd md5sum sed; echo DONE) >/dev/ttyPS0 2>&1
+/bin/dd
+/usr/bin/md5sum
+/bin/sed
+DONE

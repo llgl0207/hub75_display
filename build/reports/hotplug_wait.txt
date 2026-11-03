@@ -1,0 +1,25 @@
+﻿usb 1-1: USB disconnect, device number 2
+hub75d: kbd removedhub75d: usb kick, device unenumeratedhub75d: usb recover, USBCMD=ci_hdrc ci_hdrc.0: remove, state 1
+00080000usb usb1: USB disconnect, device number 1
+ci_hdrc ci_hdrc.0: USB bus 1 deregistered
+chipidea-usb2 e0002000.usb: e0002000.usb supply vbus not found, using dummy regulator
+ULPI transceiver vendor/product ID 0x0424/0x0007
+Found SMSC USB3320 ULPI transceiver.
+ULPI integrity check: passed.
+ci_hdrc ci_hdrc.0: EHCI Host Controller
+ci_hdrc ci_hdrc.0: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.0: USB 2.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+usb 1-1: new full-speed USB device number 2 using ci_hdrc
+input: 2.4G Composite Devic as /devices/soc0/amba/e0002000.usb/ci_hdrc.0/usb1/1-1/1-1:1.0/0003:4037:2804.0003/input/input2
+hid-generic 0003:4037:2804.0003: input: USB HID v1.10 Keyboard [2.4G Composite Devic] on usb-ci_hdrc.0-1/input0
+input: 2.4G Composite Devic as /devices/soc0/amba/e0002000.usb/ci_hdrc.0/usb1/1-1/1-1:1.1/0003:4037:2804.0004/input/input3
+hid-generic 0003:4037:2804.0004: input: USB HID v1.10 Mouse [2.4G Composite Devic] on usb-ci_hdrc.0-1/input1
+hub75d: kbd /dev/input/event0hub75d: pty [10]hub75d: submit 10200000 6ms st=67040ae4 id=4hub75d: pty [10]hub75d: submit 10000000 6ms st=2e0521ed id=5usb 1-1: USB disconnect, device number 2
+hub75d: kbd removedusb 1-1: new full-speed USB device number 3 using ci_hdrc
+input: 2.4G Composite Devic as /devices/soc0/amba/e0002000.usb/ci_hdrc.0/usb1/1-1/1-1:1.0/0003:4037:2804.0005/input/input4
+hid-generic 0003:4037:2804.0005: input: USB HID v1.10 Keyboard [2.4G Composite Devic] on usb-ci_hdrc.0-1/input0
+input: 2.4G Composite Devic as /devices/soc0/amba/e0002000.usb/ci_hdrc.0/usb1/1-1/1-1:1.1/0003:4037:2804.0006/input/input5
+hid-generic 0003:4037:2804.0006: input: USB HID v1.10 Mouse [2.4G Composite Devic] on usb-ci_hdrc.0-1/input1
+hub75d: kbd /dev/input/event0hub75d: pty [10]hub75d: submit 10200000 6ms st=79060be4 id=6hub75d: pty [10]

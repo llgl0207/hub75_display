@@ -670,6 +670,85 @@ hub75d 日志出现 `hub75d: kbd /dev/input/eventN`。
    面板上打字应回显、`ls`/`vi` 可用。
 4. `vi /run/media/mmcblk0p1/hub75.conf` 改 `anim=` 后 `kill -HUP $(pidof hub75d)` 或重启验证持久性。
 
+### 15.6 热插拔“掉键盘”的根因与修复（2026-11-03）
+
+**现象**：开机后重新插拔 USB 键盘，面板 shell 不再接收按键；有线键盘不拔时正常；
+无线接收器键盘有概率在开机后完全认不出。
+
+**根因一（daemon 侧，确定）**：事件循环只在 `revents & POLLIN` 时调用 `kbd_feed()`。
+evdev 设备被拔掉时 poll 返回的是 `POLLERR|POLLHUP`（没有 `POLLIN`），旧代码既不移除
+fd 也不重扫。结果：死 fd 永远留在 poll 集合里，`kbd_count` 恒为 1，而定时重扫的条件
+是 `kbd_count == 0` —— 永远不成立。内核即使已经重新枚举出新键盘，daemon 也不会打开
+新的 `/dev/input/eventN`。这解释了“重新插拔就掉键盘、而且再也回不来”。
+
+**根因二（冷启动枚举竞争，已观察）**：无线接收器比有线键盘枚举慢、重试多；
+冷启动时 USB3320 的第一次 ULPI 访问竞争可能让本次枚举失败（见 §15.4.1）。
+旧 `usb_recover()` 只检查 `/sys/bus/usb/devices/usb1` 是否存在——root hub 在、
+下游设备枚举失败时它不会动作。
+
+**修复（`sw/linux/hub75d.c`）**：
+
+- `POLLERR|POLLHUP|POLLNVAL` 一律 `kbd_drop()`（关闭 fd、压缩并行数组、日志 `kbd removed`）。
+- 键盘扫描改为**定时无条件执行**：有键盘时 2 s、无键盘时 1 s，按 `eventN` 路径去重
+  （同一节点绝不开两个 fd，否则一次按键送达两次），因此重插后的新节点会在 1–2 s 内被接管。
+- root hub 消失时自动 `usb_kick()`（`USBCMD.RST` + `chipidea-usb2` unbind/bind）。
+- **已连接但未枚举**检测：读 `PORTSC1`（`0xE0002000 + 0x184`）bit0 CCS；若
+  CCS=1、`/sys/bus/usb/devices` 下没有任何 `1-x` 下游设备、且启动已超过 4 s，
+  则判定为“插着但枚举失败”，执行一次 `usb_kick()` 后再扫描。针对无线接收器开机认不出的场景。
+- `usb_pm_on()`：把 `usb1/power/control` 与 `e0002000.usb/power/control` 设为 `on`，
+  避免 HID/PHY 自动挂起把热插拔事件吞掉；`uEnv.txt` 的 `bootargs` 追加
+  `usbcore.autosuspend=-1` 作为内核侧同类保护。
+
+产物：`build/work/vendor_linux/hub75d`（482,216 B，MD5 `cc945fad40a87299567df712c2605cf3`），
+`uEnv.txt` 已更新。部署：`.\build\flash_usb_boot.ps1 -SkipBootgen`（插卡到 PC），
+或板子在线时用 `build/serial_put.ps1` 通过 COM11 传输。
+
+**串口传输的陷阱（2026-11-03 实测踩到）**：只对 PTY 执行 `stty raw -echo` 是不够的。
+串口控制台 `ttyPS0` 本身仍是规范模式 + `ISIG`，传输的二进制里第一个 `0x03`
+（`hub75d` 偏移 284）会被内核当成 ^C，直接给前台进程组（hub75d 和启动脚本）发
+SIGINT——进程当场死亡，之后内核仍回显串口输入，但已无人读取，表现为“命令没反应”。
+正确顺序：先 `stty raw -echo < /dev/ttyPS0`（对控制台 tty 本身），并用
+`echo RAWOK >/dev/ttyPS0` 验证命令回显已消失，再启动 `dd` 接收数据。
+`build/serial_put.ps1` 实现了该流程（raw 探测、ack 标记 `HUB75RX9`、
+`dd` 完成才回 ACK）。注意：传输期间误发命令会被 `dd` 当成数据。
+
+**板上验证（2026-11-03 晚，已通过，日志 `build/reports/hotplug_wait.txt`）**：
+
+- 拔下接收器：内核 `usb 1-1: USB disconnect, device number 2`，daemon 立即打出
+  `hub75d: kbd removed`。
+- 第一次重插未被立即枚举（正是无线接收器的偶发问题）：daemon 打出
+  `hub75d: usb kick, device unenumerated` → `usb recover, USBCMD=00080000`，
+  控制器 unbind/bind 后重新注册（`ULPI integrity check: passed`），接收器重新枚举出
+  keyboard+mouse，daemon 打出 `hub75d: kbd /dev/input/event0`。
+- 第二次拔插：`kbd removed` → 内核直接 `usb 1-1: new full-speed USB device number 3`
+  → `kbd /dev/input/event0`，无需 kick。
+- 用户确认“USB 问题已经修复完成”。
+- 卡上运行的是 `cc945fad…` 版本；本地另有一版把 kick 限制为最多 5 次（`8116655f…`），
+  尚未部署。U-Boot 预复位 `mw.l 0xE0002140 0x2` 也仍待传输/重启验证。
+
+**上板进展（2026-11-03 晚）**：
+
+- 新版 hub75d 已通过串口 ack 分块协议写入 FAT 并校验
+  （482,216 B / `cc945fad…`），`uEnv.txt` 也已更新。串口传输必须用
+  `MSYS2_ARG_CONV_EXCL='*'` 调用脚本，否则 Git Bash 会把 `/tmp/...`、
+  `/run/media/...` 参数转换成 `C:/...`，板端 `dd >>` 重定向失败、shell 跳过 dd
+  而直接执行后面的 marker（表现为"DONE 提前到达"）。
+- 一次干净启动（键盘已插）完全正常：ULPI 检测通过、无线接收器
+  `2.4G Composite Devic` 枚举出 keyboard+mouse、daemon 打出
+  `hub75d: kbd /dev/input/event0`，且没有触发任何 `usb recover`。
+- 但冷启动 `-110` 仍偶发。失败启动中，daemon 的 `USBCMD.RST` + unbind/bind
+  这次**没有**救回（每次 rebind 仍 `-110`），并因无键盘而每 1 s 重试一次。
+  随后按 §15.4.1 的手动流程（恢复 APER 时钟、写 MIO46、RST、rebind）让 PHY
+  初始化成功，但立即复现了**中断风暴**（`unexpected IRQ trap at vector 00`）。
+- 读内核源码定位到顺序问题：`ci_hdrc_probe()` 先执行 `ci_usb_phy_init()`
+  （第一次 ULPI viewport 访问），**之后**才做控制器角色复位；也就是说首次
+  ULPI 访问沿用 U-Boot 留下的控制器状态，一旦 RUN 锁死就 `-110`。
+  因此修复方向是**在 U-Boot 启动内核前复位控制器**：
+  `uEnv.txt` 的 `uenvcmd` 增加 `mw.l 0xE0002140 0x2`（USBCMD.RST，此时
+  USB0 APER 时钟由 ps7_init 开着）。该改动已写入本地 `uEnv.txt`，待下次传输/重启验证。
+- 结论：daemon 侧的热插拔修复与 "插着但未枚举" 检测保留；冷启动不应依赖
+  daemon 反复 rebind（会在成功时引发风暴），应由 U-Boot 预复位 + 一次兜底。
+
 ## 16. 显示：可配置字体大小（2026-11-03）
 
 面板固定 128×64；文字网格由字体决定：

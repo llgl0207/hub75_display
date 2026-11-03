@@ -1,0 +1,4 @@
+﻿RAWOK
+[1403ms] TX stty raw -echo; echo R0000 >/dev/ttyPS0; dd bs=1 count=340 >> /run/media/mmcblk0p1/uEnv.txt.new; stty sane; echo D0000 >/dev/ttyPS0
+[1459ms] R0000
+[1520ms] D0000

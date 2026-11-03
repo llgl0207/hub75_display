@@ -1,0 +1,1 @@
+﻿ls -l /run/media/mmcblk0p1/hub75d.new >/dev/ttyPS0 2>&1; md5sum /run/media/mmcblk0p1/hub75d.new >/dev/ttyPS0 2>&1; echo VERIFY_DONE >/dev/ttyPS0

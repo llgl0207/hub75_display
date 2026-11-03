@@ -1,0 +1,4 @@
+﻿ls -l /run/media/mmcblk0p1/hub75d.new >/dev/ttyPS0 2>&1; md5sum /run/media/mmcblk0p1/hub75d.new >/dev/ttyPS0 2>&1; echo V1 >/dev/ttyPS0
+-rwxrwx---    1 root     disk        482216 Mar  3 06:35 /run/media/mmcblk0p1/hub75d.new
+cc945fad40a87299567df712c2605cf3  /run/media/mmcblk0p1/hub75d.new
+V1

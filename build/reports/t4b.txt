@@ -1,0 +1,3 @@
+﻿-rw-r--r--    1 root     root             4 Mar  3 06:33 /tmp/t4
+   A   B   C   D
+T4END

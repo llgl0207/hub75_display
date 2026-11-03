@@ -14,6 +14,7 @@
  * Run as root:  ./hub75d [shell]
  * Quit with Ctrl-C (the shell on the panel dies with it).
  */
+#include <dirent.h>
 #include <errno.h>
 #include <fcntl.h>
 #include <stdint.h>
@@ -280,6 +281,9 @@ struct ev_rec {
 };
 
 static int kbd_fds[MAX_KBD];
+static char kbd_names[MAX_KBD][32];
+static unsigned char kbd_acc[MAX_KBD][EV_REC_SIZE];
+static int kbd_acc_n[MAX_KBD];
 static int kbd_count;
 static int kbd_mfd = -1;
 static int shift_held, ctrl_held, caps_lock;
@@ -340,15 +344,50 @@ static int kbd_probe(int fd)
                   (KEY_A % (8 * (int)sizeof(unsigned long)))) & 1UL);
 }
 
+/* Remove one open keyboard: close it and compact every parallel array. */
+static void kbd_drop(int idx)
+{
+    if (idx < 0 || idx >= kbd_count) return;
+    close(kbd_fds[idx]);
+    for (int k = idx; k + 1 < kbd_count; k++) {
+        kbd_fds[k] = kbd_fds[k + 1];
+        memcpy(kbd_names[k], kbd_names[k + 1], sizeof(kbd_names[0]));
+        memcpy(kbd_acc[k], kbd_acc[k + 1], EV_REC_SIZE);
+        kbd_acc_n[k] = kbd_acc_n[k + 1];
+    }
+    kbd_count--;
+    kbd_acc_n[kbd_count] = 0;
+    memset(kbd_acc[kbd_count], 0, EV_REC_SIZE);
+    fprintf(stderr, "hub75d: kbd removed");
+}
+
+static int kbd_open_path(const char *path)
+{
+    for (int i = 0; i < kbd_count; i++)
+        if (strcmp(kbd_names[i], path) == 0) return 1;
+    return 0;
+}
+
+/*
+ * Called on a timer, not only when the last keyboard goes away.  A replug
+ * can create a new event node while a stale one is still open, and the
+ * receiver may enumerate only after the daemon has already started; both
+ * cases need this scan.  Never open the same node twice: two fds would
+ * deliver every keystroke twice.
+ */
 static void kbd_scan(void)
 {
     char path[32];
     for (int i = 0; i < 32 && kbd_count < MAX_KBD; i++) {
         snprintf(path, sizeof(path), "/dev/input/event%d", i);
+        if (kbd_open_path(path)) continue;
         int fd = open(path, O_RDONLY | O_NONBLOCK);
         if (fd < 0) continue;
         if (!kbd_probe(fd)) { close(fd); continue; }
-        kbd_fds[kbd_count++] = fd;
+        kbd_fds[kbd_count] = fd;
+        snprintf(kbd_names[kbd_count], sizeof(kbd_names[0]), "%s", path);
+        kbd_acc_n[kbd_count] = 0;
+        kbd_count++;
         fprintf(stderr, "hub75d: kbd %s", path);
     }
 }
@@ -422,37 +461,27 @@ static void kbd_key(uint16_t code, int value)
 
 static void kbd_feed(int idx)
 {
-    static unsigned char acc[MAX_KBD][EV_REC_SIZE];
-    static int acc_n[MAX_KBD];
     unsigned char buf[256];
     int fd = kbd_fds[idx];
     int r = (int)read(fd, buf, sizeof(buf));
 
     if (r <= 0) {
-        if (r == 0 || (r < 0 && errno != EAGAIN && errno != EINTR)) {
-            close(fd);
-            for (int k = idx; k + 1 < kbd_count; k++) {
-                kbd_fds[k] = kbd_fds[k + 1];
-                memcpy(acc[k], acc[k + 1], EV_REC_SIZE);
-                acc_n[k] = acc_n[k + 1];
-            }
-            kbd_count--;
-            fprintf(stderr, "hub75d: kbd removed");
-        }
+        if (r < 0 && (errno == EAGAIN || errno == EINTR)) return;
+        kbd_drop(idx);
         return;
     }
 
     int used = 0;
     while (used < r) {
-        int need = EV_REC_SIZE - acc_n[idx];
+        int need = EV_REC_SIZE - kbd_acc_n[idx];
         int take = (r - used < need) ? (r - used) : need;
-        memcpy(acc[idx] + acc_n[idx], buf + used, (size_t)take);
-        acc_n[idx] += take;
+        memcpy(kbd_acc[idx] + kbd_acc_n[idx], buf + used, (size_t)take);
+        kbd_acc_n[idx] += take;
         used += take;
-        if (acc_n[idx] == EV_REC_SIZE) {
-            struct ev_rec *ev = (struct ev_rec *)acc[idx];
+        if (kbd_acc_n[idx] == EV_REC_SIZE) {
+            struct ev_rec *ev = (struct ev_rec *)kbd_acc[idx];
             if (ev->type == EV_KEY) kbd_key(ev->code, ev->value);
-            acc_n[idx] = 0;
+            kbd_acc_n[idx] = 0;
         }
     }
 }
@@ -575,16 +604,26 @@ static int write_file(const char *path, const char *val)
     return n;
 }
 
+/* Keep both the roothub and the chipidea device runtime-active.  A
+ * suspended ULPI PHY is another way for a hotplug to go unnoticed. */
+static void usb_pm_on(void)
+{
+    write_file("/sys/bus/usb/devices/usb1/power/control", "on");
+    write_file("/sys/bus/platform/devices/e0002000.usb/power/control", "on");
+}
+
 /*
  * Cold-boot workaround: the first ULPI access can race the USB3320 clock
  * after power-on.  The controller then latches ULPI_RUN and the phy driver
  * probe times out (-110), so no USB device ever enumerates.  If the host
  * bus is missing, reset the controller and rebind the glue driver once.
+ *
+ * The same reset is the recovery for a roothub that died on a replug, and
+ * for a device that is physically connected (PORTSC.CCS) but never finished
+ * enumeration after boot (wireless receivers are the observed case).
  */
-static void usb_recover(void)
+static void usb_kick(void)
 {
-    if (access("/sys/bus/usb/devices/usb1", F_OK) == 0) return;
-
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
     if (fd >= 0) {
         void *base = mmap(NULL, 4096, PROT_READ | PROT_WRITE,
@@ -605,6 +644,46 @@ static void usb_recover(void)
     sleep_ms(20);
     write_file("/sys/bus/platform/drivers/chipidea-usb2/bind", "e0002000.usb");
     sleep_ms(400);
+    usb_pm_on();
+}
+
+static void usb_recover(void)
+{
+    if (access("/sys/bus/usb/devices/usb1", F_OK) == 0) return;
+    usb_kick();
+}
+
+/* Any enumerated downstream device (1-1, 1-1.2, ...; not the root 1-0 hub). */
+static int usb_has_child(void)
+{
+    DIR *d = opendir("/sys/bus/usb/devices");
+    if (!d) return 0;
+    struct dirent *e;
+    int found = 0;
+    while ((e = readdir(d)) != NULL) {
+        if (strncmp(e->d_name, "1-", 2) == 0 &&
+            e->d_name[2] >= '1' && e->d_name[2] <= '9') {
+            found = 1;
+            break;
+        }
+    }
+    closedir(d);
+    return found;
+}
+
+/* PORTSC1.CCS: a device is attached to the roothub port, enumerated or not. */
+static int usb_port_connected(void)
+{
+    int fd = open("/dev/mem", O_RDONLY | O_SYNC);
+    int ccs = 0;
+    if (fd < 0) return 0;
+    void *base = mmap(NULL, 4096, PROT_READ, MAP_SHARED, fd, 0xE0002000UL);
+    if (base != MAP_FAILED) {
+        ccs = (int)(*(volatile uint32_t *)((char *)base + 0x184) & 1u);
+        munmap(base, 4096);
+    }
+    close(fd);
+    return ccs;
 }
 
 static int submit_frame(uint8_t *dst, uint32_t phys_base)
@@ -696,9 +775,11 @@ int main(int argc, char **argv)
 
     setup_cmd_fifo();
     usb_recover();
+    usb_pm_on();
     kbd_scan();
     unsigned fb = 0;
     uint64_t last_submit = 0;
+    uint64_t bootk = ticks();
     g_dirty = 1;
     unsigned char buf[256];
 
@@ -762,14 +843,54 @@ int main(int argc, char **argv)
             }
         }
         for (int k = kn - 1; k >= 0; k--) {
-            if (r > 0 && k < kbd_count && (pf[3 + k].revents & POLLIN))
-                kbd_feed(k);
+            if (r <= 0 || k >= kbd_count) continue;
+            short re = pf[3 + k].revents;
+            if (re & POLLIN) kbd_feed(k);
+            /* evdev reports an unplug as POLLERR|POLLHUP with no POLLIN.
+             * Without this the stale fd is kept forever, the rescan branch
+             * never runs and a replugged keyboard is never opened. */
+            if ((re & (POLLERR | POLLHUP | POLLNVAL)) && k < kbd_count)
+                kbd_drop(k);
         }
         {
-            static uint64_t last_kbd_scan;
+            static uint64_t last_kbd_scan, last_usb_kick;
+            static int boot_kick_tries, enum_kick_tries;
             uint64_t nowk = ticks();
-            if (kbd_count == 0 && (nowk - last_kbd_scan) > 2000ULL * TICKS_PER_MS) {
+            uint64_t scan_ms = kbd_count ? 2000ULL : 1000ULL;
+            if ((nowk - last_kbd_scan) > scan_ms * TICKS_PER_MS) {
                 last_kbd_scan = nowk;
+                if (access("/sys/bus/usb/devices/usb1", F_OK) != 0) {
+                    /* Cold-boot probe failure: reset+rebind a few times.
+                     * Rebinding a controller whose probe keeps failing can
+                     * end in an IRQ storm on this SoC, so stop after five
+                     * tries instead of hammering once per second. */
+                    enum_kick_tries = 0;
+                    if (boot_kick_tries < 5 &&
+                        (nowk - last_usb_kick) > 3000ULL * TICKS_PER_MS) {
+                        boot_kick_tries++;
+                        fprintf(stderr, "hub75d: usb boot retry %d", boot_kick_tries);
+                        usb_kick();
+                        last_usb_kick = ticks();
+                    }
+                } else {
+                    boot_kick_tries = 0;
+                    if (usb_has_child()) {
+                        enum_kick_tries = 0;
+                    } else if (kbd_count == 0) {
+                        int ccs = usb_port_connected();
+                        if (!ccs) {
+                            enum_kick_tries = 0;
+                        } else if ((nowk - bootk) > 4000ULL * TICKS_PER_MS &&
+                                   (nowk - last_usb_kick) > 5000ULL * TICKS_PER_MS &&
+                                   enum_kick_tries < 5) {
+                            /* Attached but never enumerated: kick once. */
+                            enum_kick_tries++;
+                            fprintf(stderr, "hub75d: usb kick, device unenumerated");
+                            usb_kick();
+                            last_usb_kick = ticks();
+                        }
+                    }
+                }
                 kbd_scan();
             }
         }

@@ -1,0 +1,26 @@
+﻿(echo ALIVE; ls -l /run/media/mmcblk0p1/; df /run/media/mmcblk0p1) >/dev/ttyPS0 2>&1
+hub75d: pty [96]ALIVE
+hub75d: submit 10000000 14ms st=26031cef id=3total 20336
+-rwxrwx---    1 root     disk           506 Mar  3  2020 3dplay
+-rwxrwx---    1 root     disk       4603128 Nov  3  2026 BOOT.bin
+drwxrwx---    2 root     disk          2048 Feb 28  2024 System Volume Information
+-rwxrwx---    1 root     disk       1005296 Mar  3 06:34 e2fsck
+-rwxrwx---    1 root     disk           802 Nov  3  2026 hub75.conf
+-rwxrwx---    1 root     disk        443816 Nov  3  2026 hub75_anim_heart
+-rwxrwx---    1 root     disk        443760 Nov  3  2026 hub75_anim_spheres
+-rwxrwx---    1 root     disk        196608 Nov  3  2026 hub75_boot.frm
+-rwxrwx---    1 root     disk        425124 Nov  3  2026 hub75_diag
+-rwxrwx---    1 root     disk        424660 Nov  2  2026 hub75_pattern
+-rwxrwx---    1 root     disk        424660 Nov  2  2026 hub75_pattern_bram
+-rwxrwx---    1 root     disk        448796 Nov  3  2026 hub75_pattern_bram32
+-rwxrwx---    1 root     disk        448796 Nov  3  2026 hub75_pattern_ddr
+-rwxrwx---    1 root     disk        424660 Nov  2  2026 hub75_pattern_ocm
+-rwxrwx---    1 root     disk        424660 Nov  2  2026 hub75_pattern_ocm4k
+-rwxrwx---    1 root     disk        424204 Nov  2  2026 hub75_probe
+-rwxrwx---    1 root     disk        477764 Nov  3  2026 hub75d
+-rwxrwx---    1 root     disk        186761 Mar  3 06:31 hub75d.new
+-rwxrwx---    1 root     disk       9995016 Nov  3  2026 image.ub
+-rwxrwx---    1 root     disk           317 Nov  3  2026 uEnv.txt
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/mmcblk0p1           98094     24668     73426  25% /run/media/mmcblk0p1
+hub75d: pty [8]hub75d: submit 10200000 7ms st=67043ae4 id=4

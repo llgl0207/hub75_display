@@ -1,0 +1,15 @@
+﻿hub75d: usb recover, USBCMD=00080000chipidea-usb2 e0002000.usb: e0002000.usb supply vbus not found, using dummy regulator
+ci_hdrc ci_hdrc.0: unable to init phy: -110
+ci_hdrc: probe of ci_hdrc.0 failed with error -110
+hub75d: usb recover, USBCMD=00080000chipidea-usb2 e0002000.usb: e0002000.usb supply vbus not found, using dummy regulator
+ci_hdrc ci_hdrc.0: unable to init phy: -110
+ci_hdrc: probe of ci_hdrc.0 failed with error -110
+hub75d: usb recover, USBCMD=00080000chipidea-usb2 e0002000.usb: e0002000.usb supply vbus not found, using dummy regulator
+ci_hdrc ci_hdrc.0: unable to init phy: -110
+ci_hdrc: probe of ci_hdrc.0 failed with error -110
+hub75d: usb recover, USBCMD=00080000chipidea-usb2 e0002000.usb: e0002000.usb supply vbus not found, using dummy regulator
+ci_hdrc ci_hdrc.0: unable to init phy: -110
+ci_hdrc: probe of ci_hdrc.0 failed with error -110
+hub75d: usb recover, USBCMD=00080000chipidea-usb2 e0002000.usb: e0002000.usb supply vbus not found, using dummy regulator
+ci_hdrc ci_hdrc.0: unable to init phy: -110
+ci_hdrc: probe of ci_hdrc.0 failed with error -110

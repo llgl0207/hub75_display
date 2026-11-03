@@ -1,0 +1,4 @@
+﻿ls -l /tmp/tiny3.bin >/dev/ttyPS0 2>&1; md5sum /tmp/tiny3.bin >/dev/ttyPS0 2>&1; echo OK3 >/dev/ttyPS0
+-rw-r--r--    1 root     root            32 Mar  3 06:34 /tmp/tiny3.bin
+b4ffcb23737cec315a4a4d1aa2a620ce  /tmp/tiny3.bin
+OK3

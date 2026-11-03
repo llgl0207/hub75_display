@@ -1,0 +1,1 @@
+﻿stty raw -echo; dd bs=1 count=482216 of=/run/media/mmcblk0p1/hub75d.new; sync; stty sane

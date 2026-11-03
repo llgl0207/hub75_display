@@ -1,1 +1,11 @@
-reboot
+﻿sync; reboot
+INIT: Switching to runlevel: 6?INIT: Sending processes the TERM signal
+Stopping Dropbear SSH server: stopped /usr/sbin/dropbear (pid 1129)
+dropbear.
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Stopping syslogd/klogd: stopped syslogd (pid 1140)
+stopped klogd (pid 1142)
+done
+Stopping tcf-agent: OK
+Deconfiguring network interfaces... done.
+Sending all processes the TERM signal...

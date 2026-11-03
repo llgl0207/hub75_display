@@ -1,0 +1,3 @@
+﻿md5sum /run/media/mmcblk0p1/uEnv.txt.new >/dev/ttyPS0 2>&1; echo GOT >/dev/ttyPS0
+1cc0f02ff3978cce0fa6673fb5b5abbf  /run/media/mmcblk0p1/uEnv.txt.new
+GOT

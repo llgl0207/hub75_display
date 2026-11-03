@@ -1,0 +1,2 @@
+﻿echo RAWOK >/dev/ttyPS0
+RAWOK

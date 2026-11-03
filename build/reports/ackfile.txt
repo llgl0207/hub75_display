@@ -1,0 +1,3 @@
+﻿ls: /tmp/acktest.bin: No such file or directory
+md5sum: can't open '/tmp/acktest.bin': No such file or directory
+CHKEND

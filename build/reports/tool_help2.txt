@@ -1,0 +1,29 @@
+﻿(head --help 2>&1; echo ---DD---; dd --help 2>&1; echo ---END---) >/dev/ttyPS0 2>&1
+hub75d: pty [95]BusyBox v1.24.1 (2020-03-03 03:34:19 UTC) multi-call binary.
+
+Usage: head [OPTIONS] [FILE]...
+
+Print first 10 lines of each FILE (or stdin) to stdout.
+With more than one FILE, precede each with a filename header.
+
+	-n N[kbm]	Print first N lines
+
+N may be suffixed by k (x1024), b (x512), or m (x1024^2).
+---DD---
+BusyBox v1.24.1 (2020-03-03 03:34:19 UTC) multi-call binary.
+
+Usage: dd [if=FILE] [of=FILE] [bs=N] [count=N] [skip=N]
+	[seek=N]
+
+Copy a file with converting and formatting
+
+	if=FILE		Read from FILE instead of stdin
+	of=FILE		Write to FILE instead of stdout
+	bs=N		Read and write N bytes at a time
+	count=N		Copy only N input blocks
+	skip=N		Skip N input blocks
+	seek=N		Skip N output blocks
+
+N may be suffixed by c (1), w (2), b (512), kB (1000), k (1024), MB, M, GB, G
+---END---
+hub75d: pty [8]

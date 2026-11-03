@@ -1,0 +1,6 @@
+﻿mv /run/media/mmcblk0p1/hub75d.new /run/media/mmcblk0p1/hub75d; mv /run/media/mmcblk0p1/uEnv.txt.new /run/media/mmcblk0p1/uEnv.txt; sync; (ls -l /run/media/mmcblk0p1/hub75d /run/media/mmcblk0p1/uEnv.txt; md5sum /run/media/mmcblk0p1/hub75d; head -1 /run/media/mmcblk0p1/uEnv.txt) >/dev/ttyPS0 2>&1; echo INSTALLED >/dev/ttyPS0
+-rwxrwx---    1 root     disk        482216 Mar  3 06:35 /run/media/mmcblk0p1/hub75d
+-rwxrwx---    1 root     disk           340 Mar  3 06:36 /run/media/mmcblk0p1/uEnv.txt
+cc945fad40a87299567df712c2605cf3  /run/media/mmcblk0p1/hub75d
+bootargs=console=ttyPS0,115200 earlyprintk mem=256M clk_ignore_unused cpuidle.off=1 idle=poll maxcpus=1 usbcore.autosuspend=-1
+INSTALLED

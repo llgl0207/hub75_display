@@ -1,0 +1,3 @@
+﻿(which base64; echo ---; base64 --help 2>&1) >/dev/ttyPS0 2>&1
+---
+sh: base64: command not found
