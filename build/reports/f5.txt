@@ -1,0 +1,17 @@
+﻿df -h /run/media/mmcblk0p1; echo ==HEAD; head -6 //run/media/mmcblk0p1/fsck.log; echo ==TAIL; tail -3 /run/media/mmcblk0p1/fsck.logg; echo ==LINES; wc -l /run/media/mmcblk0p1/fsck.log
+Filesystem                Size      Used Available Use% Mounted on
+/dev/mmcblk0p1           95.8M     24.7M     71.1M  26% /run/media/mmcblk0p1
+==HEAD
+e2fsck 1.47.2 (1-Jan-2025)
+Resize inode not valid.  Recreate? yes
+
+Pass 1: Checking inodes, blocks, and sizes
+Inode 321 seems to contain garbage.  Clear? yes
+
+==TAIL
+	/usr/include/arm-linux-gnueabihf/qt5/QtGui/QHelpEvent (inode #5702, mod time Thu Jul 21 11:25:45 2022)
+Clone multiply-claimed blocks? yes
+
+==LINES
+41174 /run/media/mmcblk0p1/fsck.log
+root@petalinux_boot_from_sd:~# 

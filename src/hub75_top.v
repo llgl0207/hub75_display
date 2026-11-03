@@ -13,7 +13,7 @@ module hub75_top #(
     parameter integer SLOT_LOG2    = 6,
     parameter integer ROW_LOG2     = 5,
     // Rate used until five complete intervals exist. Must be a multiple of 60.
-    parameter integer FALLBACK_RPM = 1800,
+    parameter integer FALLBACK_RPM = 600,
     // 0: colour bars + label (verified panel reference), 1: slice sweep pattern,
     // 2: rgb1/rgb2 group-alignment diagnostic.
     parameter integer PATTERN_MODE = 1,

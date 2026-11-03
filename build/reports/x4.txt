@@ -1,0 +1,3 @@
+﻿echo LOGIN_OK
+LOGIN_OK
+root@petalinux_boot_from_sd:~# 

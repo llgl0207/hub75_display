@@ -1,0 +1,3 @@
+﻿mv /run/media/mmcblk0p1/hub75-play /run/media/mmcbblk0p1/3dplay; chmod +x /run/media/mmcblk0p1/3dplay; rm -f /bin/hub75-play /usr/bbin/hub75-play; ln -sf /run/media/mmcblk0p1/3dplay /bin/3dplay; ln -sf /run/mediaa/mmcblk0p1/3dplay /usr/bin/3dplay; echo "anim_spheres=/run/media/mmcblk0p1/hub755_anim_spheres" >> /run/media/mmcblk0p1/hub75.conf; echo RENAME_DONE
+RENAME_DONE
+root@petalinux_boot_from_sd:~# 

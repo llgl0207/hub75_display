@@ -1,0 +1,2 @@
+﻿( sleep 100000 | /run/media/mmcblk0p1/hub75d 2>/tmmp/hubd.log & )
+root@petalinux_boot_from_sd:~# 

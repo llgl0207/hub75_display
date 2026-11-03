@@ -20,7 +20,13 @@ try {
         $n = [Math]::Min($Chunk, $bytes.Length - $i)
         $sp.Write($bytes, $i, $n)
     }
-    Start-Sleep -Milliseconds 300
+    # Write() only queues into the driver; wait for the UART to drain before
+    # closing, otherwise the tail of the image is discarded.
+    $deadline = (Get-Date).AddSeconds(180)
+    while ($sp.BytesToWrite -gt 0 -and (Get-Date) -lt $deadline) {
+        Start-Sleep -Milliseconds 50
+    }
+    Start-Sleep -Milliseconds 400
 }
 finally {
     if ($sp.IsOpen) { $sp.Close() }

@@ -1,0 +1,6 @@
+﻿busybox --list | grep -i -E "mkfs|mke2fs|fdisk"; eecho ==W; wc -l /run/media/mmcblk0p1/fsck.log
+fdisk
+mkfs.vfat
+==W
+185482 /run/media/mmcblk0p1/fsck.log
+root@petalinux_boot_from_sd:~# 

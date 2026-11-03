@@ -41,6 +41,8 @@ The 1 ms windows exist because the board showed several edges from one illuminat
 
 Scan geometry is set by `SLOT_LOG2=6` (64 slots per revolution), `ROW_LOG2=5` and `FALLBACK_RPM=1800`; `PATTERN_MODE=1` selects the bring-up pattern and `PATTERN_MODE=0` restores the verified colour bars. At 1800 RPM this gives 1920 full-panel scans per second, below the reported 2280 ceiling. See the status ledger in `report/design_report.md` and the live-board checklist in `board/board_test_procedure.md`.
 
+The **PS+DDR product build** (`src/hub75_ps_top.v`, used by the Linux/bitstream chain) now defaults to `FALLBACK_RPM=600` (100 ms per revolution, 64 slots → 1.5625 ms per slot) so the no-IR stationary/fallback scan matches the 600 RPM demo speed; the PL-only board-test image keeps 1800 via the generic in `build/build_board_test.tcl`.
+
 ## Repository Layout
 
 ```text

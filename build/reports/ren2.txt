@@ -1,0 +1,8 @@
+﻿grep "anim_" /run/media/mmcblk0p1/hub75.conf; ls --l /bin/3dplay; 3dplay stop; 3dplay spheres; echo PLAY_NEW_DONE
+#anim=/run/media/mmcblk0p1/hub75_anim_heart
+anim_heart=/run/media/mmcblk0p1/hub75_anim_heart
+anim_spheres=/run/media/mmcblk0p1/hub75_anim_spheres
+lrwxrwxrwx    1 root     root            27 Mar  3 06:30 /bin/3dplay -> /run/media/mmcblk0p1/3dplay
+playing /run/media/mmcblk0p1/hub75_anim_spheres
+PLAY_NEW_DONE
+root@petalinux_boot_from_sd:~# 

@@ -1,0 +1,8 @@
+﻿ps | grep e2fsck; ls -l /run/media/mmcblk0p1/fsck..log; cat /proc/loadavg; cat /proc/$(pidof e2fsck)/stat 2>/dev/null | cut -d" " --f3
+ 1284 root       0:00 sh -c /tmp/e2fsck -f -y /dev/mmcblk0p2 > /run/media/mmcblk0p1/fsck.log 2>&1; echo EXIT=$? >> /run/media/mmcblk0p1/fsck.log
+ 1285 root       0:06 /tmp/e2fsck -f -y /dev/mmcblk0p2
+ 1299 root       0:00 grep e2fsck
+-rwxrwx---    1 root     disk       1882718 Mar  3 06:36 /run/media/mmcblk0p1/fsck.log
+1.80 1.14 0.58 3/50 1301
+D
+root@petalinux_boot_from_sd:~# 

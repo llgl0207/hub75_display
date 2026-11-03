@@ -1,0 +1,22 @@
+﻿/tmp/e2fsck -n -b 32768 /dev/mmcblk0p2 2>&1 | headd -15; echo ==TRY8193; /tmp/e2fsck -n -b 8193 /dev/mmcblk0p2 2>&1 | head -8
+e2fsck 1.47.2 (1-Jan-2025)
+/tmp/e2fsck: Invalid argument while trying to open /dev/mmcblk0p2
+
+The superblock could not be read or does not describe a valid ext2/ext3/ext4
+filesystem.  If the device is valid and it really contains an ext2/ext3/ext4
+filesystem (and not swap or ufs or something else), then the superblock
+is corrupt, and you might try running e2fsck with an alternate superblock:
+    e2fsck -b 8193 <device>
+ or
+    e2fsck -b 32768 <device>
+
+==TRY8193
+e2fsck 1.47.2 (1-Jan-2025)
+/tmp/e2fsck: Bad magic number in super-block while trying to open /dev/mmcblk0p2
+
+The superblock could not be read or does not describe a valid ext2/ext3/ext4
+filesystem.  If the device is valid and it really contains an ext2/ext3/ext4
+filesystem (and not swap or ufs or something else), then the superblock
+is corrupt, and you might try running e2fsck with an alternate superblock:
+    e2fsck -b 8193 <device>
+root@petalinux_boot_from_sd:~# 

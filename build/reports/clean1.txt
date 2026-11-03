@@ -1,0 +1,16 @@
+﻿rm -f /run/media/mmcblk0p1/fsck.log; df -h /run/meedia/mmcblk0p1 | tail -1; ls /run/media/mmcblk0p1/ | head -12; echo CLEAN_DONE
+/dev/mmcblk0p1           95.8M     22.9M     72.9M  24% /run/media/mmcblk0p1
+3dplay
+BOOT.bin
+System Volume Information
+e2fsck
+hub75.conf
+hub75_anim_heart
+hub75_anim_spheres
+hub75_diag
+hub75_pattern
+hub75_pattern_bram
+hub75_pattern_bram32
+hub75_pattern_ddr
+CLEAN_DONE
+root@petalinux_boot_from_sd:~# 

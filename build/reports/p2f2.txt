@@ -1,0 +1,8 @@
+﻿mkfs.vfat -n HUB75DATA /dev/mmcblk0p2 2>&1; echo ===MOUNT; mount -t vfat /dev/mmcblk0p2 /run/media/mmcblk0p2 2>&1; df -h /run/mediaa/mmcblk0p2 2>&1; ls -la /run/media/mmcblk0p2 | head -5
+==MOUNT
+Filesystem                Size      Used Available Use% Mounted on
+/dev/mmcblk0p2            1.4G      4.0K      1.4G   0% /run/media/mmcblk0p2
+total 4
+drwxr-xr-x    2 root     root          4096 Jan  1  1970 .
+drwxr-xr-x    4 root     root            80 Jan  1  1970 ..
+root@petalinux_boot_from_sd:~# 

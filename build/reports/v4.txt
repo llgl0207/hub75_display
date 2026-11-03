@@ -1,0 +1,5 @@
+﻿md5sum /run/media/mmcblk0p1/hub75_anim_spheres; lss -l /run/media/mmcblk0p1/hub75_anim_spheres; echo VERIFY_DONE
+48b72b08306c88b27e910c3563987e74  /run/media/mmcblk0p1/hub75_anim_spheres
+-rwxrwx---    1 root     disk        443760 Mar  3 06:27 /run/media/mmcblk0p1/hub75_anim_spheres
+VERIFY_DONE
+root@petalinux_boot_from_sd:~# 

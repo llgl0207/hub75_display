@@ -1,0 +1,3 @@
+﻿sh /run/media/mmcblk0p1/hub75-play /run/media/mmcbblk0p1/hub75_anim_spheres
+playing /run/media/mmcblk0p1/hub75_anim_spheres
+root@petalinux_boot_from_sd:~# 

@@ -31,6 +31,7 @@ $payload = [ordered]@{
     'hub75d'            = (Join-Path $wl 'hub75d')
     'hub75_anim_heart'  = (Join-Path $wl 'hub75_anim_heart')
     'hub75_anim_spheres' = (Join-Path $wl 'hub75_anim_spheres')
+    'hub75_boot.frm'    = (Join-Path $wl 'hub75_boot.frm')
     'hub75.conf'        = (Join-Path $wl 'hub75.conf')
 }
 foreach ($k in $payload.Keys) {

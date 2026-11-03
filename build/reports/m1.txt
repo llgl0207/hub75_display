@@ -1,0 +1,3 @@
+﻿md5sum /run/media/mmcblk0p1/e2fsck
+0480161117d211c8866df8c9c4238e6f  /run/media/mmcblk0p1/e2fsck
+root@petalinux_boot_from_sd:~# 

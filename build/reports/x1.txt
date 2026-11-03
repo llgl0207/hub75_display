@@ -1,0 +1,2 @@
+﻿kill $(pidof hub75d)
+root@petalinux_boot_from_sd:~# 

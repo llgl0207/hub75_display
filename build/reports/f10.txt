@@ -1,0 +1,8 @@
+﻿ls -l /run/media/mmcblk0p1/fsck.log; df -h /run/meedia/mmcblk0p1 | tail -1; tail -2 /run/media/mmcblk0p1/fsck.log; ps | grep -c e2ffsck
+-rwxrwx---    1 root     disk       9358976 Mar  3 06:44 /run/media/mmcblk0p1/fsck.log
+[1]+  Done                    nohup sh -c "/tmp/e2fsck -f -y /dev/mmcblk0p2 > /run/media/mmcblk0p1/fsck.log 2>&1; echo EXIT=\$? >> /run/media/mmcblk0p1/fsck.log" > /dev/null 2>&1
+/dev/mmcblk0p1           95.8M     31.8M     63.9M  33% /run/media/mmcblk0p1
+rootfs: ***** FILE SYSTEM WAS MODIFIED *****
+EXIT=9
+1
+root@petalinux_boot_from_sd:~# 

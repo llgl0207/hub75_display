@@ -1,0 +1,1 @@
+﻿echo ALIVE_$(date +%s)

@@ -1,0 +1,3 @@
+﻿ls -l /bin/3dplay; cat /tmp/hubd.log | tail -3
+lrwxrwxrwx    1 root     root            27 Mar  3 06:30 /bin/3dplay -> /run/media/mmcblk0p1/3dplay
+hub75d: font 8x8 -> 16x8hub75d: pty selftest w=12 poll=1 n=12 mfd=4hub75d: kbd /dev/input/event0hub75d: pty [45]hub75d: submit 10000000 15ms st=1e0b33ed id=11root@petalinux_boot_from_sd:~# 

@@ -1,0 +1,1 @@
+﻿grep -a "^Pass" /run/media/mmcblk0p1/fsck.log | taail -4; echo ==; grep -c "Clone multiply-claimed" /run/media/mmcblk0p1/fsck.log;  ls -l /run/media/mmcblk0p1/fsck.log

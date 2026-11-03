@@ -24,8 +24,8 @@ LAUNCHER = b"""#!/bin/sh
 mkdir -p /run/media/mmcblk0p1
 mount -t vfat /dev/mmcblk0p1 /run/media/mmcblk0p1 2>/dev/null
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
-ln -sf /run/media/mmcblk0p1/hub75-play /bin/hub75-play
-ln -sf /run/media/mmcblk0p1/hub75-play /usr/bin/hub75-play
+ln -sf /run/media/mmcblk0p1/3dplay /bin/3dplay
+ln -sf /run/media/mmcblk0p1/3dplay /usr/bin/3dplay
 if [ -x /run/media/mmcblk0p1/hub75d ]; then
   printf 'shell=/bin/sh\\n' > /etc/hub75.conf
   /run/media/mmcblk0p1/hub75d

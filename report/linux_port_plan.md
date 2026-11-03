@@ -694,7 +694,70 @@ hub75d 日志出现 `hub75d: kbd /dev/input/eventN`。
 - 待上板验证：刷入新 hub75d（MD5 `ec3fbac4…`）与含 `font=8x8` 的配置，
   确认 16×8 文字、光标和 vi 正常。
 
-## 17. 简单播放接口 `hub75-play`（2026-11-03，已在板上验证）
+## 17. 简单播放接口 `3dplay`（原 `hub75-play`，2026-11-03 板上验证）
+
+> 用户要求把程序名从 `hub75-play` 改为 `3dplay`；动画名当前为 `heart`、`spheres`。
+
+- 卡 FAT 根脚本 `3dplay`（原 `hub75-play` 重命名），用法：
+  - `3dplay heart` / `3dplay spheres`：按 `hub75.conf` 的 `anim_<名字>=<路径>` 解析并播放；
+  - `3dplay /run/media/mmcblk0p1/hub75_anim_xxx`：直接按路径播放；
+  - `3dplay stop`：写 `mode console` 回控制台。
+- `hub75.conf` 动画映射：
+  ```
+  anim_heart=/run/media/mmcblk0p1/hub75_anim_heart
+  anim_spheres=/run/media/mmcblk0p1/hub75_anim_spheres
+  ```
+  新增动画 = 可执行文件放 FAT + 加一行 `anim_<名字>=<路径>` + `3dplay <名字>`。
+- **持久化**：hub75d 启动时自动创建
+  `symlink("/run/media/mmcblk0p1/3dplay", "/bin/3dplay")` 和 `/usr/bin/3dplay`，
+  并删除旧的 `hub75-play` 软链接（不依赖重打 image.ub）。
+- 新增双球动画：`sw/linux/hub75_anim_spheres.c`（左红右绿、半径 12、x=±24），
+  已交叉编译为 `hub75_anim_spheres`（MD5 `48b72b08…`）并通过串口传到板上验证。
+- 串口二进制传输修复：`build/send_bin.ps1` 在关闭串口前等待 `BytesToWrite`
+  清零（之前提前 Close 导致尾部字节丢失，dd 永久等待）；接收端用
+  `exec /bin/sh -c 'stty raw -echo; dd bs=1 count=N ...'` 避免交互 shell 抢 stdin。
+
+## 17.1 ext4 分区抢救与格式化（2026-11-03）
+
+- 现象：`/dev/mmcblk0p2`（厂商 ext4 rootfs）目录块/inode 校验错误、
+  多 inode 争用数据块、动态加载器数据损坏；内核挂载警告 `mounting fs with errors`。
+- 在 `lain0`（Raspberry Pi 5、Debian 13、aarch64）上用 apt 安装
+  `gcc-arm-linux-gnueabihf`，从 kernel.org 源码交叉编译了 **静态 ARM e2fsck 1.47.2**
+  （`e2fsck_arm_static`，1,005,296 B，MD5 `04801611…`），经串口传到板上。
+- 板上 `umount` p2 后执行 `/tmp/e2fsck -f -y /dev/mmcblk0p2`
+  （日志 9.4MB）：修复了大量 inode/目录/块争用，但最终报
+  `Block bitmap/Inode bitmap/Inode table for group 0 overlaps superblock`、
+  `group descriptors corrupted`，`e2fsck: aborted`（EXIT=9）。
+  备份超级块 8193/32768 也无效，分区无法再挂载 → **厂商 rootfs 无法恢复**，
+  板载 gcc 随之失效。
+- 处置：`mkfs.vfat -n HUB75DATA /dev/mmcblk0p2`，格式化为 1.4GB FAT32
+  并挂载到 `/run/media/mmcblk0p2`。注意卡总容量 31GB，分区表只用了约 1.6GB
+  （约 29GB 未分配，后续可用 fdisk 扩展）。
+- 教训：该 SD 卡曾出现大范围文件系统损坏，建议重要数据另存并留意卡片老化；
+  显示系统本身不依赖 p2（从 initramfs 启动）。
+
+## 17.3 上电画面与 600 RPM 无 IR 回落（2026-11-03）
+
+- **上电画面（不改 bitstream）**：先在 PC 上生成 64 slice × 3072 B 的启动帧
+  `hub75_boot.frm`（`build/gen_boot_frame.py`，四行文字：MIZAR Z7 / HUB75 LINUX /
+  BOOTING... / 3D DISPLAY），放进 FAT 根；`uEnv.txt` 的 `uenvcmd` 用
+  `fatload` 读入 DDR，再 `mw.l` 写 AXI GPIO（frame_base、enable、翻转 submit）。
+- **白屏根因**：厂商 U-Boot 的 `netstart=0x10000000`，`cp_kernel2ram` 在
+  `uenvcmd` 之后把 `image.ub`（约 10MB）加载到 0x10000000，正好覆盖启动帧，
+  PL 显示 FIT 压缩数据 → 白屏。修复：启动帧改到 **0x18000000**（仍在 PL 的
+  0~0x1FFFFFFF 窗口内，且避开内核 `mem=256M` 与 FIT 加载区）。
+- **600 RPM 回落**：用户要求“无 IR 时默认刷新 1800→600 RPM”以便静态清晰。
+  `src/hub75_ps_top.v`（PS+DDR 产品 build）与 `src/hub75_top.v` 的默认
+  `FALLBACK_RPM` 改为 600（600 是 60 的倍数，周期 5,000,000 拍 @50 MHz，
+  slot 78,125 拍 = 1.5625 ms）。PL-only 板测镜像在
+  `build/build_board_test.tcl` 里显式 `FALLBACK_RPM=1800`，不受影响。
+  需要重编 bitstream + 重新 bootgen BOOT.bin。
+- **shell 刷新节流**：`hub75.conf` 新增 `submit_ms=`（默认 80ms ≈ 12.5 fps，
+  仅在文字变化时提交；150ms ≈ 6.7 fps，500ms ≈ 2 fps）。与 600 RPM 回落配合
+  可获得更“慢”的 shell 画面；改完 `kill -HUP $(pidof hub75d)` 生效。
+- 构建注意：Vivado 在启动综合前偶发 `0xC0000005`（访问冲突）崩溃，重跑即可。
+
+## 17.2 原 `hub75-play` 旧记录（保留备查）
 
 - 卡 FAT 根新增脚本 `hub75-play`（可执行）：
   - `hub75-play heart`：按 `hub75.conf` 里的 `anim_heart=<路径>` 解析后播放；

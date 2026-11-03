@@ -1,0 +1,4 @@
+﻿cp /run/media/mmcblk0p1/e2fsck /tmp/e2fsck; chmod  +x /tmp/e2fsck; umount /run/media/mmcblk0p2; nohup sh -c "/tmp/e2fsck -f -y /devv/mmcblk0p2 > /run/media/mmcblk0p1/fsck.log 2>&1; echo EXIT=\$? >> /run/media/mmccblk0p1/fsck.log" >/dev/null 2>&1 & echo FSCK_STARTED
+[1] 1284
+FSCK_STARTED
+root@petalinux_boot_from_sd:~# 

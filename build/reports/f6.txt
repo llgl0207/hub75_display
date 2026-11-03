@@ -1,0 +1,7 @@
+﻿ls -l /run/media/mmcblk0p1/fsck.log; df -h /run/meedia/mmcblk0p1 | tail -1; tail -2 /run/media/mmcblk0p1/fsck.log; ps | grep -c e2ffsck
+-rwxrwx---    1 root     disk       2386982 Mar  3 06:38 /run/media/mmcblk0p1/fsck.log
+/dev/mmcblk0p1           95.8M     25.2M     70.6M  26% /run/media/mmcblk0p1
+Clone multiply-claimed blocks? yes
+
+3
+root@petalinux_boot_from_sd:~# 

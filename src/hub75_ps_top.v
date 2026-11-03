@@ -15,7 +15,7 @@ module hub75_ps_top #(
     parameter integer IR_HOLDOFF_US  = 1000,
     parameter integer SLOT_LOG2    = 6,
     parameter integer ROW_LOG2     = 5,
-    parameter integer FALLBACK_RPM = 1800,
+    parameter integer FALLBACK_RPM = 600,
     parameter integer PATTERN_MODE = 3,
     parameter integer RGB2_COLUMN_OFFSET = 0
 ) (

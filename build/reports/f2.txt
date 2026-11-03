@@ -1,0 +1,8 @@
+﻿tail -4 /run/media/mmcblk0p1/fsck.log; echo ==; pss | grep -c e2fsck
+Multiply-claimed block(s) in inode 53428: 10310
+Multiply-claimed block(s) in inode 53429: 10311
+Multiply-claimed block(s) in inode 53435: 10308
+Pass 1C: Scanning directories for inodes with multiply-claimed blocks
+==
+3
+root@petalinux_boot_from_sd:~# 

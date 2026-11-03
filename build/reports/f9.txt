@@ -1,0 +1,5 @@
+﻿ls -l /run/media/mmcblk0p1/fsck.log; tail -2 /run//media/mmcblk0p1/fsck.log; ps | grep -c e2fsck
+-rwxrwx---    1 root     disk       7292965 Mar  3 06:42 /run/media/mmcblk0p1/fsck.log
+	... (inode #38395, mod time Thu Jul 21 11:25:46 2022)
+	/usr/share/alsa/ucm/PandaBoardES/FMAnalog3
+root@petalinux_boot_from_sd:~# 

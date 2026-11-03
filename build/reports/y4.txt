@@ -1,0 +1,8 @@
+﻿8hub75d; ls -l /bin/3dplay /run/media/mmcblk0p1/e2fsck /run/media/mmcblk0p1/hub75d; echo VERIFY_ALL
+root@petalinux_boot_from_sd:~# hub75d; ls -l /bin/3dplay /run/media/mmcblk0p1/e2ffsck /run/media/mmcblk0p1/hub75d; echo VERIFY_ALL
+-sh: hub75d: command not found
+lrwxrwxrwx    1 root     root            27 Mar  3 06:30 /bin/3dplay -> /run/media/mmcblk0p1/3dplay
+-rwxrwx---    1 root     disk       1005296 Mar  3 06:34 /run/media/mmcblk0p1/e2fsck
+-rwxrwx---    1 root     disk        477736 Mar  3 06:34 /run/media/mmcblk0p1/hub75d
+VERIFY_ALL
+root@petalinux_boot_from_sd:~# 

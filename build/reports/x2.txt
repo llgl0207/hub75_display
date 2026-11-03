@@ -1,0 +1,3 @@
+﻿root
+-sh: root: command not found
+root@petalinux_boot_from_sd:~# 

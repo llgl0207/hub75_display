@@ -1,0 +1,3 @@
+﻿echo READY_OK
+READY_OK
+root@petalinux_boot_from_sd:~# 

@@ -1,0 +1,10 @@
+﻿fdisk -l /dev/mmcblk0 2>&1 | tail -8
+4 heads, 16 sectors/track, 954208 cylinders
+Units = cylinders of 64 * 512 = 32768 bytes
+
+        Device Boot      Start         End      Blocks  Id System
+/dev/mmcblk0p1              33        3104       98304   c Win95 FAT32 (LBA)
+Partition 1 does not end on cylinder boundary
+/dev/mmcblk0p2            3105       48896     1465344  83 Linux
+Partition 2 does not end on cylinder boundary
+root@petalinux_boot_from_sd:~# 

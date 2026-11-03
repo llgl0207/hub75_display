@@ -262,6 +262,7 @@ static int render_text(int cursor)
 static int anim_pid = -1;
 static int g_dirty = 1;
 static int cmd_fd = -1;
+static int g_submit_ms = 80;        /* console submit throttle */
 
 /* ---------------- USB keyboard (Linux evdev) ----------------
  *
@@ -478,6 +479,7 @@ static void load_config(void)
         if (!strncmp(line, "anim=", 5))       { key = 1; val = line + 5; }
         else if (!strncmp(line, "shell=", 6)) { key = 2; val = line + 6; }
         else if (!strncmp(line, "font=", 5))  { key = 3; val = line + 5; }
+        else if (!strncmp(line, "submit_ms=", 10)) { key = 4; val = line + 10; }
         if (!val) continue;
         int n = (int)strlen(val);
         while (n > 0 && (val[n-1] == '\n' || val[n-1] == '\r' ||
@@ -502,6 +504,12 @@ static void load_config(void)
             g_rows = PANEL_H / g_char_h;
             g_cols = PANEL_W / CHAR_W;
             fprintf(stderr, "hub75d: font %s -> %dx%d", val, g_cols, g_rows);
+        } else if (key == 4) {
+            int ms = atoi(val);
+            if (ms < 20) ms = 20;
+            if (ms > 2000) ms = 2000;
+            g_submit_ms = ms;
+            fprintf(stderr, "hub75d: submit_ms %d", ms);
         }
     }
     fclose(f);
@@ -645,6 +653,11 @@ int main(int argc, char **argv)
     __sync_synchronize();
 
     load_config();
+    /* Keep the playback command reachable as a bare name after every boot. */
+    symlink("/run/media/mmcblk0p1/3dplay", "/bin/3dplay");
+    symlink("/run/media/mmcblk0p1/3dplay", "/usr/bin/3dplay");
+    unlink("/bin/hub75-play");
+    unlink("/usr/bin/hub75-play");
     signal(SIGHUP, on_hup);
     const char *shell = argc > 1 ? argv[1] : (cfg_shell[0] ? cfg_shell : "/bin/sh");
 
@@ -771,7 +784,8 @@ int main(int argc, char **argv)
         }
         {
             uint64_t now = ticks();
-            if (anim_pid < 0 && g_dirty && (now - last_submit) > 80ULL * TICKS_PER_MS) {
+            if (anim_pid < 0 && g_dirty &&
+                (now - last_submit) > (uint64_t)g_submit_ms * TICKS_PER_MS) {
                 render_text(1);
                 uint8_t *dst = frame_map + (fb ? FRAME_SPAN : 0);
                 uint32_t phys = fb ? FRAME_B : FRAME_A;
