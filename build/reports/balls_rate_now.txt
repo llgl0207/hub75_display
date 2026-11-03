@@ -1,0 +1,15 @@
+﻿for i in 1 2 3 4 5 6; do devmem 0x41210000; sleep 1; done >/dev/ttyPS0
+0x9C7918CD
+balls B=0ms R=5ms S=63ms
+0xE68322ED
+balls B=0ms R=4ms S=64ms
+0xF08D2FED
+balls B=0ms R=4ms S=64ms
+0xFA973CED
+balls B=0ms R=4ms S=64ms
+0xC5A20FC4
+balls B=1ms R=4ms S=64ms
+0xCFAC1BC4
+balls B=0ms R=4ms S=64ms
+balls B=0ms R=4ms S=64ms
+balls B=0ms R=4ms S=64ms

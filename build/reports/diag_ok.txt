@@ -1,0 +1,3 @@
+﻿echo DIAG_OK_123 >/dev/ttyPS0
+DIAG_OK_123
+hub75d: pty [43]hub75d: submit 10200000 7ms st=440207e4 id=2

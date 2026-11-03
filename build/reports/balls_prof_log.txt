@@ -1,0 +1,23 @@
+﻿chmod +x /run/media/mmcblk0p1/hub75_anim_balls; 3dplay balls >/dev/ttyPS0; sleep 20
+playing /run/media/mmcblk0p1/hub75_anim_balls
+hub75d: anim mode -> /run/media/mmcblk0p1/hub75_anim_ballsballs B=0ms R=4ms S=64ms
+balls B=0ms R=4ms S=64ms
+balls B=0ms R=4ms S=64ms
+balls B=0ms R=4ms S=64ms
+balls B=0ms R=4ms S=64ms
+balls B=0ms R=4ms S=64ms
+balls B=0ms R=4ms S=64ms
+balls B=0ms R=4ms S=64ms
+balls B=0ms R=4ms S=64ms
+balls B=0ms R=4ms S=64ms
+balls B=0ms R=4ms S=64ms
+balls B=0ms R=4ms S=64ms
+balls B=0ms R=4ms S=64ms
+balls B=0ms R=4ms S=64ms
+balls B=0ms R=4ms S=64ms
+balls B=0ms R=4ms S=64ms
+balls B=0ms R=4ms S=64ms
+balls B=0ms R=4ms S=64ms
+balls B=0ms R=4ms S=64ms
+balls B=0ms R=4ms S=64ms
+balls B=0ms R=4ms S=64ms

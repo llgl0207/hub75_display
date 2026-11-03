@@ -1,0 +1,5 @@
+﻿chmod +x /run/media/mmcblk0p1/hub75_anim_balls; md5sum /run/media/mmcblk0p1/hub75_anim_balls >/dev/ttyPS0; grep -q "^anim_balls=" /run/media/mmcblk0p1/hub75.conf || echo "anim_balls=/run/media/mmcblk0p1/hub75_anim_balls" >> /run/media/mmcblk0p1/hub75.conf; tail -3 /run/media/mmcblk0p1/hub75.conf >/dev/ttyPS0
+0aad4824aa7dc5c825718254adcad291  /run/media/mmcblk0p1/hub75_anim_balls
+submit_ms=150
+anim_helix=/run/media/mmcblk0p1/hub75_anim_helix
+anim_balls=/run/media/mmcblk0p1/hub75_anim_balls

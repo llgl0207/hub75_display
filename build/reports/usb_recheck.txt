@@ -1,0 +1,33 @@
+﻿echo ALIVE_$(date +%s) >/dev/ttyPS0; dmesg | tail -40 >/dev/ttyPS0 2>&1; echo ---USB--- >/dev/ttyPS0; ls /sys/bus/usb/devices/ >/dev/ttyPS0 2>&1; echo ---INPUT--- >/dev/ttyPS0; cat /proc/bus/input/devices >/dev/ttyPS0 2>&1
+hub75d: pty [250]hub75d: submit 10200000 13ms st=56022ee4 id=2hub75d: pty [2]ALIVE_1583216834
+of_cfs_init
+of_cfs_init: OK
+clk: Not disabling unused clocks
+ALSA device list:
+  No soundcards found.
+mmc0: new high speed SDHC card at address 0001
+mmcblk0: mmc0:0001 SD 29.1 GiB 
+ mmcblk0: p1 p2
+Freeing unused kernel memory: 1024K
+ude?
+
+U-Boot 2018.01 (Mar 03 2020 - 06:23:28 +0000) Xilinx Zynq ZC702
+
+Board: Xilinx Zynq
+Silicon: v3.1
+DRAM:  ECC disabled 1 GiB
+MMC:   mmc@e0100000: 0 (SD)
+** No device specified **
+Using default environment
+
+In:    serial@e0001000
+Out:   serial@e0001000
+Err:   serial@e0001000
+Board: Xilinx Zynq
+Silicon: v3.1
+Net:   ZYNQ GEM: e000b000, phyaddr ffffffff, interface rgmii-id
+eth0: ethernet@e000b000
+U-BOOT for petalinux_boot_from_sd
+
+ethernet@e000b000 Waiting for PHY auto negotiation to complete......... TIMEOUT !
+Hit any key to stop autoboot:  4  3 

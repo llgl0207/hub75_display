@@ -1,0 +1,3 @@
+﻿3dplay balls >/dev/ttyPS0; sleep 1
+playing /run/media/mmcblk0p1/hub75_anim_balls
+hub75d: anim mode -> /run/media/mmcblk0p1/hub75_anim_balls

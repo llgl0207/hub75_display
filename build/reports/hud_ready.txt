@@ -1,0 +1,4 @@
+﻿echo HUD_READY >/dev/ttyPS0; pidof hub75d >/dev/ttyPS0; md5sum /run/media/mmcblk0p1/hub75_fx >/dev/ttyPS0
+HUD_READY
+1164
+7c2c2b3a44329d12d0b319f2e683f355  /run/media/mmcblk0p1/hub75_fx

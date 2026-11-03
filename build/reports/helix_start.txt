@@ -1,0 +1,2 @@
+﻿3dplay helix; sleep 2; ps >/dev/ttyPS0
+hub75d: anim mode -> /run/media/mmcblk0p1/hub75_anim_helix

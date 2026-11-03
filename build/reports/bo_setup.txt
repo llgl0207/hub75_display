@@ -1,0 +1,6 @@
+﻿chmod +x /run/media/mmcblk0p1/hub75_game_breakout; md5sum /run/media/mmcblk0p1/hub75_game_breakout >/dev/ttyPS0; printf "sens=0.12\nspeed=55\n" > /run/media/mmcblk0p1/breakout.conf; grep -q "^anim_breakout=" /run/media/mmcblk0p1/hub75.conf || echo "anim_breakout=/run/media/mmcblk0p1/hub75_game_breakout" >> /run/media/mmcblk0p1/hub75.conf; tail -4 /run/media/mmcblk0p1/hub75.conf >/dev/ttyPS0
+d5e299d1b51d4f1b5bdf15652a3596f2  /run/media/mmcblk0p1/hub75_game_breakout
+submit_ms=150
+anim_helix=/run/media/mmcblk0p1/hub75_anim_helix
+anim_balls=/run/media/mmcblk0p1/hub75_anim_balls
+anim_breakout=/run/media/mmcblk0p1/hub75_game_breakout

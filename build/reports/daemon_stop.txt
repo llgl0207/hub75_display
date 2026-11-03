@@ -1,0 +1,2 @@
+﻿kill -STOP $(pidof hub75d); echo DAEMON_STOPPED >/dev/ttyPS0
+hub75d: pty [70]hub75d: submit 10000000 12ms st=19053bed id=5DAEMON_STOPPED

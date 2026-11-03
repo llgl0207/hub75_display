@@ -1,0 +1,36 @@
+﻿echo ---NET--- >/dev/ttyPS0; ifconfig -a >/dev/ttyPS0 2>&1; echo ---WLAN--- >/dev/ttyPS0; iwconfig >/dev/ttyPS0 2>&1; echo ---USB--- >/dev/ttyPS0; lsusb >/dev/ttyPS0 2>&1; echo ---MOD--- >/dev/ttyPS0; lsmod >/dev/ttyPS0 2>&1; echo ---WHICH--- >/dev/ttyPS0; which wpa_supplicant iw wpa_cli udhcpc >/dev/ttyPS0 2>&1
+---NET---
+eth0      Link encap:Ethernet  HWaddr 00:0A:35:00:1E:53  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+          Interrupt:26 Base address:0xb000 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1%1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+sit0      Link encap:IPv6-in-IPv4  
+          NOARP  MTU:1480  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+---WLAN---
+sh: iwconfig: command not found
+---USB---
+Bus 001 Device 001: ID 1d6b:0002
+Bus 001 Device 002: ID 4037:2804
+---MOD---
+    Not tainted
+uio_pdrv_genirq 16384 0 - Live 0xbf000000
+---WHICH---
+/sbin/udhcpc

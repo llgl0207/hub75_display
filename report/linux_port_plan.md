@@ -723,8 +723,11 @@ SIGINT——进程当场死亡，之后内核仍回显串口输入，但已无�
 - 第二次拔插：`kbd removed` → 内核直接 `usb 1-1: new full-speed USB device number 3`
   → `kbd /dev/input/event0`，无需 kick。
 - 用户确认“USB 问题已经修复完成”。
-- 卡上运行的是 `cc945fad…` 版本；本地另有一版把 kick 限制为最多 5 次（`8116655f…`），
-  尚未部署。U-Boot 预复位 `mw.l 0xE0002140 0x2` 也仍待传输/重启验证。
+- 后续（2026-11-03 晚）：新版 hub75d `8116655f…`（kick 最多 5 次）已写入卡并在跑；
+  `uEnv.txt` 已换成含 `mw.l 0xE0002140 0x2` 的 361 B 版本
+  （MD5 `4b3db2697be5e69d9b87537334293a8c`）。重启实测：U-Boot 执行该复位后，
+  内核 `ULPI integrity check: passed`，接收器正常枚举，daemon 打出
+  `kbd /dev/input/event0`，全程没有触发 `usb recover`。
 
 **上板进展（2026-11-03 晚）**：
 
@@ -745,9 +748,13 @@ SIGINT——进程当场死亡，之后内核仍回显串口输入，但已无�
   ULPI 访问沿用 U-Boot 留下的控制器状态，一旦 RUN 锁死就 `-110`。
   因此修复方向是**在 U-Boot 启动内核前复位控制器**：
   `uEnv.txt` 的 `uenvcmd` 增加 `mw.l 0xE0002140 0x2`（USBCMD.RST，此时
-  USB0 APER 时钟由 ps7_init 开着）。该改动已写入本地 `uEnv.txt`，待下次传输/重启验证。
+  USB0 APER 时钟由 ps7_init 开着）。该改动已上卡，并在 2026-11-03 晚的重启中
+  验证生效（见下文“板上验证”）。
 - 结论：daemon 侧的热插拔修复与 "插着但未枚举" 检测保留；冷启动不应依赖
   daemon 反复 rebind（会在成功时引发风暴），应由 U-Boot 预复位 + 一次兜底。
+- **根因补充（用户排查，2026-11-03）**：USB 掉线/枚举失败的最终原因是
+  **供电欠压**（电源/电池压降），不是软件缺陷。软件侧的 U-Boot 预复位与
+  daemon 限次重试保留作为缓解；根治办法是稳定供电。
 
 ## 16. 显示：可配置字体大小（2026-11-03）
 
@@ -870,3 +877,141 @@ SIGINT——进程当场死亡，之后内核仍回显串口输入，但已无�
   已补全 ED/EL 参数：`J` 0/无参=光标到屏尾、1=屏首到光标、2/3=整屏；
   `K` 0=光标到行尾、1=行首到光标、2=整行；并处理 `ESC c`（RIS）整屏复位。
   （不是 PS 写显存的问题。）新 hub75d MD5 `8ff60441…`，待刷入验证。
+
+## 17.4 旋转 DNA 双螺旋动画 `hub75_anim_helix`（2026-11-03）
+
+- 新增 `sw/linux/hub75_anim_helix.c`：**真动画**（不是静态体积）——
+  红/青两条螺旋链绕竖直轴旋转、整体缓慢上下浮动，链间有白色横档；
+  每帧先构建 128×128×64 体素网格（世界单位），再沿 64 个旋转切面采样，
+  打包成 6-bit 帧并用 A/B 双缓冲提交。
+- 参数：半径 24、管径 3.2、螺距 0.30 rad/行（约 3 圈）、每 6 行一道横档；
+  旋转 1.6 rad/s（约 3.9 s 一圈）、上下浮动 ±2 行；提交间隔 30 ms。
+- 编译（Vitis 13.4 静态 ARM）：
+  `arm-linux-gnueabihf-gcc.exe -O2 -static -I sw/common -o hub75_anim_helix sw/linux/hub75_anim_helix.c sw/common/hub75_frame.c -lm`
+  产物 450,020 B，MD5 `db98ddd47a21e800654b8e20de6e5971`。
+- 已通过串口 ack 协议写入卡 FAT 并 `chmod +x`，板上 MD5 校验一致；
+  `hub75.conf` 增加 `anim_helix=/run/media/mmcblk0p1/hub75_anim_helix`。
+- 板上实测：`3dplay helix` → daemon 日志 `anim mode -> ...`，
+  `hub75_anim_helix` 进程常驻；读 PL 状态 `0x41210000` 一秒内 frame_id
+  73→83（约 10 fps，600 RPM 回落的自然节拍），动画持续提交。
+- 主机预览：`build/preview_helix.py` 用同一几何生成
+  `build/reports/helix_preview.png`（红/青双螺旋 + 白色横档）。
+
+## 17.5 跳动的小球 `hub75_anim_balls`（2026-11-03）
+
+- 新增 `sw/linux/hub75_anim_balls.c`：4 个不同颜色/半径的小球做**解析抛物线弹跳**
+  （红 r6、绿 r5、蓝 r5、黄 r4.5），每球有独立弹跳周期（0.95–1.45 s）和高度
+  （30–46 世界单位），同时以不同半径/方向绕竖直轴缓慢公转。
+- 落地效果：接近地面时垂直压扁到 0.72（底部保持接触）；每次落地生成一个
+  0.32 s 的扩张圆环（球的颜色），在 10 fps 锁存下也能看清弹跳节奏。
+- 渲染沿用 `hub75_anim_helix` 的体素网格 + 64 切面采样 + A/B 双缓冲；
+  主机预览 `build/preview_balls.py` → `build/reports/balls_preview.png`（4 帧）。
+- 编译产物 450,084 B，MD5 `0aad4824aa7dc5c825718254adcad291`；
+  已写入卡 FAT、`chmod +x`、MD5 校验一致；`hub75.conf` 增加
+  `anim_balls=/run/media/mmcblk0p1/hub75_anim_balls`。
+- 性能剖析（`-DPROFILE` 版本，日志走 ttyPS0）：build 0–1 ms、render 4–5 ms、
+  submit 63–64 ms（其中大部分是在等 PL 在 revolution 锁存），循环约 100 ms。
+- 稳定后读 `0x41210000`：frame_id 每秒 +10（600 RPM 回落 / IR 正常时 10 rev/s），
+  即动画以 10 fps 更新。刚切换动画后的最初几次采样曾只有 +2–3/s，随后恢复到
+  +10/s——这是 PL 调度器锁存的 revolution 周期值（`period_latched`）造成的，
+  不是动画程序的问题。
+- 板上 `3dplay balls` 运行正常；面板键盘任意键或 `3dplay stop` 回控制台。
+
+## 17.6 鼠标游戏 `hub75_game_breakout`（2026-11-03）
+
+- 目标：用 USB 无线鼠标玩**打砖块**。128×64 的 2D 画面复制到全部 64 个 slice，
+  旋转屏上从任何角度都是一幅稳定的 2D 图像（与 hub75d 的 console2d 相同）。
+- 操作：鼠标 `REL_X` 控制挡板左右移动；左键发球/重开；掉球失一条命（共 3 条）；
+  清空 4×8 砖块获胜。
+- 物理：抛物线路线的球、墙体/挡板/砖块碰撞（子步进 ≤0.5 px 防穿透）；
+  按击球点改变反弹角；每打掉一块砖球速 +0.6（上限 80 px/s）。
+- 画面：顶部 HUD（3 位分数、剩余命图标、分隔线）、4 行彩色砖块、白色挡板、
+  白色小球；`GAME OVER` / `YOU WIN` 时先盖黑底再写字。
+- 鼠标：扫描 `/dev/input/event0..31`，用 `EVIOCGBIT` 找同时具备
+  `EV_REL`+`REL_X`+`BTN_LEFT` 的节点；4.14 evdev 的 16 字节记录手工解析
+  （静态 glibc 的 `struct input_event` 是 24 字节）。
+- 配置：`/run/media/mmcblk0p1/breakout.conf`，支持 `sens=`（像素/计数，默认 0.12）
+  和 `speed=`（球速 px/s，默认 55）；改完重新 `3dplay breakout` 生效。
+- 编译产物 468,888 B，MD5 `d5e299d1b51d4f1b5bdf15652a3596f2`。
+- 主机预览：`build/preview_breakout.c` + `build/raw_to_png.py` →
+  `build/reports/breakout_preview.png`（READY/PLAY/OVER 三帧，布局已验证）。
+- 运行：`hub75.conf` 加 `anim_breakout=/run/media/mmcblk0p1/hub75_game_breakout`，
+  然后 `3dplay breakout`。面板键盘任意键退出游戏回控制台。
+- **已部署（2026-11-03 晚）**：`hub75_game_breakout`（MD5 `d5e299d1…`）与
+  `breakout.conf` 已写入卡 FAT，`hub75.conf` 增加 `anim_breakout=…`。
+  重启后 `3dplay breakout` 实测：daemon 日志 `anim mode -> …`，游戏日志
+  `breakout: sens=0.12 speed=55`、`breakout: mouse /dev/input/event1`，
+  PL frame_id 每秒 +10（10 fps 锁存）。鼠标灵敏度/球速待用户试玩后调整。
+
+## 17.7 体积视觉特效 `hub75_fx`（2026-11-03）
+
+一个 multicall 二进制内含 4 个效果，共用体素框架
+`sw/linux/hub75_fx_common.{h,c}`：每个效果只实现 `build(t_ms)` 填充
+`128×128×64` 体素网格，框架负责按 64 个旋转切面采样、打包 6-bit 帧、
+A/B 双缓冲提交（含 pending 等待，避免撕裂）。
+
+- **blackhole**（`fx_blackhole.c`）：中心黑洞 + 倾斜约 30° 的吸积盘，
+  900 个盘粒子按 `ω=45/r^1.2` 差速旋转（内快外慢），颜色按半径
+  白→黄→红→品红；10.5 半径处一圈白色光子环；上下各一束蓝/青喷流。
+- **fireworks**（`fx_fireworks.c`）：8 发火箭按 1.1 s 错峰升空，
+  到顶点炸成 240 个解析弹道粒子（重力 40），颜色白→黄→基色→红渐隐；
+  地面另有 220 个金色喷泉粒子。全部解析计算，帧率无关。
+- **vortex**（`fx_vortex.c`）：1800 个余烬 + 160 个中心亮粒，柱坐标螺旋上升，
+  角速度/半径带正弦扰动，按高度白→黄→红→品红，像火龙卷。
+- **knot**（`fx_knot.c`）：两条 (2,3)/(2,5) 环面结，各 720 个采样点，
+  自旋 + 缓慢翻滚，颜色沿曲线循环，2×2×2 splat 形成光带。
+
+**构建**：
+`arm-linux-gnueabihf-gcc -O2 -static -I sw/linux -o hub75_fx hub75_fx.c
+fx_blackhole.c fx_fireworks.c fx_vortex.c fx_knot.c hub75_fx_common.c -lm`
+
+> **重要修复（2026-11-03 晚）**：`fx_pack()` 最初把 64 个切面都写进同一个
+> 3072 B 缓冲，最后只有 slice 63 的内容被复制到全部 64 片，3D 效果会退化成
+> “单切面复制”。现已改为每片独立的 3072 B 图像、汇总成 192 KB 画布后整帧提交。
+
+最终二进制（含 §17.8 的 tunnel）479,472 B，MD5 `7c2c2b3a44329d12d0b319f2e683f355`。
+
+**部署**：二进制写入 FAT；卡上 `fx_blackhole` / `fx_fireworks` /
+`fx_vortex` / `fx_knot` 四个一行脚本 `exec .../hub75_fx <模式>`；
+`hub75.conf` 增加 `anim_blackhole=…` 等映射；`3dplay <名字>` 播放。
+
+**主机预览**：`build/preview_fx.c`（按 `FX_SRC`/`FX_BUILD_FN` 编译）+
+`build/fx_raw_to_png.py` → `build/reports/fx_blackhole.png` 等，四组布局均已检查。
+
+**板上验证（2026-11-03 晚）**：四个效果依次启动均正常，`pidof hub75_fx`
+有进程，PL `frame_id` 每秒 +10（10 fps 锁存）；当前运行 `knot`。
+切换：`3dplay blackhole|fireworks|vortex|knot`；面板键盘任意键退出。
+
+## 17.8 3D 隧道躲避游戏 `tunnel`（2026-11-03）
+
+- 目标是真正体积化的互动游戏（打砖块是 2D 复制，旋转后没有 3D 感）。
+- **场景**：半径 42 的圆柱隧道；飞船在 z=-20 绕隧道内壁飞行；5 道带缺口的
+  环形墙从 z≈+28 向下降落，玩家要把飞船转到缺口角度穿过去。
+- **操作（键盘版，2026-11-03 起）**：`←/→` 或 `A/D` 连续旋转飞船
+  （默认 2.5 rad/s），`Space/Enter` 开始/重开，`Esc/Q` 退出回控制台。
+  `tunnel.conf` 的 `turn=` 控制旋转速度。游戏启动时用 `EVIOCGRAB`
+  独占键盘，因此 daemon 的“任意键回 shell”不会误杀游戏；`Esc/Q` 退出后
+  grab 释放，daemon 自动回到控制台。
+- **可读性**：最近一道墙在未对准时变红、对准时变白；从飞船向上的虚线
+  “瞄准线”同步变红/绿；缺口两侧有黄色立柱。这是 10 fps 下判断 3D 角度的关键。
+- **规则**：缺口宽度 2.0→0.85 rad 随分数收窄；下降速度 6→16 units/s；
+  3 条命、1.5 s 无敌闪烁；穿过一道墙 +1 分；0 命结束，按 `Space/Enter` 重开。
+- **HUD（重要发现）**：最初把 2D 文字 HUD 做成 `fx_overlay`，同一张 128×64
+  图像 OR 进全部 64 片。用户指出：旋转起来后，每一列文字会变成绕轴的一圈，
+  整个 HUD 退化成“旋转体”，根本读不清——这与 2D 打砖块旋转后失去效果是
+  同一个原因。**2D 图像复制到所有 slice 在扫掠体积显示上不可读。**
+- **修正为 3D HUD**：不再使用 2D overlay；改为体素对象——
+  - 分数：两枚 16×27×4 的 7 段数码管数字，悬浮在隧道中心（0–99）；
+  - 生命：3 个绿色 3D 光球；
+  - 开始：脉冲的 3D 向上箭头；结束：红色 3D “X” + 数字变红。
+  数字面向世界 -y 方向；如果用户站位的观察方向不同，可在后续把 HUD 整体
+  绕轴旋转到面向用户。
+- **构建**：随 `hub75_fx` multicall（`hub75_fx tunnel`），卡上一行脚本
+  `fx_tunnel`，`hub75.conf` 加 `anim_tunnel=/run/media/mmcblk0p1/fx_tunnel`。
+- **键盘版（当前，2026-11-03）**：479,436 B，MD5
+  `46cbca3236db1ac98f46c05f290dac7c`，已上传并运行；日志
+  `tunnel: keyboard /dev/input/event0`（无 `EVIOCGRAB failed`），
+  说明键盘独占成功，daemon 的任意键回 shell 不会误杀游戏。
+  `tunnel.conf` 已改为 `turn=2.5`。待试玩确认旋转速度/难度/3D HUD 可读性。
+- 旧鼠标版（479,376 B，`ace1fbcc…`）已被键盘版取代；3D HUD 的 7 段数字
+  结构和朝向沿用，若站位方向不对可整体绕轴旋转。

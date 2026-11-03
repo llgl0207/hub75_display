@@ -1,0 +1,3 @@
+﻿chmod +x /run/media/mmcblk0p1/hub75_anim_helix; md5sum /run/media/mmcblk0p1/hub75_anim_helix >/dev/ttyPS0; ls -l /run/media/mmcblk0p1/hub75_anim_helix >/dev/ttyPS0
+db98ddd47a21e800654b8e20de6e5971  /run/media/mmcblk0p1/hub75_anim_helix
+-rwxrwx---    1 root     disk        450020 Mar  3 06:41 /run/media/mmcblk0p1/hub75_anim_helix

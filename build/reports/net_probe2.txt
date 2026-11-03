@@ -1,0 +1,32 @@
+﻿echo ---W--- >/dev/ttyPS0; cat /proc/net/wireless >/dev/ttyPS0 2>&1; echo ---K--- >/dev/ttyPS0; find /lib/modules -name "*.ko" 2>/dev/null | head -20 >/dev/ttyPS0; echo ---D--- >/dev/ttyPS0; dmesg | grep -iE "wlan|wifi|cfg80211|mac80211|asix|cdc_ether|usbnet|r8169|8188|7601" | tail -10 >/dev/ttyPS0 2>&1; echo ---E--- >/dev/ttyPS0; cat /sys/class/net/eth0/operstate >/dev/ttyPS0 2>&1; cat /sys/class/net/eth0/carrier >/dev/ttyPS0 2>&1; echo ---S--- >/dev/ttyPS0; ps | grep -i dropbear >/dev/ttyPS0 2>&1; ls /etc/dropbear >/dev/ttyPS0 2>&1
+---W---
+cat: can't open '/proc/net/wireless': No such file or directory
+---K---
+/lib/modules/4.14.0-xilinx-v2018.3/kernel/net/8021q/8021q.ko
+/lib/modules/4.14.0-xilinx-v2018.3/kernel/net/ipv4/ipip.ko
+/lib/modules/4.14.0-xilinx-v2018.3/kernel/net/llc/llc.ko
+/lib/modules/4.14.0-xilinx-v2018.3/kernel/net/bridge/bridge.ko
+/lib/modules/4.14.0-xilinx-v2018.3/kernel/net/802/p8022.ko
+/lib/modules/4.14.0-xilinx-v2018.3/kernel/net/802/psnap.ko
+/lib/modules/4.14.0-xilinx-v2018.3/kernel/net/802/stp.ko
+/lib/modules/4.14.0-xilinx-v2018.3/kernel/crypto/hmac.ko
+/lib/modules/4.14.0-xilinx-v2018.3/kernel/crypto/echainiv.ko
+/lib/modules/4.14.0-xilinx-v2018.3/kernel/crypto/crypto_engine.ko
+/lib/modules/4.14.0-xilinx-v2018.3/kernel/crypto/authencesn.ko
+/lib/modules/4.14.0-xilinx-v2018.3/kernel/crypto/authenc.ko
+/lib/modules/4.14.0-xilinx-v2018.3/kernel/crypto/jitterentropy_rng.ko
+/lib/modules/4.14.0-xilinx-v2018.3/kernel/crypto/drbg.ko
+/lib/modules/4.14.0-xilinx-v2018.3/kernel/crypto/sha256_generic.ko
+/lib/modules/4.14.0-xilinx-v2018.3/kernel/drivers/crypto/virtio/virtio_crypto.ko
+/lib/modules/4.14.0-xilinx-v2018.3/kernel/drivers/remoteproc/zynq_remoteproc.ko
+/lib/modules/4.14.0-xilinx-v2018.3/kernel/drivers/uio/uio_pdrv_genirq.ko
+/lib/modules/4.14.0-xilinx-v2018.3/kernel/drivers/rpmsg/rpmsg_core.ko
+/lib/modules/4.14.0-xilinx-v2018.3/kernel/drivers/rpmsg/virtio_rpmsg_bus.ko
+---D---
+---E---
+down
+0
+---S---
+ 1129 root       0:00 /usr/sbin/dropbear -r /etc/dropbear/dropbear_rsa_host_key -p 22
+ 3129 root       0:00 grep -i dropbear
+dropbear_rsa_host_key

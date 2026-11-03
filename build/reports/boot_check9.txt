@@ -1,0 +1,3 @@
+﻿echo BOOT_CHECK_9 >/dev/ttyPS0
+BOOT_CHECK_9
+hub75d: pty [44]hub75d: submit 10200000 6ms st=7c0200e4 id=2

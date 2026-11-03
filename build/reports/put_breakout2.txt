@@ -1,0 +1,688 @@
+﻿RAWOK
+hub75d: pty [35]hub75d: submit 10200000 6ms st=7b0619e4 id=6[1454ms] TX stty raw -echo; echo R0000 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0000 >/dev/ttyPS0
+[1509ms] R0000
+[1742ms] D0000
+[1750ms] TX stty raw -echo; echo R0001 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0001 >/dev/ttyPS0
+[1804ms] R0001
+[2022ms] D0001
+[2023ms] TX stty raw -echo; echo R0002 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0002 >/dev/ttyPS0
+[2069ms] R0002
+[2300ms] D0002
+[2301ms] TX stty raw -echo; echo R0003 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0003 >/dev/ttyPS0
+[2346ms] R0003
+[2564ms] D0003
+[2565ms] TX stty raw -echo; echo R0004 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0004 >/dev/ttyPS0
+[2610ms] R0004
+[2831ms] D0004
+[2832ms] TX stty raw -echo; echo R0005 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0005 >/dev/ttyPS0
+[2878ms] R0005
+[3109ms] D0005
+[3110ms] TX stty raw -echo; echo R0006 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0006 >/dev/ttyPS0
+[3155ms] R0006
+[3376ms] D0006
+[3376ms] TX stty raw -echo; echo R0007 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0007 >/dev/ttyPS0
+[3423ms] R0007
+[3655ms] D0007
+[3656ms] TX stty raw -echo; echo R0008 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0008 >/dev/ttyPS0
+[3702ms] R0008
+[3918ms] D0008
+[3919ms] TX stty raw -echo; echo R0009 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0009 >/dev/ttyPS0
+[3965ms] R0009
+[4186ms] D0009
+[4186ms] TX stty raw -echo; echo R0010 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0010 >/dev/ttyPS0
+[4233ms] R0010
+[4453ms] D0010
+[4453ms] TX stty raw -echo; echo R0011 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0011 >/dev/ttyPS0
+[4499ms] R0011
+[4718ms] D0011
+[4718ms] TX stty raw -echo; echo R0012 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0012 >/dev/ttyPS0
+[4764ms] R0012
+[4983ms] D0012
+[4984ms] TX stty raw -echo; echo R0013 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0013 >/dev/ttyPS0
+[5030ms] R0013
+[5246ms] D0013
+[5246ms] TX stty raw -echo; echo R0014 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0014 >/dev/ttyPS0
+[5292ms] R0014
+[5509ms] D0014
+[5510ms] TX stty raw -echo; echo R0015 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0015 >/dev/ttyPS0
+[5555ms] R0015
+[5786ms] D0015
+[5787ms] TX stty raw -echo; echo R0016 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0016 >/dev/ttyPS0
+[5834ms] R0016
+[6066ms] D0016
+[6067ms] TX stty raw -echo; echo R0017 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0017 >/dev/ttyPS0
+[6112ms] R0017
+[6299ms] D0017
+[6300ms] TX stty raw -echo; echo R0018 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0018 >/dev/ttyPS0
+[6346ms] R0018
+[6579ms] D0018
+[6580ms] TX stty raw -echo; echo R0019 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0019 >/dev/ttyPS0
+[6625ms] R0019
+[6843ms] D0019
+[6844ms] TX stty raw -echo; echo R0020 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0020 >/dev/ttyPS0
+[6890ms] R0020
+[7106ms] D0020
+[7108ms] TX stty raw -echo; echo R0021 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0021 >/dev/ttyPS0
+[7152ms] R0021
+[7370ms] D0021
+[7371ms] TX stty raw -echo; echo R0022 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0022 >/dev/ttyPS0
+[7416ms] R0022
+[7634ms] D0022
+[7634ms] TX stty raw -echo; echo R0023 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0023 >/dev/ttyPS0
+[7681ms] R0023
+[7912ms] D0023
+[7913ms] TX stty raw -echo; echo R0024 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0024 >/dev/ttyPS0
+[7975ms] R0024
+[8163ms] D0024
+[8163ms] TX stty raw -echo; echo R0025 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0025 >/dev/ttyPS0
+[8257ms] R0025
+[8489ms] D0025
+[8489ms] TX stty raw -echo; echo R0026 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0026 >/dev/ttyPS0
+[8536ms] R0026
+[8723ms] D0026
+[8724ms] TX stty raw -echo; echo R0027 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0027 >/dev/ttyPS0
+[8771ms] R0027
+[8957ms] D0027
+[8957ms] TX stty raw -echo; echo R0028 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0028 >/dev/ttyPS0
+[9003ms] R0028
+[9190ms] D0028
+[9190ms] TX stty raw -echo; echo R0029 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0029 >/dev/ttyPS0
+[9236ms] R0029
+[9454ms] D0029
+[9454ms] TX stty raw -echo; echo R0030 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0030 >/dev/ttyPS0
+[9500ms] R0030
+[9718ms] D0030
+[9719ms] TX stty raw -echo; echo R0031 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0031 >/dev/ttyPS0
+[9765ms] R0031
+[9995ms] D0031
+[9996ms] TX stty raw -echo; echo R0032 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0032 >/dev/ttyPS0
+[10041ms] R0032
+[10260ms] D0032
+[10260ms] TX stty raw -echo; echo R0033 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0033 >/dev/ttyPS0
+[10307ms] R0033
+[10524ms] D0033
+[10525ms] TX stty raw -echo; echo R0034 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0034 >/dev/ttyPS0
+[10570ms] R0034
+[10756ms] D0034
+[10756ms] TX stty raw -echo; echo R0035 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0035 >/dev/ttyPS0
+[10818ms] R0035
+[11053ms] D0035
+[11053ms] TX stty raw -echo; echo R0036 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0036 >/dev/ttyPS0
+[11114ms] R0036
+[11346ms] D0036
+[11347ms] TX stty raw -echo; echo R0037 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0037 >/dev/ttyPS0
+[11392ms] R0037
+[11623ms] D0037
+[11623ms] TX stty raw -echo; echo R0038 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0038 >/dev/ttyPS0
+[11669ms] R0038
+[11886ms] D0038
+[11887ms] TX stty raw -echo; echo R0039 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0039 >/dev/ttyPS0
+[11933ms] R0039
+[12149ms] D0039
+[12150ms] TX stty raw -echo; echo R0040 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0040 >/dev/ttyPS0
+[12242ms] R0040
+[12460ms] D0040
+[12462ms] TX stty raw -echo; echo R0041 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0041 >/dev/ttyPS0
+[12507ms] R0041
+[12728ms] D0041
+[12728ms] TX stty raw -echo; echo R0042 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0042 >/dev/ttyPS0
+[12775ms] R0042
+[12993ms] D0042
+[12993ms] TX stty raw -echo; echo R0043 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0043 >/dev/ttyPS0
+[13039ms] R0043
+[13271ms] D0043
+[13272ms] TX stty raw -echo; echo R0044 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0044 >/dev/ttyPS0
+[13334ms] R0044
+[13565ms] D0044
+[13566ms] TX stty raw -echo; echo R0045 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0045 >/dev/ttyPS0
+[13612ms] R0045
+[13831ms] D0045
+[13832ms] TX stty raw -echo; echo R0046 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0046 >/dev/ttyPS0
+[13877ms] R0046
+[14094ms] D0046
+[14095ms] TX stty raw -echo; echo R0047 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0047 >/dev/ttyPS0
+[14141ms] R0047
+[14357ms] D0047
+[14358ms] TX stty raw -echo; echo R0048 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0048 >/dev/ttyPS0
+[14403ms] R0048
+[14621ms] D0048
+[14622ms] TX stty raw -echo; echo R0049 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0049 >/dev/ttyPS0
+[14670ms] R0049
+[14890ms] D0049
+[14890ms] TX stty raw -echo; echo R0050 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0050 >/dev/ttyPS0
+[14936ms] R0050
+[15156ms] D0050
+[15156ms] TX stty raw -echo; echo R0051 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0051 >/dev/ttyPS0
+[15202ms] R0051
+[15420ms] D0051
+[15421ms] TX stty raw -echo; echo R0052 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0052 >/dev/ttyPS0
+[15467ms] R0052
+[15688ms] D0052
+[15688ms] TX stty raw -echo; echo R0053 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0053 >/dev/ttyPS0
+[15734ms] R0053
+[15953ms] D0053
+[15953ms] TX stty raw -echo; echo R0054 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0054 >/dev/ttyPS0
+[15999ms] R0054
+[16218ms] D0054
+[16218ms] TX stty raw -echo; echo R0055 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0055 >/dev/ttyPS0
+[16265ms] R0055
+[16486ms] D0055
+[16486ms] TX stty raw -echo; echo R0056 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0056 >/dev/ttyPS0
+[16533ms] R0056
+[16768ms] D0056
+[16768ms] TX stty raw -echo; echo R0057 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0057 >/dev/ttyPS0
+[16814ms] R0057
+[17031ms] D0057
+[17032ms] TX stty raw -echo; echo R0058 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0058 >/dev/ttyPS0
+[17078ms] R0058
+[17296ms] D0058
+[17297ms] TX stty raw -echo; echo R0059 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0059 >/dev/ttyPS0
+[17342ms] R0059
+[17560ms] D0059
+[17561ms] TX stty raw -echo; echo R0060 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0060 >/dev/ttyPS0
+[17607ms] R0060
+[17825ms] D0060
+[17827ms] TX stty raw -echo; echo R0061 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0061 >/dev/ttyPS0
+[17872ms] R0061
+[18090ms] D0061
+[18091ms] TX stty raw -echo; echo R0062 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0062 >/dev/ttyPS0
+[18137ms] R0062
+[18355ms] D0062
+[18356ms] TX stty raw -echo; echo R0063 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0063 >/dev/ttyPS0
+[18403ms] R0063
+[18622ms] D0063
+[18622ms] TX stty raw -echo; echo R0064 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0064 >/dev/ttyPS0
+[18668ms] R0064
+[18885ms] D0064
+[18886ms] TX stty raw -echo; echo R0065 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0065 >/dev/ttyPS0
+[18932ms] R0065
+[19148ms] D0065
+[19148ms] TX stty raw -echo; echo R0066 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0066 >/dev/ttyPS0
+[19196ms] R0066
+[19413ms] D0066
+[19413ms] TX stty raw -echo; echo R0067 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0067 >/dev/ttyPS0
+[19459ms] R0067
+[19692ms] D0067
+[19692ms] TX stty raw -echo; echo R0068 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0068 >/dev/ttyPS0
+[19738ms] R0068
+[19973ms] D0068
+[19973ms] TX stty raw -echo; echo R0069 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0069 >/dev/ttyPS0
+[20020ms] R0069
+[20254ms] D0069
+[20255ms] TX stty raw -echo; echo R0070 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0070 >/dev/ttyPS0
+[20300ms] R0070
+[20486ms] D0070
+[20487ms] TX stty raw -echo; echo R0071 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0071 >/dev/ttyPS0
+[20532ms] R0071
+[20749ms] D0071
+[20750ms] TX stty raw -echo; echo R0072 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0072 >/dev/ttyPS0
+[20797ms] R0072
+[21015ms] D0072
+[21016ms] TX stty raw -echo; echo R0073 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0073 >/dev/ttyPS0
+[21062ms] R0073
+[21278ms] D0073
+[21279ms] TX stty raw -echo; echo R0074 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0074 >/dev/ttyPS0
+[21325ms] R0074
+[21544ms] D0074
+[21544ms] TX stty raw -echo; echo R0075 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0075 >/dev/ttyPS0
+[21590ms] R0075
+[21808ms] D0075
+[21809ms] TX stty raw -echo; echo R0076 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0076 >/dev/ttyPS0
+[21855ms] R0076
+[22071ms] D0076
+[22072ms] TX stty raw -echo; echo R0077 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0077 >/dev/ttyPS0
+[22116ms] R0077
+[22365ms] D0077
+[22365ms] TX stty raw -echo; echo R0078 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0078 >/dev/ttyPS0
+[22427ms] R0078
+[22661ms] D0078
+[22661ms] TX stty raw -echo; echo R0079 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0079 >/dev/ttyPS0
+[22706ms] R0079
+[22938ms] D0079
+[22939ms] TX stty raw -echo; echo R0080 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0080 >/dev/ttyPS0
+[22985ms] R0080
+[23205ms] D0080
+[23207ms] TX stty raw -echo; echo R0081 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0081 >/dev/ttyPS0
+[23252ms] R0081
+[23484ms] D0081
+[23485ms] TX stty raw -echo; echo R0082 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0082 >/dev/ttyPS0
+[23531ms] R0082
+[23749ms] D0082
+[23749ms] TX stty raw -echo; echo R0083 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0083 >/dev/ttyPS0
+[23795ms] R0083
+[24012ms] D0083
+[24013ms] TX stty raw -echo; echo R0084 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0084 >/dev/ttyPS0
+[24060ms] R0084
+[24277ms] D0084
+[24278ms] TX stty raw -echo; echo R0085 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0085 >/dev/ttyPS0
+[24325ms] R0085
+[24541ms] D0085
+[24541ms] TX stty raw -echo; echo R0086 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0086 >/dev/ttyPS0
+[24588ms] R0086
+[24818ms] D0086
+[24819ms] TX stty raw -echo; echo R0087 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0087 >/dev/ttyPS0
+[24880ms] R0087
+[25067ms] D0087
+[25067ms] TX stty raw -echo; echo R0088 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0088 >/dev/ttyPS0
+[25113ms] R0088
+[25349ms] D0088
+[25350ms] TX stty raw -echo; echo R0089 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0089 >/dev/ttyPS0
+[25412ms] R0089
+[25598ms] D0089
+[25598ms] TX stty raw -echo; echo R0090 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0090 >/dev/ttyPS0
+[25644ms] R0090
+[25832ms] D0090
+[25832ms] TX stty raw -echo; echo R0091 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0091 >/dev/ttyPS0
+[25879ms] R0091
+[26112ms] D0091
+[26112ms] TX stty raw -echo; echo R0092 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0092 >/dev/ttyPS0
+[26158ms] R0092
+[26378ms] D0092
+[26378ms] TX stty raw -echo; echo R0093 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0093 >/dev/ttyPS0
+[26423ms] R0093
+[26641ms] D0093
+[26641ms] TX stty raw -echo; echo R0094 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0094 >/dev/ttyPS0
+[26688ms] R0094
+[26909ms] D0094
+[26910ms] TX stty raw -echo; echo R0095 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0095 >/dev/ttyPS0
+[26956ms] R0095
+[27142ms] D0095
+[27142ms] TX stty raw -echo; echo R0096 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0096 >/dev/ttyPS0
+[27189ms] R0096
+[27405ms] D0096
+[27406ms] TX stty raw -echo; echo R0097 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0097 >/dev/ttyPS0
+[27452ms] R0097
+[27684ms] D0097
+[27685ms] TX stty raw -echo; echo R0098 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0098 >/dev/ttyPS0
+[27730ms] R0098
+[27948ms] D0098
+[27948ms] TX stty raw -echo; echo R0099 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0099 >/dev/ttyPS0
+[27994ms] R0099
+[28212ms] D0099
+[28212ms] TX stty raw -echo; echo R0100 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0100 >/dev/ttyPS0
+[28258ms] R0100
+[28475ms] D0100
+[28476ms] TX stty raw -echo; echo R0101 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0101 >/dev/ttyPS0
+[28537ms] R0101
+[28725ms] D0101
+[28725ms] TX stty raw -echo; echo R0102 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0102 >/dev/ttyPS0
+[28787ms] R0102
+[29019ms] D0102
+[29019ms] TX stty raw -echo; echo R0103 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0103 >/dev/ttyPS0
+[29064ms] R0103
+[29284ms] D0103
+[29284ms] TX stty raw -echo; echo R0104 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0104 >/dev/ttyPS0
+[29330ms] R0104
+[29547ms] D0104
+[29547ms] TX stty raw -echo; echo R0105 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0105 >/dev/ttyPS0
+[29594ms] R0105
+[29812ms] D0105
+[29812ms] TX stty raw -echo; echo R0106 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0106 >/dev/ttyPS0
+[29857ms] R0106
+[30075ms] D0106
+[30076ms] TX stty raw -echo; echo R0107 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0107 >/dev/ttyPS0
+[30122ms] R0107
+[30340ms] D0107
+[30340ms] TX stty raw -echo; echo R0108 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0108 >/dev/ttyPS0
+[30386ms] R0108
+[30605ms] D0108
+[30605ms] TX stty raw -echo; echo R0109 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0109 >/dev/ttyPS0
+[30651ms] R0109
+[30870ms] D0109
+[30870ms] TX stty raw -echo; echo R0110 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0110 >/dev/ttyPS0
+[30916ms] R0110
+[31132ms] D0110
+[31133ms] TX stty raw -echo; echo R0111 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0111 >/dev/ttyPS0
+[31180ms] R0111
+[31412ms] D0111
+[31413ms] TX stty raw -echo; echo R0112 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0112 >/dev/ttyPS0
+[31459ms] R0112
+[31647ms] D0112
+[31647ms] TX stty raw -echo; echo R0113 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0113 >/dev/ttyPS0
+[31709ms] R0113
+[31941ms] D0113
+[31941ms] TX stty raw -echo; echo R0114 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0114 >/dev/ttyPS0
+[31989ms] R0114
+[32177ms] D0114
+[32178ms] TX stty raw -echo; echo R0115 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0115 >/dev/ttyPS0
+[32239ms] R0115
+[32470ms] D0115
+[32471ms] TX stty raw -echo; echo R0116 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0116 >/dev/ttyPS0
+[32516ms] R0116
+[32736ms] D0116
+[32736ms] TX stty raw -echo; echo R0117 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0117 >/dev/ttyPS0
+[32783ms] R0117
+[33016ms] D0117
+[33016ms] TX stty raw -echo; echo R0118 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0118 >/dev/ttyPS0
+[33064ms] R0118
+[33282ms] D0118
+[33283ms] TX stty raw -echo; echo R0119 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0119 >/dev/ttyPS0
+[33328ms] R0119
+[33545ms] D0119
+[33545ms] TX stty raw -echo; echo R0120 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0120 >/dev/ttyPS0
+[33592ms] R0120
+[33810ms] D0120
+[33812ms] TX stty raw -echo; echo R0121 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0121 >/dev/ttyPS0
+[33858ms] R0121
+[34073ms] D0121
+[34074ms] TX stty raw -echo; echo R0122 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0122 >/dev/ttyPS0
+[34120ms] R0122
+[34340ms] D0122
+[34341ms] TX stty raw -echo; echo R0123 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0123 >/dev/ttyPS0
+[34386ms] R0123
+[34603ms] D0123
+[34603ms] TX stty raw -echo; echo R0124 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0124 >/dev/ttyPS0
+[34649ms] R0124
+[34866ms] D0124
+[34866ms] TX stty raw -echo; echo R0125 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0125 >/dev/ttyPS0
+[34913ms] R0125
+[35132ms] D0125
+[35133ms] TX stty raw -echo; echo R0126 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0126 >/dev/ttyPS0
+[35179ms] R0126
+[35411ms] D0126
+[35411ms] TX stty raw -echo; echo R0127 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0127 >/dev/ttyPS0
+[35458ms] R0127
+[35646ms] D0127
+[35646ms] TX stty raw -echo; echo R0128 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0128 >/dev/ttyPS0
+[35692ms] R0128
+[35927ms] D0128
+[35927ms] TX stty raw -echo; echo R0129 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0129 >/dev/ttyPS0
+[35973ms] R0129
+[36159ms] D0129
+[36160ms] TX stty raw -echo; echo R0130 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0130 >/dev/ttyPS0
+[36206ms] R0130
+[36393ms] D0130
+[36393ms] TX stty raw -echo; echo R0131 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0131 >/dev/ttyPS0
+[36440ms] R0131
+[36674ms] D0131
+[36674ms] TX stty raw -echo; echo R0132 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0132 >/dev/ttyPS0
+[36719ms] R0132
+[36938ms] D0132
+[36938ms] TX stty raw -echo; echo R0133 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0133 >/dev/ttyPS0
+[36985ms] R0133
+[37203ms] D0133
+[37204ms] TX stty raw -echo; echo R0134 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0134 >/dev/ttyPS0
+[37249ms] R0134
+[37468ms] D0134
+[37468ms] TX stty raw -echo; echo R0135 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0135 >/dev/ttyPS0
+[37514ms] R0135
+[37731ms] D0135
+[37732ms] TX stty raw -echo; echo R0136 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0136 >/dev/ttyPS0
+[37778ms] R0136
+[37996ms] D0136
+[37996ms] TX stty raw -echo; echo R0137 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0137 >/dev/ttyPS0
+[38041ms] R0137
+[38305ms] D0137
+[38305ms] TX stty raw -echo; echo R0138 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0138 >/dev/ttyPS0
+[38352ms] R0138
+[38570ms] D0138
+[38570ms] TX stty raw -echo; echo R0139 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0139 >/dev/ttyPS0
+[38617ms] R0139
+[38850ms] D0139
+[38850ms] TX stty raw -echo; echo R0140 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0140 >/dev/ttyPS0
+[38911ms] R0140
+[39143ms] D0140
+[39144ms] TX stty raw -echo; echo R0141 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0141 >/dev/ttyPS0
+[39190ms] R0141
+[39377ms] D0141
+[39378ms] TX stty raw -echo; echo R0142 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0142 >/dev/ttyPS0
+[39424ms] R0142
+[39658ms] D0142
+[39659ms] TX stty raw -echo; echo R0143 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0143 >/dev/ttyPS0
+[39704ms] R0143
+[39922ms] D0143
+[39922ms] TX stty raw -echo; echo R0144 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0144 >/dev/ttyPS0
+[39968ms] R0144
+[40184ms] D0144
+[40185ms] TX stty raw -echo; echo R0145 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0145 >/dev/ttyPS0
+[40231ms] R0145
+[40449ms] D0145
+[40449ms] TX stty raw -echo; echo R0146 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0146 >/dev/ttyPS0
+[40495ms] R0146
+[40712ms] D0146
+[40712ms] TX stty raw -echo; echo R0147 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0147 >/dev/ttyPS0
+[40757ms] R0147
+[40990ms] D0147
+[40990ms] TX stty raw -echo; echo R0148 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0148 >/dev/ttyPS0
+[41052ms] R0148
+[41239ms] D0148
+[41239ms] TX stty raw -echo; echo R0149 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0149 >/dev/ttyPS0
+[41285ms] R0149
+[41516ms] D0149
+[41516ms] TX stty raw -echo; echo R0150 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0150 >/dev/ttyPS0
+[41562ms] R0150
+[41781ms] D0150
+[41782ms] TX stty raw -echo; echo R0151 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0151 >/dev/ttyPS0
+[41828ms] R0151
+[42045ms] D0151
+[42046ms] TX stty raw -echo; echo R0152 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0152 >/dev/ttyPS0
+[42092ms] R0152
+[42310ms] D0152
+[42311ms] TX stty raw -echo; echo R0153 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0153 >/dev/ttyPS0
+[42356ms] R0153
+[42576ms] D0153
+[42576ms] TX stty raw -echo; echo R0154 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0154 >/dev/ttyPS0
+[42622ms] R0154
+[42840ms] D0154
+[42840ms] TX stty raw -echo; echo R0155 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0155 >/dev/ttyPS0
+[42885ms] R0155
+[43104ms] D0155
+[43104ms] TX stty raw -echo; echo R0156 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0156 >/dev/ttyPS0
+[43150ms] R0156
+[43366ms] D0156
+[43367ms] TX stty raw -echo; echo R0157 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0157 >/dev/ttyPS0
+[43428ms] R0157
+[43661ms] D0157
+[43662ms] TX stty raw -echo; echo R0158 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0158 >/dev/ttyPS0
+[43707ms] R0158
+[43894ms] D0158
+[43895ms] TX stty raw -echo; echo R0159 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0159 >/dev/ttyPS0
+[43941ms] R0159
+[44175ms] D0159
+[44176ms] TX stty raw -echo; echo R0160 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0160 >/dev/ttyPS0
+[44222ms] R0160
+[44408ms] D0160
+[44409ms] TX stty raw -echo; echo R0161 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0161 >/dev/ttyPS0
+[44454ms] R0161
+[44671ms] D0161
+[44671ms] TX stty raw -echo; echo R0162 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0162 >/dev/ttyPS0
+[44719ms] R0162
+[44936ms] D0162
+[44936ms] TX stty raw -echo; echo R0163 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0163 >/dev/ttyPS0
+[44982ms] R0163
+[45201ms] D0163
+[45202ms] TX stty raw -echo; echo R0164 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0164 >/dev/ttyPS0
+[45248ms] R0164
+[45464ms] D0164
+[45464ms] TX stty raw -echo; echo R0165 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0165 >/dev/ttyPS0
+[45510ms] R0165
+[45725ms] D0165
+[45725ms] TX stty raw -echo; echo R0166 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0166 >/dev/ttyPS0
+[45787ms] R0166
+[45974ms] D0166
+[45974ms] TX stty raw -echo; echo R0167 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0167 >/dev/ttyPS0
+[46020ms] R0167
+[46251ms] D0167
+[46252ms] TX stty raw -echo; echo R0168 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0168 >/dev/ttyPS0
+[46298ms] R0168
+[46517ms] D0168
+[46517ms] TX stty raw -echo; echo R0169 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0169 >/dev/ttyPS0
+[46564ms] R0169
+[46781ms] D0169
+[46782ms] TX stty raw -echo; echo R0170 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0170 >/dev/ttyPS0
+[46827ms] R0170
+[47043ms] D0170
+[47044ms] TX stty raw -echo; echo R0171 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0171 >/dev/ttyPS0
+[47090ms] R0171
+[47308ms] D0171
+[47309ms] TX stty raw -echo; echo R0172 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0172 >/dev/ttyPS0
+[47355ms] R0172
+[47571ms] D0172
+[47572ms] TX stty raw -echo; echo R0173 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0173 >/dev/ttyPS0
+[47618ms] R0173
+[47836ms] D0173
+[47836ms] TX stty raw -echo; echo R0174 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0174 >/dev/ttyPS0
+[47881ms] R0174
+[48067ms] D0174
+[48068ms] TX stty raw -echo; echo R0175 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0175 >/dev/ttyPS0
+[48114ms] R0175
+[48346ms] D0175
+[48346ms] TX stty raw -echo; echo R0176 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0176 >/dev/ttyPS0
+[48392ms] R0176
+[48610ms] D0176
+[48610ms] TX stty raw -echo; echo R0177 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0177 >/dev/ttyPS0
+[48656ms] R0177
+[48871ms] D0177
+[48872ms] TX stty raw -echo; echo R0178 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0178 >/dev/ttyPS0
+[48918ms] R0178
+[49134ms] D0178
+[49135ms] TX stty raw -echo; echo R0179 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0179 >/dev/ttyPS0
+[49181ms] R0179
+[49398ms] D0179
+[49399ms] TX stty raw -echo; echo R0180 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0180 >/dev/ttyPS0
+[49444ms] R0180
+[49630ms] D0180
+[49631ms] TX stty raw -echo; echo R0181 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0181 >/dev/ttyPS0
+[49691ms] R0181
+[49925ms] D0181
+[49925ms] TX stty raw -echo; echo R0182 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0182 >/dev/ttyPS0
+[49971ms] R0182
+[50158ms] D0182
+[50158ms] TX stty raw -echo; echo R0183 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0183 >/dev/ttyPS0
+[50204ms] R0183
+[50422ms] D0183
+[50422ms] TX stty raw -echo; echo R0184 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0184 >/dev/ttyPS0
+[50468ms] R0184
+[50686ms] D0184
+[50686ms] TX stty raw -echo; echo R0185 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0185 >/dev/ttyPS0
+[50732ms] R0185
+[50950ms] D0185
+[50950ms] TX stty raw -echo; echo R0186 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0186 >/dev/ttyPS0
+[50995ms] R0186
+[51215ms] D0186
+[51215ms] TX stty raw -echo; echo R0187 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0187 >/dev/ttyPS0
+[51262ms] R0187
+[51481ms] D0187
+[51482ms] TX stty raw -echo; echo R0188 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0188 >/dev/ttyPS0
+[51527ms] R0188
+[51758ms] D0188
+[51759ms] TX stty raw -echo; echo R0189 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0189 >/dev/ttyPS0
+[51805ms] R0189
+[52023ms] D0189
+[52023ms] TX stty raw -echo; echo R0190 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0190 >/dev/ttyPS0
+[52070ms] R0190
+[52347ms] D0190
+[52347ms] TX stty raw -echo; echo R0191 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0191 >/dev/ttyPS0
+[52394ms] R0191
+[52627ms] D0191
+[52627ms] TX stty raw -echo; echo R0192 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0192 >/dev/ttyPS0
+[52672ms] R0192
+[52891ms] D0192
+[52892ms] TX stty raw -echo; echo R0193 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0193 >/dev/ttyPS0
+[52939ms] R0193
+[53125ms] D0193
+[53126ms] TX stty raw -echo; echo R0194 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0194 >/dev/ttyPS0
+[53170ms] R0194
+[53387ms] D0194
+[53387ms] TX stty raw -echo; echo R0195 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0195 >/dev/ttyPS0
+[53433ms] R0195
+[53651ms] D0195
+[53652ms] TX stty raw -echo; echo R0196 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0196 >/dev/ttyPS0
+[53699ms] R0196
+[53917ms] D0196
+[53917ms] TX stty raw -echo; echo R0197 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0197 >/dev/ttyPS0
+[53964ms] R0197
+[54184ms] D0197
+[54185ms] TX stty raw -echo; echo R0198 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0198 >/dev/ttyPS0
+[54231ms] R0198
+[54448ms] D0198
+[54449ms] TX stty raw -echo; echo R0199 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0199 >/dev/ttyPS0
+[54496ms] R0199
+[54715ms] D0199
+[54715ms] TX stty raw -echo; echo R0200 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0200 >/dev/ttyPS0
+[54761ms] R0200
+[54980ms] D0200
+[54982ms] TX stty raw -echo; echo R0201 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0201 >/dev/ttyPS0
+[55028ms] R0201
+[55260ms] D0201
+[55261ms] TX stty raw -echo; echo R0202 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0202 >/dev/ttyPS0
+[55308ms] R0202
+[55524ms] D0202
+[55525ms] TX stty raw -echo; echo R0203 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0203 >/dev/ttyPS0
+[55571ms] R0203
+[55788ms] D0203
+[55789ms] TX stty raw -echo; echo R0204 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0204 >/dev/ttyPS0
+[55834ms] R0204
+[56022ms] D0204
+[56022ms] TX stty raw -echo; echo R0205 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0205 >/dev/ttyPS0
+[56069ms] R0205
+[56350ms] D0205
+[56351ms] TX stty raw -echo; echo R0206 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0206 >/dev/ttyPS0
+[56397ms] R0206
+[56616ms] D0206
+[56617ms] TX stty raw -echo; echo R0207 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0207 >/dev/ttyPS0
+[56663ms] R0207
+[56895ms] D0207
+[56895ms] TX stty raw -echo; echo R0208 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0208 >/dev/ttyPS0
+[56943ms] R0208
+[57175ms] D0208
+[57176ms] TX stty raw -echo; echo R0209 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0209 >/dev/ttyPS0
+[57222ms] R0209
+[57455ms] D0209
+[57456ms] TX stty raw -echo; echo R0210 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0210 >/dev/ttyPS0
+[57502ms] R0210
+[57719ms] D0210
+[57719ms] TX stty raw -echo; echo R0211 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0211 >/dev/ttyPS0
+[57765ms] R0211
+[57981ms] D0211
+[57981ms] TX stty raw -echo; echo R0212 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0212 >/dev/ttyPS0
+[58028ms] R0212
+[58245ms] D0212
+[58246ms] TX stty raw -echo; echo R0213 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0213 >/dev/ttyPS0
+[58338ms] R0213
+[58556ms] D0213
+[58557ms] TX stty raw -echo; echo R0214 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0214 >/dev/ttyPS0
+[58603ms] R0214
+[58822ms] D0214
+[58822ms] TX stty raw -echo; echo R0215 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0215 >/dev/ttyPS0
+[58869ms] R0215
+[59099ms] D0215
+[59100ms] TX stty raw -echo; echo R0216 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0216 >/dev/ttyPS0
+[59160ms] R0216
+[59393ms] D0216
+[59394ms] TX stty raw -echo; echo R0217 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0217 >/dev/ttyPS0
+[59439ms] R0217
+[59656ms] D0217
+[59657ms] TX stty raw -echo; echo R0218 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0218 >/dev/ttyPS0
+[59704ms] R0218
+[59921ms] D0218
+[59921ms] TX stty raw -echo; echo R0219 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0219 >/dev/ttyPS0
+[59967ms] R0219
+[60185ms] D0219
+[60185ms] TX stty raw -echo; echo R0220 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0220 >/dev/ttyPS0
+[60232ms] R0220
+[60447ms] D0220
+[60449ms] TX stty raw -echo; echo R0221 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0221 >/dev/ttyPS0
+[60495ms] R0221
+[60725ms] D0221
+[60726ms] TX stty raw -echo; echo R0222 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0222 >/dev/ttyPS0
+[60787ms] R0222
+[61021ms] D0222
+[61022ms] TX stty raw -echo; echo R0223 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0223 >/dev/ttyPS0
+[61083ms] R0223
+[61270ms] D0223
+[61271ms] TX stty raw -echo; echo R0224 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0224 >/dev/ttyPS0
+[61316ms] R0224
+[61547ms] D0224
+[61547ms] TX stty raw -echo; echo R0225 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0225 >/dev/ttyPS0
+[61594ms] R0225
+[61810ms] D0225
+[61811ms] TX stty raw -echo; echo R0226 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0226 >/dev/ttyPS0
+[61857ms] R0226
+[62073ms] D0226
+[62074ms] TX stty raw -echo; echo R0227 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0227 >/dev/ttyPS0
+[62119ms] R0227
+[62337ms] D0227
+[62338ms] TX stty raw -echo; echo R0228 >/dev/ttyPS0; dd bs=1 count=1944 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0228 >/dev/ttyPS0
+[62384ms] R0228
+[62601ms] D0228

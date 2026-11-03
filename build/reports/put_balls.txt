@@ -1,0 +1,661 @@
+﻿RAWOK
+[1457ms] TX stty raw -echo; echo R0000 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0000 >/dev/ttyPS0
+[1511ms] R0000
+[1758ms] D0000
+[1766ms] TX stty raw -echo; echo R0001 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0001 >/dev/ttyPS0
+[1820ms] R0001
+[2053ms] D0001
+[2053ms] TX stty raw -echo; echo R0002 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0002 >/dev/ttyPS0
+[2099ms] R0002
+[2330ms] D0002
+[2331ms] TX stty raw -echo; echo R0003 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0003 >/dev/ttyPS0
+[2376ms] R0003
+[2594ms] D0003
+[2594ms] TX stty raw -echo; echo R0004 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0004 >/dev/ttyPS0
+[2639ms] R0004
+[2859ms] D0004
+[2859ms] TX stty raw -echo; echo R0005 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0005 >/dev/ttyPS0
+[2905ms] R0005
+[3122ms] D0005
+[3122ms] TX stty raw -echo; echo R0006 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0006 >/dev/ttyPS0
+[3168ms] R0006
+[3384ms] D0006
+[3385ms] TX stty raw -echo; echo R0007 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0007 >/dev/ttyPS0
+[3446ms] R0007
+[3678ms] D0007
+[3678ms] TX stty raw -echo; echo R0008 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0008 >/dev/ttyPS0
+[3726ms] R0008
+[3959ms] D0008
+[3959ms] TX stty raw -echo; echo R0009 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0009 >/dev/ttyPS0
+[4006ms] R0009
+[4238ms] D0009
+[4239ms] TX stty raw -echo; echo R0010 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0010 >/dev/ttyPS0
+[4286ms] R0010
+[4519ms] D0010
+[4520ms] TX stty raw -echo; echo R0011 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0011 >/dev/ttyPS0
+[4566ms] R0011
+[4782ms] D0011
+[4782ms] TX stty raw -echo; echo R0012 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0012 >/dev/ttyPS0
+[4828ms] R0012
+[5048ms] D0012
+[5048ms] TX stty raw -echo; echo R0013 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0013 >/dev/ttyPS0
+[5095ms] R0013
+[5311ms] D0013
+[5312ms] TX stty raw -echo; echo R0014 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0014 >/dev/ttyPS0
+[5358ms] R0014
+[5576ms] D0014
+[5577ms] TX stty raw -echo; echo R0015 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0015 >/dev/ttyPS0
+[5623ms] R0015
+[5842ms] D0015
+[5842ms] TX stty raw -echo; echo R0016 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0016 >/dev/ttyPS0
+[5888ms] R0016
+[6106ms] D0016
+[6106ms] TX stty raw -echo; echo R0017 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0017 >/dev/ttyPS0
+[6198ms] R0017
+[6417ms] D0017
+[6417ms] TX stty raw -echo; echo R0018 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0018 >/dev/ttyPS0
+[6464ms] R0018
+[6695ms] D0018
+[6696ms] TX stty raw -echo; echo R0019 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0019 >/dev/ttyPS0
+[6757ms] R0019
+[6991ms] D0019
+[6992ms] TX stty raw -echo; echo R0020 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0020 >/dev/ttyPS0
+[7037ms] R0020
+[7225ms] D0020
+[7227ms] TX stty raw -echo; echo R0021 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0021 >/dev/ttyPS0
+[7272ms] R0021
+[7506ms] D0021
+[7506ms] TX stty raw -echo; echo R0022 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0022 >/dev/ttyPS0
+[7552ms] R0022
+[7784ms] D0022
+[7784ms] TX stty raw -echo; echo R0023 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0023 >/dev/ttyPS0
+[7829ms] R0023
+[8047ms] D0023
+[8047ms] TX stty raw -echo; echo R0024 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0024 >/dev/ttyPS0
+[8094ms] R0024
+[8311ms] D0024
+[8311ms] TX stty raw -echo; echo R0025 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0025 >/dev/ttyPS0
+[8358ms] R0025
+[8575ms] D0025
+[8575ms] TX stty raw -echo; echo R0026 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0026 >/dev/ttyPS0
+[8622ms] R0026
+[8841ms] D0026
+[8841ms] TX stty raw -echo; echo R0027 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0027 >/dev/ttyPS0
+[8888ms] R0027
+[9108ms] D0027
+[9109ms] TX stty raw -echo; echo R0028 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0028 >/dev/ttyPS0
+[9154ms] R0028
+[9371ms] D0028
+[9371ms] TX stty raw -echo; echo R0029 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0029 >/dev/ttyPS0
+[9418ms] R0029
+[9636ms] D0029
+[9636ms] TX stty raw -echo; echo R0030 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0030 >/dev/ttyPS0
+[9682ms] R0030
+[9930ms] D0030
+[9930ms] TX stty raw -echo; echo R0031 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0031 >/dev/ttyPS0
+[9992ms] R0031
+[10228ms] D0031
+[10228ms] TX stty raw -echo; echo R0032 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0032 >/dev/ttyPS0
+[10290ms] R0032
+[10522ms] D0032
+[10522ms] TX stty raw -echo; echo R0033 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0033 >/dev/ttyPS0
+[10569ms] R0033
+[10755ms] D0033
+[10756ms] TX stty raw -echo; echo R0034 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0034 >/dev/ttyPS0
+[10803ms] R0034
+[11038ms] D0034
+[11039ms] TX stty raw -echo; echo R0035 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0035 >/dev/ttyPS0
+[11085ms] R0035
+[11315ms] D0035
+[11316ms] TX stty raw -echo; echo R0036 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0036 >/dev/ttyPS0
+[11361ms] R0036
+[11578ms] D0036
+[11578ms] TX stty raw -echo; echo R0037 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0037 >/dev/ttyPS0
+[11624ms] R0037
+[11843ms] D0037
+[11844ms] TX stty raw -echo; echo R0038 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0038 >/dev/ttyPS0
+[11889ms] R0038
+[12108ms] D0038
+[12108ms] TX stty raw -echo; echo R0039 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0039 >/dev/ttyPS0
+[12203ms] R0039
+[12420ms] D0039
+[12420ms] TX stty raw -echo; echo R0040 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0040 >/dev/ttyPS0
+[12467ms] R0040
+[12684ms] D0040
+[12686ms] TX stty raw -echo; echo R0041 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0041 >/dev/ttyPS0
+[12731ms] R0041
+[12950ms] D0041
+[12951ms] TX stty raw -echo; echo R0042 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0042 >/dev/ttyPS0
+[12996ms] R0042
+[13215ms] D0042
+[13216ms] TX stty raw -echo; echo R0043 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0043 >/dev/ttyPS0
+[13262ms] R0043
+[13480ms] D0043
+[13480ms] TX stty raw -echo; echo R0044 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0044 >/dev/ttyPS0
+[13527ms] R0044
+[13746ms] D0044
+[13747ms] TX stty raw -echo; echo R0045 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0045 >/dev/ttyPS0
+[13792ms] R0045
+[14012ms] D0045
+[14012ms] TX stty raw -echo; echo R0046 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0046 >/dev/ttyPS0
+[14059ms] R0046
+[14276ms] D0046
+[14277ms] TX stty raw -echo; echo R0047 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0047 >/dev/ttyPS0
+[14322ms] R0047
+[14542ms] D0047
+[14542ms] TX stty raw -echo; echo R0048 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0048 >/dev/ttyPS0
+[14589ms] R0048
+[14810ms] D0048
+[14810ms] TX stty raw -echo; echo R0049 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0049 >/dev/ttyPS0
+[14857ms] R0049
+[15076ms] D0049
+[15077ms] TX stty raw -echo; echo R0050 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0050 >/dev/ttyPS0
+[15122ms] R0050
+[15340ms] D0050
+[15341ms] TX stty raw -echo; echo R0051 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0051 >/dev/ttyPS0
+[15386ms] R0051
+[15604ms] D0051
+[15605ms] TX stty raw -echo; echo R0052 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0052 >/dev/ttyPS0
+[15652ms] R0052
+[15872ms] D0052
+[15872ms] TX stty raw -echo; echo R0053 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0053 >/dev/ttyPS0
+[15920ms] R0053
+[16150ms] D0053
+[16150ms] TX stty raw -echo; echo R0054 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0054 >/dev/ttyPS0
+[16213ms] R0054
+[16446ms] D0054
+[16446ms] TX stty raw -echo; echo R0055 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0055 >/dev/ttyPS0
+[16508ms] R0055
+[16739ms] D0055
+[16740ms] TX stty raw -echo; echo R0056 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0056 >/dev/ttyPS0
+[16786ms] R0056
+[16974ms] D0056
+[16975ms] TX stty raw -echo; echo R0057 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0057 >/dev/ttyPS0
+[17020ms] R0057
+[17253ms] D0057
+[17254ms] TX stty raw -echo; echo R0058 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0058 >/dev/ttyPS0
+[17298ms] R0058
+[17515ms] D0058
+[17515ms] TX stty raw -echo; echo R0059 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0059 >/dev/ttyPS0
+[17561ms] R0059
+[17779ms] D0059
+[17779ms] TX stty raw -echo; echo R0060 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0060 >/dev/ttyPS0
+[17825ms] R0060
+[18043ms] D0060
+[18044ms] TX stty raw -echo; echo R0061 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0061 >/dev/ttyPS0
+[18089ms] R0061
+[18308ms] D0061
+[18309ms] TX stty raw -echo; echo R0062 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0062 >/dev/ttyPS0
+[18354ms] R0062
+[18584ms] D0062
+[18585ms] TX stty raw -echo; echo R0063 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0063 >/dev/ttyPS0
+[18631ms] R0063
+[18860ms] D0063
+[18861ms] TX stty raw -echo; echo R0064 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0064 >/dev/ttyPS0
+[18907ms] R0064
+[19127ms] D0064
+[19128ms] TX stty raw -echo; echo R0065 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0065 >/dev/ttyPS0
+[19174ms] R0065
+[19391ms] D0065
+[19391ms] TX stty raw -echo; echo R0066 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0066 >/dev/ttyPS0
+[19437ms] R0066
+[19654ms] D0066
+[19654ms] TX stty raw -echo; echo R0067 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0067 >/dev/ttyPS0
+[19701ms] R0067
+[19919ms] D0067
+[19920ms] TX stty raw -echo; echo R0068 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0068 >/dev/ttyPS0
+[19966ms] R0068
+[20229ms] D0068
+[20230ms] TX stty raw -echo; echo R0069 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0069 >/dev/ttyPS0
+[20276ms] R0069
+[20495ms] D0069
+[20495ms] TX stty raw -echo; echo R0070 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0070 >/dev/ttyPS0
+[20542ms] R0070
+[20760ms] D0070
+[20760ms] TX stty raw -echo; echo R0071 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0071 >/dev/ttyPS0
+[20807ms] R0071
+[21025ms] D0071
+[21026ms] TX stty raw -echo; echo R0072 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0072 >/dev/ttyPS0
+[21073ms] R0072
+[21290ms] D0072
+[21290ms] TX stty raw -echo; echo R0073 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0073 >/dev/ttyPS0
+[21352ms] R0073
+[21584ms] D0073
+[21584ms] TX stty raw -echo; echo R0074 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0074 >/dev/ttyPS0
+[21630ms] R0074
+[21863ms] D0074
+[21864ms] TX stty raw -echo; echo R0075 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0075 >/dev/ttyPS0
+[21909ms] R0075
+[22125ms] D0075
+[22125ms] TX stty raw -echo; echo R0076 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0076 >/dev/ttyPS0
+[22171ms] R0076
+[22388ms] D0076
+[22389ms] TX stty raw -echo; echo R0077 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0077 >/dev/ttyPS0
+[22434ms] R0077
+[22651ms] D0077
+[22651ms] TX stty raw -echo; echo R0078 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0078 >/dev/ttyPS0
+[22697ms] R0078
+[22917ms] D0078
+[22918ms] TX stty raw -echo; echo R0079 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0079 >/dev/ttyPS0
+[22964ms] R0079
+[23182ms] D0079
+[23182ms] TX stty raw -echo; echo R0080 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0080 >/dev/ttyPS0
+[23228ms] R0080
+[23461ms] D0080
+[23462ms] TX stty raw -echo; echo R0081 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0081 >/dev/ttyPS0
+[23522ms] R0081
+[23752ms] D0081
+[23752ms] TX stty raw -echo; echo R0082 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0082 >/dev/ttyPS0
+[23798ms] R0082
+[24014ms] D0082
+[24014ms] TX stty raw -echo; echo R0083 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0083 >/dev/ttyPS0
+[24060ms] R0083
+[24279ms] D0083
+[24279ms] TX stty raw -echo; echo R0084 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0084 >/dev/ttyPS0
+[24325ms] R0084
+[24543ms] D0084
+[24544ms] TX stty raw -echo; echo R0085 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0085 >/dev/ttyPS0
+[24589ms] R0085
+[24805ms] D0085
+[24806ms] TX stty raw -echo; echo R0086 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0086 >/dev/ttyPS0
+[24867ms] R0086
+[25100ms] D0086
+[25100ms] TX stty raw -echo; echo R0087 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0087 >/dev/ttyPS0
+[25147ms] R0087
+[25379ms] D0087
+[25379ms] TX stty raw -echo; echo R0088 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0088 >/dev/ttyPS0
+[25426ms] R0088
+[25659ms] D0088
+[25660ms] TX stty raw -echo; echo R0089 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0089 >/dev/ttyPS0
+[25706ms] R0089
+[25937ms] D0089
+[25937ms] TX stty raw -echo; echo R0090 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0090 >/dev/ttyPS0
+[25983ms] R0090
+[26214ms] D0090
+[26215ms] TX stty raw -echo; echo R0091 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0091 >/dev/ttyPS0
+[26261ms] R0091
+[26491ms] D0091
+[26492ms] TX stty raw -echo; echo R0092 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0092 >/dev/ttyPS0
+[26536ms] R0092
+[26768ms] D0092
+[26769ms] TX stty raw -echo; echo R0093 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0093 >/dev/ttyPS0
+[26815ms] R0093
+[27032ms] D0093
+[27033ms] TX stty raw -echo; echo R0094 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0094 >/dev/ttyPS0
+[27079ms] R0094
+[27295ms] D0094
+[27295ms] TX stty raw -echo; echo R0095 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0095 >/dev/ttyPS0
+[27341ms] R0095
+[27559ms] D0095
+[27560ms] TX stty raw -echo; echo R0096 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0096 >/dev/ttyPS0
+[27607ms] R0096
+[27839ms] D0096
+[27839ms] TX stty raw -echo; echo R0097 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0097 >/dev/ttyPS0
+[27885ms] R0097
+[28103ms] D0097
+[28103ms] TX stty raw -echo; echo R0098 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0098 >/dev/ttyPS0
+[28150ms] R0098
+[28382ms] D0098
+[28382ms] TX stty raw -echo; echo R0099 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0099 >/dev/ttyPS0
+[28427ms] R0099
+[28615ms] D0099
+[28615ms] TX stty raw -echo; echo R0100 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0100 >/dev/ttyPS0
+[28661ms] R0100
+[28896ms] D0100
+[28897ms] TX stty raw -echo; echo R0101 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0101 >/dev/ttyPS0
+[28942ms] R0101
+[29159ms] D0101
+[29160ms] TX stty raw -echo; echo R0102 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0102 >/dev/ttyPS0
+[29206ms] R0102
+[29424ms] D0102
+[29424ms] TX stty raw -echo; echo R0103 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0103 >/dev/ttyPS0
+[29471ms] R0103
+[29689ms] D0103
+[29689ms] TX stty raw -echo; echo R0104 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0104 >/dev/ttyPS0
+[29736ms] R0104
+[29953ms] D0104
+[29953ms] TX stty raw -echo; echo R0105 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0105 >/dev/ttyPS0
+[29999ms] R0105
+[30262ms] D0105
+[30262ms] TX stty raw -echo; echo R0106 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0106 >/dev/ttyPS0
+[30309ms] R0106
+[30540ms] D0106
+[30541ms] TX stty raw -echo; echo R0107 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0107 >/dev/ttyPS0
+[30602ms] R0107
+[30836ms] D0107
+[30836ms] TX stty raw -echo; echo R0108 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0108 >/dev/ttyPS0
+[30898ms] R0108
+[31129ms] D0108
+[31130ms] TX stty raw -echo; echo R0109 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0109 >/dev/ttyPS0
+[31177ms] R0109
+[31366ms] D0109
+[31367ms] TX stty raw -echo; echo R0110 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0110 >/dev/ttyPS0
+[31412ms] R0110
+[31644ms] D0110
+[31644ms] TX stty raw -echo; echo R0111 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0111 >/dev/ttyPS0
+[31690ms] R0111
+[31921ms] D0111
+[31922ms] TX stty raw -echo; echo R0112 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0112 >/dev/ttyPS0
+[31969ms] R0112
+[32186ms] D0112
+[32186ms] TX stty raw -echo; echo R0113 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0113 >/dev/ttyPS0
+[32278ms] R0113
+[32499ms] D0113
+[32500ms] TX stty raw -echo; echo R0114 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0114 >/dev/ttyPS0
+[32546ms] R0114
+[32763ms] D0114
+[32763ms] TX stty raw -echo; echo R0115 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0115 >/dev/ttyPS0
+[32810ms] R0115
+[33030ms] D0115
+[33031ms] TX stty raw -echo; echo R0116 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0116 >/dev/ttyPS0
+[33077ms] R0116
+[33294ms] D0116
+[33295ms] TX stty raw -echo; echo R0117 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0117 >/dev/ttyPS0
+[33341ms] R0117
+[33560ms] D0117
+[33561ms] TX stty raw -echo; echo R0118 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0118 >/dev/ttyPS0
+[33606ms] R0118
+[33824ms] D0118
+[33825ms] TX stty raw -echo; echo R0119 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0119 >/dev/ttyPS0
+[33871ms] R0119
+[34088ms] D0119
+[34089ms] TX stty raw -echo; echo R0120 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0120 >/dev/ttyPS0
+[34135ms] R0120
+[34356ms] D0120
+[34357ms] TX stty raw -echo; echo R0121 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0121 >/dev/ttyPS0
+[34403ms] R0121
+[34620ms] D0121
+[34621ms] TX stty raw -echo; echo R0122 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0122 >/dev/ttyPS0
+[34666ms] R0122
+[34887ms] D0122
+[34888ms] TX stty raw -echo; echo R0123 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0123 >/dev/ttyPS0
+[34932ms] R0123
+[35164ms] D0123
+[35165ms] TX stty raw -echo; echo R0124 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0124 >/dev/ttyPS0
+[35212ms] R0124
+[35443ms] D0124
+[35444ms] TX stty raw -echo; echo R0125 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0125 >/dev/ttyPS0
+[35490ms] R0125
+[35723ms] D0125
+[35723ms] TX stty raw -echo; echo R0126 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0126 >/dev/ttyPS0
+[35770ms] R0126
+[36004ms] D0126
+[36005ms] TX stty raw -echo; echo R0127 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0127 >/dev/ttyPS0
+[36050ms] R0127
+[36267ms] D0127
+[36268ms] TX stty raw -echo; echo R0128 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0128 >/dev/ttyPS0
+[36314ms] R0128
+[36533ms] D0128
+[36534ms] TX stty raw -echo; echo R0129 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0129 >/dev/ttyPS0
+[36580ms] R0129
+[36797ms] D0129
+[36797ms] TX stty raw -echo; echo R0130 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0130 >/dev/ttyPS0
+[36842ms] R0130
+[37059ms] D0130
+[37060ms] TX stty raw -echo; echo R0131 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0131 >/dev/ttyPS0
+[37106ms] R0131
+[37326ms] D0131
+[37326ms] TX stty raw -echo; echo R0132 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0132 >/dev/ttyPS0
+[37372ms] R0132
+[37589ms] D0132
+[37590ms] TX stty raw -echo; echo R0133 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0133 >/dev/ttyPS0
+[37635ms] R0133
+[37853ms] D0133
+[37853ms] TX stty raw -echo; echo R0134 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0134 >/dev/ttyPS0
+[37899ms] R0134
+[38132ms] D0134
+[38132ms] TX stty raw -echo; echo R0135 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0135 >/dev/ttyPS0
+[38178ms] R0135
+[38364ms] D0135
+[38365ms] TX stty raw -echo; echo R0136 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0136 >/dev/ttyPS0
+[38411ms] R0136
+[38645ms] D0136
+[38646ms] TX stty raw -echo; echo R0137 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0137 >/dev/ttyPS0
+[38691ms] R0137
+[38909ms] D0137
+[38910ms] TX stty raw -echo; echo R0138 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0138 >/dev/ttyPS0
+[38955ms] R0138
+[39173ms] D0138
+[39173ms] TX stty raw -echo; echo R0139 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0139 >/dev/ttyPS0
+[39221ms] R0139
+[39438ms] D0139
+[39439ms] TX stty raw -echo; echo R0140 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0140 >/dev/ttyPS0
+[39485ms] R0140
+[39704ms] D0140
+[39705ms] TX stty raw -echo; echo R0141 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0141 >/dev/ttyPS0
+[39750ms] R0141
+[39967ms] D0141
+[39968ms] TX stty raw -echo; echo R0142 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0142 >/dev/ttyPS0
+[40014ms] R0142
+[40278ms] D0142
+[40278ms] TX stty raw -echo; echo R0143 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0143 >/dev/ttyPS0
+[40325ms] R0143
+[40542ms] D0143
+[40542ms] TX stty raw -echo; echo R0144 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0144 >/dev/ttyPS0
+[40588ms] R0144
+[40820ms] D0144
+[40821ms] TX stty raw -echo; echo R0145 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0145 >/dev/ttyPS0
+[40883ms] R0145
+[41115ms] D0145
+[41116ms] TX stty raw -echo; echo R0146 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0146 >/dev/ttyPS0
+[41162ms] R0146
+[41394ms] D0146
+[41395ms] TX stty raw -echo; echo R0147 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0147 >/dev/ttyPS0
+[41441ms] R0147
+[41659ms] D0147
+[41659ms] TX stty raw -echo; echo R0148 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0148 >/dev/ttyPS0
+[41705ms] R0148
+[41923ms] D0148
+[41923ms] TX stty raw -echo; echo R0149 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0149 >/dev/ttyPS0
+[41969ms] R0149
+[42185ms] D0149
+[42186ms] TX stty raw -echo; echo R0150 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0150 >/dev/ttyPS0
+[42278ms] R0150
+[42494ms] D0150
+[42495ms] TX stty raw -echo; echo R0151 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0151 >/dev/ttyPS0
+[42541ms] R0151
+[42759ms] D0151
+[42759ms] TX stty raw -echo; echo R0152 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0152 >/dev/ttyPS0
+[42806ms] R0152
+[43024ms] D0152
+[43025ms] TX stty raw -echo; echo R0153 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0153 >/dev/ttyPS0
+[43071ms] R0153
+[43303ms] D0153
+[43304ms] TX stty raw -echo; echo R0154 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0154 >/dev/ttyPS0
+[43349ms] R0154
+[43583ms] D0154
+[43584ms] TX stty raw -echo; echo R0155 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0155 >/dev/ttyPS0
+[43631ms] R0155
+[43864ms] D0155
+[43864ms] TX stty raw -echo; echo R0156 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0156 >/dev/ttyPS0
+[43911ms] R0156
+[44146ms] D0156
+[44146ms] TX stty raw -echo; echo R0157 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0157 >/dev/ttyPS0
+[44192ms] R0157
+[44408ms] D0157
+[44409ms] TX stty raw -echo; echo R0158 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0158 >/dev/ttyPS0
+[44455ms] R0158
+[44674ms] D0158
+[44674ms] TX stty raw -echo; echo R0159 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0159 >/dev/ttyPS0
+[44719ms] R0159
+[44937ms] D0159
+[44937ms] TX stty raw -echo; echo R0160 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0160 >/dev/ttyPS0
+[44983ms] R0160
+[45200ms] D0160
+[45202ms] TX stty raw -echo; echo R0161 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0161 >/dev/ttyPS0
+[45248ms] R0161
+[45464ms] D0161
+[45465ms] TX stty raw -echo; echo R0162 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0162 >/dev/ttyPS0
+[45510ms] R0162
+[45741ms] D0162
+[45741ms] TX stty raw -echo; echo R0163 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0163 >/dev/ttyPS0
+[45787ms] R0163
+[46020ms] D0163
+[46020ms] TX stty raw -echo; echo R0164 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0164 >/dev/ttyPS0
+[46066ms] R0164
+[46282ms] D0164
+[46282ms] TX stty raw -echo; echo R0165 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0165 >/dev/ttyPS0
+[46328ms] R0165
+[46546ms] D0165
+[46546ms] TX stty raw -echo; echo R0166 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0166 >/dev/ttyPS0
+[46593ms] R0166
+[46811ms] D0166
+[46812ms] TX stty raw -echo; echo R0167 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0167 >/dev/ttyPS0
+[46857ms] R0167
+[47075ms] D0167
+[47076ms] TX stty raw -echo; echo R0168 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0168 >/dev/ttyPS0
+[47121ms] R0168
+[47339ms] D0168
+[47339ms] TX stty raw -echo; echo R0169 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0169 >/dev/ttyPS0
+[47386ms] R0169
+[47616ms] D0169
+[47617ms] TX stty raw -echo; echo R0170 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0170 >/dev/ttyPS0
+[47662ms] R0170
+[47896ms] D0170
+[47896ms] TX stty raw -echo; echo R0171 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0171 >/dev/ttyPS0
+[47942ms] R0171
+[48174ms] D0171
+[48175ms] TX stty raw -echo; echo R0172 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0172 >/dev/ttyPS0
+[48221ms] R0172
+[48452ms] D0172
+[48452ms] TX stty raw -echo; echo R0173 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0173 >/dev/ttyPS0
+[48498ms] R0173
+[48715ms] D0173
+[48715ms] TX stty raw -echo; echo R0174 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0174 >/dev/ttyPS0
+[48761ms] R0174
+[48977ms] D0174
+[48978ms] TX stty raw -echo; echo R0175 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0175 >/dev/ttyPS0
+[49038ms] R0175
+[49271ms] D0175
+[49271ms] TX stty raw -echo; echo R0176 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0176 >/dev/ttyPS0
+[49318ms] R0176
+[49505ms] D0176
+[49506ms] TX stty raw -echo; echo R0177 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0177 >/dev/ttyPS0
+[49551ms] R0177
+[49784ms] D0177
+[49784ms] TX stty raw -echo; echo R0178 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0178 >/dev/ttyPS0
+[49830ms] R0178
+[50049ms] D0178
+[50049ms] TX stty raw -echo; echo R0179 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0179 >/dev/ttyPS0
+[50096ms] R0179
+[50316ms] D0179
+[50316ms] TX stty raw -echo; echo R0180 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0180 >/dev/ttyPS0
+[50362ms] R0180
+[50582ms] D0180
+[50583ms] TX stty raw -echo; echo R0181 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0181 >/dev/ttyPS0
+[50629ms] R0181
+[50845ms] D0181
+[50845ms] TX stty raw -echo; echo R0182 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0182 >/dev/ttyPS0
+[50891ms] R0182
+[51108ms] D0182
+[51109ms] TX stty raw -echo; echo R0183 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0183 >/dev/ttyPS0
+[51155ms] R0183
+[51375ms] D0183
+[51376ms] TX stty raw -echo; echo R0184 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0184 >/dev/ttyPS0
+[51423ms] R0184
+[51640ms] D0184
+[51641ms] TX stty raw -echo; echo R0185 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0185 >/dev/ttyPS0
+[51687ms] R0185
+[51905ms] D0185
+[51906ms] TX stty raw -echo; echo R0186 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0186 >/dev/ttyPS0
+[51953ms] R0186
+[52170ms] D0186
+[52170ms] TX stty raw -echo; echo R0187 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0187 >/dev/ttyPS0
+[52218ms] R0187
+[52438ms] D0187
+[52438ms] TX stty raw -echo; echo R0188 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0188 >/dev/ttyPS0
+[52483ms] R0188
+[52703ms] D0188
+[52704ms] TX stty raw -echo; echo R0189 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0189 >/dev/ttyPS0
+[52749ms] R0189
+[52967ms] D0189
+[52967ms] TX stty raw -echo; echo R0190 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0190 >/dev/ttyPS0
+[53013ms] R0190
+[53233ms] D0190
+[53233ms] TX stty raw -echo; echo R0191 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0191 >/dev/ttyPS0
+[53279ms] R0191
+[53501ms] D0191
+[53501ms] TX stty raw -echo; echo R0192 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0192 >/dev/ttyPS0
+[53548ms] R0192
+[53766ms] D0192
+[53766ms] TX stty raw -echo; echo R0193 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0193 >/dev/ttyPS0
+[53814ms] R0193
+[54029ms] D0193
+[54030ms] TX stty raw -echo; echo R0194 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0194 >/dev/ttyPS0
+[54077ms] R0194
+[54343ms] D0194
+[54344ms] TX stty raw -echo; echo R0195 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0195 >/dev/ttyPS0
+[54389ms] R0195
+[54608ms] D0195
+[54608ms] TX stty raw -echo; echo R0196 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0196 >/dev/ttyPS0
+[54653ms] R0196
+[54872ms] D0196
+[54872ms] TX stty raw -echo; echo R0197 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0197 >/dev/ttyPS0
+[54919ms] R0197
+[55149ms] D0197
+[55150ms] TX stty raw -echo; echo R0198 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0198 >/dev/ttyPS0
+[55197ms] R0198
+[55417ms] D0198
+[55418ms] TX stty raw -echo; echo R0199 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0199 >/dev/ttyPS0
+[55463ms] R0199
+[55712ms] D0199
+[55712ms] TX stty raw -echo; echo R0200 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0200 >/dev/ttyPS0
+[55759ms] R0200
+[55979ms] D0200
+[55980ms] TX stty raw -echo; echo R0201 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0201 >/dev/ttyPS0
+[56024ms] R0201
+[56258ms] D0201
+[56258ms] TX stty raw -echo; echo R0202 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0202 >/dev/ttyPS0
+[56320ms] R0202
+[56553ms] D0202
+[56554ms] TX stty raw -echo; echo R0203 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0203 >/dev/ttyPS0
+[56600ms] R0203
+[56833ms] D0203
+[56834ms] TX stty raw -echo; echo R0204 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0204 >/dev/ttyPS0
+[56881ms] R0204
+[57117ms] D0204
+[57117ms] TX stty raw -echo; echo R0205 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0205 >/dev/ttyPS0
+[57163ms] R0205
+[57385ms] D0205
+[57386ms] TX stty raw -echo; echo R0206 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0206 >/dev/ttyPS0
+[57432ms] R0206
+[57651ms] D0206
+[57651ms] TX stty raw -echo; echo R0207 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0207 >/dev/ttyPS0
+[57699ms] R0207
+[57915ms] D0207
+[57916ms] TX stty raw -echo; echo R0208 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0208 >/dev/ttyPS0
+[57962ms] R0208
+[58194ms] D0208
+[58195ms] TX stty raw -echo; echo R0209 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0209 >/dev/ttyPS0
+[58241ms] R0209
+[58474ms] D0209
+[58474ms] TX stty raw -echo; echo R0210 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0210 >/dev/ttyPS0
+[58521ms] R0210
+[58754ms] D0210
+[58755ms] TX stty raw -echo; echo R0211 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0211 >/dev/ttyPS0
+[58800ms] R0211
+[59018ms] D0211
+[59018ms] TX stty raw -echo; echo R0212 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0212 >/dev/ttyPS0
+[59065ms] R0212
+[59283ms] D0212
+[59283ms] TX stty raw -echo; echo R0213 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0213 >/dev/ttyPS0
+[59329ms] R0213
+[59559ms] D0213
+[59559ms] TX stty raw -echo; echo R0214 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0214 >/dev/ttyPS0
+[59605ms] R0214
+[59822ms] D0214
+[59823ms] TX stty raw -echo; echo R0215 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0215 >/dev/ttyPS0
+[59868ms] R0215
+[60088ms] D0215
+[60089ms] TX stty raw -echo; echo R0216 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0216 >/dev/ttyPS0
+[60135ms] R0216
+[60353ms] D0216
+[60353ms] TX stty raw -echo; echo R0217 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0217 >/dev/ttyPS0
+[60399ms] R0217
+[60633ms] D0217
+[60634ms] TX stty raw -echo; echo R0218 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0218 >/dev/ttyPS0
+[60695ms] R0218
+[60882ms] D0218
+[60882ms] TX stty raw -echo; echo R0219 >/dev/ttyPS0; dd bs=1 count=1572 >> /run/media/mmcblk0p1/hub75_anim_balls; stty sane; echo D0219 >/dev/ttyPS0
+[60929ms] R0219
+[61116ms] D0219

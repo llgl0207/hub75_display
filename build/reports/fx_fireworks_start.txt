@@ -1,0 +1,5 @@
+﻿3dplay fireworks >/dev/ttyPS0; sleep 2; echo "PID=$(pidof hub75_fx)" >/dev/ttyPS0; devmem 0x41210000 >/dev/ttyPS0; sleep 1; devmem 0x41210000 >/dev/ttyPS0
+playing /run/media/mmcblk0p1/fx_fireworks
+hub75d: anim mode -> /run/media/mmcblk0p1/fx_fireworksPID=1998
+0x9A933CED
+0xA39D15FD

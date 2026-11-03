@@ -1,0 +1,4 @@
+﻿ 0 
+Zynq> elp
+Unknown command 'elp' - try 'help'
+Zynq> 

@@ -1,0 +1,7 @@
+﻿chmod +x /run/media/mmcblk0p1/hub75_anim_balls; md5sum /run/media/mmcblk0p1/hub75_anim_balls >/dev/ttyPS0; 3dplay balls >/dev/ttyPS0; sleep 3; for i in 1 2 3 4; do devmem 0x41210000; sleep 1; done >/dev/ttyPS0
+0aad4824aa7dc5c825718254adcad291  /run/media/mmcblk0p1/hub75_anim_balls
+playing /run/media/mmcblk0p1/hub75_anim_balls
+hub75d: anim mode -> /run/media/mmcblk0p1/hub75_anim_balls0xB0F82DE4
+0xBA0235E4
+0x840C3FE4
+0x8F170FCD

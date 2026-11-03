@@ -1,0 +1,4 @@
+﻿echo SHELL_OK_77 >/dev/ttyPS0; md5sum /run/media/mmcblk0p1/uEnv.txt >/dev/ttyPS0
+SHELL_OK_77
+hub75d: pty [92]hub75d: submit 10200000 10ms st=49023ee4 id=21cc0f02ff3978cce0fa6673fb5b5abbf  /run/media/mmcblk0p1/uEnv.txt
+hub75d: pty [8]hub75d: submit 10000000 6ms st=0b031fed id=3

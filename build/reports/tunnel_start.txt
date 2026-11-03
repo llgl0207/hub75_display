@@ -1,0 +1,5 @@
+﻿3dplay tunnel >/dev/ttyPS0; sleep 2; echo "PID=$(pidof hub75_fx)" >/dev/ttyPS0; devmem 0x41210000 >/dev/ttyPS0; sleep 1; devmem 0x41210000 >/dev/ttyPS0
+playing /run/media/mmcblk0p1/fx_tunnel
+hub75d: anim mode -> /run/media/mmcblk0p1/fx_tunneltunnel: mouse /dev/input/event1PID=3475
+0xCE1407C4
+0x981E13E4

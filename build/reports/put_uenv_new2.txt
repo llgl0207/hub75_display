@@ -1,0 +1,4 @@
+﻿RAWOK
+hub75d: pty [35]hub75d: submit 10200000 6ms st=4a0631e4 id=6[1468ms] TX stty raw -echo; echo R0000 >/dev/ttyPS0; dd bs=1 count=361 >> /run/media/mmcblk0p1/uEnv.txt.new; stty sane; echo D0000 >/dev/ttyPS0
+[1523ms] R0000
+[1570ms] D0000

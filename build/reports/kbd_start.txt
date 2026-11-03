@@ -1,0 +1,6 @@
+﻿md5sum /run/media/mmcblk0p1/hub75_fx >/dev/ttyPS0; printf "turn=2.5\n" > /run/media/mmcblk0p1/tunnel.conf; 3dplay tunnel >/dev/ttyPS0; sleep 2; echo "PID=$(pidof hub75_fx)" >/dev/ttyPS0; devmem 0x41210000 >/dev/ttyPS0; sleep 1; devmem 0x41210000 >/dev/ttyPS0
+46cbca3236db1ac98f46c05f290dac7c  /run/media/mmcblk0p1/hub75_fx
+playing /run/media/mmcblk0p1/fx_tunnel
+hub75d: anim mode -> /run/media/mmcblk0p1/fx_tunneltunnel: keyboard /dev/input/event0PID=3096
+0xFCCF24ED
+0xFED122ED

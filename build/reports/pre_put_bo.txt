@@ -1,0 +1,8 @@
+﻿echo READY_X >/dev/ttyPS0; md5sum /run/media/mmcblk0p1/hub75d >/dev/ttyPS0; ls /dev/input/ >/dev/ttyPS0
+READY_X
+hub75d: pty [117]hub75d: submit 10200000 15ms st=750215e6 id=2cc945fad40a87299567df712c2605cf3  /run/media/mmcblk0p1/hub75d
+by-id
+by-path
+event0
+event1
+hub75d: pty [8]hub75d: submit 10000000 6ms st=360332ef id=3

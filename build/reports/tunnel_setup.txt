@@ -1,0 +1,5 @@
+﻿md5sum /run/media/mmcblk0p1/hub75_fx >/dev/ttyPS0; printf "#!/bin/sh\nexec /run/media/mmcblk0p1/hub75_fx tunnel\n" > /run/media/mmcblk0p1/fx_tunnel; chmod +x /run/media/mmcblk0p1/fx_tunnel; printf "sens=0.004\n" > /run/media/mmcblk0p1/tunnel.conf; grep -q "^anim_tunnel=" /run/media/mmcblk0p1/hub75.conf || echo "anim_tunnel=/run/media/mmcblk0p1/fx_tunnel" >> /run/media/mmcblk0p1/hub75.conf; tail -3 /run/media/mmcblk0p1/hub75.conf >/dev/ttyPS0
+7c2c2b3a44329d12d0b319f2e683f355  /run/media/mmcblk0p1/hub75_fx
+anim_vortex=/run/media/mmcblk0p1/fx_vortex
+anim_knot=/run/media/mmcblk0p1/fx_knot
+anim_tunnel=/run/media/mmcblk0p1/fx_tunnel

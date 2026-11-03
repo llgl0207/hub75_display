@@ -1,0 +1,2 @@
+﻿RAWOK
+hub75d: pty [35]hub75d: submit 10200000 6ms st=45041be4 id=4[1458ms] TX stty raw -echo; echo R0000 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_game_breakout; stty sane; echo D0000 >/dev/ttyPS0

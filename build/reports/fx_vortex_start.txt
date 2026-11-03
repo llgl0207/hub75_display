@@ -1,0 +1,5 @@
+﻿3dplay vortex >/dev/ttyPS0; sleep 2; echo "PID=$(pidof hub75_fx)" >/dev/ttyPS0; devmem 0x41210000 >/dev/ttyPS0; sleep 1; devmem 0x41210000 >/dev/ttyPS0
+playing /run/media/mmcblk0p1/fx_vortex
+hub75d: anim mode -> /run/media/mmcblk0p1/fx_vortexPID=2010
+0xF2ED01CD
+0xBCF712ED

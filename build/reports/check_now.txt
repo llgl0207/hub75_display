@@ -1,0 +1,1 @@
+﻿echo CHECK_NOW >/dev/ttyPS0; stty sane < /dev/ttyPS0

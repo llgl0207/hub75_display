@@ -1,0 +1,9 @@
+﻿3dplay helix >/dev/ttyPS0; sleep 2; for i in 1 2 3 4 5 6; do devmem 0x41210000; sleep 1; done >/dev/ttyPS0; cat /proc/loadavg >/dev/ttyPS0
+playing /run/media/mmcblk0p1/hub75_anim_helix
+hub75d: anim mode -> /run/media/mmcblk0p1/hub75_anim_helix0xD6B014E4
+0xD8B20AE4
+0xDAB50ECD
+0xE4BF1BCD
+0xAEC928ED
+0xB8D335ED
+1.06 0.89 0.47 2/46 2697

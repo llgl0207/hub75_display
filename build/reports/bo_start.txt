@@ -1,0 +1,3 @@
+﻿3dplay breakout >/dev/ttyPS0; sleep 2; pidof hub75_game_breakout >/dev/ttyPS0
+playing /run/media/mmcblk0p1/hub75_game_breakout
+hub75d: anim mode -> /run/media/mmcblk0p1/hub75_game_breakoutbreakout: sens=0.12 speed=55breakout: mouse /dev/input/event11874

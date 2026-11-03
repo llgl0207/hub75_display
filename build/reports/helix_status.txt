@@ -1,0 +1,2 @@
+﻿S1=$(devmem 0x41210000); sleep 1; S2=$(devmem 0x41210000); echo "S1=$S1 S2=$S2" >/dev/ttyPS0
+S1=0x67492DED S2=0x71533AED

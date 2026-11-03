@@ -1,0 +1,4 @@
+﻿echo HUB75_ALIVE_42 >/dev/ttyPS0; id >/dev/ttyPS0; echo END_42 >/dev/ttyPS0
+HUB75_ALIVE_42
+uid=0(root) gid=0(root)
+END_42

@@ -1,0 +1,32 @@
+﻿/usr/sbin/dropbear -V >/dev/ttyPS0 2>&1; /usr/sbin/dropbear -h 2>&1 | head -30 >/dev/ttyPS0
+Dropbear v2017.75
+Dropbear server v2017.75 https://matt.ucc.asn.au/dropbear/dropbear.html
+Usage: /usr/sbin/dropbear [options]
+-b bannerfile	Display the contents of bannerfile before user login
+		(default: none)
+-r keyfile  Specify hostkeys (repeatable)
+		defaults: 
+		dss /etc/dropbear/dropbear_dss_host_key
+		rsa /etc/dropbear/dropbear_rsa_host_key
+		ecdsa /etc/dropbear/dropbear_ecdsa_host_key
+-R		Create hostkeys as required
+-F		Don't fork into background
+-E		Log to stderr rather than syslog
+-m		Don't display the motd on login
+-w		Disallow root logins
+-s		Disable password logins
+-g		Disable password logins for root
+-B		Allow blank password logins
+-j		Disable local port forwarding
+-k		Disable remote port forwarding
+-a		Allow connections to forwarded ports from any host
+-p [address:]port
+		Listen on specified tcp port (and optionally address),
+		up to 10 can be specified
+		(default port is 22 if none specified)
+-P PidFile	Create pid file PidFile
+		(default /var/run/dropbear.pid)
+-i		Start for inetd
+-W <receive_window_buffer> (default 24576, larger may be faster, max 1MB)
+-K <keepalive>  (0 is never, default 0, in seconds)
+-I <idle_timeout>  (0 is never, default 0, in seconds)

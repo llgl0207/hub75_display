@@ -1,0 +1,5 @@
+﻿3dplay blackhole >/dev/ttyPS0; sleep 2; echo "PID=$(pidof hub75_fx)" >/dev/ttyPS0; devmem 0x41210000 >/dev/ttyPS0; sleep 1; devmem 0x41210000 >/dev/ttyPS0
+playing /run/media/mmcblk0p1/fx_blackhole
+hub75d: anim mode -> /run/media/mmcblk0p1/fx_blackholePID=1988
+0xFA330FCD
+0x843D1BED

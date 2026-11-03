@@ -1,0 +1,2 @@
+﻿echo PING_HUB75
+hub75d: pty [39]

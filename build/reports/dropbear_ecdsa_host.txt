@@ -1,0 +1,10 @@
+﻿dropbearkey -t ecdsa -f /etc/dropbear/dropbear_ecdsa_host_key >/dev/ttyPS0 2>&1; killall dropbear 2>/dev/null; /usr/sbin/dropbear -r /etc/dropbear/dropbear_ecdsa_host_key -p 22; sleep 1; ps | grep dropbear >/dev/ttyPS0; ls -l /etc/dropbear >/dev/ttyPS0
+Generating key, this may take a while...
+Public key portion is:
+ecdsa-sha2-nistp521 AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBABxxnZNJji90zsqftAl6qxUeMnoBUBFCS5FAWAhkO9EvhO8WDtkjC+SKG/E7JDW1M41d9pZTxNs0MgKIBpkRz80QwCLLqFAXNpT8VpG877g9hpIWZzvaFC7eNi1yDQOMAAYfw72JWEGeJY5k4AVpK5auZVgYCIJJSvXRViPh5gtC6XtjA== root@petalinux_boot_from_sd
+Fingerprint: md5 8f:f9:bf:95:ec:12:0e:87:66:e8:0d:c5:23:06:ee:d7
+ 3232 root       0:00 /usr/sbin/dropbear -r /etc/dropbear/dropbear_ecdsa_host_key -p 22
+ 3235 root       0:00 grep dropbear
+total 8
+-rw-------    1 root     root           242 Mar  3 08:06 dropbear_ecdsa_host_key
+-rw-------    1 root     root           805 Mar  3 06:25 dropbear_rsa_host_key

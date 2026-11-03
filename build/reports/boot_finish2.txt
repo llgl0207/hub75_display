@@ -1,0 +1,11 @@
+﻿No lease, forking to background
+done.
+Starting Dropbear SSH server: Generating key, this may take a while...
+Public key portion is:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCdRFdPAbw6ljLC/2nbilh8Ye2v1WHrReYVrPs7ZbC12f6Wz5cEFHv191uwPcqG/i+ZYTvOqW50FjoW2X22ULevJF1ibFZ39d5cjzx2zlep0ER5I5PfKzSYB6818N9N30k4aZP/F4HeC59mmMRaJhIek/tJEXaFnJ+XqOy1T5DUi190MhdSs/iEPo0SFojokWKEN/3bJ6yI4jRdCT2qJnEi0PkZYL+0xq7HUZ4ShQy00KRmxX5QNQPcFCIqZQerkRS+bJ++YLcR9uUKO9LkJCFcIlhLOIZYfIaDjN7iAiQ6tmk4sowBy/ua30Z5UO28ZMLANY/dWYXPf+hG0suEAOFT root@petalinux_boot_from_sd
+Fingerprint: md5 68:ec:5b:2f:68:d8:c9:dc:f6:98:28:1c:7f:3d:13:3d
+dropbear.
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Starting syslogd/klogd: done
+Starting tcf-agent: OK
+hub75d: font 8x8 -> 16x8hub75d: submit_ms 150hub75d: pty selftest w=12 poll=1 n=12 mfd=4hub75d: kbd /dev/input/event0hub75d: pty [20]hub75d: submit 10000000 7ms st=09011eef id=1

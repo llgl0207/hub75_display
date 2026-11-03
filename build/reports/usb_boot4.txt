@@ -1,0 +1,8 @@
+﻿Public key portion is:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDoeWPrwM78lh8FIdTwdzJ6RVEZtGtXMF54MwP1bXOh01jYsCxZh5tzgsqaSv/iz6ppqJB+LqOnoXi4si28TdPmeqZKMCHFYyrskvvz4DvYgIVcCmqnIL9K5VgIVlan4745jNzqJXyspttl7thrEa1OX+Kv+EP0MqNl6E9iEmeQXsCpq5Bk4zGxw8aTFqYNqjh8IqbDqBCsFz+UlO3WYIXTLBlyK5BGai2mTlZ8bSn/hsEIiTCoVGFRklJA/aUrcdgeMJ+2X+1o42rp3g2rxTud1US6hMqLFtUT0qc2ahBsIqbdFFsC2hX8CPBZkEpwofg+KCTO2Iib2f0Herl6DtGh root@petalinux_boot_from_sd
+Fingerprint: md5 fe:a6:72:d2:34:0e:d8:e6:e6:99:c2:b2:ef:52:5a:87
+dropbear.
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Starting syslogd/klogd: done
+Starting tcf-agent: OK
+hub75d: font 8x8 -> 16x8hub75d: submit_ms 150hub75d: pty selftest w=12 poll=1 n=12 mfd=4hub75d: kbd /dev/input/event0hub75d: pty [20]hub75d: submit 10000000 6ms st=30012ded id=1

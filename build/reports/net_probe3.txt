@@ -1,0 +1,6 @@
+﻿echo ---MODS--- >/dev/ttyPS0; find /lib/modules -name "*.ko" 2>/dev/null | grep -iE "cfg80211|mac80211|rtl|8188|8192|7601|usbnet|asix|cdc_ether|r8152|smsc95|ath9k|zd1211|brcmfmac|mt76" >/dev/ttyPS0 2>&1; echo ---BUILTIN--- >/dev/ttyPS0; cat /lib/modules/4.14.0-xilinx-v2018.3/modules.builtin 2>/dev/null | grep -iE "cfg80211|mac80211|rtl|8188|8192|7601|usbnet|asix|cdc_ether|r8152|smsc95|ath9k|brcmfmac|mt76" >/dev/ttyPS0 2>&1; echo ---END--- >/dev/ttyPS0
+---MODS---
+---BUILTIN---
+---END---
+usb 1-1: USB disconnect, device number 2
+hub75d: kbd removed

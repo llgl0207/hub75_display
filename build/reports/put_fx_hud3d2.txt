@@ -1,0 +1,706 @@
+﻿RAWOK
+[1480ms] TX stty raw -echo; echo R0000 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0000 >/dev/ttyPS0
+[1532ms] R0000
+[1750ms] D0000
+[1760ms] TX stty raw -echo; echo R0001 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0001 >/dev/ttyPS0
+[1812ms] R0001
+[2031ms] D0001
+[2032ms] TX stty raw -echo; echo R0002 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0002 >/dev/ttyPS0
+[2078ms] R0002
+[2296ms] D0002
+[2297ms] TX stty raw -echo; echo R0003 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0003 >/dev/ttyPS0
+[2343ms] R0003
+[2559ms] D0003
+[2559ms] TX stty raw -echo; echo R0004 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0004 >/dev/ttyPS0
+[2604ms] R0004
+[2823ms] D0004
+[2824ms] TX stty raw -echo; echo R0005 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0005 >/dev/ttyPS0
+[2870ms] R0005
+[3088ms] D0005
+[3089ms] TX stty raw -echo; echo R0006 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0006 >/dev/ttyPS0
+[3135ms] R0006
+[3366ms] D0006
+[3367ms] TX stty raw -echo; echo R0007 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0007 >/dev/ttyPS0
+[3413ms] R0007
+[3646ms] D0007
+[3647ms] TX stty raw -echo; echo R0008 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0008 >/dev/ttyPS0
+[3693ms] R0008
+[3927ms] D0008
+[3928ms] TX stty raw -echo; echo R0009 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0009 >/dev/ttyPS0
+[3974ms] R0009
+[4206ms] D0009
+[4207ms] TX stty raw -echo; echo R0010 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0010 >/dev/ttyPS0
+[4252ms] R0010
+[4470ms] D0010
+[4471ms] TX stty raw -echo; echo R0011 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0011 >/dev/ttyPS0
+[4517ms] R0011
+[4732ms] D0011
+[4733ms] TX stty raw -echo; echo R0012 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0012 >/dev/ttyPS0
+[4780ms] R0012
+[4998ms] D0012
+[4998ms] TX stty raw -echo; echo R0013 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0013 >/dev/ttyPS0
+[5043ms] R0013
+[5262ms] D0013
+[5262ms] TX stty raw -echo; echo R0014 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0014 >/dev/ttyPS0
+[5309ms] R0014
+[5526ms] D0014
+[5527ms] TX stty raw -echo; echo R0015 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0015 >/dev/ttyPS0
+[5573ms] R0015
+[5790ms] D0015
+[5790ms] TX stty raw -echo; echo R0016 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0016 >/dev/ttyPS0
+[5837ms] R0016
+[6071ms] D0016
+[6071ms] TX stty raw -echo; echo R0017 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0017 >/dev/ttyPS0
+[6132ms] R0017
+[6366ms] D0017
+[6366ms] TX stty raw -echo; echo R0018 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0018 >/dev/ttyPS0
+[6414ms] R0018
+[6646ms] D0018
+[6646ms] TX stty raw -echo; echo R0019 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0019 >/dev/ttyPS0
+[6692ms] R0019
+[6925ms] D0019
+[6925ms] TX stty raw -echo; echo R0020 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0020 >/dev/ttyPS0
+[6971ms] R0020
+[7189ms] D0020
+[7190ms] TX stty raw -echo; echo R0021 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0021 >/dev/ttyPS0
+[7236ms] R0021
+[7454ms] D0021
+[7455ms] TX stty raw -echo; echo R0022 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0022 >/dev/ttyPS0
+[7501ms] R0022
+[7718ms] D0022
+[7718ms] TX stty raw -echo; echo R0023 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0023 >/dev/ttyPS0
+[7765ms] R0023
+[7981ms] D0023
+[7982ms] TX stty raw -echo; echo R0024 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0024 >/dev/ttyPS0
+[8028ms] R0024
+[8247ms] D0024
+[8247ms] TX stty raw -echo; echo R0025 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0025 >/dev/ttyPS0
+[8293ms] R0025
+[8509ms] D0025
+[8509ms] TX stty raw -echo; echo R0026 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0026 >/dev/ttyPS0
+[8571ms] R0026
+[8790ms] D0026
+[8791ms] TX stty raw -echo; echo R0027 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0027 >/dev/ttyPS0
+[8836ms] R0027
+[9070ms] D0027
+[9071ms] TX stty raw -echo; echo R0028 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0028 >/dev/ttyPS0
+[9132ms] R0028
+[9318ms] D0028
+[9319ms] TX stty raw -echo; echo R0029 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0029 >/dev/ttyPS0
+[9365ms] R0029
+[9553ms] D0029
+[9553ms] TX stty raw -echo; echo R0030 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0030 >/dev/ttyPS0
+[9598ms] R0030
+[9829ms] D0030
+[9830ms] TX stty raw -echo; echo R0031 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0031 >/dev/ttyPS0
+[9876ms] R0031
+[10093ms] D0031
+[10094ms] TX stty raw -echo; echo R0032 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0032 >/dev/ttyPS0
+[10139ms] R0032
+[10357ms] D0032
+[10357ms] TX stty raw -echo; echo R0033 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0033 >/dev/ttyPS0
+[10404ms] R0033
+[10622ms] D0033
+[10622ms] TX stty raw -echo; echo R0034 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0034 >/dev/ttyPS0
+[10669ms] R0034
+[10885ms] D0034
+[10886ms] TX stty raw -echo; echo R0035 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0035 >/dev/ttyPS0
+[10933ms] R0035
+[11150ms] D0035
+[11150ms] TX stty raw -echo; echo R0036 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0036 >/dev/ttyPS0
+[11211ms] R0036
+[11444ms] D0036
+[11444ms] TX stty raw -echo; echo R0037 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0037 >/dev/ttyPS0
+[11490ms] R0037
+[11676ms] D0037
+[11676ms] TX stty raw -echo; echo R0038 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0038 >/dev/ttyPS0
+[11722ms] R0038
+[11941ms] D0038
+[11941ms] TX stty raw -echo; echo R0039 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0039 >/dev/ttyPS0
+[11987ms] R0039
+[12205ms] D0039
+[12205ms] TX stty raw -echo; echo R0040 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0040 >/dev/ttyPS0
+[12252ms] R0040
+[12469ms] D0040
+[12471ms] TX stty raw -echo; echo R0041 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0041 >/dev/ttyPS0
+[12515ms] R0041
+[12737ms] D0041
+[12737ms] TX stty raw -echo; echo R0042 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0042 >/dev/ttyPS0
+[12782ms] R0042
+[12999ms] D0042
+[12999ms] TX stty raw -echo; echo R0043 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0043 >/dev/ttyPS0
+[13046ms] R0043
+[13264ms] D0043
+[13264ms] TX stty raw -echo; echo R0044 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0044 >/dev/ttyPS0
+[13310ms] R0044
+[13528ms] D0044
+[13529ms] TX stty raw -echo; echo R0045 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0045 >/dev/ttyPS0
+[13575ms] R0045
+[13791ms] D0045
+[13792ms] TX stty raw -echo; echo R0046 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0046 >/dev/ttyPS0
+[13837ms] R0046
+[14056ms] D0046
+[14056ms] TX stty raw -echo; echo R0047 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0047 >/dev/ttyPS0
+[14103ms] R0047
+[14336ms] D0047
+[14337ms] TX stty raw -echo; echo R0048 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0048 >/dev/ttyPS0
+[14398ms] R0048
+[14585ms] D0048
+[14585ms] TX stty raw -echo; echo R0049 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0049 >/dev/ttyPS0
+[14630ms] R0049
+[14867ms] D0049
+[14868ms] TX stty raw -echo; echo R0050 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0050 >/dev/ttyPS0
+[14929ms] R0050
+[15149ms] D0050
+[15150ms] TX stty raw -echo; echo R0051 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0051 >/dev/ttyPS0
+[15211ms] R0051
+[15398ms] D0051
+[15399ms] TX stty raw -echo; echo R0052 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0052 >/dev/ttyPS0
+[15460ms] R0052
+[15694ms] D0052
+[15695ms] TX stty raw -echo; echo R0053 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0053 >/dev/ttyPS0
+[15742ms] R0053
+[15974ms] D0053
+[15975ms] TX stty raw -echo; echo R0054 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0054 >/dev/ttyPS0
+[16021ms] R0054
+[16207ms] D0054
+[16208ms] TX stty raw -echo; echo R0055 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0055 >/dev/ttyPS0
+[16253ms] R0055
+[16487ms] D0055
+[16488ms] TX stty raw -echo; echo R0056 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0056 >/dev/ttyPS0
+[16535ms] R0056
+[16754ms] D0056
+[16755ms] TX stty raw -echo; echo R0057 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0057 >/dev/ttyPS0
+[16801ms] R0057
+[16987ms] D0057
+[16988ms] TX stty raw -echo; echo R0058 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0058 >/dev/ttyPS0
+[17034ms] R0058
+[17253ms] D0058
+[17254ms] TX stty raw -echo; echo R0059 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0059 >/dev/ttyPS0
+[17300ms] R0059
+[17520ms] D0059
+[17521ms] TX stty raw -echo; echo R0060 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0060 >/dev/ttyPS0
+[17568ms] R0060
+[17758ms] D0060
+[17759ms] TX stty raw -echo; echo R0061 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0061 >/dev/ttyPS0
+[17821ms] R0061
+[18053ms] D0061
+[18054ms] TX stty raw -echo; echo R0062 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0062 >/dev/ttyPS0
+[18100ms] R0062
+[18286ms] D0062
+[18286ms] TX stty raw -echo; echo R0063 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0063 >/dev/ttyPS0
+[18332ms] R0063
+[18550ms] D0063
+[18551ms] TX stty raw -echo; echo R0064 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0064 >/dev/ttyPS0
+[18597ms] R0064
+[18817ms] D0064
+[18817ms] TX stty raw -echo; echo R0065 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0065 >/dev/ttyPS0
+[18863ms] R0065
+[19095ms] D0065
+[19096ms] TX stty raw -echo; echo R0066 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0066 >/dev/ttyPS0
+[19142ms] R0066
+[19356ms] D0066
+[19357ms] TX stty raw -echo; echo R0067 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0067 >/dev/ttyPS0
+[19403ms] R0067
+[19620ms] D0067
+[19621ms] TX stty raw -echo; echo R0068 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0068 >/dev/ttyPS0
+[19667ms] R0068
+[19884ms] D0068
+[19885ms] TX stty raw -echo; echo R0069 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0069 >/dev/ttyPS0
+[19993ms] R0069
+[20223ms] D0069
+[20224ms] TX stty raw -echo; echo R0070 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0070 >/dev/ttyPS0
+[20270ms] R0070
+[20457ms] D0070
+[20457ms] TX stty raw -echo; echo R0071 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0071 >/dev/ttyPS0
+[20503ms] R0071
+[20720ms] D0071
+[20720ms] TX stty raw -echo; echo R0072 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0072 >/dev/ttyPS0
+[20766ms] R0072
+[20984ms] D0072
+[20985ms] TX stty raw -echo; echo R0073 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0073 >/dev/ttyPS0
+[21030ms] R0073
+[21247ms] D0073
+[21248ms] TX stty raw -echo; echo R0074 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0074 >/dev/ttyPS0
+[21294ms] R0074
+[21513ms] D0074
+[21513ms] TX stty raw -echo; echo R0075 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0075 >/dev/ttyPS0
+[21559ms] R0075
+[21779ms] D0075
+[21779ms] TX stty raw -echo; echo R0076 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0076 >/dev/ttyPS0
+[21825ms] R0076
+[22056ms] D0076
+[22056ms] TX stty raw -echo; echo R0077 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0077 >/dev/ttyPS0
+[22102ms] R0077
+[22321ms] D0077
+[22321ms] TX stty raw -echo; echo R0078 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0078 >/dev/ttyPS0
+[22368ms] R0078
+[22587ms] D0078
+[22588ms] TX stty raw -echo; echo R0079 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0079 >/dev/ttyPS0
+[22634ms] R0079
+[22853ms] D0079
+[22853ms] TX stty raw -echo; echo R0080 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0080 >/dev/ttyPS0
+[22900ms] R0080
+[23131ms] D0080
+[23133ms] TX stty raw -echo; echo R0081 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0081 >/dev/ttyPS0
+[23179ms] R0081
+[23367ms] D0081
+[23367ms] TX stty raw -echo; echo R0082 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0082 >/dev/ttyPS0
+[23428ms] R0082
+[23660ms] D0082
+[23660ms] TX stty raw -echo; echo R0083 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0083 >/dev/ttyPS0
+[23706ms] R0083
+[23971ms] D0083
+[23971ms] TX stty raw -echo; echo R0084 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0084 >/dev/ttyPS0
+[24017ms] R0084
+[24233ms] D0084
+[24233ms] TX stty raw -echo; echo R0085 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0085 >/dev/ttyPS0
+[24279ms] R0085
+[24498ms] D0085
+[24499ms] TX stty raw -echo; echo R0086 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0086 >/dev/ttyPS0
+[24543ms] R0086
+[24760ms] D0086
+[24760ms] TX stty raw -echo; echo R0087 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0087 >/dev/ttyPS0
+[24806ms] R0087
+[24992ms] D0087
+[24993ms] TX stty raw -echo; echo R0088 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0088 >/dev/ttyPS0
+[25055ms] R0088
+[25289ms] D0088
+[25289ms] TX stty raw -echo; echo R0089 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0089 >/dev/ttyPS0
+[25351ms] R0089
+[25583ms] D0089
+[25584ms] TX stty raw -echo; echo R0090 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0090 >/dev/ttyPS0
+[25629ms] R0090
+[25817ms] D0090
+[25818ms] TX stty raw -echo; echo R0091 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0091 >/dev/ttyPS0
+[25863ms] R0091
+[26080ms] D0091
+[26081ms] TX stty raw -echo; echo R0092 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0092 >/dev/ttyPS0
+[26127ms] R0092
+[26345ms] D0092
+[26345ms] TX stty raw -echo; echo R0093 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0093 >/dev/ttyPS0
+[26392ms] R0093
+[26610ms] D0093
+[26610ms] TX stty raw -echo; echo R0094 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0094 >/dev/ttyPS0
+[26656ms] R0094
+[26873ms] D0094
+[26874ms] TX stty raw -echo; echo R0095 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0095 >/dev/ttyPS0
+[26920ms] R0095
+[27137ms] D0095
+[27138ms] TX stty raw -echo; echo R0096 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0096 >/dev/ttyPS0
+[27183ms] R0096
+[27400ms] D0096
+[27400ms] TX stty raw -echo; echo R0097 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0097 >/dev/ttyPS0
+[27461ms] R0097
+[27693ms] D0097
+[27693ms] TX stty raw -echo; echo R0098 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0098 >/dev/ttyPS0
+[27740ms] R0098
+[27990ms] D0098
+[27990ms] TX stty raw -echo; echo R0099 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0099 >/dev/ttyPS0
+[28035ms] R0099
+[28252ms] D0099
+[28253ms] TX stty raw -echo; echo R0100 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0100 >/dev/ttyPS0
+[28299ms] R0100
+[28519ms] D0100
+[28520ms] TX stty raw -echo; echo R0101 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0101 >/dev/ttyPS0
+[28565ms] R0101
+[28781ms] D0101
+[28781ms] TX stty raw -echo; echo R0102 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0102 >/dev/ttyPS0
+[28828ms] R0102
+[29057ms] D0102
+[29058ms] TX stty raw -echo; echo R0103 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0103 >/dev/ttyPS0
+[29103ms] R0103
+[29322ms] D0103
+[29323ms] TX stty raw -echo; echo R0104 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0104 >/dev/ttyPS0
+[29368ms] R0104
+[29598ms] D0104
+[29599ms] TX stty raw -echo; echo R0105 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0105 >/dev/ttyPS0
+[29646ms] R0105
+[29832ms] D0105
+[29832ms] TX stty raw -echo; echo R0106 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0106 >/dev/ttyPS0
+[29879ms] R0106
+[30111ms] D0106
+[30111ms] TX stty raw -echo; echo R0107 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0107 >/dev/ttyPS0
+[30158ms] R0107
+[30375ms] D0107
+[30375ms] TX stty raw -echo; echo R0108 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0108 >/dev/ttyPS0
+[30420ms] R0108
+[30640ms] D0108
+[30640ms] TX stty raw -echo; echo R0109 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0109 >/dev/ttyPS0
+[30686ms] R0109
+[30906ms] D0109
+[30906ms] TX stty raw -echo; echo R0110 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0110 >/dev/ttyPS0
+[30952ms] R0110
+[31170ms] D0110
+[31170ms] TX stty raw -echo; echo R0111 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0111 >/dev/ttyPS0
+[31216ms] R0111
+[31446ms] D0111
+[31447ms] TX stty raw -echo; echo R0112 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0112 >/dev/ttyPS0
+[31493ms] R0112
+[31727ms] D0112
+[31728ms] TX stty raw -echo; echo R0113 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0113 >/dev/ttyPS0
+[31774ms] R0113
+[31993ms] D0113
+[31994ms] TX stty raw -echo; echo R0114 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0114 >/dev/ttyPS0
+[32039ms] R0114
+[32271ms] D0114
+[32272ms] TX stty raw -echo; echo R0115 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0115 >/dev/ttyPS0
+[32318ms] R0115
+[32549ms] D0115
+[32550ms] TX stty raw -echo; echo R0116 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0116 >/dev/ttyPS0
+[32597ms] R0116
+[32812ms] D0116
+[32812ms] TX stty raw -echo; echo R0117 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0117 >/dev/ttyPS0
+[32857ms] R0117
+[33073ms] D0117
+[33074ms] TX stty raw -echo; echo R0118 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0118 >/dev/ttyPS0
+[33120ms] R0118
+[33338ms] D0118
+[33339ms] TX stty raw -echo; echo R0119 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0119 >/dev/ttyPS0
+[33385ms] R0119
+[33603ms] D0119
+[33603ms] TX stty raw -echo; echo R0120 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0120 >/dev/ttyPS0
+[33649ms] R0120
+[33836ms] D0120
+[33837ms] TX stty raw -echo; echo R0121 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0121 >/dev/ttyPS0
+[33898ms] R0121
+[34132ms] D0121
+[34133ms] TX stty raw -echo; echo R0122 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0122 >/dev/ttyPS0
+[34194ms] R0122
+[34381ms] D0122
+[34382ms] TX stty raw -echo; echo R0123 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0123 >/dev/ttyPS0
+[34428ms] R0123
+[34661ms] D0123
+[34662ms] TX stty raw -echo; echo R0124 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0124 >/dev/ttyPS0
+[34708ms] R0124
+[34942ms] D0124
+[34943ms] TX stty raw -echo; echo R0125 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0125 >/dev/ttyPS0
+[34989ms] R0125
+[35178ms] D0125
+[35178ms] TX stty raw -echo; echo R0126 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0126 >/dev/ttyPS0
+[35225ms] R0126
+[35412ms] D0126
+[35412ms] TX stty raw -echo; echo R0127 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0127 >/dev/ttyPS0
+[35459ms] R0127
+[35692ms] D0127
+[35693ms] TX stty raw -echo; echo R0128 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0128 >/dev/ttyPS0
+[35739ms] R0128
+[35969ms] D0128
+[35969ms] TX stty raw -echo; echo R0129 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0129 >/dev/ttyPS0
+[36016ms] R0129
+[36233ms] D0129
+[36234ms] TX stty raw -echo; echo R0130 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0130 >/dev/ttyPS0
+[36280ms] R0130
+[36498ms] D0130
+[36499ms] TX stty raw -echo; echo R0131 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0131 >/dev/ttyPS0
+[36544ms] R0131
+[36761ms] D0131
+[36762ms] TX stty raw -echo; echo R0132 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0132 >/dev/ttyPS0
+[36807ms] R0132
+[37039ms] D0132
+[37040ms] TX stty raw -echo; echo R0133 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0133 >/dev/ttyPS0
+[37087ms] R0133
+[37320ms] D0133
+[37321ms] TX stty raw -echo; echo R0134 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0134 >/dev/ttyPS0
+[37382ms] R0134
+[37603ms] D0134
+[37603ms] TX stty raw -echo; echo R0135 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0135 >/dev/ttyPS0
+[37650ms] R0135
+[37868ms] D0135
+[37869ms] TX stty raw -echo; echo R0136 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0136 >/dev/ttyPS0
+[37929ms] R0136
+[38117ms] D0136
+[38117ms] TX stty raw -echo; echo R0137 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0137 >/dev/ttyPS0
+[38179ms] R0137
+[38412ms] D0137
+[38413ms] TX stty raw -echo; echo R0138 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0138 >/dev/ttyPS0
+[38459ms] R0138
+[38645ms] D0138
+[38646ms] TX stty raw -echo; echo R0139 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0139 >/dev/ttyPS0
+[38693ms] R0139
+[38927ms] D0139
+[38928ms] TX stty raw -echo; echo R0140 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0140 >/dev/ttyPS0
+[38972ms] R0140
+[39192ms] D0140
+[39193ms] TX stty raw -echo; echo R0141 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0141 >/dev/ttyPS0
+[39238ms] R0141
+[39456ms] D0141
+[39457ms] TX stty raw -echo; echo R0142 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0142 >/dev/ttyPS0
+[39503ms] R0142
+[39722ms] D0142
+[39723ms] TX stty raw -echo; echo R0143 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0143 >/dev/ttyPS0
+[39768ms] R0143
+[39987ms] D0143
+[39987ms] TX stty raw -echo; echo R0144 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0144 >/dev/ttyPS0
+[40035ms] R0144
+[40251ms] D0144
+[40251ms] TX stty raw -echo; echo R0145 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0145 >/dev/ttyPS0
+[40297ms] R0145
+[40516ms] D0145
+[40516ms] TX stty raw -echo; echo R0146 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0146 >/dev/ttyPS0
+[40562ms] R0146
+[40778ms] D0146
+[40779ms] TX stty raw -echo; echo R0147 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0147 >/dev/ttyPS0
+[40824ms] R0147
+[41041ms] D0147
+[41042ms] TX stty raw -echo; echo R0148 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0148 >/dev/ttyPS0
+[41087ms] R0148
+[41319ms] D0148
+[41320ms] TX stty raw -echo; echo R0149 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0149 >/dev/ttyPS0
+[41366ms] R0149
+[41553ms] D0149
+[41553ms] TX stty raw -echo; echo R0150 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0150 >/dev/ttyPS0
+[41599ms] R0150
+[41833ms] D0150
+[41833ms] TX stty raw -echo; echo R0151 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0151 >/dev/ttyPS0
+[41880ms] R0151
+[42067ms] D0151
+[42067ms] TX stty raw -echo; echo R0152 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0152 >/dev/ttyPS0
+[42113ms] R0152
+[42330ms] D0152
+[42330ms] TX stty raw -echo; echo R0153 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0153 >/dev/ttyPS0
+[42377ms] R0153
+[42593ms] D0153
+[42594ms] TX stty raw -echo; echo R0154 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0154 >/dev/ttyPS0
+[42640ms] R0154
+[42858ms] D0154
+[42859ms] TX stty raw -echo; echo R0155 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0155 >/dev/ttyPS0
+[42904ms] R0155
+[43123ms] D0155
+[43123ms] TX stty raw -echo; echo R0156 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0156 >/dev/ttyPS0
+[43169ms] R0156
+[43400ms] D0156
+[43400ms] TX stty raw -echo; echo R0157 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0157 >/dev/ttyPS0
+[43446ms] R0157
+[43667ms] D0157
+[43667ms] TX stty raw -echo; echo R0158 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0158 >/dev/ttyPS0
+[43713ms] R0158
+[43945ms] D0158
+[43945ms] TX stty raw -echo; echo R0159 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0159 >/dev/ttyPS0
+[44007ms] R0159
+[44195ms] D0159
+[44195ms] TX stty raw -echo; echo R0160 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0160 >/dev/ttyPS0
+[44258ms] R0160
+[44491ms] D0160
+[44492ms] TX stty raw -echo; echo R0161 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0161 >/dev/ttyPS0
+[44537ms] R0161
+[44723ms] D0161
+[44724ms] TX stty raw -echo; echo R0162 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0162 >/dev/ttyPS0
+[44770ms] R0162
+[44987ms] D0162
+[44988ms] TX stty raw -echo; echo R0163 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0163 >/dev/ttyPS0
+[45034ms] R0163
+[45252ms] D0163
+[45252ms] TX stty raw -echo; echo R0164 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0164 >/dev/ttyPS0
+[45298ms] R0164
+[45516ms] D0164
+[45517ms] TX stty raw -echo; echo R0165 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0165 >/dev/ttyPS0
+[45563ms] R0165
+[45782ms] D0165
+[45782ms] TX stty raw -echo; echo R0166 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0166 >/dev/ttyPS0
+[45828ms] R0166
+[46059ms] D0166
+[46059ms] TX stty raw -echo; echo R0167 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0167 >/dev/ttyPS0
+[46106ms] R0167
+[46322ms] D0167
+[46323ms] TX stty raw -echo; echo R0168 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0168 >/dev/ttyPS0
+[46368ms] R0168
+[46600ms] D0168
+[46601ms] TX stty raw -echo; echo R0169 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0169 >/dev/ttyPS0
+[46647ms] R0169
+[46879ms] D0169
+[46879ms] TX stty raw -echo; echo R0170 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0170 >/dev/ttyPS0
+[46926ms] R0170
+[47112ms] D0170
+[47112ms] TX stty raw -echo; echo R0171 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0171 >/dev/ttyPS0
+[47157ms] R0171
+[47376ms] D0171
+[47377ms] TX stty raw -echo; echo R0172 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0172 >/dev/ttyPS0
+[47423ms] R0172
+[47641ms] D0172
+[47641ms] TX stty raw -echo; echo R0173 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0173 >/dev/ttyPS0
+[47687ms] R0173
+[47903ms] D0173
+[47904ms] TX stty raw -echo; echo R0174 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0174 >/dev/ttyPS0
+[47996ms] R0174
+[48214ms] D0174
+[48215ms] TX stty raw -echo; echo R0175 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0175 >/dev/ttyPS0
+[48261ms] R0175
+[48478ms] D0175
+[48479ms] TX stty raw -echo; echo R0176 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0176 >/dev/ttyPS0
+[48525ms] R0176
+[48744ms] D0176
+[48745ms] TX stty raw -echo; echo R0177 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0177 >/dev/ttyPS0
+[48790ms] R0177
+[49009ms] D0177
+[49009ms] TX stty raw -echo; echo R0178 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0178 >/dev/ttyPS0
+[49056ms] R0178
+[49289ms] D0178
+[49289ms] TX stty raw -echo; echo R0179 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0179 >/dev/ttyPS0
+[49350ms] R0179
+[49538ms] D0179
+[49539ms] TX stty raw -echo; echo R0180 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0180 >/dev/ttyPS0
+[49601ms] R0180
+[49789ms] D0180
+[49790ms] TX stty raw -echo; echo R0181 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0181 >/dev/ttyPS0
+[49851ms] R0181
+[50086ms] D0181
+[50086ms] TX stty raw -echo; echo R0182 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0182 >/dev/ttyPS0
+[50148ms] R0182
+[50335ms] D0182
+[50335ms] TX stty raw -echo; echo R0183 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0183 >/dev/ttyPS0
+[50382ms] R0183
+[50568ms] D0183
+[50569ms] TX stty raw -echo; echo R0184 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0184 >/dev/ttyPS0
+[50615ms] R0184
+[50847ms] D0184
+[50848ms] TX stty raw -echo; echo R0185 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0185 >/dev/ttyPS0
+[50894ms] R0185
+[51082ms] D0185
+[51082ms] TX stty raw -echo; echo R0186 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0186 >/dev/ttyPS0
+[51128ms] R0186
+[51346ms] D0186
+[51347ms] TX stty raw -echo; echo R0187 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0187 >/dev/ttyPS0
+[51393ms] R0187
+[51608ms] D0187
+[51608ms] TX stty raw -echo; echo R0188 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0188 >/dev/ttyPS0
+[51654ms] R0188
+[51839ms] D0188
+[51840ms] TX stty raw -echo; echo R0189 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0189 >/dev/ttyPS0
+[51886ms] R0189
+[52116ms] D0189
+[52116ms] TX stty raw -echo; echo R0190 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0190 >/dev/ttyPS0
+[52161ms] R0190
+[52348ms] D0190
+[52349ms] TX stty raw -echo; echo R0191 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0191 >/dev/ttyPS0
+[52395ms] R0191
+[52628ms] D0191
+[52629ms] TX stty raw -echo; echo R0192 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0192 >/dev/ttyPS0
+[52674ms] R0192
+[52891ms] D0192
+[52891ms] TX stty raw -echo; echo R0193 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0193 >/dev/ttyPS0
+[52938ms] R0193
+[53156ms] D0193
+[53157ms] TX stty raw -echo; echo R0194 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0194 >/dev/ttyPS0
+[53203ms] R0194
+[53421ms] D0194
+[53421ms] TX stty raw -echo; echo R0195 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0195 >/dev/ttyPS0
+[53468ms] R0195
+[53688ms] D0195
+[53689ms] TX stty raw -echo; echo R0196 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0196 >/dev/ttyPS0
+[53734ms] R0196
+[53964ms] D0196
+[53964ms] TX stty raw -echo; echo R0197 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0197 >/dev/ttyPS0
+[54011ms] R0197
+[54243ms] D0197
+[54243ms] TX stty raw -echo; echo R0198 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0198 >/dev/ttyPS0
+[54290ms] R0198
+[54476ms] D0198
+[54477ms] TX stty raw -echo; echo R0199 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0199 >/dev/ttyPS0
+[54522ms] R0199
+[54755ms] D0199
+[54756ms] TX stty raw -echo; echo R0200 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0200 >/dev/ttyPS0
+[54801ms] R0200
+[54987ms] D0200
+[54988ms] TX stty raw -echo; echo R0201 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0201 >/dev/ttyPS0
+[55034ms] R0201
+[55252ms] D0201
+[55253ms] TX stty raw -echo; echo R0202 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0202 >/dev/ttyPS0
+[55300ms] R0202
+[55518ms] D0202
+[55519ms] TX stty raw -echo; echo R0203 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0203 >/dev/ttyPS0
+[55564ms] R0203
+[55795ms] D0203
+[55795ms] TX stty raw -echo; echo R0204 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0204 >/dev/ttyPS0
+[55842ms] R0204
+[56073ms] D0204
+[56073ms] TX stty raw -echo; echo R0205 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0205 >/dev/ttyPS0
+[56120ms] R0205
+[56339ms] D0205
+[56339ms] TX stty raw -echo; echo R0206 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0206 >/dev/ttyPS0
+[56385ms] R0206
+[56603ms] D0206
+[56603ms] TX stty raw -echo; echo R0207 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0207 >/dev/ttyPS0
+[56650ms] R0207
+[56882ms] D0207
+[56883ms] TX stty raw -echo; echo R0208 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0208 >/dev/ttyPS0
+[56944ms] R0208
+[57132ms] D0208
+[57132ms] TX stty raw -echo; echo R0209 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0209 >/dev/ttyPS0
+[57177ms] R0209
+[57364ms] D0209
+[57365ms] TX stty raw -echo; echo R0210 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0210 >/dev/ttyPS0
+[57411ms] R0210
+[57644ms] D0210
+[57645ms] TX stty raw -echo; echo R0211 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0211 >/dev/ttyPS0
+[57691ms] R0211
+[57908ms] D0211
+[57909ms] TX stty raw -echo; echo R0212 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0212 >/dev/ttyPS0
+[57954ms] R0212
+[58173ms] D0212
+[58173ms] TX stty raw -echo; echo R0213 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0213 >/dev/ttyPS0
+[58220ms] R0213
+[58438ms] D0213
+[58438ms] TX stty raw -echo; echo R0214 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0214 >/dev/ttyPS0
+[58484ms] R0214
+[58702ms] D0214
+[58703ms] TX stty raw -echo; echo R0215 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0215 >/dev/ttyPS0
+[58748ms] R0215
+[58968ms] D0215
+[58968ms] TX stty raw -echo; echo R0216 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0216 >/dev/ttyPS0
+[59015ms] R0216
+[59235ms] D0216
+[59235ms] TX stty raw -echo; echo R0217 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0217 >/dev/ttyPS0
+[59282ms] R0217
+[59512ms] D0217
+[59513ms] TX stty raw -echo; echo R0218 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0218 >/dev/ttyPS0
+[59557ms] R0218
+[59774ms] D0218
+[59775ms] TX stty raw -echo; echo R0219 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0219 >/dev/ttyPS0
+[59836ms] R0219
+[60068ms] D0219
+[60068ms] TX stty raw -echo; echo R0220 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0220 >/dev/ttyPS0
+[60115ms] R0220
+[60301ms] D0220
+[60302ms] TX stty raw -echo; echo R0221 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0221 >/dev/ttyPS0
+[60347ms] R0221
+[60564ms] D0221
+[60565ms] TX stty raw -echo; echo R0222 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0222 >/dev/ttyPS0
+[60612ms] R0222
+[60843ms] D0222
+[60843ms] TX stty raw -echo; echo R0223 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0223 >/dev/ttyPS0
+[60890ms] R0223
+[61108ms] D0223
+[61109ms] TX stty raw -echo; echo R0224 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0224 >/dev/ttyPS0
+[61154ms] R0224
+[61372ms] D0224
+[61373ms] TX stty raw -echo; echo R0225 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0225 >/dev/ttyPS0
+[61419ms] R0225
+[61636ms] D0225
+[61637ms] TX stty raw -echo; echo R0226 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0226 >/dev/ttyPS0
+[61684ms] R0226
+[61903ms] D0226
+[61903ms] TX stty raw -echo; echo R0227 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0227 >/dev/ttyPS0
+[61949ms] R0227
+[62167ms] D0227
+[62167ms] TX stty raw -echo; echo R0228 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0228 >/dev/ttyPS0
+[62213ms] R0228
+[62434ms] D0228
+[62434ms] TX stty raw -echo; echo R0229 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0229 >/dev/ttyPS0
+[62480ms] R0229
+[62698ms] D0229
+[62698ms] TX stty raw -echo; echo R0230 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0230 >/dev/ttyPS0
+[62745ms] R0230
+[62975ms] D0230
+[62976ms] TX stty raw -echo; echo R0231 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0231 >/dev/ttyPS0
+[63023ms] R0231
+[63209ms] D0231
+[63210ms] TX stty raw -echo; echo R0232 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0232 >/dev/ttyPS0
+[63256ms] R0232
+[63489ms] D0232
+[63489ms] TX stty raw -echo; echo R0233 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0233 >/dev/ttyPS0
+[63537ms] R0233
+[63724ms] D0233
+[63724ms] TX stty raw -echo; echo R0234 >/dev/ttyPS0; dd bs=1 count=144 >> /run/media/mmcblk0p1/hub75_fx; stty sane; echo D0234 >/dev/ttyPS0
+[63770ms] R0234
+[63817ms] D0234

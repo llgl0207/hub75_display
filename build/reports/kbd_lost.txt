@@ -1,0 +1,16 @@
+﻿hub75d: usb recover, USBCMD=00080000echo ---K1--- >/dev/ttyPS0; ls /dev/input/ >/dev/ttyPS0 2>&1; echo ---K2--- >/dev/ttyPS0; grep -E "Name|Handlerschipidea-usb2 e0002000.usb: e0002000.usb supply vbus not found, using dummy regulator
+" /proc/bus/input/devices >/dev/ttyPS0 2>&1; echo ---K3--- >/dev dmesg | tail -8 >/dev/ttyPS0 2>&1
+ci_hdrc ci_hdrc.0: unable to init phy: -110
+ci_hdrc: probe of ci_hdrc.0 failed with error -110
+---K1---
+hub75d: pty [238]hub75d: submit 10000000 10ms st=1d033eef id=3ls: /dev/input/: No such file or directory
+---K2---
+hub75d: pty [26]hub75d: pty [8]hub75d: submit 10200000 6ms st=5f0428e4 id=4hub75d: usb recover, USBCMD=00080000chipidea-usb2 e0002000.usb: e0002000.usb supply vbus not found, using dummy regulator
+ci_hdrc ci_hdrc.0: unable to init phy: -110
+ci_hdrc: probe of ci_hdrc.0 failed with error -110
+hub75d: usb recover, USBCMD=00080000chipidea-usb2 e0002000.usb: e0002000.usb supply vbus not found, using dummy regulator
+ci_hdrc ci_hdrc.0: unable to init phy: -110
+ci_hdrc: probe of ci_hdrc.0 failed with error -110
+hub75d: usb recover, USBCMD=00080000chipidea-usb2 e0002000.usb: e0002000.usb supply vbus not found, using dummy regulator
+ci_hdrc ci_hdrc.0: unable to init phy: -110
+ci_hdrc: probe of ci_hdrc.0 failed with error -110

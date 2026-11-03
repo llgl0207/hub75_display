@@ -1,0 +1,3 @@
+﻿md5sum /run/media/mmcblk0p1/hub75d.new >/dev/ttyPS0; mv /run/media/mmcblk0p1/hub75d.new /run/media/mmcblk0p1/hub75d; sync; md5sum /run/media/mmcblk0p1/hub75d >/dev/ttyPS0
+8116655fcbc1fe41b877ec3a8abbf2c1  /run/media/mmcblk0p1/hub75d.new
+8116655fcbc1fe41b877ec3a8abbf2c1  /run/media/mmcblk0p1/hub75d

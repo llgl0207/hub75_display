@@ -1,0 +1,25 @@
+﻿echo ---STATE--- >/dev/ttyPS0; pidof hub75d >/dev/ttyPS0; echo ---USBDEV--- >/dev/ttyPS0; ls /sys/bus/usb/devices/ >/dev/ttyPS0 2>&1; echo ---INPUT--- >/dev/ttyPS0; cat /proc/bus/input/devices >/dev/ttyPS0 2>&1; echo ---DMESGUSB--- >/dev/ttyPS0; dmesg | grep -i usb | tail -25 >/dev/ttyPS0 2>&1
+hub75d: pty [256]---STATE---
+hub75d: submit 10200000 13ms st=6a023be4 id=2hub75d: pty [76]1164
+---USBDEV---
+
+
+U-Boot 2018.01 (Mar 03 2020 - 06:23:28 +0000) Xilinx Zynq ZC702
+
+Board: Xilinx Zynq
+Silicon: v3.1
+DRAM:  ECC disabled 1 GiB
+MMC:   mmc@e0100000: 0 (SD)
+** No device specified **
+Using default environment
+
+In:    serial@e0001000
+Out:   serial@e0001000
+Err:   serial@e0001000
+Board: Xilinx Zynq
+Silicon: v3.1
+Net:   ZYNQ GEM: e000b000, phyaddr ffffffff, interface rgmii-id
+eth0: ethernet@e000b000
+U-BOOT for petalinux_boot_from_sd
+
+ethernet@e000b000 Waiting for PHY auto negotiation to complete........

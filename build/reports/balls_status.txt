@@ -1,0 +1,4 @@
+﻿P=$(pidof hub75_anim_balls); echo "BALLS_PID=$P" >/dev/ttyPS0; S1=$(devmem 0x41210000); sleep 1; S2=$(devmem 0x41210000); echo "S1=$S1 S2=$S2" >/dev/ttyPS0; cat /proc/$P/stat | cut -d" " -f1-3,14,15 >/dev/ttyPS0
+BALLS_PID=2636
+S1=0xA9C309ED S2=0xEBC500CD
+2636 (hub75_anim_ball) R 227 372

@@ -1,0 +1,21 @@
+﻿echo ---V--- >/dev/ttyPS0; md5sum /run/media/mmcblk0p1/hub75d >/dev/ttyPS0; ls /dev/input/ >/dev/ttyPS0; grep -E "Name|Handlers" /proc/bus/input/devices >/dev/ttyPS0; echo ---D--- >/dev/ttyPS0; dmesg | grep -iE "ci_hdrc|ULPI|input:" | tail -8 >/dev/ttyPS0
+hub75d: pty [256]---V---
+hub75d: submit 10000000 18ms st=120330ed id=3hub75d: pty [33]8116655fcbc1fe41b877ec3a8abbf2c1  /run/media/mmcblk0p1/hub75d
+by-id
+by-path
+event0
+event1
+N: Name="2.4G Composite Devic"
+H: Handlers=kbd leds event0 
+N: Name="2.4G Composite Devic"
+H: Handlers=kbd event1 
+---D---
+ci_hdrc ci_hdrc.0: EHCI Host Controller
+ci_hdrc ci_hdrc.0: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.0: USB 2.0 started, EHCI 1.00
+usb 1-1: new full-speed USB device number 2 using ci_hdrc
+input: 2.4G Composite Devic as /devices/soc0/amba/e0002000.usb/ci_hdrc.0/usb1/1-1/1-1:1.0/0003:4037:2804.0001/input/input0
+hid-generic 0003:4037:2804.0001: input: USB HID v1.10 Keyboard [2.4G Composite Devic] on usb-ci_hdrc.0-1/input0
+input: 2.4G Composite Devic as /devices/soc0/amba/e0002000.usb/ci_hdrc.0/usb1/1-1/1-1:1.1/0003:4037:2804.0002/input/input1
+hid-generic 0003:4037:2804.0002: input: USB HID v1.10 Mouse [2.4G Composite Devic] on usb-ci_hdrc.0-1/input1
+hub75d: pty [8]hub75d: submit 10200000 6ms st=54040de4 id=4

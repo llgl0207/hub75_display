@@ -1,0 +1,5 @@
+﻿grep -q "^anim_helix=" /run/media/mmcblk0p1/hub75.conf || echo "anim_helix=/run/media/mmcblk0p1/hub75_anim_helix" >> /run/media/mmcblk0p1/hub75.conf; tail -4 /run/media/mmcblk0p1/hub75.conf >/dev/ttyPS0
+anim_heart=/run/media/mmcblk0p1/hub75_anim_heart
+anim_spheres=/run/media/mmcblk0p1/hub75_anim_spheres
+submit_ms=150
+anim_helix=/run/media/mmcblk0p1/hub75_anim_helix
