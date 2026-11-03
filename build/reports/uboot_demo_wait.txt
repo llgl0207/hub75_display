@@ -1,0 +1,457 @@
+﻿                                                                                                                                                                                 
+
+U-Boot 2018.01 (Mar 03 2020 - 06:23:28 +0000) Xilinx Zynq ZC702
+
+Board: Xilinx Zynq
+Silicon: v3.1
+DRAM:  ECC disabled 1 GiB
+MMC:   mmc@e0100000: 0 (SD)
+** No device specified **
+Using default environment
+
+In:    serial@e0001000
+Out:   serial@e0001000
+Err:   serial@e0001000
+Board: Xilinx Zynq
+Silicon: v3.1
+Net:   ZYNQ GEM: e000b000, phyaddr ffffffff, interface rgmii-id
+eth0: ethernet@e000b000
+U-BOOT for petalinux_boot_from_sd
+
+ethernet@e000b000 Waiting for PHY auto negotiation to complete......... TIMEOUT !
+Hit any key to stop autoboot:  4  0 
+Zynq> 
+=== UBOOT_STOPPED at 64s ===
+setenv bootargs 'console=ttyPS0,115200 root=/dev/ram rw earlyprintk earlycon'
+Zynq> fatload mmc 0:1 0x3000000 uImage
+reading uImage
+4065672 bytes read in 242 ms (16 MiB/s)
+Zynq> fatload mmc 0:1 0x1000000 uramdisk.image.gz
+reading uramdisk.image.gz
+6647885 bytes read in 383 ms (16.6 MiB/s)
+Zynq> fatload mmc 0:1 0x2000000 devicetree.dtb
+reading devicetree.dtb
+9299 bytes read in 17 ms (534.2 KiB/s)
+Zynq> bootm 0x3000000 0x1000000 0x2000000
+## Booting kernel from Legacy Image at 03000000 ...
+   Image Name:   Linux-3.17.0-xilinx
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    4065608 Bytes = 3.9 MiB
+   Load Address: 00008000
+   Entry Point:  00008000
+   Verifying Checksum ... OK
+## Loading init Ramdisk from Legacy Image at 01000000 ...
+   Image Name:   
+   Image Type:   ARM Linux RAMDisk Image (gzip compressed)
+   Data Size:    6647821 Bytes = 6.3 MiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 02000000
+   Booting using the fdt blob at 0x2000000
+   Loading Kernel Image ... OK
+   Loading Ramdisk to 079a8000, end 07fff00d ... OK
+   Loading Device Tree to 079a2000, end 079a7452 ... OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+Booting Linux on physical CPU 0x0
+Linux version 3.17.0-xilinx (microphase@microphase-OptiPlex) (gcc version 4.9.2 (Sourcery CodeBench Lite 2015.05-17) ) #5 SMP PREEMPT Sat Aug 26 11:17:19 CST 2017
+CPU: ARMv7 Processor [413fc090] revision 0 (ARMv7), cr=18c5387d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+Machine model: xlnx,zynq-7000
+bootconsole [earlycon0] enabled
+cma: Reserved 16 MiB at 2e800000
+Memory policy: Data cache writealloc
+PERCPU: Embedded 8 pages/cpu @edfd2000 s8512 r8192 d16064 u32768
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 260624
+Kernel command line: console=ttyPS0,115200 root=/dev/ram rw earlyprintk earlycon
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1008388K/1048576K available (5569K kernel code, 240K rwdata, 1840K rodata, 216K init, 231K bss, 40188K reserved, 270336K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xffe00000   (2048 kB)
+    vmalloc : 0xf0000000 - 0xff000000   ( 240 MB)
+    lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc07448d4   (7411 kB)
+      .init : 0xc0745000 - 0xc077b140   ( 217 kB)
+      .data : 0xc077c000 - 0xc07b8260   ( 241 kB)
+       .bss : 0xc07b8260 - 0xc07f2168   ( 232 kB)
+Preemptible hierarchical RCU implementation.
+	Additional per-CPU info printed with stalls.
+	RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=2.
+RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=2
+NR_IRQS:16 nr_irqs:16 16
+L2C: platform provided aux values match the hardware, so have no effect.  Please remove them.
+L2C-310 erratum 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 1 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 8 ways, 512 kB
+L2C-310: CACHE_ID 0x410000c8, AUX_CTRL 0x76360001
+slcr mapped to f0006000
+zynq_clock_init: clkc starts at f0006100
+Zynq clock init
+sched_clock: 64 bits at 333MHz, resolution 3ns, wraps every 3298534883328ns
+timer #0 at f0008000, irq=43
+Console: colour dummy device 80x30
+Calibrating delay loop... 1332.01 BogoMIPS (lpj=6660096)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x548388 - 0x5483e0
+CPU1: Booted secondary processor
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+Brought up 2 CPUs
+SMP: Total of 2 processors activated.
+CPU: All CPU(s) started in SVC mode.
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+regulator-dummy: no parameters
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor ladder
+cpuidle: using governor menu
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+zynq-ocm f800c000.ocmc: ZYNQ OCM pool: 256 KiB @ 0xf0080000
+VCCPINT: 1000 mV 
+vgaarb: loaded
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+media: Linux media interface: v0.10
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+EDAC MC: Ver: 3.0.0
+Advanced Linux Sound Architecture Driver Initialized.
+cfg80211: Calling CRDA to update world regulatory domain
+Switched to clocksource arm_global_timer
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+TCP: reno registered
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+rootfs image is not initramfs (no cpio magic); looks like an initrd
+Freeing initrd memory: 6492K (c79a8000 - c7fff000)
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+futex hash table entries: 512 (order: 3, 32768 bytes)
+jffs2: version 2.2. (NAND) (SUMMARY)  ?? 2001-2006 Red Hat, Inc.
+JFS: nTxBlock = 8056, nTxLock = 64454
+msgmni has been set to 1486
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+dma-pl330 f8003000.dmac: Loaded driver for PL330 DMAC-2364208
+dma-pl330 f8003000.dmac: 	DBUFF-128x8bytes Num_Chans-8 Num_Peri-4 Num_Events-16
+e0001000.serial: ttyPS0 at MMIO 0xe0001000 (irq = 82, base_baud = 6249999) is a xuartps?console [ttyPS0] enabled
+console [ttyPS0] enabled
+bootconsole [earlycon0] disabled
+bootconsole [earlycon0] disabled
+xdevcfg f8007000.devcfg: ioremap 0xf8007000 to f006a000
+[drm] Initialized drm 1.1.0 20060810
+brd: module loaded
+loop: module loaded
+CAN device driver interface
+libphy: MACB_mii_bus: probed
+macb e000b000.ethernet eth0: Cadence GEM at 0xe000b000 irq 54 (00:0a:35:00:1e:53)
+macb e000b000.ethernet eth0: attached PHY driver [Generic PHY] (mii_bus:phy_addr=e000b000.etherne:00, irq=-1)
+e1000e: Intel(R) PRO/1000 Network Driver - 2.3.2-k
+e1000e: Copyright(c) 1999 - 2014 Intel Corporation.
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-pci: EHCI PCI platform driver
+usbcore: registered new interface driver usb-storage
+mousedev: PS/2 mouse device common for all mice
+i2c /dev entries driver
+cdns-wdt f8005000.watchdog: Xilinx Watchdog Timer at f0070000 with timeout 10s
+Xilinx Zynq CpuIdle Driver started
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-arasan e0100000.sdhci: No vmmc regulator found
+sdhci-arasan e0100000.sdhci: No vqmmc regulator found
+mmc0: SDHCI controller on e0100000.sdhci [e0100000.sdhci] using ADMA
+sdhci-arasan e0101000.sdhci: No vmmc regulator found
+sdhci-arasan e0101000.sdhci: No vqmmc regulator found
+mmc1: SDHCI controller on e0101000.sdhci [e0101000.sdhci] using ADMA
+ledtrig-cpu: registered to indicate activity on CPUs
+mmc0: new high speed SDHC card at address 0001
+mmcblk0: mmc0:0001 SD 29.1 GiB 
+ mmcblk0: p1 p2
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+TCP: cubic registered
+NET: Registered protocol family 17
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20120528 t)
+can: netlink gateway (rev 20130117) max_hops=1
+lib80211: common routines for IEEE802.11 drivers
+zynq_pm_ioremap: no compatible node found for 'xlnx,zynq-ddrc-1.0'
+zynq_pm_late_init: Unable to map DDRC IO memory.
+Registering SWP/SWPB emulation handler
+dhd_module_init: in
+======== bcm_wlan_set_plat_data ========
+GPIO(WL_HOST_WAKE) = 147
+host_oob_irq: 105
+host_oob_irq_flags=0x414
+dhd_wifi_platform_load: Enter
+Power-up adapter 'DHD generic adapter'
+wifi_platform_set_power = 1
+======== PULL WL_REG_ON HIGH! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 1
+failed to power up DHD generic adapter, 3 retry left
+wifi_platform_set_power = 0
+======== PULL WL_REG_ON LOW! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 0
+wifi_platform_set_power = 1
+======== PULL WL_REG_ON HIGH! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 1
+failed to power up DHD generic adapter, 2 retry left
+wifi_platform_set_power = 0
+======== PULL WL_REG_ON LOW! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 0
+wifi_platform_set_power = 1
+======== PULL WL_REG_ON HIGH! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 1
+failed to power up DHD generic adapter, 1 retry left
+wifi_platform_set_power = 0
+======== PULL WL_REG_ON LOW! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 0
+wifi_platform_set_power = 1
+======== PULL WL_REG_ON HIGH! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 1
+failed to power up DHD generic adapter, 0 retry left
+wifi_platform_set_power = 0
+======== PULL WL_REG_ON LOW! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 0
+failed to power up DHD generic adapter, max retry reached**
+unregister wifi platform drivers
+wifi_platform_bus_enumerate device present 0
+bcm_wlan_free_oob_gpio: gpio_free(105)
+dhd_module_init: Failed to load the driver, try cnt 3
+======== bcm_wlan_set_plat_data ========
+GPIO(WL_HOST_WAKE) = 147
+bcm_wlan_get_oob_irq: gpio_request failed
+host_oob_irq: 105
+host_oob_irq_flags=0x414
+dhd_wifi_platform_load: Enter
+Power-up adapter 'DHD generic adapter'
+wifi_platform_set_power = 1
+======== PULL WL_REG_ON HIGH! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 1
+failed to power up DHD generic adapter, 3 retry left
+wifi_platform_set_power = 0
+======== PULL WL_REG_ON LOW! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 0
+wifi_platform_set_power = 1
+======== PULL WL_REG_ON HIGH! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 1
+failed to power up DHD generic adapter, 2 retry left
+wifi_platform_set_power = 0
+======== PULL WL_REG_ON LOW! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 0
+wifi_platform_set_power = 1
+======== PULL WL_REG_ON HIGH! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 1
+failed to power up DHD generic adapter, 1 retry left
+wifi_platform_set_power = 0
+======== PULL WL_REG_ON LOW! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 0
+wifi_platform_set_power = 1
+======== PULL WL_REG_ON HIGH! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 1
+failed to power up DHD generic adapter, 0 retry left
+wifi_platform_set_power = 0
+======== PULL WL_REG_ON LOW! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 0
+failed to power up DHD generic adapter, max retry reached**
+unregister wifi platform drivers
+wifi_platform_bus_enumerate device present 0
+bcm_wlan_free_oob_gpio: gpio_free(105)
+dhd_module_init: Failed to load the driver, try cnt 2
+======== bcm_wlan_set_plat_data ========
+GPIO(WL_HOST_WAKE) = 147
+bcm_wlan_get_oob_irq: gpio_request failed
+host_oob_irq: 105
+host_oob_irq_flags=0x414
+dhd_wifi_platform_load: Enter
+Power-up adapter 'DHD generic adapter'
+wifi_platform_set_power = 1
+======== PULL WL_REG_ON HIGH! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 1
+failed to power up DHD generic adapter, 3 retry left
+wifi_platform_set_power = 0
+======== PULL WL_REG_ON LOW! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 0
+wifi_platform_set_power = 1
+======== PULL WL_REG_ON HIGH! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 1
+failed to power up DHD generic adapter, 2 retry left
+wifi_platform_set_power = 0
+======== PULL WL_REG_ON LOW! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 0
+wifi_platform_set_power = 1
+======== PULL WL_REG_ON HIGH! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 1
+failed to power up DHD generic adapter, 1 retry left
+wifi_platform_set_power = 0
+======== PULL WL_REG_ON LOW! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 0
+wifi_platform_set_power = 1
+======== PULL WL_REG_ON HIGH! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 1
+failed to power up DHD generic adapter, 0 retry left
+wifi_platform_set_power = 0
+======== PULL WL_REG_ON LOW! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 0
+failed to power up DHD generic adapter, max retry reached**
+unregister wifi platform drivers
+wifi_platform_bus_enumerate device present 0
+bcm_wlan_free_oob_gpio: gpio_free(105)
+dhd_module_init: Failed to load the driver, try cnt 1
+======== bcm_wlan_set_plat_data ========
+GPIO(WL_HOST_WAKE) = 147
+bcm_wlan_get_oob_irq: gpio_request failed
+host_oob_irq: 105
+host_oob_irq_flags=0x414
+dhd_wifi_platform_load: Enter
+Power-up adapter 'DHD generic adapter'
+wifi_platform_set_power = 1
+======== PULL WL_REG_ON HIGH! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 1
+failed to power up DHD generic adapter, 3 retry left
+wifi_platform_set_power = 0
+======== PULL WL_REG_ON LOW! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 0
+wifi_platform_set_power = 1
+======== PULL WL_REG_ON HIGH! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 1
+failed to power up DHD generic adapter, 2 retry left
+wifi_platform_set_power = 0
+======== PULL WL_REG_ON LOW! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 0
+wifi_platform_set_power = 1
+======== PULL WL_REG_ON HIGH! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 1
+failed to power up DHD generic adapter, 1 retry left
+wifi_platform_set_power = 0
+======== PULL WL_REG_ON LOW! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 0
+wifi_platform_set_power = 1
+======== PULL WL_REG_ON HIGH! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER ON AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 1
+failed to power up DHD generic adapter, 0 retry left
+wifi_platform_set_power = 0
+======== PULL WL_REG_ON LOW! 146 ========
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 START @@@@@@@@@@@@@
+@@@@@@@@@@ MicroZus Board, POWER OFF AP6212 SUCCEED @@@@@@@@@@@@@
+wifi_platform_bus_enumerate device present 0
+failed to power up DHD generic adapter, max retry reached**
+unregister wifi platform drivers
+wifi_platform_bus_enumerate device present 0
+bcm_wlan_free_oob_gpio: gpio_free(105)
+dhd_module_init: Failed to load the driver, try cnt 0
+dhd_module_init: Failed to load driver max retry reached**
+dhd_module_init: Exit err=-19
+drivers/rtc/hctosys.c: unable to open rtc device (rtc0)
+ALSA device list:
+  No soundcards found.
+RAMDISK: gzip image found at block 0
+VFS: Mounted root (ext2 filesystem) on device 1:0.
+devtmpfs: mounted
+Freeing unused kernel memory: 216K (c0745000 - c077b000)
+Starting rcS...
+++ Mounting filesystem
+FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+++ Setting up mdev
+++ Starting telnet daemon
+++ Starting http daemon
+++ Starting ftp daemon
+++ Starting ssh daemon
+random: sshd urandom read with 69 bits of entropy available
+rcS Complete
+[0;31mzynq>[m 

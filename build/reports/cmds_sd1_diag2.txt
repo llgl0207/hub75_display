@@ -1,0 +1,22 @@
+mount -t debugfs none /sys/kernel/debug 2>/dev/null
+echo ---IOS---
+cat /sys/kernel/debug/mmc1/ios 2>&1
+echo ---STATE---
+cat /sys/kernel/debug/mmc1/state 2>&1
+echo ---REGS---
+devmem 0xF8000154 32
+devmem 0xF800012C 32
+devmem 0xE010102C 16
+devmem 0xE0101024 32
+devmem 0xE0101040 32
+echo ---MIO8---
+devmem 0xF8000720 32
+devmem 0xE000A200 32
+devmem 0xE000A204 32
+devmem 0xE000A208 32
+echo ---DMESG---
+dmesg | grep -iE "mmc1|sdhci|sdio" | tail -20
+echo ---CARD---
+ls /sys/class/mmc_host/mmc1/ 2>&1
+ls /sys/bus/sdio/devices 2>&1
+echo DIAG2_DONE

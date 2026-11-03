@@ -1,0 +1,15 @@
+echo MARK_LOOP
+rm -f /tmp/clk.log
+grep -iE "mmc|sdhci|e0101000" /proc/interrupts
+( i=0; while [ $i -lt 4000 ]; do devmem 0xE010102C 16 >> /tmp/clk.log; i=$((i+1)); done ) & LPID=$!
+echo LOOP_STARTED
+echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/unbind
+sleep 1
+echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/bind
+sleep 3
+kill $LPID 2>/dev/null
+echo MARK_SORT
+sort -u /tmp/clk.log
+wc -l /tmp/clk.log
+grep -iE "mmc|sdhci|e0101000" /proc/interrupts
+echo MARK_LOOP_DONE

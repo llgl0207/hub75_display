@@ -1,0 +1,27 @@
+﻿mkdir -p /tmp/demo
+sh-4.4# 
+sh-4.4# gunzip -c /mnt/boot/uramdisk.image.gz > /tmp/demo.ext2
+gunzip: invalid magic
+sh-4.4# 
+sh-4.4# ls -l /tmp/demo.ext2
+-rw-r--r--    1 root     root             0 Jan  1 00:08 /tmp/demo.ext2
+sh-4.4# 
+sh-4.4# mount -o loop -t ext2 /tmp/demo.ext2 /tmp/demo
+mount: mounting /dev/loop0 on /tmp/demo failed: Invalid argument
+sh-4.4# 
+sh-4.4# echo MARK_DEMO
+MARK_DEMO
+sh-4.4# 
+sh-4.4# ls /tmp/demo
+sh-4.4# 
+sh-4.4# ls -l /tmp/demo/sbin/wpa_supplicant /tmp/demo/sbin/wpa_cli
+ls: /tmp/demo/sbin/wpa_supplicant: No such file or directory
+ls: /tmp/demo/sbin/wpa_cli: No such file or directory
+sh-4.4# 
+sh-4.4# ls /tmp/demo/etc/firmware
+ls: /tmp/demo/etc/firmware: No such file or directory
+sh-4.4# 
+sh-4.4# echo MARK_DEMO_DONE
+MARK_DEMO_DONE
+sh-4.4# 
+sh-4.4# 

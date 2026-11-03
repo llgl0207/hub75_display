@@ -1,0 +1,8 @@
+mkdir -p /mnt/boot
+mount -t vfat /dev/mmcblk0p1 /mnt/boot
+echo MARK_LS
+ls /mnt/boot
+ls /mnt/boot/wifi
+echo MARK_FIND
+find /mnt/boot -maxdepth 2 -iname "*brcmfmac*" -o -iname "*.txt" -o -iname "*43430*" | head -20
+echo MARK_LS_DONE

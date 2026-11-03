@@ -1,0 +1,12 @@
+﻿chmod +x /tmp/hello.static
+sh-4.4# 
+sh-4.4# /tmp/hello.static
+HELLO_STATIC
+sh-4.4# 
+sh-4.4# echo HELLO_EXIT=$?
+HELLO_EXIT=0
+sh-4.4# 
+sh-4.4# echo HELLO_DONE
+HELLO_DONE
+sh-4.4# 
+sh-4.4# 

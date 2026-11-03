@@ -1,0 +1,2 @@
+echo MARK_GETTY
+/sbin/getty -L 115200 ttyPS0 vt102

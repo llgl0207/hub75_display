@@ -1,0 +1,13 @@
+﻿mount -t devtmpfs dev /dev
+sh-4.4# 
+sh-4.4# ls -l /dev/ttyPS0
+crw-------    1 root     root      253,   0 Jan  1 00:00 /dev/ttyPS0
+sh-4.4# 
+sh-4.4# echo MARK_GETTY3
+MARK_GETTY3
+sh-4.4# 
+sh-4.4# /sbin/getty -L 115200 ttyPS0 vt102
+
+PetaLinux 2018.3 (none) /dev/ttyPS0
+
+(none) login: 

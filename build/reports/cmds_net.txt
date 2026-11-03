@@ -1,0 +1,8 @@
+echo MARK_NET
+ifconfig -a
+cat /sys/class/net/eth0/carrier
+cat /sys/class/net/eth0/operstate
+ifconfig eth0 192.168.5.2 netmask 255.255.255.0 up
+ifconfig eth0
+ping -c 2 -W 2 192.168.5.1
+echo MARK_NET_DONE

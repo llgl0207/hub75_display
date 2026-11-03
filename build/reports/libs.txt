@@ -1,0 +1,21 @@
+﻿echo MARK_LIBS
+MARK_LIBS
+root@(none):~# 
+root@(none):~# ls /tmp/demo/lib | grep -iE "nl|dbus|pthread|rt"
+libpthread-2.13.so
+libpthread.so.0
+librt-2.13.so
+librt.so.1
+root@(none):~# 
+root@(none):~# ls /tmp/demo/usr/lib | grep -iE "nl|dbus"
+root@(none):~# 
+root@(none):~# /tmp/demo/lib/ld-linux.so.3 --library-path /tmp/demo/lib:/tmp/demoo/usr/lib --list /tmp/demo/sbin/wpa_supplicant
+	libdl.so.2 => /tmp/demo/lib/libdl.so.2 (0xb6f1d000)
+	libgcc_s.so.1 => /tmp/demo/lib/libgcc_s.so.1 (0xb6ef6000)
+	libc.so.6 => /tmp/demo/lib/libc.so.6 (0xb6dac000)
+	/lib/ld-linux.so.3 => /tmp/demo/lib/ld-linux.so.3 (0xb6f2a000)
+root@(none):~# 
+root@(none):~# echo MARK_LIBS_DONE
+MARK_LIBS_DONE
+root@(none):~# 
+root@(none):~# 

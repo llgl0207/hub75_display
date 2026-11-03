@@ -1,0 +1,9 @@
+﻿mkdir -p /run/media/mmcblk0p1/wifi; echo ---CFG--- >/dev/ttyPS0; zcat /proc/config.gz | grep -E "CONFIG_RFKILL|CONFIG_CFG80211|CONFIG_CRYPTO_CMAC|CONFIG_CRYPTO_AES=|CONFIG_BRCMFMAC" >/dev/ttyPS0 2>&1; echo ---MOD--- >/dev/ttyPS0; find /lib/modules -name "rfkill.ko" -o -name "cfg80211.ko" >/dev/ttyPS0 2>&1; df -h /run/media/mmcblk0p1 >/dev/ttyPS0 2>&1
+---CFG---
+# CONFIG_CFG80211 is not set
+# CONFIG_RFKILL is not set
+# CONFIG_CRYPTO_CMAC is not set
+CONFIG_CRYPTO_AES=y
+---MOD---
+Filesystem                Size      Used Available Use% Mounted on
+/dev/mmcblk0p1           95.8M     25.1M     70.7M  26% /run/media/mmcblk0p1

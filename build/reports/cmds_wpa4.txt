@@ -1,0 +1,16 @@
+mkdir -p /var/run/wpa_supplicant
+cat > /tmp/wpa.conf << 'EOF'
+ctrl_interface=/var/run/wpa_supplicant
+ap_scan=1
+network={
+ssid="AllianceTeam2.4G"
+psk="12345678"
+}
+EOF
+echo MARK_WPA4
+LD_LIBRARY_PATH=/mnt/boot/alpine/lib:/mnt/boot/alpine/usr/lib /mnt/boot/alpine/lib/ld-musl-armhf.so.1 /mnt/boot/alpine/sbin/wpa_supplicant -Dnl80211 -iwlan0 -c/tmp/wpa.conf > /tmp/wpa4.log 2>&1 &
+sleep 15
+cat /tmp/wpa4.log
+echo ---ST---
+LD_LIBRARY_PATH=/mnt/boot/alpine/lib:/mnt/boot/alpine/usr/lib /mnt/boot/alpine/lib/ld-musl-armhf.so.1 /mnt/boot/alpine/sbin/wpa_cli -i wlan0 status
+echo MARK_WPA4_DONE

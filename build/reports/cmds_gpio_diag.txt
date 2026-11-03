@@ -1,0 +1,21 @@
+mount -t debugfs none /sys/kernel/debug 2>/dev/null
+echo ---GPIO---
+devmem 0xE000A040 32
+devmem 0xE000A060 32
+devmem 0xE000A204 32
+devmem 0xE000A208 32
+devmem 0xF8000720 32
+devmem 0xF8000728 32
+devmem 0xF800073C 32
+echo ---SDHCI---
+devmem 0xE010102C 16
+devmem 0xE0101024 32
+echo ---IOS---
+cat /sys/kernel/debug/mmc1/ios 2>&1
+echo ---DMESG---
+dmesg | grep -iE "mmc1|sdio|brcm" | tail -15
+echo ---SDIO---
+ls /sys/bus/sdio/devices 2>&1
+echo ---WL---
+ls /sys/class/gpio 2>&1
+echo DIAG_DONE

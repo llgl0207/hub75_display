@@ -1,0 +1,92 @@
+﻿RAWOK
+sh-4.4# [1430ms] TX stty raw -echo; echo R0000 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/wpa_cli.gz; echo D0000 >/dev/ttyPS0
+[1499ms] R0000
+[1685ms] 2048+0 records in
+2048+0 records out
+D0000
+[1694ms] TX stty raw -echo; echo R0001 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/wpa_cli.gz; echo D0001 >/dev/ttyPS0
+[1747ms] sh-4.4# R0001
+[1936ms] 2048+0 records in
+2048+0 records out
+D0001
+[1937ms] TX stty raw -echo; echo R0002 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/wpa_cli.gz; echo D0002 >/dev/ttyPS0
+[1983ms] sh-4.4# R0002
+[2171ms] 2048+0 records in
+2048+0 records out
+D0002
+[2172ms] TX stty raw -echo; echo R0003 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/wpa_cli.gz; echo D0003 >/dev/ttyPS0
+[2216ms] sh-4.4# R0003
+[2404ms] 2048+0 records in
+2048+0 records out
+D0003
+[2404ms] TX stty raw -echo; echo R0004 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/wpa_cli.gz; echo D0004 >/dev/ttyPS0
+[2450ms] sh-4.4# R0004
+[2668ms] 2048+0 records in
+2048+0 records out
+D0004
+sh-4.4# [2669ms] TX stty raw -echo; echo R0005 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/wpa_cli.gz; echo D0005 >/dev/ttyPS0
+[2715ms] R0005
+[2933ms] 2048+0 records in
+2048+0 records out
+D0005
+sh-4.4# [2934ms] TX stty raw -echo; echo R0006 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/wpa_cli.gz; echo D0006 >/dev/ttyPS0
+[2979ms] R0006
+[3199ms] 2048+0 records in
+2048+0 records out
+D0006
+sh-4.4# [3200ms] TX stty raw -echo; echo R0007 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/wpa_cli.gz; echo D0007 >/dev/ttyPS0
+[3246ms] R0007
+[3463ms] 2048+0 records in
+2048+0 records out
+D0007
+sh-4.4# [3464ms] TX stty raw -echo; echo R0008 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/wpa_cli.gz; echo D0008 >/dev/ttyPS0
+[3511ms] R0008
+[3695ms] 2048+0 records in
+2048+0 records out
+D0008
+[3696ms] TX stty raw -echo; echo R0009 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/wpa_cli.gz; echo D0009 >/dev/ttyPS0
+[3741ms] sh-4.4# R0009
+[3957ms] 2048+0 records in
+2048+0 records out
+D0009
+sh-4.4# [3957ms] TX stty raw -echo; echo R0010 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/wpa_cli.gz; echo D0010 >/dev/ttyPS0
+[4004ms] R0010
+[4222ms] 2048+0 records in
+2048+0 records out
+D0010
+sh-4.4# [4222ms] TX stty raw -echo; echo R0011 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/wpa_cli.gz; echo D0011 >/dev/ttyPS0
+[4268ms] R0011
+[4453ms] 2048+0 records in
+2048+0 records out
+D0011
+[4454ms] TX stty raw -echo; echo R0012 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/wpa_cli.gz; echo D0012 >/dev/ttyPS0
+[4499ms] sh-4.4# R0012
+[4685ms] 2048+0 records in
+2048+0 records out
+D0012
+[4686ms] TX stty raw -echo; echo R0013 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/wpa_cli.gz; echo D0013 >/dev/ttyPS0
+[4731ms] sh-4.4# R0013
+[4959ms] 2048+0 records in
+2048+0 records out
+D0013
+sh-4.4# [4960ms] TX stty raw -echo; echo R0014 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/wpa_cli.gz; echo D0014 >/dev/ttyPS0
+[5006ms] R0014
+[5226ms] 2048+0 records in
+2048+0 records out
+D0014
+sh-4.4# [5227ms] TX stty raw -echo; echo R0015 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/wpa_cli.gz; echo D0015 >/dev/ttyPS0
+[5271ms] R0015
+[5492ms] 2048+0 records in
+2048+0 records out
+D0015
+sh-4.4# [5492ms] TX stty raw -echo; echo R0016 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/wpa_cli.gz; echo D0016 >/dev/ttyPS0
+[5538ms] R0016
+[5754ms] 2048+0 records in
+2048+0 records out
+D0016
+sh-4.4# [5754ms] TX stty raw -echo; echo R0017 >/dev/ttyPS0; dd bs=1 count=1581 >> /tmp/alpine/wpa_cli.gz; echo D0017 >/dev/ttyPS0
+[5801ms] R0017
+[5989ms] 1581+0 records in
+1581+0 records out
+D0017
+sh-4.4# 

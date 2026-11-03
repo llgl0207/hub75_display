@@ -1,0 +1,15 @@
+﻿echo ---REALGPIO--- >/dev/ttyPS0; devmem 0xE000A200 32 >/dev/ttyPS0 2>&1; devmem 0xE000A204 32 >/dev/ttyPS0 2>&1; devmem 0xE000A208 32 >/dev/ttyPS0 2>&1; echo ---MIO8--- >/dev/ttyPS0; devmem 0xF8000708 32 >/dev/ttyPS0 2>&1; echo ---SYSFS914--- >/dev/ttyPS0; ls /sys/class/gpio >/dev/ttyPS0 2>&1; cat /sys/class/gpio/gpio914/direction >/dev/ttyPS0 2>&1; cat /sys/class/gpio/gpio914/value >/dev/ttyPS0 2>&1; echo REALGPIO_DONE >/dev/ttyPS0
+hub75d: pty [256]---REALGPIO---
+hub75d: submit 10200000 15ms st=3a0103ed id=1hub75d: pty [237]0x00000000
+0x00000000
+0x00000000
+---MIO8---
+0x00000600
+---SYSFS914---
+export
+gpiochip906
+unexport
+cat: can't open '/sys/class/gpio/gpio914/direction': No such file or directory
+cat: can't open '/sys/class/gpio/gpio914/value': No such file or directory
+REALGPIO_DONE
+hub75d: pty [8]hub75d: submit 10000000 6ms st=7b0220e4 id=2

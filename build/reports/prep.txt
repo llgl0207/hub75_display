@@ -1,0 +1,28 @@
+﻿echo MARK_PREP
+MARK_PREP
+sh-4.4# 
+sh-4.4# umount /tmp/demo 2>/dev/null
+sh-4.4# 
+sh-4.4# rm -rf /tmp/demo /tmp/demo.ext2 /tmp/ramdisk.gz /tmp/wpa_supplicant /tmp//wpa_cli /tmp/hello.static /tmp/fw.bin /tmp/fw2019.bin
+rm: can't remove '/tmp/demo': Device or resource busy
+sh-4.4# 
+sh-4.4# mkdir -p /tmp/alpine/lib /tmp/alpine/usr/lib /tmp/alpine/sbin
+sh-4.4# 
+sh-4.4# rm -rf /var/run/wpa_supplicant
+sh-4.4# 
+sh-4.4# mkdir -p /var/run/wpa_supplicant
+sh-4.4# 
+sh-4.4# free
+             total       used       free     shared    buffers     cached
+Mem:        250568      51232     199336      32696        592      42936
+-/+ buffers/cache:       7704     242864
+Swap:            0          0          0
+sh-4.4# 
+sh-4.4# df -h /tmp
+Filesystem                Size      Used Available Use% Mounted on
+df: /tmp: can't find mount point
+sh-4.4# 
+sh-4.4# echo MARK_PREP_DONE
+MARK_PREP_DONE
+sh-4.4# 
+sh-4.4# 

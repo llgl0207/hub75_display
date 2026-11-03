@@ -1,0 +1,36 @@
+﻿dd if=/mnt/boot/uramdisk.image.gz of=/tmp/ramdisk.gz bs=64 skip=1
+103872+1 records in
+103872+1 records out
+sh-4.4# 
+sh-4.4# gunzip -c /tmp/ramdisk.gz > /tmp/demo.ext2
+sh-4.4# 
+sh-4.4# ls -l /tmp/demo.ext2
+-rw-r--r--    1 root     root      16777216 Jan  1 00:08 /tmp/demo.ext2
+sh-4.4# 
+sh-4.4# mount -o loop -t ext2 /tmp/demo.ext2 /tmp/demo
+sh-4.4# 
+sh-4.4# echo MARK_DEMO2
+MARK_DEMO2
+sh-4.4# 
+sh-4.4# ls /tmp/demo
+README             lib                opt                tmp
+bin                licenses           proc               update_qspi.sh
+dev                linuxrc            root               usr
+etc                lost+found         sbin               var
+home               mnt                sys                wpa_config_styles
+sh-4.4# 
+sh-4.4# ls -l /tmp/demo/sbin/wpa_supplicant /tmp/demo/sbin/wpa_cli
+-rwxr-xr-x    1 root     root         32908 Jun 29  2017 /tmp/demo/sbin/wpa_cli
+-rwxr-xr-x    1 root     root       1434120 Jun 29  2017 /tmp/demo/sbin/wpa_supplicant
+sh-4.4# 
+sh-4.4# ls -l /tmp/demo/etc/firmware
+total 400
+-rwxr-xr-x    1 root     root        405428 Jun 29  2017 fw_bcm43438a0.bin
+-rwxr-xr-x    1 root     root           979 Jun 29  2017 nvram.txt
+sh-4.4# 
+sh-4.4# file /tmp/demo/sbin/wpa_supplicant 2>/dev/null
+sh-4.4# 
+sh-4.4# echo MARK_DEMO2_DONE
+MARK_DEMO2_DONE
+sh-4.4# 
+sh-4.4# 

@@ -1,0 +1,786 @@
+﻿RAWOK
+sh-4.4# [1426ms] TX stty raw -echo; echo R0000 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0000 >/dev/ttyPS0
+[1481ms] R0000
+[1666ms] 2048+0 records in
+2048+0 records out
+D0000
+[1674ms] TX stty raw -echo; echo R0001 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0001 >/dev/ttyPS0
+[1729ms] sh-4.4# R0001
+[1947ms] 2048+0 records in
+2048+0 records out
+D0001
+sh-4.4# [1947ms] TX stty raw -echo; echo R0002 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0002 >/dev/ttyPS0
+[1993ms] R0002
+[2214ms] 2048+0 records in
+2048+0 records out
+D0002
+sh-4.4# [2215ms] TX stty raw -echo; echo R0003 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0003 >/dev/ttyPS0
+[2260ms] R0003
+[2480ms] 2048+0 records in
+2048+0 records out
+D0003
+sh-4.4# [2480ms] TX stty raw -echo; echo R0004 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0004 >/dev/ttyPS0
+[2526ms] R0004
+[2745ms] 2048+0 records in
+2048+0 records out
+D0004
+sh-4.4# [2746ms] TX stty raw -echo; echo R0005 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0005 >/dev/ttyPS0
+[2791ms] R0005
+[3009ms] 2048+0 records in
+2048+0 records out
+D0005
+sh-4.4# [3010ms] TX stty raw -echo; echo R0006 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0006 >/dev/ttyPS0
+[3056ms] R0006
+[3274ms] 2048+0 records in
+2048+0 records out
+D0006
+sh-4.4# [3275ms] TX stty raw -echo; echo R0007 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0007 >/dev/ttyPS0
+[3321ms] R0007
+[3537ms] 2048+0 records in
+2048+0 records out
+D0007
+sh-4.4# [3538ms] TX stty raw -echo; echo R0008 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0008 >/dev/ttyPS0
+[3584ms] R0008
+[3769ms] 2048+0 records in
+2048+0 records out
+D0008
+[3770ms] TX stty raw -echo; echo R0009 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0009 >/dev/ttyPS0
+[3816ms] sh-4.4# R0009
+[4034ms] 2048+0 records in
+2048+0 records out
+D0009
+sh-4.4# [4034ms] TX stty raw -echo; echo R0010 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0010 >/dev/ttyPS0
+[4082ms] R0010
+[4299ms] 2048+0 records in
+2048+0 records out
+D0010
+sh-4.4# [4300ms] TX stty raw -echo; echo R0011 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0011 >/dev/ttyPS0
+[4345ms] R0011
+[4564ms] 2048+0 records in
+2048+0 records out
+D0011
+sh-4.4# [4564ms] TX stty raw -echo; echo R0012 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0012 >/dev/ttyPS0
+[4611ms] R0012
+[4829ms] 2048+0 records in
+2048+0 records out
+D0012
+sh-4.4# [4830ms] TX stty raw -echo; echo R0013 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0013 >/dev/ttyPS0
+[4876ms] R0013
+[5095ms] 2048+0 records in
+2048+0 records out
+D0013
+sh-4.4# [5095ms] TX stty raw -echo; echo R0014 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0014 >/dev/ttyPS0
+[5141ms] R0014
+[5374ms] 2048+0 records in
+2048+0 records out
+D0014
+sh-4.4# [5375ms] TX stty raw -echo; echo R0015 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0015 >/dev/ttyPS0
+[5436ms] R0015
+[5623ms] 2048+0 records in
+2048+0 records out
+D0015
+[5623ms] TX stty raw -echo; echo R0016 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0016 >/dev/ttyPS0
+[5670ms] sh-4.4# R0016
+[5859ms] 2048+0 records in
+2048+0 records out
+D0016
+[5859ms] TX stty raw -echo; echo R0017 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0017 >/dev/ttyPS0
+[5922ms] sh-4.4# R0017
+[6109ms] 2048+0 records in
+2048+0 records out
+D0017
+[6109ms] TX stty raw -echo; echo R0018 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0018 >/dev/ttyPS0
+[6171ms] sh-4.4# R0018
+[6355ms] 2048+0 records in
+2048+0 records out
+D0018
+[6356ms] TX stty raw -echo; echo R0019 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0019 >/dev/ttyPS0
+[6402ms] sh-4.4# R0019
+[6589ms] 2048+0 records in
+2048+0 records out
+D0019
+[6590ms] TX stty raw -echo; echo R0020 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0020 >/dev/ttyPS0
+[6636ms] sh-4.4# R0020
+[6821ms] 2048+0 records in
+2048+0 records out
+D0020
+[6822ms] TX stty raw -echo; echo R0021 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0021 >/dev/ttyPS0
+[6867ms] sh-4.4# R0021
+[7083ms] 2048+0 records in
+2048+0 records out
+D0021
+sh-4.4# [7084ms] TX stty raw -echo; echo R0022 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0022 >/dev/ttyPS0
+[7131ms] R0022
+[7348ms] 2048+0 records in
+2048+0 records out
+D0022
+sh-4.4# [7349ms] TX stty raw -echo; echo R0023 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0023 >/dev/ttyPS0
+[7395ms] R0023
+[7613ms] 2048+0 records in
+2048+0 records out
+D0023
+sh-4.4# [7613ms] TX stty raw -echo; echo R0024 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0024 >/dev/ttyPS0
+[7660ms] R0024
+[7879ms] 2048+0 records in
+2048+0 records out
+D0024
+sh-4.4# [7880ms] TX stty raw -echo; echo R0025 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0025 >/dev/ttyPS0
+[7925ms] R0025
+[8144ms] 2048+0 records in
+2048+0 records out
+D0025
+sh-4.4# [8145ms] TX stty raw -echo; echo R0026 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0026 >/dev/ttyPS0
+[8191ms] R0026
+[8410ms] 2048+0 records in
+2048+0 records out
+D0026
+sh-4.4# [8410ms] TX stty raw -echo; echo R0027 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0027 >/dev/ttyPS0
+[8455ms] R0027
+[8673ms] 2048+0 records in
+2048+0 records out
+D0027
+sh-4.4# [8674ms] TX stty raw -echo; echo R0028 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0028 >/dev/ttyPS0
+[8721ms] R0028
+[8940ms] 2048+0 records in
+2048+0 records out
+D0028
+sh-4.4# [8941ms] TX stty raw -echo; echo R0029 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0029 >/dev/ttyPS0
+[8988ms] R0029
+[9207ms] 2048+0 records in
+2048+0 records out
+D0029
+sh-4.4# [9207ms] TX stty raw -echo; echo R0030 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0030 >/dev/ttyPS0
+[9254ms] R0030
+[9438ms] 2048+0 records in
+2048+0 records out
+D0030
+[9439ms] TX stty raw -echo; echo R0031 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0031 >/dev/ttyPS0
+[9485ms] sh-4.4# R0031
+[9672ms] 2048+0 records in
+2048+0 records out
+D0031
+[9672ms] TX stty raw -echo; echo R0032 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0032 >/dev/ttyPS0
+[9733ms] sh-4.4# R0032
+[9917ms] 2048+0 records in
+2048+0 records out
+D0032
+[9917ms] TX stty raw -echo; echo R0033 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0033 >/dev/ttyPS0
+[9963ms] sh-4.4# R0033
+[10182ms] 2048+0 records in
+2048+0 records out
+D0033
+sh-4.4# [10183ms] TX stty raw -echo; echo R0034 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0034 >/dev/ttyPS0
+[10230ms] R0034
+[10449ms] 2048+0 records in
+2048+0 records out
+D0034
+sh-4.4# [10449ms] TX stty raw -echo; echo R0035 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0035 >/dev/ttyPS0
+[10496ms] R0035
+[10680ms] 2048+0 records in
+2048+0 records out
+D0035
+[10681ms] TX stty raw -echo; echo R0036 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0036 >/dev/ttyPS0
+[10728ms] sh-4.4# R0036
+[10944ms] 2048+0 records in
+2048+0 records out
+D0036
+sh-4.4# [10945ms] TX stty raw -echo; echo R0037 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0037 >/dev/ttyPS0
+[10991ms] R0037
+[11207ms] 2048+0 records in
+2048+0 records out
+D0037
+sh-4.4# [11207ms] TX stty raw -echo; echo R0038 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0038 >/dev/ttyPS0
+[11254ms] R0038
+[11474ms] 2048+0 records in
+2048+0 records out
+D0038
+sh-4.4# [11475ms] TX stty raw -echo; echo R0039 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0039 >/dev/ttyPS0
+[11522ms] R0039
+[11739ms] 2048+0 records in
+2048+0 records out
+D0039
+sh-4.4# [11740ms] TX stty raw -echo; echo R0040 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0040 >/dev/ttyPS0
+[11785ms] R0040
+[12003ms] 2048+0 records in
+2048+0 records out
+D0040
+sh-4.4# [12004ms] TX stty raw -echo; echo R0041 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0041 >/dev/ttyPS0
+[12050ms] R0041
+[12270ms] 2048+0 records in
+2048+0 records out
+D0041
+sh-4.4# [12271ms] TX stty raw -echo; echo R0042 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0042 >/dev/ttyPS0
+[12317ms] R0042
+[12533ms] 2048+0 records in
+2048+0 records out
+D0042
+sh-4.4# [12534ms] TX stty raw -echo; echo R0043 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0043 >/dev/ttyPS0
+[12579ms] R0043
+[12765ms] 2048+0 records in
+2048+0 records out
+D0043
+[12765ms] TX stty raw -echo; echo R0044 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0044 >/dev/ttyPS0
+[12811ms] sh-4.4# R0044
+[12998ms] 2048+0 records in
+2048+0 records out
+D0044
+[12999ms] TX stty raw -echo; echo R0045 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0045 >/dev/ttyPS0
+[13045ms] sh-4.4# R0045
+[13235ms] 2048+0 records in
+2048+0 records out
+D0045
+[13235ms] TX stty raw -echo; echo R0046 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0046 >/dev/ttyPS0
+[13282ms] sh-4.4# R0046
+[13469ms] 2048+0 records in
+2048+0 records out
+D0046
+[13470ms] TX stty raw -echo; echo R0047 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0047 >/dev/ttyPS0
+[13531ms] sh-4.4# R0047
+[13751ms] 2048+0 records in
+2048+0 records out
+D0047
+sh-4.4# [13751ms] TX stty raw -echo; echo R0048 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0048 >/dev/ttyPS0
+[13812ms] R0048
+[13997ms] 2048+0 records in
+2048+0 records out
+D0048
+[13998ms] TX stty raw -echo; echo R0049 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0049 >/dev/ttyPS0
+[14045ms] sh-4.4# R0049
+[14233ms] 2048+0 records in
+2048+0 records out
+D0049
+[14234ms] TX stty raw -echo; echo R0050 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0050 >/dev/ttyPS0
+[14280ms] sh-4.4# R0050
+[14467ms] 2048+0 records in
+2048+0 records out
+D0050
+[14468ms] TX stty raw -echo; echo R0051 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0051 >/dev/ttyPS0
+[14527ms] sh-4.4# R0051
+[14712ms] 2048+0 records in
+2048+0 records out
+D0051
+[14713ms] TX stty raw -echo; echo R0052 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0052 >/dev/ttyPS0
+[14758ms] sh-4.4# R0052
+[14975ms] 2048+0 records in
+2048+0 records out
+D0052
+sh-4.4# [14976ms] TX stty raw -echo; echo R0053 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0053 >/dev/ttyPS0
+[15022ms] R0053
+[15208ms] 2048+0 records in
+2048+0 records out
+D0053
+[15208ms] TX stty raw -echo; echo R0054 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0054 >/dev/ttyPS0
+[15254ms] sh-4.4# R0054
+[15472ms] 2048+0 records in
+2048+0 records out
+D0054
+sh-4.4# [15473ms] TX stty raw -echo; echo R0055 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0055 >/dev/ttyPS0
+[15519ms] R0055
+[15737ms] 2048+0 records in
+2048+0 records out
+D0055
+sh-4.4# [15737ms] TX stty raw -echo; echo R0056 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0056 >/dev/ttyPS0
+[15783ms] R0056
+[16001ms] 2048+0 records in
+2048+0 records out
+D0056
+sh-4.4# [16002ms] TX stty raw -echo; echo R0057 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0057 >/dev/ttyPS0
+[16063ms] R0057
+[16282ms] 2048+0 records in
+2048+0 records out
+D0057
+sh-4.4# [16283ms] TX stty raw -echo; echo R0058 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0058 >/dev/ttyPS0
+[16329ms] R0058
+[16549ms] 2048+0 records in
+2048+0 records out
+D0058
+sh-4.4# [16549ms] TX stty raw -echo; echo R0059 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0059 >/dev/ttyPS0
+[16594ms] R0059
+[16779ms] 2048+0 records in
+2048+0 records out
+D0059
+[16779ms] TX stty raw -echo; echo R0060 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0060 >/dev/ttyPS0
+[16825ms] sh-4.4# R0060
+[17012ms] 2048+0 records in
+2048+0 records out
+D0060
+[17013ms] TX stty raw -echo; echo R0061 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0061 >/dev/ttyPS0
+[17057ms] sh-4.4# R0061
+[17274ms] 2048+0 records in
+2048+0 records out
+D0061
+sh-4.4# [17274ms] TX stty raw -echo; echo R0062 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0062 >/dev/ttyPS0
+[17321ms] R0062
+[17540ms] 2048+0 records in
+2048+0 records out
+D0062
+sh-4.4# [17541ms] TX stty raw -echo; echo R0063 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0063 >/dev/ttyPS0
+[17587ms] R0063
+[17807ms] 2048+0 records in
+2048+0 records out
+D0063
+sh-4.4# [17808ms] TX stty raw -echo; echo R0064 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0064 >/dev/ttyPS0
+[17855ms] R0064
+[18074ms] 2048+0 records in
+2048+0 records out
+D0064
+sh-4.4# [18075ms] TX stty raw -echo; echo R0065 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0065 >/dev/ttyPS0
+[18121ms] R0065
+[18340ms] 2048+0 records in
+2048+0 records out
+D0065
+sh-4.4# [18341ms] TX stty raw -echo; echo R0066 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0066 >/dev/ttyPS0
+[18385ms] R0066
+[18570ms] 2048+0 records in
+2048+0 records out
+D0066
+[18571ms] TX stty raw -echo; echo R0067 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0067 >/dev/ttyPS0
+[18616ms] sh-4.4# R0067
+[18835ms] 2048+0 records in
+2048+0 records out
+D0067
+sh-4.4# [18836ms] TX stty raw -echo; echo R0068 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0068 >/dev/ttyPS0
+[18882ms] R0068
+[19101ms] 2048+0 records in
+2048+0 records out
+D0068
+sh-4.4# [19101ms] TX stty raw -echo; echo R0069 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0069 >/dev/ttyPS0
+[19146ms] R0069
+[19366ms] 2048+0 records in
+2048+0 records out
+D0069
+sh-4.4# [19366ms] TX stty raw -echo; echo R0070 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0070 >/dev/ttyPS0
+[19413ms] R0070
+[19630ms] 2048+0 records in
+2048+0 records out
+D0070
+sh-4.4# [19631ms] TX stty raw -echo; echo R0071 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0071 >/dev/ttyPS0
+[19676ms] R0071
+[19895ms] 2048+0 records in
+2048+0 records out
+D0071
+sh-4.4# [19895ms] TX stty raw -echo; echo R0072 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0072 >/dev/ttyPS0
+[19940ms] R0072
+[20161ms] 2048+0 records in
+2048+0 records out
+D0072
+sh-4.4# [20162ms] TX stty raw -echo; echo R0073 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0073 >/dev/ttyPS0
+[20207ms] R0073
+[20425ms] 2048+0 records in
+2048+0 records out
+D0073
+sh-4.4# [20425ms] TX stty raw -echo; echo R0074 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0074 >/dev/ttyPS0
+[20471ms] R0074
+[20703ms] 2048+0 records in
+2048+0 records out
+D0074
+sh-4.4# [20704ms] TX stty raw -echo; echo R0075 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0075 >/dev/ttyPS0
+[20764ms] R0075
+[20951ms] 2048+0 records in
+2048+0 records out
+D0075
+[20952ms] TX stty raw -echo; echo R0076 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0076 >/dev/ttyPS0
+[20999ms] sh-4.4# R0076
+[21185ms] 2048+0 records in
+2048+0 records out
+D0076
+[21185ms] TX stty raw -echo; echo R0077 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0077 >/dev/ttyPS0
+[21232ms] sh-4.4# R0077
+[21419ms] 2048+0 records in
+2048+0 records out
+D0077
+[21419ms] TX stty raw -echo; echo R0078 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0078 >/dev/ttyPS0
+[21467ms] sh-4.4# R0078
+[21652ms] 2048+0 records in
+2048+0 records out
+D0078
+[21652ms] TX stty raw -echo; echo R0079 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0079 >/dev/ttyPS0
+[21699ms] sh-4.4# R0079
+[21916ms] 2048+0 records in
+2048+0 records out
+D0079
+sh-4.4# [21917ms] TX stty raw -echo; echo R0080 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0080 >/dev/ttyPS0
+[21962ms] R0080
+[22180ms] 2048+0 records in
+2048+0 records out
+D0080
+sh-4.4# [22181ms] TX stty raw -echo; echo R0081 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0081 >/dev/ttyPS0
+[22227ms] R0081
+[22445ms] 2048+0 records in
+2048+0 records out
+D0081
+sh-4.4# [22445ms] TX stty raw -echo; echo R0082 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0082 >/dev/ttyPS0
+[22492ms] R0082
+[22711ms] 2048+0 records in
+2048+0 records out
+D0082
+sh-4.4# [22711ms] TX stty raw -echo; echo R0083 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0083 >/dev/ttyPS0
+[22757ms] R0083
+[22974ms] 2048+0 records in
+2048+0 records out
+D0083
+sh-4.4# [22975ms] TX stty raw -echo; echo R0084 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0084 >/dev/ttyPS0
+[23022ms] R0084
+[23239ms] 2048+0 records in
+2048+0 records out
+D0084
+sh-4.4# [23240ms] TX stty raw -echo; echo R0085 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0085 >/dev/ttyPS0
+[23287ms] R0085
+[23504ms] 2048+0 records in
+2048+0 records out
+D0085
+sh-4.4# [23505ms] TX stty raw -echo; echo R0086 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0086 >/dev/ttyPS0
+[23551ms] R0086
+[23768ms] 2048+0 records in
+2048+0 records out
+D0086
+sh-4.4# [23769ms] TX stty raw -echo; echo R0087 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0087 >/dev/ttyPS0
+[23813ms] R0087
+[23999ms] 2048+0 records in
+2048+0 records out
+D0087
+[23999ms] TX stty raw -echo; echo R0088 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0088 >/dev/ttyPS0
+[24062ms] sh-4.4# R0088
+[24249ms] 2048+0 records in
+2048+0 records out
+D0088
+[24250ms] TX stty raw -echo; echo R0089 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0089 >/dev/ttyPS0
+[24312ms] sh-4.4# R0089
+[24498ms] 2048+0 records in
+2048+0 records out
+D0089
+[24499ms] TX stty raw -echo; echo R0090 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0090 >/dev/ttyPS0
+[24545ms] sh-4.4# R0090
+[24731ms] 2048+0 records in
+2048+0 records out
+D0090
+[24732ms] TX stty raw -echo; echo R0091 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0091 >/dev/ttyPS0
+[24777ms] sh-4.4# R0091
+[24996ms] 2048+0 records in
+2048+0 records out
+D0091
+sh-4.4# [24997ms] TX stty raw -echo; echo R0092 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0092 >/dev/ttyPS0
+[25043ms] R0092
+[25227ms] 2048+0 records in
+2048+0 records out
+D0092
+[25227ms] TX stty raw -echo; echo R0093 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0093 >/dev/ttyPS0
+[25274ms] sh-4.4# R0093
+[25491ms] 2048+0 records in
+2048+0 records out
+D0093
+sh-4.4# [25491ms] TX stty raw -echo; echo R0094 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0094 >/dev/ttyPS0
+[25537ms] R0094
+[25757ms] 2048+0 records in
+2048+0 records out
+D0094
+sh-4.4# [25757ms] TX stty raw -echo; echo R0095 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0095 >/dev/ttyPS0
+[25805ms] R0095
+[26024ms] 2048+0 records in
+2048+0 records out
+D0095
+sh-4.4# [26025ms] TX stty raw -echo; echo R0096 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0096 >/dev/ttyPS0
+[26070ms] R0096
+[26286ms] 2048+0 records in
+2048+0 records out
+D0096
+sh-4.4# [26287ms] TX stty raw -echo; echo R0097 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0097 >/dev/ttyPS0
+[26333ms] R0097
+[26551ms] 2048+0 records in
+2048+0 records out
+D0097
+sh-4.4# [26551ms] TX stty raw -echo; echo R0098 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0098 >/dev/ttyPS0
+[26598ms] R0098
+[26815ms] 2048+0 records in
+2048+0 records out
+D0098
+sh-4.4# [26815ms] TX stty raw -echo; echo R0099 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0099 >/dev/ttyPS0
+[26862ms] R0099
+[27093ms] 2048+0 records in
+2048+0 records out
+D0099
+sh-4.4# [27094ms] TX stty raw -echo; echo R0100 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0100 >/dev/ttyPS0
+[27142ms] R0100
+[27329ms] 2048+0 records in
+2048+0 records out
+D0100
+[27331ms] TX stty raw -echo; echo R0101 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0101 >/dev/ttyPS0
+[27375ms] sh-4.4# R0101
+[27562ms] 2048+0 records in
+2048+0 records out
+D0101
+[27562ms] TX stty raw -echo; echo R0102 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0102 >/dev/ttyPS0
+[27624ms] sh-4.4# R0102
+[27810ms] 2048+0 records in
+2048+0 records out
+D0102
+[27811ms] TX stty raw -echo; echo R0103 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0103 >/dev/ttyPS0
+[27857ms] sh-4.4# R0103
+[28043ms] 2048+0 records in
+2048+0 records out
+D0103
+[28043ms] TX stty raw -echo; echo R0104 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0104 >/dev/ttyPS0
+[28089ms] sh-4.4# R0104
+[28274ms] 2048+0 records in
+2048+0 records out
+D0104
+[28275ms] TX stty raw -echo; echo R0105 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0105 >/dev/ttyPS0
+[28321ms] sh-4.4# R0105
+[28539ms] 2048+0 records in
+2048+0 records out
+D0105
+sh-4.4# [28539ms] TX stty raw -echo; echo R0106 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0106 >/dev/ttyPS0
+[28584ms] R0106
+[28801ms] 2048+0 records in
+2048+0 records out
+D0106
+sh-4.4# [28802ms] TX stty raw -echo; echo R0107 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0107 >/dev/ttyPS0
+[28847ms] R0107
+[29068ms] 2048+0 records in
+2048+0 records out
+D0107
+sh-4.4# [29069ms] TX stty raw -echo; echo R0108 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0108 >/dev/ttyPS0
+[29116ms] R0108
+[29334ms] 2048+0 records in
+2048+0 records out
+D0108
+sh-4.4# [29335ms] TX stty raw -echo; echo R0109 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0109 >/dev/ttyPS0
+[29379ms] R0109
+[29563ms] 2048+0 records in
+2048+0 records out
+D0109
+[29564ms] TX stty raw -echo; echo R0110 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0110 >/dev/ttyPS0
+[29625ms] sh-4.4# R0110
+[29845ms] 2048+0 records in
+2048+0 records out
+D0110
+sh-4.4# [29846ms] TX stty raw -echo; echo R0111 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0111 >/dev/ttyPS0
+[29892ms] R0111
+[30109ms] 2048+0 records in
+2048+0 records out
+D0111
+sh-4.4# [30110ms] TX stty raw -echo; echo R0112 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0112 >/dev/ttyPS0
+[30172ms] R0112
+[30406ms] 2048+0 records in
+2048+0 records out
+D0112
+sh-4.4# [30406ms] TX stty raw -echo; echo R0113 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0113 >/dev/ttyPS0
+[30467ms] R0113
+[30656ms] 2048+0 records in
+2048+0 records out
+D0113
+[30657ms] TX stty raw -echo; echo R0114 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0114 >/dev/ttyPS0
+[30718ms] sh-4.4# R0114
+[30904ms] 2048+0 records in
+2048+0 records out
+D0114
+[30905ms] TX stty raw -echo; echo R0115 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0115 >/dev/ttyPS0
+[30952ms] sh-4.4# R0115
+[31139ms] 2048+0 records in
+2048+0 records out
+D0115
+[31139ms] TX stty raw -echo; echo R0116 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0116 >/dev/ttyPS0
+[31186ms] sh-4.4# R0116
+[31372ms] 2048+0 records in
+2048+0 records out
+D0116
+[31373ms] TX stty raw -echo; echo R0117 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0117 >/dev/ttyPS0
+[31418ms] sh-4.4# R0117
+[31605ms] 2048+0 records in
+2048+0 records out
+D0117
+[31606ms] TX stty raw -echo; echo R0118 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0118 >/dev/ttyPS0
+[31653ms] sh-4.4# R0118
+[31840ms] 2048+0 records in
+2048+0 records out
+D0118
+[31841ms] TX stty raw -echo; echo R0119 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0119 >/dev/ttyPS0
+[31887ms] sh-4.4# R0119
+[32073ms] 2048+0 records in
+2048+0 records out
+D0119
+[32074ms] TX stty raw -echo; echo R0120 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0120 >/dev/ttyPS0
+[32119ms] sh-4.4# R0120
+[32337ms] 2048+0 records in
+2048+0 records out
+D0120
+sh-4.4# [32338ms] TX stty raw -echo; echo R0121 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0121 >/dev/ttyPS0
+[32383ms] R0121
+[32568ms] 2048+0 records in
+2048+0 records out
+D0121
+[32568ms] TX stty raw -echo; echo R0122 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0122 >/dev/ttyPS0
+[32614ms] sh-4.4# R0122
+[32797ms] 2048+0 records in
+2048+0 records out
+D0122
+[32798ms] TX stty raw -echo; echo R0123 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0123 >/dev/ttyPS0
+[32845ms] sh-4.4# R0123
+[33031ms] 2048+0 records in
+2048+0 records out
+D0123
+[33032ms] TX stty raw -echo; echo R0124 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0124 >/dev/ttyPS0
+[33094ms] sh-4.4# R0124
+[33313ms] 2048+0 records in
+2048+0 records out
+D0124
+sh-4.4# [33314ms] TX stty raw -echo; echo R0125 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0125 >/dev/ttyPS0
+[33360ms] R0125
+[33547ms] 2048+0 records in
+2048+0 records out
+D0125
+[33547ms] TX stty raw -echo; echo R0126 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0126 >/dev/ttyPS0
+[33609ms] sh-4.4# R0126
+[33793ms] 2048+0 records in
+2048+0 records out
+D0126
+[33793ms] TX stty raw -echo; echo R0127 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0127 >/dev/ttyPS0
+[33840ms] sh-4.4# R0127
+[34026ms] 2048+0 records in
+2048+0 records out
+D0127
+[34026ms] TX stty raw -echo; echo R0128 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0128 >/dev/ttyPS0
+[34072ms] sh-4.4# R0128
+[34292ms] 2048+0 records in
+2048+0 records out
+D0128
+sh-4.4# [34293ms] TX stty raw -echo; echo R0129 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0129 >/dev/ttyPS0
+[34339ms] R0129
+[34556ms] 2048+0 records in
+2048+0 records out
+D0129
+sh-4.4# [34557ms] TX stty raw -echo; echo R0130 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0130 >/dev/ttyPS0
+[34605ms] R0130
+[34821ms] 2048+0 records in
+2048+0 records out
+D0130
+sh-4.4# [34822ms] TX stty raw -echo; echo R0131 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0131 >/dev/ttyPS0
+[34867ms] R0131
+[35052ms] 2048+0 records in
+2048+0 records out
+D0131
+[35053ms] TX stty raw -echo; echo R0132 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0132 >/dev/ttyPS0
+[35098ms] sh-4.4# R0132
+[35317ms] 2048+0 records in
+2048+0 records out
+D0132
+sh-4.4# [35318ms] TX stty raw -echo; echo R0133 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0133 >/dev/ttyPS0
+[35363ms] R0133
+[35582ms] 2048+0 records in
+2048+0 records out
+D0133
+sh-4.4# [35583ms] TX stty raw -echo; echo R0134 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0134 >/dev/ttyPS0
+[35630ms] R0134
+[35815ms] 2048+0 records in
+2048+0 records out
+D0134
+[35816ms] TX stty raw -echo; echo R0135 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0135 >/dev/ttyPS0
+[35861ms] sh-4.4# R0135
+[36046ms] 2048+0 records in
+2048+0 records out
+D0135
+[36046ms] TX stty raw -echo; echo R0136 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0136 >/dev/ttyPS0
+[36094ms] sh-4.4# R0136
+[36313ms] 2048+0 records in
+2048+0 records out
+D0136
+sh-4.4# [36313ms] TX stty raw -echo; echo R0137 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0137 >/dev/ttyPS0
+[36374ms] R0137
+[36561ms] 2048+0 records in
+2048+0 records out
+D0137
+[36562ms] TX stty raw -echo; echo R0138 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0138 >/dev/ttyPS0
+[36608ms] sh-4.4# R0138
+[36792ms] 2048+0 records in
+2048+0 records out
+D0138
+[36792ms] TX stty raw -echo; echo R0139 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0139 >/dev/ttyPS0
+[36840ms] sh-4.4# R0139
+[37058ms] 2048+0 records in
+2048+0 records out
+D0139
+sh-4.4# [37059ms] TX stty raw -echo; echo R0140 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0140 >/dev/ttyPS0
+[37106ms] R0140
+[37293ms] 2048+0 records in
+2048+0 records out
+D0140
+[37294ms] TX stty raw -echo; echo R0141 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0141 >/dev/ttyPS0
+[37341ms] sh-4.4# R0141
+[37531ms] 2048+0 records in
+2048+0 records out
+D0141
+[37531ms] TX stty raw -echo; echo R0142 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0142 >/dev/ttyPS0
+[37591ms] sh-4.4# R0142
+[37821ms] 2048+0 records in
+2048+0 records out
+D0142
+sh-4.4# [37822ms] TX stty raw -echo; echo R0143 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0143 >/dev/ttyPS0
+[37866ms] R0143
+[38086ms] 2048+0 records in
+2048+0 records out
+D0143
+sh-4.4# [38086ms] TX stty raw -echo; echo R0144 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0144 >/dev/ttyPS0
+[38132ms] R0144
+[38349ms] 2048+0 records in
+2048+0 records out
+D0144
+sh-4.4# [38350ms] TX stty raw -echo; echo R0145 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0145 >/dev/ttyPS0
+[38395ms] R0145
+[38612ms] 2048+0 records in
+2048+0 records out
+D0145
+sh-4.4# [38613ms] TX stty raw -echo; echo R0146 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0146 >/dev/ttyPS0
+[38659ms] R0146
+[38879ms] 2048+0 records in
+2048+0 records out
+D0146
+sh-4.4# [38880ms] TX stty raw -echo; echo R0147 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0147 >/dev/ttyPS0
+[38924ms] R0147
+[39155ms] 2048+0 records in
+2048+0 records out
+D0147
+sh-4.4# [39155ms] TX stty raw -echo; echo R0148 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0148 >/dev/ttyPS0
+[39202ms] R0148
+[39389ms] 2048+0 records in
+2048+0 records out
+D0148
+[39390ms] TX stty raw -echo; echo R0149 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0149 >/dev/ttyPS0
+[39436ms] sh-4.4# R0149
+[39622ms] 2048+0 records in
+2048+0 records out
+D0149
+[39623ms] TX stty raw -echo; echo R0150 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0150 >/dev/ttyPS0
+[39669ms] sh-4.4# R0150
+[39852ms] 2048+0 records in
+2048+0 records out
+D0150
+[39853ms] TX stty raw -echo; echo R0151 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0151 >/dev/ttyPS0
+[39899ms] sh-4.4# R0151
+[40121ms] 2048+0 records in
+2048+0 records out
+D0151
+sh-4.4# [40122ms] TX stty raw -echo; echo R0152 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0152 >/dev/ttyPS0
+[40168ms] R0152
+[40355ms] 2048+0 records in
+2048+0 records out
+D0152
+[40355ms] TX stty raw -echo; echo R0153 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0153 >/dev/ttyPS0
+[40402ms] sh-4.4# R0153
+[40589ms] 2048+0 records in
+2048+0 records out
+D0153
+[40590ms] TX stty raw -echo; echo R0154 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0154 >/dev/ttyPS0
+[40636ms] sh-4.4# R0154
+[40853ms] 2048+0 records in
+2048+0 records out
+D0154
+sh-4.4# [40854ms] TX stty raw -echo; echo R0155 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libssl.so.3.gz; echo D0155 >/dev/ttyPS0
+[40900ms] R0155
+[41117ms] 2048+0 records in
+2048+0 records out
+D0155
+sh-4.4# [41117ms] TX stty raw -echo; echo R0156 >/dev/ttyPS0; dd bs=1 count=782 >> /tmp/alpine/libssl.so.3.gz; echo D0156 >/dev/ttyPS0
+[41163ms] R0156
+[41240ms] 782+0 records in
+782+0 records out
+D0156

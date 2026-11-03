@@ -1,0 +1,80 @@
+﻿dd if=/mnt/boot/uramdisk.image.gz of=/tmp/ramdisk.gz bs=64 skip=1
+103872+1 records in
+103872+1 records out
+sh-4.4# 
+sh-4.4# gunzip -c /tmp/ramdisk.gz > /tmp/demo.ext2
+sh-4.4# 
+sh-4.4# mkdir -p /tmp/demo
+sh-4.4# 
+sh-4.4# mount -o loop -t ext2 /tmp/demo.ext2 /tmp/demo
+sh-4.4# 
+sh-4.4# ls -l /tmp/demo/sbin/wpa_supplicant
+-rwxr-xr-x    1 root     root       1434120 Jun 29  2017 /tmp/demo/sbin/wpa_supplicant
+sh-4.4# 
+sh-4.4# printf '#!/bin/sh
+> 
+> exec /tmp/demo/lib/ld-linux.so.3 --library-path /tmp/demo/lib:/tmp/demo/usr/libb /tmp/demo/sbin/wpa_supplicant "$@"
+> 
+> ' > /tmp/wp.sh
+sh-4.4# 
+sh-4.4# chmod +x /tmp/wp.sh
+sh-4.4# 
+sh-4.4# mkdir -p /var/run/wpa_supplicant
+sh-4.4# 
+sh-4.4# printf 'ctrl_interface=/var/run/wpa_supplicant
+> 
+> ap_scan=1
+> 
+> network={
+> 
+> ssid="AllianceTeam2.4G"
+> 
+> psk="12345678"
+> 
+> key_mgmt=WPA-PSK
+> 
+> }
+> 
+> ' > /tmp/wpa.conf
+sh-4.4# 
+sh-4.4# cat /tmp/wpa.conf
+ctrl_interface=/var/run/wpa_supplicant
+
+ap_scan=1
+
+network={
+
+ssid="AllianceTeam2.4G"
+
+psk="12345678"
+
+key_mgmt=WPA-PSK
+
+}
+
+sh-4.4# 
+sh-4.4# echo MARK_WPA2019
+MARK_WPA2019
+sh-4.4# 
+sh-4.4# /tmp/wp.sh -Dwext -iwlan0 -c/tmp/wpa.conf > /tmp/wpa.log 2>&1 &
+[1] 742
+sh-4.4# 
+sh-4.4# IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+sleep 7
+cat /tmp/wpa.log
+
+ps | grep wpa
+
+echo MARK_WPA2019_DONE
+
+sh-4.4# 
+sh-4.4# cat /tmp/wpa.log
+sh-4.4# 
+sh-4.4# ps | grep wpa
+  742 root       0:00 /tmp/demo/lib/ld-linux.so.3 --library-path /tmp/demo/lib:/tmp/demo/usr/lib /tmp/demo/sbin/wpa_supplicant -Dwext -iwlan0 -c/tmp/wpa.conf
+  749 root       0:00 grep wpa
+sh-4.4# 
+sh-4.4# echo MARK_WPA2019_DONE
+MARK_WPA2019_DONE
+sh-4.4# 
+sh-4.4# 

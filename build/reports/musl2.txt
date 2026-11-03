@@ -1,0 +1,16 @@
+﻿chmod +x /tmp/alpine/lib/ld-musl-armhf.so.1
+sh-4.4# 
+sh-4.4# echo MARK_MUSL2
+MARK_MUSL2
+sh-4.4# 
+sh-4.4# LD_LIBRARY_PATH=/tmp/alpine/lib:/tmp/alpine/usr/lib /tmp/alpine/lib/ld-muusl-armhf.so.1 /tmp/alpine/sbin/wpa_supplicant -v
+wpa_supplicant v2.10
+Copyright (c) 2003-2022, Jouni Malinen <j@w1.fi> and contributors
+sh-4.4# 
+sh-4.4# echo MUSL2_EXIT=$?
+MUSL2_EXIT=0
+sh-4.4# 
+sh-4.4# echo MARK_MUSL2_DONE
+MARK_MUSL2_DONE
+sh-4.4# 
+sh-4.4# 

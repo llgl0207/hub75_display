@@ -1,0 +1,18 @@
+﻿brcmfmac: brcmf_run_escan: error (-4)
+brcmfmac: brcmf_cfg80211_scan: scan error (-4)
+kill 1174 2>/dev/null
+root@(none):~# 
+root@(none):~# echo MARK_IW
+MARK_IW
+[1]+  Done                    /tmp/wp.sh -Dwext -iwlan0 -c/tmp/wpa.conf > /tmp/wpa.log 2>&1
+root@(none):~# 
+root@(none):~# ls /tmp/demo/sbin | grep -iE "iw|wireless"
+root@(none):~# 
+root@(none):~# ls /tmp/demo/usr/sbin | grep -iE "iw|wireless"
+root@(none):~# 
+root@(none):~# ls /tmp/demo/usr/bin | grep -iE "iw|wireless"
+root@(none):~# 
+root@(none):~# echo MARK_IW_DONE
+MARK_IW_DONE
+root@(none):~# 
+root@(none):~# 

@@ -1,0 +1,12 @@
+﻿echo MARK_SETSID
+MARK_SETSID
+sh-4.4# 
+sh-4.4# busybox --list | grep -E "setsid|nohup|login|getty"
+getty
+nohup
+sulogin
+sh-4.4# 
+sh-4.4# echo MARK_SETSID_DONE
+MARK_SETSID_DONE
+sh-4.4# 
+sh-4.4# 

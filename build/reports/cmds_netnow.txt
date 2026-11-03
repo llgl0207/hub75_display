@@ -1,0 +1,6 @@
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+echo MARK_NETNOW
+ls /sys/class/net
+ifconfig -a
+echo MARK_NETNOW_DONE

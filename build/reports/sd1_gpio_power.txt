@@ -1,0 +1,31 @@
+﻿echo ---GPIOH--- >/dev/ttyPS0; devmem 0xE000A044 32 0x000CC301 >/dev/ttyPS0 2>&1; devmem 0xE000A048 32 0x00000301 >/dev/ttyPS0 2>&1; devmem 0xE000A040 32 0x00000333 >/dev/ttyPS0 2>&1; sleep 1; echo ---REBIND4--- >/dev/ttyPS0; echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/unbind 2>&1; sleep 1; echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/bind 2>&1; sleep 2; echo ---SDIO4--- >/dev/ttyPS0; ls /sys/bus/sdio/devices >/dev/ttyPS0 2>&1; echo ---DM4--- >/dev/ttyPS0; dmesg | tail -15 >/dev/ttyPS0 2>&1; echo GPIOH_DONE >/dev/ttyPS0
+---GPIOH---
+---REBIND4---
+mmc1: SDHCI controller on e0101000.mmc [e0101000.mmc] using ADMA
+sdhci-arasan e0101000.mmc: Unbalanced pm_runtime_enable!
+uio_pdrv_genirq: disagrees about version of symbol dev_warn
+uio_pdrv_genirq: Unknown symbol dev_warn (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_err
+uio_pdrv_genirq: Unknown symbol dev_err (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_warn
+uio_pdrv_genirq: Unknown symbol dev_warn (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_err
+uio_pdrv_genirq: Unknown symbol dev_err (err -22)
+---SDIO4---
+---DM4---
+uio_pdrv_genirq: Unknown symbol dev_err (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_warn
+uio_pdrv_genirq: Unknown symbol dev_warn (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_err
+uio_pdrv_genirq: Unknown symbol dev_err (err -22)
+mmc1: SDHCI controller on e0101000.mmc [e0101000.mmc] using ADMA
+sdhci-arasan e0101000.mmc: Unbalanced pm_runtime_enable!
+uio_pdrv_genirq: disagrees about version of symbol dev_warn
+uio_pdrv_genirq: Unknown symbol dev_warn (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_err
+uio_pdrv_genirq: Unknown symbol dev_err (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_warn
+uio_pdrv_genirq: Unknown symbol dev_warn (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_err
+uio_pdrv_genirq: Unknown symbol dev_err (err -22)
+GPIOH_DONE

@@ -1,0 +1,57 @@
+﻿echo MARK_MUX
+MARK_MUX
+sh-4.4# 
+sh-4.4# devmem 0xF8000008 32 0x0000DF0D
+sh-4.4# 
+sh-4.4# devmem 0xF8000728 32 0x00001680
+sh-4.4# 
+sh-4.4# devmem 0xF800072C 32 0x00001680
+sh-4.4# 
+sh-4.4# devmem 0xF8000730 32 0x00001680
+sh-4.4# 
+sh-4.4# devmem 0xF8000734 32 0x00001680
+sh-4.4# 
+sh-4.4# devmem 0xF8000738 32 0x00001680
+sh-4.4# 
+sh-4.4# devmem 0xF800073C 32 0x00001680
+sh-4.4# 
+sh-4.4# devmem 0xF8000728 32
+0x00001680
+sh-4.4# 
+sh-4.4# devmem 0xF800073C 32
+0x00001680
+sh-4.4# 
+sh-4.4# echo MARK_REBIND2
+MARK_REBIND2
+sh-4.4# 
+sh-4.4# echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/unbind
+sh-4.4# 
+sh-4.4# sleep 1
+sh-4.4# 
+sh-4.4# echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/bind
+mmc1: SDHCI controller on e0101000.mmc [e0101000.mmc] using ADMA
+sdhci-arasan e0101000.mmc: Unbalanced pm_runtime_enable!
+sh-4.4# 
+sh-4.4# sleep 3
+ls /sys/bus/sdio/devices
+
+dmesg | grep -iE "mmc1|sdio" | tail -20
+
+sh-4.4# 
+sh-4.4# ls /sys/bus/sdio/devices
+sh-4.4# 
+sh-4.4# dmesg | grep -iE "mmc1|sdio" | tail -20
+mmc1: SDHCI controller on e0101000.mmc [e0101000.mmc] using ADMA
+mmc1: SDHCI controller on e0101000.mmc [e0101000.mmc] using ADMA
+mmc1: SDHCI controller on e0101000.mmc [e0101000.mmc] using ADMA
+sh-4.4# 
+sh-4.4# devmem 0xE010102C 32
+0x00000000
+sh-4.4# 
+sh-4.4# devmem 0xE0101024 32
+0x01F20000
+sh-4.4# 
+sh-4.4# echo MARK_DONE2
+MARK_DONE2
+sh-4.4# 
+sh-4.4# 

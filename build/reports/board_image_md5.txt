@@ -1,0 +1,3 @@
+﻿ls -l /run/media/mmcblk0p1/image.ub >/dev/ttyPS0; md5sum /run/media/mmcblk0p1/image.ub >/dev/ttyPS0
+-rwxrwx---    1 root     disk       9995016 Nov  3  2026 /run/media/mmcblk0p1/image.ub
+37b5525c2517a6ee5000316d4f0d8787  /run/media/mmcblk0p1/image.ub

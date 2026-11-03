@@ -1,0 +1,951 @@
+﻿RAWOK
+root@(none):~# [1414ms] TX stty raw -echo; echo R0000 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0000 >/dev/ttyPS0
+[1469ms] R0000
+[1696ms] 2048+0 records in
+2048+0 records out
+D0000
+root@(none):~# [1705ms] TX stty raw -echo; echo R0001 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0001 >/dev/ttyPS0
+[1758ms] R0001
+[1991ms] 2048+0 records in
+2048+0 records out
+D0001
+root@(none):~# [1992ms] TX stty raw -echo; echo R0002 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0002 >/dev/ttyPS0
+[2053ms] R0002
+[2239ms] 2048+0 records in
+2048+0 records out
+D0002
+[2240ms] TX stty raw -echo; echo R0003 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0003 >/dev/ttyPS0
+[2285ms] root@(none):~# R0003
+[2473ms] 2048+0 records in
+2048+0 records out
+D0003
+[2474ms] TX stty raw -echo; echo R0004 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0004 >/dev/ttyPS0
+[2519ms] root@(none):~# R0004
+[2707ms] 2048+0 records in
+2048+0 records out
+D0004
+[2708ms] TX stty raw -echo; echo R0005 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0005 >/dev/ttyPS0
+[2753ms] root@(none):~# R0005
+[2939ms] 2048+0 records in
+2048+0 records out
+D0005
+[2940ms] TX stty raw -echo; echo R0006 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0006 >/dev/ttyPS0
+[2986ms] root@(none):~# R0006
+[3171ms] 2048+0 records in
+2048+0 records out
+D0006
+[3172ms] TX stty raw -echo; echo R0007 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0007 >/dev/ttyPS0
+[3217ms] root@(none):~# R0007
+[3435ms] 2048+0 records in
+2048+0 records out
+D0007
+root@(none):~# [3436ms] TX stty raw -echo; echo R0008 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0008 >/dev/ttyPS0
+[3483ms] R0008
+[3703ms] 2048+0 records in
+2048+0 records out
+D0008
+root@(none):~# [3704ms] TX stty raw -echo; echo R0009 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0009 >/dev/ttyPS0
+[3749ms] R0009
+[3935ms] 2048+0 records in
+2048+0 records out
+D0009
+[3936ms] TX stty raw -echo; echo R0010 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0010 >/dev/ttyPS0
+[3982ms] root@(none):~# R0010
+[4200ms] 2048+0 records in
+2048+0 records out
+D0010
+root@(none):~# [4201ms] TX stty raw -echo; echo R0011 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0011 >/dev/ttyPS0
+[4248ms] R0011
+[4465ms] 2048+0 records in
+2048+0 records out
+D0011
+root@(none):~# [4466ms] TX stty raw -echo; echo R0012 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0012 >/dev/ttyPS0
+[4512ms] R0012
+[4730ms] 2048+0 records in
+2048+0 records out
+D0012
+root@(none):~# [4730ms] TX stty raw -echo; echo R0013 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0013 >/dev/ttyPS0
+[4777ms] R0013
+[4997ms] 2048+0 records in
+2048+0 records out
+D0013
+root@(none):~# [4997ms] TX stty raw -echo; echo R0014 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0014 >/dev/ttyPS0
+[5043ms] R0014
+[5227ms] 2048+0 records in
+2048+0 records out
+D0014
+[5228ms] TX stty raw -echo; echo R0015 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0015 >/dev/ttyPS0
+[5274ms] root@(none):~# R0015
+[5460ms] 2048+0 records in
+2048+0 records out
+D0015
+[5461ms] TX stty raw -echo; echo R0016 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0016 >/dev/ttyPS0
+[5520ms] root@(none):~# R0016
+[5709ms] 2048+0 records in
+2048+0 records out
+D0016
+[5710ms] TX stty raw -echo; echo R0017 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0017 >/dev/ttyPS0
+[5770ms] root@(none):~# R0017
+[5958ms] 2048+0 records in
+2048+0 records out
+D0017
+[5958ms] TX stty raw -echo; echo R0018 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0018 >/dev/ttyPS0
+[6003ms] root@(none):~# R0018
+[6223ms] 2048+0 records in
+2048+0 records out
+D0018
+root@(none):~# [6224ms] TX stty raw -echo; echo R0019 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0019 >/dev/ttyPS0
+[6271ms] R0019
+[6455ms] 2048+0 records in
+2048+0 records out
+D0019
+[6456ms] TX stty raw -echo; echo R0020 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0020 >/dev/ttyPS0
+[6502ms] root@(none):~# R0020
+[6720ms] 2048+0 records in
+2048+0 records out
+D0020
+root@(none):~# [6721ms] TX stty raw -echo; echo R0021 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0021 >/dev/ttyPS0
+[6767ms] R0021
+[6984ms] 2048+0 records in
+2048+0 records out
+D0021
+root@(none):~# [6985ms] TX stty raw -echo; echo R0022 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0022 >/dev/ttyPS0
+[7032ms] R0022
+[7251ms] 2048+0 records in
+2048+0 records out
+D0022
+root@(none):~# [7251ms] TX stty raw -echo; echo R0023 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0023 >/dev/ttyPS0
+[7296ms] R0023
+[7515ms] 2048+0 records in
+2048+0 records out
+D0023
+root@(none):~# [7516ms] TX stty raw -echo; echo R0024 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0024 >/dev/ttyPS0
+[7561ms] R0024
+[7779ms] 2048+0 records in
+2048+0 records out
+D0024
+root@(none):~# [7779ms] TX stty raw -echo; echo R0025 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0025 >/dev/ttyPS0
+[7826ms] R0025
+[8009ms] 2048+0 records in
+2048+0 records out
+D0025
+[8010ms] TX stty raw -echo; echo R0026 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0026 >/dev/ttyPS0
+[8056ms] root@(none):~# R0026
+[8277ms] 2048+0 records in
+2048+0 records out
+D0026
+root@(none):~# [8278ms] TX stty raw -echo; echo R0027 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0027 >/dev/ttyPS0
+[8324ms] R0027
+[8541ms] 2048+0 records in
+2048+0 records out
+D0027
+root@(none):~# [8542ms] TX stty raw -echo; echo R0028 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0028 >/dev/ttyPS0
+[8589ms] R0028
+[8819ms] 2048+0 records in
+2048+0 records out
+D0028
+root@(none):~# [8819ms] TX stty raw -echo; echo R0029 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0029 >/dev/ttyPS0
+[8880ms] R0029
+[9066ms] 2048+0 records in
+2048+0 records out
+D0029
+[9067ms] TX stty raw -echo; echo R0030 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0030 >/dev/ttyPS0
+[9112ms] root@(none):~# R0030
+[9297ms] 2048+0 records in
+2048+0 records out
+D0030
+[9298ms] TX stty raw -echo; echo R0031 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0031 >/dev/ttyPS0
+[9343ms] root@(none):~# R0031
+[9564ms] 2048+0 records in
+2048+0 records out
+D0031
+root@(none):~# [9565ms] TX stty raw -echo; echo R0032 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0032 >/dev/ttyPS0
+[9609ms] R0032
+[9824ms] 2048+0 records in
+2048+0 records out
+D0032
+root@(none):~# [9824ms] TX stty raw -echo; echo R0033 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0033 >/dev/ttyPS0
+[9869ms] R0033
+[10087ms] 2048+0 records in
+2048+0 records out
+D0033
+root@(none):~# [10088ms] TX stty raw -echo; echo R0034 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0034 >/dev/ttyPS0
+[10133ms] R0034
+[10318ms] 2048+0 records in
+2048+0 records out
+D0034
+[10319ms] TX stty raw -echo; echo R0035 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0035 >/dev/ttyPS0
+[10364ms] root@(none):~# R0035
+[10549ms] 2048+0 records in
+2048+0 records out
+D0035
+[10550ms] TX stty raw -echo; echo R0036 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0036 >/dev/ttyPS0
+[10596ms] root@(none):~# R0036
+[10815ms] 2048+0 records in
+2048+0 records out
+D0036
+root@(none):~# [10816ms] TX stty raw -echo; echo R0037 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0037 >/dev/ttyPS0
+[10861ms] R0037
+[11076ms] 2048+0 records in
+2048+0 records out
+D0037
+root@(none):~# [11077ms] TX stty raw -echo; echo R0038 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0038 >/dev/ttyPS0
+[11123ms] R0038
+[11341ms] 2048+0 records in
+2048+0 records out
+D0038
+root@(none):~# [11341ms] TX stty raw -echo; echo R0039 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0039 >/dev/ttyPS0
+[11388ms] R0039
+[11608ms] 2048+0 records in
+2048+0 records out
+D0039
+root@(none):~# [11609ms] TX stty raw -echo; echo R0040 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0040 >/dev/ttyPS0
+[11655ms] R0040
+[11875ms] 2048+0 records in
+2048+0 records out
+D0040
+root@(none):~# [11876ms] TX stty raw -echo; echo R0041 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0041 >/dev/ttyPS0
+[11920ms] R0041
+[12104ms] 2048+0 records in
+2048+0 records out
+D0041
+[12105ms] TX stty raw -echo; echo R0042 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0042 >/dev/ttyPS0
+[12150ms] root@(none):~# R0042
+[12368ms] 2048+0 records in
+2048+0 records out
+D0042
+root@(none):~# [12369ms] TX stty raw -echo; echo R0043 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0043 >/dev/ttyPS0
+[12415ms] R0043
+[12648ms] 2048+0 records in
+2048+0 records out
+D0043
+root@(none):~# [12648ms] TX stty raw -echo; echo R0044 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0044 >/dev/ttyPS0
+[12695ms] R0044
+[12880ms] 2048+0 records in
+2048+0 records out
+D0044
+[12881ms] TX stty raw -echo; echo R0045 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0045 >/dev/ttyPS0
+[12926ms] root@(none):~# R0045
+[13113ms] 2048+0 records in
+2048+0 records out
+D0045
+[13114ms] TX stty raw -echo; echo R0046 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0046 >/dev/ttyPS0
+[13159ms] root@(none):~# R0046
+[13345ms] 2048+0 records in
+2048+0 records out
+D0046
+[13346ms] TX stty raw -echo; echo R0047 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0047 >/dev/ttyPS0
+[13394ms] root@(none):~# R0047
+[13580ms] 2048+0 records in
+2048+0 records out
+D0047
+[13580ms] TX stty raw -echo; echo R0048 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0048 >/dev/ttyPS0
+[13627ms] root@(none):~# R0048
+[13845ms] 2048+0 records in
+2048+0 records out
+D0048
+root@(none):~# [13846ms] TX stty raw -echo; echo R0049 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0049 >/dev/ttyPS0
+[13891ms] R0049
+[14110ms] 2048+0 records in
+2048+0 records out
+D0049
+root@(none):~# [14111ms] TX stty raw -echo; echo R0050 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0050 >/dev/ttyPS0
+[14158ms] R0050
+[14342ms] 2048+0 records in
+2048+0 records out
+D0050
+[14343ms] TX stty raw -echo; echo R0051 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0051 >/dev/ttyPS0
+[14389ms] root@(none):~# R0051
+[14610ms] 2048+0 records in
+2048+0 records out
+D0051
+root@(none):~# [14611ms] TX stty raw -echo; echo R0052 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0052 >/dev/ttyPS0
+[14656ms] R0052
+[14886ms] 2048+0 records in
+2048+0 records out
+D0052
+root@(none):~# [14886ms] TX stty raw -echo; echo R0053 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0053 >/dev/ttyPS0
+[14933ms] R0053
+[15117ms] 2048+0 records in
+2048+0 records out
+D0053
+[15118ms] TX stty raw -echo; echo R0054 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0054 >/dev/ttyPS0
+[15164ms] root@(none):~# R0054
+[15394ms] 2048+0 records in
+2048+0 records out
+D0054
+root@(none):~# [15394ms] TX stty raw -echo; echo R0055 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0055 >/dev/ttyPS0
+[15440ms] R0055
+[15657ms] 2048+0 records in
+2048+0 records out
+D0055
+root@(none):~# [15658ms] TX stty raw -echo; echo R0056 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0056 >/dev/ttyPS0
+[15705ms] R0056
+[15932ms] 2048+0 records in
+2048+0 records out
+D0056
+root@(none):~# [15933ms] TX stty raw -echo; echo R0057 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0057 >/dev/ttyPS0
+[15978ms] R0057
+[16197ms] 2048+0 records in
+2048+0 records out
+D0057
+root@(none):~# [16198ms] TX stty raw -echo; echo R0058 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0058 >/dev/ttyPS0
+[16244ms] R0058
+[16462ms] 2048+0 records in
+2048+0 records out
+D0058
+root@(none):~# [16463ms] TX stty raw -echo; echo R0059 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0059 >/dev/ttyPS0
+[16509ms] R0059
+[16693ms] 2048+0 records in
+2048+0 records out
+D0059
+[16694ms] TX stty raw -echo; echo R0060 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0060 >/dev/ttyPS0
+[16741ms] root@(none):~# R0060
+[16961ms] 2048+0 records in
+2048+0 records out
+D0060
+root@(none):~# [16962ms] TX stty raw -echo; echo R0061 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0061 >/dev/ttyPS0
+[17008ms] R0061
+[17193ms] 2048+0 records in
+2048+0 records out
+D0061
+[17193ms] TX stty raw -echo; echo R0062 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0062 >/dev/ttyPS0
+[17239ms] root@(none):~# R0062
+[17425ms] 2048+0 records in
+2048+0 records out
+D0062
+[17426ms] TX stty raw -echo; echo R0063 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0063 >/dev/ttyPS0
+[17472ms] root@(none):~# R0063
+[17662ms] 2048+0 records in
+2048+0 records out
+D0063
+[17663ms] TX stty raw -echo; echo R0064 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0064 >/dev/ttyPS0
+[17710ms] root@(none):~# R0064
+[17894ms] 2048+0 records in
+2048+0 records out
+D0064
+[17895ms] TX stty raw -echo; echo R0065 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0065 >/dev/ttyPS0
+[17941ms] root@(none):~# R0065
+[18127ms] 2048+0 records in
+2048+0 records out
+D0065
+[18127ms] TX stty raw -echo; echo R0066 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0066 >/dev/ttyPS0
+[18173ms] root@(none):~# R0066
+[18392ms] 2048+0 records in
+2048+0 records out
+D0066
+root@(none):~# [18392ms] TX stty raw -echo; echo R0067 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0067 >/dev/ttyPS0
+[18438ms] R0067
+[18655ms] 2048+0 records in
+2048+0 records out
+D0067
+root@(none):~# [18656ms] TX stty raw -echo; echo R0068 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0068 >/dev/ttyPS0
+[18702ms] R0068
+[18885ms] 2048+0 records in
+2048+0 records out
+D0068
+[18885ms] TX stty raw -echo; echo R0069 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0069 >/dev/ttyPS0
+[18932ms] root@(none):~# R0069
+[19151ms] 2048+0 records in
+2048+0 records out
+D0069
+root@(none):~# [19152ms] TX stty raw -echo; echo R0070 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0070 >/dev/ttyPS0
+[19198ms] R0070
+[19416ms] 2048+0 records in
+2048+0 records out
+D0070
+root@(none):~# [19416ms] TX stty raw -echo; echo R0071 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0071 >/dev/ttyPS0
+[19464ms] R0071
+[19680ms] 2048+0 records in
+2048+0 records out
+D0071
+root@(none):~# [19681ms] TX stty raw -echo; echo R0072 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0072 >/dev/ttyPS0
+[19727ms] R0072
+[19948ms] 2048+0 records in
+2048+0 records out
+D0072
+root@(none):~# [19949ms] TX stty raw -echo; echo R0073 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0073 >/dev/ttyPS0
+[19995ms] R0073
+[20214ms] 2048+0 records in
+2048+0 records out
+D0073
+root@(none):~# [20215ms] TX stty raw -echo; echo R0074 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0074 >/dev/ttyPS0
+[20261ms] R0074
+[20479ms] 2048+0 records in
+2048+0 records out
+D0074
+root@(none):~# [20479ms] TX stty raw -echo; echo R0075 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0075 >/dev/ttyPS0
+[20526ms] R0075
+[20709ms] 2048+0 records in
+2048+0 records out
+D0075
+[20709ms] TX stty raw -echo; echo R0076 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0076 >/dev/ttyPS0
+[20756ms] root@(none):~# R0076
+[20943ms] 2048+0 records in
+2048+0 records out
+D0076
+[20943ms] TX stty raw -echo; echo R0077 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0077 >/dev/ttyPS0
+[20990ms] root@(none):~# R0077
+[21178ms] 2048+0 records in
+2048+0 records out
+D0077
+[21178ms] TX stty raw -echo; echo R0078 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0078 >/dev/ttyPS0
+[21224ms] root@(none):~# R0078
+[21412ms] 2048+0 records in
+2048+0 records out
+D0078
+[21412ms] TX stty raw -echo; echo R0079 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0079 >/dev/ttyPS0
+[21459ms] root@(none):~# R0079
+[21679ms] 2048+0 records in
+2048+0 records out
+D0079
+root@(none):~# [21680ms] TX stty raw -echo; echo R0080 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0080 >/dev/ttyPS0
+[21726ms] R0080
+[21910ms] 2048+0 records in
+2048+0 records out
+D0080
+[21912ms] TX stty raw -echo; echo R0081 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0081 >/dev/ttyPS0
+[21958ms] root@(none):~# R0081
+[22141ms] 2048+0 records in
+2048+0 records out
+D0081
+[22142ms] TX stty raw -echo; echo R0082 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0082 >/dev/ttyPS0
+[22188ms] root@(none):~# R0082
+[22409ms] 2048+0 records in
+2048+0 records out
+D0082
+root@(none):~# [22410ms] TX stty raw -echo; echo R0083 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0083 >/dev/ttyPS0
+[22456ms] R0083
+[22672ms] 2048+0 records in
+2048+0 records out
+D0083
+root@(none):~# [22672ms] TX stty raw -echo; echo R0084 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0084 >/dev/ttyPS0
+[22718ms] R0084
+[22934ms] 2048+0 records in
+2048+0 records out
+D0084
+root@(none):~# [22935ms] TX stty raw -echo; echo R0085 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0085 >/dev/ttyPS0
+[22982ms] R0085
+[23200ms] 2048+0 records in
+2048+0 records out
+D0085
+root@(none):~# [23201ms] TX stty raw -echo; echo R0086 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0086 >/dev/ttyPS0
+[23248ms] R0086
+[23465ms] 2048+0 records in
+2048+0 records out
+D0086
+root@(none):~# [23466ms] TX stty raw -echo; echo R0087 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0087 >/dev/ttyPS0
+[23511ms] R0087
+[23696ms] 2048+0 records in
+2048+0 records out
+D0087
+[23696ms] TX stty raw -echo; echo R0088 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0088 >/dev/ttyPS0
+[23757ms] root@(none):~# R0088
+[23979ms] 2048+0 records in
+2048+0 records out
+D0088
+root@(none):~# [23979ms] TX stty raw -echo; echo R0089 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0089 >/dev/ttyPS0
+[24024ms] R0089
+[24208ms] 2048+0 records in
+2048+0 records out
+D0089
+[24209ms] TX stty raw -echo; echo R0090 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0090 >/dev/ttyPS0
+[24255ms] root@(none):~# R0090
+[24440ms] 2048+0 records in
+2048+0 records out
+D0090
+[24441ms] TX stty raw -echo; echo R0091 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0091 >/dev/ttyPS0
+[24488ms] root@(none):~# R0091
+[24675ms] 2048+0 records in
+2048+0 records out
+D0091
+[24676ms] TX stty raw -echo; echo R0092 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0092 >/dev/ttyPS0
+[24723ms] root@(none):~# R0092
+[24911ms] 2048+0 records in
+2048+0 records out
+D0092
+[24911ms] TX stty raw -echo; echo R0093 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0093 >/dev/ttyPS0
+[24958ms] root@(none):~# R0093
+[25147ms] 2048+0 records in
+2048+0 records out
+D0093
+[25147ms] TX stty raw -echo; echo R0094 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0094 >/dev/ttyPS0
+[25193ms] root@(none):~# R0094
+[25377ms] 2048+0 records in
+2048+0 records out
+D0094
+[25378ms] TX stty raw -echo; echo R0095 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0095 >/dev/ttyPS0
+[25424ms] root@(none):~# R0095
+[25643ms] 2048+0 records in
+2048+0 records out
+D0095
+root@(none):~# [25644ms] TX stty raw -echo; echo R0096 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0096 >/dev/ttyPS0
+[25690ms] R0096
+[25908ms] 2048+0 records in
+2048+0 records out
+D0096
+root@(none):~# [25908ms] TX stty raw -echo; echo R0097 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0097 >/dev/ttyPS0
+[25956ms] R0097
+[26172ms] 2048+0 records in
+2048+0 records out
+D0097
+root@(none):~# [26173ms] TX stty raw -echo; echo R0098 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0098 >/dev/ttyPS0
+[26220ms] R0098
+[26438ms] 2048+0 records in
+2048+0 records out
+D0098
+root@(none):~# [26439ms] TX stty raw -echo; echo R0099 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0099 >/dev/ttyPS0
+[26486ms] R0099
+[26671ms] 2048+0 records in
+2048+0 records out
+D0099
+[26672ms] TX stty raw -echo; echo R0100 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0100 >/dev/ttyPS0
+[26719ms] root@(none):~# R0100
+[26937ms] 2048+0 records in
+2048+0 records out
+D0100
+root@(none):~# [26938ms] TX stty raw -echo; echo R0101 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0101 >/dev/ttyPS0
+[26984ms] R0101
+[27202ms] 2048+0 records in
+2048+0 records out
+D0101
+root@(none):~# [27203ms] TX stty raw -echo; echo R0102 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0102 >/dev/ttyPS0
+[27250ms] R0102
+[27469ms] 2048+0 records in
+2048+0 records out
+D0102
+root@(none):~# [27470ms] TX stty raw -echo; echo R0103 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0103 >/dev/ttyPS0
+[27530ms] R0103
+[27745ms] 2048+0 records in
+2048+0 records out
+D0103
+root@(none):~# [27745ms] TX stty raw -echo; echo R0104 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0104 >/dev/ttyPS0
+[27791ms] R0104
+[28011ms] 2048+0 records in
+2048+0 records out
+D0104
+root@(none):~# [28011ms] TX stty raw -echo; echo R0105 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0105 >/dev/ttyPS0
+[28057ms] R0105
+[28274ms] 2048+0 records in
+2048+0 records out
+D0105
+root@(none):~# [28275ms] TX stty raw -echo; echo R0106 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0106 >/dev/ttyPS0
+[28322ms] R0106
+[28540ms] 2048+0 records in
+2048+0 records out
+D0106
+root@(none):~# [28541ms] TX stty raw -echo; echo R0107 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0107 >/dev/ttyPS0
+[28601ms] R0107
+[28788ms] 2048+0 records in
+2048+0 records out
+D0107
+[28788ms] TX stty raw -echo; echo R0108 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0108 >/dev/ttyPS0
+[28835ms] root@(none):~# R0108
+[29021ms] 2048+0 records in
+2048+0 records out
+D0108
+[29021ms] TX stty raw -echo; echo R0109 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0109 >/dev/ttyPS0
+[29067ms] root@(none):~# R0109
+[29255ms] 2048+0 records in
+2048+0 records out
+D0109
+[29256ms] TX stty raw -echo; echo R0110 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0110 >/dev/ttyPS0
+[29303ms] root@(none):~# R0110
+[29488ms] 2048+0 records in
+2048+0 records out
+D0110
+[29488ms] TX stty raw -echo; echo R0111 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0111 >/dev/ttyPS0
+[29533ms] root@(none):~# R0111
+[29752ms] 2048+0 records in
+2048+0 records out
+D0111
+root@(none):~# [29752ms] TX stty raw -echo; echo R0112 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0112 >/dev/ttyPS0
+[29799ms] R0112
+[30019ms] 2048+0 records in
+2048+0 records out
+D0112
+root@(none):~# [30019ms] TX stty raw -echo; echo R0113 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0113 >/dev/ttyPS0
+[30064ms] R0113
+[30284ms] 2048+0 records in
+2048+0 records out
+D0113
+root@(none):~# [30285ms] TX stty raw -echo; echo R0114 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0114 >/dev/ttyPS0
+[30332ms] R0114
+[30520ms] 2048+0 records in
+2048+0 records out
+D0114
+[30521ms] TX stty raw -echo; echo R0115 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0115 >/dev/ttyPS0
+[30568ms] root@(none):~# R0115
+[30754ms] 2048+0 records in
+2048+0 records out
+D0115
+[30754ms] TX stty raw -echo; echo R0116 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0116 >/dev/ttyPS0
+[30799ms] root@(none):~# R0116
+[31017ms] 2048+0 records in
+2048+0 records out
+D0116
+root@(none):~# [31018ms] TX stty raw -echo; echo R0117 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0117 >/dev/ttyPS0
+[31065ms] R0117
+[31284ms] 2048+0 records in
+2048+0 records out
+D0117
+root@(none):~# [31285ms] TX stty raw -echo; echo R0118 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0118 >/dev/ttyPS0
+[31332ms] R0118
+[31519ms] 2048+0 records in
+2048+0 records out
+D0118
+[31520ms] TX stty raw -echo; echo R0119 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0119 >/dev/ttyPS0
+[31567ms] root@(none):~# R0119
+[31751ms] 2048+0 records in
+2048+0 records out
+D0119
+[31752ms] TX stty raw -echo; echo R0120 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0120 >/dev/ttyPS0
+[31799ms] root@(none):~# R0120
+[32016ms] 2048+0 records in
+2048+0 records out
+D0120
+root@(none):~# [32017ms] TX stty raw -echo; echo R0121 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0121 >/dev/ttyPS0
+[32063ms] R0121
+[32282ms] 2048+0 records in
+2048+0 records out
+D0121
+root@(none):~# [32282ms] TX stty raw -echo; echo R0122 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0122 >/dev/ttyPS0
+[32330ms] R0122
+[32548ms] 2048+0 records in
+2048+0 records out
+D0122
+root@(none):~# [32549ms] TX stty raw -echo; echo R0123 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0123 >/dev/ttyPS0
+[32594ms] R0123
+[32779ms] 2048+0 records in
+2048+0 records out
+D0123
+[32780ms] TX stty raw -echo; echo R0124 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0124 >/dev/ttyPS0
+[32825ms] root@(none):~# R0124
+[33042ms] 2048+0 records in
+2048+0 records out
+D0124
+root@(none):~# [33043ms] TX stty raw -echo; echo R0125 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0125 >/dev/ttyPS0
+[33088ms] R0125
+[33272ms] 2048+0 records in
+2048+0 records out
+D0125
+[33273ms] TX stty raw -echo; echo R0126 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0126 >/dev/ttyPS0
+[33335ms] root@(none):~# R0126
+[33519ms] 2048+0 records in
+2048+0 records out
+D0126
+[33520ms] TX stty raw -echo; echo R0127 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0127 >/dev/ttyPS0
+[33567ms] root@(none):~# R0127
+[33751ms] 2048+0 records in
+2048+0 records out
+D0127
+[33752ms] TX stty raw -echo; echo R0128 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0128 >/dev/ttyPS0
+[33796ms] root@(none):~# R0128
+[33981ms] 2048+0 records in
+2048+0 records out
+D0128
+[33982ms] TX stty raw -echo; echo R0129 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0129 >/dev/ttyPS0
+[34026ms] root@(none):~# R0129
+[34244ms] 2048+0 records in
+2048+0 records out
+D0129
+root@(none):~# [34244ms] TX stty raw -echo; echo R0130 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0130 >/dev/ttyPS0
+[34290ms] R0130
+[34508ms] 2048+0 records in
+2048+0 records out
+D0130
+root@(none):~# [34508ms] TX stty raw -echo; echo R0131 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0131 >/dev/ttyPS0
+[34569ms] R0131
+[34755ms] 2048+0 records in
+2048+0 records out
+D0131
+[34756ms] TX stty raw -echo; echo R0132 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0132 >/dev/ttyPS0
+[34803ms] root@(none):~# R0132
+[34989ms] 2048+0 records in
+2048+0 records out
+D0132
+[34990ms] TX stty raw -echo; echo R0133 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0133 >/dev/ttyPS0
+[35035ms] root@(none):~# R0133
+[35223ms] 2048+0 records in
+2048+0 records out
+D0133
+[35224ms] TX stty raw -echo; echo R0134 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0134 >/dev/ttyPS0
+[35271ms] root@(none):~# R0134
+[35457ms] 2048+0 records in
+2048+0 records out
+D0134
+[35458ms] TX stty raw -echo; echo R0135 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0135 >/dev/ttyPS0
+[35503ms] root@(none):~# R0135
+[35722ms] 2048+0 records in
+2048+0 records out
+D0135
+root@(none):~# [35722ms] TX stty raw -echo; echo R0136 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0136 >/dev/ttyPS0
+[35768ms] R0136
+[35987ms] 2048+0 records in
+2048+0 records out
+D0136
+root@(none):~# [35988ms] TX stty raw -echo; echo R0137 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0137 >/dev/ttyPS0
+[36033ms] R0137
+[36251ms] 2048+0 records in
+2048+0 records out
+D0137
+root@(none):~# [36251ms] TX stty raw -echo; echo R0138 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0138 >/dev/ttyPS0
+[36298ms] R0138
+[36515ms] 2048+0 records in
+2048+0 records out
+D0138
+root@(none):~# [36516ms] TX stty raw -echo; echo R0139 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0139 >/dev/ttyPS0
+[36562ms] R0139
+[36780ms] 2048+0 records in
+2048+0 records out
+D0139
+root@(none):~# [36781ms] TX stty raw -echo; echo R0140 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0140 >/dev/ttyPS0
+[36827ms] R0140
+[37044ms] 2048+0 records in
+2048+0 records out
+D0140
+root@(none):~# [37045ms] TX stty raw -echo; echo R0141 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0141 >/dev/ttyPS0
+[37090ms] R0141
+[37308ms] 2048+0 records in
+2048+0 records out
+D0141
+root@(none):~# [37309ms] TX stty raw -echo; echo R0142 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0142 >/dev/ttyPS0
+[37356ms] R0142
+[37575ms] 2048+0 records in
+2048+0 records out
+D0142
+root@(none):~# [37576ms] TX stty raw -echo; echo R0143 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0143 >/dev/ttyPS0
+[37621ms] R0143
+[37838ms] 2048+0 records in
+2048+0 records out
+D0143
+root@(none):~# [37839ms] TX stty raw -echo; echo R0144 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0144 >/dev/ttyPS0
+[37885ms] R0144
+[38102ms] 2048+0 records in
+2048+0 records out
+D0144
+root@(none):~# [38103ms] TX stty raw -echo; echo R0145 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0145 >/dev/ttyPS0
+[38148ms] R0145
+[38368ms] 2048+0 records in
+2048+0 records out
+D0145
+root@(none):~# [38369ms] TX stty raw -echo; echo R0146 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0146 >/dev/ttyPS0
+[38416ms] R0146
+[38635ms] 2048+0 records in
+2048+0 records out
+D0146
+root@(none):~# [38636ms] TX stty raw -echo; echo R0147 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0147 >/dev/ttyPS0
+[38681ms] R0147
+[38865ms] 2048+0 records in
+2048+0 records out
+D0147
+[38865ms] TX stty raw -echo; echo R0148 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0148 >/dev/ttyPS0
+[38927ms] root@(none):~# R0148
+[39112ms] 2048+0 records in
+2048+0 records out
+D0148
+[39113ms] TX stty raw -echo; echo R0149 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0149 >/dev/ttyPS0
+[39158ms] root@(none):~# R0149
+[39376ms] 2048+0 records in
+2048+0 records out
+D0149
+root@(none):~# [39377ms] TX stty raw -echo; echo R0150 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0150 >/dev/ttyPS0
+[39424ms] R0150
+[39642ms] 2048+0 records in
+2048+0 records out
+D0150
+root@(none):~# [39642ms] TX stty raw -echo; echo R0151 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0151 >/dev/ttyPS0
+[39688ms] R0151
+[39907ms] 2048+0 records in
+2048+0 records out
+D0151
+root@(none):~# [39908ms] TX stty raw -echo; echo R0152 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0152 >/dev/ttyPS0
+[39955ms] R0152
+[40172ms] 2048+0 records in
+2048+0 records out
+D0152
+root@(none):~# [40173ms] TX stty raw -echo; echo R0153 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0153 >/dev/ttyPS0
+[40219ms] R0153
+[40437ms] 2048+0 records in
+2048+0 records out
+D0153
+root@(none):~# [40437ms] TX stty raw -echo; echo R0154 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0154 >/dev/ttyPS0
+[40484ms] R0154
+[40701ms] 2048+0 records in
+2048+0 records out
+D0154
+root@(none):~# [40702ms] TX stty raw -echo; echo R0155 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0155 >/dev/ttyPS0
+[40749ms] R0155
+[40934ms] 2048+0 records in
+2048+0 records out
+D0155
+[40935ms] TX stty raw -echo; echo R0156 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0156 >/dev/ttyPS0
+[40982ms] root@(none):~# R0156
+[41202ms] 2048+0 records in
+2048+0 records out
+D0156
+root@(none):~# [41203ms] TX stty raw -echo; echo R0157 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0157 >/dev/ttyPS0
+[41249ms] R0157
+[41465ms] 2048+0 records in
+2048+0 records out
+D0157
+root@(none):~# [41466ms] TX stty raw -echo; echo R0158 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0158 >/dev/ttyPS0
+[41511ms] R0158
+[41732ms] 2048+0 records in
+2048+0 records out
+D0158
+root@(none):~# [41732ms] TX stty raw -echo; echo R0159 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0159 >/dev/ttyPS0
+[41779ms] R0159
+[41963ms] 2048+0 records in
+2048+0 records out
+D0159
+[41963ms] TX stty raw -echo; echo R0160 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0160 >/dev/ttyPS0
+[42010ms] root@(none):~# R0160
+[42230ms] 2048+0 records in
+2048+0 records out
+D0160
+root@(none):~# [42231ms] TX stty raw -echo; echo R0161 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0161 >/dev/ttyPS0
+[42276ms] R0161
+[42495ms] 2048+0 records in
+2048+0 records out
+D0161
+root@(none):~# [42496ms] TX stty raw -echo; echo R0162 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0162 >/dev/ttyPS0
+[42543ms] R0162
+[42728ms] 2048+0 records in
+2048+0 records out
+D0162
+[42728ms] TX stty raw -echo; echo R0163 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0163 >/dev/ttyPS0
+[42774ms] root@(none):~# R0163
+[42992ms] 2048+0 records in
+2048+0 records out
+D0163
+root@(none):~# [42993ms] TX stty raw -echo; echo R0164 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0164 >/dev/ttyPS0
+[43039ms] R0164
+[43258ms] 2048+0 records in
+2048+0 records out
+D0164
+root@(none):~# [43259ms] TX stty raw -echo; echo R0165 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0165 >/dev/ttyPS0
+[43305ms] R0165
+[43524ms] 2048+0 records in
+2048+0 records out
+D0165
+root@(none):~# [43525ms] TX stty raw -echo; echo R0166 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0166 >/dev/ttyPS0
+[43572ms] R0166
+[43755ms] 2048+0 records in
+2048+0 records out
+D0166
+[43755ms] TX stty raw -echo; echo R0167 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0167 >/dev/ttyPS0
+[43801ms] root@(none):~# R0167
+[43987ms] 2048+0 records in
+2048+0 records out
+D0167
+[43988ms] TX stty raw -echo; echo R0168 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0168 >/dev/ttyPS0
+[44032ms] root@(none):~# R0168
+[44249ms] 2048+0 records in
+2048+0 records out
+D0168
+root@(none):~# [44250ms] TX stty raw -echo; echo R0169 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0169 >/dev/ttyPS0
+[44297ms] R0169
+[44517ms] 2048+0 records in
+2048+0 records out
+D0169
+root@(none):~# [44518ms] TX stty raw -echo; echo R0170 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0170 >/dev/ttyPS0
+[44565ms] R0170
+[44752ms] 2048+0 records in
+2048+0 records out
+D0170
+[44752ms] TX stty raw -echo; echo R0171 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0171 >/dev/ttyPS0
+[44799ms] root@(none):~# R0171
+[45015ms] 2048+0 records in
+2048+0 records out
+D0171
+root@(none):~# [45015ms] TX stty raw -echo; echo R0172 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0172 >/dev/ttyPS0
+[45061ms] R0172
+[45281ms] 2048+0 records in
+2048+0 records out
+D0172
+root@(none):~# [45281ms] TX stty raw -echo; echo R0173 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0173 >/dev/ttyPS0
+[45328ms] R0173
+[45546ms] 2048+0 records in
+2048+0 records out
+D0173
+root@(none):~# [45547ms] TX stty raw -echo; echo R0174 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0174 >/dev/ttyPS0
+[45592ms] R0174
+[45810ms] 2048+0 records in
+2048+0 records out
+D0174
+root@(none):~# [45811ms] TX stty raw -echo; echo R0175 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0175 >/dev/ttyPS0
+[45857ms] R0175
+[46087ms] 2048+0 records in
+2048+0 records out
+D0175
+root@(none):~# [46087ms] TX stty raw -echo; echo R0176 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0176 >/dev/ttyPS0
+[46148ms] R0176
+[46382ms] 2048+0 records in
+2048+0 records out
+D0176
+root@(none):~# [46382ms] TX stty raw -echo; echo R0177 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0177 >/dev/ttyPS0
+[46443ms] R0177
+[46631ms] 2048+0 records in
+2048+0 records out
+D0177
+[46632ms] TX stty raw -echo; echo R0178 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0178 >/dev/ttyPS0
+[46678ms] root@(none):~# R0178
+[46865ms] 2048+0 records in
+2048+0 records out
+D0178
+[46866ms] TX stty raw -echo; echo R0179 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0179 >/dev/ttyPS0
+[46911ms] root@(none):~# R0179
+[47098ms] 2048+0 records in
+2048+0 records out
+D0179
+[47099ms] TX stty raw -echo; echo R0180 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0180 >/dev/ttyPS0
+[47146ms] root@(none):~# R0180
+[47332ms] 2048+0 records in
+2048+0 records out
+D0180
+[47333ms] TX stty raw -echo; echo R0181 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0181 >/dev/ttyPS0
+[47378ms] root@(none):~# R0181
+[47594ms] 2048+0 records in
+2048+0 records out
+D0181
+root@(none):~# [47595ms] TX stty raw -echo; echo R0182 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0182 >/dev/ttyPS0
+[47641ms] R0182
+[47860ms] 2048+0 records in
+2048+0 records out
+D0182
+root@(none):~# [47861ms] TX stty raw -echo; echo R0183 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0183 >/dev/ttyPS0
+[47906ms] R0183
+[48090ms] 2048+0 records in
+2048+0 records out
+D0183
+[48091ms] TX stty raw -echo; echo R0184 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0184 >/dev/ttyPS0
+[48136ms] root@(none):~# R0184
+[48353ms] 2048+0 records in
+2048+0 records out
+D0184
+root@(none):~# [48353ms] TX stty raw -echo; echo R0185 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0185 >/dev/ttyPS0
+[48399ms] R0185
+[48632ms] 2048+0 records in
+2048+0 records out
+D0185
+root@(none):~# [48633ms] TX stty raw -echo; echo R0186 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0186 >/dev/ttyPS0
+[48693ms] R0186
+[48879ms] 2048+0 records in
+2048+0 records out
+D0186
+[48880ms] TX stty raw -echo; echo R0187 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0187 >/dev/ttyPS0
+[48925ms] root@(none):~# R0187
+[49114ms] 2048+0 records in
+2048+0 records out
+D0187
+[49114ms] TX stty raw -echo; echo R0188 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/fw2019.bin; echo D0188 >/dev/ttyPS0
+[49160ms] root@(none):~# R0188
+[49346ms] 2048+0 records in
+2048+0 records out
+D0188
+[49346ms] TX stty raw -echo; echo R0189 >/dev/ttyPS0; dd bs=1 count=1667 >> /tmp/fw2019.bin; echo D0189 >/dev/ttyPS0
+[49392ms] root@(none):~# R0189
+[49547ms] 1667+0 records in
+1667+0 records out
+D0189

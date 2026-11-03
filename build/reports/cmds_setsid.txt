@@ -1,0 +1,3 @@
+echo MARK_SETSID
+busybox --list | grep -E "setsid|nohup|login|getty"
+echo MARK_SETSID_DONE

@@ -1,0 +1,4 @@
+﻿RAWOK
+[1405ms] TX stty raw -echo; echo R0000 >/dev/ttyPS0; dd bs=1 count=20 >> /run/media/mmcblk0p1/wifi/hash20.bin; stty sane; echo D0000 >/dev/ttyPS0
+[1460ms] R0000
+[1521ms] D0000

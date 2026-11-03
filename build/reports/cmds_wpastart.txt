@@ -1,0 +1,16 @@
+mkdir -p /var/run/wpa_supplicant
+printf 'ctrl_interface=/var/run/wpa_supplicant
+ap_scan=1
+network={
+ssid="AllianceTeam2.4G"
+psk="12345678"
+key_mgmt=WPA-PSK
+}
+' > /tmp/wpa.conf
+cat /tmp/wpa.conf
+echo MARK_WPASTART
+/tmp/demo/lib/ld-linux.so.3 --library-path /tmp/demo/lib:/tmp/demo/usr/lib /tmp/demo/sbin/wpa_supplicant -B -f /tmp/wpa.log -i wlan0 -c /tmp/wpa.conf -D nl80211
+sleep 5
+cat /tmp/wpa.log
+ps | grep wpa
+echo MARK_WPASTART_DONE

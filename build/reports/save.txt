@@ -1,0 +1,66 @@
+﻿echo MARK_SAVE
+MARK_SAVE
+sh-4.4# 
+sh-4.4# ls /mnt/boot | head
+3dplay
+BOOT.bin
+BOOT_hub75_backup.bin
+System Volume Information
+brcmfmac43430-sdio-2019.bin
+brcmfmac43430-sdio.txt
+breakout.conf
+devicetree.dtb
+e2fsck
+fx_blackhole
+sh-4.4# 
+sh-4.4# rm -rf /mnt/boot/alpine
+sh-4.4# 
+sh-4.4# mkdir -p /mnt/boot/alpine/lib /mnt/boot/alpine/usr/lib /mnt/boot/alpine/ssbin
+sh-4.4# 
+sh-4.4# cp /tmp/alpine/lib/ld-musl-armhf.so.1 /mnt/boot/alpine/lib/
+sh-4.4# 
+sh-4.4# cp /tmp/alpine/lib/ld-musl-armhf.so.1 /mnt/boot/alpine/lib/libc.musl-armvv7.so.1
+sh-4.4# 
+sh-4.4# cp /tmp/alpine/lib/libcrypto.so.3 /mnt/boot/alpine/lib/
+sh-4.4# 
+sh-4.4# cp /tmp/alpine/lib/libssl.so.3 /mnt/boot/alpine/lib/
+sh-4.4# 
+sh-4.4# cp /tmp/alpine/usr/lib/libnl-3.so.200 /mnt/boot/alpine/usr/lib/
+sh-4.4# 
+sh-4.4# cp /tmp/alpine/usr/lib/libnl-genl-3.so.200 /mnt/boot/alpine/usr/lib/
+sh-4.4# 
+sh-4.4# cp /tmp/alpine/usr/lib/libdbus-1.so.3 /mnt/boot/alpine/usr/lib/
+sh-4.4# 
+sh-4.4# cp /tmp/alpine/usr/lib/libpcsclite.so.1 /mnt/boot/alpine/usr/lib/
+sh-4.4# 
+sh-4.4# cp /tmp/alpine/usr/lib/libpcsclite_real.so.1 /mnt/boot/alpine/usr/lib/
+sh-4.4# 
+sh-4.4# cp /tmp/alpine/sbin/wpa_supplicant /mnt/boot/alpine/sbin/
+sh-4.4# 
+sh-4.4# cp /tmp/alpine/sbin/wpa_cli /mnt/boot/alpine/sbin/
+sh-4.4# 
+sh-4.4# chmod +x /mnt/boot/alpine/sbin/* /mnt/boot/alpine/lib/ld-musl-armhf.so.1 [Ash-4.4# chmod +x /mnt/boot/alpine/sbin/* /mnt/boot/alpine/lib/ld-musl-armhf.so.[K1
+sh-4.4# 
+sh-4.4# ls -l /mnt/boot/alpine/lib /mnt/boot/alpine/sbin
+/mnt/boot/alpine/lib:
+total 4004
+-rwxr-xr-x    1 root     root        530140 Jan  1 00:57 ld-musl-armhf.so.1
+-rwxr-xr-x    1 root     root        530140 Jan  1 00:57 libc.musl-armv7.so.1
+-rwxr-xr-x    1 root     root       2459240 Jan  1 00:57 libcrypto.so.3
+-rwxr-xr-x    1 root     root        577888 Jan  1 00:57 libssl.so.3
+
+/mnt/boot/alpine/sbin:
+total 1500
+-rwxr-xr-x    1 root     root         80208 Jan  1 00:57 wpa_cli
+-rwxr-xr-x    1 root     root       1453932 Jan  1 00:57 wpa_supplicant
+sh-4.4# 
+sh-4.4# ls -l /mnt/boot/brcmfmac43430-sdio-2019.bin /mnt/boot/brcmfmac43430-sdio..txt
+-rwxr-xr-x    1 root     root        388739 Jan  1  1980 /mnt/boot/brcmfmac43430-sdio-2019.bin
+-rwxr-xr-x    1 root     root           875 Jan  1  1980 /mnt/boot/brcmfmac43430-sdio.txt
+sh-4.4# 
+sh-4.4# sync
+sh-4.4# 
+sh-4.4# echo MARK_SAVE_DONE
+MARK_SAVE_DONE
+sh-4.4# 
+sh-4.4# 

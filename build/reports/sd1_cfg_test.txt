@@ -1,0 +1,4 @@
+﻿echo ---CFGTEST--- >/dev/ttyPS0; for cfg in 0x1240 0x1280 0x1680; do for a in 0xF8000728 0xF800072C 0xF8000730 0xF8000734 0xF8000738 0xF800073C; do devmem $a 32 $cfg >/dev/ttyPS0 2>&1; done; echo 0 > /sys/class/gpio/gpio914/value 2>/dev/null; sleep 1; echo 1 > /sys/class/gpio/gpio914/value 2>/dev/null; sleep 1; devmem 0xE0101030 32 0x40 >/dev/ttyPS0 2>&1; sleep 2; echo "CFG=$cfg SDIO=[$(ls /sys/bus/sdio/devices 2>/dev/null)] CLK=$(devmem 0xE010102C 32)" >/dev/ttyPS0; done; echo CFGTEST_DONE >/dev/ttyPS0
+---CFGTEST---
+CFG=0x1240 SDIO=[] CLK=0x00000000
+CFG=0x1280 SDIO=[] CLK=0x00000000

@@ -1,0 +1,12 @@
+﻿echo ---REALGPIO2--- >/dev/ttyPS0; devmem 0xE000A200 32 >/dev/ttyPS0 2>&1; devmem 0xE000A204 32 >/dev/ttyPS0 2>&1; devmem 0xE000A208 32 >/dev/ttyPS0 2>&1; echo ---SDICLK--- >/dev/ttyPS0; devmem 0xF8000154 32 >/dev/ttyPS0 2>&1; devmem 0xF800012C 32 >/dev/ttyPS0 2>&1; echo ---SDHCI--- >/dev/ttyPS0; devmem 0xE010102C 32 >/dev/ttyPS0 2>&1; devmem 0xE0101024 32 >/dev/ttyPS0 2>&1; echo REAL2_DONE >/dev/ttyPS0
+---REALGPIO2---
+0x00000000
+0x00000100
+0x00000100
+---SDICLK---
+0x00000A03
+0x017C0C4C
+---SDHCI---
+0x00000000
+0x01F20000
+REAL2_DONE

@@ -1,0 +1,3 @@
+ls -l /mnt/boot/uramdisk.image.gz
+od -A x -t x1 -N 16 /mnt/boot/uramdisk.image.gz
+echo DONE_OD

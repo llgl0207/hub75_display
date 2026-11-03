@@ -1,0 +1,5 @@
+chmod +x /tmp/alpine/lib/ld-musl-armhf.so.1
+echo MARK_MUSL2
+LD_LIBRARY_PATH=/tmp/alpine/lib:/tmp/alpine/usr/lib /tmp/alpine/lib/ld-musl-armhf.so.1 /tmp/alpine/sbin/wpa_supplicant -v
+echo MUSL2_EXIT=$?
+echo MARK_MUSL2_DONE

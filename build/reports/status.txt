@@ -1,0 +1,50 @@
+﻿echo MARK_STATUS
+MARK_STATUS
+sh-4.4# 
+sh-4.4# dmesg | tail -15
+ALSA device list:
+  No soundcards found.
+Freeing unused kernel memory: 1024K
+FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+mmc1: queuing unknown CIS tuple 0x80 (2 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (7 bytes)
+mmc1: queuing unknown CIS tuple 0x81 (9 bytes)
+mmc1: new high speed SDIO card at address 0001
+cfg80211: loading out-of-tree module taints kernel.
+brcmfmac: no symbol version for cfg80211_sched_scan_results
+brcmfmac: brcmf_fw_map_chip_to_name: using brcm/brcmfmac43430-sdio.bin for chip 0x00a9a6(43430) rev 0x000001
+brcmfmac: brcmf_c_preinit_dcmds: Firmware version = wl0: Oct 23 2017 03:55:53 version 7.45.98.38 (r674442 CY) FWID 01-e58d219f
+IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+sh-4.4# 
+sh-4.4# ifconfig wlan0
+wlan0     Link encap:Ethernet  HWaddr C0:F5:35:36:72:3E  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+sh-4.4# 
+sh-4.4# cat /proc/net/wireless
+Inter-| sta-|   Quality        |   Discarded packets               | Missed | WE
+ face | tus | link level noise |  nwid  crypt   frag  retry   misc | beacon | 22
+sh-4.4# 
+sh-4.4# printf '#!/bin/sh
+> 
+> exec /tmp/demo/lib/ld-linux.so.3 --library-path /tmp/demo/lib:/tmp/demo/usr/libb /tmp/demo/sbin/wpa_cli "$@"
+> 
+> ' > /tmp/wc.sh
+sh-4.4# 
+sh-4.4# chmod +x /tmp/wc.sh
+sh-4.4# 
+sh-4.4# /tmp/wc.sh -i wlan0 status
+wpa_state=ASSOCIATING
+sh-4.4# 
+sh-4.4# cat /tmp/wpa.log
+sh-4.4# 
+sh-4.4# echo MARK_STATUS_DONE
+MARK_STATUS_DONE
+sh-4.4# 
+sh-4.4# 

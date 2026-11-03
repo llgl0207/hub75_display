@@ -1,0 +1,33 @@
+mkdir -p /lib/firmware/brcm
+cp /tmp/fw.bin /lib/firmware/brcm/brcmfmac43430-sdio.bin
+cp /tmp/nvram.txt /lib/firmware/brcm/brcmfmac43430-sdio.txt
+ls -l /lib/firmware/brcm
+mkdir -p /mnt/boot
+mount -t vfat /dev/mmcblk0p1 /mnt/boot
+echo MARK_SETUP
+devmem 0xF8000008 32 0x0000DF0D
+devmem 0xF8000728 32 0x00001680
+devmem 0xF800072C 32 0x00001680
+devmem 0xF8000730 32 0x00001680
+devmem 0xF8000734 32 0x00001680
+devmem 0xF8000738 32 0x00001680
+devmem 0xF800073C 32 0x00001680
+devmem 0xE000A204 32 0x00000100
+devmem 0xE000A208 32 0x00000100
+devmem 0xE000A000 32 0xFEFF0100
+devmem 0xE000A040 32
+sleep 1
+echo MARK_CD
+devmem 0xE0101028 32 0x000000C0
+sleep 3
+ls /sys/bus/sdio/devices
+dmesg | grep -i mmc1 | tail -8
+echo MARK_INSMOD2
+insmod /mnt/boot/wifi/cfg80211.ko
+insmod /mnt/boot/wifi/brcmutil.ko
+insmod /mnt/boot/wifi/brcmfmac.ko
+sleep 6
+echo MARK_DMESG2
+dmesg | tail -30
+ls /sys/class/net
+echo MARK_ALL_DONE

@@ -1,0 +1,10 @@
+﻿md5sum /tmp/fw.bin
+a89ad21eae027367eba3d1dcff52c0bd  /tmp/fw.bin
+root@(none):~# 
+root@(none):~# ls -l /tmp/fw.bin
+-rw-r--r--    1 root     root        399344 Jan  1 00:01 /tmp/fw.bin
+root@(none):~# 
+root@(none):~# echo FW_MD5_DONE
+FW_MD5_DONE
+root@(none):~# 
+root@(none):~# 

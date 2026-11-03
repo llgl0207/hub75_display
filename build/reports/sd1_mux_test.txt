@@ -1,0 +1,36 @@
+﻿echo ---MUX--- >/dev/ttyPS0; for a in 0xF8000728 0xF800072C 0xF8000730 0xF8000734 0xF8000738 0xF800073C; do devmem $a 32 0x1240 >/dev/ttyPS0 2>&1; done; echo ---REBIND--- >/dev/ttyPS0; echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/unbind 2>&1; sleep 1; echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/bind 2>&1; sleep 2; echo ---SDIO--- >/dev/ttyPS0; ls /sys/bus/sdio/devices >/dev/ttyPS0 2>&1; echo ---DM--- >/dev/ttyPS0; dmesg | tail -20 >/dev/ttyPS0 2>&1; echo MUX_DONE >/dev/ttyPS0
+---MUX---
+---REBIND---
+mmc1: SDHCI controller on e0101000.mmc [e0101000.mmc] using ADMA
+sdhci-arasan e0101000.mmc: Unbalanced pm_runtime_enable!
+uio_pdrv_genirq: disagrees about version of symbol dev_warn
+uio_pdrv_genirq: Unknown symbol dev_warn (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_err
+uio_pdrv_genirq: Unknown symbol dev_err (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_warn
+uio_pdrv_genirq: Unknown symbol dev_warn (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_err
+uio_pdrv_genirq: Unknown symbol dev_err (err -22)
+---SDIO---
+---DM---
+uio_pdrv_genirq: Unknown symbol dev_warn (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_err
+uio_pdrv_genirq: Unknown symbol dev_err (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_warn
+uio_pdrv_genirq: Unknown symbol dev_warn (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_err
+uio_pdrv_genirq: Unknown symbol dev_err (err -22)
+FAT-fs (mmcblk0p2): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+mmc1: SDHCI controller on e0101000.mmc [e0101000.mmc] using ADMA
+sdhci-arasan e0101000.mmc: Unbalanced pm_runtime_enable!
+uio_pdrv_genirq: disagrees about version of symbol dev_warn
+uio_pdrv_genirq: Unknown symbol dev_warn (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_err
+uio_pdrv_genirq: Unknown symbol dev_err (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_warn
+uio_pdrv_genirq: Unknown symbol dev_warn (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_err
+uio_pdrv_genirq: Unknown symbol dev_err (err -22)
+MUX_DONE

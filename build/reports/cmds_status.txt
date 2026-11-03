@@ -1,0 +1,11 @@
+echo MARK_STATUS
+dmesg | tail -15
+ifconfig wlan0
+cat /proc/net/wireless
+printf '#!/bin/sh
+exec /tmp/demo/lib/ld-linux.so.3 --library-path /tmp/demo/lib:/tmp/demo/usr/lib /tmp/demo/sbin/wpa_cli "$@"
+' > /tmp/wc.sh
+chmod +x /tmp/wc.sh
+/tmp/wc.sh -i wlan0 status
+cat /tmp/wpa.log
+echo MARK_STATUS_DONE

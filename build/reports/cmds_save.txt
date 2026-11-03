@@ -1,0 +1,20 @@
+echo MARK_SAVE
+ls /mnt/boot | head
+rm -rf /mnt/boot/alpine
+mkdir -p /mnt/boot/alpine/lib /mnt/boot/alpine/usr/lib /mnt/boot/alpine/sbin
+cp /tmp/alpine/lib/ld-musl-armhf.so.1 /mnt/boot/alpine/lib/
+cp /tmp/alpine/lib/ld-musl-armhf.so.1 /mnt/boot/alpine/lib/libc.musl-armv7.so.1
+cp /tmp/alpine/lib/libcrypto.so.3 /mnt/boot/alpine/lib/
+cp /tmp/alpine/lib/libssl.so.3 /mnt/boot/alpine/lib/
+cp /tmp/alpine/usr/lib/libnl-3.so.200 /mnt/boot/alpine/usr/lib/
+cp /tmp/alpine/usr/lib/libnl-genl-3.so.200 /mnt/boot/alpine/usr/lib/
+cp /tmp/alpine/usr/lib/libdbus-1.so.3 /mnt/boot/alpine/usr/lib/
+cp /tmp/alpine/usr/lib/libpcsclite.so.1 /mnt/boot/alpine/usr/lib/
+cp /tmp/alpine/usr/lib/libpcsclite_real.so.1 /mnt/boot/alpine/usr/lib/
+cp /tmp/alpine/sbin/wpa_supplicant /mnt/boot/alpine/sbin/
+cp /tmp/alpine/sbin/wpa_cli /mnt/boot/alpine/sbin/
+chmod +x /mnt/boot/alpine/sbin/* /mnt/boot/alpine/lib/ld-musl-armhf.so.1
+ls -l /mnt/boot/alpine/lib /mnt/boot/alpine/sbin
+ls -l /mnt/boot/brcmfmac43430-sdio-2019.bin /mnt/boot/brcmfmac43430-sdio.txt
+sync
+echo MARK_SAVE_DONE

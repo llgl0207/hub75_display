@@ -1,0 +1,11 @@
+﻿
+Password: 
+
+Login incorrect
+(none) login: root
+Password: 
+Login timed out after 60 seconds.
+Kernel panic - not syncing: Attempted to kill init! exitcode=0x00000000
+
+---[ end Kernel panic - not syncing: Attempted to kill init! exitcode=0x00000000
+

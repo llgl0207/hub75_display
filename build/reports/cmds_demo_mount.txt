@@ -1,0 +1,9 @@
+mkdir -p /tmp/demo
+gunzip -c /mnt/boot/uramdisk.image.gz > /tmp/demo.ext2
+ls -l /tmp/demo.ext2
+mount -o loop -t ext2 /tmp/demo.ext2 /tmp/demo
+echo MARK_DEMO
+ls /tmp/demo
+ls -l /tmp/demo/sbin/wpa_supplicant /tmp/demo/sbin/wpa_cli
+ls /tmp/demo/etc/firmware
+echo MARK_DEMO_DONE

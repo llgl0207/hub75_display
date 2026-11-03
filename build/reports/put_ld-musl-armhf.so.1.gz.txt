@@ -1,0 +1,946 @@
+﻿RAWOK
+sh-4.4# [1406ms] TX stty raw -echo; echo R0000 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0000 >/dev/ttyPS0
+[1473ms] R0000
+[1659ms] 2048+0 records in
+2048+0 records out
+D0000
+[1667ms] TX stty raw -echo; echo R0001 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0001 >/dev/ttyPS0
+[1721ms] sh-4.4# R0001
+[1908ms] 2048+0 records in
+2048+0 records out
+D0001
+[1908ms] TX stty raw -echo; echo R0002 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0002 >/dev/ttyPS0
+[1954ms] sh-4.4# R0002
+[2172ms] 2048+0 records in
+2048+0 records out
+D0002
+sh-4.4# [2172ms] TX stty raw -echo; echo R0003 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0003 >/dev/ttyPS0
+[2219ms] R0003
+[2440ms] 2048+0 records in
+2048+0 records out
+D0003
+sh-4.4# [2441ms] TX stty raw -echo; echo R0004 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0004 >/dev/ttyPS0
+[2487ms] R0004
+[2674ms] 2048+0 records in
+2048+0 records out
+D0004
+[2675ms] TX stty raw -echo; echo R0005 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0005 >/dev/ttyPS0
+[2722ms] sh-4.4# R0005
+[2910ms] 2048+0 records in
+2048+0 records out
+D0005
+[2911ms] TX stty raw -echo; echo R0006 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0006 >/dev/ttyPS0
+[2958ms] sh-4.4# R0006
+[3145ms] 2048+0 records in
+2048+0 records out
+D0006
+[3146ms] TX stty raw -echo; echo R0007 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0007 >/dev/ttyPS0
+[3191ms] sh-4.4# R0007
+[3379ms] 2048+0 records in
+2048+0 records out
+D0007
+[3380ms] TX stty raw -echo; echo R0008 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0008 >/dev/ttyPS0
+[3441ms] sh-4.4# R0008
+[3629ms] 2048+0 records in
+2048+0 records out
+D0008
+[3629ms] TX stty raw -echo; echo R0009 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0009 >/dev/ttyPS0
+[3676ms] sh-4.4# R0009
+[3863ms] 2048+0 records in
+2048+0 records out
+D0009
+[3864ms] TX stty raw -echo; echo R0010 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0010 >/dev/ttyPS0
+[3926ms] sh-4.4# R0010
+[4111ms] 2048+0 records in
+2048+0 records out
+D0010
+[4112ms] TX stty raw -echo; echo R0011 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0011 >/dev/ttyPS0
+[4157ms] sh-4.4# R0011
+[4380ms] 2048+0 records in
+2048+0 records out
+D0011
+sh-4.4# [4381ms] TX stty raw -echo; echo R0012 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0012 >/dev/ttyPS0
+[4441ms] R0012
+[4627ms] 2048+0 records in
+2048+0 records out
+D0012
+[4627ms] TX stty raw -echo; echo R0013 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0013 >/dev/ttyPS0
+[4673ms] sh-4.4# R0013
+[4892ms] 2048+0 records in
+2048+0 records out
+D0013
+sh-4.4# [4893ms] TX stty raw -echo; echo R0014 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0014 >/dev/ttyPS0
+[4937ms] R0014
+[5156ms] 2048+0 records in
+2048+0 records out
+D0014
+sh-4.4# [5156ms] TX stty raw -echo; echo R0015 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0015 >/dev/ttyPS0
+[5202ms] R0015
+[5419ms] 2048+0 records in
+2048+0 records out
+D0015
+sh-4.4# [5420ms] TX stty raw -echo; echo R0016 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0016 >/dev/ttyPS0
+[5466ms] R0016
+[5683ms] 2048+0 records in
+2048+0 records out
+D0016
+sh-4.4# [5684ms] TX stty raw -echo; echo R0017 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0017 >/dev/ttyPS0
+[5731ms] R0017
+[5949ms] 2048+0 records in
+2048+0 records out
+D0017
+sh-4.4# [5950ms] TX stty raw -echo; echo R0018 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0018 >/dev/ttyPS0
+[5996ms] R0018
+[6181ms] 2048+0 records in
+2048+0 records out
+D0018
+[6182ms] TX stty raw -echo; echo R0019 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0019 >/dev/ttyPS0
+[6226ms] sh-4.4# R0019
+[6458ms] 2048+0 records in
+2048+0 records out
+D0019
+sh-4.4# [6459ms] TX stty raw -echo; echo R0020 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0020 >/dev/ttyPS0
+[6520ms] R0020
+[6705ms] 2048+0 records in
+2048+0 records out
+D0020
+[6706ms] TX stty raw -echo; echo R0021 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0021 >/dev/ttyPS0
+[6753ms] sh-4.4# R0021
+[6940ms] 2048+0 records in
+2048+0 records out
+D0021
+[6941ms] TX stty raw -echo; echo R0022 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0022 >/dev/ttyPS0
+[6987ms] sh-4.4# R0022
+[7173ms] 2048+0 records in
+2048+0 records out
+D0022
+[7174ms] TX stty raw -echo; echo R0023 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0023 >/dev/ttyPS0
+[7221ms] sh-4.4# R0023
+[7407ms] 2048+0 records in
+2048+0 records out
+D0023
+[7407ms] TX stty raw -echo; echo R0024 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0024 >/dev/ttyPS0
+[7452ms] sh-4.4# R0024
+[7673ms] 2048+0 records in
+2048+0 records out
+D0024
+sh-4.4# [7673ms] TX stty raw -echo; echo R0025 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0025 >/dev/ttyPS0
+[7720ms] R0025
+[7937ms] 2048+0 records in
+2048+0 records out
+D0025
+sh-4.4# [7938ms] TX stty raw -echo; echo R0026 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0026 >/dev/ttyPS0
+[7984ms] R0026
+[8201ms] 2048+0 records in
+2048+0 records out
+D0026
+sh-4.4# [8202ms] TX stty raw -echo; echo R0027 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0027 >/dev/ttyPS0
+[8250ms] R0027
+[8466ms] 2048+0 records in
+2048+0 records out
+D0027
+sh-4.4# [8467ms] TX stty raw -echo; echo R0028 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0028 >/dev/ttyPS0
+[8514ms] R0028
+[8732ms] 2048+0 records in
+2048+0 records out
+D0028
+sh-4.4# [8732ms] TX stty raw -echo; echo R0029 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0029 >/dev/ttyPS0
+[8779ms] R0029
+[8998ms] 2048+0 records in
+2048+0 records out
+D0029
+sh-4.4# [8999ms] TX stty raw -echo; echo R0030 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0030 >/dev/ttyPS0
+[9045ms] R0030
+[9230ms] 2048+0 records in
+2048+0 records out
+D0030
+[9230ms] TX stty raw -echo; echo R0031 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0031 >/dev/ttyPS0
+[9275ms] sh-4.4# R0031
+[9458ms] 2048+0 records in
+2048+0 records out
+D0031
+[9458ms] TX stty raw -echo; echo R0032 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0032 >/dev/ttyPS0
+[9521ms] sh-4.4# R0032
+[9741ms] 2048+0 records in
+2048+0 records out
+D0032
+sh-4.4# [9742ms] TX stty raw -echo; echo R0033 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0033 >/dev/ttyPS0
+[9788ms] R0033
+[10007ms] 2048+0 records in
+2048+0 records out
+D0033
+sh-4.4# [10008ms] TX stty raw -echo; echo R0034 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0034 >/dev/ttyPS0
+[10054ms] R0034
+[10285ms] 2048+0 records in
+2048+0 records out
+D0034
+sh-4.4# [10286ms] TX stty raw -echo; echo R0035 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0035 >/dev/ttyPS0
+[10332ms] R0035
+[10520ms] 2048+0 records in
+2048+0 records out
+D0035
+[10520ms] TX stty raw -echo; echo R0036 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0036 >/dev/ttyPS0
+[10568ms] sh-4.4# R0036
+[10753ms] 2048+0 records in
+2048+0 records out
+D0036
+[10754ms] TX stty raw -echo; echo R0037 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0037 >/dev/ttyPS0
+[10799ms] sh-4.4# R0037
+[10983ms] 2048+0 records in
+2048+0 records out
+D0037
+[10984ms] TX stty raw -echo; echo R0038 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0038 >/dev/ttyPS0
+[11030ms] sh-4.4# R0038
+[11258ms] 2048+0 records in
+2048+0 records out
+D0038
+sh-4.4# [11258ms] TX stty raw -echo; echo R0039 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0039 >/dev/ttyPS0
+[11305ms] R0039
+[11522ms] 2048+0 records in
+2048+0 records out
+D0039
+sh-4.4# [11523ms] TX stty raw -echo; echo R0040 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0040 >/dev/ttyPS0
+[11570ms] R0040
+[11789ms] 2048+0 records in
+2048+0 records out
+D0040
+sh-4.4# [11790ms] TX stty raw -echo; echo R0041 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0041 >/dev/ttyPS0
+[11836ms] R0041
+[12054ms] 2048+0 records in
+2048+0 records out
+D0041
+sh-4.4# [12054ms] TX stty raw -echo; echo R0042 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0042 >/dev/ttyPS0
+[12099ms] R0042
+[12319ms] 2048+0 records in
+2048+0 records out
+D0042
+sh-4.4# [12319ms] TX stty raw -echo; echo R0043 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0043 >/dev/ttyPS0
+[12365ms] R0043
+[12550ms] 2048+0 records in
+2048+0 records out
+D0043
+[12551ms] TX stty raw -echo; echo R0044 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0044 >/dev/ttyPS0
+[12597ms] sh-4.4# R0044
+[12784ms] 2048+0 records in
+2048+0 records out
+D0044
+[12784ms] TX stty raw -echo; echo R0045 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0045 >/dev/ttyPS0
+[12830ms] sh-4.4# R0045
+[13017ms] 2048+0 records in
+2048+0 records out
+D0045
+[13018ms] TX stty raw -echo; echo R0046 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0046 >/dev/ttyPS0
+[13064ms] sh-4.4# R0046
+[13247ms] 2048+0 records in
+2048+0 records out
+D0046
+[13248ms] TX stty raw -echo; echo R0047 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0047 >/dev/ttyPS0
+[13293ms] sh-4.4# R0047
+[13511ms] 2048+0 records in
+2048+0 records out
+D0047
+sh-4.4# [13512ms] TX stty raw -echo; echo R0048 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0048 >/dev/ttyPS0
+[13557ms] R0048
+[13775ms] 2048+0 records in
+2048+0 records out
+D0048
+sh-4.4# [13775ms] TX stty raw -echo; echo R0049 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0049 >/dev/ttyPS0
+[13822ms] R0049
+[14006ms] 2048+0 records in
+2048+0 records out
+D0049
+[14007ms] TX stty raw -echo; echo R0050 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0050 >/dev/ttyPS0
+[14053ms] sh-4.4# R0050
+[14273ms] 2048+0 records in
+2048+0 records out
+D0050
+sh-4.4# [14274ms] TX stty raw -echo; echo R0051 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0051 >/dev/ttyPS0
+[14320ms] R0051
+[14503ms] 2048+0 records in
+2048+0 records out
+D0051
+[14504ms] TX stty raw -echo; echo R0052 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0052 >/dev/ttyPS0
+[14551ms] sh-4.4# R0052
+[14774ms] 2048+0 records in
+2048+0 records out
+D0052
+sh-4.4# [14774ms] TX stty raw -echo; echo R0053 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0053 >/dev/ttyPS0
+[14820ms] R0053
+[15051ms] 2048+0 records in
+2048+0 records out
+D0053
+sh-4.4# [15052ms] TX stty raw -echo; echo R0054 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0054 >/dev/ttyPS0
+[15113ms] R0054
+[15299ms] 2048+0 records in
+2048+0 records out
+D0054
+[15300ms] TX stty raw -echo; echo R0055 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0055 >/dev/ttyPS0
+[15347ms] sh-4.4# R0055
+[15535ms] 2048+0 records in
+2048+0 records out
+D0055
+[15535ms] TX stty raw -echo; echo R0056 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0056 >/dev/ttyPS0
+[15581ms] sh-4.4# R0056
+[15767ms] 2048+0 records in
+2048+0 records out
+D0056
+[15767ms] TX stty raw -echo; echo R0057 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0057 >/dev/ttyPS0
+[15813ms] sh-4.4# R0057
+[16000ms] 2048+0 records in
+2048+0 records out
+D0057
+[16001ms] TX stty raw -echo; echo R0058 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0058 >/dev/ttyPS0
+[16047ms] sh-4.4# R0058
+[16265ms] 2048+0 records in
+2048+0 records out
+D0058
+sh-4.4# [16266ms] TX stty raw -echo; echo R0059 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0059 >/dev/ttyPS0
+[16311ms] R0059
+[16529ms] 2048+0 records in
+2048+0 records out
+D0059
+sh-4.4# [16530ms] TX stty raw -echo; echo R0060 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0060 >/dev/ttyPS0
+[16575ms] R0060
+[16793ms] 2048+0 records in
+2048+0 records out
+D0060
+sh-4.4# [16794ms] TX stty raw -echo; echo R0061 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0061 >/dev/ttyPS0
+[16841ms] R0061
+[17057ms] 2048+0 records in
+2048+0 records out
+D0061
+sh-4.4# [17058ms] TX stty raw -echo; echo R0062 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0062 >/dev/ttyPS0
+[17104ms] R0062
+[17321ms] 2048+0 records in
+2048+0 records out
+D0062
+sh-4.4# [17322ms] TX stty raw -echo; echo R0063 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0063 >/dev/ttyPS0
+[17368ms] R0063
+[17589ms] 2048+0 records in
+2048+0 records out
+D0063
+sh-4.4# [17589ms] TX stty raw -echo; echo R0064 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0064 >/dev/ttyPS0
+[17635ms] R0064
+[17851ms] 2048+0 records in
+2048+0 records out
+D0064
+sh-4.4# [17852ms] TX stty raw -echo; echo R0065 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0065 >/dev/ttyPS0
+[17897ms] R0065
+[18081ms] 2048+0 records in
+2048+0 records out
+D0065
+[18082ms] TX stty raw -echo; echo R0066 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0066 >/dev/ttyPS0
+[18128ms] sh-4.4# R0066
+[18314ms] 2048+0 records in
+2048+0 records out
+D0066
+[18315ms] TX stty raw -echo; echo R0067 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0067 >/dev/ttyPS0
+[18362ms] sh-4.4# R0067
+[18547ms] 2048+0 records in
+2048+0 records out
+D0067
+[18547ms] TX stty raw -echo; echo R0068 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0068 >/dev/ttyPS0
+[18594ms] sh-4.4# R0068
+[18813ms] 2048+0 records in
+2048+0 records out
+D0068
+sh-4.4# [18813ms] TX stty raw -echo; echo R0069 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0069 >/dev/ttyPS0
+[18860ms] R0069
+[19078ms] 2048+0 records in
+2048+0 records out
+D0069
+sh-4.4# [19078ms] TX stty raw -echo; echo R0070 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0070 >/dev/ttyPS0
+[19124ms] R0070
+[19308ms] 2048+0 records in
+2048+0 records out
+D0070
+[19309ms] TX stty raw -echo; echo R0071 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0071 >/dev/ttyPS0
+[19356ms] sh-4.4# R0071
+[19572ms] 2048+0 records in
+2048+0 records out
+D0071
+sh-4.4# [19572ms] TX stty raw -echo; echo R0072 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0072 >/dev/ttyPS0
+[19619ms] R0072
+[19837ms] 2048+0 records in
+2048+0 records out
+D0072
+sh-4.4# [19838ms] TX stty raw -echo; echo R0073 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0073 >/dev/ttyPS0
+[19885ms] R0073
+[20103ms] 2048+0 records in
+2048+0 records out
+D0073
+sh-4.4# [20103ms] TX stty raw -echo; echo R0074 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0074 >/dev/ttyPS0
+[20149ms] R0074
+[20369ms] 2048+0 records in
+2048+0 records out
+D0074
+sh-4.4# [20370ms] TX stty raw -echo; echo R0075 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0075 >/dev/ttyPS0
+[20415ms] R0075
+[20635ms] 2048+0 records in
+2048+0 records out
+D0075
+sh-4.4# [20636ms] TX stty raw -echo; echo R0076 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0076 >/dev/ttyPS0
+[20681ms] R0076
+[20896ms] 2048+0 records in
+2048+0 records out
+D0076
+sh-4.4# [20897ms] TX stty raw -echo; echo R0077 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0077 >/dev/ttyPS0
+[20958ms] R0077
+[21146ms] 2048+0 records in
+2048+0 records out
+D0077
+[21147ms] TX stty raw -echo; echo R0078 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0078 >/dev/ttyPS0
+[21208ms] sh-4.4# R0078
+[21442ms] 2048+0 records in
+2048+0 records out
+D0078
+sh-4.4# [21442ms] TX stty raw -echo; echo R0079 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0079 >/dev/ttyPS0
+[21489ms] R0079
+[21677ms] 2048+0 records in
+2048+0 records out
+D0079
+[21678ms] TX stty raw -echo; echo R0080 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0080 >/dev/ttyPS0
+[21738ms] sh-4.4# R0080
+[21925ms] 2048+0 records in
+2048+0 records out
+D0080
+[21926ms] TX stty raw -echo; echo R0081 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0081 >/dev/ttyPS0
+[21971ms] sh-4.4# R0081
+[22159ms] 2048+0 records in
+2048+0 records out
+D0081
+[22159ms] TX stty raw -echo; echo R0082 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0082 >/dev/ttyPS0
+[22205ms] sh-4.4# R0082
+[22390ms] 2048+0 records in
+2048+0 records out
+D0082
+[22390ms] TX stty raw -echo; echo R0083 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0083 >/dev/ttyPS0
+[22435ms] sh-4.4# R0083
+[22652ms] 2048+0 records in
+2048+0 records out
+D0083
+sh-4.4# [22653ms] TX stty raw -echo; echo R0084 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0084 >/dev/ttyPS0
+[22698ms] R0084
+[22882ms] 2048+0 records in
+2048+0 records out
+D0084
+[22882ms] TX stty raw -echo; echo R0085 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0085 >/dev/ttyPS0
+[22943ms] sh-4.4# R0085
+[23126ms] 2048+0 records in
+2048+0 records out
+D0085
+[23127ms] TX stty raw -echo; echo R0086 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0086 >/dev/ttyPS0
+[23173ms] sh-4.4# R0086
+[23360ms] 2048+0 records in
+2048+0 records out
+D0086
+[23361ms] TX stty raw -echo; echo R0087 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0087 >/dev/ttyPS0
+[23408ms] sh-4.4# R0087
+[23637ms] 2048+0 records in
+2048+0 records out
+D0087
+sh-4.4# [23638ms] TX stty raw -echo; echo R0088 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0088 >/dev/ttyPS0
+[23682ms] R0088
+[23868ms] 2048+0 records in
+2048+0 records out
+D0088
+[23868ms] TX stty raw -echo; echo R0089 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0089 >/dev/ttyPS0
+[23915ms] sh-4.4# R0089
+[24135ms] 2048+0 records in
+2048+0 records out
+D0089
+sh-4.4# [24136ms] TX stty raw -echo; echo R0090 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0090 >/dev/ttyPS0
+[24182ms] R0090
+[24401ms] 2048+0 records in
+2048+0 records out
+D0090
+sh-4.4# [24402ms] TX stty raw -echo; echo R0091 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0091 >/dev/ttyPS0
+[24447ms] R0091
+[24631ms] 2048+0 records in
+2048+0 records out
+D0091
+[24632ms] TX stty raw -echo; echo R0092 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0092 >/dev/ttyPS0
+[24692ms] sh-4.4# R0092
+[24927ms] 2048+0 records in
+2048+0 records out
+D0092
+sh-4.4# [24927ms] TX stty raw -echo; echo R0093 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0093 >/dev/ttyPS0
+[24988ms] R0093
+[25175ms] 2048+0 records in
+2048+0 records out
+D0093
+[25176ms] TX stty raw -echo; echo R0094 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0094 >/dev/ttyPS0
+[25221ms] sh-4.4# R0094
+[25410ms] 2048+0 records in
+2048+0 records out
+D0094
+[25410ms] TX stty raw -echo; echo R0095 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0095 >/dev/ttyPS0
+[25457ms] sh-4.4# R0095
+[25642ms] 2048+0 records in
+2048+0 records out
+D0095
+[25643ms] TX stty raw -echo; echo R0096 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0096 >/dev/ttyPS0
+[25689ms] sh-4.4# R0096
+[25873ms] 2048+0 records in
+2048+0 records out
+D0096
+[25874ms] TX stty raw -echo; echo R0097 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0097 >/dev/ttyPS0
+[25920ms] sh-4.4# R0097
+[26104ms] 2048+0 records in
+2048+0 records out
+D0097
+[26104ms] TX stty raw -echo; echo R0098 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0098 >/dev/ttyPS0
+[26150ms] sh-4.4# R0098
+[26368ms] 2048+0 records in
+2048+0 records out
+D0098
+sh-4.4# [26369ms] TX stty raw -echo; echo R0099 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0099 >/dev/ttyPS0
+[26415ms] R0099
+[26635ms] 2048+0 records in
+2048+0 records out
+D0099
+sh-4.4# [26635ms] TX stty raw -echo; echo R0100 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0100 >/dev/ttyPS0
+[26682ms] R0100
+[26902ms] 2048+0 records in
+2048+0 records out
+D0100
+sh-4.4# [26903ms] TX stty raw -echo; echo R0101 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0101 >/dev/ttyPS0
+[26946ms] R0101
+[27163ms] 2048+0 records in
+2048+0 records out
+D0101
+sh-4.4# [27164ms] TX stty raw -echo; echo R0102 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0102 >/dev/ttyPS0
+[27225ms] R0102
+[27412ms] 2048+0 records in
+2048+0 records out
+D0102
+[27412ms] TX stty raw -echo; echo R0103 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0103 >/dev/ttyPS0
+[27474ms] sh-4.4# R0103
+[27661ms] 2048+0 records in
+2048+0 records out
+D0103
+[27662ms] TX stty raw -echo; echo R0104 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0104 >/dev/ttyPS0
+[27709ms] sh-4.4# R0104
+[27943ms] 2048+0 records in
+2048+0 records out
+D0104
+sh-4.4# [27943ms] TX stty raw -echo; echo R0105 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0105 >/dev/ttyPS0
+[27990ms] R0105
+[28176ms] 2048+0 records in
+2048+0 records out
+D0105
+[28176ms] TX stty raw -echo; echo R0106 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0106 >/dev/ttyPS0
+[28223ms] sh-4.4# R0106
+[28444ms] 2048+0 records in
+2048+0 records out
+D0106
+sh-4.4# [28444ms] TX stty raw -echo; echo R0107 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0107 >/dev/ttyPS0
+[28505ms] R0107
+[28691ms] 2048+0 records in
+2048+0 records out
+D0107
+[28691ms] TX stty raw -echo; echo R0108 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0108 >/dev/ttyPS0
+[28737ms] sh-4.4# R0108
+[28924ms] 2048+0 records in
+2048+0 records out
+D0108
+[28925ms] TX stty raw -echo; echo R0109 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0109 >/dev/ttyPS0
+[28971ms] sh-4.4# R0109
+[29157ms] 2048+0 records in
+2048+0 records out
+D0109
+[29158ms] TX stty raw -echo; echo R0110 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0110 >/dev/ttyPS0
+[29205ms] sh-4.4# R0110
+[29391ms] 2048+0 records in
+2048+0 records out
+D0110
+[29392ms] TX stty raw -echo; echo R0111 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0111 >/dev/ttyPS0
+[29438ms] sh-4.4# R0111
+[29626ms] 2048+0 records in
+2048+0 records out
+D0111
+[29626ms] TX stty raw -echo; echo R0112 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0112 >/dev/ttyPS0
+[29672ms] sh-4.4# R0112
+[29889ms] 2048+0 records in
+2048+0 records out
+D0112
+sh-4.4# [29890ms] TX stty raw -echo; echo R0113 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0113 >/dev/ttyPS0
+[29935ms] R0113
+[30153ms] 2048+0 records in
+2048+0 records out
+D0113
+sh-4.4# [30154ms] TX stty raw -echo; echo R0114 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0114 >/dev/ttyPS0
+[30200ms] R0114
+[30416ms] 2048+0 records in
+2048+0 records out
+D0114
+sh-4.4# [30417ms] TX stty raw -echo; echo R0115 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0115 >/dev/ttyPS0
+[30463ms] R0115
+[30678ms] 2048+0 records in
+2048+0 records out
+D0115
+sh-4.4# [30679ms] TX stty raw -echo; echo R0116 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0116 >/dev/ttyPS0
+[30726ms] R0116
+[30943ms] 2048+0 records in
+2048+0 records out
+D0116
+sh-4.4# [30944ms] TX stty raw -echo; echo R0117 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0117 >/dev/ttyPS0
+[30990ms] R0117
+[31177ms] 2048+0 records in
+2048+0 records out
+D0117
+[31177ms] TX stty raw -echo; echo R0118 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0118 >/dev/ttyPS0
+[31224ms] sh-4.4# R0118
+[31411ms] 2048+0 records in
+2048+0 records out
+D0118
+[31412ms] TX stty raw -echo; echo R0119 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0119 >/dev/ttyPS0
+[31472ms] sh-4.4# R0119
+[31659ms] 2048+0 records in
+2048+0 records out
+D0119
+[31660ms] TX stty raw -echo; echo R0120 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0120 >/dev/ttyPS0
+[31706ms] sh-4.4# R0120
+[31894ms] 2048+0 records in
+2048+0 records out
+D0120
+[31896ms] TX stty raw -echo; echo R0121 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0121 >/dev/ttyPS0
+[31956ms] sh-4.4# R0121
+[32144ms] 2048+0 records in
+2048+0 records out
+D0121
+[32145ms] TX stty raw -echo; echo R0122 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0122 >/dev/ttyPS0
+[32189ms] sh-4.4# R0122
+[32378ms] 2048+0 records in
+2048+0 records out
+D0122
+[32379ms] TX stty raw -echo; echo R0123 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0123 >/dev/ttyPS0
+[32425ms] sh-4.4# R0123
+[32610ms] 2048+0 records in
+2048+0 records out
+D0123
+[32610ms] TX stty raw -echo; echo R0124 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0124 >/dev/ttyPS0
+[32657ms] sh-4.4# R0124
+[32875ms] 2048+0 records in
+2048+0 records out
+D0124
+sh-4.4# [32875ms] TX stty raw -echo; echo R0125 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0125 >/dev/ttyPS0
+[32922ms] R0125
+[33106ms] 2048+0 records in
+2048+0 records out
+D0125
+[33106ms] TX stty raw -echo; echo R0126 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0126 >/dev/ttyPS0
+[33153ms] sh-4.4# R0126
+[33371ms] 2048+0 records in
+2048+0 records out
+D0126
+sh-4.4# [33372ms] TX stty raw -echo; echo R0127 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0127 >/dev/ttyPS0
+[33418ms] R0127
+[33635ms] 2048+0 records in
+2048+0 records out
+D0127
+sh-4.4# [33636ms] TX stty raw -echo; echo R0128 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0128 >/dev/ttyPS0
+[33681ms] R0128
+[33897ms] 2048+0 records in
+2048+0 records out
+D0128
+sh-4.4# [33897ms] TX stty raw -echo; echo R0129 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0129 >/dev/ttyPS0
+[33944ms] R0129
+[34163ms] 2048+0 records in
+2048+0 records out
+D0129
+sh-4.4# [34163ms] TX stty raw -echo; echo R0130 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0130 >/dev/ttyPS0
+[34210ms] R0130
+[34428ms] 2048+0 records in
+2048+0 records out
+D0130
+sh-4.4# [34428ms] TX stty raw -echo; echo R0131 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0131 >/dev/ttyPS0
+[34474ms] R0131
+[34661ms] 2048+0 records in
+2048+0 records out
+D0131
+[34662ms] TX stty raw -echo; echo R0132 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0132 >/dev/ttyPS0
+[34724ms] sh-4.4# R0132
+[34910ms] 2048+0 records in
+2048+0 records out
+D0132
+[34911ms] TX stty raw -echo; echo R0133 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0133 >/dev/ttyPS0
+[34957ms] sh-4.4# R0133
+[35143ms] 2048+0 records in
+2048+0 records out
+D0133
+[35143ms] TX stty raw -echo; echo R0134 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0134 >/dev/ttyPS0
+[35191ms] sh-4.4# R0134
+[35379ms] 2048+0 records in
+2048+0 records out
+D0134
+[35379ms] TX stty raw -echo; echo R0135 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0135 >/dev/ttyPS0
+[35425ms] sh-4.4# R0135
+[35612ms] 2048+0 records in
+2048+0 records out
+D0135
+[35612ms] TX stty raw -echo; echo R0136 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0136 >/dev/ttyPS0
+[35659ms] sh-4.4# R0136
+[35847ms] 2048+0 records in
+2048+0 records out
+D0136
+[35848ms] TX stty raw -echo; echo R0137 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0137 >/dev/ttyPS0
+[35895ms] sh-4.4# R0137
+[36079ms] 2048+0 records in
+2048+0 records out
+D0137
+[36080ms] TX stty raw -echo; echo R0138 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0138 >/dev/ttyPS0
+[36125ms] sh-4.4# R0138
+[36343ms] 2048+0 records in
+2048+0 records out
+D0138
+sh-4.4# [36344ms] TX stty raw -echo; echo R0139 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0139 >/dev/ttyPS0
+[36390ms] R0139
+[36611ms] 2048+0 records in
+2048+0 records out
+D0139
+sh-4.4# [36611ms] TX stty raw -echo; echo R0140 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0140 >/dev/ttyPS0
+[36656ms] R0140
+[36875ms] 2048+0 records in
+2048+0 records out
+D0140
+sh-4.4# [36876ms] TX stty raw -echo; echo R0141 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0141 >/dev/ttyPS0
+[36922ms] R0141
+[37142ms] 2048+0 records in
+2048+0 records out
+D0141
+sh-4.4# [37142ms] TX stty raw -echo; echo R0142 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0142 >/dev/ttyPS0
+[37190ms] R0142
+[37377ms] 2048+0 records in
+2048+0 records out
+D0142
+[37378ms] TX stty raw -echo; echo R0143 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0143 >/dev/ttyPS0
+[37425ms] sh-4.4# R0143
+[37609ms] 2048+0 records in
+2048+0 records out
+D0143
+[37610ms] TX stty raw -echo; echo R0144 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0144 >/dev/ttyPS0
+[37657ms] sh-4.4# R0144
+[37874ms] 2048+0 records in
+2048+0 records out
+D0144
+sh-4.4# [37874ms] TX stty raw -echo; echo R0145 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0145 >/dev/ttyPS0
+[37921ms] R0145
+[38140ms] 2048+0 records in
+2048+0 records out
+D0145
+sh-4.4# [38141ms] TX stty raw -echo; echo R0146 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0146 >/dev/ttyPS0
+[38187ms] R0146
+[38417ms] 2048+0 records in
+2048+0 records out
+D0146
+sh-4.4# [38418ms] TX stty raw -echo; echo R0147 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0147 >/dev/ttyPS0
+[38463ms] R0147
+[38681ms] 2048+0 records in
+2048+0 records out
+D0147
+sh-4.4# [38682ms] TX stty raw -echo; echo R0148 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0148 >/dev/ttyPS0
+[38729ms] R0148
+[38949ms] 2048+0 records in
+2048+0 records out
+D0148
+sh-4.4# [38950ms] TX stty raw -echo; echo R0149 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0149 >/dev/ttyPS0
+[38995ms] R0149
+[39213ms] 2048+0 records in
+2048+0 records out
+D0149
+sh-4.4# [39214ms] TX stty raw -echo; echo R0150 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0150 >/dev/ttyPS0
+[39261ms] R0150
+[39479ms] 2048+0 records in
+2048+0 records out
+D0150
+sh-4.4# [39480ms] TX stty raw -echo; echo R0151 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0151 >/dev/ttyPS0
+[39526ms] R0151
+[39743ms] 2048+0 records in
+2048+0 records out
+D0151
+sh-4.4# [39744ms] TX stty raw -echo; echo R0152 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0152 >/dev/ttyPS0
+[39791ms] R0152
+[39976ms] 2048+0 records in
+2048+0 records out
+D0152
+[39976ms] TX stty raw -echo; echo R0153 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0153 >/dev/ttyPS0
+[40023ms] sh-4.4# R0153
+[40241ms] 2048+0 records in
+2048+0 records out
+D0153
+sh-4.4# [40242ms] TX stty raw -echo; echo R0154 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0154 >/dev/ttyPS0
+[40288ms] R0154
+[40508ms] 2048+0 records in
+2048+0 records out
+D0154
+sh-4.4# [40509ms] TX stty raw -echo; echo R0155 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0155 >/dev/ttyPS0
+[40555ms] R0155
+[40739ms] 2048+0 records in
+2048+0 records out
+D0155
+[40740ms] TX stty raw -echo; echo R0156 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0156 >/dev/ttyPS0
+[40801ms] sh-4.4# R0156
+[40987ms] 2048+0 records in
+2048+0 records out
+D0156
+[40987ms] TX stty raw -echo; echo R0157 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0157 >/dev/ttyPS0
+[41032ms] sh-4.4# R0157
+[41217ms] 2048+0 records in
+2048+0 records out
+D0157
+[41217ms] TX stty raw -echo; echo R0158 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0158 >/dev/ttyPS0
+[41263ms] sh-4.4# R0158
+[41448ms] 2048+0 records in
+2048+0 records out
+D0158
+[41448ms] TX stty raw -echo; echo R0159 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0159 >/dev/ttyPS0
+[41495ms] sh-4.4# R0159
+[41712ms] 2048+0 records in
+2048+0 records out
+D0159
+sh-4.4# [41713ms] TX stty raw -echo; echo R0160 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0160 >/dev/ttyPS0
+[41759ms] R0160
+[41943ms] 2048+0 records in
+2048+0 records out
+D0160
+[41945ms] TX stty raw -echo; echo R0161 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0161 >/dev/ttyPS0
+[42005ms] sh-4.4# R0161
+[42193ms] 2048+0 records in
+2048+0 records out
+D0161
+[42194ms] TX stty raw -echo; echo R0162 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0162 >/dev/ttyPS0
+[42255ms] sh-4.4# R0162
+[42442ms] 2048+0 records in
+2048+0 records out
+D0162
+[42443ms] TX stty raw -echo; echo R0163 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0163 >/dev/ttyPS0
+[42506ms] sh-4.4# R0163
+[42691ms] 2048+0 records in
+2048+0 records out
+D0163
+[42691ms] TX stty raw -echo; echo R0164 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0164 >/dev/ttyPS0
+[42737ms] sh-4.4# R0164
+[42921ms] 2048+0 records in
+2048+0 records out
+D0164
+[42922ms] TX stty raw -echo; echo R0165 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0165 >/dev/ttyPS0
+[42968ms] sh-4.4# R0165
+[43186ms] 2048+0 records in
+2048+0 records out
+D0165
+sh-4.4# [43186ms] TX stty raw -echo; echo R0166 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0166 >/dev/ttyPS0
+[43232ms] R0166
+[43450ms] 2048+0 records in
+2048+0 records out
+D0166
+sh-4.4# [43451ms] TX stty raw -echo; echo R0167 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0167 >/dev/ttyPS0
+[43498ms] R0167
+[43714ms] 2048+0 records in
+2048+0 records out
+D0167
+sh-4.4# [43714ms] TX stty raw -echo; echo R0168 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0168 >/dev/ttyPS0
+[43760ms] R0168
+[43979ms] 2048+0 records in
+2048+0 records out
+D0168
+sh-4.4# [43980ms] TX stty raw -echo; echo R0169 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0169 >/dev/ttyPS0
+[44027ms] R0169
+[44245ms] 2048+0 records in
+2048+0 records out
+D0169
+sh-4.4# [44246ms] TX stty raw -echo; echo R0170 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0170 >/dev/ttyPS0
+[44291ms] R0170
+[44514ms] 2048+0 records in
+2048+0 records out
+D0170
+sh-4.4# [44514ms] TX stty raw -echo; echo R0171 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0171 >/dev/ttyPS0
+[44559ms] R0171
+[44778ms] 2048+0 records in
+2048+0 records out
+D0171
+sh-4.4# [44779ms] TX stty raw -echo; echo R0172 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0172 >/dev/ttyPS0
+[44824ms] R0172
+[45042ms] 2048+0 records in
+2048+0 records out
+D0172
+sh-4.4# [45043ms] TX stty raw -echo; echo R0173 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0173 >/dev/ttyPS0
+[45088ms] R0173
+[45306ms] 2048+0 records in
+2048+0 records out
+D0173
+sh-4.4# [45307ms] TX stty raw -echo; echo R0174 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0174 >/dev/ttyPS0
+[45353ms] R0174
+[45573ms] 2048+0 records in
+2048+0 records out
+D0174
+sh-4.4# [45574ms] TX stty raw -echo; echo R0175 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0175 >/dev/ttyPS0
+[45621ms] R0175
+[45836ms] 2048+0 records in
+2048+0 records out
+D0175
+sh-4.4# [45837ms] TX stty raw -echo; echo R0176 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0176 >/dev/ttyPS0
+[45883ms] R0176
+[46102ms] 2048+0 records in
+2048+0 records out
+D0176
+sh-4.4# [46102ms] TX stty raw -echo; echo R0177 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0177 >/dev/ttyPS0
+[46148ms] R0177
+[46366ms] 2048+0 records in
+2048+0 records out
+D0177
+sh-4.4# [46367ms] TX stty raw -echo; echo R0178 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0178 >/dev/ttyPS0
+[46413ms] R0178
+[46634ms] 2048+0 records in
+2048+0 records out
+D0178
+sh-4.4# [46635ms] TX stty raw -echo; echo R0179 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0179 >/dev/ttyPS0
+[46681ms] R0179
+[46866ms] 2048+0 records in
+2048+0 records out
+D0179
+[46866ms] TX stty raw -echo; echo R0180 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0180 >/dev/ttyPS0
+[46927ms] sh-4.4# R0180
+[47112ms] 2048+0 records in
+2048+0 records out
+D0180
+[47113ms] TX stty raw -echo; echo R0181 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0181 >/dev/ttyPS0
+[47159ms] sh-4.4# R0181
+[47388ms] 2048+0 records in
+2048+0 records out
+D0181
+sh-4.4# [47389ms] TX stty raw -echo; echo R0182 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0182 >/dev/ttyPS0
+[47435ms] R0182
+[47653ms] 2048+0 records in
+2048+0 records out
+D0182
+sh-4.4# [47654ms] TX stty raw -echo; echo R0183 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0183 >/dev/ttyPS0
+[47700ms] R0183
+[47919ms] 2048+0 records in
+2048+0 records out
+D0183
+sh-4.4# [47920ms] TX stty raw -echo; echo R0184 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0184 >/dev/ttyPS0
+[47966ms] R0184
+[48151ms] 2048+0 records in
+2048+0 records out
+D0184
+[48151ms] TX stty raw -echo; echo R0185 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0185 >/dev/ttyPS0
+[48197ms] sh-4.4# R0185
+[48415ms] 2048+0 records in
+2048+0 records out
+D0185
+sh-4.4# [48416ms] TX stty raw -echo; echo R0186 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0186 >/dev/ttyPS0
+[48461ms] R0186
+[48681ms] 2048+0 records in
+2048+0 records out
+D0186
+sh-4.4# [48681ms] TX stty raw -echo; echo R0187 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0187 >/dev/ttyPS0
+[48727ms] R0187
+[48944ms] 2048+0 records in
+2048+0 records out
+D0187
+sh-4.4# [48944ms] TX stty raw -echo; echo R0188 >/dev/ttyPS0; dd bs=1 count=409 >> /tmp/alpine/ld-musl-armhf.so.1.gz; echo D0188 >/dev/ttyPS0
+[48991ms] R0188
+[49037ms] 409+0 records in
+409+0 records out
+D0188

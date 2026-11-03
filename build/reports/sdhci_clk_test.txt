@@ -1,0 +1,6 @@
+﻿echo ---CLKTEST--- >/dev/ttyPS0; devmem 0xE010102C 32 0x00010007 >/dev/ttyPS0 2>&1; sleep 0.2; devmem 0xE010102C 32 >/dev/ttyPS0 2>&1; sleep 0.2; devmem 0xE010102C 32 0x00050007 >/dev/ttyPS0 2>&1; sleep 0.2; devmem 0xE010102C 32 >/dev/ttyPS0 2>&1; echo CLKTEST_DONE >/dev/ttyPS0
+hub75d: pty [256]---CLKTEST---
+hub75d: submit 10200000 18ms st=07030ded id=3hub75d: pty [58]hub75d: submit 10000000 6ms st=48042ce4 id=40x00010007
+0x00050007
+CLKTEST_DONE
+hub75d: pty [8]hub75d: submit 10200000 6ms st=0d0525ed id=5

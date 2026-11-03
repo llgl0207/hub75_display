@@ -1,0 +1,2 @@
+﻿monitor COM5 115200 for 180 s
+done

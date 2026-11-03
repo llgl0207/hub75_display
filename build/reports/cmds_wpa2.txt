@@ -1,0 +1,6 @@
+echo MARK_WPA2
+/tmp/demo/lib/ld-linux.so.3 --library-path /tmp/demo/lib:/tmp/demo/usr/lib /tmp/demo/sbin/wpa_supplicant -B -f/tmp/wpa.log -Dwext -iwlan0 -c/tmp/wpa.conf
+sleep 6
+cat /tmp/wpa.log
+ps | grep wpa
+echo MARK_WPA2_DONE

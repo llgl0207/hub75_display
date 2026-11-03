@@ -1,5 +1,373 @@
-﻿^C^C^C^C^C^Z
-stty sane
-
-echo ALIVE_2
-pwd
+﻿ 30 14 01 00 00 0f ac 04 01 00 00 0f ac 04 01 00 00 0f ac 02 00 00
+No keys have been configured - skip key clearing
+State: SCANNING -> ASSOCIATING
+wpa_driver_wext_set_operstate: operstate 0->0 (DORMANT)
+netlink: Operstate: linkmode=-1, operstate=5
+wpa_driver_wext_associate
+wpa_driver_wext_set_drop_unencrypted
+wpa_driver_wext_set_psk
+Setting authentication timeout: 10 sec 0 usec
+EAPOL: External notification - EAP success=0
+EAPOL: Supplicant port status: Unauthorized
+EAPOL: External notification - EAP fail=0
+EAPOL: Supplicant port status: Unauthorized
+EAPOL: External notification - portControl=Auto
+EAPOL: Supplicant port status: Unauthorized
+RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+Wireless event: cmd=0x8b1a len=8
+RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+Wireless event: cmd=0x8b06 len=8
+RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+Wireless event: cmd=0x8b04 len=12
+RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+Wireless event: cmd=0x8b1a len=24
+Authentication with 50:92:6a:f5:cb:fa timed out.
+Added BSSID 50:92:6a:f5:cb:fa into blacklist
+No keys have been configured - skip key clearing
+State: ASSOCIATING -> DISCONNECTED
+wpa_driver_wext_set_operstate: operstate 0->0 (DORMANT)
+netlink: Operstate: linkmode=-1, operstate=5
+EAPOL: External notification - portEnabled=0
+EAPOL: Supplicant port status: Unauthorized
+EAPOL: External notification - portValid=0
+EAPOL: Supplicant port status: Unauthorized
+EAPOL: External notification - EAP success=0
+EAPOL: Supplicant port status: Unauthorized
+Setting scan request: 0 sec 0 usec
+State: DISCONNECTED -> SCANNING
+Starting AP scan for wildcard SSID
+Scan requested (ret=0) - scan timeout 30 seconds
+RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+Wireless event: cmd=0x8b19 len=8
+Received 3272 bytes of scan results (6 BSSes)
+BSS: Start scan result update 248
+BSS: Add new id 117 BSSID 22:02:d5:95:18:c2 SSID '037'
+BSS: Add new id 118 BSSID 56:92:6a:17:96:78 SSID ''
+New scan results available
+Selecting BSS from priority group 0
+Try to find WPA-enabled AP
+0: c8:bf:4c:bd:23:7c ssid='AllianceTeam2.4G' wpa_ie_len=0 rsn_ie_len=24 caps=0x11
+   selected based on RSN IE
+   selected WPA AP c8:bf:4c:bd:23:7c ssid='AllianceTeam2.4G'
+Trying to associate with c8:bf:4c:bd:23:7c (SSID='AllianceTeam2.4G' freq=2457 MHz)
+Cancelling scan request
+WPA: clearing own WPA/RSN IE
+Automatic auth_alg selection: 0x1
+RSN: using IEEE 802.11i/D9.0
+WPA: Selected cipher suites: group 16 pairwise 16 key_mgmt 2 proto 2
+WPA: clearing AP WPA IE
+WPA: set AP RSN IE - hexdump(len=26): 30 18 01 00 00 0f ac 04 01 00 00 0f ac 04 02 00 00 0f ac 02 00 0f ac 08 8c 00
+WPA: using GTK CCMP
+WPA: using PTK CCMP
+WPA: using KEY_MGMT WPA-PSK
+WPA: Set own WPA IE default - hexdump(len=22): 30 14 01 00 00 0f ac 04 01 00 00 0f ac 04 01 00 00 0f ac 02 00 00
+No keys have been configured - skip key clearing
+State: SCANNING -> ASSOCIATING
+wpa_driver_wext_set_operstate: operstate 0->0 (DORMANT)
+netlink: Operstate: linkmode=-1, operstate=5
+wpa_driver_wext_associate
+wpa_driver_wext_set_drop_unencrypted
+wpa_driver_wext_set_psk
+Setting authentication timeout: 10 sec 0 usec
+EAPOL: External notification - EAP success=0
+EAPOL: Supplicant port status: Unauthorized
+EAPOL: External notification - EAP fail=0
+EAPOL: Supplicant port status: Unauthorized
+EAPOL: External notification - portControl=Auto
+EAPOL: Supplicant port status: Unauthorized
+RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+Wireless event: cmd=0x8b1a len=8
+RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+Wireless event: cmd=0x8b06 len=8
+RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+Wireless event: cmd=0x8b04 len=12
+RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+Wireless event: cmd=0x8b1a len=24
+Authentication with c8:bf:4c:bd:23:7c timed out.
+Added BSSID c8:bf:4c:bd:23:7c into blacklist
+No keys have been configured - skip key clearing
+State: ASSOCIATING -> DISCONNECTED
+wpa_driver_wext_set_operstate: operstate 0->0 (DORMANT)
+netlink: Operstate: linkmode=-1, operstate=5
+EAPOL: External notification - portEnabled=0
+EAPstty sane
+OL: Supplicant port status: Unauthorized
+EAPOL: External notification - portValid=0
+EAPOL: Supplicant port status: Unauthorized
+EAPOL: External notification - EAP success=0
+EAPOL: Supplicant port status: Unauthorized
+Setting scan request: 0 sec 0 usec
+State: DISCONNECTED -> SCANNING
+Starting AP scan for wildcard SSID
+Scan requested (ret=0) - scan timeout 30 seconds
+RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+Wireless event: cmd=0x8b19 len=8
+Received 3731 bytes of scan results (7 BSSes)
+BSS: Start scan result update 249
+BSS: Add new id 119 BSSID f2:c0:62:a3:dd:09 SSID 'NINO'
+BSS: Expire BSS 113 due to no match in scan
+BSS: Remove id 113 BSSID 50:92:6a:17:96:78 SSID ''
+BSS: Expire BSS 114 due to no match in scan
+BSS: Remove id 114 BSSID 50:92:6a:f5:cb:fa SSID 'AllianceTeam2.4G'
+New scan results available
+Selecting BSS from priority group 0
+Try to find WPA-enabled AP
+0: c8:bf:4c:bd:23:7c ssid='AllianceTeam2.4G' wpa_ie_len=0 rsn_ie_len=24 caps=0x11
+   selected based on RSN IE
+   selected WPA AP c8:bf:4c:bd:23:7c ssid='AllianceTeam2.4G'
+Trying to associate with c8:bf:4c:bd:23:7c (SSID='AllianceTeam2.4G' freq=2457 MHz)
+Cancelling scan request
+WPA: clearing own WPA/RSN IE
+Automatic auth_alg selection: 0x1
+RSN: using IEEE 802.11i/D9.0
+WPA: Selected cipher suites: group 16 pairwise 16 key_mgmt 2 proto 2
+WPA: clearing AP WPA IE
+WPA: set AP RSN IE - hexdump(len=26): 30 18 01 00 00 0f ac 04 01 00 00 0f ac 04 02 00 00 0f ac 02 00 0f ac 08 8c 00
+WPA: using GTK CCMP
+WPA: using PTK CCMP
+WPA: using KEY_MGMT WPA-PSK
+WPA: Set own WPA IE default - hexdump(len=22): 30 14 01 00 00 0f ac 04 01 00 00 0f ac 04 01 00 00 0f ac 02 00 00
+No keys have been configured - skip key clearing
+State: SCANNING -> ASSOCIATING
+wpa_driver_wext_set_operstate: operstate 0->0 (DORMANT)
+netlink: Operstate: linkmode=-1, operstate=5
+wpa_driver_wext_associate
+wpa_driver_wext_set_drop_unencrypted
+wpa_driver_wext_set_psk
+Setting authentication timeout: 10 sec 0 usec
+EAPOL: External notification - EAP success=0
+EAPOL: Supplicant port status: Unauthorized
+EAPOL: External notification - EAP fail=0
+EAPOL: Supplicant port status: Unauthorized
+EAPOL: External notification - portControl=Auto
+EAPOL: Supplicant port status: Unauthorized
+RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+Wireless event: cmd=0x8b1a len=8
+RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+Wireless event: cmd=0x8b06 len=8
+RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+Wireless event: cmd=0x8b04 len=12
+RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+Wireless event: cmd=0x8b1a len=24
+Authentication with c8:bf:4c:bd:23:7c timed out.
+BSSID c8:bf:4c:bd:23:7c blacklist count incremented to 2
+No keys have been configured - skip key clearing
+State: ASSOCIATING -> DISCONNECTED
+wpa_driver_wext_set_operstate: operstate 0->0 (DORMANT)
+netlink: Operstate: linkmode=-1, operstate=5
+EAPOL: External notification - portEnabled=0
+EAPOL: Supplicant port status: Unauthorized
+EAPOL: External notification - portValid=0
+EAPOL: Supplicant port status: Unauthorized
+EAPOL: External notification - EAP success=0
+EAPOL: Supplicant port status: Unauthorized
+Setting scan request: 0 sec 0 usec
+State: DISCONNECTED -> SCANNING
+Starting AP scan for wildcard SSID
+Scan requested (ret=0) - scan timeout 30 seconds
+RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+Wireless event: cmd=0x8b19 len=8
+Received 3045 bytes of scan results (6 BSSes)
+BSS: Start scan result update 250
+New scan results available
+Selecting BSS from priority group 0
+Try to find WPA-enabled AP
+0: c8:bf:4c:bd:23:7c ssid='AllianceTeam2.4G' wpa_ie_len=0 rsn_ie_len=24 caps=0x11
+   skip - blacklisted
+1: f2:c0:62:a3:dd:09 ssid='NINO' wpa_ie_len=0 rsn_ie_len=20 caps=0x11
+   skip - SSID mismatch
+2: 50:33:f0:eb:19:96 ssid='AutoRobot_201' wpa_ie_len=22 rsn_ie_len=20 caps=0x11
+   skip - SSID mismatch
+3: 22:02:d5:95:18:c2 ssid='037' wpa_ie_len=0 rsn_ie_len=20 caps=0x11
+   skip - SSID mismatch
+4: 56:92:6a:17:96:78 ssid='' wpa_ie_len=0 rsn_ie_len=0 caps=0x1
+   skip - SSID not known
+5: 06:b8:e6:06:97:46 ssid='NJUST' wpa_ie_len=0 rsn_ie_len=0 caps=0x1
+   skip - no WPA/RSN IE
+Try to find non-WPA AP
+0: c8:bf:4c:bd:23:7c ssid='AllianceTeam2.4G' wpa_ie_len=0 rsn_ie_len=24 caps=0x11
+   skip - blacklisted
+1: f2:c0:62:a3:dd:09 ssid='NINO' wpa_ie_len=0 rsn_ie_len=20 caps=0x11
+   skip - SSID mismatch
+2: 50:33:f0:eb:19:96 ssid='AutoRobot_201' wpa_ie_len=22 rsn_ie_len=20 caps=0x11
+   skip - SSID mismatch
+3: 22:02:d5:95:18:c2 ssid='037' wpa_ie_len=0 rsn_ie_len=20 caps=0x11
+   skip - SSID mismatch
+4: 56:92:6a:17:96:78 ssid='' wpa_ie_len=0 rsn_ie_len=0 caps=0x1
+   skip - SSID not known
+5: 06:b8:e6:06:97:46 ssid='NJUST' wpa_ie_len=0 rsn_ie_len=0 caps=0x1
+   skip - SSID mismatch
+No APs found - clear blacklist and try again
+Removed BSSID c8:bf:4c:bd:23:7c from blacklist (clear)
+Removed BSSID 50:92:6a:f5:cb:fa from blacklist (clear)
+Selecting BSS from priority group 0
+Try to find WPA-enabled AP
+0: c8:bf:4c:bd:23:7c ssid='AllianceTeam2.4G' wpa_ie_len=0 rsn_ie_len=24 caps=0x11
+   selected based on RSN IE
+   selected WPA AP c8:bf:4c:bd:23:7c ssid='AllianceTeam2.4G'
+Trying to associate with c8:bf:4c:bd:23:7c (SSID='AllianceTeam2.4G' freq=2457 MHz)
+Cancelling scan request
+WPA: clearing own WPA/RSN IE
+Automatic auth_alg selection: 0x1
+RSN: using IEEE 802.11i/D9.0
+WPA: Selected cipher suites: group 16 pairwise 16 key_mgmt 2 proto 2
+WPA: clearing AP WPA IE
+WPA: set AP RSN IE - hexdump(len=26): 30 18 01 00 00 0f ac 04 01 00 00 0f ac 04 02 00 00 0f ac 02 00 0f ac 08 8c 00
+WPA: using GTK CCMP
+WPA: using PTK CCMP
+WPA: using KEY_MGMT WPA-PSK
+WPA: Set own WPA IE default - hexdump(len=22): 30 14 01 00 00 0f ac 04 01 00 00 0f ac 04 01 00 00 0f ac 02 00 00
+No keys have been configured - skip key clearing
+State: SCANNING -> ASSOCIATING
+wpa_driver_wext_set_operstate: operstate 0->0 (DORMANT)
+netlink: Operstate: linkmode=-1, operstate=5
+wpa_driver_wext_associate
+wpa_driver_wext_set_drop_unencrypted
+wpa_driver_wext_set_psk
+Setting authentication timeout: 10 sec 0 usec
+EAPOL: External notification - EAP success=0
+EAPOL: Supplicant port status: Unauthorized
+EAPOL: External notification - EAP fail=0
+EAPOL: Supplicant port status: Unauthorized
+EAPOL: External notification - portControl=Auto
+EAPOL: Supplicant port status: Unauthorized
+RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+Wireless event: cmd=0x8b1a len=8
+RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+Wireless event: cmd=0x8b06 len=8
+RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+Wireless event: cmd=0x8b04 len=12
+RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+Wireless event: cmd=0x8b1a len=24
+Authentication with c8:bf:4c:bd:23:7c timed out.
+Added BSSID c8:bf:4c:bd:23:7c into blacklist
+No keys have been configured - skip key clearing
+State: ASSOCIATING -> DISCONNECTED
+wpa_driver_wext_set_operstate: operstate 0->0 (DORMANT)
+netlink: Operstate: linkmode=-1, operstate=5
+EAPOL: External notification - portEnabled=0
+EAPOL: Supplicant port status: Unauthorized
+EAPOL: External notification - portValid=0
+EAPOL: Supplicant port status: Unauthorized
+EAPOL: External notiecho RECOVER
+fication - EAP success=0
+EAPOL: Supplicant port status: Unauthorized
+Setting scan request: 0 sec 0 usec
+State: DISCONNECTED -> SCANNING
+Starting AP scan for wildcard SSID
+Scan requested (ret=0) - scan timeout 30 seconds
+RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+Wireless event: cmd=0x8b19 len=8
+Received 2423 bytes of scan results (5 BSSes)
+BSS: Start scan result update 251
+BSS: Expire BSS 116 due to no match in scan
+BSS: Remove id 116 BSSID 9c:9d:7e:94:8d:c7 SSID '_____________________'
+New scan results available
+Selecting BSS from priority group 0
+Try to find WPA-enabled AP
+0: c8:bf:4c:bd:23:7c ssid='AllianceTeam2.4G' wpa_ie_len=0 rsn_ie_len=24 caps=0x11
+   selected based on RSN IE
+   selected WPA AP c8:bf:4c:bd:23:7c ssid='AllianceTeam2.4G'
+Trying to associate with c8:bf:4c:bd:23:7c (SSID='AllianceTeam2.4G' freq=2457 MHz)
+Cancelling scan request
+WPA: clearing own WPA/RSN IE
+Automatic auth_alg selection: 0x1
+RSN: using IEEE 802.11i/D9.0
+WPA: Selected cipher suites: group 16 pairwise 16 key_mgmt 2 proto 2
+WPA: clearing AP WPA IE
+WPA: set AP RSN IE - hexdump(len=26): 30 18 01 00 00 0f ac 04 01 00 00 0f ac 04 02 00 00 0f ac 02 00 0f ac 08 8c 00
+WPA: using GTK CCMP
+WPA: using PTK CCMP
+WPA: using KEY_MGMT WPA-PSK
+WPA: Set own WPA IE default - hexdump(len=22): 30 14 01 00 00 0f ac 04 01 00 00 0f ac 04 01 00 00 0f ac 02 00 00
+No keys have been configured - skip key clearing
+State: SCANNING -> ASSOCIATING
+wpa_driver_wext_set_operstate: operstate 0->0 (DORMANT)
+netlink: Operstate: linkmode=-1, operstate=5
+wpa_driver_wext_associate
+wpa_driver_wext_set_drop_unencrypted
+wpa_driver_wext_set_psk
+Setting authentication timeout: 10 sec 0 usec
+EAPOL: External notification - EAP success=0
+EAPOL: Supplicant port status: Unauthorized
+EAPOL: External notification - EAP fail=0
+EAPOL: Supplicant port status: Unauthorized
+EAPOL: External notification - portControl=Auto
+EAPOL: Supplicant port status: Unauthorized
+RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+Wireless event: cmd=0x8b1a len=8
+RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+Wireless event: cmd=0x8b06 len=8
+RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+Wireless event: cmd=0x8b04 len=12
+RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+Wireless event: cmd=0x8b1a len=24
+Authentication with c8:bf:4c:bd:23:7c timed out.
+BSSID c8:bf:4c:bd:23:7c blacklist count incremented to 2
+No keys have been configured - skip key clearing
+State: ASSOCIATING -> DISCONNECTED
+wpa_driver_wext_set_operstate: operstate 0->0 (DORMANT)
+netlink: Operstate: linkmode=-1, operstate=5
+EAPOL: External notification - portEnabled=0
+EAPOL: Supplicant port status: Unauthorized
+EAPOL: External notification - portValid=0
+EAPOL: Supplicant port status: Unauthorized
+EAPOL: External notification - EAP success=0
+EAPOL: Supplicant port sh-4.4# 
+sh-4.4# ps | grep wpa
+  763 root       0:00 /tmp/demo/lib/ld-linux.so.3 --library-path /tmp/demo/lib:/tmp/demo/usr/lib /tmp/demo/sbin/wpa_supplicant -Dwext -iwlan0 -c/tmp/wpa.conf -dd
+ 6127 root       0:00 grep wpa
+sh-4.4# 
+sh-4.4# echo MARK_WPARN_DONE
+MARK_WPARN_DONE
+sh-4.4# 
+sh-4.4# echo MARK_CLEAN
+MARK_CLEAN
+sh-4.4# 
+sh-4.4# ps | grep wpa
+  763 root       0:00 /tmp/demo/lib/ld-linux.so.3 --library-path /tmp/demo/lib:/tmp/demo/usr/lib /tmp/demo/sbin/wpa_supplicant -Dwext -iwlan0 -c/tmp/wpa.conf -dd
+ 6129 root       0:00 grep wpa
+sh-4.4# 
+sh-4.4# killall wpa_supplicant 2>/dev/null
+sh-4.4# 
+sh-4.4# sleep 1
+sh-4.4# 
+sh-4.4# ps | grep wpa
+  763 root       0:00 /tmp/demo/lib/ld-linux.so.3 --library-path /tmp/demo/lib:/tmp/demo/usr/lib /tmp/demo/sbin/wpa_supplicant -Dwext -iwlan0 -c/tmp/wpa.conf -dd
+ 6133 root       0:00 grep wpa
+sh-4.4# 
+sh-4.4# rm -rf /var/run/wpa_supplicant
+sh-4.4# 
+sh-4.4# mkdir -p /var/run/wpa_supplicant
+sh-4.4# 
+sh-4.4# echo MARK_WPAQ
+MARK_WPAQ
+sh-4.4# 
+sh-4.4# /tmp/wpa_supplicant -Dnl80211 -iwlan0 -c/tmp/wpa.conf > /tmp/wpa.log 2>&11 &
+[2] 6136
+sh-4.4# 
+sh-4.4# sleep 10

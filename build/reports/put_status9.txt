@@ -1,0 +1,4 @@
+﻿RAWOK
+[1414ms] TX stty raw -echo; echo R0000 >/dev/ttyPS0; dd bs=1 count=9 >> /run/media/mmcblk0p1/wifi/status9.bin; stty sane; echo D0000 >/dev/ttyPS0
+[1466ms] R0000
+[1513ms] D0000

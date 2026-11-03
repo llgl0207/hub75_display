@@ -1,0 +1,27 @@
+﻿echo ---SETSD1--- >/dev/ttyPS0; for a in 0xF8000728 0xF800072C 0xF8000730 0xF8000734 0xF8000738 0xF800073C; do devmem $a 32 0x1680 >/dev/ttyPS0 2>&1; done; devmem 0xE000A200 32 0x00000100 >/dev/ttyPS0 2>&1; echo ---REBINDWL--- >/dev/ttyPS0; echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/unbind 2>&1; sleep 1; echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/bind 2>&1; sleep 2; devmem 0xE0101030 32 0x40 >/dev/ttyPS0 2>&1; sleep 2; echo ---AFTERWL--- >/dev/ttyPS0; ls /sys/bus/sdio/devices >/dev/ttyPS0 2>&1; devmem 0xE010102C 32 >/dev/ttyPS0 2>&1; devmem 0xE0101024 32 >/dev/ttyPS0 2>&1; dmesg | tail -10 >/dev/ttyPS0 2>&1; echo AFTERWL_DONE >/dev/ttyPS0
+---SETSD1---
+---REBINDWL---
+mmc1: SDHCI controller on e0101000.mmc [e0101000.mmc] using ADMA
+sdhci-arasan e0101000.mmc: Unbalanced pm_runtime_enable!
+uio_pdrv_genirq: disagrees about version of symbol dev_warn
+uio_pdrv_genirq: Unknown symbol dev_warn (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_err
+uio_pdrv_genirq: Unknown symbol dev_err (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_warn
+uio_pdrv_genirq: Unknown symbol dev_warn (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_err
+uio_pdrv_genirq: Unknown symbol dev_err (err -22)
+---AFTERWL---
+0x00000000
+0x01F20000
+mmc1: SDHCI controller on e0101000.mmc [e0101000.mmc] using ADMA
+sdhci-arasan e0101000.mmc: Unbalanced pm_runtime_enable!
+uio_pdrv_genirq: disagrees about version of symbol dev_warn
+uio_pdrv_genirq: Unknown symbol dev_warn (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_err
+uio_pdrv_genirq: Unknown symbol dev_err (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_warn
+uio_pdrv_genirq: Unknown symbol dev_warn (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_err
+uio_pdrv_genirq: Unknown symbol dev_err (err -22)
+AFTERWL_DONE

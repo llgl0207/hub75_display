@@ -1,0 +1,4 @@
+chmod +x /tmp/hello.static
+/tmp/hello.static
+echo HELLO_EXIT=$?
+echo HELLO_DONE

@@ -1,0 +1,20 @@
+mkdir -p /sys/kernel/debug
+mount -t debugfs none /sys/kernel/debug
+echo MARK_DBG
+cat /sys/kernel/debug/mmc1/ios
+cat /sys/kernel/debug/mmc1/state
+ls /sys/class/mmc_host/mmc1
+cat /sys/class/mmc_host/mmc1/device/power/runtime_status
+cat /sys/class/mmc_host/mmc1/device/power/control
+echo MARK_REBIND3
+echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/unbind
+sleep 1
+echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/bind
+sleep 5
+echo ---AFTER---
+cat /sys/kernel/debug/mmc1/ios
+cat /sys/kernel/debug/mmc1/state
+ls /sys/bus/sdio/devices
+dmesg | tail -25
+devmem 0xE010102C 32
+echo MARK_DBG_DONE

@@ -1,0 +1,262 @@
+﻿RAWOK
+sh-4.4# [1435ms] TX stty raw -echo; echo R0000 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0000 >/dev/ttyPS0
+[1489ms] R0000
+[1676ms] 2048+0 records in
+2048+0 records out
+D0000
+[1684ms] TX stty raw -echo; echo R0001 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0001 >/dev/ttyPS0
+[1738ms] sh-4.4# R0001
+[1955ms] 2048+0 records in
+2048+0 records out
+D0001
+sh-4.4# [1956ms] TX stty raw -echo; echo R0002 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0002 >/dev/ttyPS0
+[2001ms] R0002
+[2219ms] 2048+0 records in
+2048+0 records out
+D0002
+sh-4.4# [2220ms] TX stty raw -echo; echo R0003 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0003 >/dev/ttyPS0
+[2267ms] R0003
+[2485ms] 2048+0 records in
+2048+0 records out
+D0003
+sh-4.4# [2486ms] TX stty raw -echo; echo R0004 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0004 >/dev/ttyPS0
+[2532ms] R0004
+[2750ms] 2048+0 records in
+2048+0 records out
+D0004
+sh-4.4# [2750ms] TX stty raw -echo; echo R0005 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0005 >/dev/ttyPS0
+[2796ms] R0005
+[3015ms] 2048+0 records in
+2048+0 records out
+D0005
+sh-4.4# [3016ms] TX stty raw -echo; echo R0006 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0006 >/dev/ttyPS0
+[3063ms] R0006
+[3281ms] 2048+0 records in
+2048+0 records out
+D0006
+sh-4.4# [3282ms] TX stty raw -echo; echo R0007 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0007 >/dev/ttyPS0
+[3327ms] R0007
+[3545ms] 2048+0 records in
+2048+0 records out
+D0007
+sh-4.4# [3546ms] TX stty raw -echo; echo R0008 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0008 >/dev/ttyPS0
+[3593ms] R0008
+[3811ms] 2048+0 records in
+2048+0 records out
+D0008
+sh-4.4# [3811ms] TX stty raw -echo; echo R0009 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0009 >/dev/ttyPS0
+[3859ms] R0009
+[4078ms] 2048+0 records in
+2048+0 records out
+D0009
+sh-4.4# [4079ms] TX stty raw -echo; echo R0010 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0010 >/dev/ttyPS0
+[4126ms] R0010
+[4345ms] 2048+0 records in
+2048+0 records out
+D0010
+sh-4.4# [4346ms] TX stty raw -echo; echo R0011 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0011 >/dev/ttyPS0
+[4393ms] R0011
+[4612ms] 2048+0 records in
+2048+0 records out
+D0011
+sh-4.4# [4613ms] TX stty raw -echo; echo R0012 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0012 >/dev/ttyPS0
+[4658ms] R0012
+[4876ms] 2048+0 records in
+2048+0 records out
+D0012
+sh-4.4# [4877ms] TX stty raw -echo; echo R0013 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0013 >/dev/ttyPS0
+[4922ms] R0013
+[5141ms] 2048+0 records in
+2048+0 records out
+D0013
+sh-4.4# [5142ms] TX stty raw -echo; echo R0014 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0014 >/dev/ttyPS0
+[5188ms] R0014
+[5405ms] 2048+0 records in
+2048+0 records out
+D0014
+sh-4.4# [5405ms] TX stty raw -echo; echo R0015 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0015 >/dev/ttyPS0
+[5451ms] R0015
+[5670ms] 2048+0 records in
+2048+0 records out
+D0015
+sh-4.4# [5671ms] TX stty raw -echo; echo R0016 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0016 >/dev/ttyPS0
+[5717ms] R0016
+[5935ms] 2048+0 records in
+2048+0 records out
+D0016
+sh-4.4# [5936ms] TX stty raw -echo; echo R0017 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0017 >/dev/ttyPS0
+[5981ms] R0017
+[6197ms] 2048+0 records in
+2048+0 records out
+D0017
+sh-4.4# [6198ms] TX stty raw -echo; echo R0018 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0018 >/dev/ttyPS0
+[6260ms] R0018
+[6445ms] 2048+0 records in
+2048+0 records out
+D0018
+[6446ms] TX stty raw -echo; echo R0019 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0019 >/dev/ttyPS0
+[6493ms] sh-4.4# R0019
+[6679ms] 2048+0 records in
+2048+0 records out
+D0019
+[6680ms] TX stty raw -echo; echo R0020 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0020 >/dev/ttyPS0
+[6726ms] sh-4.4# R0020
+[6911ms] 2048+0 records in
+2048+0 records out
+D0020
+[6912ms] TX stty raw -echo; echo R0021 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0021 >/dev/ttyPS0
+[6958ms] sh-4.4# R0021
+[7179ms] 2048+0 records in
+2048+0 records out
+D0021
+sh-4.4# [7180ms] TX stty raw -echo; echo R0022 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0022 >/dev/ttyPS0
+[7225ms] R0022
+[7411ms] 2048+0 records in
+2048+0 records out
+D0022
+[7412ms] TX stty raw -echo; echo R0023 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0023 >/dev/ttyPS0
+[7456ms] sh-4.4# R0023
+[7675ms] 2048+0 records in
+2048+0 records out
+D0023
+sh-4.4# [7676ms] TX stty raw -echo; echo R0024 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0024 >/dev/ttyPS0
+[7723ms] R0024
+[7939ms] 2048+0 records in
+2048+0 records out
+D0024
+sh-4.4# [7940ms] TX stty raw -echo; echo R0025 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0025 >/dev/ttyPS0
+[7986ms] R0025
+[8203ms] 2048+0 records in
+2048+0 records out
+D0025
+sh-4.4# [8203ms] TX stty raw -echo; echo R0026 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0026 >/dev/ttyPS0
+[8250ms] R0026
+[8466ms] 2048+0 records in
+2048+0 records out
+D0026
+sh-4.4# [8467ms] TX stty raw -echo; echo R0027 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0027 >/dev/ttyPS0
+[8513ms] R0027
+[8731ms] 2048+0 records in
+2048+0 records out
+D0027
+sh-4.4# [8732ms] TX stty raw -echo; echo R0028 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0028 >/dev/ttyPS0
+[8778ms] R0028
+[8995ms] 2048+0 records in
+2048+0 records out
+D0028
+sh-4.4# [8996ms] TX stty raw -echo; echo R0029 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0029 >/dev/ttyPS0
+[9042ms] R0029
+[9274ms] 2048+0 records in
+2048+0 records out
+D0029
+sh-4.4# [9274ms] TX stty raw -echo; echo R0030 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0030 >/dev/ttyPS0
+[9321ms] R0030
+[9542ms] 2048+0 records in
+2048+0 records out
+D0030
+sh-4.4# [9543ms] TX stty raw -echo; echo R0031 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0031 >/dev/ttyPS0
+[9589ms] R0031
+[9822ms] 2048+0 records in
+2048+0 records out
+D0031
+sh-4.4# [9823ms] TX stty raw -echo; echo R0032 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0032 >/dev/ttyPS0
+[9883ms] R0032
+[10069ms] 2048+0 records in
+2048+0 records out
+D0032
+[10069ms] TX stty raw -echo; echo R0033 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0033 >/dev/ttyPS0
+[10116ms] sh-4.4# R0033
+[10302ms] 2048+0 records in
+2048+0 records out
+D0033
+[10303ms] TX stty raw -echo; echo R0034 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0034 >/dev/ttyPS0
+[10350ms] sh-4.4# R0034
+[10540ms] 2048+0 records in
+2048+0 records out
+D0034
+[10540ms] TX stty raw -echo; echo R0035 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0035 >/dev/ttyPS0
+[10603ms] sh-4.4# R0035
+[10790ms] 2048+0 records in
+2048+0 records out
+D0035
+[10790ms] TX stty raw -echo; echo R0036 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0036 >/dev/ttyPS0
+[10851ms] sh-4.4# R0036
+[11036ms] 2048+0 records in
+2048+0 records out
+D0036
+[11037ms] TX stty raw -echo; echo R0037 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0037 >/dev/ttyPS0
+[11084ms] sh-4.4# R0037
+[11302ms] 2048+0 records in
+2048+0 records out
+D0037
+sh-4.4# [11302ms] TX stty raw -echo; echo R0038 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0038 >/dev/ttyPS0
+[11347ms] R0038
+[11565ms] 2048+0 records in
+2048+0 records out
+D0038
+sh-4.4# [11566ms] TX stty raw -echo; echo R0039 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0039 >/dev/ttyPS0
+[11612ms] R0039
+[11829ms] 2048+0 records in
+2048+0 records out
+D0039
+sh-4.4# [11830ms] TX stty raw -echo; echo R0040 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0040 >/dev/ttyPS0
+[11878ms] R0040
+[12064ms] 2048+0 records in
+2048+0 records out
+D0040
+[12065ms] TX stty raw -echo; echo R0041 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0041 >/dev/ttyPS0
+[12110ms] sh-4.4# R0041
+[12330ms] 2048+0 records in
+2048+0 records out
+D0041
+sh-4.4# [12331ms] TX stty raw -echo; echo R0042 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0042 >/dev/ttyPS0
+[12376ms] R0042
+[12595ms] 2048+0 records in
+2048+0 records out
+D0042
+sh-4.4# [12595ms] TX stty raw -echo; echo R0043 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0043 >/dev/ttyPS0
+[12641ms] R0043
+[12859ms] 2048+0 records in
+2048+0 records out
+D0043
+sh-4.4# [12860ms] TX stty raw -echo; echo R0044 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0044 >/dev/ttyPS0
+[12905ms] R0044
+[13124ms] 2048+0 records in
+2048+0 records out
+D0044
+sh-4.4# [13124ms] TX stty raw -echo; echo R0045 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0045 >/dev/ttyPS0
+[13171ms] R0045
+[13355ms] 2048+0 records in
+2048+0 records out
+D0045
+[13355ms] TX stty raw -echo; echo R0046 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0046 >/dev/ttyPS0
+[13401ms] sh-4.4# R0046
+[13632ms] 2048+0 records in
+2048+0 records out
+D0046
+sh-4.4# [13633ms] TX stty raw -echo; echo R0047 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0047 >/dev/ttyPS0
+[13678ms] R0047
+[13862ms] 2048+0 records in
+2048+0 records out
+D0047
+[13863ms] TX stty raw -echo; echo R0048 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0048 >/dev/ttyPS0
+[13909ms] sh-4.4# R0048
+[14129ms] 2048+0 records in
+2048+0 records out
+D0048
+sh-4.4# [14129ms] TX stty raw -echo; echo R0049 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0049 >/dev/ttyPS0
+[14176ms] R0049
+[14393ms] 2048+0 records in
+2048+0 records out
+D0049
+sh-4.4# [14394ms] TX stty raw -echo; echo R0050 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0050 >/dev/ttyPS0
+[14440ms] R0050
+[14658ms] 2048+0 records in
+2048+0 records out
+D0050
+sh-4.4# [14659ms] TX stty raw -echo; echo R0051 >/dev/ttyPS0; dd bs=1 count=538 >> /tmp/alpine/libdbus-1.so.3.32.4.gz; echo D0051 >/dev/ttyPS0
+[14705ms] R0051
+[14796ms] 538+0 records in
+538+0 records out
+D0051
+sh-4.4# 

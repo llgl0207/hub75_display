@@ -1,0 +1,4 @@
+﻿root
+Password: 
+7[r[999;999H[6nroot@(none):~# echo LOGIN_OK_5
+LOGIN_OK_5

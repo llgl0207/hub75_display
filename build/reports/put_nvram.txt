@@ -1,0 +1,7 @@
+﻿RAWOK
+root@(none):~# [1422ms] TX stty raw -echo; echo R0000 >/dev/ttyPS0; dd bs=1 count=875 >> /tmp/nvram.txt; echo D0000 >/dev/ttyPS0
+[1494ms] R0000
+[1632ms] 875+0 records in
+875+0 records out
+D0000
+root@(none):~# 

@@ -1,0 +1,45 @@
+﻿mount -t proc proc /proc
+root@(none):~# 
+root@(none):~# mount -t sysfs sysfs /sys
+root@(none):~# 
+root@(none):~# echo MARK_NETNOW
+MARK_NETNOW
+root@(none):~# 
+root@(none):~# ls /sys/class/net
+eth0   lo     sit0   wlan0
+root@(none):~# 
+root@(none):~# ifconfig -a
+eth0      Link encap:Ethernet  HWaddr 00:0A:35:00:1E:53  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+          Interrupt:26 Base address:0xb000 
+
+lo        Link encap:Local Loopback  
+          LOOPBACK  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+sit0      Link encap:IPv6-in-IPv4  
+          NOARP  MTU:1480  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan0     Link encap:Ethernet  HWaddr C0:F5:35:36:72:3E  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+root@(none):~# 
+root@(none):~# echo MARK_NETNOW_DONE
+MARK_NETNOW_DONE
+root@(none):~# 
+root@(none):~# 

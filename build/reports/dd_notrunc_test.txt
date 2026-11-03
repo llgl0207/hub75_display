@@ -1,0 +1,1 @@
+﻿cd /tmp; dd if=/dev/zero of=t.bin bs=100 count=1 2>/dev/null; printf "XXXXXXXXXX" > p.bin; ls -l t.bin; dd if=p.bin of=t.bin bs=1 seek=50 conv=notrunc 2>&1; ls -l t.bin; dd if=p.bin of=t.bin bs=1 seek=60 2>&1; ls -l t.bin

@@ -1,0 +1,15 @@
+echo MARK_CLEAN
+ps | grep wpa
+killall wpa_supplicant 2>/dev/null
+sleep 1
+ps | grep wpa
+rm -rf /var/run/wpa_supplicant
+mkdir -p /var/run/wpa_supplicant
+echo MARK_WPAQ
+/tmp/wpa_supplicant -Dnl80211 -iwlan0 -c/tmp/wpa.conf > /tmp/wpa.log 2>&1 &
+sleep 10
+cat /tmp/wpa.log
+echo ---STATUS---
+/tmp/wpa_cli -i wlan0 status
+ps | grep wpa
+echo MARK_WPAQ_DONE

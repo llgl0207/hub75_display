@@ -1,0 +1,8 @@
+echo MARK_WPAALP
+LD_LIBRARY_PATH=/tmp/alpine/lib:/tmp/alpine/usr/lib /tmp/alpine/lib/ld-musl-armhf.so.1 /tmp/alpine/sbin/wpa_supplicant -Dnl80211 -iwlan0 -c/tmp/wpa.conf > /tmp/wpa2.log 2>&1 &
+sleep 12
+cat /tmp/wpa2.log
+echo ---STATUS---
+LD_LIBRARY_PATH=/tmp/alpine/lib:/tmp/alpine/usr/lib /tmp/alpine/lib/ld-musl-armhf.so.1 /tmp/alpine/sbin/wpa_cli -i wlan0 status
+ps | grep wpa
+echo MARK_WPAALP_DONE

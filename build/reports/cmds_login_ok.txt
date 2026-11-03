@@ -1,0 +1,4 @@
+echo LOGIN_OK
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+echo LOGIN_DONE

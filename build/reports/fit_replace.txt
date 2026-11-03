@@ -1,0 +1,1 @@
+﻿cd /run/media/mmcblk0p1; cp image.ub image_ub_orig.bin; mv image_new.ub image.ub; sync; ls -l image.ub image_ub_orig.bin >/dev/ttyPS0; md5sum image.ub >/dev/ttyPS0; echo IMAGE_REPLACED >/dev/ttyPS0

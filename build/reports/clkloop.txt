@@ -1,0 +1,49 @@
+﻿echo MARK_LOOP
+MARK_LOOP
+sh-4.4# 
+sh-4.4# rm -f /tmp/clk.log
+sh-4.4# 
+sh-4.4# grep -iE "mmc|sdhci|e0101000" /proc/interrupts
+ 27:         35     GIC-0  56 Level     mmc0
+ 28:          0     GIC-0  79 Level     mmc1
+sh-4.4# 
+sh-4.4# ( i=0; while [ $i -lt 4000 ]; do devmem 0xE010102C 16 >> /tmp/clk.log; i==$((i+1)); done ) & LPID=$!
+[1] 810
+sh-4.4# 
+sh-4.4# echo LOOP_STARTED
+LOOP_STARTED
+sh-4.4# 
+sh-4.4# echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/unbind
+sh-4.4# 
+sh-4.4# sleep 1
+sh-4.4# 
+sh-4.4# echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/bind
+mmc1: SDHCI controller on e0101000.mmc [e0101000.mmc] using ADMA
+sdhci-arasan e0101000.mmc: Unbalanced pm_runtime_enable!
+sh-4.4# 
+sh-4.4# sleep 3
+kill $LPID 2>/dev/null
+
+echo MARK_SORT
+
+sh-4.4# 
+sh-4.4# kill $LPID 2>/dev/null
+sh-4.4# 
+sh-4.4# echo MARK_SORT
+MARK_SORT
+sh-4.4# 
+sh-4.4# sort -u /tmp/clk.log
+0x0000
+0x8007
+sh-4.4# 
+sh-4.4# wc -l /tmp/clk.log
+1628 /tmp/clk.log
+sh-4.4# 
+sh-4.4# grep -iE "mmc|sdhci|e0101000" /proc/interrupts
+ 27:         35     GIC-0  56 Level     mmc0
+ 28:          0     GIC-0  79 Level     mmc1
+sh-4.4# 
+sh-4.4# echo MARK_LOOP_DONE
+MARK_LOOP_DONE
+sh-4.4# 
+sh-4.4# 

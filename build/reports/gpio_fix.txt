@@ -1,0 +1,86 @@
+﻿mount -t proc proc /proc
+sh-4.4# 
+sh-4.4# mount -t sysfs sysfs /sys
+sh-4.4# 
+sh-4.4# mount -t devtmpfs dev /dev
+sh-4.4# 
+sh-4.4# mount -t debugfs none /sys/kernel/debug
+mount: mounting none on /sys/kernel/debug failed: No such file or directory
+sh-4.4# 
+sh-4.4# echo MARK_START
+MARK_START
+sh-4.4# 
+sh-4.4# devmem 0xE000A040 32
+0x00003E33
+sh-4.4# 
+sh-4.4# devmem 0xE000A060 32
+0x00003E33
+sh-4.4# 
+sh-4.4# devmem 0xE000A204 32
+0x00000000
+sh-4.4# 
+sh-4.4# devmem 0xE000A208 32
+0x00000000
+sh-4.4# 
+sh-4.4# devmem 0xF8000720 32
+0x00000600
+sh-4.4# 
+sh-4.4# devmem 0xF8000728 32
+0x00001600
+sh-4.4# 
+sh-4.4# devmem 0xE010102C 32
+0x00000000
+sh-4.4# 
+sh-4.4# devmem 0xE0101024 32
+0x01F20000
+sh-4.4# 
+sh-4.4# echo MARK_SET
+MARK_SET
+sh-4.4# 
+sh-4.4# devmem 0xE000A204 32 0x00000100
+sh-4.4# 
+sh-4.4# devmem 0xE000A208 32 0x00000100
+sh-4.4# 
+sh-4.4# devmem 0xE000A000 32 0xFEFF0100
+sh-4.4# 
+sh-4.4# devmem 0xE000A040 32
+0x00003F33
+sh-4.4# 
+sh-4.4# devmem 0xE000A060 32
+0x00003E33
+sh-4.4# 
+sh-4.4# sleep 1
+sh-4.4# 
+sh-4.4# echo MARK_SDIO
+MARK_SDIO
+sh-4.4# 
+sh-4.4# ls /sys/bus/sdio/devices
+sh-4.4# 
+sh-4.4# dmesg | grep -i mmc1 | tail -10
+mmc1: SDHCI controller on e0101000.mmc [e0101000.mmc] using ADMA
+sh-4.4# 
+sh-4.4# echo MARK_REBIND
+MARK_REBIND
+sh-4.4# 
+sh-4.4# echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/unbind
+sh-4.4# 
+sh-4.4# sleep 1
+sh-4.4# 
+sh-4.4# echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/bind
+mmc1: SDHCI controller on e0101000.mmc [e0101000.mmc] using ADMA
+sdhci-arasan e0101000.mmc: Unbalanced pm_runtime_enable!
+sh-4.4# 
+sh-4.4# sleep 2
+ls /sys/bus/sdio/devices
+
+sh-4.4# 
+sh-4.4# ls /sys/bus/sdio/devices
+sh-4.4# 
+sh-4.4# dmesg | grep -iE "mmc1|sdio" | tail -15
+mmc1: SDHCI controller on e0101000.mmc [e0101000.mmc] using ADMA
+mmc1: SDHCI controller on e0101000.mmc [e0101000.mmc] using ADMA
+sh-4.4# 
+sh-4.4# echo MARK_DONE
+MARK_DONE
+sh-4.4# 
+sh-4.4# 

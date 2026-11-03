@@ -1,0 +1,32 @@
+mount -t devtmpfs dev /dev
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mkdir -p /mnt/boot
+mount -t vfat /dev/mmcblk0p1 /mnt/boot
+ls -l /mnt/boot/brcmfmac43430-sdio-2019.bin
+mkdir -p /lib/firmware/brcm
+cp /mnt/boot/brcmfmac43430-sdio-2019.bin /lib/firmware/brcm/brcmfmac43430-sdio.bin
+cp /mnt/boot/brcmfmac43430-sdio.txt /lib/firmware/brcm/brcmfmac43430-sdio.txt
+ls -l /lib/firmware/brcm
+echo MARK_SET2
+devmem 0xF8000008 32 0x0000DF0D
+devmem 0xF8000728 32 0x00001680
+devmem 0xF800072C 32 0x00001680
+devmem 0xF8000730 32 0x00001680
+devmem 0xF8000734 32 0x00001680
+devmem 0xF8000738 32 0x00001680
+devmem 0xF800073C 32 0x00001680
+devmem 0xE000A204 32 0x00000100
+devmem 0xE000A208 32 0x00000100
+devmem 0xE000A000 32 0xFEFF0100
+sleep 1
+devmem 0xE0101028 32 0x000000C0
+sleep 3
+ls /sys/bus/sdio/devices
+insmod /mnt/boot/wifi/cfg80211.ko
+insmod /mnt/boot/wifi/brcmutil.ko
+insmod /mnt/boot/wifi/brcmfmac.ko
+sleep 6
+dmesg | tail -15
+ls /sys/class/net
+echo MARK_SET2_DONE

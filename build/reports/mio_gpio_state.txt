@@ -1,0 +1,27 @@
+﻿echo ---MIO0-9--- >/dev/ttyPS0; for a in 0xF8000700 0xF8000704 0xF8000708 0xF800070C 0xF8000710 0xF8000714 0xF8000718 0xF800071C 0xF8000720 0xF8000724; do devmem $a 32 >/dev/ttyPS0 2>&1; done; echo ---GPIO--- >/dev/ttyPS0; for a in 0xE000A040 0xE000A044 0xE000A048 0xE000A04C 0xE000A050 0xE000A054; do devmem $a 32 >/dev/ttyPS0 2>&1; done; echo ---DBG--- >/dev/ttyPS0; ls /sys/kernel/debug >/dev/ttyPS0 2>&1; cat /sys/kernel/debug/mmc1/ios >/dev/ttyPS0 2>&1; ls /sys/class/mmc_host/mmc1 >/dev/ttyPS0 2>&1; echo MIO0_DONE >/dev/ttyPS0
+---MIO0-9---
+0x00001600
+0x00001600
+0x00000600
+0x00000600
+0x00000600
+0x00000600
+0x00000600
+0x00000600
+0x00000600
+0x00001600
+---GPIO---
+0x00000233
+0x000CC000
+0x00000000
+0x00000000
+0x00000000
+0x00000000
+---DBG---
+ls: /sys/kernel/debug: No such file or directory
+cat: can't open '/sys/kernel/debug/mmc1/ios': No such file or directory
+device
+power
+subsystem
+uevent
+MIO0_DONE

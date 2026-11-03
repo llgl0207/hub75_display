@@ -1,0 +1,43 @@
+﻿echo ---SDIO--- >/dev/ttyPS0; ls /sys/bus/sdio/devices >/dev/tty
+PS0 2>&1; echo ---DM--- >/dev/ttyPS0; dmesg | grep -iE "mmc1|sdio|bcmdhd|dhd|wl_
+reg" | tail -25 >/dev/ttyPS0 2>&1; echo ---REG--- >/dev/ttyPS0; devmem 0xE010102
+C 32 >/dev/ttyPS0 2>&1; devmem 0xE0101024 32 >/dev/ttyPS0 2>&1; devmem 0xF800070
+8 32 >/dev/ttyPS0 2>&1; devmem 0xE000A044 32 >/dev/ttyPS0 2>&1; devmem 0xE000A04
+8 32 >/dev/ttyPS0 2>&1; devmem 0xE000A040 32 >/dev/ttyPS0 2>&1; echo DEMOSDIO_DO
+NE >/dev/ttyPS0
+---SDIO---
+---DM---
+failed to power up DHD generic adapter, 1 retry left
+======== PULL WL_REG_ON LOW! 146 ========
+======== PULL WL_REG_ON HIGH! 146 ========
+failed to power up DHD generic adapter, 0 retry left
+======== PULL WL_REG_ON LOW! 146 ========
+failed to power up DHD generic adapter, max retry reached**
+dhd_module_init: Failed to load the driver, try cnt 1
+dhd_wifi_platform_load: Enter
+Power-up adapter 'DHD generic adapter'
+======== PULL WL_REG_ON HIGH! 146 ========
+failed to power up DHD generic adapter, 3 retry left
+======== PULL WL_REG_ON LOW! 146 ========
+======== PULL WL_REG_ON HIGH! 146 ========
+failed to power up DHD generic adapter, 2 retry left
+======== PULL WL_REG_ON LOW! 146 ========
+======== PULL WL_REG_ON HIGH! 146 ========
+failed to power up DHD generic adapter, 1 retry left
+======== PULL WL_REG_ON LOW! 146 ========
+======== PULL WL_REG_ON HIGH! 146 ========
+failed to power up DHD generic adapter, 0 retry left
+======== PULL WL_REG_ON LOW! 146 ========
+failed to power up DHD generic adapter, max retry reached**
+dhd_module_init: Failed to load the driver, try cnt 0
+dhd_module_init: Failed to load driver max retry reached**
+dhd_module_init: Exit err=-19
+---REG---
+0x00000000
+0x01F20000
+0x00000600
+0x0004C000
+0x00000000
+0x00003E33
+DEMOSDIO_DONE
+[0;31mzynq>[m random: nonblocking pool is initialized

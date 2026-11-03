@@ -1,0 +1,4 @@
+mount -t devtmpfs dev /dev
+ls -l /dev/ttyPS0
+echo MARK_GETTY3
+/sbin/getty -L 115200 ttyPS0 vt102

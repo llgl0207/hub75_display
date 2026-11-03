@@ -1,0 +1,415 @@
+﻿RAWOK
+[1413ms] TX stty raw -echo; echo R0000 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0000 >/dev/ttyPS0
+[1469ms] R0000
+[1702ms] D0000
+[1711ms] TX stty raw -echo; echo R0001 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0001 >/dev/ttyPS0
+[1765ms] R0001
+[1985ms] D0001
+[1986ms] TX stty raw -echo; echo R0002 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0002 >/dev/ttyPS0
+[2033ms] R0002
+[2249ms] D0002
+[2249ms] TX stty raw -echo; echo R0003 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0003 >/dev/ttyPS0
+[2295ms] R0003
+[2512ms] D0003
+[2513ms] TX stty raw -echo; echo R0004 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0004 >/dev/ttyPS0
+[2558ms] R0004
+[2789ms] D0004
+[2790ms] TX stty raw -echo; echo R0005 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0005 >/dev/ttyPS0
+[2836ms] R0005
+[3068ms] D0005
+[3069ms] TX stty raw -echo; echo R0006 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0006 >/dev/ttyPS0
+[3116ms] R0006
+[3349ms] D0006
+[3350ms] TX stty raw -echo; echo R0007 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0007 >/dev/ttyPS0
+[3396ms] R0007
+[3615ms] D0007
+[3616ms] TX stty raw -echo; echo R0008 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0008 >/dev/ttyPS0
+[3662ms] R0008
+[3850ms] D0008
+[3851ms] TX stty raw -echo; echo R0009 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0009 >/dev/ttyPS0
+[3897ms] R0009
+[4130ms] D0009
+[4130ms] TX stty raw -echo; echo R0010 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0010 >/dev/ttyPS0
+[4176ms] R0010
+[4395ms] D0010
+[4396ms] TX stty raw -echo; echo R0011 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0011 >/dev/ttyPS0
+[4489ms] R0011
+[4708ms] D0011
+[4709ms] TX stty raw -echo; echo R0012 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0012 >/dev/ttyPS0
+[4755ms] R0012
+[4972ms] D0012
+[4972ms] TX stty raw -echo; echo R0013 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0013 >/dev/ttyPS0
+[5019ms] R0013
+[5236ms] D0013
+[5237ms] TX stty raw -echo; echo R0014 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0014 >/dev/ttyPS0
+[5283ms] R0014
+[5502ms] D0014
+[5503ms] TX stty raw -echo; echo R0015 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0015 >/dev/ttyPS0
+[5550ms] R0015
+[5769ms] D0015
+[5770ms] TX stty raw -echo; echo R0016 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0016 >/dev/ttyPS0
+[5817ms] R0016
+[6036ms] D0016
+[6036ms] TX stty raw -echo; echo R0017 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0017 >/dev/ttyPS0
+[6084ms] R0017
+[6272ms] D0017
+[6273ms] TX stty raw -echo; echo R0018 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0018 >/dev/ttyPS0
+[6318ms] R0018
+[6536ms] D0018
+[6536ms] TX stty raw -echo; echo R0019 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0019 >/dev/ttyPS0
+[6580ms] R0019
+[6797ms] D0019
+[6798ms] TX stty raw -echo; echo R0020 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0020 >/dev/ttyPS0
+[6843ms] R0020
+[7063ms] D0020
+[7065ms] TX stty raw -echo; echo R0021 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0021 >/dev/ttyPS0
+[7110ms] R0021
+[7329ms] D0021
+[7330ms] TX stty raw -echo; echo R0022 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0022 >/dev/ttyPS0
+[7374ms] R0022
+[7593ms] D0022
+[7594ms] TX stty raw -echo; echo R0023 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0023 >/dev/ttyPS0
+[7640ms] R0023
+[7858ms] D0023
+[7858ms] TX stty raw -echo; echo R0024 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0024 >/dev/ttyPS0
+[7904ms] R0024
+[8123ms] D0024
+[8124ms] TX stty raw -echo; echo R0025 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0025 >/dev/ttyPS0
+[8169ms] R0025
+[8388ms] D0025
+[8389ms] TX stty raw -echo; echo R0026 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0026 >/dev/ttyPS0
+[8435ms] R0026
+[8652ms] D0026
+[8653ms] TX stty raw -echo; echo R0027 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0027 >/dev/ttyPS0
+[8699ms] R0027
+[8932ms] D0027
+[8933ms] TX stty raw -echo; echo R0028 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0028 >/dev/ttyPS0
+[8993ms] R0028
+[9181ms] D0028
+[9181ms] TX stty raw -echo; echo R0029 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0029 >/dev/ttyPS0
+[9228ms] R0029
+[9462ms] D0029
+[9463ms] TX stty raw -echo; echo R0030 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0030 >/dev/ttyPS0
+[9525ms] R0030
+[9746ms] D0030
+[9747ms] TX stty raw -echo; echo R0031 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0031 >/dev/ttyPS0
+[9792ms] R0031
+[9979ms] D0031
+[9980ms] TX stty raw -echo; echo R0032 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0032 >/dev/ttyPS0
+[10026ms] R0032
+[10259ms] D0032
+[10259ms] TX stty raw -echo; echo R0033 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0033 >/dev/ttyPS0
+[10305ms] R0033
+[10491ms] D0033
+[10492ms] TX stty raw -echo; echo R0034 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0034 >/dev/ttyPS0
+[10538ms] R0034
+[10775ms] D0034
+[10775ms] TX stty raw -echo; echo R0035 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0035 >/dev/ttyPS0
+[10835ms] R0035
+[11022ms] D0035
+[11022ms] TX stty raw -echo; echo R0036 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0036 >/dev/ttyPS0
+[11070ms] R0036
+[11258ms] D0036
+[11258ms] TX stty raw -echo; echo R0037 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0037 >/dev/ttyPS0
+[11306ms] R0037
+[11538ms] D0037
+[11538ms] TX stty raw -echo; echo R0038 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0038 >/dev/ttyPS0
+[11584ms] R0038
+[11772ms] D0038
+[11772ms] TX stty raw -echo; echo R0039 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0039 >/dev/ttyPS0
+[11819ms] R0039
+[12054ms] D0039
+[12054ms] TX stty raw -echo; echo R0040 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0040 >/dev/ttyPS0
+[12099ms] R0040
+[12318ms] D0040
+[12319ms] TX stty raw -echo; echo R0041 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0041 >/dev/ttyPS0
+[12364ms] R0041
+[12582ms] D0041
+[12583ms] TX stty raw -echo; echo R0042 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0042 >/dev/ttyPS0
+[12630ms] R0042
+[12846ms] D0042
+[12847ms] TX stty raw -echo; echo R0043 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0043 >/dev/ttyPS0
+[12892ms] R0043
+[13109ms] D0043
+[13110ms] TX stty raw -echo; echo R0044 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0044 >/dev/ttyPS0
+[13156ms] R0044
+[13374ms] D0044
+[13375ms] TX stty raw -echo; echo R0045 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0045 >/dev/ttyPS0
+[13421ms] R0045
+[13641ms] D0045
+[13642ms] TX stty raw -echo; echo R0046 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0046 >/dev/ttyPS0
+[13688ms] R0046
+[13918ms] D0046
+[13918ms] TX stty raw -echo; echo R0047 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0047 >/dev/ttyPS0
+[13965ms] R0047
+[14184ms] D0047
+[14185ms] TX stty raw -echo; echo R0048 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0048 >/dev/ttyPS0
+[14232ms] R0048
+[14450ms] D0048
+[14450ms] TX stty raw -echo; echo R0049 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0049 >/dev/ttyPS0
+[14496ms] R0049
+[14717ms] D0049
+[14717ms] TX stty raw -echo; echo R0050 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0050 >/dev/ttyPS0
+[14765ms] R0050
+[14983ms] D0050
+[14984ms] TX stty raw -echo; echo R0051 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0051 >/dev/ttyPS0
+[15031ms] R0051
+[15251ms] D0051
+[15251ms] TX stty raw -echo; echo R0052 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0052 >/dev/ttyPS0
+[15296ms] R0052
+[15513ms] D0052
+[15514ms] TX stty raw -echo; echo R0053 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0053 >/dev/ttyPS0
+[15560ms] R0053
+[15777ms] D0053
+[15777ms] TX stty raw -echo; echo R0054 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0054 >/dev/ttyPS0
+[15824ms] R0054
+[16041ms] D0054
+[16042ms] TX stty raw -echo; echo R0055 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0055 >/dev/ttyPS0
+[16089ms] R0055
+[16275ms] D0055
+[16276ms] TX stty raw -echo; echo R0056 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0056 >/dev/ttyPS0
+[16337ms] R0056
+[16571ms] D0056
+[16572ms] TX stty raw -echo; echo R0057 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0057 >/dev/ttyPS0
+[16618ms] R0057
+[16805ms] D0057
+[16806ms] TX stty raw -echo; echo R0058 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0058 >/dev/ttyPS0
+[16852ms] R0058
+[17083ms] D0058
+[17084ms] TX stty raw -echo; echo R0059 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0059 >/dev/ttyPS0
+[17131ms] R0059
+[17365ms] D0059
+[17366ms] TX stty raw -echo; echo R0060 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0060 >/dev/ttyPS0
+[17411ms] R0060
+[17629ms] D0060
+[17630ms] TX stty raw -echo; echo R0061 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0061 >/dev/ttyPS0
+[17675ms] R0061
+[17893ms] D0061
+[17893ms] TX stty raw -echo; echo R0062 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0062 >/dev/ttyPS0
+[17940ms] R0062
+[18157ms] D0062
+[18158ms] TX stty raw -echo; echo R0063 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0063 >/dev/ttyPS0
+[18203ms] R0063
+[18419ms] D0063
+[18420ms] TX stty raw -echo; echo R0064 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0064 >/dev/ttyPS0
+[18512ms] R0064
+[18729ms] D0064
+[18730ms] TX stty raw -echo; echo R0065 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0065 >/dev/ttyPS0
+[18776ms] R0065
+[19008ms] D0065
+[19009ms] TX stty raw -echo; echo R0066 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0066 >/dev/ttyPS0
+[19056ms] R0066
+[19244ms] D0066
+[19245ms] TX stty raw -echo; echo R0067 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0067 >/dev/ttyPS0
+[19293ms] R0067
+[19479ms] D0067
+[19480ms] TX stty raw -echo; echo R0068 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0068 >/dev/ttyPS0
+[19541ms] R0068
+[19773ms] D0068
+[19774ms] TX stty raw -echo; echo R0069 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0069 >/dev/ttyPS0
+[19821ms] R0069
+[20007ms] D0069
+[20007ms] TX stty raw -echo; echo R0070 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0070 >/dev/ttyPS0
+[20055ms] R0070
+[20289ms] D0070
+[20289ms] TX stty raw -echo; echo R0071 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0071 >/dev/ttyPS0
+[20335ms] R0071
+[20566ms] D0071
+[20566ms] TX stty raw -echo; echo R0072 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0072 >/dev/ttyPS0
+[20613ms] R0072
+[20832ms] D0072
+[20833ms] TX stty raw -echo; echo R0073 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0073 >/dev/ttyPS0
+[20878ms] R0073
+[21098ms] D0073
+[21098ms] TX stty raw -echo; echo R0074 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0074 >/dev/ttyPS0
+[21145ms] R0074
+[21363ms] D0074
+[21364ms] TX stty raw -echo; echo R0075 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0075 >/dev/ttyPS0
+[21409ms] R0075
+[21628ms] D0075
+[21629ms] TX stty raw -echo; echo R0076 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0076 >/dev/ttyPS0
+[21676ms] R0076
+[21894ms] D0076
+[21894ms] TX stty raw -echo; echo R0077 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0077 >/dev/ttyPS0
+[21941ms] R0077
+[22158ms] D0077
+[22159ms] TX stty raw -echo; echo R0078 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0078 >/dev/ttyPS0
+[22205ms] R0078
+[22423ms] D0078
+[22424ms] TX stty raw -echo; echo R0079 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0079 >/dev/ttyPS0
+[22517ms] R0079
+[22735ms] D0079
+[22736ms] TX stty raw -echo; echo R0080 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0080 >/dev/ttyPS0
+[22781ms] R0080
+[23001ms] D0080
+[23002ms] TX stty raw -echo; echo R0081 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0081 >/dev/ttyPS0
+[23047ms] R0081
+[23263ms] D0081
+[23264ms] TX stty raw -echo; echo R0082 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0082 >/dev/ttyPS0
+[23311ms] R0082
+[23527ms] D0082
+[23527ms] TX stty raw -echo; echo R0083 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0083 >/dev/ttyPS0
+[23575ms] R0083
+[23794ms] D0083
+[23794ms] TX stty raw -echo; echo R0084 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0084 >/dev/ttyPS0
+[23842ms] R0084
+[24060ms] D0084
+[24061ms] TX stty raw -echo; echo R0085 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0085 >/dev/ttyPS0
+[24107ms] R0085
+[24325ms] D0085
+[24326ms] TX stty raw -echo; echo R0086 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0086 >/dev/ttyPS0
+[24373ms] R0086
+[24591ms] D0086
+[24592ms] TX stty raw -echo; echo R0087 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0087 >/dev/ttyPS0
+[24637ms] R0087
+[24869ms] D0087
+[24869ms] TX stty raw -echo; echo R0088 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0088 >/dev/ttyPS0
+[24931ms] R0088
+[25119ms] D0088
+[25119ms] TX stty raw -echo; echo R0089 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0089 >/dev/ttyPS0
+[25167ms] R0089
+[25400ms] D0089
+[25401ms] TX stty raw -echo; echo R0090 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0090 >/dev/ttyPS0
+[25461ms] R0090
+[25648ms] D0090
+[25648ms] TX stty raw -echo; echo R0091 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0091 >/dev/ttyPS0
+[25695ms] R0091
+[25881ms] D0091
+[25882ms] TX stty raw -echo; echo R0092 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0092 >/dev/ttyPS0
+[25928ms] R0092
+[26163ms] D0092
+[26164ms] TX stty raw -echo; echo R0093 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0093 >/dev/ttyPS0
+[26210ms] R0093
+[26397ms] D0093
+[26397ms] TX stty raw -echo; echo R0094 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0094 >/dev/ttyPS0
+[26445ms] R0094
+[26634ms] D0094
+[26634ms] TX stty raw -echo; echo R0095 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0095 >/dev/ttyPS0
+[26681ms] R0095
+[26867ms] D0095
+[26868ms] TX stty raw -echo; echo R0096 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0096 >/dev/ttyPS0
+[26914ms] R0096
+[27101ms] D0096
+[27101ms] TX stty raw -echo; echo R0097 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0097 >/dev/ttyPS0
+[27147ms] R0097
+[27378ms] D0097
+[27379ms] TX stty raw -echo; echo R0098 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0098 >/dev/ttyPS0
+[27425ms] R0098
+[27644ms] D0098
+[27644ms] TX stty raw -echo; echo R0099 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0099 >/dev/ttyPS0
+[27705ms] R0099
+[27922ms] D0099
+[27922ms] TX stty raw -echo; echo R0100 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0100 >/dev/ttyPS0
+[27968ms] R0100
+[28189ms] D0100
+[28190ms] TX stty raw -echo; echo R0101 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0101 >/dev/ttyPS0
+[28236ms] R0101
+[28455ms] D0101
+[28456ms] TX stty raw -echo; echo R0102 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0102 >/dev/ttyPS0
+[28551ms] R0102
+[28768ms] D0102
+[28768ms] TX stty raw -echo; echo R0103 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0103 >/dev/ttyPS0
+[28814ms] R0103
+[29046ms] D0103
+[29046ms] TX stty raw -echo; echo R0104 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0104 >/dev/ttyPS0
+[29092ms] R0104
+[29309ms] D0104
+[29310ms] TX stty raw -echo; echo R0105 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0105 >/dev/ttyPS0
+[29357ms] R0105
+[29577ms] D0105
+[29578ms] TX stty raw -echo; echo R0106 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0106 >/dev/ttyPS0
+[29624ms] R0106
+[29844ms] D0106
+[29845ms] TX stty raw -echo; echo R0107 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0107 >/dev/ttyPS0
+[29890ms] R0107
+[30107ms] D0107
+[30107ms] TX stty raw -echo; echo R0108 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0108 >/dev/ttyPS0
+[30153ms] R0108
+[30371ms] D0108
+[30371ms] TX stty raw -echo; echo R0109 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0109 >/dev/ttyPS0
+[30418ms] R0109
+[30636ms] D0109
+[30636ms] TX stty raw -echo; echo R0110 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0110 >/dev/ttyPS0
+[30684ms] R0110
+[30902ms] D0110
+[30902ms] TX stty raw -echo; echo R0111 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0111 >/dev/ttyPS0
+[30949ms] R0111
+[31168ms] D0111
+[31169ms] TX stty raw -echo; echo R0112 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0112 >/dev/ttyPS0
+[31216ms] R0112
+[31433ms] D0112
+[31434ms] TX stty raw -echo; echo R0113 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0113 >/dev/ttyPS0
+[31480ms] R0113
+[31698ms] D0113
+[31699ms] TX stty raw -echo; echo R0114 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0114 >/dev/ttyPS0
+[31745ms] R0114
+[31931ms] D0114
+[31932ms] TX stty raw -echo; echo R0115 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0115 >/dev/ttyPS0
+[31992ms] R0115
+[32228ms] D0115
+[32229ms] TX stty raw -echo; echo R0116 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0116 >/dev/ttyPS0
+[32291ms] R0116
+[32524ms] D0116
+[32525ms] TX stty raw -echo; echo R0117 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0117 >/dev/ttyPS0
+[32571ms] R0117
+[32804ms] D0117
+[32804ms] TX stty raw -echo; echo R0118 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0118 >/dev/ttyPS0
+[32850ms] R0118
+[33037ms] D0118
+[33038ms] TX stty raw -echo; echo R0119 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0119 >/dev/ttyPS0
+[33084ms] R0119
+[33272ms] D0119
+[33273ms] TX stty raw -echo; echo R0120 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0120 >/dev/ttyPS0
+[33319ms] R0120
+[33506ms] D0120
+[33508ms] TX stty raw -echo; echo R0121 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0121 >/dev/ttyPS0
+[33553ms] R0121
+[33788ms] D0121
+[33789ms] TX stty raw -echo; echo R0122 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0122 >/dev/ttyPS0
+[33836ms] R0122
+[34023ms] D0122
+[34024ms] TX stty raw -echo; echo R0123 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0123 >/dev/ttyPS0
+[34071ms] R0123
+[34258ms] D0123
+[34259ms] TX stty raw -echo; echo R0124 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0124 >/dev/ttyPS0
+[34306ms] R0124
+[34542ms] D0124
+[34542ms] TX stty raw -echo; echo R0125 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0125 >/dev/ttyPS0
+[34588ms] R0125
+[34775ms] D0125
+[34776ms] TX stty raw -echo; echo R0126 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0126 >/dev/ttyPS0
+[34837ms] R0126
+[35070ms] D0126
+[35071ms] TX stty raw -echo; echo R0127 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0127 >/dev/ttyPS0
+[35117ms] R0127
+[35305ms] D0127
+[35306ms] TX stty raw -echo; echo R0128 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0128 >/dev/ttyPS0
+[35352ms] R0128
+[35587ms] D0128
+[35588ms] TX stty raw -echo; echo R0129 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0129 >/dev/ttyPS0
+[35635ms] R0129
+[35854ms] D0129
+[35855ms] TX stty raw -echo; echo R0130 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0130 >/dev/ttyPS0
+[35902ms] R0130
+[36121ms] D0130
+[36121ms] TX stty raw -echo; echo R0131 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0131 >/dev/ttyPS0
+[36167ms] R0131
+[36388ms] D0131
+[36388ms] TX stty raw -echo; echo R0132 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0132 >/dev/ttyPS0
+[36434ms] R0132
+[36652ms] D0132
+[36652ms] TX stty raw -echo; echo R0133 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0133 >/dev/ttyPS0
+[36712ms] R0133
+[36944ms] D0133
+[36944ms] TX stty raw -echo; echo R0134 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0134 >/dev/ttyPS0
+[36990ms] R0134
+[37210ms] D0134
+[37211ms] TX stty raw -echo; echo R0135 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0135 >/dev/ttyPS0
+[37258ms] R0135
+[37446ms] D0135
+[37447ms] TX stty raw -echo; echo R0136 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0136 >/dev/ttyPS0
+[37508ms] R0136
+[37742ms] D0136
+[37742ms] TX stty raw -echo; echo R0137 >/dev/ttyPS0; dd bs=1 count=1652 >> /run/media/mmcblk0p1/wifi/cfg80211.ko; stty sane; echo D0137 >/dev/ttyPS0
+[37787ms] R0137
+[37973ms] D0137

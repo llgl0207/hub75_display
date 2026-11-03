@@ -1,0 +1,1012 @@
+﻿RAWOK
+sh-4.4# [1420ms] TX stty raw -echo; echo R0000 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0000 >/dev/ttyPS0
+[1474ms] R0000
+[1663ms] 2048+0 records in
+2048+0 records out
+D0000
+[1671ms] TX stty raw -echo; echo R0001 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0001 >/dev/ttyPS0
+[1727ms] sh-4.4# R0001
+[1914ms] 2048+0 records in
+2048+0 records out
+D0001
+[1914ms] TX stty raw -echo; echo R0002 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0002 >/dev/ttyPS0
+[1976ms] sh-4.4# R0002
+[2160ms] 2048+0 records in
+2048+0 records out
+D0002
+[2161ms] TX stty raw -echo; echo R0003 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0003 >/dev/ttyPS0
+[2207ms] sh-4.4# R0003
+[2395ms] 2048+0 records in
+2048+0 records out
+D0003
+[2396ms] TX stty raw -echo; echo R0004 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0004 >/dev/ttyPS0
+[2441ms] sh-4.4# R0004
+[2660ms] 2048+0 records in
+2048+0 records out
+D0004
+sh-4.4# [2661ms] TX stty raw -echo; echo R0005 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0005 >/dev/ttyPS0
+[2707ms] R0005
+[2891ms] 2048+0 records in
+2048+0 records out
+D0005
+[2892ms] TX stty raw -echo; echo R0006 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0006 >/dev/ttyPS0
+[2939ms] sh-4.4# R0006
+[3156ms] 2048+0 records in
+2048+0 records out
+D0006
+sh-4.4# [3157ms] TX stty raw -echo; echo R0007 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0007 >/dev/ttyPS0
+[3203ms] R0007
+[3421ms] 2048+0 records in
+2048+0 records out
+D0007
+sh-4.4# [3421ms] TX stty raw -echo; echo R0008 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0008 >/dev/ttyPS0
+[3466ms] R0008
+[3685ms] 2048+0 records in
+2048+0 records out
+D0008
+sh-4.4# [3686ms] TX stty raw -echo; echo R0009 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0009 >/dev/ttyPS0
+[3731ms] R0009
+[3950ms] 2048+0 records in
+2048+0 records out
+D0009
+sh-4.4# [3951ms] TX stty raw -echo; echo R0010 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0010 >/dev/ttyPS0
+[3997ms] R0010
+[4213ms] 2048+0 records in
+2048+0 records out
+D0010
+sh-4.4# [4214ms] TX stty raw -echo; echo R0011 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0011 >/dev/ttyPS0
+[4261ms] R0011
+[4478ms] 2048+0 records in
+2048+0 records out
+D0011
+sh-4.4# [4479ms] TX stty raw -echo; echo R0012 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0012 >/dev/ttyPS0
+[4525ms] R0012
+[4710ms] 2048+0 records in
+2048+0 records out
+D0012
+[4710ms] TX stty raw -echo; echo R0013 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0013 >/dev/ttyPS0
+[4757ms] sh-4.4# R0013
+[4944ms] 2048+0 records in
+2048+0 records out
+D0013
+[4945ms] TX stty raw -echo; echo R0014 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0014 >/dev/ttyPS0
+[4991ms] sh-4.4# R0014
+[5177ms] 2048+0 records in
+2048+0 records out
+D0014
+[5178ms] TX stty raw -echo; echo R0015 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0015 >/dev/ttyPS0
+[5224ms] sh-4.4# R0015
+[5412ms] 2048+0 records in
+2048+0 records out
+D0015
+[5412ms] TX stty raw -echo; echo R0016 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0016 >/dev/ttyPS0
+[5458ms] sh-4.4# R0016
+[5673ms] 2048+0 records in
+2048+0 records out
+D0016
+sh-4.4# [5674ms] TX stty raw -echo; echo R0017 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0017 >/dev/ttyPS0
+[5721ms] R0017
+[5906ms] 2048+0 records in
+2048+0 records out
+D0017
+[5906ms] TX stty raw -echo; echo R0018 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0018 >/dev/ttyPS0
+[5952ms] sh-4.4# R0018
+[6171ms] 2048+0 records in
+2048+0 records out
+D0018
+sh-4.4# [6172ms] TX stty raw -echo; echo R0019 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0019 >/dev/ttyPS0
+[6217ms] R0019
+[6436ms] 2048+0 records in
+2048+0 records out
+D0019
+sh-4.4# [6436ms] TX stty raw -echo; echo R0020 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0020 >/dev/ttyPS0
+[6482ms] R0020
+[6700ms] 2048+0 records in
+2048+0 records out
+D0020
+sh-4.4# [6702ms] TX stty raw -echo; echo R0021 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0021 >/dev/ttyPS0
+[6748ms] R0021
+[6966ms] 2048+0 records in
+2048+0 records out
+D0021
+sh-4.4# [6967ms] TX stty raw -echo; echo R0022 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0022 >/dev/ttyPS0
+[7012ms] R0022
+[7197ms] 2048+0 records in
+2048+0 records out
+D0022
+[7198ms] TX stty raw -echo; echo R0023 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0023 >/dev/ttyPS0
+[7244ms] sh-4.4# R0023
+[7428ms] 2048+0 records in
+2048+0 records out
+D0023
+[7429ms] TX stty raw -echo; echo R0024 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0024 >/dev/ttyPS0
+[7475ms] sh-4.4# R0024
+[7661ms] 2048+0 records in
+2048+0 records out
+D0024
+[7662ms] TX stty raw -echo; echo R0025 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0025 >/dev/ttyPS0
+[7707ms] sh-4.4# R0025
+[7928ms] 2048+0 records in
+2048+0 records out
+D0025
+sh-4.4# [7929ms] TX stty raw -echo; echo R0026 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0026 >/dev/ttyPS0
+[7976ms] R0026
+[8161ms] 2048+0 records in
+2048+0 records out
+D0026
+[8161ms] TX stty raw -echo; echo R0027 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0027 >/dev/ttyPS0
+[8207ms] sh-4.4# R0027
+[8427ms] 2048+0 records in
+2048+0 records out
+D0027
+sh-4.4# [8428ms] TX stty raw -echo; echo R0028 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0028 >/dev/ttyPS0
+[8474ms] R0028
+[8662ms] 2048+0 records in
+2048+0 records out
+D0028
+[8662ms] TX stty raw -echo; echo R0029 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0029 >/dev/ttyPS0
+[8708ms] sh-4.4# R0029
+[8895ms] 2048+0 records in
+2048+0 records out
+D0029
+[8895ms] TX stty raw -echo; echo R0030 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0030 >/dev/ttyPS0
+[8942ms] sh-4.4# R0030
+[9126ms] 2048+0 records in
+2048+0 records out
+D0030
+[9127ms] TX stty raw -echo; echo R0031 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0031 >/dev/ttyPS0
+[9172ms] sh-4.4# R0031
+[9389ms] 2048+0 records in
+2048+0 records out
+D0031
+sh-4.4# [9390ms] TX stty raw -echo; echo R0032 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0032 >/dev/ttyPS0
+[9436ms] R0032
+[9655ms] 2048+0 records in
+2048+0 records out
+D0032
+sh-4.4# [9656ms] TX stty raw -echo; echo R0033 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0033 >/dev/ttyPS0
+[9702ms] R0033
+[9921ms] 2048+0 records in
+2048+0 records out
+D0033
+sh-4.4# [9921ms] TX stty raw -echo; echo R0034 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0034 >/dev/ttyPS0
+[9966ms] R0034
+[10185ms] 2048+0 records in
+2048+0 records out
+D0034
+sh-4.4# [10186ms] TX stty raw -echo; echo R0035 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0035 >/dev/ttyPS0
+[10231ms] R0035
+[10448ms] 2048+0 records in
+2048+0 records out
+D0035
+sh-4.4# [10448ms] TX stty raw -echo; echo R0036 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0036 >/dev/ttyPS0
+[10494ms] R0036
+[10678ms] 2048+0 records in
+2048+0 records out
+D0036
+[10678ms] TX stty raw -echo; echo R0037 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0037 >/dev/ttyPS0
+[10724ms] sh-4.4# R0037
+[10909ms] 2048+0 records in
+2048+0 records out
+D0037
+[10910ms] TX stty raw -echo; echo R0038 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0038 >/dev/ttyPS0
+[10954ms] sh-4.4# R0038
+[11138ms] 2048+0 records in
+2048+0 records out
+D0038
+[11139ms] TX stty raw -echo; echo R0039 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0039 >/dev/ttyPS0
+[11185ms] sh-4.4# R0039
+[11403ms] 2048+0 records in
+2048+0 records out
+D0039
+sh-4.4# [11404ms] TX stty raw -echo; echo R0040 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0040 >/dev/ttyPS0
+[11449ms] R0040
+[11665ms] 2048+0 records in
+2048+0 records out
+D0040
+sh-4.4# [11666ms] TX stty raw -echo; echo R0041 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0041 >/dev/ttyPS0
+[11712ms] R0041
+[11942ms] 2048+0 records in
+2048+0 records out
+D0041
+sh-4.4# [11942ms] TX stty raw -echo; echo R0042 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0042 >/dev/ttyPS0
+[11988ms] R0042
+[12206ms] 2048+0 records in
+2048+0 records out
+D0042
+sh-4.4# [12207ms] TX stty raw -echo; echo R0043 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0043 >/dev/ttyPS0
+[12254ms] R0043
+[12439ms] 2048+0 records in
+2048+0 records out
+D0043
+[12440ms] TX stty raw -echo; echo R0044 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0044 >/dev/ttyPS0
+[12486ms] sh-4.4# R0044
+[12702ms] 2048+0 records in
+2048+0 records out
+D0044
+sh-4.4# [12703ms] TX stty raw -echo; echo R0045 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0045 >/dev/ttyPS0
+[12747ms] R0045
+[12967ms] 2048+0 records in
+2048+0 records out
+D0045
+sh-4.4# [12967ms] TX stty raw -echo; echo R0046 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0046 >/dev/ttyPS0
+[13015ms] R0046
+[13233ms] 2048+0 records in
+2048+0 records out
+D0046
+sh-4.4# [13234ms] TX stty raw -echo; echo R0047 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0047 >/dev/ttyPS0
+[13280ms] R0047
+[13497ms] 2048+0 records in
+2048+0 records out
+D0047
+sh-4.4# [13498ms] TX stty raw -echo; echo R0048 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0048 >/dev/ttyPS0
+[13544ms] R0048
+[13761ms] 2048+0 records in
+2048+0 records out
+D0048
+sh-4.4# [13762ms] TX stty raw -echo; echo R0049 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0049 >/dev/ttyPS0
+[13809ms] R0049
+[14027ms] 2048+0 records in
+2048+0 records out
+D0049
+sh-4.4# [14028ms] TX stty raw -echo; echo R0050 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0050 >/dev/ttyPS0
+[14073ms] R0050
+[14294ms] 2048+0 records in
+2048+0 records out
+D0050
+sh-4.4# [14294ms] TX stty raw -echo; echo R0051 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0051 >/dev/ttyPS0
+[14341ms] R0051
+[14560ms] 2048+0 records in
+2048+0 records out
+D0051
+sh-4.4# [14561ms] TX stty raw -echo; echo R0052 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0052 >/dev/ttyPS0
+[14608ms] R0052
+[14825ms] 2048+0 records in
+2048+0 records out
+D0052
+sh-4.4# [14826ms] TX stty raw -echo; echo R0053 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0053 >/dev/ttyPS0
+[14872ms] R0053
+[15090ms] 2048+0 records in
+2048+0 records out
+D0053
+sh-4.4# [15090ms] TX stty raw -echo; echo R0054 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0054 >/dev/ttyPS0
+[15136ms] R0054
+[15353ms] 2048+0 records in
+2048+0 records out
+D0054
+sh-4.4# [15354ms] TX stty raw -echo; echo R0055 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0055 >/dev/ttyPS0
+[15400ms] R0055
+[15619ms] 2048+0 records in
+2048+0 records out
+D0055
+sh-4.4# [15619ms] TX stty raw -echo; echo R0056 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0056 >/dev/ttyPS0
+[15667ms] R0056
+[15850ms] 2048+0 records in
+2048+0 records out
+D0056
+[15851ms] TX stty raw -echo; echo R0057 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0057 >/dev/ttyPS0
+[15914ms] sh-4.4# R0057
+[16099ms] 2048+0 records in
+2048+0 records out
+D0057
+[16100ms] TX stty raw -echo; echo R0058 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0058 >/dev/ttyPS0
+[16146ms] sh-4.4# R0058
+[16331ms] 2048+0 records in
+2048+0 records out
+D0058
+[16331ms] TX stty raw -echo; echo R0059 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0059 >/dev/ttyPS0
+[16378ms] sh-4.4# R0059
+[16606ms] 2048+0 records in
+2048+0 records out
+D0059
+sh-4.4# [16607ms] TX stty raw -echo; echo R0060 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0060 >/dev/ttyPS0
+[16654ms] R0060
+[16840ms] 2048+0 records in
+2048+0 records out
+D0060
+[16841ms] TX stty raw -echo; echo R0061 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0061 >/dev/ttyPS0
+[16886ms] sh-4.4# R0061
+[17105ms] 2048+0 records in
+2048+0 records out
+D0061
+sh-4.4# [17106ms] TX stty raw -echo; echo R0062 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0062 >/dev/ttyPS0
+[17152ms] R0062
+[17337ms] 2048+0 records in
+2048+0 records out
+D0062
+[17337ms] TX stty raw -echo; echo R0063 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0063 >/dev/ttyPS0
+[17383ms] sh-4.4# R0063
+[17570ms] 2048+0 records in
+2048+0 records out
+D0063
+[17571ms] TX stty raw -echo; echo R0064 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0064 >/dev/ttyPS0
+[17632ms] sh-4.4# R0064
+[17818ms] 2048+0 records in
+2048+0 records out
+D0064
+[17819ms] TX stty raw -echo; echo R0065 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0065 >/dev/ttyPS0
+[17865ms] sh-4.4# R0065
+[18054ms] 2048+0 records in
+2048+0 records out
+D0065
+[18054ms] TX stty raw -echo; echo R0066 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0066 >/dev/ttyPS0
+[18101ms] sh-4.4# R0066
+[18288ms] 2048+0 records in
+2048+0 records out
+D0066
+[18289ms] TX stty raw -echo; echo R0067 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0067 >/dev/ttyPS0
+[18336ms] sh-4.4# R0067
+[18571ms] 2048+0 records in
+2048+0 records out
+D0067
+sh-4.4# [18571ms] TX stty raw -echo; echo R0068 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0068 >/dev/ttyPS0
+[18618ms] R0068
+[18803ms] 2048+0 records in
+2048+0 records out
+D0068
+[18804ms] TX stty raw -echo; echo R0069 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0069 >/dev/ttyPS0
+[18849ms] sh-4.4# R0069
+[19036ms] 2048+0 records in
+2048+0 records out
+D0069
+[19036ms] TX stty raw -echo; echo R0070 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0070 >/dev/ttyPS0
+[19084ms] sh-4.4# R0070
+[19273ms] 2048+0 records in
+2048+0 records out
+D0070
+[19273ms] TX stty raw -echo; echo R0071 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0071 >/dev/ttyPS0
+[19320ms] sh-4.4# R0071
+[19506ms] 2048+0 records in
+2048+0 records out
+D0071
+[19507ms] TX stty raw -echo; echo R0072 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0072 >/dev/ttyPS0
+[19552ms] sh-4.4# R0072
+[19739ms] 2048+0 records in
+2048+0 records out
+D0072
+[19740ms] TX stty raw -echo; echo R0073 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0073 >/dev/ttyPS0
+[19786ms] sh-4.4# R0073
+[19973ms] 2048+0 records in
+2048+0 records out
+D0073
+[19974ms] TX stty raw -echo; echo R0074 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0074 >/dev/ttyPS0
+[20021ms] sh-4.4# R0074
+[20205ms] 2048+0 records in
+2048+0 records out
+D0074
+[20205ms] TX stty raw -echo; echo R0075 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0075 >/dev/ttyPS0
+[20252ms] sh-4.4# R0075
+[20469ms] 2048+0 records in
+2048+0 records out
+D0075
+sh-4.4# [20469ms] TX stty raw -echo; echo R0076 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0076 >/dev/ttyPS0
+[20516ms] R0076
+[20734ms] 2048+0 records in
+2048+0 records out
+D0076
+sh-4.4# [20735ms] TX stty raw -echo; echo R0077 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0077 >/dev/ttyPS0
+[20781ms] R0077
+[20999ms] 2048+0 records in
+2048+0 records out
+D0077
+sh-4.4# [21000ms] TX stty raw -echo; echo R0078 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0078 >/dev/ttyPS0
+[21046ms] R0078
+[21263ms] 2048+0 records in
+2048+0 records out
+D0078
+sh-4.4# [21264ms] TX stty raw -echo; echo R0079 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0079 >/dev/ttyPS0
+[21310ms] R0079
+[21529ms] 2048+0 records in
+2048+0 records out
+D0079
+sh-4.4# [21529ms] TX stty raw -echo; echo R0080 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0080 >/dev/ttyPS0
+[21575ms] R0080
+[21796ms] 2048+0 records in
+2048+0 records out
+D0080
+sh-4.4# [21798ms] TX stty raw -echo; echo R0081 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0081 >/dev/ttyPS0
+[21844ms] R0081
+[22061ms] 2048+0 records in
+2048+0 records out
+D0081
+sh-4.4# [22062ms] TX stty raw -echo; echo R0082 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0082 >/dev/ttyPS0
+[22107ms] R0082
+[22324ms] 2048+0 records in
+2048+0 records out
+D0082
+sh-4.4# [22325ms] TX stty raw -echo; echo R0083 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0083 >/dev/ttyPS0
+[22372ms] R0083
+[22592ms] 2048+0 records in
+2048+0 records out
+D0083
+sh-4.4# [22593ms] TX stty raw -echo; echo R0084 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0084 >/dev/ttyPS0
+[22638ms] R0084
+[22856ms] 2048+0 records in
+2048+0 records out
+D0084
+sh-4.4# [22857ms] TX stty raw -echo; echo R0085 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0085 >/dev/ttyPS0
+[22902ms] R0085
+[23123ms] 2048+0 records in
+2048+0 records out
+D0085
+sh-4.4# [23123ms] TX stty raw -echo; echo R0086 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0086 >/dev/ttyPS0
+[23170ms] R0086
+[23389ms] 2048+0 records in
+2048+0 records out
+D0086
+sh-4.4# [23390ms] TX stty raw -echo; echo R0087 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0087 >/dev/ttyPS0
+[23435ms] R0087
+[23651ms] 2048+0 records in
+2048+0 records out
+D0087
+sh-4.4# [23652ms] TX stty raw -echo; echo R0088 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0088 >/dev/ttyPS0
+[23698ms] R0088
+[23883ms] 2048+0 records in
+2048+0 records out
+D0088
+[23883ms] TX stty raw -echo; echo R0089 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0089 >/dev/ttyPS0
+[23944ms] sh-4.4# R0089
+[24132ms] 2048+0 records in
+2048+0 records out
+D0089
+[24132ms] TX stty raw -echo; echo R0090 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0090 >/dev/ttyPS0
+[24179ms] sh-4.4# R0090
+[24364ms] 2048+0 records in
+2048+0 records out
+D0090
+[24365ms] TX stty raw -echo; echo R0091 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0091 >/dev/ttyPS0
+[24411ms] sh-4.4# R0091
+[24597ms] 2048+0 records in
+2048+0 records out
+D0091
+[24598ms] TX stty raw -echo; echo R0092 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0092 >/dev/ttyPS0
+[24645ms] sh-4.4# R0092
+[24830ms] 2048+0 records in
+2048+0 records out
+D0092
+[24831ms] TX stty raw -echo; echo R0093 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0093 >/dev/ttyPS0
+[24878ms] sh-4.4# R0093
+[25096ms] 2048+0 records in
+2048+0 records out
+D0093
+sh-4.4# [25096ms] TX stty raw -echo; echo R0094 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0094 >/dev/ttyPS0
+[25141ms] R0094
+[25360ms] 2048+0 records in
+2048+0 records out
+D0094
+sh-4.4# [25361ms] TX stty raw -echo; echo R0095 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0095 >/dev/ttyPS0
+[25408ms] R0095
+[25627ms] 2048+0 records in
+2048+0 records out
+D0095
+sh-4.4# [25627ms] TX stty raw -echo; echo R0096 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0096 >/dev/ttyPS0
+[25674ms] R0096
+[25891ms] 2048+0 records in
+2048+0 records out
+D0096
+sh-4.4# [25892ms] TX stty raw -echo; echo R0097 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0097 >/dev/ttyPS0
+[25937ms] R0097
+[26123ms] 2048+0 records in
+2048+0 records out
+D0097
+[26124ms] TX stty raw -echo; echo R0098 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0098 >/dev/ttyPS0
+[26170ms] sh-4.4# R0098
+[26388ms] 2048+0 records in
+2048+0 records out
+D0098
+sh-4.4# [26389ms] TX stty raw -echo; echo R0099 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0099 >/dev/ttyPS0
+[26435ms] R0099
+[26620ms] 2048+0 records in
+2048+0 records out
+D0099
+[26621ms] TX stty raw -echo; echo R0100 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0100 >/dev/ttyPS0
+[26668ms] sh-4.4# R0100
+[26887ms] 2048+0 records in
+2048+0 records out
+D0100
+sh-4.4# [26889ms] TX stty raw -echo; echo R0101 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0101 >/dev/ttyPS0
+[26934ms] R0101
+[27150ms] 2048+0 records in
+2048+0 records out
+D0101
+sh-4.4# [27151ms] TX stty raw -echo; echo R0102 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0102 >/dev/ttyPS0
+[27196ms] R0102
+[27383ms] 2048+0 records in
+2048+0 records out
+D0102
+[27383ms] TX stty raw -echo; echo R0103 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0103 >/dev/ttyPS0
+[27431ms] sh-4.4# R0103
+[27661ms] 2048+0 records in
+2048+0 records out
+D0103
+sh-4.4# [27661ms] TX stty raw -echo; echo R0104 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0104 >/dev/ttyPS0
+[27708ms] R0104
+[27894ms] 2048+0 records in
+2048+0 records out
+D0104
+[27895ms] TX stty raw -echo; echo R0105 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0105 >/dev/ttyPS0
+[27940ms] sh-4.4# R0105
+[28156ms] 2048+0 records in
+2048+0 records out
+D0105
+sh-4.4# [28157ms] TX stty raw -echo; echo R0106 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0106 >/dev/ttyPS0
+[28203ms] R0106
+[28420ms] 2048+0 records in
+2048+0 records out
+D0106
+sh-4.4# [28421ms] TX stty raw -echo; echo R0107 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0107 >/dev/ttyPS0
+[28465ms] R0107
+[28649ms] 2048+0 records in
+2048+0 records out
+D0107
+[28649ms] TX stty raw -echo; echo R0108 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0108 >/dev/ttyPS0
+[28711ms] sh-4.4# R0108
+[28899ms] 2048+0 records in
+2048+0 records out
+D0108
+[28900ms] TX stty raw -echo; echo R0109 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0109 >/dev/ttyPS0
+[28947ms] sh-4.4# R0109
+[29133ms] 2048+0 records in
+2048+0 records out
+D0109
+[29134ms] TX stty raw -echo; echo R0110 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0110 >/dev/ttyPS0
+[29196ms] sh-4.4# R0110
+[29383ms] 2048+0 records in
+2048+0 records out
+D0110
+[29383ms] TX stty raw -echo; echo R0111 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0111 >/dev/ttyPS0
+[29444ms] sh-4.4# R0111
+[29627ms] 2048+0 records in
+2048+0 records out
+D0111
+[29628ms] TX stty raw -echo; echo R0112 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0112 >/dev/ttyPS0
+[29673ms] sh-4.4# R0112
+[29890ms] 2048+0 records in
+2048+0 records out
+D0112
+sh-4.4# [29891ms] TX stty raw -echo; echo R0113 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0113 >/dev/ttyPS0
+[29935ms] R0113
+[30156ms] 2048+0 records in
+2048+0 records out
+D0113
+sh-4.4# [30157ms] TX stty raw -echo; echo R0114 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0114 >/dev/ttyPS0
+[30204ms] R0114
+[30421ms] 2048+0 records in
+2048+0 records out
+D0114
+sh-4.4# [30421ms] TX stty raw -echo; echo R0115 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0115 >/dev/ttyPS0
+[30467ms] R0115
+[30686ms] 2048+0 records in
+2048+0 records out
+D0115
+sh-4.4# [30686ms] TX stty raw -echo; echo R0116 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0116 >/dev/ttyPS0
+[30732ms] R0116
+[30952ms] 2048+0 records in
+2048+0 records out
+D0116
+sh-4.4# [30953ms] TX stty raw -echo; echo R0117 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0117 >/dev/ttyPS0
+[30998ms] R0117
+[31215ms] 2048+0 records in
+2048+0 records out
+D0117
+sh-4.4# [31216ms] TX stty raw -echo; echo R0118 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0118 >/dev/ttyPS0
+[31263ms] R0118
+[31480ms] 2048+0 records in
+2048+0 records out
+D0118
+sh-4.4# [31480ms] TX stty raw -echo; echo R0119 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0119 >/dev/ttyPS0
+[31527ms] R0119
+[31746ms] 2048+0 records in
+2048+0 records out
+D0119
+sh-4.4# [31746ms] TX stty raw -echo; echo R0120 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0120 >/dev/ttyPS0
+[31792ms] R0120
+[32011ms] 2048+0 records in
+2048+0 records out
+D0120
+sh-4.4# [32012ms] TX stty raw -echo; echo R0121 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0121 >/dev/ttyPS0
+[32058ms] R0121
+[32276ms] 2048+0 records in
+2048+0 records out
+D0121
+sh-4.4# [32277ms] TX stty raw -echo; echo R0122 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0122 >/dev/ttyPS0
+[32322ms] R0122
+[32506ms] 2048+0 records in
+2048+0 records out
+D0122
+[32507ms] TX stty raw -echo; echo R0123 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0123 >/dev/ttyPS0
+[32554ms] sh-4.4# R0123
+[32742ms] 2048+0 records in
+2048+0 records out
+D0123
+[32742ms] TX stty raw -echo; echo R0124 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0124 >/dev/ttyPS0
+[32802ms] sh-4.4# R0124
+[32987ms] 2048+0 records in
+2048+0 records out
+D0124
+[32988ms] TX stty raw -echo; echo R0125 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0125 >/dev/ttyPS0
+[33033ms] sh-4.4# R0125
+[33249ms] 2048+0 records in
+2048+0 records out
+D0125
+sh-4.4# [33250ms] TX stty raw -echo; echo R0126 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0126 >/dev/ttyPS0
+[33297ms] R0126
+[33482ms] 2048+0 records in
+2048+0 records out
+D0126
+[33482ms] TX stty raw -echo; echo R0127 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0127 >/dev/ttyPS0
+[33529ms] sh-4.4# R0127
+[33747ms] 2048+0 records in
+2048+0 records out
+D0127
+sh-4.4# [33748ms] TX stty raw -echo; echo R0128 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0128 >/dev/ttyPS0
+[33793ms] R0128
+[34010ms] 2048+0 records in
+2048+0 records out
+D0128
+sh-4.4# [34010ms] TX stty raw -echo; echo R0129 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0129 >/dev/ttyPS0
+[34057ms] R0129
+[34275ms] 2048+0 records in
+2048+0 records out
+D0129
+sh-4.4# [34276ms] TX stty raw -echo; echo R0130 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0130 >/dev/ttyPS0
+[34337ms] R0130
+[34564ms] 2048+0 records in
+2048+0 records out
+D0130
+sh-4.4# [34565ms] TX stty raw -echo; echo R0131 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0131 >/dev/ttyPS0
+[34611ms] R0131
+[34830ms] 2048+0 records in
+2048+0 records out
+D0131
+sh-4.4# [34830ms] TX stty raw -echo; echo R0132 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0132 >/dev/ttyPS0
+[34875ms] R0132
+[35093ms] 2048+0 records in
+2048+0 records out
+D0132
+sh-4.4# [35094ms] TX stty raw -echo; echo R0133 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0133 >/dev/ttyPS0
+[35140ms] R0133
+[35359ms] 2048+0 records in
+2048+0 records out
+D0133
+sh-4.4# [35359ms] TX stty raw -echo; echo R0134 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0134 >/dev/ttyPS0
+[35406ms] R0134
+[35624ms] 2048+0 records in
+2048+0 records out
+D0134
+sh-4.4# [35625ms] TX stty raw -echo; echo R0135 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0135 >/dev/ttyPS0
+[35670ms] R0135
+[35854ms] 2048+0 records in
+2048+0 records out
+D0135
+[35855ms] TX stty raw -echo; echo R0136 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0136 >/dev/ttyPS0
+[35900ms] sh-4.4# R0136
+[36119ms] 2048+0 records in
+2048+0 records out
+D0136
+sh-4.4# [36120ms] TX stty raw -echo; echo R0137 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0137 >/dev/ttyPS0
+[36165ms] R0137
+[36384ms] 2048+0 records in
+2048+0 records out
+D0137
+sh-4.4# [36384ms] TX stty raw -echo; echo R0138 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0138 >/dev/ttyPS0
+[36445ms] R0138
+[36679ms] 2048+0 records in
+2048+0 records out
+D0138
+sh-4.4# [36679ms] TX stty raw -echo; echo R0139 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0139 >/dev/ttyPS0
+[36726ms] R0139
+[36912ms] 2048+0 records in
+2048+0 records out
+D0139
+[36913ms] TX stty raw -echo; echo R0140 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0140 >/dev/ttyPS0
+[36960ms] sh-4.4# R0140
+[37143ms] 2048+0 records in
+2048+0 records out
+D0140
+[37144ms] TX stty raw -echo; echo R0141 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0141 >/dev/ttyPS0
+[37190ms] sh-4.4# R0141
+[37410ms] 2048+0 records in
+2048+0 records out
+D0141
+sh-4.4# [37411ms] TX stty raw -echo; echo R0142 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0142 >/dev/ttyPS0
+[37456ms] R0142
+[37675ms] 2048+0 records in
+2048+0 records out
+D0142
+sh-4.4# [37675ms] TX stty raw -echo; echo R0143 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0143 >/dev/ttyPS0
+[37720ms] R0143
+[37939ms] 2048+0 records in
+2048+0 records out
+D0143
+sh-4.4# [37940ms] TX stty raw -echo; echo R0144 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0144 >/dev/ttyPS0
+[37986ms] R0144
+[38203ms] 2048+0 records in
+2048+0 records out
+D0144
+sh-4.4# [38204ms] TX stty raw -echo; echo R0145 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0145 >/dev/ttyPS0
+[38249ms] R0145
+[38466ms] 2048+0 records in
+2048+0 records out
+D0145
+sh-4.4# [38466ms] TX stty raw -echo; echo R0146 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0146 >/dev/ttyPS0
+[38511ms] R0146
+[38694ms] 2048+0 records in
+2048+0 records out
+D0146
+[38695ms] TX stty raw -echo; echo R0147 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0147 >/dev/ttyPS0
+[38741ms] sh-4.4# R0147
+[38928ms] 2048+0 records in
+2048+0 records out
+D0147
+[38929ms] TX stty raw -echo; echo R0148 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0148 >/dev/ttyPS0
+[38973ms] sh-4.4# R0148
+[39160ms] 2048+0 records in
+2048+0 records out
+D0148
+[39161ms] TX stty raw -echo; echo R0149 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0149 >/dev/ttyPS0
+[39207ms] sh-4.4# R0149
+[39393ms] 2048+0 records in
+2048+0 records out
+D0149
+[39393ms] TX stty raw -echo; echo R0150 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0150 >/dev/ttyPS0
+[39441ms] sh-4.4# R0150
+[39657ms] 2048+0 records in
+2048+0 records out
+D0150
+sh-4.4# [39658ms] TX stty raw -echo; echo R0151 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0151 >/dev/ttyPS0
+[39704ms] R0151
+[39922ms] 2048+0 records in
+2048+0 records out
+D0151
+sh-4.4# [39922ms] TX stty raw -echo; echo R0152 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0152 >/dev/ttyPS0
+[39968ms] R0152
+[40186ms] 2048+0 records in
+2048+0 records out
+D0152
+sh-4.4# [40186ms] TX stty raw -echo; echo R0153 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0153 >/dev/ttyPS0
+[40231ms] R0153
+[40448ms] 2048+0 records in
+2048+0 records out
+D0153
+sh-4.4# [40449ms] TX stty raw -echo; echo R0154 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0154 >/dev/ttyPS0
+[40496ms] R0154
+[40712ms] 2048+0 records in
+2048+0 records out
+D0154
+sh-4.4# [40713ms] TX stty raw -echo; echo R0155 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0155 >/dev/ttyPS0
+[40772ms] R0155
+[40958ms] 2048+0 records in
+2048+0 records out
+D0155
+[40959ms] TX stty raw -echo; echo R0156 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0156 >/dev/ttyPS0
+[41004ms] sh-4.4# R0156
+[41189ms] 2048+0 records in
+2048+0 records out
+D0156
+[41189ms] TX stty raw -echo; echo R0157 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0157 >/dev/ttyPS0
+[41234ms] sh-4.4# R0157
+[41452ms] 2048+0 records in
+2048+0 records out
+D0157
+sh-4.4# [41452ms] TX stty raw -echo; echo R0158 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0158 >/dev/ttyPS0
+[41499ms] R0158
+[41719ms] 2048+0 records in
+2048+0 records out
+D0158
+sh-4.4# [41719ms] TX stty raw -echo; echo R0159 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0159 >/dev/ttyPS0
+[41764ms] R0159
+[41981ms] 2048+0 records in
+2048+0 records out
+D0159
+sh-4.4# [41982ms] TX stty raw -echo; echo R0160 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0160 >/dev/ttyPS0
+[42028ms] R0160
+[42248ms] 2048+0 records in
+2048+0 records out
+D0160
+sh-4.4# [42250ms] TX stty raw -echo; echo R0161 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0161 >/dev/ttyPS0
+[42296ms] R0161
+[42513ms] 2048+0 records in
+2048+0 records out
+D0161
+sh-4.4# [42513ms] TX stty raw -echo; echo R0162 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0162 >/dev/ttyPS0
+[42560ms] R0162
+[42777ms] 2048+0 records in
+2048+0 records out
+D0162
+sh-4.4# [42778ms] TX stty raw -echo; echo R0163 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0163 >/dev/ttyPS0
+[42823ms] R0163
+[43006ms] 2048+0 records in
+2048+0 records out
+D0163
+[43007ms] TX stty raw -echo; echo R0164 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0164 >/dev/ttyPS0
+[43052ms] sh-4.4# R0164
+[43239ms] 2048+0 records in
+2048+0 records out
+D0164
+[43240ms] TX stty raw -echo; echo R0165 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0165 >/dev/ttyPS0
+[43285ms] sh-4.4# R0165
+[43500ms] 2048+0 records in
+2048+0 records out
+D0165
+sh-4.4# [43501ms] TX stty raw -echo; echo R0166 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0166 >/dev/ttyPS0
+[43547ms] R0166
+[43731ms] 2048+0 records in
+2048+0 records out
+D0166
+[43731ms] TX stty raw -echo; echo R0167 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0167 >/dev/ttyPS0
+[43778ms] sh-4.4# R0167
+[43994ms] 2048+0 records in
+2048+0 records out
+D0167
+sh-4.4# [43995ms] TX stty raw -echo; echo R0168 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0168 >/dev/ttyPS0
+[44040ms] R0168
+[44259ms] 2048+0 records in
+2048+0 records out
+D0168
+sh-4.4# [44260ms] TX stty raw -echo; echo R0169 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0169 >/dev/ttyPS0
+[44305ms] R0169
+[44490ms] 2048+0 records in
+2048+0 records out
+D0169
+[44491ms] TX stty raw -echo; echo R0170 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0170 >/dev/ttyPS0
+[44537ms] sh-4.4# R0170
+[44722ms] 2048+0 records in
+2048+0 records out
+D0170
+[44723ms] TX stty raw -echo; echo R0171 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0171 >/dev/ttyPS0
+[44769ms] sh-4.4# R0171
+[44955ms] 2048+0 records in
+2048+0 records out
+D0171
+[44956ms] TX stty raw -echo; echo R0172 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0172 >/dev/ttyPS0
+[45002ms] sh-4.4# R0172
+[45221ms] 2048+0 records in
+2048+0 records out
+D0172
+sh-4.4# [45221ms] TX stty raw -echo; echo R0173 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0173 >/dev/ttyPS0
+[45267ms] R0173
+[45486ms] 2048+0 records in
+2048+0 records out
+D0173
+sh-4.4# [45487ms] TX stty raw -echo; echo R0174 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0174 >/dev/ttyPS0
+[45532ms] R0174
+[45748ms] 2048+0 records in
+2048+0 records out
+D0174
+sh-4.4# [45749ms] TX stty raw -echo; echo R0175 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0175 >/dev/ttyPS0
+[45795ms] R0175
+[46012ms] 2048+0 records in
+2048+0 records out
+D0175
+sh-4.4# [46013ms] TX stty raw -echo; echo R0176 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0176 >/dev/ttyPS0
+[46059ms] R0176
+[46279ms] 2048+0 records in
+2048+0 records out
+D0176
+sh-4.4# [46279ms] TX stty raw -echo; echo R0177 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0177 >/dev/ttyPS0
+[46325ms] R0177
+[46542ms] 2048+0 records in
+2048+0 records out
+D0177
+sh-4.4# [46543ms] TX stty raw -echo; echo R0178 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0178 >/dev/ttyPS0
+[46589ms] R0178
+[46808ms] 2048+0 records in
+2048+0 records out
+D0178
+sh-4.4# [46808ms] TX stty raw -echo; echo R0179 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0179 >/dev/ttyPS0
+[46855ms] R0179
+[47072ms] 2048+0 records in
+2048+0 records out
+D0179
+sh-4.4# [47073ms] TX stty raw -echo; echo R0180 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0180 >/dev/ttyPS0
+[47120ms] R0180
+[47337ms] 2048+0 records in
+2048+0 records out
+D0180
+sh-4.4# [47338ms] TX stty raw -echo; echo R0181 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0181 >/dev/ttyPS0
+[47384ms] R0181
+[47570ms] 2048+0 records in
+2048+0 records out
+D0181
+[47571ms] TX stty raw -echo; echo R0182 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0182 >/dev/ttyPS0
+[47633ms] sh-4.4# R0182
+[47853ms] 2048+0 records in
+2048+0 records out
+D0182
+sh-4.4# [47854ms] TX stty raw -echo; echo R0183 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0183 >/dev/ttyPS0
+[47900ms] R0183
+[48118ms] 2048+0 records in
+2048+0 records out
+D0183
+sh-4.4# [48119ms] TX stty raw -echo; echo R0184 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0184 >/dev/ttyPS0
+[48179ms] R0184
+[48400ms] 2048+0 records in
+2048+0 records out
+D0184
+sh-4.4# [48401ms] TX stty raw -echo; echo R0185 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0185 >/dev/ttyPS0
+[48446ms] R0185
+[48666ms] 2048+0 records in
+2048+0 records out
+D0185
+sh-4.4# [48666ms] TX stty raw -echo; echo R0186 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0186 >/dev/ttyPS0
+[48714ms] R0186
+[48898ms] 2048+0 records in
+2048+0 records out
+D0186
+[48899ms] TX stty raw -echo; echo R0187 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0187 >/dev/ttyPS0
+[48960ms] sh-4.4# R0187
+[49147ms] 2048+0 records in
+2048+0 records out
+D0187
+[49148ms] TX stty raw -echo; echo R0188 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0188 >/dev/ttyPS0
+[49194ms] sh-4.4# R0188
+[49381ms] 2048+0 records in
+2048+0 records out
+D0188
+[49381ms] TX stty raw -echo; echo R0189 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0189 >/dev/ttyPS0
+[49426ms] sh-4.4# R0189
+[49610ms] 2048+0 records in
+2048+0 records out
+D0189
+[49611ms] TX stty raw -echo; echo R0190 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0190 >/dev/ttyPS0
+[49657ms] sh-4.4# R0190
+[49877ms] 2048+0 records in
+2048+0 records out
+D0190
+sh-4.4# [49878ms] TX stty raw -echo; echo R0191 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0191 >/dev/ttyPS0
+[49924ms] R0191
+[50140ms] 2048+0 records in
+2048+0 records out
+D0191
+sh-4.4# [50140ms] TX stty raw -echo; echo R0192 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0192 >/dev/ttyPS0
+[50187ms] R0192
+[50405ms] 2048+0 records in
+2048+0 records out
+D0192
+sh-4.4# [50406ms] TX stty raw -echo; echo R0193 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0193 >/dev/ttyPS0
+[50453ms] R0193
+[50672ms] 2048+0 records in
+2048+0 records out
+D0193
+sh-4.4# [50672ms] TX stty raw -echo; echo R0194 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0194 >/dev/ttyPS0
+[50719ms] R0194
+[50935ms] 2048+0 records in
+2048+0 records out
+D0194
+sh-4.4# [50936ms] TX stty raw -echo; echo R0195 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0195 >/dev/ttyPS0
+[50982ms] R0195
+[51167ms] 2048+0 records in
+2048+0 records out
+D0195
+[51168ms] TX stty raw -echo; echo R0196 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0196 >/dev/ttyPS0
+[51215ms] sh-4.4# R0196
+[51434ms] 2048+0 records in
+2048+0 records out
+D0196
+sh-4.4# [51435ms] TX stty raw -echo; echo R0197 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0197 >/dev/ttyPS0
+[51480ms] R0197
+[51698ms] 2048+0 records in
+2048+0 records out
+D0197
+sh-4.4# [51698ms] TX stty raw -echo; echo R0198 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0198 >/dev/ttyPS0
+[51744ms] R0198
+[51964ms] 2048+0 records in
+2048+0 records out
+D0198
+sh-4.4# [51964ms] TX stty raw -echo; echo R0199 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0199 >/dev/ttyPS0
+[52009ms] R0199
+[52227ms] 2048+0 records in
+2048+0 records out
+D0199
+sh-4.4# [52228ms] TX stty raw -echo; echo R0200 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/hello.static; echo D0200 >/dev/ttyPS0
+[52274ms] R0200
+[52460ms] 2048+0 records in
+2048+0 records out
+D0200
+[52461ms] TX stty raw -echo; echo R0201 >/dev/ttyPS0; dd bs=1 count=1436 >> /tmp/hello.static; echo D0201 >/dev/ttyPS0
+[52521ms] sh-4.4# R0201
+[52691ms] 1436+0 records in
+1436+0 records out
+D0201
+sh-4.4# 

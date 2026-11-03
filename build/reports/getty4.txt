@@ -1,0 +1,10 @@
+﻿mount -t devtmpfs dev /dev
+sh-4.4# 
+sh-4.4# echo MARK_G4
+MARK_G4
+sh-4.4# 
+sh-4.4# /sbin/getty -L 115200 ttyPS0 vt102
+
+PetaLinux 2018.3 (none) /dev/ttyPS0
+
+(none) login: 

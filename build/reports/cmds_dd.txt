@@ -1,0 +1,20 @@
+mkdir -p /tmp/dbg
+mount -t debugfs none /tmp/dbg
+echo MARK_DBGFS
+ls /tmp/dbg/mmc1
+cat /tmp/dbg/mmc1/ios
+cat /tmp/dbg/mmc1/state
+ls /tmp/dbg/dynamic_debug
+echo MARK_DD
+echo "file core.c +p" > /tmp/dbg/dynamic_debug/control
+echo "file sdhci.c +p" > /tmp/dbg/dynamic_debug/control
+echo MARK_REBIND4
+echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/unbind
+sleep 1
+echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/bind
+sleep 3
+echo ---IOS2---
+cat /tmp/dbg/mmc1/ios
+cat /tmp/dbg/mmc1/state
+dmesg | tail -30
+echo MARK_DD_DONE

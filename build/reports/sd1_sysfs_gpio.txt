@@ -1,0 +1,22 @@
+﻿echo ---GPIOFS--- >/dev/ttyPS0; ls /sys/class/gpio >/dev/ttyPS0 2>&1; for g in 906 914 915; do echo $g > /sys/class/gpio/export 2>/dev/null; echo out > /sys/class/gpio/gpio$g/direction 2>/dev/null; echo 1 > /sys/class/gpio/gpio$g/value 2>/dev/null; echo "g$g dir=$(cat /sys/class/gpio/gpio$g/direction 2>/dev/null) val=$(cat /sys/class/gpio/gpio$g/value 2>/dev/null)" >/dev/ttyPS0; done; echo ---REBIND5--- >/dev/ttyPS0; echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/unbind 2>&1; sleep 1; echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/bind 2>&1; sleep 2; echo ---SDIO5--- >/dev/ttyPS0; ls /sys/bus/sdio/devices >/dev/ttyPS0 2>&1; devmem 0xE010102C 32 >/dev/ttyPS0 2>&1; echo GPIOFS_DONE >/dev/ttyPS0
+---GPIOFS---
+export
+gpiochip906
+unexport
+g906 dir=out val=1
+g914 dir=out val=0
+g915 dir=out val=1
+---REBIND5---
+mmc1: SDHCI controller on e0101000.mmc [e0101000.mmc] using ADMA
+sdhci-arasan e0101000.mmc: Unbalanced pm_runtime_enable!
+uio_pdrv_genirq: disagrees about version of symbol dev_warn
+uio_pdrv_genirq: Unknown symbol dev_warn (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_err
+uio_pdrv_genirq: Unknown symbol dev_err (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_warn
+uio_pdrv_genirq: Unknown symbol dev_warn (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_err
+uio_pdrv_genirq: Unknown symbol dev_err (err -22)
+---SDIO5---
+0x00000000
+GPIOFS_DONE

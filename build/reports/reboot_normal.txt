@@ -1,0 +1,14 @@
+﻿md5sum /mnt/boot/BOOT.bin /mnt/boot/image.ub /mnt/boot/hub75_fx
+cfb86e100a1505e0d948d31226403a18  /mnt/boot/BOOT.bin
+6f6d15fd5be8433c82d6e54466f192a7  /mnt/boot/image.ub
+46cbca3236db1ac98f46c05f290dac7c  /mnt/boot/hub75_fx
+sh-4.4# 
+sh-4.4# sync
+sh-4.4# 
+sh-4.4# reboot
+WARNING: could not determine runlevel - doing soft reboot
+  (it's better to use shutdown instead of reboot from the command line)
+shutdown: /dev/initctl: No such file or directory
+init: /dev/initctl: No such file or directory
+sh-4.4# 
+sh-4.4# 

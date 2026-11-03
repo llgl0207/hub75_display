@@ -1,0 +1,109 @@
+﻿mount -t devtmpfs dev /dev
+sh-4.4# 
+sh-4.4# mount -t proc proc /proc
+sh-4.4# 
+sh-4.4# mount -t sysfs sysfs /sys
+sh-4.4# 
+sh-4.4# mkdir -p /mnt/boot
+sh-4.4# 
+sh-4.4# mount -t vfat /dev/mmcblk0p1 /mnt/boot
+FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+sh-4.4# 
+sh-4.4# ls -l /mnt/boot/brcmfmac43430-sdio-2019.bin
+-rwxr-xr-x    1 root     root        388739 Jan  1  1980 /mnt/boot/brcmfmac43430-sdio-2019.bin
+sh-4.4# 
+sh-4.4# mkdir -p /lib/firmware/brcm
+sh-4.4# 
+sh-4.4# cp /mnt/boot/brcmfmac43430-sdio-2019.bin /lib/firmware/brcm/brcmfmac434300-sdio.bin
+sh-4.4# 
+sh-4.4# cp /mnt/boot/brcmfmac43430-sdio.txt /lib/firmware/brcm/brcmfmac43430-sdioo.txt
+sh-4.4# 
+sh-4.4# ls -l /lib/firmware/brcm
+total 384
+-rwxr-xr-x    1 root     root        388739 Jan  1 00:00 brcmfmac43430-sdio.bin
+-rwxr-xr-x    1 root     root           875 Jan  1 00:00 brcmfmac43430-sdio.txt
+sh-4.4# 
+sh-4.4# echo MARK_SET2
+MARK_SET2
+sh-4.4# 
+sh-4.4# devmem 0xF8000008 32 0x0000DF0D
+sh-4.4# 
+sh-4.4# devmem 0xF8000728 32 0x00001680
+sh-4.4# 
+sh-4.4# devmem 0xF800072C 32 0x00001680
+sh-4.4# 
+sh-4.4# devmem 0xF8000730 32 0x00001680
+sh-4.4# 
+sh-4.4# devmem 0xF8000734 32 0x00001680
+sh-4.4# 
+sh-4.4# devmem 0xF8000738 32 0x00001680
+sh-4.4# 
+sh-4.4# devmem 0xF800073C 32 0x00001680
+sh-4.4# 
+sh-4.4# devmem 0xE000A204 32 0x00000100
+sh-4.4# 
+sh-4.4# devmem 0xE000A208 32 0x00000100
+sh-4.4# 
+sh-4.4# devmem 0xE000A000 32 0xFEFF0100
+sh-4.4# 
+sh-4.4# sleep 1
+sh-4.4# 
+sh-4.4# devmem 0xE0101028 32 0x000000C0
+sh-4.4# 
+sh-4.4# mmc1: queuing unknown CIS tuple 0x80 (2 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (7 bytes)
+mmc1: queuing unknown CIS tuple 0x81 (9 bytes)
+mmc1: new high speed SDIO card at address 0001
+sleep 3
+ls /sys/bus/sdio/devices
+
+insmod /mnt/boot/wifi/cfg80211.ko
+
+sh-4.4# 
+sh-4.4# ls /sys/bus/sdio/devices
+mmc1:0001:1  mmc1:0001:2
+sh-4.4# 
+sh-4.4# insmod /mnt/boot/wifi/cfg80211.ko
+cfg80211: loading out-of-tree module taints kernel.
+sh-4.4# 
+sh-4.4# insmod /mnt/boot/wifi/brcmutil.ko
+sh-4.4# 
+sh-4.4# insmod /mnt/boot/wifi/brcmfmac.ko
+brcmfmac: no symbol version for cfg80211_sched_scan_results
+sh-4.4# 
+brcmfmac: brcmf_fw_map_chip_to_name: using brcm/brcmfmac43430-sdio.bin for chip 0x00a9a6(43430) rev 0x000001
+sh-4.4# brcmfmac: brcmf_c_preinit_dcmds: Firmware version = wl0: Oct 23 2017 03:55:53 version 7.45.98.38 (r674442 CY) FWID 01-e58d219f
+sleep 6
+dmesg | tail -15
+
+ls /sys/class/net
+
+echo MARK_SET2_DONE
+
+sh-4.4# 
+sh-4.4# dmesg | tail -15
+clk: Not disabling unused clocks
+ALSA device list:
+  No soundcards found.
+Freeing unused kernel memory: 1024K
+FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+mmc1: queuing unknown CIS tuple 0x80 (2 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (7 bytes)
+mmc1: queuing unknown CIS tuple 0x81 (9 bytes)
+mmc1: new high speed SDIO card at address 0001
+cfg80211: loading out-of-tree module taints kernel.
+brcmfmac: no symbol version for cfg80211_sched_scan_results
+brcmfmac: brcmf_fw_map_chip_to_name: using brcm/brcmfmac43430-sdio.bin for chip 0x00a9a6(43430) rev 0x000001
+brcmfmac: brcmf_c_preinit_dcmds: Firmware version = wl0: Oct 23 2017 03:55:53 version 7.45.98.38 (r674442 CY) FWID 01-e58d219f
+sh-4.4# 
+sh-4.4# ls /sys/class/net
+eth0   lo     sit0   wlan0
+sh-4.4# 
+sh-4.4# echo MARK_SET2_DONE
+MARK_SET2_DONE
+sh-4.4# 
+sh-4.4# 

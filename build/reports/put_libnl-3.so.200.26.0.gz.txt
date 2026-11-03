@@ -1,0 +1,111 @@
+﻿RAWOK
+sh-4.4# [1407ms] TX stty raw -echo; echo R0000 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libnl-3.so.200.26.0.gz; echo D0000 >/dev/ttyPS0
+[1463ms] R0000
+[1649ms] 2048+0 records in
+2048+0 records out
+D0000
+[1658ms] TX stty raw -echo; echo R0001 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libnl-3.so.200.26.0.gz; echo D0001 >/dev/ttyPS0
+[1710ms] sh-4.4# R0001
+[1897ms] 2048+0 records in
+2048+0 records out
+D0001
+[1898ms] TX stty raw -echo; echo R0002 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libnl-3.so.200.26.0.gz; echo D0002 >/dev/ttyPS0
+[1959ms] sh-4.4# R0002
+[2144ms] 2048+0 records in
+2048+0 records out
+D0002
+[2145ms] TX stty raw -echo; echo R0003 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libnl-3.so.200.26.0.gz; echo D0003 >/dev/ttyPS0
+[2190ms] sh-4.4# R0003
+[2408ms] 2048+0 records in
+2048+0 records out
+D0003
+sh-4.4# [2408ms] TX stty raw -echo; echo R0004 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libnl-3.so.200.26.0.gz; echo D0004 >/dev/ttyPS0
+[2453ms] R0004
+[2673ms] 2048+0 records in
+2048+0 records out
+D0004
+sh-4.4# [2674ms] TX stty raw -echo; echo R0005 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libnl-3.so.200.26.0.gz; echo D0005 >/dev/ttyPS0
+[2720ms] R0005
+[2937ms] 2048+0 records in
+2048+0 records out
+D0005
+sh-4.4# [2938ms] TX stty raw -echo; echo R0006 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libnl-3.so.200.26.0.gz; echo D0006 >/dev/ttyPS0
+[2985ms] R0006
+[3205ms] 2048+0 records in
+2048+0 records out
+D0006
+sh-4.4# [3205ms] TX stty raw -echo; echo R0007 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libnl-3.so.200.26.0.gz; echo D0007 >/dev/ttyPS0
+[3250ms] R0007
+[3469ms] 2048+0 records in
+2048+0 records out
+D0007
+sh-4.4# [3469ms] TX stty raw -echo; echo R0008 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libnl-3.so.200.26.0.gz; echo D0008 >/dev/ttyPS0
+[3515ms] R0008
+[3700ms] 2048+0 records in
+2048+0 records out
+D0008
+[3700ms] TX stty raw -echo; echo R0009 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libnl-3.so.200.26.0.gz; echo D0009 >/dev/ttyPS0
+[3748ms] sh-4.4# R0009
+[3963ms] 2048+0 records in
+2048+0 records out
+D0009
+sh-4.4# [3964ms] TX stty raw -echo; echo R0010 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libnl-3.so.200.26.0.gz; echo D0010 >/dev/ttyPS0
+[4010ms] R0010
+[4228ms] 2048+0 records in
+2048+0 records out
+D0010
+sh-4.4# [4229ms] TX stty raw -echo; echo R0011 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libnl-3.so.200.26.0.gz; echo D0011 >/dev/ttyPS0
+[4275ms] R0011
+[4507ms] 2048+0 records in
+2048+0 records out
+D0011
+sh-4.4# [4508ms] TX stty raw -echo; echo R0012 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libnl-3.so.200.26.0.gz; echo D0012 >/dev/ttyPS0
+[4555ms] R0012
+[4741ms] 2048+0 records in
+2048+0 records out
+D0012
+[4742ms] TX stty raw -echo; echo R0013 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libnl-3.so.200.26.0.gz; echo D0013 >/dev/ttyPS0
+[4804ms] sh-4.4# R0013
+[5038ms] 2048+0 records in
+2048+0 records out
+D0013
+sh-4.4# [5039ms] TX stty raw -echo; echo R0014 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libnl-3.so.200.26.0.gz; echo D0014 >/dev/ttyPS0
+[5100ms] R0014
+[5287ms] 2048+0 records in
+2048+0 records out
+D0014
+[5287ms] TX stty raw -echo; echo R0015 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libnl-3.so.200.26.0.gz; echo D0015 >/dev/ttyPS0
+[5333ms] sh-4.4# R0015
+[5518ms] 2048+0 records in
+2048+0 records out
+D0015
+[5519ms] TX stty raw -echo; echo R0016 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libnl-3.so.200.26.0.gz; echo D0016 >/dev/ttyPS0
+[5566ms] sh-4.4# R0016
+[5785ms] 2048+0 records in
+2048+0 records out
+D0016
+sh-4.4# [5786ms] TX stty raw -echo; echo R0017 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libnl-3.so.200.26.0.gz; echo D0017 >/dev/ttyPS0
+[5832ms] R0017
+[6019ms] 2048+0 records in
+2048+0 records out
+D0017
+[6020ms] TX stty raw -echo; echo R0018 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libnl-3.so.200.26.0.gz; echo D0018 >/dev/ttyPS0
+[6066ms] sh-4.4# R0018
+[6284ms] 2048+0 records in
+2048+0 records out
+D0018
+sh-4.4# [6285ms] TX stty raw -echo; echo R0019 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libnl-3.so.200.26.0.gz; echo D0019 >/dev/ttyPS0
+[6332ms] R0019
+[6549ms] 2048+0 records in
+2048+0 records out
+D0019
+sh-4.4# [6550ms] TX stty raw -echo; echo R0020 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libnl-3.so.200.26.0.gz; echo D0020 >/dev/ttyPS0
+[6595ms] R0020
+[6815ms] 2048+0 records in
+2048+0 records out
+D0020
+sh-4.4# [6816ms] TX stty raw -echo; echo R0021 >/dev/ttyPS0; dd bs=1 count=1287 >> /tmp/alpine/libnl-3.so.200.26.0.gz; echo D0021 >/dev/ttyPS0
+[6862ms] R0021
+[6987ms] 1287+0 records in
+1287+0 records out
+D0021

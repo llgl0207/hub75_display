@@ -1,0 +1,6 @@
+﻿cd /run/media/mmcblk0p1; rm -f image_new.ub; dd if=image.ub bs=4096 count=963 >> image_new.ub 2>/dev/null; dd if=image.ub bs=1 skip=3944448 count=888 >> image_new.ub 2>/dev/null; cat wifi/status9.bin >> image_new.ub; dd if=image.ub bs=1 skip=3945345 count=4231 >> image_new.ub 2>/dev/null; cat wifi/hash20.bin >> image_new.ub; dd if=image.ub bs=1 skip=3949596 count=3044 >> image_new.ub 2>/dev/null; dd if=image.ub bs=4096 skip=965 >> image_new.ub 2>/dev/null; sync; ls -l image.ub image_new.ub >/dev/ttyPS0; md5sum image.ub image_new.ub >/dev/ttyPS0; echo RECON_DONE >/dev/ttyPS0
+-rwxrwx---    1 root     disk       9995016 Nov  3  2026 image.ub
+-rwxrwx---    1 root     disk       9995016 Mar  3 06:38 image_new.ub
+37b5525c2517a6ee5000316d4f0d8787  image.ub
+6f6d15fd5be8433c82d6e54466f192a7  image_new.ub
+RECON_DONE

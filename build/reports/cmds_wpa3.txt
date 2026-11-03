@@ -1,0 +1,11 @@
+printf '#!/bin/sh
+exec /tmp/demo/lib/ld-linux.so.3 --library-path /tmp/demo/lib:/tmp/demo/usr/lib /tmp/demo/sbin/wpa_supplicant "$@"
+' > /tmp/wp.sh
+chmod +x /tmp/wp.sh
+cat /tmp/wpa.conf
+echo MARK_WPA3
+/tmp/wp.sh -Dwext -iwlan0 -c/tmp/wpa.conf > /tmp/wpa.log 2>&1 &
+sleep 6
+cat /tmp/wpa.log
+ps | grep wpa
+echo MARK_WPA3_DONE

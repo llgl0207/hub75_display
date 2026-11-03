@@ -1,0 +1,20 @@
+echo MARK_MUX
+devmem 0xF8000008 32 0x0000DF0D
+devmem 0xF8000728 32 0x00001680
+devmem 0xF800072C 32 0x00001680
+devmem 0xF8000730 32 0x00001680
+devmem 0xF8000734 32 0x00001680
+devmem 0xF8000738 32 0x00001680
+devmem 0xF800073C 32 0x00001680
+devmem 0xF8000728 32
+devmem 0xF800073C 32
+echo MARK_REBIND2
+echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/unbind
+sleep 1
+echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/bind
+sleep 3
+ls /sys/bus/sdio/devices
+dmesg | grep -iE "mmc1|sdio" | tail -20
+devmem 0xE010102C 32
+devmem 0xE0101024 32
+echo MARK_DONE2

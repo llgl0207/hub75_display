@@ -1,0 +1,17 @@
+echo MARK_KILL
+kill -9 763 9248 2>/dev/null
+sleep 2
+ps | grep wpa
+ifconfig wlan0 down
+sleep 1
+ifconfig wlan0 up
+rm -rf /var/run/wpa_supplicant
+mkdir -p /var/run/wpa_supplicant
+echo MARK_WPA3
+LD_LIBRARY_PATH=/tmp/alpine/lib:/tmp/alpine/usr/lib /tmp/alpine/lib/ld-musl-armhf.so.1 /tmp/alpine/sbin/wpa_supplicant -Dnl80211 -iwlan0 -c/tmp/wpa.conf > /tmp/wpa3.log 2>&1 &
+sleep 12
+cat /tmp/wpa3.log
+echo ---ST---
+LD_LIBRARY_PATH=/tmp/alpine/lib:/tmp/alpine/usr/lib /tmp/alpine/lib/ld-musl-armhf.so.1 /tmp/alpine/sbin/wpa_cli -i wlan0 status
+ps | grep wpa
+echo MARK_KILL_DONE

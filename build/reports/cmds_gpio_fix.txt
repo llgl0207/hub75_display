@@ -1,0 +1,31 @@
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devtmpfs dev /dev
+mount -t debugfs none /sys/kernel/debug
+echo MARK_START
+devmem 0xE000A040 32
+devmem 0xE000A060 32
+devmem 0xE000A204 32
+devmem 0xE000A208 32
+devmem 0xF8000720 32
+devmem 0xF8000728 32
+devmem 0xE010102C 32
+devmem 0xE0101024 32
+echo MARK_SET
+devmem 0xE000A204 32 0x00000100
+devmem 0xE000A208 32 0x00000100
+devmem 0xE000A000 32 0xFEFF0100
+devmem 0xE000A040 32
+devmem 0xE000A060 32
+sleep 1
+echo MARK_SDIO
+ls /sys/bus/sdio/devices
+dmesg | grep -i mmc1 | tail -10
+echo MARK_REBIND
+echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/unbind
+sleep 1
+echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/bind
+sleep 2
+ls /sys/bus/sdio/devices
+dmesg | grep -iE "mmc1|sdio" | tail -15
+echo MARK_DONE

@@ -1,0 +1,22 @@
+﻿echo MARK_BIT9
+MARK_BIT9
+sh-4.4# 
+sh-4.4# devmem 0xE000A204 32 0x00000300
+sh-4.4# 
+sh-4.4# devmem 0xE000A208 32 0x00000300
+sh-4.4# 
+sh-4.4# devmem 0xE000A000 32 0xFCFF0300
+sh-4.4# 
+sh-4.4# devmem 0xE000A040 32
+0x00000333
+sh-4.4# 
+sh-4.4# devmem 0xE000A060 32
+0x00000233
+sh-4.4# 
+sh-4.4# devmem 0xF8000724 32
+0x00001600
+sh-4.4# 
+sh-4.4# echo MARK_BIT9_DONE
+MARK_BIT9_DONE
+sh-4.4# 
+sh-4.4# 

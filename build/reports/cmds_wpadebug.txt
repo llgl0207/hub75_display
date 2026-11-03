@@ -1,0 +1,9 @@
+kill 742 2>/dev/null
+sleep 1
+echo MARK_DBG
+/tmp/wp.sh -Dwext -iwlan0 -c/tmp/wpa.conf -dd > /tmp/wpa.log 2>&1 &
+sleep 8
+/tmp/wc.sh -i wlan0 status
+echo ---LOG---
+tail -60 /tmp/wpa.log
+echo MARK_DBG_DONE

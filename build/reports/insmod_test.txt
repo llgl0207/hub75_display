@@ -1,0 +1,227 @@
+﻿cd /run/media/mmcblk0p1/wifi; md5sum *.ko >/dev/ttyPS0; echo ---INSMOD--- >/dev/ttyPS0; insmod cfg80211.ko 2>&1; insmod brcmutil.ko 2>&1; insmod brcmfmac.ko 2>&1; echo ---LSMOD--- >/dev/ttyPS0; lsmod >/dev/ttyPS0 2>&1; echo ---DMESG--- >/dev/ttyPS0; dmesg | tail -15 >/dev/ttyPS0 2>&1; echo INS_DONE >/dev/ttyPS0
+beaaffcc2d0c64c7545587cd1cb81e55  brcmfmac.ko
+7a7963503b25ffbd955ce531b6533e7c  brcmutil.ko
+ed219ef1d5067543aa636d2731c4b680  cfg80211.ko
+---INSMOD---
+cfg80211: loading out-of-tree module taints kernel.
+cfg80211: disagrees about version of symbol __sock_create
+cfg80211: Unknown symbol __sock_create (err -22)
+cfg80211: disagrees about version of symbol skb_copy_bits
+cfg80211: Unknown symbol skb_copy_bits (err -22)
+cfg80211: Unknown symbol iwe_stream_add_value (err 0)
+cfg80211: disagrees about version of symbol skb_put
+cfg80211: Unknown symbol skb_put (err -22)
+cfg80211: Unknown symbol iwe_stream_add_event (err 0)
+cfg80211: disagrees about version of symbol dev_set_name
+cfg80211: Unknown symbol dev_set_name (err -22)
+cfg80211: disagrees about version of symbol consume_skb
+cfg80211: Unknown symbol consume_skb (err -22)
+cfg80211: disagrees about version of symbol device_initialize
+cfg80211: Unknown symbol device_initialize (err -22)
+cfg80211: disagrees about version of symbol skb_add_rx_frag
+cfg80211: Unknown symbol skb_add_rx_frag (err -22)
+cfg80211: disagrees about version of symbol genlmsg_put
+cfg80211: Unknown symbol genlmsg_put (err -22)
+cfg80211: disagrees about version of symbol genlmsg_multicast_allns
+cfg80211: Unknown symbol genlmsg_multicast_allns (err -22)
+cfg80211: disagrees about version of symbol netdev_err
+cfg80211: Unknown symbol netdev_err (err -22)
+cfg80211: disagrees about version of symbol device_rename
+cfg80211: Unknown symbol device_rename (err -22)
+cfg80211: disagrees about version of symbol pskb_expand_head
+cfg80211: Unknown symbol pskb_expand_head (err -22)
+cfg80211: disagrees about version of symbol genl_family_attrbuf
+cfg80211: Unknown symbol genl_family_attrbuf (err -22)
+cfg80211: Unknown symbol wireless_nlevent_flush (err 0)
+cfg80211: disagrees about version of symbol kfree_skb
+cfg80211: Unknown symbol kfree_skb (err -22)
+cfg80211: disagrees about version of symbol put_device
+cfg80211: Unknown symbol put_device (err -22)
+cfg80211: disagrees about version of symbol netlink_broadcast
+cfg80211: Unknown symbol netlink_broadcast (err -22)
+cfg80211: disagrees about version of symbol net_ns_type_operations
+cfg80211: Unknown symbol net_ns_type_operations (err -22)
+cfg80211: disagrees about version of symbol __alloc_skb
+cfg80211: Unknown symbol __alloc_skb (err -22)
+cfg80211: disagrees about version of symbol inet_csk_get_port
+cfg80211: Unknown symbol inet_csk_get_port (err -22)
+cfg80211: disagrees about version of symbol kobject_uevent_env
+cfg80211: Unknown symbol kobject_uevent_env (err -22)
+cfg80211: disagrees about version of symbol __dev_get_by_index
+cfg80211: Unknown symbol __dev_get_by_index (err -22)
+cfg80211: disagrees about version of symbol init_net
+cfg80211: Unknown symbol init_net (err -22)
+cfg80211: disagrees about version of symbol skb_pull
+cfg80211: Unknown symbol skb_pull (err -22)
+cfg80211: disagrees about version of symbol device_add
+cfg80211: Unknown symbol device_add (err -22)
+cfg80211: disagrees about version of symbol netlink_unicast
+cfg80211: Unknown symbol netlink_unicast (err -22)
+cfg80211: disagrees about version of symbol dev_get_by_index
+cfg80211: Unknown symbol dev_get_by_index (err -22)
+cfg80211: disagrees about version of symbol dev_close
+cfg80211: Unknown symbol dev_close (err -22)
+cfg80211: disagrees about version of symbol skb_push
+cfg80211: Unknown symbol skb_push (err -22)
+cfg80211: Unknown symbol wireless_send_event (err 0)
+cfg80211: disagrees about version of symbol unregister_pernet_device
+cfg80211: Unknown symbol unregister_pernet_device (err -22)
+cfg80211: disagrees about version of symbol dev_err
+cfg80211: Unknown symbol dev_err (err -22)
+cfg80211: disagrees about version of symbol device_del
+cfg80211: Unknown symbol device_del (err -22)
+cfg80211: Unknown symbol iwe_stream_add_point (err 0)
+cfg80211: disagrees about version of symbol __pskb_pull_tail
+cfg80211: Unknown symbol __pskb_pull_tail (err -22)
+cfg80211: disagrees about version of symbol __netdev_alloc_skb
+cfg80211: Unknown symbol __netdev_alloc_skb (err -22)
+cfg80211: disagrees about version of symbol skb_trim
+cfg80211: Unknown symbol skb_trim (err -22)
+cfg80211: disagrees about version of symbol get_net_ns_by_pid
+cfg80211: Unknown symbol get_net_ns_by_pid (err -22)
+cfg80211: disagrees about version of symbol sock_release
+cfg80211: Unknown symbol sock_release (err -22)
+cfg80211: disagrees about version of symbol dev_change_net_namespace
+cfg80211: Unknown symbol dev_change_net_namespace (err -22)
+cfg80211: disagrees about version of symbol genl_unregister_family
+cfg80211: Unknown symbol genl_unregister_family (err -22)
+cfg80211: disagrees about version of symbol genl_register_family
+cfg80211: Unknown symbol genl_register_family (err -22)
+cfg80211: disagrees about version of symbol register_pernet_device
+cfg80211: Unknown symbol register_pernet_device (err -22)
+cfg80211: disagrees about version of symbol get_net_ns_by_fd
+cfg80211: Unknown symbol get_net_ns_by_fd (err -22)
+brcmutil: disagrees about version of symbol skb_put
+brcmutil: Unknown symbol skb_put (err -22)
+brcmutil: disagrees about version of symbol skb_dequeue
+brcmutil: Unknown symbol skb_dequeue (err -22)
+brcmutil: disagrees about version of symbol skb_queue_tail
+brcmutil: Unknown symbol skb_queue_tail (err -22)
+brcmutil: disagrees about version of symbol skb_dequeue_tail
+brcmutil: Unknown symbol skb_dequeue_tail (err -22)
+brcmutil: disagrees about version of symbol __netdev_alloc_skb
+brcmutil: Unknown symbol __netdev_alloc_skb (err -22)
+brcmutil: disagrees about version of symbol skb_unlink
+brcmutil: Unknown symbol skb_unlink (err -22)
+brcmutil: disagrees about version of symbol __dev_kfree_skb_any
+brcmutil: Unknown symbol __dev_kfree_skb_any (err -22)
+brcmutil: disagrees about version of symbol skb_queue_head
+brcmutil: Unknown symbol skb_queue_head (err -22)
+brcmfmac: Unknown symbol brcmu_pktq_mlen (err 0)
+brcmfmac: Unknown symbol cfg80211_sched_scan_results (err 0)
+brcmfmac: disagrees about version of symbol skb_put
+brcmfmac: Unknown symbol skb_put (err -22)
+brcmfmac: Unknown symbol brcmu_pkt_buf_free_skb (err 0)
+brcmfmac: Unknown symbol cfg80211_scan_done (err 0)
+brcmfmac: Unknown symbol cfg80211_sched_scan_stopped (err 0)
+brcmfmac: disagrees about version of symbol consume_skb
+brcmfmac: Unknown symbol consume_skb (err -22)
+brcmfmac: disagrees about version of symbol unregister_netdev
+brcmfmac: Unknown symbol unregister_netdev (err -22)
+brcmfmac: Unknown symbol cfg80211_remain_on_channel_expired (err 0)
+brcmfmac: Unknown symbol brcmu_pktq_init (err 0)
+brcmfmac: Unknown symbol brcmu_pktq_penq_head (err 0)
+brcmfmac: Unknown symbol cfg80211_new_sta (err 0)
+brcmfmac: disagrees about version of symbol unregister_netdevice_queue
+brcmfmac: Unknown symbol unregister_netdevice_queue (err -22)
+brcmfmac: Unknown symbol brcmu_dotrev_str (err 0)
+brcmfmac: Unknown symbol cfg80211_disconnected (err 0)
+brcmfmac: disagrees about version of symbol ether_setup
+brcmfmac: Unknown symbol ether_setup (err -22)
+brcmfmac: disagrees about version of symbol pskb_expand_head
+brcmfmac: Unknown symbol pskb_expand_head (err -22)
+brcmfmac: disagrees about version of symbol wake_up_process
+brcmfmac: Unknown symbol wake_up_process (err -22)
+brcmfmac: disagrees about version of symbol eth_type_trans
+brcmfmac: Unknown symbol eth_type_trans (err -22)
+brcmfmac: disagrees about version of symbol alloc_netdev_mqs
+brcmfmac: Unknown symbol alloc_netdev_mqs (err -22)
+brcmfmac: Unknown symbol wiphy_new_nm (err 0)
+brcmfmac: Unknown symbol cfg80211_ready_on_channel (err 0)
+brcmfmac: disagrees about version of symbol kfree_skb
+brcmfmac: Unknown symbol kfree_skb (err -22)
+brcmfmac: Unknown symbol cfg80211_classify8021d (err 0)
+brcmfmac: Unknown symbol cfg80211_crit_proto_stopped (err 0)
+brcmfmac: Unknown symbol wiphy_register (err 0)
+brcmfmac: Unknown symbol __cfg80211_alloc_reply_skb (err 0)
+brcmfmac: Unknown symbol cfg80211_put_bss (err 0)
+brcmfmac: Unknown symbol cfg80211_roamed (err 0)
+brcmfmac: disagrees about version of symbol skb_queue_tail
+brcmfmac: Unknown symbol skb_queue_tail (err -22)
+brcmfmac: Unknown symbol cfg80211_check_combinations (err 0)
+brcmfmac: Unknown symbol cfg80211_ibss_joined (err 0)
+brcmfmac: disagrees about version of symbol skb_pull
+brcmfmac: Unknown symbol skb_pull (err -22)
+brcmfmac: Unknown symbol cfg80211_michael_mic_failure (err 0)
+brcmfmac: Unknown symbol wiphy_apply_custom_regulatory (err 0)
+brcmfmac: disagrees about version of symbol skb_push
+brcmfmac: Unknown symbol skb_push (err -22)
+brcmfmac: Unknown symbol brcmu_pktq_peek_tail (err 0)
+brcmfmac: Unknown symbol brcmu_pktq_flush (err 0)
+brcmfmac: Unknown symbol ieee80211_get_channel (err 0)
+brcmfmac: Unknown symbol cfg80211_del_sta_sinfo (err 0)
+brcmfmac: disagrees about version of symbol register_netdev
+brcmfmac: Unknown symbol register_netdev (err -22)
+brcmfmac: Unknown symbol wiphy_unregister (err 0)
+brcmfmac: disagrees about version of symbol free_netdev
+brcmfmac: Unknown symbol free_netdev (err -22)
+brcmfmac: Unknown symbol wiphy_read_of_freq_limits (err 0)
+brcmfmac: disagrees about version of symbol netif_tx_wake_queue
+brcmfmac: Unknown symbol netif_tx_wake_queue (err -22)
+brcmfmac: disagrees about version of symbol netif_rx_ni
+brcmfmac: Unknown symbol netif_rx_ni (err -22)
+brcmfmac: Unknown symbol brcmu_pktq_pdeq_match (err 0)
+brcmfmac: Unknown symbol cfg80211_vendor_cmd_reply (err 0)
+brcmfmac: disagrees about version of symbol __pskb_pull_tail
+brcmfmac: Unknown symbol __pskb_pull_tail (err -22)
+brcmfmac: disagrees about version of symbol netif_rx
+brcmfmac: Unknown symbol netif_rx (err -22)
+brcmfmac: disagrees about version of symbol __netdev_alloc_skb
+brcmfmac: Unknown symbol __netdev_alloc_skb (err -22)
+brcmfmac: Unknown symbol cfg80211_mgmt_tx_status (err 0)
+brcmfmac: disagrees about version of symbol skb_trim
+brcmfmac: Unknown symbol skb_trim (err -22)
+brcmfmac: disagrees about version of symbol skb_unlink
+brcmfmac: Unknown symbol skb_unlink (err -22)
+brcmfmac: Unknown symbol brcmu_pktq_mdeq (err 0)
+brcmfmac: Unknown symbol cfg80211_unregister_wdev (err 0)
+brcmfmac: Unknown symbol brcmu_pktq_penq (err 0)
+brcmfmac: Unknown symbol brcmu_pktq_pdeq_tail (err 0)
+brcmfmac: disagrees about version of symbol __dev_kfree_skb_any
+brcmfmac: Unknown symbol __dev_kfree_skb_any (err -22)
+brcmfmac: Unknown symbol ieee80211_channel_to_frequency (err 0)
+brcmfmac: Unknown symbol cfg80211_rx_mgmt (err 0)
+brcmfmac: disagrees about version of symbol netif_carrier_off
+brcmfmac: Unknown symbol netif_carrier_off (err -22)
+brcmfmac: disagrees about version of symbol netif_carrier_on
+brcmfmac: Unknown symbol netif_carrier_on (err -22)
+brcmfmac: Unknown symbol brcmu_pkt_buf_get_skb (err 0)
+brcmfmac: Unknown symbol cfg80211_report_wowlan_wakeup (err 0)
+brcmfmac: Unknown symbol cfg80211_get_p2p_attr (err 0)
+brcmfmac: Unknown symbol cfg80211_inform_bss_data (err 0)
+brcmfmac: Unknown symbol ieee80211_frequency_to_channel (err 0)
+brcmfmac: Unknown symbol cfg80211_connect_done (err 0)
+brcmfmac: Unknown symbol wiphy_free (err 0)
+brcmfmac: Unknown symbol brcmu_d11_attach (err 0)
+brcmfmac: disagrees about version of symbol register_netdevice
+brcmfmac: Unknown symbol register_netdevice (err -22)
+---LSMOD---
+    Tainted: G  
+uio_pdrv_genirq 16384 0 - Live 0xbf000000
+---DMESG---
+brcmfmac: Unknown symbol cfg80211_rx_mgmt (err 0)
+brcmfmac: disagrees about version of symbol netif_carrier_off
+brcmfmac: Unknown symbol netif_carrier_off (err -22)
+brcmfmac: disagrees about version of symbol netif_carrier_on
+brcmfmac: Unknown symbol netif_carrier_on (err -22)
+brcmfmac: Unknown symbol brcmu_pkt_buf_get_skb (err 0)
+brcmfmac: Unknown symbol cfg80211_report_wowlan_wakeup (err 0)
+brcmfmac: Unknown symbol cfg80211_get_p2p_attr (err 0)
+brcmfmac: Unknown symbol cfg80211_inform_bss_data (err 0)
+brcmfmac: Unknown symbol ieee80211_frequency_to_channel (err 0)
+brcmfmac: Unknown symbol cfg80211_connect_done (err 0)
+brcmfmac: Unknown symbol wiphy_free (err 0)
+brcmfmac: Unknown symbol brcmu_d11_attach (err 0)
+brcmfmac: disagrees about version of symbol register_netdevice
+brcmfmac: Unknown symbol register_netdevice (err -22)
+INS_DONE

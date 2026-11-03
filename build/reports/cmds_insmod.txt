@@ -1,0 +1,13 @@
+mkdir -p /lib/firmware/brcm
+cp /tmp/demo/etc/firmware/fw_bcm43438a0.bin /lib/firmware/brcm/brcmfmac43430-sdio.bin
+cp /tmp/demo/etc/firmware/nvram.txt /lib/firmware/brcm/brcmfmac43430-sdio.txt
+ls -l /lib/firmware/brcm
+echo MARK_INSMOD
+insmod /mnt/boot/wifi/cfg80211.ko
+insmod /mnt/boot/wifi/brcmutil.ko
+insmod /mnt/boot/wifi/brcmfmac.ko
+sleep 4
+echo MARK_DMESG
+dmesg | tail -40
+ls /sys/class/net
+echo MARK_INSMOD_DONE

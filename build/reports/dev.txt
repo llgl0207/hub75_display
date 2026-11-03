@@ -1,0 +1,10 @@
+﻿mount -t devtmpfs dev /dev
+sh-4.4# 
+sh-4.4# ls -l /dev/ttyPS0 /dev/null
+crw-rw-rw-    1 root     root        1,   3 Jan  1 00:00 /dev/null
+crw-------    1 root     root      253,   0 Jan  1 00:00 /dev/ttyPS0
+sh-4.4# 
+sh-4.4# echo MARK_DEV_DONE
+MARK_DEV_DONE
+sh-4.4# 
+sh-4.4# 

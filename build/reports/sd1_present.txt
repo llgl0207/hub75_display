@@ -1,0 +1,18 @@
+﻿echo ---PRESENT--- >/dev/ttyPS0; devmem 0xE0101024 32 >/dev/ttyPS0 2>&1; devmem 0xE0101028 32 >/dev/ttyPS0 2>&1; devmem 0xE0101030 32 >/dev/ttyPS0 2>&1; echo ---CAPS--- >/dev/ttyPS0; devmem 0xE0101040 32 >/dev/ttyPS0 2>&1; echo ---DEVDIR--- >/dev/ttyPS0; ls /sys/class/mmc_host/mmc1/device >/dev/ttyPS0 2>&1; echo PR_DONE >/dev/ttyPS0
+---PRESENT---
+0x01F20000
+0x00000000
+0x00000000
+---CAPS---
+0x69EC0080
+---DEVDIR---
+driver
+driver_override
+leds
+mmc_host
+modalias
+of_node
+power
+subsystem
+uevent
+PR_DONE

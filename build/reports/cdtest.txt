@@ -1,0 +1,46 @@
+﻿echo MARK_CDTEST
+MARK_CDTEST
+sh-4.4# 
+sh-4.4# devmem 0xE0101028 32
+0x00000000
+sh-4.4# 
+sh-4.4# devmem 0xE0101028 32 0x000000C0
+sh-4.4# 
+sh-4.4# mmc1: queuing unknown CIS tuple 0x80 (2 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (7 bytes)
+mmc1: queuing unknown CIS tuple 0x81 (9 bytes)
+mmc1: new high speed SDIO card at address 0001
+devmem 0xE0101028 32
+0x00000FC6
+sh-4.4# 
+sh-4.4# devmem 0xE0101024 32
+0x01F70000
+sh-4.4# 
+sh-4.4# sleep 2
+devmem 0xE010102C 32
+
+sh-4.4# 
+sh-4.4# devmem 0xE010102C 32
+0x00000107
+sh-4.4# 
+sh-4.4# ls /sys/bus/sdio/devices
+mmc1:0001:1  mmc1:0001:2
+sh-4.4# 
+sh-4.4# dmesg | tail -10
+mmc1: SDHCI controller on e0101000.mmc [e0101000.mmc] using ADMA
+sdhci-arasan e0101000.mmc: Unbalanced pm_runtime_enable!
+mmc1: SDHCI controller on e0101000.mmc [e0101000.mmc] using ADMA
+sdhci-arasan e0101000.mmc: Unbalanced pm_runtime_enable!
+mmc1: queuing unknown CIS tuple 0x80 (2 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (7 bytes)
+mmc1: queuing unknown CIS tuple 0x81 (9 bytes)
+mmc1: new high speed SDIO card at address 0001
+sh-4.4# 
+sh-4.4# echo MARK_CDTEST_DONE
+MARK_CDTEST_DONE
+sh-4.4# 
+sh-4.4# 

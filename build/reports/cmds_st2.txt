@@ -1,0 +1,7 @@
+sleep 8
+echo MARK_ST2
+/tmp/wc.sh -i wlan0 status
+/tmp/wc.sh -i wlan0 scan_results
+cat /tmp/wpa.log
+ifconfig wlan0
+echo MARK_ST2_DONE

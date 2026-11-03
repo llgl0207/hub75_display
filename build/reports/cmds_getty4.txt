@@ -1,0 +1,3 @@
+mount -t devtmpfs dev /dev
+echo MARK_G4
+/sbin/getty -L 115200 ttyPS0 vt102

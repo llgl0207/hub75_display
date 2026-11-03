@@ -1,0 +1,7 @@
+﻿echo ---RST--- >/dev/ttyPS0; for a in 0xF8000240 0xF8000244 0xF8000248 0xF800024C; do devmem $a 32 >/dev/ttyPS0 2>&1; done; echo RST_DONE >/dev/ttyPS0
+---RST---
+0x00000000
+0x00000000
+0x00000000
+0x00000000
+RST_DONE

@@ -1,0 +1,19 @@
+﻿echo ---SD1PINS2--- >/dev/ttyPS0; for a in 0xF8000728 0xF800072C 0xF8000730 0xF8000734 0xF8000738 0xF800073C; do devmem $a 32 0x1680 >/dev/ttyPS0 2>&1; done; echo ---WLPOWER--- >/dev/ttyPS0; echo 914 > /sys/class/gpio/export 2>/dev/null; echo out > /sys/class/gpio/gpio914/direction 2>&1; echo 0 > /sys/class/gpio/gpio914/value 2>&1; sleep 1; echo 1 > /sys/class/gpio/gpio914/value 2>&1; sleep 1; echo "dir=$(cat /sys/class/gpio/gpio914/direction) val=$(cat /sys/class/gpio/gpio914/value)" >/dev/ttyPS0; echo ---REG--- >/dev/ttyPS0; devmem 0xE000A044 32 >/dev/ttyPS0 2>&1; devmem 0xE000A048 32 >/dev/ttyPS0 2>&1; devmem 0xE000A040 32 >/dev/ttyPS0 2>&1; devmem 0xF8000708 32 >/dev/ttyPS0 2>&1; echo ---RESCAN--- >/dev/ttyPS0; devmem 0xE0101030 32 0x40 >/dev/ttyPS0 2>&1; sleep 2; ls /sys/bus/sdio/devices >/dev/ttyPS0 2>&1; devmem 0xE010102C 32 >/dev/ttyPS0 2>&1; dmesg | tail -6 >/dev/ttyPS0 2>&1; echo WLSEQ_DONE >/dev/ttyPS0
+hub75d: pty [256]hub75d: submit 10200000 10ms st=10033ced id=3hub75d: pty [256]hub75d: pty [256]hub75d: pty [96]---SD1PINS2---
+---WLPOWER---
+hub75d: submit 10000000 6ms st=52041fe4 id=4dir=out val=0
+---REG---
+0x000CC000
+0x00000000
+0x00000333
+0x00000600
+---RESCAN---
+0x00000000
+uio_pdrv_genirq: disagrees about version of symbol dev_err
+uio_pdrv_genirq: Unknown symbol dev_err (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_warn
+uio_pdrv_genirq: Unknown symbol dev_warn (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_err
+uio_pdrv_genirq: Unknown symbol dev_err (err -22)
+WLSEQ_DONE
+hub75d: submit 10200000 7ms st=3a0516ed id=5

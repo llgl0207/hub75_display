@@ -1,0 +1,328 @@
+﻿RAWOK
+[1412ms] TX stty raw -echo; echo R0000 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0000 >/dev/ttyPS0
+[1466ms] R0000
+[1684ms] D0000
+[1692ms] TX stty raw -echo; echo R0001 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0001 >/dev/ttyPS0
+[1747ms] R0001
+[1981ms] D0001
+[1982ms] TX stty raw -echo; echo R0002 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0002 >/dev/ttyPS0
+[2028ms] R0002
+[2259ms] D0002
+[2260ms] TX stty raw -echo; echo R0003 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0003 >/dev/ttyPS0
+[2321ms] R0003
+[2510ms] D0003
+[2510ms] TX stty raw -echo; echo R0004 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0004 >/dev/ttyPS0
+[2572ms] R0004
+[2806ms] D0004
+[2806ms] TX stty raw -echo; echo R0005 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0005 >/dev/ttyPS0
+[2854ms] R0005
+[3042ms] D0005
+[3043ms] TX stty raw -echo; echo R0006 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0006 >/dev/ttyPS0
+[3105ms] R0006
+[3326ms] D0006
+[3327ms] TX stty raw -echo; echo R0007 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0007 >/dev/ttyPS0
+[3372ms] R0007
+[3604ms] D0007
+[3605ms] TX stty raw -echo; echo R0008 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0008 >/dev/ttyPS0
+[3666ms] R0008
+[3887ms] D0008
+[3888ms] TX stty raw -echo; echo R0009 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0009 >/dev/ttyPS0
+[3948ms] R0009
+[4134ms] D0009
+[4135ms] TX stty raw -echo; echo R0010 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0010 >/dev/ttyPS0
+[4197ms] R0010
+[4432ms] D0010
+[4432ms] TX stty raw -echo; echo R0011 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0011 >/dev/ttyPS0
+[4479ms] R0011
+[4666ms] D0011
+[4667ms] TX stty raw -echo; echo R0012 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0012 >/dev/ttyPS0
+[4713ms] R0012
+[4948ms] D0012
+[4948ms] TX stty raw -echo; echo R0013 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0013 >/dev/ttyPS0
+[4995ms] R0013
+[5226ms] D0013
+[5227ms] TX stty raw -echo; echo R0014 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0014 >/dev/ttyPS0
+[5273ms] R0014
+[5460ms] D0014
+[5461ms] TX stty raw -echo; echo R0015 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0015 >/dev/ttyPS0
+[5506ms] R0015
+[5724ms] D0015
+[5725ms] TX stty raw -echo; echo R0016 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0016 >/dev/ttyPS0
+[5771ms] R0016
+[5990ms] D0016
+[5990ms] TX stty raw -echo; echo R0017 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0017 >/dev/ttyPS0
+[6037ms] R0017
+[6269ms] D0017
+[6269ms] TX stty raw -echo; echo R0018 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0018 >/dev/ttyPS0
+[6315ms] R0018
+[6533ms] D0018
+[6534ms] TX stty raw -echo; echo R0019 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0019 >/dev/ttyPS0
+[6579ms] R0019
+[6799ms] D0019
+[6799ms] TX stty raw -echo; echo R0020 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0020 >/dev/ttyPS0
+[6846ms] R0020
+[7067ms] D0020
+[7069ms] TX stty raw -echo; echo R0021 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0021 >/dev/ttyPS0
+[7114ms] R0021
+[7332ms] D0021
+[7332ms] TX stty raw -echo; echo R0022 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0022 >/dev/ttyPS0
+[7378ms] R0022
+[7595ms] D0022
+[7596ms] TX stty raw -echo; echo R0023 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0023 >/dev/ttyPS0
+[7643ms] R0023
+[7862ms] D0023
+[7862ms] TX stty raw -echo; echo R0024 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0024 >/dev/ttyPS0
+[7908ms] R0024
+[8125ms] D0024
+[8126ms] TX stty raw -echo; echo R0025 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0025 >/dev/ttyPS0
+[8171ms] R0025
+[8437ms] D0025
+[8438ms] TX stty raw -echo; echo R0026 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0026 >/dev/ttyPS0
+[8485ms] R0026
+[8703ms] D0026
+[8704ms] TX stty raw -echo; echo R0027 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0027 >/dev/ttyPS0
+[8750ms] R0027
+[8970ms] D0027
+[8971ms] TX stty raw -echo; echo R0028 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0028 >/dev/ttyPS0
+[9016ms] R0028
+[9233ms] D0028
+[9234ms] TX stty raw -echo; echo R0029 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0029 >/dev/ttyPS0
+[9280ms] R0029
+[9499ms] D0029
+[9500ms] TX stty raw -echo; echo R0030 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0030 >/dev/ttyPS0
+[9546ms] R0030
+[9764ms] D0030
+[9765ms] TX stty raw -echo; echo R0031 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0031 >/dev/ttyPS0
+[9810ms] R0031
+[10043ms] D0031
+[10044ms] TX stty raw -echo; echo R0032 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0032 >/dev/ttyPS0
+[10090ms] R0032
+[10309ms] D0032
+[10309ms] TX stty raw -echo; echo R0033 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0033 >/dev/ttyPS0
+[10356ms] R0033
+[10587ms] D0033
+[10588ms] TX stty raw -echo; echo R0034 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0034 >/dev/ttyPS0
+[10635ms] R0034
+[10822ms] D0034
+[10822ms] TX stty raw -echo; echo R0035 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0035 >/dev/ttyPS0
+[10868ms] R0035
+[11057ms] D0035
+[11057ms] TX stty raw -echo; echo R0036 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0036 >/dev/ttyPS0
+[11102ms] R0036
+[11332ms] D0036
+[11333ms] TX stty raw -echo; echo R0037 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0037 >/dev/ttyPS0
+[11379ms] R0037
+[11594ms] D0037
+[11595ms] TX stty raw -echo; echo R0038 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0038 >/dev/ttyPS0
+[11641ms] R0038
+[11857ms] D0038
+[11857ms] TX stty raw -echo; echo R0039 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0039 >/dev/ttyPS0
+[11903ms] R0039
+[12137ms] D0039
+[12137ms] TX stty raw -echo; echo R0040 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0040 >/dev/ttyPS0
+[12184ms] R0040
+[12403ms] D0040
+[12404ms] TX stty raw -echo; echo R0041 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0041 >/dev/ttyPS0
+[12450ms] R0041
+[12668ms] D0041
+[12669ms] TX stty raw -echo; echo R0042 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0042 >/dev/ttyPS0
+[12715ms] R0042
+[12949ms] D0042
+[12949ms] TX stty raw -echo; echo R0043 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0043 >/dev/ttyPS0
+[13010ms] R0043
+[13198ms] D0043
+[13199ms] TX stty raw -echo; echo R0044 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0044 >/dev/ttyPS0
+[13260ms] R0044
+[13449ms] D0044
+[13449ms] TX stty raw -echo; echo R0045 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0045 >/dev/ttyPS0
+[13511ms] R0045
+[13742ms] D0045
+[13742ms] TX stty raw -echo; echo R0046 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0046 >/dev/ttyPS0
+[13788ms] R0046
+[14007ms] D0046
+[14007ms] TX stty raw -echo; echo R0047 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0047 >/dev/ttyPS0
+[14053ms] R0047
+[14272ms] D0047
+[14272ms] TX stty raw -echo; echo R0048 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0048 >/dev/ttyPS0
+[14319ms] R0048
+[14553ms] D0048
+[14554ms] TX stty raw -echo; echo R0049 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0049 >/dev/ttyPS0
+[14600ms] R0049
+[14817ms] D0049
+[14818ms] TX stty raw -echo; echo R0050 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0050 >/dev/ttyPS0
+[14864ms] R0050
+[15084ms] D0050
+[15085ms] TX stty raw -echo; echo R0051 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0051 >/dev/ttyPS0
+[15132ms] R0051
+[15364ms] D0051
+[15365ms] TX stty raw -echo; echo R0052 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0052 >/dev/ttyPS0
+[15411ms] R0052
+[15630ms] D0052
+[15631ms] TX stty raw -echo; echo R0053 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0053 >/dev/ttyPS0
+[15678ms] R0053
+[15894ms] D0053
+[15895ms] TX stty raw -echo; echo R0054 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0054 >/dev/ttyPS0
+[15942ms] R0054
+[16161ms] D0054
+[16161ms] TX stty raw -echo; echo R0055 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0055 >/dev/ttyPS0
+[16208ms] R0055
+[16438ms] D0055
+[16438ms] TX stty raw -echo; echo R0056 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0056 >/dev/ttyPS0
+[16485ms] R0056
+[16704ms] D0056
+[16705ms] TX stty raw -echo; echo R0057 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0057 >/dev/ttyPS0
+[16750ms] R0057
+[16969ms] D0057
+[16970ms] TX stty raw -echo; echo R0058 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0058 >/dev/ttyPS0
+[17016ms] R0058
+[17247ms] D0058
+[17248ms] TX stty raw -echo; echo R0059 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0059 >/dev/ttyPS0
+[17294ms] R0059
+[17527ms] D0059
+[17527ms] TX stty raw -echo; echo R0060 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0060 >/dev/ttyPS0
+[17589ms] R0060
+[17822ms] D0060
+[17823ms] TX stty raw -echo; echo R0061 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0061 >/dev/ttyPS0
+[17886ms] R0061
+[18117ms] D0061
+[18118ms] TX stty raw -echo; echo R0062 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0062 >/dev/ttyPS0
+[18163ms] R0062
+[18380ms] D0062
+[18381ms] TX stty raw -echo; echo R0063 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0063 >/dev/ttyPS0
+[18475ms] R0063
+[18693ms] D0063
+[18693ms] TX stty raw -echo; echo R0064 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0064 >/dev/ttyPS0
+[18739ms] R0064
+[18956ms] D0064
+[18956ms] TX stty raw -echo; echo R0065 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0065 >/dev/ttyPS0
+[19003ms] R0065
+[19224ms] D0065
+[19224ms] TX stty raw -echo; echo R0066 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0066 >/dev/ttyPS0
+[19269ms] R0066
+[19502ms] D0066
+[19503ms] TX stty raw -echo; echo R0067 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0067 >/dev/ttyPS0
+[19549ms] R0067
+[19765ms] D0067
+[19766ms] TX stty raw -echo; echo R0068 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0068 >/dev/ttyPS0
+[19813ms] R0068
+[20032ms] D0068
+[20032ms] TX stty raw -echo; echo R0069 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0069 >/dev/ttyPS0
+[20078ms] R0069
+[20298ms] D0069
+[20299ms] TX stty raw -echo; echo R0070 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0070 >/dev/ttyPS0
+[20343ms] R0070
+[20573ms] D0070
+[20574ms] TX stty raw -echo; echo R0071 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0071 >/dev/ttyPS0
+[20620ms] R0071
+[20850ms] D0071
+[20851ms] TX stty raw -echo; echo R0072 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0072 >/dev/ttyPS0
+[20898ms] R0072
+[21116ms] D0072
+[21117ms] TX stty raw -echo; echo R0073 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0073 >/dev/ttyPS0
+[21164ms] R0073
+[21350ms] D0073
+[21351ms] TX stty raw -echo; echo R0074 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0074 >/dev/ttyPS0
+[21396ms] R0074
+[21614ms] D0074
+[21615ms] TX stty raw -echo; echo R0075 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0075 >/dev/ttyPS0
+[21660ms] R0075
+[21882ms] D0075
+[21883ms] TX stty raw -echo; echo R0076 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0076 >/dev/ttyPS0
+[21930ms] R0076
+[22160ms] D0076
+[22160ms] TX stty raw -echo; echo R0077 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0077 >/dev/ttyPS0
+[22207ms] R0077
+[22472ms] D0077
+[22473ms] TX stty raw -echo; echo R0078 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0078 >/dev/ttyPS0
+[22520ms] R0078
+[22735ms] D0078
+[22736ms] TX stty raw -echo; echo R0079 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0079 >/dev/ttyPS0
+[22783ms] R0079
+[23000ms] D0079
+[23000ms] TX stty raw -echo; echo R0080 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0080 >/dev/ttyPS0
+[23046ms] R0080
+[23265ms] D0080
+[23267ms] TX stty raw -echo; echo R0081 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0081 >/dev/ttyPS0
+[23312ms] R0081
+[23531ms] D0081
+[23532ms] TX stty raw -echo; echo R0082 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0082 >/dev/ttyPS0
+[23578ms] R0082
+[23795ms] D0082
+[23795ms] TX stty raw -echo; echo R0083 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0083 >/dev/ttyPS0
+[23842ms] R0083
+[24060ms] D0083
+[24061ms] TX stty raw -echo; echo R0084 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0084 >/dev/ttyPS0
+[24107ms] R0084
+[24339ms] D0084
+[24339ms] TX stty raw -echo; echo R0085 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0085 >/dev/ttyPS0
+[24402ms] R0085
+[24588ms] D0085
+[24589ms] TX stty raw -echo; echo R0086 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0086 >/dev/ttyPS0
+[24635ms] R0086
+[24856ms] D0086
+[24857ms] TX stty raw -echo; echo R0087 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0087 >/dev/ttyPS0
+[24903ms] R0087
+[25123ms] D0087
+[25124ms] TX stty raw -echo; echo R0088 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0088 >/dev/ttyPS0
+[25169ms] R0088
+[25401ms] D0088
+[25402ms] TX stty raw -echo; echo R0089 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0089 >/dev/ttyPS0
+[25464ms] R0089
+[25698ms] D0089
+[25698ms] TX stty raw -echo; echo R0090 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0090 >/dev/ttyPS0
+[25745ms] R0090
+[25932ms] D0090
+[25932ms] TX stty raw -echo; echo R0091 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0091 >/dev/ttyPS0
+[25993ms] R0091
+[26181ms] D0091
+[26182ms] TX stty raw -echo; echo R0092 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0092 >/dev/ttyPS0
+[26227ms] R0092
+[26460ms] D0092
+[26460ms] TX stty raw -echo; echo R0093 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0093 >/dev/ttyPS0
+[26506ms] R0093
+[26724ms] D0093
+[26725ms] TX stty raw -echo; echo R0094 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0094 >/dev/ttyPS0
+[26772ms] R0094
+[26989ms] D0094
+[26990ms] TX stty raw -echo; echo R0095 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0095 >/dev/ttyPS0
+[27036ms] R0095
+[27252ms] D0095
+[27253ms] TX stty raw -echo; echo R0096 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0096 >/dev/ttyPS0
+[27300ms] R0096
+[27519ms] D0096
+[27520ms] TX stty raw -echo; echo R0097 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0097 >/dev/ttyPS0
+[27566ms] R0097
+[27781ms] D0097
+[27782ms] TX stty raw -echo; echo R0098 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0098 >/dev/ttyPS0
+[27842ms] R0098
+[28075ms] D0098
+[28075ms] TX stty raw -echo; echo R0099 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0099 >/dev/ttyPS0
+[28122ms] R0099
+[28355ms] D0099
+[28355ms] TX stty raw -echo; echo R0100 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0100 >/dev/ttyPS0
+[28417ms] R0100
+[28649ms] D0100
+[28650ms] TX stty raw -echo; echo R0101 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0101 >/dev/ttyPS0
+[28695ms] R0101
+[28930ms] D0101
+[28930ms] TX stty raw -echo; echo R0102 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0102 >/dev/ttyPS0
+[28976ms] R0102
+[29209ms] D0102
+[29209ms] TX stty raw -echo; echo R0103 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0103 >/dev/ttyPS0
+[29254ms] R0103
+[29475ms] D0103
+[29475ms] TX stty raw -echo; echo R0104 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0104 >/dev/ttyPS0
+[29521ms] R0104
+[29741ms] D0104
+[29741ms] TX stty raw -echo; echo R0105 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0105 >/dev/ttyPS0
+[29787ms] R0105
+[30019ms] D0105
+[30019ms] TX stty raw -echo; echo R0106 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0106 >/dev/ttyPS0
+[30066ms] R0106
+[30283ms] D0106
+[30283ms] TX stty raw -echo; echo R0107 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0107 >/dev/ttyPS0
+[30329ms] R0107
+[30548ms] D0107
+[30549ms] TX stty raw -echo; echo R0108 >/dev/ttyPS0; dd bs=1 count=24 >> /run/media/mmcblk0p1/wifi/brcmfmac.ko; stty sane; echo D0108 >/dev/ttyPS0
+[30594ms] R0108
+[30643ms] D0108

@@ -1,0 +1,17 @@
+﻿echo ---INT--- >/dev/ttyPS0; devmem 0xE0101034 32 >/dev/ttyPS0 2>&1; devmem 0xE0101030 32 >/dev/ttyPS0 2>&1; echo ---SIMINSERT--- >/dev/ttyPS0; devmem 0xE0101030 32 0x40 >/dev/ttyPS0 2>&1; sleep 2; echo ---AFTER--- >/dev/ttyPS0; devmem 0xE010102C 32 >/dev/ttyPS0 2>&1; devmem 0xE0101024 32 >/dev/ttyPS0 2>&1; ls /sys/bus/sdio/devices >/dev/ttyPS0 2>&1; dmesg | tail -8 >/dev/ttyPS0 2>&1; echo INSERT_DONE >/dev/ttyPS0
+---INT---
+0x00FF0043
+0x00000000
+---SIMINSERT---
+---AFTER---
+0x00000000
+0x01F20000
+uio_pdrv_genirq: disagrees about version of symbol dev_warn
+uio_pdrv_genirq: Unknown symbol dev_warn (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_err
+uio_pdrv_genirq: Unknown symbol dev_err (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_warn
+uio_pdrv_genirq: Unknown symbol dev_warn (err -22)
+uio_pdrv_genirq: disagrees about version of symbol dev_err
+uio_pdrv_genirq: Unknown symbol dev_err (err -22)
+INSERT_DONE

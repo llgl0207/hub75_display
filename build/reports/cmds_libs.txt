@@ -1,0 +1,5 @@
+echo MARK_LIBS
+ls /tmp/demo/lib | grep -iE "nl|dbus|pthread|rt"
+ls /tmp/demo/usr/lib | grep -iE "nl|dbus"
+/tmp/demo/lib/ld-linux.so.3 --library-path /tmp/demo/lib:/tmp/demo/usr/lib --list /tmp/demo/sbin/wpa_supplicant
+echo MARK_LIBS_DONE

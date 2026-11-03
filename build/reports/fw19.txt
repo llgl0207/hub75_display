@@ -1,0 +1,141 @@
+﻿echo MARK_FW19
+MARK_FW19
+root@(none):~# 
+root@(none):~# md5sum /tmp/fw2019.bin
+ba679a85c1dc76e9775603af45440bc0  /tmp/fw2019.bin
+root@(none):~# 
+root@(none):~# cp /tmp/fw2019.bin /mnt/boot/brcmfmac43430-sdio-2019.bin
+root@(none):~# 
+root@(none):~# cp /tmp/nvram.txt /mnt/boot/brcmfmac43430-sdio.txt
+root@(none):~# 
+root@(none):~# ls -l /mnt/boot/brcmfmac43430-sdio-2019.bin
+-rwxr-xr-x    1 root     root        388739 Jan  1 00:08 /mnt/boot/brcmfmac43430-sdio-2019.bin
+root@(none):~# 
+root@(none):~# ifconfig wlan0 down
+root@(none):~# 
+root@(none):~# cp /tmp/fw2019.bin /lib/firmware/brcm/brcmfmac43430-sdio.bin
+root@(none):~# 
+root@(none):~# rmmod brcmfmac
+brcmfmac: brcmf_fil_cmd_data: bus is down. we have nothing to do.
+brcmfmac: brcmf_fil_cmd_data: bus is down. we have nothing to do.
+brcmfmac: brcmf_cfg80211_get_channel: chanspec failed (-5)
+root@(none):~# 
+root@(none):~# rmmod brcmutil
+root@(none):~# 
+root@(none):~# rmmod cfg80211
+root@(none):~# 
+root@(none):~# insmod /mnt/boot/wifi/cfg80211.ko
+root@(none):~# 
+root@(none):~# insmod /mnt/boot/wifi/brcmutil.ko
+root@(none):~# 
+root@(none):~# insmod /mnt/boot/wifi/brcmfmac.ko
+root@(none):~# 
+mmc1: Internal clock never stabilised.
+mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+mmc1: sdhci: Sys addr:  0x00000000 | Version:  0x00008901
+mmc1: sdhci: Blk size:  0x00000000 | Blk cnt:  0x00000000
+root@(none):~# mmc1: sdhci: Argument:  0x00000000 | Trn mode: 0x00000000
+mmc1: sdhci: Present:   0x01f20000 | Host ctl: 0x00000040
+mmc1: sdhci: Power:     0x00000000 | Blk gap:  0x00000000
+mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x00000000
+mmc1: sdhci: Timeout:   0x00000000 | Int stat: 0x00000000
+mmc1: sdhci: Int enab:  0x00ff0003 | Sig enab: 0x00ff0003
+mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+mmc1: sdhci: Caps:      0x69ec0080 | Caps_1:   0x00000000
+mmc1: sdhci: Cmd:       0x00000000 | Max curr: 0x00000001
+mmc1: sdhci: Resp[0]:   0x00000000 | Resp[1]:  0x00000000
+mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00000000
+mmc1: sdhci: Host ctl2: 0x00000000
+mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x00000000
+mmc1: sdhci: ============================================
+sleep 6
+echo MARK_FW19_DMESG
+
+dmesg | tail -20
+
+echo MARK_FW19_DONE
+
+root@(none):~# 
+root@(none):~# echo MARK_FW19_DMESG
+MARK_FW19_DMESG
+root@(none):~# 
+root@(none):~# dmesg | tail -20
+brcmfmac: brcmf_fil_cmd_data: bus is down. we have nothing to do.
+brcmfmac: brcmf_cfg80211_get_channel: chanspec failed (-5)
+mmc1: Internal clock never stabilised.
+mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+mmc1: sdhci: Sys addr:  0x00000000 | Version:  0x00008901
+mmc1: sdhci: Blk size:  0x00000000 | Blk cnt:  0x00000000
+mmc1: sdhci: Argument:  0x00000000 | Trn mode: 0x00000000
+mmc1: sdhci: Present:   0x01f20000 | Host ctl: 0x00000040
+mmc1: sdhci: Power:     0x00000000 | Blk gap:  0x00000000
+mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x00000000
+mmc1: sdhci: Timeout:   0x00000000 | Int stat: 0x00000000
+mmc1: sdhci: Int enab:  0x00ff0003 | Sig enab: 0x00ff0003
+mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+mmc1: sdhci: Caps:      0x69ec0080 | Caps_1:   0x00000000
+mmc1: sdhci: Cmd:       0x00000000 | Max curr: 0x00000001
+mmc1: sdhci: Resp[0]:   0x00000000 | Resp[1]:  0x00000000
+mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00000000
+mmc1: sdhci: Host ctl2: 0x00000000
+mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x00000000
+mmc1: sdhci: ============================================
+root@(none):~# 
+root@(none):~# echo MARK_FW19_DONE
+MARK_FW19_DONE
+root@(none):~# 
+root@(none):~# mmc1: Timeout waiting for hardware cmd interrupt.
+mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+mmc1: sdhci: Sys addr:  0x00000000 | Version:  0x00008901
+mmc1: sdhci: Blk size:  0x00000000 | Blk cnt:  0x00000000
+mmc1: sdhci: Argument:  0x80022040 | Trn mode: 0x00000000
+mmc1: sdhci: Present:   0x01f20000 | Host ctl: 0x00000047
+mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000000
+mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x00000000
+mmc1: sdhci: Timeout:   0x00000000 | Int stat: 0x00000000
+mmc1: sdhci: Int enab:  0x00ff0003 | Sig enab: 0x00ff0003
+mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+mmc1: sdhci: Caps:      0x69ec0080 | Caps_1:   0x00000000
+mmc1: sdhci: Cmd:       0x0000341a | Max curr: 0x00000001
+mmc1: sdhci: Resp[0]:   0x00000000 | Resp[1]:  0x00000000
+mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00000000
+mmc1: sdhci: Host ctl2: 0x00000000
+mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x00000000
+mmc1: sdhci: ============================================
+mmc1: Reset 0x2 never completed.
+mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+mmc1: sdhci: Sys addr:  0x00000000 | Version:  0x00008901
+mmc1: sdhci: Blk size:  0x00000000 | Blk cnt:  0x00000000
+mmc1: sdhci: Argument:  0x80022040 | Trn mode: 0x00000000
+mmc1: sdhci: Present:   0x01f20000 | Host ctl: 0x00000047
+mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000000
+mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x00000000
+mmc1: sdhci: Timeout:   0x00000000 | Int stat: 0x00000000
+mmc1: sdhci: Int enab:  0x00ff0003 | Sig enab: 0x00ff0003
+mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+mmc1: sdhci: Caps:      0x69ec0080 | Caps_1:   0x00000000
+mmc1: sdhci: Cmd:       0x0000341a | Max curr: 0x00000001
+mmc1: sdhci: Resp[0]:   0x00000000 | Resp[1]:  0x00000000
+mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00000000
+mmc1: sdhci: Host ctl2: 0x00000000
+mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x00000000
+mmc1: sdhci: ============================================
+mmc1: Reset 0x4 never completed.
+mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+mmc1: sdhci: Sys addr:  0x00000000 | Version:  0x00008901
+mmc1: sdhci: Blk size:  0x00000000 | Blk cnt:  0x00000000
+mmc1: sdhci: Argument:  0x80022040 | Trn mode: 0x00000000
+mmc1: sdhci: Present:   0x01f20000 | Host ctl: 0x00000047
+mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000000
+mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x00000000
+mmc1: sdhci: Timeout:   0x00000000 | Int stat: 0x00000000
+mmc1: sdhci: Int enab:  0x00ff0003 | Sig enab: 0x00ff0003
+mmc1: sdhci: AC12 err:  0x00000000 | Slot int: 0x00000000
+mmc1: sdhci: Caps:      0x69ec0080 | Caps_1:   0x00000000
+mmc1: sdhci: Cmd:       0x0000341a | Max curr: 0x00000001
+mmc1: sdhci: Resp[0]:   0x00000000 | Resp[1]:  0x00000000
+mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00000000
+mmc1: sdhci: Host ctl2: 0x00000000
+mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x00000000
+mmc1: sdhci: ============================================
+brcmfmac: probe of mmc1:0001:1 failed with error -110

@@ -1,0 +1,18 @@
+﻿mount -t debugfs none /sys/kernel/debug 2>/dev/null; echo ---GPI
+OCHIPS--- >/dev/ttyPS0; for d in /sys/class/gpio/gpiochip*; do echo "$d base=$(c
+at $d/base) ngpio=$(cat $d/ngpio) label=$(cat $d/label)" >/dev/ttyPS0; done; ech
+o ---GPIO146--- >/dev/ttyPS0; ls /sys/class/gpio/gpio146 >/dev/ttyPS0 2>&1; cat 
+/sys/class/gpio/gpio146/label >/dev/ttyPS0 2>&1; echo ---DBG--- >/dev/ttyPS0; he
+ad -50 /sys/kernel/debug/gpio >/dev/ttyPS0 2>&1; echo ---DT--- >/dev/ttyPS0; fin
+d /proc/device-tree -maxdepth 2 -iname "*gpio*" >/dev/ttyPS0 2>&1; echo DEMOGPIO
+_DONE >/dev/ttyPS0
+---GPIOCHIPS---
+/sys/class/gpio/gpiochip138 base=138 ngpio=118 label=zynq_gpio
+---GPIO146---
+ls: /sys/class/gpio/gpio146: No such file or directory
+cat: can't open '/sys/class/gpio/gpio146/label': No such file or directory
+---DBG---
+head: /sys/kernel/debug/gpio: No such file or directory
+---DT---
+DEMOGPIO_DONE
+[0;31mzynq>[m 

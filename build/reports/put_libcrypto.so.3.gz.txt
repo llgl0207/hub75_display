@@ -1,0 +1,3367 @@
+﻿RAWOK
+sh-4.4# [1414ms] TX stty raw -echo; echo R0000 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0000 >/dev/ttyPS0
+[1484ms] R0000
+[1669ms] 2048+0 records in
+2048+0 records out
+D0000
+[1677ms] TX stty raw -echo; echo R0001 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0001 >/dev/ttyPS0
+[1732ms] sh-4.4# R0001
+[1918ms] 2048+0 records in
+2048+0 records out
+D0001
+[1919ms] TX stty raw -echo; echo R0002 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0002 >/dev/ttyPS0
+[1966ms] sh-4.4# R0002
+[2152ms] 2048+0 records in
+2048+0 records out
+D0002
+[2153ms] TX stty raw -echo; echo R0003 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0003 >/dev/ttyPS0
+[2200ms] sh-4.4# R0003
+[2386ms] 2048+0 records in
+2048+0 records out
+D0003
+[2387ms] TX stty raw -echo; echo R0004 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0004 >/dev/ttyPS0
+[2433ms] sh-4.4# R0004
+[2616ms] 2048+0 records in
+2048+0 records out
+D0004
+[2617ms] TX stty raw -echo; echo R0005 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0005 >/dev/ttyPS0
+[2663ms] sh-4.4# R0005
+[2883ms] 2048+0 records in
+2048+0 records out
+D0005
+sh-4.4# [2883ms] TX stty raw -echo; echo R0006 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0006 >/dev/ttyPS0
+[2931ms] R0006
+[3150ms] 2048+0 records in
+2048+0 records out
+D0006
+sh-4.4# [3150ms] TX stty raw -echo; echo R0007 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0007 >/dev/ttyPS0
+[3196ms] R0007
+[3413ms] 2048+0 records in
+2048+0 records out
+D0007
+sh-4.4# [3414ms] TX stty raw -echo; echo R0008 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0008 >/dev/ttyPS0
+[3460ms] R0008
+[3678ms] 2048+0 records in
+2048+0 records out
+D0008
+sh-4.4# [3679ms] TX stty raw -echo; echo R0009 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0009 >/dev/ttyPS0
+[3725ms] R0009
+[3944ms] 2048+0 records in
+2048+0 records out
+D0009
+sh-4.4# [3945ms] TX stty raw -echo; echo R0010 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0010 >/dev/ttyPS0
+[3990ms] R0010
+[4209ms] 2048+0 records in
+2048+0 records out
+D0010
+sh-4.4# [4210ms] TX stty raw -echo; echo R0011 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0011 >/dev/ttyPS0
+[4257ms] R0011
+[4475ms] 2048+0 records in
+2048+0 records out
+D0011
+sh-4.4# [4476ms] TX stty raw -echo; echo R0012 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0012 >/dev/ttyPS0
+[4521ms] R0012
+[4740ms] 2048+0 records in
+2048+0 records out
+D0012
+sh-4.4# [4740ms] TX stty raw -echo; echo R0013 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0013 >/dev/ttyPS0
+[4786ms] R0013
+[5004ms] 2048+0 records in
+2048+0 records out
+D0013
+sh-4.4# [5005ms] TX stty raw -echo; echo R0014 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0014 >/dev/ttyPS0
+[5050ms] R0014
+[5233ms] 2048+0 records in
+2048+0 records out
+D0014
+[5234ms] TX stty raw -echo; echo R0015 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0015 >/dev/ttyPS0
+[5280ms] sh-4.4# R0015
+[5464ms] 2048+0 records in
+2048+0 records out
+D0015
+[5465ms] TX stty raw -echo; echo R0016 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0016 >/dev/ttyPS0
+[5512ms] sh-4.4# R0016
+[5699ms] 2048+0 records in
+2048+0 records out
+D0016
+[5700ms] TX stty raw -echo; echo R0017 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0017 >/dev/ttyPS0
+[5747ms] sh-4.4# R0017
+[5932ms] 2048+0 records in
+2048+0 records out
+D0017
+[5933ms] TX stty raw -echo; echo R0018 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0018 >/dev/ttyPS0
+[5979ms] sh-4.4# R0018
+[6198ms] 2048+0 records in
+2048+0 records out
+D0018
+sh-4.4# [6199ms] TX stty raw -echo; echo R0019 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0019 >/dev/ttyPS0
+[6244ms] R0019
+[6464ms] 2048+0 records in
+2048+0 records out
+D0019
+sh-4.4# [6465ms] TX stty raw -echo; echo R0020 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0020 >/dev/ttyPS0
+[6511ms] R0020
+[6729ms] 2048+0 records in
+2048+0 records out
+D0020
+sh-4.4# [6730ms] TX stty raw -echo; echo R0021 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0021 >/dev/ttyPS0
+[6776ms] R0021
+[6959ms] 2048+0 records in
+2048+0 records out
+D0021
+[6960ms] TX stty raw -echo; echo R0022 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0022 >/dev/ttyPS0
+[7004ms] sh-4.4# R0022
+[7222ms] 2048+0 records in
+2048+0 records out
+D0022
+sh-4.4# [7223ms] TX stty raw -echo; echo R0023 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0023 >/dev/ttyPS0
+[7269ms] R0023
+[7486ms] 2048+0 records in
+2048+0 records out
+D0023
+sh-4.4# [7486ms] TX stty raw -echo; echo R0024 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0024 >/dev/ttyPS0
+[7533ms] R0024
+[7766ms] 2048+0 records in
+2048+0 records out
+D0024
+sh-4.4# [7766ms] TX stty raw -echo; echo R0025 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0025 >/dev/ttyPS0
+[7814ms] R0025
+[7998ms] 2048+0 records in
+2048+0 records out
+D0025
+[7999ms] TX stty raw -echo; echo R0026 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0026 >/dev/ttyPS0
+[8045ms] sh-4.4# R0026
+[8233ms] 2048+0 records in
+2048+0 records out
+D0026
+[8234ms] TX stty raw -echo; echo R0027 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0027 >/dev/ttyPS0
+[8281ms] sh-4.4# R0027
+[8469ms] 2048+0 records in
+2048+0 records out
+D0027
+[8469ms] TX stty raw -echo; echo R0028 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0028 >/dev/ttyPS0
+[8532ms] sh-4.4# R0028
+[8719ms] 2048+0 records in
+2048+0 records out
+D0028
+[8720ms] TX stty raw -echo; echo R0029 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0029 >/dev/ttyPS0
+[8780ms] sh-4.4# R0029
+[8967ms] 2048+0 records in
+2048+0 records out
+D0029
+[8968ms] TX stty raw -echo; echo R0030 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0030 >/dev/ttyPS0
+[9013ms] sh-4.4# R0030
+[9201ms] 2048+0 records in
+2048+0 records out
+D0030
+[9202ms] TX stty raw -echo; echo R0031 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0031 >/dev/ttyPS0
+[9248ms] sh-4.4# R0031
+[9434ms] 2048+0 records in
+2048+0 records out
+D0031
+[9435ms] TX stty raw -echo; echo R0032 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0032 >/dev/ttyPS0
+[9481ms] sh-4.4# R0032
+[9700ms] 2048+0 records in
+2048+0 records out
+D0032
+sh-4.4# [9700ms] TX stty raw -echo; echo R0033 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0033 >/dev/ttyPS0
+[9747ms] R0033
+[9934ms] 2048+0 records in
+2048+0 records out
+D0033
+[9935ms] TX stty raw -echo; echo R0034 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0034 >/dev/ttyPS0
+[9980ms] sh-4.4# R0034
+[10198ms] 2048+0 records in
+2048+0 records out
+D0034
+sh-4.4# [10199ms] TX stty raw -echo; echo R0035 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0035 >/dev/ttyPS0
+[10246ms] R0035
+[10463ms] 2048+0 records in
+2048+0 records out
+D0035
+sh-4.4# [10463ms] TX stty raw -echo; echo R0036 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0036 >/dev/ttyPS0
+[10510ms] R0036
+[10727ms] 2048+0 records in
+2048+0 records out
+D0036
+sh-4.4# [10728ms] TX stty raw -echo; echo R0037 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0037 >/dev/ttyPS0
+[10775ms] R0037
+[10993ms] 2048+0 records in
+2048+0 records out
+D0037
+sh-4.4# [10994ms] TX stty raw -echo; echo R0038 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0038 >/dev/ttyPS0
+[11040ms] R0038
+[11258ms] 2048+0 records in
+2048+0 records out
+D0038
+sh-4.4# [11259ms] TX stty raw -echo; echo R0039 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0039 >/dev/ttyPS0
+[11303ms] R0039
+[11522ms] 2048+0 records in
+2048+0 records out
+D0039
+sh-4.4# [11522ms] TX stty raw -echo; echo R0040 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0040 >/dev/ttyPS0
+[11569ms] R0040
+[11791ms] 2048+0 records in
+2048+0 records out
+D0040
+sh-4.4# [11793ms] TX stty raw -echo; echo R0041 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0041 >/dev/ttyPS0
+[11837ms] R0041
+[12056ms] 2048+0 records in
+2048+0 records out
+D0041
+sh-4.4# [12056ms] TX stty raw -echo; echo R0042 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0042 >/dev/ttyPS0
+[12102ms] R0042
+[12320ms] 2048+0 records in
+2048+0 records out
+D0042
+sh-4.4# [12320ms] TX stty raw -echo; echo R0043 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0043 >/dev/ttyPS0
+[12367ms] R0043
+[12584ms] 2048+0 records in
+2048+0 records out
+D0043
+sh-4.4# [12585ms] TX stty raw -echo; echo R0044 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0044 >/dev/ttyPS0
+[12631ms] R0044
+[12848ms] 2048+0 records in
+2048+0 records out
+D0044
+sh-4.4# [12849ms] TX stty raw -echo; echo R0045 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0045 >/dev/ttyPS0
+[12896ms] R0045
+[13115ms] 2048+0 records in
+2048+0 records out
+D0045
+sh-4.4# [13116ms] TX stty raw -echo; echo R0046 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0046 >/dev/ttyPS0
+[13161ms] R0046
+[13379ms] 2048+0 records in
+2048+0 records out
+D0046
+sh-4.4# [13379ms] TX stty raw -echo; echo R0047 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0047 >/dev/ttyPS0
+[13424ms] R0047
+[13644ms] 2048+0 records in
+2048+0 records out
+D0047
+sh-4.4# [13644ms] TX stty raw -echo; echo R0048 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0048 >/dev/ttyPS0
+[13689ms] R0048
+[13875ms] 2048+0 records in
+2048+0 records out
+D0048
+[13876ms] TX stty raw -echo; echo R0049 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0049 >/dev/ttyPS0
+[13922ms] sh-4.4# R0049
+[14142ms] 2048+0 records in
+2048+0 records out
+D0049
+sh-4.4# [14143ms] TX stty raw -echo; echo R0050 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0050 >/dev/ttyPS0
+[14189ms] R0050
+[14407ms] 2048+0 records in
+2048+0 records out
+D0050
+sh-4.4# [14408ms] TX stty raw -echo; echo R0051 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0051 >/dev/ttyPS0
+[14454ms] R0051
+[14673ms] 2048+0 records in
+2048+0 records out
+D0051
+sh-4.4# [14673ms] TX stty raw -echo; echo R0052 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0052 >/dev/ttyPS0
+[14719ms] R0052
+[14905ms] 2048+0 records in
+2048+0 records out
+D0052
+[14906ms] TX stty raw -echo; echo R0053 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0053 >/dev/ttyPS0
+[14953ms] sh-4.4# R0053
+[15139ms] 2048+0 records in
+2048+0 records out
+D0053
+[15140ms] TX stty raw -echo; echo R0054 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0054 >/dev/ttyPS0
+[15186ms] sh-4.4# R0054
+[15371ms] 2048+0 records in
+2048+0 records out
+D0054
+[15372ms] TX stty raw -echo; echo R0055 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0055 >/dev/ttyPS0
+[15417ms] sh-4.4# R0055
+[15633ms] 2048+0 records in
+2048+0 records out
+D0055
+sh-4.4# [15634ms] TX stty raw -echo; echo R0056 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0056 >/dev/ttyPS0
+[15680ms] R0056
+[15900ms] 2048+0 records in
+2048+0 records out
+D0056
+sh-4.4# [15901ms] TX stty raw -echo; echo R0057 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0057 >/dev/ttyPS0
+[15947ms] R0057
+[16132ms] 2048+0 records in
+2048+0 records out
+D0057
+[16132ms] TX stty raw -echo; echo R0058 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0058 >/dev/ttyPS0
+[16179ms] sh-4.4# R0058
+[16396ms] 2048+0 records in
+2048+0 records out
+D0058
+sh-4.4# [16397ms] TX stty raw -echo; echo R0059 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0059 >/dev/ttyPS0
+[16442ms] R0059
+[16662ms] 2048+0 records in
+2048+0 records out
+D0059
+sh-4.4# [16662ms] TX stty raw -echo; echo R0060 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0060 >/dev/ttyPS0
+[16709ms] R0060
+[16929ms] 2048+0 records in
+2048+0 records out
+D0060
+sh-4.4# [16930ms] TX stty raw -echo; echo R0061 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0061 >/dev/ttyPS0
+[16975ms] R0061
+[17160ms] 2048+0 records in
+2048+0 records out
+D0061
+[17161ms] TX stty raw -echo; echo R0062 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0062 >/dev/ttyPS0
+[17207ms] sh-4.4# R0062
+[17393ms] 2048+0 records in
+2048+0 records out
+D0062
+[17393ms] TX stty raw -echo; echo R0063 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0063 >/dev/ttyPS0
+[17440ms] sh-4.4# R0063
+[17660ms] 2048+0 records in
+2048+0 records out
+D0063
+sh-4.4# [17661ms] TX stty raw -echo; echo R0064 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0064 >/dev/ttyPS0
+[17706ms] R0064
+[17924ms] 2048+0 records in
+2048+0 records out
+D0064
+sh-4.4# [17924ms] TX stty raw -echo; echo R0065 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0065 >/dev/ttyPS0
+[17971ms] R0065
+[18156ms] 2048+0 records in
+2048+0 records out
+D0065
+[18157ms] TX stty raw -echo; echo R0066 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0066 >/dev/ttyPS0
+[18218ms] sh-4.4# R0066
+[18407ms] 2048+0 records in
+2048+0 records out
+D0066
+[18407ms] TX stty raw -echo; echo R0067 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0067 >/dev/ttyPS0
+[18469ms] sh-4.4# R0067
+[18654ms] 2048+0 records in
+2048+0 records out
+D0067
+[18655ms] TX stty raw -echo; echo R0068 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0068 >/dev/ttyPS0
+[18701ms] sh-4.4# R0068
+[18890ms] 2048+0 records in
+2048+0 records out
+D0068
+[18891ms] TX stty raw -echo; echo R0069 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0069 >/dev/ttyPS0
+[18937ms] sh-4.4# R0069
+[19123ms] 2048+0 records in
+2048+0 records out
+D0069
+[19124ms] TX stty raw -echo; echo R0070 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0070 >/dev/ttyPS0
+[19169ms] sh-4.4# R0070
+[19354ms] 2048+0 records in
+2048+0 records out
+D0070
+[19355ms] TX stty raw -echo; echo R0071 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0071 >/dev/ttyPS0
+[19402ms] sh-4.4# R0071
+[19587ms] 2048+0 records in
+2048+0 records out
+D0071
+[19587ms] TX stty raw -echo; echo R0072 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0072 >/dev/ttyPS0
+[19634ms] sh-4.4# R0072
+[19852ms] 2048+0 records in
+2048+0 records out
+D0072
+sh-4.4# [19853ms] TX stty raw -echo; echo R0073 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0073 >/dev/ttyPS0
+[19899ms] R0073
+[20117ms] 2048+0 records in
+2048+0 records out
+D0073
+sh-4.4# [20118ms] TX stty raw -echo; echo R0074 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0074 >/dev/ttyPS0
+[20164ms] R0074
+[20380ms] 2048+0 records in
+2048+0 records out
+D0074
+sh-4.4# [20380ms] TX stty raw -echo; echo R0075 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0075 >/dev/ttyPS0
+[20427ms] R0075
+[20647ms] 2048+0 records in
+2048+0 records out
+D0075
+sh-4.4# [20647ms] TX stty raw -echo; echo R0076 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0076 >/dev/ttyPS0
+[20695ms] R0076
+[20913ms] 2048+0 records in
+2048+0 records out
+D0076
+sh-4.4# [20914ms] TX stty raw -echo; echo R0077 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0077 >/dev/ttyPS0
+[20961ms] R0077
+[21144ms] 2048+0 records in
+2048+0 records out
+D0077
+[21145ms] TX stty raw -echo; echo R0078 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0078 >/dev/ttyPS0
+[21191ms] sh-4.4# R0078
+[21411ms] 2048+0 records in
+2048+0 records out
+D0078
+sh-4.4# [21411ms] TX stty raw -echo; echo R0079 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0079 >/dev/ttyPS0
+[21457ms] R0079
+[21673ms] 2048+0 records in
+2048+0 records out
+D0079
+sh-4.4# [21674ms] TX stty raw -echo; echo R0080 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0080 >/dev/ttyPS0
+[21734ms] R0080
+[21919ms] 2048+0 records in
+2048+0 records out
+D0080
+[21920ms] TX stty raw -echo; echo R0081 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0081 >/dev/ttyPS0
+[21966ms] sh-4.4# R0081
+[22152ms] 2048+0 records in
+2048+0 records out
+D0081
+[22152ms] TX stty raw -echo; echo R0082 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0082 >/dev/ttyPS0
+[22199ms] sh-4.4# R0082
+[22418ms] 2048+0 records in
+2048+0 records out
+D0082
+sh-4.4# [22419ms] TX stty raw -echo; echo R0083 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0083 >/dev/ttyPS0
+[22465ms] R0083
+[22652ms] 2048+0 records in
+2048+0 records out
+D0083
+[22653ms] TX stty raw -echo; echo R0084 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0084 >/dev/ttyPS0
+[22699ms] sh-4.4# R0084
+[22917ms] 2048+0 records in
+2048+0 records out
+D0084
+sh-4.4# [22917ms] TX stty raw -echo; echo R0085 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0085 >/dev/ttyPS0
+[22962ms] R0085
+[23182ms] 2048+0 records in
+2048+0 records out
+D0085
+sh-4.4# [23183ms] TX stty raw -echo; echo R0086 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0086 >/dev/ttyPS0
+[23229ms] R0086
+[23444ms] 2048+0 records in
+2048+0 records out
+D0086
+sh-4.4# [23445ms] TX stty raw -echo; echo R0087 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0087 >/dev/ttyPS0
+[23490ms] R0087
+[23708ms] 2048+0 records in
+2048+0 records out
+D0087
+sh-4.4# [23709ms] TX stty raw -echo; echo R0088 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0088 >/dev/ttyPS0
+[23756ms] R0088
+[23940ms] 2048+0 records in
+2048+0 records out
+D0088
+[23941ms] TX stty raw -echo; echo R0089 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0089 >/dev/ttyPS0
+[23988ms] sh-4.4# R0089
+[24204ms] 2048+0 records in
+2048+0 records out
+D0089
+sh-4.4# [24205ms] TX stty raw -echo; echo R0090 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0090 >/dev/ttyPS0
+[24250ms] R0090
+[24438ms] 2048+0 records in
+2048+0 records out
+D0090
+[24439ms] TX stty raw -echo; echo R0091 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0091 >/dev/ttyPS0
+[24498ms] sh-4.4# R0091
+[24687ms] 2048+0 records in
+2048+0 records out
+D0091
+[24688ms] TX stty raw -echo; echo R0092 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0092 >/dev/ttyPS0
+[24733ms] sh-4.4# R0092
+[24918ms] 2048+0 records in
+2048+0 records out
+D0092
+[24919ms] TX stty raw -echo; echo R0093 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0093 >/dev/ttyPS0
+[24965ms] sh-4.4# R0093
+[25184ms] 2048+0 records in
+2048+0 records out
+D0093
+sh-4.4# [25185ms] TX stty raw -echo; echo R0094 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0094 >/dev/ttyPS0
+[25229ms] R0094
+[25446ms] 2048+0 records in
+2048+0 records out
+D0094
+sh-4.4# [25447ms] TX stty raw -echo; echo R0095 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0095 >/dev/ttyPS0
+[25492ms] R0095
+[25711ms] 2048+0 records in
+2048+0 records out
+D0095
+sh-4.4# [25712ms] TX stty raw -echo; echo R0096 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0096 >/dev/ttyPS0
+[25756ms] R0096
+[25974ms] 2048+0 records in
+2048+0 records out
+D0096
+sh-4.4# [25974ms] TX stty raw -echo; echo R0097 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0097 >/dev/ttyPS0
+[26020ms] R0097
+[26237ms] 2048+0 records in
+2048+0 records out
+D0097
+sh-4.4# [26238ms] TX stty raw -echo; echo R0098 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0098 >/dev/ttyPS0
+[26284ms] R0098
+[26468ms] 2048+0 records in
+2048+0 records out
+D0098
+[26469ms] TX stty raw -echo; echo R0099 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0099 >/dev/ttyPS0
+[26513ms] sh-4.4# R0099
+[26697ms] 2048+0 records in
+2048+0 records out
+D0099
+[26697ms] TX stty raw -echo; echo R0100 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0100 >/dev/ttyPS0
+[26742ms] sh-4.4# R0100
+[26961ms] 2048+0 records in
+2048+0 records out
+D0100
+sh-4.4# [26962ms] TX stty raw -echo; echo R0101 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0101 >/dev/ttyPS0
+[27013ms] R0101
+[27238ms] 2048+0 records in
+2048+0 records out
+D0101
+sh-4.4# [27238ms] TX stty raw -echo; echo R0102 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0102 >/dev/ttyPS0
+[27286ms] R0102
+[27502ms] 2048+0 records in
+2048+0 records out
+D0102
+sh-4.4# [27502ms] TX stty raw -echo; echo R0103 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0103 >/dev/ttyPS0
+[27547ms] R0103
+[27768ms] 2048+0 records in
+2048+0 records out
+D0103
+sh-4.4# [27769ms] TX stty raw -echo; echo R0104 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0104 >/dev/ttyPS0
+[27814ms] R0104
+[28000ms] 2048+0 records in
+2048+0 records out
+D0104
+[28000ms] TX stty raw -echo; echo R0105 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0105 >/dev/ttyPS0
+[28061ms] sh-4.4# R0105
+[28249ms] 2048+0 records in
+2048+0 records out
+D0105
+[28249ms] TX stty raw -echo; echo R0106 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0106 >/dev/ttyPS0
+[28295ms] sh-4.4# R0106
+[28484ms] 2048+0 records in
+2048+0 records out
+D0106
+[28484ms] TX stty raw -echo; echo R0107 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0107 >/dev/ttyPS0
+[28546ms] sh-4.4# R0107
+[28734ms] 2048+0 records in
+2048+0 records out
+D0107
+[28734ms] TX stty raw -echo; echo R0108 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0108 >/dev/ttyPS0
+[28780ms] sh-4.4# R0108
+[28966ms] 2048+0 records in
+2048+0 records out
+D0108
+[28967ms] TX stty raw -echo; echo R0109 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0109 >/dev/ttyPS0
+[29011ms] sh-4.4# R0109
+[29229ms] 2048+0 records in
+2048+0 records out
+D0109
+sh-4.4# [29230ms] TX stty raw -echo; echo R0110 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0110 >/dev/ttyPS0
+[29275ms] R0110
+[29491ms] 2048+0 records in
+2048+0 records out
+D0110
+sh-4.4# [29492ms] TX stty raw -echo; echo R0111 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0111 >/dev/ttyPS0
+[29538ms] R0111
+[29758ms] 2048+0 records in
+2048+0 records out
+D0111
+sh-4.4# [29758ms] TX stty raw -echo; echo R0112 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0112 >/dev/ttyPS0
+[29805ms] R0112
+[30022ms] 2048+0 records in
+2048+0 records out
+D0112
+sh-4.4# [30023ms] TX stty raw -echo; echo R0113 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0113 >/dev/ttyPS0
+[30069ms] R0113
+[30288ms] 2048+0 records in
+2048+0 records out
+D0113
+sh-4.4# [30289ms] TX stty raw -echo; echo R0114 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0114 >/dev/ttyPS0
+[30335ms] R0114
+[30552ms] 2048+0 records in
+2048+0 records out
+D0114
+sh-4.4# [30553ms] TX stty raw -echo; echo R0115 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0115 >/dev/ttyPS0
+[30598ms] R0115
+[30814ms] 2048+0 records in
+2048+0 records out
+D0115
+sh-4.4# [30814ms] TX stty raw -echo; echo R0116 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0116 >/dev/ttyPS0
+[30875ms] R0116
+[31059ms] 2048+0 records in
+2048+0 records out
+D0116
+[31060ms] TX stty raw -echo; echo R0117 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0117 >/dev/ttyPS0
+[31107ms] sh-4.4# R0117
+[31290ms] 2048+0 records in
+2048+0 records out
+D0117
+[31291ms] TX stty raw -echo; echo R0118 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0118 >/dev/ttyPS0
+[31337ms] sh-4.4# R0118
+[31522ms] 2048+0 records in
+2048+0 records out
+D0118
+[31522ms] TX stty raw -echo; echo R0119 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0119 >/dev/ttyPS0
+[31568ms] sh-4.4# R0119
+[31784ms] 2048+0 records in
+2048+0 records out
+D0119
+sh-4.4# [31785ms] TX stty raw -echo; echo R0120 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0120 >/dev/ttyPS0
+[31831ms] R0120
+[32016ms] 2048+0 records in
+2048+0 records out
+D0120
+[32017ms] TX stty raw -echo; echo R0121 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0121 >/dev/ttyPS0
+[32078ms] sh-4.4# R0121
+[32265ms] 2048+0 records in
+2048+0 records out
+D0121
+[32266ms] TX stty raw -echo; echo R0122 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0122 >/dev/ttyPS0
+[32326ms] sh-4.4# R0122
+[32510ms] 2048+0 records in
+2048+0 records out
+D0122
+[32511ms] TX stty raw -echo; echo R0123 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0123 >/dev/ttyPS0
+[32557ms] sh-4.4# R0123
+[32776ms] 2048+0 records in
+2048+0 records out
+D0123
+sh-4.4# [32777ms] TX stty raw -echo; echo R0124 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0124 >/dev/ttyPS0
+[32823ms] R0124
+[33041ms] 2048+0 records in
+2048+0 records out
+D0124
+sh-4.4# [33041ms] TX stty raw -echo; echo R0125 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0125 >/dev/ttyPS0
+[33088ms] R0125
+[33306ms] 2048+0 records in
+2048+0 records out
+D0125
+sh-4.4# [33307ms] TX stty raw -echo; echo R0126 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0126 >/dev/ttyPS0
+[33352ms] R0126
+[33536ms] 2048+0 records in
+2048+0 records out
+D0126
+[33537ms] TX stty raw -echo; echo R0127 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0127 >/dev/ttyPS0
+[33582ms] sh-4.4# R0127
+[33802ms] 2048+0 records in
+2048+0 records out
+D0127
+sh-4.4# [33802ms] TX stty raw -echo; echo R0128 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0128 >/dev/ttyPS0
+[33849ms] R0128
+[34066ms] 2048+0 records in
+2048+0 records out
+D0128
+sh-4.4# [34067ms] TX stty raw -echo; echo R0129 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0129 >/dev/ttyPS0
+[34113ms] R0129
+[34333ms] 2048+0 records in
+2048+0 records out
+D0129
+sh-4.4# [34334ms] TX stty raw -echo; echo R0130 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0130 >/dev/ttyPS0
+[34379ms] R0130
+[34597ms] 2048+0 records in
+2048+0 records out
+D0130
+sh-4.4# [34598ms] TX stty raw -echo; echo R0131 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0131 >/dev/ttyPS0
+[34643ms] R0131
+[34862ms] 2048+0 records in
+2048+0 records out
+D0131
+sh-4.4# [34862ms] TX stty raw -echo; echo R0132 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0132 >/dev/ttyPS0
+[34909ms] R0132
+[35128ms] 2048+0 records in
+2048+0 records out
+D0132
+sh-4.4# [35129ms] TX stty raw -echo; echo R0133 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0133 >/dev/ttyPS0
+[35175ms] R0133
+[35393ms] 2048+0 records in
+2048+0 records out
+D0133
+sh-4.4# [35393ms] TX stty raw -echo; echo R0134 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0134 >/dev/ttyPS0
+[35453ms] R0134
+[35640ms] 2048+0 records in
+2048+0 records out
+D0134
+[35641ms] TX stty raw -echo; echo R0135 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0135 >/dev/ttyPS0
+[35702ms] sh-4.4# R0135
+[35889ms] 2048+0 records in
+2048+0 records out
+D0135
+[35889ms] TX stty raw -echo; echo R0136 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0136 >/dev/ttyPS0
+[35934ms] sh-4.4# R0136
+[36122ms] 2048+0 records in
+2048+0 records out
+D0136
+[36123ms] TX stty raw -echo; echo R0137 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0137 >/dev/ttyPS0
+[36168ms] sh-4.4# R0137
+[36359ms] 2048+0 records in
+2048+0 records out
+D0137
+[36360ms] TX stty raw -echo; echo R0138 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0138 >/dev/ttyPS0
+[36421ms] sh-4.4# R0138
+[36608ms] 2048+0 records in
+2048+0 records out
+D0138
+[36609ms] TX stty raw -echo; echo R0139 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0139 >/dev/ttyPS0
+[36656ms] sh-4.4# R0139
+[36841ms] 2048+0 records in
+2048+0 records out
+D0139
+[36842ms] TX stty raw -echo; echo R0140 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0140 >/dev/ttyPS0
+[36887ms] sh-4.4# R0140
+[37108ms] 2048+0 records in
+2048+0 records out
+D0140
+sh-4.4# [37109ms] TX stty raw -echo; echo R0141 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0141 >/dev/ttyPS0
+[37155ms] R0141
+[37340ms] 2048+0 records in
+2048+0 records out
+D0141
+[37341ms] TX stty raw -echo; echo R0142 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0142 >/dev/ttyPS0
+[37387ms] sh-4.4# R0142
+[37574ms] 2048+0 records in
+2048+0 records out
+D0142
+[37575ms] TX stty raw -echo; echo R0143 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0143 >/dev/ttyPS0
+[37620ms] sh-4.4# R0143
+[37839ms] 2048+0 records in
+2048+0 records out
+D0143
+sh-4.4# [37839ms] TX stty raw -echo; echo R0144 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0144 >/dev/ttyPS0
+[37886ms] R0144
+[38102ms] 2048+0 records in
+2048+0 records out
+D0144
+sh-4.4# [38103ms] TX stty raw -echo; echo R0145 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0145 >/dev/ttyPS0
+[38148ms] R0145
+[38365ms] 2048+0 records in
+2048+0 records out
+D0145
+sh-4.4# [38366ms] TX stty raw -echo; echo R0146 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0146 >/dev/ttyPS0
+[38411ms] R0146
+[38628ms] 2048+0 records in
+2048+0 records out
+D0146
+sh-4.4# [38629ms] TX stty raw -echo; echo R0147 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0147 >/dev/ttyPS0
+[38675ms] R0147
+[38893ms] 2048+0 records in
+2048+0 records out
+D0147
+sh-4.4# [38893ms] TX stty raw -echo; echo R0148 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0148 >/dev/ttyPS0
+[38939ms] R0148
+[39125ms] 2048+0 records in
+2048+0 records out
+D0148
+[39126ms] TX stty raw -echo; echo R0149 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0149 >/dev/ttyPS0
+[39173ms] sh-4.4# R0149
+[39359ms] 2048+0 records in
+2048+0 records out
+D0149
+[39360ms] TX stty raw -echo; echo R0150 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0150 >/dev/ttyPS0
+[39420ms] sh-4.4# R0150
+[39609ms] 2048+0 records in
+2048+0 records out
+D0150
+[39610ms] TX stty raw -echo; echo R0151 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0151 >/dev/ttyPS0
+[39671ms] sh-4.4# R0151
+[39859ms] 2048+0 records in
+2048+0 records out
+D0151
+[39859ms] TX stty raw -echo; echo R0152 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0152 >/dev/ttyPS0
+[39905ms] sh-4.4# R0152
+[40090ms] 2048+0 records in
+2048+0 records out
+D0152
+[40091ms] TX stty raw -echo; echo R0153 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0153 >/dev/ttyPS0
+[40137ms] sh-4.4# R0153
+[40355ms] 2048+0 records in
+2048+0 records out
+D0153
+sh-4.4# [40356ms] TX stty raw -echo; echo R0154 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0154 >/dev/ttyPS0
+[40401ms] R0154
+[40590ms] 2048+0 records in
+2048+0 records out
+D0154
+[40590ms] TX stty raw -echo; echo R0155 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0155 >/dev/ttyPS0
+[40637ms] sh-4.4# R0155
+[40822ms] 2048+0 records in
+2048+0 records out
+D0155
+[40823ms] TX stty raw -echo; echo R0156 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0156 >/dev/ttyPS0
+[40867ms] sh-4.4# R0156
+[41085ms] 2048+0 records in
+2048+0 records out
+D0156
+sh-4.4# [41085ms] TX stty raw -echo; echo R0157 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0157 >/dev/ttyPS0
+[41131ms] R0157
+[41349ms] 2048+0 records in
+2048+0 records out
+D0157
+sh-4.4# [41350ms] TX stty raw -echo; echo R0158 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0158 >/dev/ttyPS0
+[41395ms] R0158
+[41611ms] 2048+0 records in
+2048+0 records out
+D0158
+sh-4.4# [41612ms] TX stty raw -echo; echo R0159 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0159 >/dev/ttyPS0
+[41673ms] R0159
+[41860ms] 2048+0 records in
+2048+0 records out
+D0159
+[41860ms] TX stty raw -echo; echo R0160 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0160 >/dev/ttyPS0
+[41921ms] sh-4.4# R0160
+[42106ms] 2048+0 records in
+2048+0 records out
+D0160
+[42107ms] TX stty raw -echo; echo R0161 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0161 >/dev/ttyPS0
+[42152ms] sh-4.4# R0161
+[42369ms] 2048+0 records in
+2048+0 records out
+D0161
+sh-4.4# [42370ms] TX stty raw -echo; echo R0162 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0162 >/dev/ttyPS0
+[42416ms] R0162
+[42634ms] 2048+0 records in
+2048+0 records out
+D0162
+sh-4.4# [42635ms] TX stty raw -echo; echo R0163 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0163 >/dev/ttyPS0
+[42682ms] R0163
+[42866ms] 2048+0 records in
+2048+0 records out
+D0163
+[42867ms] TX stty raw -echo; echo R0164 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0164 >/dev/ttyPS0
+[42913ms] sh-4.4# R0164
+[43131ms] 2048+0 records in
+2048+0 records out
+D0164
+sh-4.4# [43132ms] TX stty raw -echo; echo R0165 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0165 >/dev/ttyPS0
+[43178ms] R0165
+[43397ms] 2048+0 records in
+2048+0 records out
+D0165
+sh-4.4# [43397ms] TX stty raw -echo; echo R0166 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0166 >/dev/ttyPS0
+[43443ms] R0166
+[43659ms] 2048+0 records in
+2048+0 records out
+D0166
+sh-4.4# [43660ms] TX stty raw -echo; echo R0167 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0167 >/dev/ttyPS0
+[43707ms] R0167
+[43890ms] 2048+0 records in
+2048+0 records out
+D0167
+[43891ms] TX stty raw -echo; echo R0168 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0168 >/dev/ttyPS0
+[43953ms] sh-4.4# R0168
+[44142ms] 2048+0 records in
+2048+0 records out
+D0168
+[44142ms] TX stty raw -echo; echo R0169 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0169 >/dev/ttyPS0
+[44188ms] sh-4.4# R0169
+[44374ms] 2048+0 records in
+2048+0 records out
+D0169
+[44374ms] TX stty raw -echo; echo R0170 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0170 >/dev/ttyPS0
+[44421ms] sh-4.4# R0170
+[44609ms] 2048+0 records in
+2048+0 records out
+D0170
+[44610ms] TX stty raw -echo; echo R0171 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0171 >/dev/ttyPS0
+[44655ms] sh-4.4# R0171
+[44841ms] 2048+0 records in
+2048+0 records out
+D0171
+[44842ms] TX stty raw -echo; echo R0172 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0172 >/dev/ttyPS0
+[44887ms] sh-4.4# R0172
+[45074ms] 2048+0 records in
+2048+0 records out
+D0172
+[45075ms] TX stty raw -echo; echo R0173 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0173 >/dev/ttyPS0
+[45122ms] sh-4.4# R0173
+[45309ms] 2048+0 records in
+2048+0 records out
+D0173
+[45310ms] TX stty raw -echo; echo R0174 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0174 >/dev/ttyPS0
+[45356ms] sh-4.4# R0174
+[45542ms] 2048+0 records in
+2048+0 records out
+D0174
+[45543ms] TX stty raw -echo; echo R0175 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0175 >/dev/ttyPS0
+[45588ms] sh-4.4# R0175
+[45807ms] 2048+0 records in
+2048+0 records out
+D0175
+sh-4.4# [45807ms] TX stty raw -echo; echo R0176 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0176 >/dev/ttyPS0
+[45853ms] R0176
+[46068ms] 2048+0 records in
+2048+0 records out
+D0176
+sh-4.4# [46069ms] TX stty raw -echo; echo R0177 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0177 >/dev/ttyPS0
+[46114ms] R0177
+[46333ms] 2048+0 records in
+2048+0 records out
+D0177
+sh-4.4# [46334ms] TX stty raw -echo; echo R0178 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0178 >/dev/ttyPS0
+[46380ms] R0178
+[46602ms] 2048+0 records in
+2048+0 records out
+D0178
+sh-4.4# [46603ms] TX stty raw -echo; echo R0179 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0179 >/dev/ttyPS0
+[46648ms] R0179
+[46866ms] 2048+0 records in
+2048+0 records out
+D0179
+sh-4.4# [46866ms] TX stty raw -echo; echo R0180 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0180 >/dev/ttyPS0
+[46913ms] R0180
+[47131ms] 2048+0 records in
+2048+0 records out
+D0180
+sh-4.4# [47132ms] TX stty raw -echo; echo R0181 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0181 >/dev/ttyPS0
+[47178ms] R0181
+[47394ms] 2048+0 records in
+2048+0 records out
+D0181
+sh-4.4# [47395ms] TX stty raw -echo; echo R0182 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0182 >/dev/ttyPS0
+[47440ms] R0182
+[47626ms] 2048+0 records in
+2048+0 records out
+D0182
+[47626ms] TX stty raw -echo; echo R0183 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0183 >/dev/ttyPS0
+[47687ms] sh-4.4# R0183
+[47874ms] 2048+0 records in
+2048+0 records out
+D0183
+[47875ms] TX stty raw -echo; echo R0184 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0184 >/dev/ttyPS0
+[47922ms] sh-4.4# R0184
+[48109ms] 2048+0 records in
+2048+0 records out
+D0184
+[48109ms] TX stty raw -echo; echo R0185 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0185 >/dev/ttyPS0
+[48155ms] sh-4.4# R0185
+[48343ms] 2048+0 records in
+2048+0 records out
+D0185
+[48344ms] TX stty raw -echo; echo R0186 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0186 >/dev/ttyPS0
+[48404ms] sh-4.4# R0186
+[48591ms] 2048+0 records in
+2048+0 records out
+D0186
+[48592ms] TX stty raw -echo; echo R0187 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0187 >/dev/ttyPS0
+[48638ms] sh-4.4# R0187
+[48868ms] 2048+0 records in
+2048+0 records out
+D0187
+sh-4.4# [48868ms] TX stty raw -echo; echo R0188 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0188 >/dev/ttyPS0
+[48914ms] R0188
+[49131ms] 2048+0 records in
+2048+0 records out
+D0188
+sh-4.4# [49132ms] TX stty raw -echo; echo R0189 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0189 >/dev/ttyPS0
+[49178ms] R0189
+[49362ms] 2048+0 records in
+2048+0 records out
+D0189
+[49363ms] TX stty raw -echo; echo R0190 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0190 >/dev/ttyPS0
+[49409ms] sh-4.4# R0190
+[49629ms] 2048+0 records in
+2048+0 records out
+D0190
+sh-4.4# [49630ms] TX stty raw -echo; echo R0191 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0191 >/dev/ttyPS0
+[49676ms] R0191
+[49860ms] 2048+0 records in
+2048+0 records out
+D0191
+[49861ms] TX stty raw -echo; echo R0192 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0192 >/dev/ttyPS0
+[49908ms] sh-4.4# R0192
+[50093ms] 2048+0 records in
+2048+0 records out
+D0192
+[50094ms] TX stty raw -echo; echo R0193 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0193 >/dev/ttyPS0
+[50155ms] sh-4.4# R0193
+[50344ms] 2048+0 records in
+2048+0 records out
+D0193
+[50345ms] TX stty raw -echo; echo R0194 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0194 >/dev/ttyPS0
+[50392ms] sh-4.4# R0194
+[50577ms] 2048+0 records in
+2048+0 records out
+D0194
+[50578ms] TX stty raw -echo; echo R0195 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0195 >/dev/ttyPS0
+[50623ms] sh-4.4# R0195
+[50810ms] 2048+0 records in
+2048+0 records out
+D0195
+[50811ms] TX stty raw -echo; echo R0196 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0196 >/dev/ttyPS0
+[50856ms] sh-4.4# R0196
+[51044ms] 2048+0 records in
+2048+0 records out
+D0196
+[51045ms] TX stty raw -echo; echo R0197 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0197 >/dev/ttyPS0
+[51092ms] sh-4.4# R0197
+[51279ms] 2048+0 records in
+2048+0 records out
+D0197
+[51280ms] TX stty raw -echo; echo R0198 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0198 >/dev/ttyPS0
+[51326ms] sh-4.4# R0198
+[51511ms] 2048+0 records in
+2048+0 records out
+D0198
+[51512ms] TX stty raw -echo; echo R0199 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0199 >/dev/ttyPS0
+[51556ms] sh-4.4# R0199
+[51777ms] 2048+0 records in
+2048+0 records out
+D0199
+sh-4.4# [51777ms] TX stty raw -echo; echo R0200 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0200 >/dev/ttyPS0
+[51824ms] R0200
+[52012ms] 2048+0 records in
+2048+0 records out
+D0200
+[52013ms] TX stty raw -echo; echo R0201 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0201 >/dev/ttyPS0
+[52058ms] sh-4.4# R0201
+[52243ms] 2048+0 records in
+2048+0 records out
+D0201
+[52243ms] TX stty raw -echo; echo R0202 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0202 >/dev/ttyPS0
+[52290ms] sh-4.4# R0202
+[52509ms] 2048+0 records in
+2048+0 records out
+D0202
+sh-4.4# [52509ms] TX stty raw -echo; echo R0203 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0203 >/dev/ttyPS0
+[52555ms] R0203
+[52772ms] 2048+0 records in
+2048+0 records out
+D0203
+sh-4.4# [52773ms] TX stty raw -echo; echo R0204 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0204 >/dev/ttyPS0
+[52820ms] R0204
+[53038ms] 2048+0 records in
+2048+0 records out
+D0204
+sh-4.4# [53039ms] TX stty raw -echo; echo R0205 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0205 >/dev/ttyPS0
+[53083ms] R0205
+[53301ms] 2048+0 records in
+2048+0 records out
+D0205
+sh-4.4# [53302ms] TX stty raw -echo; echo R0206 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0206 >/dev/ttyPS0
+[53348ms] R0206
+[53566ms] 2048+0 records in
+2048+0 records out
+D0206
+sh-4.4# [53567ms] TX stty raw -echo; echo R0207 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0207 >/dev/ttyPS0
+[53613ms] R0207
+[53832ms] 2048+0 records in
+2048+0 records out
+D0207
+sh-4.4# [53833ms] TX stty raw -echo; echo R0208 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0208 >/dev/ttyPS0
+[53879ms] R0208
+[54095ms] 2048+0 records in
+2048+0 records out
+D0208
+sh-4.4# [54096ms] TX stty raw -echo; echo R0209 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0209 >/dev/ttyPS0
+[54143ms] R0209
+[54328ms] 2048+0 records in
+2048+0 records out
+D0209
+[54328ms] TX stty raw -echo; echo R0210 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0210 >/dev/ttyPS0
+[54389ms] sh-4.4# R0210
+[54577ms] 2048+0 records in
+2048+0 records out
+D0210
+[54578ms] TX stty raw -echo; echo R0211 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0211 >/dev/ttyPS0
+[54639ms] sh-4.4# R0211
+[54829ms] 2048+0 records in
+2048+0 records out
+D0211
+[54830ms] TX stty raw -echo; echo R0212 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0212 >/dev/ttyPS0
+[54877ms] sh-4.4# R0212
+[55061ms] 2048+0 records in
+2048+0 records out
+D0212
+[55062ms] TX stty raw -echo; echo R0213 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0213 >/dev/ttyPS0
+[55108ms] sh-4.4# R0213
+[55295ms] 2048+0 records in
+2048+0 records out
+D0213
+[55296ms] TX stty raw -echo; echo R0214 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0214 >/dev/ttyPS0
+[55342ms] sh-4.4# R0214
+[55530ms] 2048+0 records in
+2048+0 records out
+D0214
+[55531ms] TX stty raw -echo; echo R0215 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0215 >/dev/ttyPS0
+[55577ms] sh-4.4# R0215
+[55763ms] 2048+0 records in
+2048+0 records out
+D0215
+[55764ms] TX stty raw -echo; echo R0216 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0216 >/dev/ttyPS0
+[55810ms] sh-4.4# R0216
+[55996ms] 2048+0 records in
+2048+0 records out
+D0216
+[55997ms] TX stty raw -echo; echo R0217 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0217 >/dev/ttyPS0
+[56043ms] sh-4.4# R0217
+[56259ms] 2048+0 records in
+2048+0 records out
+D0217
+sh-4.4# [56260ms] TX stty raw -echo; echo R0218 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0218 >/dev/ttyPS0
+[56307ms] R0218
+[56526ms] 2048+0 records in
+2048+0 records out
+D0218
+sh-4.4# [56527ms] TX stty raw -echo; echo R0219 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0219 >/dev/ttyPS0
+[56573ms] R0219
+[56793ms] 2048+0 records in
+2048+0 records out
+D0219
+sh-4.4# [56793ms] TX stty raw -echo; echo R0220 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0220 >/dev/ttyPS0
+[56841ms] R0220
+[57026ms] 2048+0 records in
+2048+0 records out
+D0220
+[57027ms] TX stty raw -echo; echo R0221 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0221 >/dev/ttyPS0
+[57072ms] sh-4.4# R0221
+[57289ms] 2048+0 records in
+2048+0 records out
+D0221
+sh-4.4# [57290ms] TX stty raw -echo; echo R0222 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0222 >/dev/ttyPS0
+[57336ms] R0222
+[57555ms] 2048+0 records in
+2048+0 records out
+D0222
+sh-4.4# [57555ms] TX stty raw -echo; echo R0223 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0223 >/dev/ttyPS0
+[57602ms] R0223
+[57831ms] 2048+0 records in
+2048+0 records out
+D0223
+sh-4.4# [57832ms] TX stty raw -echo; echo R0224 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0224 >/dev/ttyPS0
+[57878ms] R0224
+[58107ms] 2048+0 records in
+2048+0 records out
+D0224
+sh-4.4# [58108ms] TX stty raw -echo; echo R0225 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0225 >/dev/ttyPS0
+[58155ms] R0225
+[58341ms] 2048+0 records in
+2048+0 records out
+D0225
+[58341ms] TX stty raw -echo; echo R0226 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0226 >/dev/ttyPS0
+[58387ms] sh-4.4# R0226
+[58571ms] 2048+0 records in
+2048+0 records out
+D0226
+[58572ms] TX stty raw -echo; echo R0227 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0227 >/dev/ttyPS0
+[58616ms] sh-4.4# R0227
+[58834ms] 2048+0 records in
+2048+0 records out
+D0227
+sh-4.4# [58835ms] TX stty raw -echo; echo R0228 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0228 >/dev/ttyPS0
+[58880ms] R0228
+[59098ms] 2048+0 records in
+2048+0 records out
+D0228
+sh-4.4# [59099ms] TX stty raw -echo; echo R0229 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0229 >/dev/ttyPS0
+[59143ms] R0229
+[59363ms] 2048+0 records in
+2048+0 records out
+D0229
+sh-4.4# [59363ms] TX stty raw -echo; echo R0230 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0230 >/dev/ttyPS0
+[59408ms] R0230
+[59592ms] 2048+0 records in
+2048+0 records out
+D0230
+[59593ms] TX stty raw -echo; echo R0231 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0231 >/dev/ttyPS0
+[59638ms] sh-4.4# R0231
+[59825ms] 2048+0 records in
+2048+0 records out
+D0231
+[59826ms] TX stty raw -echo; echo R0232 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0232 >/dev/ttyPS0
+[59872ms] sh-4.4# R0232
+[60092ms] 2048+0 records in
+2048+0 records out
+D0232
+sh-4.4# [60093ms] TX stty raw -echo; echo R0233 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0233 >/dev/ttyPS0
+[60139ms] R0233
+[60327ms] 2048+0 records in
+2048+0 records out
+D0233
+[60328ms] TX stty raw -echo; echo R0234 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0234 >/dev/ttyPS0
+[60374ms] sh-4.4# R0234
+[60595ms] 2048+0 records in
+2048+0 records out
+D0234
+sh-4.4# [60596ms] TX stty raw -echo; echo R0235 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0235 >/dev/ttyPS0
+[60641ms] R0235
+[60827ms] 2048+0 records in
+2048+0 records out
+D0235
+[60828ms] TX stty raw -echo; echo R0236 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0236 >/dev/ttyPS0
+[60875ms] sh-4.4# R0236
+[61061ms] 2048+0 records in
+2048+0 records out
+D0236
+[61062ms] TX stty raw -echo; echo R0237 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0237 >/dev/ttyPS0
+[61122ms] sh-4.4# R0237
+[61310ms] 2048+0 records in
+2048+0 records out
+D0237
+[61311ms] TX stty raw -echo; echo R0238 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0238 >/dev/ttyPS0
+[61355ms] sh-4.4# R0238
+[61573ms] 2048+0 records in
+2048+0 records out
+D0238
+sh-4.4# [61574ms] TX stty raw -echo; echo R0239 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0239 >/dev/ttyPS0
+[61619ms] R0239
+[61835ms] 2048+0 records in
+2048+0 records out
+D0239
+sh-4.4# [61836ms] TX stty raw -echo; echo R0240 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0240 >/dev/ttyPS0
+[61881ms] R0240
+[62065ms] 2048+0 records in
+2048+0 records out
+D0240
+[62066ms] TX stty raw -echo; echo R0241 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0241 >/dev/ttyPS0
+[62111ms] sh-4.4# R0241
+[62294ms] 2048+0 records in
+2048+0 records out
+D0241
+[62295ms] TX stty raw -echo; echo R0242 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0242 >/dev/ttyPS0
+[62339ms] sh-4.4# R0242
+[62558ms] 2048+0 records in
+2048+0 records out
+D0242
+sh-4.4# [62559ms] TX stty raw -echo; echo R0243 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0243 >/dev/ttyPS0
+[62604ms] R0243
+[62824ms] 2048+0 records in
+2048+0 records out
+D0243
+sh-4.4# [62824ms] TX stty raw -echo; echo R0244 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0244 >/dev/ttyPS0
+[62871ms] R0244
+[63089ms] 2048+0 records in
+2048+0 records out
+D0244
+sh-4.4# [63089ms] TX stty raw -echo; echo R0245 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0245 >/dev/ttyPS0
+[63136ms] R0245
+[63320ms] 2048+0 records in
+2048+0 records out
+D0245
+[63320ms] TX stty raw -echo; echo R0246 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0246 >/dev/ttyPS0
+[63367ms] sh-4.4# R0246
+[63585ms] 2048+0 records in
+2048+0 records out
+D0246
+sh-4.4# [63586ms] TX stty raw -echo; echo R0247 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0247 >/dev/ttyPS0
+[63632ms] R0247
+[63817ms] 2048+0 records in
+2048+0 records out
+D0247
+[63817ms] TX stty raw -echo; echo R0248 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0248 >/dev/ttyPS0
+[63863ms] sh-4.4# R0248
+[64084ms] 2048+0 records in
+2048+0 records out
+D0248
+sh-4.4# [64084ms] TX stty raw -echo; echo R0249 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0249 >/dev/ttyPS0
+[64130ms] R0249
+[64350ms] 2048+0 records in
+2048+0 records out
+D0249
+sh-4.4# [64351ms] TX stty raw -echo; echo R0250 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0250 >/dev/ttyPS0
+[64396ms] R0250
+[64614ms] 2048+0 records in
+2048+0 records out
+D0250
+sh-4.4# [64615ms] TX stty raw -echo; echo R0251 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0251 >/dev/ttyPS0
+[64661ms] R0251
+[64878ms] 2048+0 records in
+2048+0 records out
+D0251
+sh-4.4# [64879ms] TX stty raw -echo; echo R0252 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0252 >/dev/ttyPS0
+[64925ms] R0252
+[65143ms] 2048+0 records in
+2048+0 records out
+D0252
+sh-4.4# [65143ms] TX stty raw -echo; echo R0253 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0253 >/dev/ttyPS0
+[65190ms] R0253
+[65409ms] 2048+0 records in
+2048+0 records out
+D0253
+sh-4.4# [65410ms] TX stty raw -echo; echo R0254 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0254 >/dev/ttyPS0
+[65455ms] R0254
+[65686ms] 2048+0 records in
+2048+0 records out
+D0254
+sh-4.4# [65687ms] TX stty raw -echo; echo R0255 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0255 >/dev/ttyPS0
+[65734ms] R0255
+[65922ms] 2048+0 records in
+2048+0 records out
+D0255
+[65922ms] TX stty raw -echo; echo R0256 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0256 >/dev/ttyPS0
+[65984ms] sh-4.4# R0256
+[66170ms] 2048+0 records in
+2048+0 records out
+D0256
+[66171ms] TX stty raw -echo; echo R0257 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0257 >/dev/ttyPS0
+[66217ms] sh-4.4# R0257
+[66404ms] 2048+0 records in
+2048+0 records out
+D0257
+[66405ms] TX stty raw -echo; echo R0258 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0258 >/dev/ttyPS0
+[66450ms] sh-4.4# R0258
+[66635ms] 2048+0 records in
+2048+0 records out
+D0258
+[66635ms] TX stty raw -echo; echo R0259 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0259 >/dev/ttyPS0
+[66681ms] sh-4.4# R0259
+[66865ms] 2048+0 records in
+2048+0 records out
+D0259
+[66866ms] TX stty raw -echo; echo R0260 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0260 >/dev/ttyPS0
+[66913ms] sh-4.4# R0260
+[67131ms] 2048+0 records in
+2048+0 records out
+D0260
+sh-4.4# [67133ms] TX stty raw -echo; echo R0261 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0261 >/dev/ttyPS0
+[67177ms] R0261
+[67398ms] 2048+0 records in
+2048+0 records out
+D0261
+sh-4.4# [67398ms] TX stty raw -echo; echo R0262 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0262 >/dev/ttyPS0
+[67443ms] R0262
+[67659ms] 2048+0 records in
+2048+0 records out
+D0262
+sh-4.4# [67660ms] TX stty raw -echo; echo R0263 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0263 >/dev/ttyPS0
+[67705ms] R0263
+[67923ms] 2048+0 records in
+2048+0 records out
+D0263
+sh-4.4# [67924ms] TX stty raw -echo; echo R0264 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0264 >/dev/ttyPS0
+[67985ms] R0264
+[68171ms] 2048+0 records in
+2048+0 records out
+D0264
+[68172ms] TX stty raw -echo; echo R0265 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0265 >/dev/ttyPS0
+[68217ms] sh-4.4# R0265
+[68405ms] 2048+0 records in
+2048+0 records out
+D0265
+[68405ms] TX stty raw -echo; echo R0266 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0266 >/dev/ttyPS0
+[68453ms] sh-4.4# R0266
+[68640ms] 2048+0 records in
+2048+0 records out
+D0266
+[68641ms] TX stty raw -echo; echo R0267 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0267 >/dev/ttyPS0
+[68702ms] sh-4.4# R0267
+[68889ms] 2048+0 records in
+2048+0 records out
+D0267
+[68890ms] TX stty raw -echo; echo R0268 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0268 >/dev/ttyPS0
+[68936ms] sh-4.4# R0268
+[69123ms] 2048+0 records in
+2048+0 records out
+D0268
+[69124ms] TX stty raw -echo; echo R0269 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0269 >/dev/ttyPS0
+[69170ms] sh-4.4# R0269
+[69359ms] 2048+0 records in
+2048+0 records out
+D0269
+[69359ms] TX stty raw -echo; echo R0270 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0270 >/dev/ttyPS0
+[69422ms] sh-4.4# R0270
+[69608ms] 2048+0 records in
+2048+0 records out
+D0270
+[69609ms] TX stty raw -echo; echo R0271 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0271 >/dev/ttyPS0
+[69655ms] sh-4.4# R0271
+[69840ms] 2048+0 records in
+2048+0 records out
+D0271
+[69841ms] TX stty raw -echo; echo R0272 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0272 >/dev/ttyPS0
+[69887ms] sh-4.4# R0272
+[70076ms] 2048+0 records in
+2048+0 records out
+D0272
+[70077ms] TX stty raw -echo; echo R0273 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0273 >/dev/ttyPS0
+[70124ms] sh-4.4# R0273
+[70307ms] 2048+0 records in
+2048+0 records out
+D0273
+[70308ms] TX stty raw -echo; echo R0274 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0274 >/dev/ttyPS0
+[70354ms] sh-4.4# R0274
+[70569ms] 2048+0 records in
+2048+0 records out
+D0274
+sh-4.4# [70570ms] TX stty raw -echo; echo R0275 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0275 >/dev/ttyPS0
+[70615ms] R0275
+[70833ms] 2048+0 records in
+2048+0 records out
+D0275
+sh-4.4# [70833ms] TX stty raw -echo; echo R0276 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0276 >/dev/ttyPS0
+[70879ms] R0276
+[71094ms] 2048+0 records in
+2048+0 records out
+D0276
+sh-4.4# [71095ms] TX stty raw -echo; echo R0277 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0277 >/dev/ttyPS0
+[71156ms] R0277
+[71343ms] 2048+0 records in
+2048+0 records out
+D0277
+[71344ms] TX stty raw -echo; echo R0278 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0278 >/dev/ttyPS0
+[71389ms] sh-4.4# R0278
+[71577ms] 2048+0 records in
+2048+0 records out
+D0278
+[71578ms] TX stty raw -echo; echo R0279 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0279 >/dev/ttyPS0
+[71639ms] sh-4.4# R0279
+[71827ms] 2048+0 records in
+2048+0 records out
+D0279
+[71828ms] TX stty raw -echo; echo R0280 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0280 >/dev/ttyPS0
+[71874ms] sh-4.4# R0280
+[72059ms] 2048+0 records in
+2048+0 records out
+D0280
+[72060ms] TX stty raw -echo; echo R0281 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0281 >/dev/ttyPS0
+[72107ms] sh-4.4# R0281
+[72292ms] 2048+0 records in
+2048+0 records out
+D0281
+[72293ms] TX stty raw -echo; echo R0282 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0282 >/dev/ttyPS0
+[72339ms] sh-4.4# R0282
+[72529ms] 2048+0 records in
+2048+0 records out
+D0282
+[72529ms] TX stty raw -echo; echo R0283 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0283 >/dev/ttyPS0
+[72575ms] sh-4.4# R0283
+[72792ms] 2048+0 records in
+2048+0 records out
+D0283
+sh-4.4# [72793ms] TX stty raw -echo; echo R0284 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0284 >/dev/ttyPS0
+[72838ms] R0284
+[73057ms] 2048+0 records in
+2048+0 records out
+D0284
+sh-4.4# [73058ms] TX stty raw -echo; echo R0285 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0285 >/dev/ttyPS0
+[73104ms] R0285
+[73321ms] 2048+0 records in
+2048+0 records out
+D0285
+sh-4.4# [73322ms] TX stty raw -echo; echo R0286 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0286 >/dev/ttyPS0
+[73368ms] R0286
+[73583ms] 2048+0 records in
+2048+0 records out
+D0286
+sh-4.4# [73584ms] TX stty raw -echo; echo R0287 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0287 >/dev/ttyPS0
+[73629ms] R0287
+[73813ms] 2048+0 records in
+2048+0 records out
+D0287
+[73813ms] TX stty raw -echo; echo R0288 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0288 >/dev/ttyPS0
+[73874ms] sh-4.4# R0288
+[74061ms] 2048+0 records in
+2048+0 records out
+D0288
+[74061ms] TX stty raw -echo; echo R0289 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0289 >/dev/ttyPS0
+[74108ms] sh-4.4# R0289
+[74294ms] 2048+0 records in
+2048+0 records out
+D0289
+[74295ms] TX stty raw -echo; echo R0290 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0290 >/dev/ttyPS0
+[74341ms] sh-4.4# R0290
+[74528ms] 2048+0 records in
+2048+0 records out
+D0290
+[74528ms] TX stty raw -echo; echo R0291 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0291 >/dev/ttyPS0
+[74574ms] sh-4.4# R0291
+[74792ms] 2048+0 records in
+2048+0 records out
+D0291
+sh-4.4# [74793ms] TX stty raw -echo; echo R0292 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0292 >/dev/ttyPS0
+[74840ms] R0292
+[75027ms] 2048+0 records in
+2048+0 records out
+D0292
+[75028ms] TX stty raw -echo; echo R0293 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0293 >/dev/ttyPS0
+[75074ms] sh-4.4# R0293
+[75289ms] 2048+0 records in
+2048+0 records out
+D0293
+sh-4.4# [75290ms] TX stty raw -echo; echo R0294 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0294 >/dev/ttyPS0
+[75335ms] R0294
+[75550ms] 2048+0 records in
+2048+0 records out
+D0294
+sh-4.4# [75550ms] TX stty raw -echo; echo R0295 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0295 >/dev/ttyPS0
+[75597ms] R0295
+[75814ms] 2048+0 records in
+2048+0 records out
+D0295
+sh-4.4# [75815ms] TX stty raw -echo; echo R0296 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0296 >/dev/ttyPS0
+[75861ms] R0296
+[76047ms] 2048+0 records in
+2048+0 records out
+D0296
+[76047ms] TX stty raw -echo; echo R0297 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0297 >/dev/ttyPS0
+[76109ms] sh-4.4# R0297
+[76295ms] 2048+0 records in
+2048+0 records out
+D0297
+[76295ms] TX stty raw -echo; echo R0298 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0298 >/dev/ttyPS0
+[76340ms] sh-4.4# R0298
+[76528ms] 2048+0 records in
+2048+0 records out
+D0298
+[76528ms] TX stty raw -echo; echo R0299 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0299 >/dev/ttyPS0
+[76574ms] sh-4.4# R0299
+[76793ms] 2048+0 records in
+2048+0 records out
+D0299
+sh-4.4# [76794ms] TX stty raw -echo; echo R0300 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0300 >/dev/ttyPS0
+[76839ms] R0300
+[77059ms] 2048+0 records in
+2048+0 records out
+D0300
+sh-4.4# [77060ms] TX stty raw -echo; echo R0301 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0301 >/dev/ttyPS0
+[77107ms] R0301
+[77293ms] 2048+0 records in
+2048+0 records out
+D0301
+[77294ms] TX stty raw -echo; echo R0302 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0302 >/dev/ttyPS0
+[77340ms] sh-4.4# R0302
+[77556ms] 2048+0 records in
+2048+0 records out
+D0302
+sh-4.4# [77557ms] TX stty raw -echo; echo R0303 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0303 >/dev/ttyPS0
+[77603ms] R0303
+[77822ms] 2048+0 records in
+2048+0 records out
+D0303
+sh-4.4# [77823ms] TX stty raw -echo; echo R0304 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0304 >/dev/ttyPS0
+[77869ms] R0304
+[78053ms] 2048+0 records in
+2048+0 records out
+D0304
+[78053ms] TX stty raw -echo; echo R0305 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0305 >/dev/ttyPS0
+[78099ms] sh-4.4# R0305
+[78316ms] 2048+0 records in
+2048+0 records out
+D0305
+sh-4.4# [78317ms] TX stty raw -echo; echo R0306 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0306 >/dev/ttyPS0
+[78364ms] R0306
+[78585ms] 2048+0 records in
+2048+0 records out
+D0306
+sh-4.4# [78585ms] TX stty raw -echo; echo R0307 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0307 >/dev/ttyPS0
+[78632ms] R0307
+[78850ms] 2048+0 records in
+2048+0 records out
+D0307
+sh-4.4# [78851ms] TX stty raw -echo; echo R0308 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0308 >/dev/ttyPS0
+[78897ms] R0308
+[79115ms] 2048+0 records in
+2048+0 records out
+D0308
+sh-4.4# [79116ms] TX stty raw -echo; echo R0309 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0309 >/dev/ttyPS0
+[79163ms] R0309
+[79381ms] 2048+0 records in
+2048+0 records out
+D0309
+sh-4.4# [79382ms] TX stty raw -echo; echo R0310 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0310 >/dev/ttyPS0
+[79429ms] R0310
+[79649ms] 2048+0 records in
+2048+0 records out
+D0310
+sh-4.4# [79650ms] TX stty raw -echo; echo R0311 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0311 >/dev/ttyPS0
+[79696ms] R0311
+[79913ms] 2048+0 records in
+2048+0 records out
+D0311
+sh-4.4# [79914ms] TX stty raw -echo; echo R0312 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0312 >/dev/ttyPS0
+[79959ms] R0312
+[80176ms] 2048+0 records in
+2048+0 records out
+D0312
+sh-4.4# [80177ms] TX stty raw -echo; echo R0313 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0313 >/dev/ttyPS0
+[80223ms] R0313
+[80442ms] 2048+0 records in
+2048+0 records out
+D0313
+sh-4.4# [80443ms] TX stty raw -echo; echo R0314 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0314 >/dev/ttyPS0
+[80489ms] R0314
+[80674ms] 2048+0 records in
+2048+0 records out
+D0314
+[80674ms] TX stty raw -echo; echo R0315 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0315 >/dev/ttyPS0
+[80719ms] sh-4.4# R0315
+[80904ms] 2048+0 records in
+2048+0 records out
+D0315
+[80905ms] TX stty raw -echo; echo R0316 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0316 >/dev/ttyPS0
+[80951ms] sh-4.4# R0316
+[81136ms] 2048+0 records in
+2048+0 records out
+D0316
+[81137ms] TX stty raw -echo; echo R0317 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0317 >/dev/ttyPS0
+[81181ms] sh-4.4# R0317
+[81365ms] 2048+0 records in
+2048+0 records out
+D0317
+[81366ms] TX stty raw -echo; echo R0318 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0318 >/dev/ttyPS0
+[81412ms] sh-4.4# R0318
+[81631ms] 2048+0 records in
+2048+0 records out
+D0318
+sh-4.4# [81632ms] TX stty raw -echo; echo R0319 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0319 >/dev/ttyPS0
+[81678ms] R0319
+[81898ms] 2048+0 records in
+2048+0 records out
+D0319
+sh-4.4# [81899ms] TX stty raw -echo; echo R0320 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0320 >/dev/ttyPS0
+[81945ms] R0320
+[82162ms] 2048+0 records in
+2048+0 records out
+D0320
+sh-4.4# [82163ms] TX stty raw -echo; echo R0321 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0321 >/dev/ttyPS0
+[82210ms] R0321
+[82429ms] 2048+0 records in
+2048+0 records out
+D0321
+sh-4.4# [82430ms] TX stty raw -echo; echo R0322 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0322 >/dev/ttyPS0
+[82476ms] R0322
+[82660ms] 2048+0 records in
+2048+0 records out
+D0322
+[82661ms] TX stty raw -echo; echo R0323 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0323 >/dev/ttyPS0
+[82706ms] sh-4.4# R0323
+[82925ms] 2048+0 records in
+2048+0 records out
+D0323
+sh-4.4# [82925ms] TX stty raw -echo; echo R0324 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0324 >/dev/ttyPS0
+[82971ms] R0324
+[83191ms] 2048+0 records in
+2048+0 records out
+D0324
+sh-4.4# [83192ms] TX stty raw -echo; echo R0325 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0325 >/dev/ttyPS0
+[83237ms] R0325
+[83455ms] 2048+0 records in
+2048+0 records out
+D0325
+sh-4.4# [83456ms] TX stty raw -echo; echo R0326 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0326 >/dev/ttyPS0
+[83501ms] R0326
+[83687ms] 2048+0 records in
+2048+0 records out
+D0326
+[83687ms] TX stty raw -echo; echo R0327 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0327 >/dev/ttyPS0
+[83749ms] sh-4.4# R0327
+[83935ms] 2048+0 records in
+2048+0 records out
+D0327
+[83936ms] TX stty raw -echo; echo R0328 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0328 >/dev/ttyPS0
+[83981ms] sh-4.4# R0328
+[84168ms] 2048+0 records in
+2048+0 records out
+D0328
+[84168ms] TX stty raw -echo; echo R0329 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0329 >/dev/ttyPS0
+[84215ms] sh-4.4# R0329
+[84402ms] 2048+0 records in
+2048+0 records out
+D0329
+[84403ms] TX stty raw -echo; echo R0330 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0330 >/dev/ttyPS0
+[84449ms] sh-4.4# R0330
+[84667ms] 2048+0 records in
+2048+0 records out
+D0330
+sh-4.4# [84668ms] TX stty raw -echo; echo R0331 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0331 >/dev/ttyPS0
+[84713ms] R0331
+[84929ms] 2048+0 records in
+2048+0 records out
+D0331
+sh-4.4# [84930ms] TX stty raw -echo; echo R0332 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0332 >/dev/ttyPS0
+[84974ms] R0332
+[85159ms] 2048+0 records in
+2048+0 records out
+D0332
+[85160ms] TX stty raw -echo; echo R0333 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0333 >/dev/ttyPS0
+[85206ms] sh-4.4# R0333
+[85390ms] 2048+0 records in
+2048+0 records out
+D0333
+[85390ms] TX stty raw -echo; echo R0334 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0334 >/dev/ttyPS0
+[85436ms] sh-4.4# R0334
+[85622ms] 2048+0 records in
+2048+0 records out
+D0334
+[85623ms] TX stty raw -echo; echo R0335 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0335 >/dev/ttyPS0
+[85670ms] sh-4.4# R0335
+[85858ms] 2048+0 records in
+2048+0 records out
+D0335
+[85859ms] TX stty raw -echo; echo R0336 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0336 >/dev/ttyPS0
+[85904ms] sh-4.4# R0336
+[86091ms] 2048+0 records in
+2048+0 records out
+D0336
+[86091ms] TX stty raw -echo; echo R0337 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0337 >/dev/ttyPS0
+[86137ms] sh-4.4# R0337
+[86326ms] 2048+0 records in
+2048+0 records out
+D0337
+[86327ms] TX stty raw -echo; echo R0338 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0338 >/dev/ttyPS0
+[86372ms] sh-4.4# R0338
+[86600ms] 2048+0 records in
+2048+0 records out
+D0338
+sh-4.4# [86601ms] TX stty raw -echo; echo R0339 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0339 >/dev/ttyPS0
+[86647ms] R0339
+[86866ms] 2048+0 records in
+2048+0 records out
+D0339
+sh-4.4# [86866ms] TX stty raw -echo; echo R0340 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0340 >/dev/ttyPS0
+[86914ms] R0340
+[87131ms] 2048+0 records in
+2048+0 records out
+D0340
+sh-4.4# [87133ms] TX stty raw -echo; echo R0341 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0341 >/dev/ttyPS0
+[87178ms] R0341
+[87394ms] 2048+0 records in
+2048+0 records out
+D0341
+sh-4.4# [87395ms] TX stty raw -echo; echo R0342 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0342 >/dev/ttyPS0
+[87440ms] R0342
+[87663ms] 2048+0 records in
+2048+0 records out
+D0342
+sh-4.4# [87663ms] TX stty raw -echo; echo R0343 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0343 >/dev/ttyPS0
+[87711ms] R0343
+[87928ms] 2048+0 records in
+2048+0 records out
+D0343
+sh-4.4# [87929ms] TX stty raw -echo; echo R0344 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0344 >/dev/ttyPS0
+[87974ms] R0344
+[88191ms] 2048+0 records in
+2048+0 records out
+D0344
+sh-4.4# [88192ms] TX stty raw -echo; echo R0345 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0345 >/dev/ttyPS0
+[88236ms] R0345
+[88454ms] 2048+0 records in
+2048+0 records out
+D0345
+sh-4.4# [88454ms] TX stty raw -echo; echo R0346 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0346 >/dev/ttyPS0
+[88515ms] R0346
+[88704ms] 2048+0 records in
+2048+0 records out
+D0346
+[88704ms] TX stty raw -echo; echo R0347 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0347 >/dev/ttyPS0
+[88752ms] sh-4.4# R0347
+[88970ms] 2048+0 records in
+2048+0 records out
+D0347
+sh-4.4# [88970ms] TX stty raw -echo; echo R0348 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0348 >/dev/ttyPS0
+[89017ms] R0348
+[89204ms] 2048+0 records in
+2048+0 records out
+D0348
+[89205ms] TX stty raw -echo; echo R0349 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0349 >/dev/ttyPS0
+[89251ms] sh-4.4# R0349
+[89438ms] 2048+0 records in
+2048+0 records out
+D0349
+[89438ms] TX stty raw -echo; echo R0350 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0350 >/dev/ttyPS0
+[89485ms] sh-4.4# R0350
+[89672ms] 2048+0 records in
+2048+0 records out
+D0350
+[89672ms] TX stty raw -echo; echo R0351 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0351 >/dev/ttyPS0
+[89734ms] sh-4.4# R0351
+[89955ms] 2048+0 records in
+2048+0 records out
+D0351
+sh-4.4# [89955ms] TX stty raw -echo; echo R0352 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0352 >/dev/ttyPS0
+[90001ms] R0352
+[90187ms] 2048+0 records in
+2048+0 records out
+D0352
+[90187ms] TX stty raw -echo; echo R0353 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0353 >/dev/ttyPS0
+[90249ms] sh-4.4# R0353
+[90437ms] 2048+0 records in
+2048+0 records out
+D0353
+[90438ms] TX stty raw -echo; echo R0354 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0354 >/dev/ttyPS0
+[90483ms] sh-4.4# R0354
+[90671ms] 2048+0 records in
+2048+0 records out
+D0354
+[90671ms] TX stty raw -echo; echo R0355 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0355 >/dev/ttyPS0
+[90717ms] sh-4.4# R0355
+[90901ms] 2048+0 records in
+2048+0 records out
+D0355
+[90901ms] TX stty raw -echo; echo R0356 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0356 >/dev/ttyPS0
+[90947ms] sh-4.4# R0356
+[91165ms] 2048+0 records in
+2048+0 records out
+D0356
+sh-4.4# [91165ms] TX stty raw -echo; echo R0357 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0357 >/dev/ttyPS0
+[91211ms] R0357
+[91395ms] 2048+0 records in
+2048+0 records out
+D0357
+[91396ms] TX stty raw -echo; echo R0358 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0358 >/dev/ttyPS0
+[91442ms] sh-4.4# R0358
+[91659ms] 2048+0 records in
+2048+0 records out
+D0358
+sh-4.4# [91660ms] TX stty raw -echo; echo R0359 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0359 >/dev/ttyPS0
+[91706ms] R0359
+[91938ms] 2048+0 records in
+2048+0 records out
+D0359
+sh-4.4# [91938ms] TX stty raw -echo; echo R0360 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0360 >/dev/ttyPS0
+[91999ms] R0360
+[92185ms] 2048+0 records in
+2048+0 records out
+D0360
+[92186ms] TX stty raw -echo; echo R0361 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0361 >/dev/ttyPS0
+[92232ms] sh-4.4# R0361
+[92417ms] 2048+0 records in
+2048+0 records out
+D0361
+[92418ms] TX stty raw -echo; echo R0362 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0362 >/dev/ttyPS0
+[92465ms] sh-4.4# R0362
+[92683ms] 2048+0 records in
+2048+0 records out
+D0362
+sh-4.4# [92684ms] TX stty raw -echo; echo R0363 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0363 >/dev/ttyPS0
+[92730ms] R0363
+[92948ms] 2048+0 records in
+2048+0 records out
+D0363
+sh-4.4# [92949ms] TX stty raw -echo; echo R0364 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0364 >/dev/ttyPS0
+[92995ms] R0364
+[93213ms] 2048+0 records in
+2048+0 records out
+D0364
+sh-4.4# [93214ms] TX stty raw -echo; echo R0365 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0365 >/dev/ttyPS0
+[93259ms] R0365
+[93476ms] 2048+0 records in
+2048+0 records out
+D0365
+sh-4.4# [93477ms] TX stty raw -echo; echo R0366 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0366 >/dev/ttyPS0
+[93525ms] R0366
+[93710ms] 2048+0 records in
+2048+0 records out
+D0366
+[93711ms] TX stty raw -echo; echo R0367 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0367 >/dev/ttyPS0
+[93756ms] sh-4.4# R0367
+[93978ms] 2048+0 records in
+2048+0 records out
+D0367
+sh-4.4# [93979ms] TX stty raw -echo; echo R0368 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0368 >/dev/ttyPS0
+[94026ms] R0368
+[94210ms] 2048+0 records in
+2048+0 records out
+D0368
+[94211ms] TX stty raw -echo; echo R0369 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0369 >/dev/ttyPS0
+[94257ms] sh-4.4# R0369
+[94475ms] 2048+0 records in
+2048+0 records out
+D0369
+sh-4.4# [94475ms] TX stty raw -echo; echo R0370 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0370 >/dev/ttyPS0
+[94521ms] R0370
+[94741ms] 2048+0 records in
+2048+0 records out
+D0370
+sh-4.4# [94742ms] TX stty raw -echo; echo R0371 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0371 >/dev/ttyPS0
+[94786ms] R0371
+[95003ms] 2048+0 records in
+2048+0 records out
+D0371
+sh-4.4# [95004ms] TX stty raw -echo; echo R0372 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0372 >/dev/ttyPS0
+[95050ms] R0372
+[95271ms] 2048+0 records in
+2048+0 records out
+D0372
+sh-4.4# [95271ms] TX stty raw -echo; echo R0373 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0373 >/dev/ttyPS0
+[95318ms] R0373
+[95535ms] 2048+0 records in
+2048+0 records out
+D0373
+sh-4.4# [95535ms] TX stty raw -echo; echo R0374 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0374 >/dev/ttyPS0
+[95582ms] R0374
+[95802ms] 2048+0 records in
+2048+0 records out
+D0374
+sh-4.4# [95802ms] TX stty raw -echo; echo R0375 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0375 >/dev/ttyPS0
+[95848ms] R0375
+[96068ms] 2048+0 records in
+2048+0 records out
+D0375
+sh-4.4# [96069ms] TX stty raw -echo; echo R0376 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0376 >/dev/ttyPS0
+[96116ms] R0376
+[96332ms] 2048+0 records in
+2048+0 records out
+D0376
+sh-4.4# [96333ms] TX stty raw -echo; echo R0377 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0377 >/dev/ttyPS0
+[96378ms] R0377
+[96596ms] 2048+0 records in
+2048+0 records out
+D0377
+sh-4.4# [96597ms] TX stty raw -echo; echo R0378 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0378 >/dev/ttyPS0
+[96643ms] R0378
+[96861ms] 2048+0 records in
+2048+0 records out
+D0378
+sh-4.4# [96862ms] TX stty raw -echo; echo R0379 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0379 >/dev/ttyPS0
+[96908ms] R0379
+[97128ms] 2048+0 records in
+2048+0 records out
+D0379
+sh-4.4# [97129ms] TX stty raw -echo; echo R0380 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0380 >/dev/ttyPS0
+[97174ms] R0380
+[97358ms] 2048+0 records in
+2048+0 records out
+D0380
+[97359ms] TX stty raw -echo; echo R0381 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0381 >/dev/ttyPS0
+[97404ms] sh-4.4# R0381
+[97590ms] 2048+0 records in
+2048+0 records out
+D0381
+[97591ms] TX stty raw -echo; echo R0382 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0382 >/dev/ttyPS0
+[97636ms] sh-4.4# R0382
+[97853ms] 2048+0 records in
+2048+0 records out
+D0382
+sh-4.4# [97854ms] TX stty raw -echo; echo R0383 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0383 >/dev/ttyPS0
+[97899ms] R0383
+[98116ms] 2048+0 records in
+2048+0 records out
+D0383
+sh-4.4# [98117ms] TX stty raw -echo; echo R0384 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0384 >/dev/ttyPS0
+[98164ms] R0384
+[98380ms] 2048+0 records in
+2048+0 records out
+D0384
+sh-4.4# [98381ms] TX stty raw -echo; echo R0385 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0385 >/dev/ttyPS0
+[98428ms] R0385
+[98647ms] 2048+0 records in
+2048+0 records out
+D0385
+sh-4.4# [98648ms] TX stty raw -echo; echo R0386 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0386 >/dev/ttyPS0
+[98694ms] R0386
+[98913ms] 2048+0 records in
+2048+0 records out
+D0386
+sh-4.4# [98914ms] TX stty raw -echo; echo R0387 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0387 >/dev/ttyPS0
+[98961ms] R0387
+[99176ms] 2048+0 records in
+2048+0 records out
+D0387
+sh-4.4# [99177ms] TX stty raw -echo; echo R0388 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0388 >/dev/ttyPS0
+[99224ms] R0388
+[99442ms] 2048+0 records in
+2048+0 records out
+D0388
+sh-4.4# [99443ms] TX stty raw -echo; echo R0389 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0389 >/dev/ttyPS0
+[99490ms] R0389
+[99674ms] 2048+0 records in
+2048+0 records out
+D0389
+[99674ms] TX stty raw -echo; echo R0390 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0390 >/dev/ttyPS0
+[99721ms] sh-4.4# R0390
+[99940ms] 2048+0 records in
+2048+0 records out
+D0390
+sh-4.4# [99941ms] TX stty raw -echo; echo R0391 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0391 >/dev/ttyPS0
+[99987ms] R0391
+[100206ms] 2048+0 records in
+2048+0 records out
+D0391
+sh-4.4# [100207ms] TX stty raw -echo; echo R0392 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0392 >/dev/ttyPS0
+[100252ms] R0392
+[100485ms] 2048+0 records in
+2048+0 records out
+D0392
+sh-4.4# [100486ms] TX stty raw -echo; echo R0393 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0393 >/dev/ttyPS0
+[100533ms] R0393
+[100718ms] 2048+0 records in
+2048+0 records out
+D0393
+[100719ms] TX stty raw -echo; echo R0394 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0394 >/dev/ttyPS0
+[100780ms] sh-4.4# R0394
+[100967ms] 2048+0 records in
+2048+0 records out
+D0394
+[100968ms] TX stty raw -echo; echo R0395 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0395 >/dev/ttyPS0
+[101015ms] sh-4.4# R0395
+[101201ms] 2048+0 records in
+2048+0 records out
+D0395
+[101201ms] TX stty raw -echo; echo R0396 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0396 >/dev/ttyPS0
+[101249ms] sh-4.4# R0396
+[101434ms] 2048+0 records in
+2048+0 records out
+D0396
+[101435ms] TX stty raw -echo; echo R0397 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0397 >/dev/ttyPS0
+[101480ms] sh-4.4# R0397
+[101696ms] 2048+0 records in
+2048+0 records out
+D0397
+sh-4.4# [101697ms] TX stty raw -echo; echo R0398 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0398 >/dev/ttyPS0
+[101743ms] R0398
+[101961ms] 2048+0 records in
+2048+0 records out
+D0398
+sh-4.4# [101962ms] TX stty raw -echo; echo R0399 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0399 >/dev/ttyPS0
+[102008ms] R0399
+[102224ms] 2048+0 records in
+2048+0 records out
+D0399
+sh-4.4# [102224ms] TX stty raw -echo; echo R0400 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0400 >/dev/ttyPS0
+[102271ms] R0400
+[102488ms] 2048+0 records in
+2048+0 records out
+D0400
+sh-4.4# [102489ms] TX stty raw -echo; echo R0401 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0401 >/dev/ttyPS0
+[102535ms] R0401
+[102753ms] 2048+0 records in
+2048+0 records out
+D0401
+sh-4.4# [102753ms] TX stty raw -echo; echo R0402 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0402 >/dev/ttyPS0
+[102799ms] R0402
+[102984ms] 2048+0 records in
+2048+0 records out
+D0402
+[102984ms] TX stty raw -echo; echo R0403 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0403 >/dev/ttyPS0
+[103032ms] sh-4.4# R0403
+[103219ms] 2048+0 records in
+2048+0 records out
+D0403
+[103219ms] TX stty raw -echo; echo R0404 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0404 >/dev/ttyPS0
+[103281ms] sh-4.4# R0404
+[103465ms] 2048+0 records in
+2048+0 records out
+D0404
+[103466ms] TX stty raw -echo; echo R0405 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0405 >/dev/ttyPS0
+[103511ms] sh-4.4# R0405
+[103695ms] 2048+0 records in
+2048+0 records out
+D0405
+[103696ms] TX stty raw -echo; echo R0406 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0406 >/dev/ttyPS0
+[103742ms] sh-4.4# R0406
+[103960ms] 2048+0 records in
+2048+0 records out
+D0406
+sh-4.4# [103960ms] TX stty raw -echo; echo R0407 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0407 >/dev/ttyPS0
+[104007ms] R0407
+[104226ms] 2048+0 records in
+2048+0 records out
+D0407
+sh-4.4# [104227ms] TX stty raw -echo; echo R0408 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0408 >/dev/ttyPS0
+[104273ms] R0408
+[104492ms] 2048+0 records in
+2048+0 records out
+D0408
+sh-4.4# [104493ms] TX stty raw -echo; echo R0409 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0409 >/dev/ttyPS0
+[104539ms] R0409
+[104723ms] 2048+0 records in
+2048+0 records out
+D0409
+[104724ms] TX stty raw -echo; echo R0410 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0410 >/dev/ttyPS0
+[104769ms] sh-4.4# R0410
+[104954ms] 2048+0 records in
+2048+0 records out
+D0410
+[104955ms] TX stty raw -echo; echo R0411 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0411 >/dev/ttyPS0
+[105014ms] sh-4.4# R0411
+[105202ms] 2048+0 records in
+2048+0 records out
+D0411
+[105202ms] TX stty raw -echo; echo R0412 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0412 >/dev/ttyPS0
+[105249ms] sh-4.4# R0412
+[105433ms] 2048+0 records in
+2048+0 records out
+D0412
+[105434ms] TX stty raw -echo; echo R0413 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0413 >/dev/ttyPS0
+[105480ms] sh-4.4# R0413
+[105696ms] 2048+0 records in
+2048+0 records out
+D0413
+sh-4.4# [105697ms] TX stty raw -echo; echo R0414 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0414 >/dev/ttyPS0
+[105743ms] R0414
+[105927ms] 2048+0 records in
+2048+0 records out
+D0414
+[105928ms] TX stty raw -echo; echo R0415 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0415 >/dev/ttyPS0
+[105972ms] sh-4.4# R0415
+[106190ms] 2048+0 records in
+2048+0 records out
+D0415
+sh-4.4# [106191ms] TX stty raw -echo; echo R0416 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0416 >/dev/ttyPS0
+[106237ms] R0416
+[106469ms] 2048+0 records in
+2048+0 records out
+D0416
+sh-4.4# [106470ms] TX stty raw -echo; echo R0417 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0417 >/dev/ttyPS0
+[106531ms] R0417
+[106715ms] 2048+0 records in
+2048+0 records out
+D0417
+[106716ms] TX stty raw -echo; echo R0418 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0418 >/dev/ttyPS0
+[106762ms] sh-4.4# R0418
+[106951ms] 2048+0 records in
+2048+0 records out
+D0418
+[106951ms] TX stty raw -echo; echo R0419 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0419 >/dev/ttyPS0
+[106997ms] sh-4.4# R0419
+[107181ms] 2048+0 records in
+2048+0 records out
+D0419
+[107181ms] TX stty raw -echo; echo R0420 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0420 >/dev/ttyPS0
+[107229ms] sh-4.4# R0420
+[107457ms] 2048+0 records in
+2048+0 records out
+D0420
+sh-4.4# [107458ms] TX stty raw -echo; echo R0421 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0421 >/dev/ttyPS0
+[107504ms] R0421
+[107721ms] 2048+0 records in
+2048+0 records out
+D0421
+sh-4.4# [107722ms] TX stty raw -echo; echo R0422 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0422 >/dev/ttyPS0
+[107768ms] R0422
+[107986ms] 2048+0 records in
+2048+0 records out
+D0422
+sh-4.4# [107987ms] TX stty raw -echo; echo R0423 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0423 >/dev/ttyPS0
+[108033ms] R0423
+[108253ms] 2048+0 records in
+2048+0 records out
+D0423
+sh-4.4# [108254ms] TX stty raw -echo; echo R0424 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0424 >/dev/ttyPS0
+[108299ms] R0424
+[108485ms] 2048+0 records in
+2048+0 records out
+D0424
+[108486ms] TX stty raw -echo; echo R0425 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0425 >/dev/ttyPS0
+[108532ms] sh-4.4# R0425
+[108719ms] 2048+0 records in
+2048+0 records out
+D0425
+[108720ms] TX stty raw -echo; echo R0426 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0426 >/dev/ttyPS0
+[108766ms] sh-4.4# R0426
+[108986ms] 2048+0 records in
+2048+0 records out
+D0426
+sh-4.4# [108987ms] TX stty raw -echo; echo R0427 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0427 >/dev/ttyPS0
+[109033ms] R0427
+[109217ms] 2048+0 records in
+2048+0 records out
+D0427
+[109218ms] TX stty raw -echo; echo R0428 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0428 >/dev/ttyPS0
+[109264ms] sh-4.4# R0428
+[109450ms] 2048+0 records in
+2048+0 records out
+D0428
+[109451ms] TX stty raw -echo; echo R0429 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0429 >/dev/ttyPS0
+[109496ms] sh-4.4# R0429
+[109718ms] 2048+0 records in
+2048+0 records out
+D0429
+sh-4.4# [109718ms] TX stty raw -echo; echo R0430 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0430 >/dev/ttyPS0
+[109765ms] R0430
+[109953ms] 2048+0 records in
+2048+0 records out
+D0430
+[109953ms] TX stty raw -echo; echo R0431 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0431 >/dev/ttyPS0
+[110015ms] sh-4.4# R0431
+[110201ms] 2048+0 records in
+2048+0 records out
+D0431
+[110202ms] TX stty raw -echo; echo R0432 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0432 >/dev/ttyPS0
+[110248ms] sh-4.4# R0432
+[110433ms] 2048+0 records in
+2048+0 records out
+D0432
+[110433ms] TX stty raw -echo; echo R0433 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0433 >/dev/ttyPS0
+[110480ms] sh-4.4# R0433
+[110698ms] 2048+0 records in
+2048+0 records out
+D0433
+sh-4.4# [110698ms] TX stty raw -echo; echo R0434 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0434 >/dev/ttyPS0
+[110744ms] R0434
+[110962ms] 2048+0 records in
+2048+0 records out
+D0434
+sh-4.4# [110963ms] TX stty raw -echo; echo R0435 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0435 >/dev/ttyPS0
+[111008ms] R0435
+[111193ms] 2048+0 records in
+2048+0 records out
+D0435
+[111193ms] TX stty raw -echo; echo R0436 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0436 >/dev/ttyPS0
+[111240ms] sh-4.4# R0436
+[111423ms] 2048+0 records in
+2048+0 records out
+D0436
+[111424ms] TX stty raw -echo; echo R0437 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0437 >/dev/ttyPS0
+[111469ms] sh-4.4# R0437
+[111689ms] 2048+0 records in
+2048+0 records out
+D0437
+sh-4.4# [111690ms] TX stty raw -echo; echo R0438 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0438 >/dev/ttyPS0
+[111736ms] R0438
+[111919ms] 2048+0 records in
+2048+0 records out
+D0438
+[111920ms] TX stty raw -echo; echo R0439 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0439 >/dev/ttyPS0
+[111965ms] sh-4.4# R0439
+[112154ms] 2048+0 records in
+2048+0 records out
+D0439
+[112154ms] TX stty raw -echo; echo R0440 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0440 >/dev/ttyPS0
+[112200ms] sh-4.4# R0440
+[112385ms] 2048+0 records in
+2048+0 records out
+D0440
+[112387ms] TX stty raw -echo; echo R0441 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0441 >/dev/ttyPS0
+[112430ms] sh-4.4# R0441
+[112649ms] 2048+0 records in
+2048+0 records out
+D0441
+sh-4.4# [112650ms] TX stty raw -echo; echo R0442 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0442 >/dev/ttyPS0
+[112696ms] R0442
+[112913ms] 2048+0 records in
+2048+0 records out
+D0442
+sh-4.4# [112914ms] TX stty raw -echo; echo R0443 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0443 >/dev/ttyPS0
+[112959ms] R0443
+[113143ms] 2048+0 records in
+2048+0 records out
+D0443
+[113143ms] TX stty raw -echo; echo R0444 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0444 >/dev/ttyPS0
+[113189ms] sh-4.4# R0444
+[113407ms] 2048+0 records in
+2048+0 records out
+D0444
+sh-4.4# [113408ms] TX stty raw -echo; echo R0445 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0445 >/dev/ttyPS0
+[113454ms] R0445
+[113639ms] 2048+0 records in
+2048+0 records out
+D0445
+[113640ms] TX stty raw -echo; echo R0446 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0446 >/dev/ttyPS0
+[113685ms] sh-4.4# R0446
+[113873ms] 2048+0 records in
+2048+0 records out
+D0446
+[113874ms] TX stty raw -echo; echo R0447 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0447 >/dev/ttyPS0
+[113919ms] sh-4.4# R0447
+[114106ms] 2048+0 records in
+2048+0 records out
+D0447
+[114106ms] TX stty raw -echo; echo R0448 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0448 >/dev/ttyPS0
+[114153ms] sh-4.4# R0448
+[114339ms] 2048+0 records in
+2048+0 records out
+D0448
+[114340ms] TX stty raw -echo; echo R0449 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0449 >/dev/ttyPS0
+[114386ms] sh-4.4# R0449
+[114604ms] 2048+0 records in
+2048+0 records out
+D0449
+sh-4.4# [114605ms] TX stty raw -echo; echo R0450 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0450 >/dev/ttyPS0
+[114651ms] R0450
+[114871ms] 2048+0 records in
+2048+0 records out
+D0450
+sh-4.4# [114872ms] TX stty raw -echo; echo R0451 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0451 >/dev/ttyPS0
+[114918ms] R0451
+[115134ms] 2048+0 records in
+2048+0 records out
+D0451
+sh-4.4# [115135ms] TX stty raw -echo; echo R0452 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0452 >/dev/ttyPS0
+[115182ms] R0452
+[115399ms] 2048+0 records in
+2048+0 records out
+D0452
+sh-4.4# [115399ms] TX stty raw -echo; echo R0453 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0453 >/dev/ttyPS0
+[115445ms] R0453
+[115664ms] 2048+0 records in
+2048+0 records out
+D0453
+sh-4.4# [115665ms] TX stty raw -echo; echo R0454 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0454 >/dev/ttyPS0
+[115711ms] R0454
+[115929ms] 2048+0 records in
+2048+0 records out
+D0454
+sh-4.4# [115930ms] TX stty raw -echo; echo R0455 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0455 >/dev/ttyPS0
+[115975ms] R0455
+[116195ms] 2048+0 records in
+2048+0 records out
+D0455
+sh-4.4# [116196ms] TX stty raw -echo; echo R0456 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0456 >/dev/ttyPS0
+[116241ms] R0456
+[116459ms] 2048+0 records in
+2048+0 records out
+D0456
+sh-4.4# [116460ms] TX stty raw -echo; echo R0457 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0457 >/dev/ttyPS0
+[116505ms] R0457
+[116689ms] 2048+0 records in
+2048+0 records out
+D0457
+[116690ms] TX stty raw -echo; echo R0458 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0458 >/dev/ttyPS0
+[116751ms] sh-4.4# R0458
+[116984ms] 2048+0 records in
+2048+0 records out
+D0458
+sh-4.4# [116985ms] TX stty raw -echo; echo R0459 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0459 >/dev/ttyPS0
+[117032ms] R0459
+[117220ms] 2048+0 records in
+2048+0 records out
+D0459
+[117220ms] TX stty raw -echo; echo R0460 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0460 >/dev/ttyPS0
+[117281ms] sh-4.4# R0460
+[117468ms] 2048+0 records in
+2048+0 records out
+D0460
+[117469ms] TX stty raw -echo; echo R0461 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0461 >/dev/ttyPS0
+[117531ms] sh-4.4# R0461
+[117716ms] 2048+0 records in
+2048+0 records out
+D0461
+[117717ms] TX stty raw -echo; echo R0462 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0462 >/dev/ttyPS0
+[117764ms] sh-4.4# R0462
+[117950ms] 2048+0 records in
+2048+0 records out
+D0462
+[117951ms] TX stty raw -echo; echo R0463 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0463 >/dev/ttyPS0
+[117995ms] sh-4.4# R0463
+[118214ms] 2048+0 records in
+2048+0 records out
+D0463
+sh-4.4# [118214ms] TX stty raw -echo; echo R0464 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0464 >/dev/ttyPS0
+[118259ms] R0464
+[118478ms] 2048+0 records in
+2048+0 records out
+D0464
+sh-4.4# [118479ms] TX stty raw -echo; echo R0465 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0465 >/dev/ttyPS0
+[118525ms] R0465
+[118744ms] 2048+0 records in
+2048+0 records out
+D0465
+sh-4.4# [118745ms] TX stty raw -echo; echo R0466 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0466 >/dev/ttyPS0
+[118791ms] R0466
+[119007ms] 2048+0 records in
+2048+0 records out
+D0466
+sh-4.4# [119008ms] TX stty raw -echo; echo R0467 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0467 >/dev/ttyPS0
+[119056ms] R0467
+[119240ms] 2048+0 records in
+2048+0 records out
+D0467
+[119240ms] TX stty raw -echo; echo R0468 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0468 >/dev/ttyPS0
+[119286ms] sh-4.4# R0468
+[119506ms] 2048+0 records in
+2048+0 records out
+D0468
+sh-4.4# [119507ms] TX stty raw -echo; echo R0469 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0469 >/dev/ttyPS0
+[119552ms] R0469
+[119772ms] 2048+0 records in
+2048+0 records out
+D0469
+sh-4.4# [119773ms] TX stty raw -echo; echo R0470 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0470 >/dev/ttyPS0
+[119818ms] R0470
+[120037ms] 2048+0 records in
+2048+0 records out
+D0470
+sh-4.4# [120037ms] TX stty raw -echo; echo R0471 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0471 >/dev/ttyPS0
+[120084ms] R0471
+[120299ms] 2048+0 records in
+2048+0 records out
+D0471
+sh-4.4# [120300ms] TX stty raw -echo; echo R0472 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0472 >/dev/ttyPS0
+[120346ms] R0472
+[120565ms] 2048+0 records in
+2048+0 records out
+D0472
+sh-4.4# [120566ms] TX stty raw -echo; echo R0473 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0473 >/dev/ttyPS0
+[120612ms] R0473
+[120831ms] 2048+0 records in
+2048+0 records out
+D0473
+sh-4.4# [120831ms] TX stty raw -echo; echo R0474 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0474 >/dev/ttyPS0
+[120877ms] R0474
+[121062ms] 2048+0 records in
+2048+0 records out
+D0474
+[121063ms] TX stty raw -echo; echo R0475 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0475 >/dev/ttyPS0
+[121125ms] sh-4.4# R0475
+[121311ms] 2048+0 records in
+2048+0 records out
+D0475
+[121311ms] TX stty raw -echo; echo R0476 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0476 >/dev/ttyPS0
+[121356ms] sh-4.4# R0476
+[121541ms] 2048+0 records in
+2048+0 records out
+D0476
+[121542ms] TX stty raw -echo; echo R0477 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0477 >/dev/ttyPS0
+[121589ms] sh-4.4# R0477
+[121805ms] 2048+0 records in
+2048+0 records out
+D0477
+sh-4.4# [121806ms] TX stty raw -echo; echo R0478 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0478 >/dev/ttyPS0
+[121851ms] R0478
+[122069ms] 2048+0 records in
+2048+0 records out
+D0478
+sh-4.4# [122069ms] TX stty raw -echo; echo R0479 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0479 >/dev/ttyPS0
+[122117ms] R0479
+[122333ms] 2048+0 records in
+2048+0 records out
+D0479
+sh-4.4# [122333ms] TX stty raw -echo; echo R0480 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0480 >/dev/ttyPS0
+[122379ms] R0480
+[122595ms] 2048+0 records in
+2048+0 records out
+D0480
+sh-4.4# [122597ms] TX stty raw -echo; echo R0481 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0481 >/dev/ttyPS0
+[122642ms] R0481
+[122862ms] 2048+0 records in
+2048+0 records out
+D0481
+sh-4.4# [122862ms] TX stty raw -echo; echo R0482 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0482 >/dev/ttyPS0
+[122908ms] R0482
+[123092ms] 2048+0 records in
+2048+0 records out
+D0482
+[123093ms] TX stty raw -echo; echo R0483 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0483 >/dev/ttyPS0
+[123138ms] sh-4.4# R0483
+[123325ms] 2048+0 records in
+2048+0 records out
+D0483
+[123326ms] TX stty raw -echo; echo R0484 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0484 >/dev/ttyPS0
+[123372ms] sh-4.4# R0484
+[123560ms] 2048+0 records in
+2048+0 records out
+D0484
+[123561ms] TX stty raw -echo; echo R0485 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0485 >/dev/ttyPS0
+[123606ms] sh-4.4# R0485
+[123792ms] 2048+0 records in
+2048+0 records out
+D0485
+[123793ms] TX stty raw -echo; echo R0486 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0486 >/dev/ttyPS0
+[123839ms] sh-4.4# R0486
+[124059ms] 2048+0 records in
+2048+0 records out
+D0486
+sh-4.4# [124059ms] TX stty raw -echo; echo R0487 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0487 >/dev/ttyPS0
+[124105ms] R0487
+[124322ms] 2048+0 records in
+2048+0 records out
+D0487
+sh-4.4# [124323ms] TX stty raw -echo; echo R0488 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0488 >/dev/ttyPS0
+[124368ms] R0488
+[124587ms] 2048+0 records in
+2048+0 records out
+D0488
+sh-4.4# [124587ms] TX stty raw -echo; echo R0489 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0489 >/dev/ttyPS0
+[124633ms] R0489
+[124853ms] 2048+0 records in
+2048+0 records out
+D0489
+sh-4.4# [124853ms] TX stty raw -echo; echo R0490 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0490 >/dev/ttyPS0
+[124901ms] R0490
+[125119ms] 2048+0 records in
+2048+0 records out
+D0490
+sh-4.4# [125120ms] TX stty raw -echo; echo R0491 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0491 >/dev/ttyPS0
+[125165ms] R0491
+[125384ms] 2048+0 records in
+2048+0 records out
+D0491
+sh-4.4# [125385ms] TX stty raw -echo; echo R0492 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0492 >/dev/ttyPS0
+[125430ms] R0492
+[125649ms] 2048+0 records in
+2048+0 records out
+D0492
+sh-4.4# [125649ms] TX stty raw -echo; echo R0493 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0493 >/dev/ttyPS0
+[125696ms] R0493
+[125914ms] 2048+0 records in
+2048+0 records out
+D0493
+sh-4.4# [125915ms] TX stty raw -echo; echo R0494 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0494 >/dev/ttyPS0
+[125960ms] R0494
+[126178ms] 2048+0 records in
+2048+0 records out
+D0494
+sh-4.4# [126178ms] TX stty raw -echo; echo R0495 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0495 >/dev/ttyPS0
+[126224ms] R0495
+[126441ms] 2048+0 records in
+2048+0 records out
+D0495
+sh-4.4# [126442ms] TX stty raw -echo; echo R0496 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0496 >/dev/ttyPS0
+[126488ms] R0496
+[126708ms] 2048+0 records in
+2048+0 records out
+D0496
+sh-4.4# [126709ms] TX stty raw -echo; echo R0497 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0497 >/dev/ttyPS0
+[126755ms] R0497
+[126972ms] 2048+0 records in
+2048+0 records out
+D0497
+sh-4.4# [126973ms] TX stty raw -echo; echo R0498 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0498 >/dev/ttyPS0
+[127019ms] R0498
+[127237ms] 2048+0 records in
+2048+0 records out
+D0498
+sh-4.4# [127237ms] TX stty raw -echo; echo R0499 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0499 >/dev/ttyPS0
+[127284ms] R0499
+[127503ms] 2048+0 records in
+2048+0 records out
+D0499
+sh-4.4# [127504ms] TX stty raw -echo; echo R0500 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0500 >/dev/ttyPS0
+[127549ms] R0500
+[127769ms] 2048+0 records in
+2048+0 records out
+D0500
+sh-4.4# [127770ms] TX stty raw -echo; echo R0501 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0501 >/dev/ttyPS0
+[127817ms] R0501
+[128001ms] 2048+0 records in
+2048+0 records out
+D0501
+[128002ms] TX stty raw -echo; echo R0502 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0502 >/dev/ttyPS0
+[128049ms] sh-4.4# R0502
+[128233ms] 2048+0 records in
+2048+0 records out
+D0502
+[128234ms] TX stty raw -echo; echo R0503 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0503 >/dev/ttyPS0
+[128281ms] sh-4.4# R0503
+[128468ms] 2048+0 records in
+2048+0 records out
+D0503
+[128468ms] TX stty raw -echo; echo R0504 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0504 >/dev/ttyPS0
+[128514ms] sh-4.4# R0504
+[128704ms] 2048+0 records in
+2048+0 records out
+D0504
+[128705ms] TX stty raw -echo; echo R0505 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0505 >/dev/ttyPS0
+[128751ms] sh-4.4# R0505
+[128972ms] 2048+0 records in
+2048+0 records out
+D0505
+sh-4.4# [128973ms] TX stty raw -echo; echo R0506 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0506 >/dev/ttyPS0
+[129018ms] R0506
+[129239ms] 2048+0 records in
+2048+0 records out
+D0506
+sh-4.4# [129240ms] TX stty raw -echo; echo R0507 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0507 >/dev/ttyPS0
+[129286ms] R0507
+[129471ms] 2048+0 records in
+2048+0 records out
+D0507
+[129472ms] TX stty raw -echo; echo R0508 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0508 >/dev/ttyPS0
+[129518ms] sh-4.4# R0508
+[129745ms] 2048+0 records in
+2048+0 records out
+D0508
+sh-4.4# [129745ms] TX stty raw -echo; echo R0509 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0509 >/dev/ttyPS0
+[129790ms] R0509
+[129974ms] 2048+0 records in
+2048+0 records out
+D0509
+[129975ms] TX stty raw -echo; echo R0510 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0510 >/dev/ttyPS0
+[130020ms] sh-4.4# R0510
+[130241ms] 2048+0 records in
+2048+0 records out
+D0510
+sh-4.4# [130242ms] TX stty raw -echo; echo R0511 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0511 >/dev/ttyPS0
+[130289ms] R0511
+[130472ms] 2048+0 records in
+2048+0 records out
+D0511
+[130473ms] TX stty raw -echo; echo R0512 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0512 >/dev/ttyPS0
+[130519ms] sh-4.4# R0512
+[130736ms] 2048+0 records in
+2048+0 records out
+D0512
+sh-4.4# [130736ms] TX stty raw -echo; echo R0513 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0513 >/dev/ttyPS0
+[130782ms] R0513
+[130969ms] 2048+0 records in
+2048+0 records out
+D0513
+[130969ms] TX stty raw -echo; echo R0514 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0514 >/dev/ttyPS0
+[131016ms] sh-4.4# R0514
+[131201ms] 2048+0 records in
+2048+0 records out
+D0514
+[131202ms] TX stty raw -echo; echo R0515 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0515 >/dev/ttyPS0
+[131247ms] sh-4.4# R0515
+[131433ms] 2048+0 records in
+2048+0 records out
+D0515
+[131433ms] TX stty raw -echo; echo R0516 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0516 >/dev/ttyPS0
+[131480ms] sh-4.4# R0516
+[131669ms] 2048+0 records in
+2048+0 records out
+D0516
+[131670ms] TX stty raw -echo; echo R0517 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0517 >/dev/ttyPS0
+[131717ms] sh-4.4# R0517
+[131907ms] 2048+0 records in
+2048+0 records out
+D0517
+[131908ms] TX stty raw -echo; echo R0518 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0518 >/dev/ttyPS0
+[131969ms] sh-4.4# R0518
+[132196ms] 2048+0 records in
+2048+0 records out
+D0518
+sh-4.4# [132197ms] TX stty raw -echo; echo R0519 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0519 >/dev/ttyPS0
+[132243ms] R0519
+[132458ms] 2048+0 records in
+2048+0 records out
+D0519
+sh-4.4# [132459ms] TX stty raw -echo; echo R0520 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0520 >/dev/ttyPS0
+[132505ms] R0520
+[132689ms] 2048+0 records in
+2048+0 records out
+D0520
+[132690ms] TX stty raw -echo; echo R0521 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0521 >/dev/ttyPS0
+[132751ms] sh-4.4# R0521
+[132935ms] 2048+0 records in
+2048+0 records out
+D0521
+[132936ms] TX stty raw -echo; echo R0522 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0522 >/dev/ttyPS0
+[132983ms] sh-4.4# R0522
+[133169ms] 2048+0 records in
+2048+0 records out
+D0522
+[133169ms] TX stty raw -echo; echo R0523 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0523 >/dev/ttyPS0
+[133215ms] sh-4.4# R0523
+[133402ms] 2048+0 records in
+2048+0 records out
+D0523
+[133402ms] TX stty raw -echo; echo R0524 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0524 >/dev/ttyPS0
+[133448ms] sh-4.4# R0524
+[133667ms] 2048+0 records in
+2048+0 records out
+D0524
+sh-4.4# [133667ms] TX stty raw -echo; echo R0525 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0525 >/dev/ttyPS0
+[133712ms] R0525
+[133897ms] 2048+0 records in
+2048+0 records out
+D0525
+[133897ms] TX stty raw -echo; echo R0526 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0526 >/dev/ttyPS0
+[133943ms] sh-4.4# R0526
+[134159ms] 2048+0 records in
+2048+0 records out
+D0526
+sh-4.4# [134160ms] TX stty raw -echo; echo R0527 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0527 >/dev/ttyPS0
+[134205ms] R0527
+[134423ms] 2048+0 records in
+2048+0 records out
+D0527
+sh-4.4# [134424ms] TX stty raw -echo; echo R0528 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0528 >/dev/ttyPS0
+[134471ms] R0528
+[134656ms] 2048+0 records in
+2048+0 records out
+D0528
+[134656ms] TX stty raw -echo; echo R0529 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0529 >/dev/ttyPS0
+[134717ms] sh-4.4# R0529
+[134905ms] 2048+0 records in
+2048+0 records out
+D0529
+[134905ms] TX stty raw -echo; echo R0530 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0530 >/dev/ttyPS0
+[134949ms] sh-4.4# R0530
+[135165ms] 2048+0 records in
+2048+0 records out
+D0530
+sh-4.4# [135166ms] TX stty raw -echo; echo R0531 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0531 >/dev/ttyPS0
+[135213ms] R0531
+[135432ms] 2048+0 records in
+2048+0 records out
+D0531
+sh-4.4# [135432ms] TX stty raw -echo; echo R0532 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0532 >/dev/ttyPS0
+[135478ms] R0532
+[135696ms] 2048+0 records in
+2048+0 records out
+D0532
+sh-4.4# [135697ms] TX stty raw -echo; echo R0533 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0533 >/dev/ttyPS0
+[135743ms] R0533
+[135926ms] 2048+0 records in
+2048+0 records out
+D0533
+[135926ms] TX stty raw -echo; echo R0534 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0534 >/dev/ttyPS0
+[135971ms] sh-4.4# R0534
+[136189ms] 2048+0 records in
+2048+0 records out
+D0534
+sh-4.4# [136190ms] TX stty raw -echo; echo R0535 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0535 >/dev/ttyPS0
+[136236ms] R0535
+[136455ms] 2048+0 records in
+2048+0 records out
+D0535
+sh-4.4# [136456ms] TX stty raw -echo; echo R0536 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0536 >/dev/ttyPS0
+[136501ms] R0536
+[136721ms] 2048+0 records in
+2048+0 records out
+D0536
+sh-4.4# [136722ms] TX stty raw -echo; echo R0537 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0537 >/dev/ttyPS0
+[136768ms] R0537
+[136954ms] 2048+0 records in
+2048+0 records out
+D0537
+[136954ms] TX stty raw -echo; echo R0538 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0538 >/dev/ttyPS0
+[137001ms] sh-4.4# R0538
+[137186ms] 2048+0 records in
+2048+0 records out
+D0538
+[137186ms] TX stty raw -echo; echo R0539 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0539 >/dev/ttyPS0
+[137232ms] sh-4.4# R0539
+[137419ms] 2048+0 records in
+2048+0 records out
+D0539
+[137420ms] TX stty raw -echo; echo R0540 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0540 >/dev/ttyPS0
+[137466ms] sh-4.4# R0540
+[137652ms] 2048+0 records in
+2048+0 records out
+D0540
+[137653ms] TX stty raw -echo; echo R0541 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0541 >/dev/ttyPS0
+[137699ms] sh-4.4# R0541
+[137915ms] 2048+0 records in
+2048+0 records out
+D0541
+sh-4.4# [137916ms] TX stty raw -echo; echo R0542 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0542 >/dev/ttyPS0
+[137962ms] R0542
+[138182ms] 2048+0 records in
+2048+0 records out
+D0542
+sh-4.4# [138183ms] TX stty raw -echo; echo R0543 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0543 >/dev/ttyPS0
+[138230ms] R0543
+[138448ms] 2048+0 records in
+2048+0 records out
+D0543
+sh-4.4# [138449ms] TX stty raw -echo; echo R0544 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0544 >/dev/ttyPS0
+[138495ms] R0544
+[138712ms] 2048+0 records in
+2048+0 records out
+D0544
+sh-4.4# [138713ms] TX stty raw -echo; echo R0545 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0545 >/dev/ttyPS0
+[138758ms] R0545
+[138941ms] 2048+0 records in
+2048+0 records out
+D0545
+[138942ms] TX stty raw -echo; echo R0546 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0546 >/dev/ttyPS0
+[138988ms] sh-4.4# R0546
+[139172ms] 2048+0 records in
+2048+0 records out
+D0546
+[139172ms] TX stty raw -echo; echo R0547 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0547 >/dev/ttyPS0
+[139234ms] sh-4.4# R0547
+[139420ms] 2048+0 records in
+2048+0 records out
+D0547
+[139421ms] TX stty raw -echo; echo R0548 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0548 >/dev/ttyPS0
+[139467ms] sh-4.4# R0548
+[139655ms] 2048+0 records in
+2048+0 records out
+D0548
+[139656ms] TX stty raw -echo; echo R0549 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0549 >/dev/ttyPS0
+[139701ms] sh-4.4# R0549
+[139888ms] 2048+0 records in
+2048+0 records out
+D0549
+[139889ms] TX stty raw -echo; echo R0550 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0550 >/dev/ttyPS0
+[139934ms] sh-4.4# R0550
+[140166ms] 2048+0 records in
+2048+0 records out
+D0550
+sh-4.4# [140166ms] TX stty raw -echo; echo R0551 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0551 >/dev/ttyPS0
+[140210ms] R0551
+[140428ms] 2048+0 records in
+2048+0 records out
+D0551
+sh-4.4# [140429ms] TX stty raw -echo; echo R0552 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0552 >/dev/ttyPS0
+[140475ms] R0552
+[140695ms] 2048+0 records in
+2048+0 records out
+D0552
+sh-4.4# [140695ms] TX stty raw -echo; echo R0553 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0553 >/dev/ttyPS0
+[140742ms] R0553
+[140958ms] 2048+0 records in
+2048+0 records out
+D0553
+sh-4.4# [140958ms] TX stty raw -echo; echo R0554 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0554 >/dev/ttyPS0
+[141004ms] R0554
+[141220ms] 2048+0 records in
+2048+0 records out
+D0554
+sh-4.4# [141221ms] TX stty raw -echo; echo R0555 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0555 >/dev/ttyPS0
+[141282ms] R0555
+[141468ms] 2048+0 records in
+2048+0 records out
+D0555
+[141469ms] TX stty raw -echo; echo R0556 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0556 >/dev/ttyPS0
+[141516ms] sh-4.4# R0556
+[141701ms] 2048+0 records in
+2048+0 records out
+D0556
+[141702ms] TX stty raw -echo; echo R0557 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0557 >/dev/ttyPS0
+[141747ms] sh-4.4# R0557
+[141935ms] 2048+0 records in
+2048+0 records out
+D0557
+[141936ms] TX stty raw -echo; echo R0558 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0558 >/dev/ttyPS0
+[141982ms] sh-4.4# R0558
+[142169ms] 2048+0 records in
+2048+0 records out
+D0558
+[142170ms] TX stty raw -echo; echo R0559 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0559 >/dev/ttyPS0
+[142215ms] sh-4.4# R0559
+[142432ms] 2048+0 records in
+2048+0 records out
+D0559
+sh-4.4# [142433ms] TX stty raw -echo; echo R0560 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0560 >/dev/ttyPS0
+[142479ms] R0560
+[142664ms] 2048+0 records in
+2048+0 records out
+D0560
+[142665ms] TX stty raw -echo; echo R0561 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0561 >/dev/ttyPS0
+[142710ms] sh-4.4# R0561
+[142929ms] 2048+0 records in
+2048+0 records out
+D0561
+sh-4.4# [142930ms] TX stty raw -echo; echo R0562 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0562 >/dev/ttyPS0
+[142976ms] R0562
+[143193ms] 2048+0 records in
+2048+0 records out
+D0562
+sh-4.4# [143193ms] TX stty raw -echo; echo R0563 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0563 >/dev/ttyPS0
+[143239ms] R0563
+[143459ms] 2048+0 records in
+2048+0 records out
+D0563
+sh-4.4# [143459ms] TX stty raw -echo; echo R0564 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0564 >/dev/ttyPS0
+[143505ms] R0564
+[143689ms] 2048+0 records in
+2048+0 records out
+D0564
+[143690ms] TX stty raw -echo; echo R0565 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0565 >/dev/ttyPS0
+[143736ms] sh-4.4# R0565
+[143956ms] 2048+0 records in
+2048+0 records out
+D0565
+sh-4.4# [143956ms] TX stty raw -echo; echo R0566 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0566 >/dev/ttyPS0
+[144003ms] R0566
+[144224ms] 2048+0 records in
+2048+0 records out
+D0566
+sh-4.4# [144224ms] TX stty raw -echo; echo R0567 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0567 >/dev/ttyPS0
+[144271ms] R0567
+[144489ms] 2048+0 records in
+2048+0 records out
+D0567
+sh-4.4# [144489ms] TX stty raw -echo; echo R0568 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0568 >/dev/ttyPS0
+[144535ms] R0568
+[144720ms] 2048+0 records in
+2048+0 records out
+D0568
+[144720ms] TX stty raw -echo; echo R0569 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0569 >/dev/ttyPS0
+[144767ms] sh-4.4# R0569
+[144986ms] 2048+0 records in
+2048+0 records out
+D0569
+sh-4.4# [144986ms] TX stty raw -echo; echo R0570 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0570 >/dev/ttyPS0
+[145047ms] R0570
+[145233ms] 2048+0 records in
+2048+0 records out
+D0570
+[145234ms] TX stty raw -echo; echo R0571 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0571 >/dev/ttyPS0
+[145295ms] sh-4.4# R0571
+[145480ms] 2048+0 records in
+2048+0 records out
+D0571
+[145481ms] TX stty raw -echo; echo R0572 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0572 >/dev/ttyPS0
+[145527ms] sh-4.4# R0572
+[145744ms] 2048+0 records in
+2048+0 records out
+D0572
+sh-4.4# [145745ms] TX stty raw -echo; echo R0573 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0573 >/dev/ttyPS0
+[145791ms] R0573
+[146011ms] 2048+0 records in
+2048+0 records out
+D0573
+sh-4.4# [146012ms] TX stty raw -echo; echo R0574 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0574 >/dev/ttyPS0
+[146058ms] R0574
+[146275ms] 2048+0 records in
+2048+0 records out
+D0574
+sh-4.4# [146276ms] TX stty raw -echo; echo R0575 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0575 >/dev/ttyPS0
+[146322ms] R0575
+[146506ms] 2048+0 records in
+2048+0 records out
+D0575
+[146507ms] TX stty raw -echo; echo R0576 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0576 >/dev/ttyPS0
+[146554ms] sh-4.4# R0576
+[146775ms] 2048+0 records in
+2048+0 records out
+D0576
+sh-4.4# [146776ms] TX stty raw -echo; echo R0577 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0577 >/dev/ttyPS0
+[146822ms] R0577
+[147040ms] 2048+0 records in
+2048+0 records out
+D0577
+sh-4.4# [147041ms] TX stty raw -echo; echo R0578 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0578 >/dev/ttyPS0
+[147086ms] R0578
+[147303ms] 2048+0 records in
+2048+0 records out
+D0578
+sh-4.4# [147304ms] TX stty raw -echo; echo R0579 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0579 >/dev/ttyPS0
+[147350ms] R0579
+[147534ms] 2048+0 records in
+2048+0 records out
+D0579
+[147535ms] TX stty raw -echo; echo R0580 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0580 >/dev/ttyPS0
+[147580ms] sh-4.4# R0580
+[147801ms] 2048+0 records in
+2048+0 records out
+D0580
+sh-4.4# [147802ms] TX stty raw -echo; echo R0581 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0581 >/dev/ttyPS0
+[147848ms] R0581
+[148066ms] 2048+0 records in
+2048+0 records out
+D0581
+sh-4.4# [148066ms] TX stty raw -echo; echo R0582 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0582 >/dev/ttyPS0
+[148112ms] R0582
+[148297ms] 2048+0 records in
+2048+0 records out
+D0582
+[148297ms] TX stty raw -echo; echo R0583 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0583 >/dev/ttyPS0
+[148345ms] sh-4.4# R0583
+[148563ms] 2048+0 records in
+2048+0 records out
+D0583
+sh-4.4# [148564ms] TX stty raw -echo; echo R0584 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0584 >/dev/ttyPS0
+[148624ms] R0584
+[148809ms] 2048+0 records in
+2048+0 records out
+D0584
+[148809ms] TX stty raw -echo; echo R0585 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0585 >/dev/ttyPS0
+[148855ms] sh-4.4# R0585
+[149074ms] 2048+0 records in
+2048+0 records out
+D0585
+sh-4.4# [149074ms] TX stty raw -echo; echo R0586 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0586 >/dev/ttyPS0
+[149120ms] R0586
+[149338ms] 2048+0 records in
+2048+0 records out
+D0586
+sh-4.4# [149338ms] TX stty raw -echo; echo R0587 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0587 >/dev/ttyPS0
+[149384ms] R0587
+[149604ms] 2048+0 records in
+2048+0 records out
+D0587
+sh-4.4# [149605ms] TX stty raw -echo; echo R0588 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0588 >/dev/ttyPS0
+[149651ms] R0588
+[149870ms] 2048+0 records in
+2048+0 records out
+D0588
+sh-4.4# [149871ms] TX stty raw -echo; echo R0589 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0589 >/dev/ttyPS0
+[149916ms] R0589
+[150135ms] 2048+0 records in
+2048+0 records out
+D0589
+sh-4.4# [150136ms] TX stty raw -echo; echo R0590 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0590 >/dev/ttyPS0
+[150181ms] R0590
+[150399ms] 2048+0 records in
+2048+0 records out
+D0590
+sh-4.4# [150399ms] TX stty raw -echo; echo R0591 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0591 >/dev/ttyPS0
+[150444ms] R0591
+[150661ms] 2048+0 records in
+2048+0 records out
+D0591
+sh-4.4# [150662ms] TX stty raw -echo; echo R0592 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0592 >/dev/ttyPS0
+[150708ms] R0592
+[150926ms] 2048+0 records in
+2048+0 records out
+D0592
+sh-4.4# [150926ms] TX stty raw -echo; echo R0593 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0593 >/dev/ttyPS0
+[150973ms] R0593
+[151158ms] 2048+0 records in
+2048+0 records out
+D0593
+[151159ms] TX stty raw -echo; echo R0594 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0594 >/dev/ttyPS0
+[151207ms] sh-4.4# R0594
+[151423ms] 2048+0 records in
+2048+0 records out
+D0594
+sh-4.4# [151424ms] TX stty raw -echo; echo R0595 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0595 >/dev/ttyPS0
+[151471ms] R0595
+[151656ms] 2048+0 records in
+2048+0 records out
+D0595
+[151656ms] TX stty raw -echo; echo R0596 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0596 >/dev/ttyPS0
+[151717ms] sh-4.4# R0596
+[151905ms] 2048+0 records in
+2048+0 records out
+D0596
+[151906ms] TX stty raw -echo; echo R0597 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0597 >/dev/ttyPS0
+[151953ms] sh-4.4# R0597
+[152140ms] 2048+0 records in
+2048+0 records out
+D0597
+[152140ms] TX stty raw -echo; echo R0598 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0598 >/dev/ttyPS0
+[152188ms] sh-4.4# R0598
+[152408ms] 2048+0 records in
+2048+0 records out
+D0598
+sh-4.4# [152409ms] TX stty raw -echo; echo R0599 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0599 >/dev/ttyPS0
+[152455ms] R0599
+[152687ms] 2048+0 records in
+2048+0 records out
+D0599
+sh-4.4# [152687ms] TX stty raw -echo; echo R0600 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0600 >/dev/ttyPS0
+[152749ms] R0600
+[152935ms] 2048+0 records in
+2048+0 records out
+D0600
+[152937ms] TX stty raw -echo; echo R0601 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0601 >/dev/ttyPS0
+[152982ms] sh-4.4# R0601
+[153169ms] 2048+0 records in
+2048+0 records out
+D0601
+[153169ms] TX stty raw -echo; echo R0602 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0602 >/dev/ttyPS0
+[153215ms] sh-4.4# R0602
+[153429ms] 2048+0 records in
+2048+0 records out
+D0602
+sh-4.4# [153430ms] TX stty raw -echo; echo R0603 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0603 >/dev/ttyPS0
+[153475ms] R0603
+[153694ms] 2048+0 records in
+2048+0 records out
+D0603
+sh-4.4# [153694ms] TX stty raw -echo; echo R0604 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0604 >/dev/ttyPS0
+[153740ms] R0604
+[153960ms] 2048+0 records in
+2048+0 records out
+D0604
+sh-4.4# [153961ms] TX stty raw -echo; echo R0605 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0605 >/dev/ttyPS0
+[154005ms] R0605
+[154224ms] 2048+0 records in
+2048+0 records out
+D0605
+sh-4.4# [154224ms] TX stty raw -echo; echo R0606 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0606 >/dev/ttyPS0
+[154271ms] R0606
+[154490ms] 2048+0 records in
+2048+0 records out
+D0606
+sh-4.4# [154490ms] TX stty raw -echo; echo R0607 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0607 >/dev/ttyPS0
+[154536ms] R0607
+[154755ms] 2048+0 records in
+2048+0 records out
+D0607
+sh-4.4# [154755ms] TX stty raw -echo; echo R0608 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0608 >/dev/ttyPS0
+[154802ms] R0608
+[155019ms] 2048+0 records in
+2048+0 records out
+D0608
+sh-4.4# [155020ms] TX stty raw -echo; echo R0609 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0609 >/dev/ttyPS0
+[155065ms] R0609
+[155298ms] 2048+0 records in
+2048+0 records out
+D0609
+sh-4.4# [155298ms] TX stty raw -echo; echo R0610 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0610 >/dev/ttyPS0
+[155359ms] R0610
+[155546ms] 2048+0 records in
+2048+0 records out
+D0610
+[155547ms] TX stty raw -echo; echo R0611 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0611 >/dev/ttyPS0
+[155608ms] sh-4.4# R0611
+[155794ms] 2048+0 records in
+2048+0 records out
+D0611
+[155795ms] TX stty raw -echo; echo R0612 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0612 >/dev/ttyPS0
+[155841ms] sh-4.4# R0612
+[156025ms] 2048+0 records in
+2048+0 records out
+D0612
+[156026ms] TX stty raw -echo; echo R0613 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0613 >/dev/ttyPS0
+[156073ms] sh-4.4# R0613
+[156291ms] 2048+0 records in
+2048+0 records out
+D0613
+sh-4.4# [156291ms] TX stty raw -echo; echo R0614 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0614 >/dev/ttyPS0
+[156338ms] R0614
+[156556ms] 2048+0 records in
+2048+0 records out
+D0614
+sh-4.4# [156556ms] TX stty raw -echo; echo R0615 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0615 >/dev/ttyPS0
+[156603ms] R0615
+[156823ms] 2048+0 records in
+2048+0 records out
+D0615
+sh-4.4# [156823ms] TX stty raw -echo; echo R0616 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0616 >/dev/ttyPS0
+[156869ms] R0616
+[157088ms] 2048+0 records in
+2048+0 records out
+D0616
+sh-4.4# [157089ms] TX stty raw -echo; echo R0617 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0617 >/dev/ttyPS0
+[157134ms] R0617
+[157319ms] 2048+0 records in
+2048+0 records out
+D0617
+[157319ms] TX stty raw -echo; echo R0618 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0618 >/dev/ttyPS0
+[157365ms] sh-4.4# R0618
+[157550ms] 2048+0 records in
+2048+0 records out
+D0618
+[157551ms] TX stty raw -echo; echo R0619 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0619 >/dev/ttyPS0
+[157597ms] sh-4.4# R0619
+[157815ms] 2048+0 records in
+2048+0 records out
+D0619
+sh-4.4# [157816ms] TX stty raw -echo; echo R0620 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0620 >/dev/ttyPS0
+[157862ms] R0620
+[158082ms] 2048+0 records in
+2048+0 records out
+D0620
+sh-4.4# [158083ms] TX stty raw -echo; echo R0621 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0621 >/dev/ttyPS0
+[158127ms] R0621
+[158312ms] 2048+0 records in
+2048+0 records out
+D0621
+[158312ms] TX stty raw -echo; echo R0622 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0622 >/dev/ttyPS0
+[158359ms] sh-4.4# R0622
+[158593ms] 2048+0 records in
+2048+0 records out
+D0622
+sh-4.4# [158593ms] TX stty raw -echo; echo R0623 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0623 >/dev/ttyPS0
+[158640ms] R0623
+[158824ms] 2048+0 records in
+2048+0 records out
+D0623
+[158825ms] TX stty raw -echo; echo R0624 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0624 >/dev/ttyPS0
+[158872ms] sh-4.4# R0624
+[159058ms] 2048+0 records in
+2048+0 records out
+D0624
+[159059ms] TX stty raw -echo; echo R0625 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0625 >/dev/ttyPS0
+[159104ms] sh-4.4# R0625
+[159323ms] 2048+0 records in
+2048+0 records out
+D0625
+sh-4.4# [159324ms] TX stty raw -echo; echo R0626 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0626 >/dev/ttyPS0
+[159370ms] R0626
+[159588ms] 2048+0 records in
+2048+0 records out
+D0626
+sh-4.4# [159588ms] TX stty raw -echo; echo R0627 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0627 >/dev/ttyPS0
+[159635ms] R0627
+[159854ms] 2048+0 records in
+2048+0 records out
+D0627
+sh-4.4# [159855ms] TX stty raw -echo; echo R0628 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0628 >/dev/ttyPS0
+[159899ms] R0628
+[160116ms] 2048+0 records in
+2048+0 records out
+D0628
+sh-4.4# [160117ms] TX stty raw -echo; echo R0629 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0629 >/dev/ttyPS0
+[160163ms] R0629
+[160381ms] 2048+0 records in
+2048+0 records out
+D0629
+sh-4.4# [160381ms] TX stty raw -echo; echo R0630 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0630 >/dev/ttyPS0
+[160426ms] R0630
+[160644ms] 2048+0 records in
+2048+0 records out
+D0630
+sh-4.4# [160645ms] TX stty raw -echo; echo R0631 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0631 >/dev/ttyPS0
+[160690ms] R0631
+[160909ms] 2048+0 records in
+2048+0 records out
+D0631
+sh-4.4# [160909ms] TX stty raw -echo; echo R0632 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0632 >/dev/ttyPS0
+[160956ms] R0632
+[161176ms] 2048+0 records in
+2048+0 records out
+D0632
+sh-4.4# [161176ms] TX stty raw -echo; echo R0633 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0633 >/dev/ttyPS0
+[161222ms] R0633
+[161454ms] 2048+0 records in
+2048+0 records out
+D0633
+sh-4.4# [161454ms] TX stty raw -echo; echo R0634 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0634 >/dev/ttyPS0
+[161501ms] R0634
+[161735ms] 2048+0 records in
+2048+0 records out
+D0634
+sh-4.4# [161735ms] TX stty raw -echo; echo R0635 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0635 >/dev/ttyPS0
+[161797ms] R0635
+[162017ms] 2048+0 records in
+2048+0 records out
+D0635
+sh-4.4# [162018ms] TX stty raw -echo; echo R0636 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0636 >/dev/ttyPS0
+[162063ms] R0636
+[162249ms] 2048+0 records in
+2048+0 records out
+D0636
+[162250ms] TX stty raw -echo; echo R0637 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0637 >/dev/ttyPS0
+[162296ms] sh-4.4# R0637
+[162481ms] 2048+0 records in
+2048+0 records out
+D0637
+[162482ms] TX stty raw -echo; echo R0638 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0638 >/dev/ttyPS0
+[162528ms] sh-4.4# R0638
+[162716ms] 2048+0 records in
+2048+0 records out
+D0638
+[162717ms] TX stty raw -echo; echo R0639 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0639 >/dev/ttyPS0
+[162763ms] sh-4.4# R0639
+[162950ms] 2048+0 records in
+2048+0 records out
+D0639
+[162951ms] TX stty raw -echo; echo R0640 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0640 >/dev/ttyPS0
+[162996ms] sh-4.4# R0640
+[163183ms] 2048+0 records in
+2048+0 records out
+D0640
+[163184ms] TX stty raw -echo; echo R0641 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0641 >/dev/ttyPS0
+[163230ms] sh-4.4# R0641
+[163446ms] 2048+0 records in
+2048+0 records out
+D0641
+sh-4.4# [163447ms] TX stty raw -echo; echo R0642 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0642 >/dev/ttyPS0
+[163493ms] R0642
+[163710ms] 2048+0 records in
+2048+0 records out
+D0642
+sh-4.4# [163711ms] TX stty raw -echo; echo R0643 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0643 >/dev/ttyPS0
+[163756ms] R0643
+[163973ms] 2048+0 records in
+2048+0 records out
+D0643
+sh-4.4# [163974ms] TX stty raw -echo; echo R0644 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0644 >/dev/ttyPS0
+[164018ms] R0644
+[164238ms] 2048+0 records in
+2048+0 records out
+D0644
+sh-4.4# [164239ms] TX stty raw -echo; echo R0645 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0645 >/dev/ttyPS0
+[164285ms] R0645
+[164502ms] 2048+0 records in
+2048+0 records out
+D0645
+sh-4.4# [164502ms] TX stty raw -echo; echo R0646 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0646 >/dev/ttyPS0
+[164549ms] R0646
+[164735ms] 2048+0 records in
+2048+0 records out
+D0646
+[164736ms] TX stty raw -echo; echo R0647 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0647 >/dev/ttyPS0
+[164798ms] sh-4.4# R0647
+[164983ms] 2048+0 records in
+2048+0 records out
+D0647
+[164984ms] TX stty raw -echo; echo R0648 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0648 >/dev/ttyPS0
+[165030ms] sh-4.4# R0648
+[165219ms] 2048+0 records in
+2048+0 records out
+D0648
+[165220ms] TX stty raw -echo; echo R0649 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0649 >/dev/ttyPS0
+[165280ms] sh-4.4# R0649
+[165466ms] 2048+0 records in
+2048+0 records out
+D0649
+[165467ms] TX stty raw -echo; echo R0650 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0650 >/dev/ttyPS0
+[165514ms] sh-4.4# R0650
+[165699ms] 2048+0 records in
+2048+0 records out
+D0650
+[165700ms] TX stty raw -echo; echo R0651 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0651 >/dev/ttyPS0
+[165746ms] sh-4.4# R0651
+[165964ms] 2048+0 records in
+2048+0 records out
+D0651
+sh-4.4# [165965ms] TX stty raw -echo; echo R0652 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0652 >/dev/ttyPS0
+[166012ms] R0652
+[166198ms] 2048+0 records in
+2048+0 records out
+D0652
+[166199ms] TX stty raw -echo; echo R0653 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0653 >/dev/ttyPS0
+[166245ms] sh-4.4# R0653
+[166464ms] 2048+0 records in
+2048+0 records out
+D0653
+sh-4.4# [166465ms] TX stty raw -echo; echo R0654 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0654 >/dev/ttyPS0
+[166510ms] R0654
+[166729ms] 2048+0 records in
+2048+0 records out
+D0654
+sh-4.4# [166729ms] TX stty raw -echo; echo R0655 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0655 >/dev/ttyPS0
+[166776ms] R0655
+[166991ms] 2048+0 records in
+2048+0 records out
+D0655
+sh-4.4# [166992ms] TX stty raw -echo; echo R0656 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0656 >/dev/ttyPS0
+[167038ms] R0656
+[167255ms] 2048+0 records in
+2048+0 records out
+D0656
+sh-4.4# [167256ms] TX stty raw -echo; echo R0657 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0657 >/dev/ttyPS0
+[167302ms] R0657
+[167520ms] 2048+0 records in
+2048+0 records out
+D0657
+sh-4.4# [167520ms] TX stty raw -echo; echo R0658 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0658 >/dev/ttyPS0
+[167567ms] R0658
+[167783ms] 2048+0 records in
+2048+0 records out
+D0658
+sh-4.4# [167783ms] TX stty raw -echo; echo R0659 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0659 >/dev/ttyPS0
+[167830ms] R0659
+[168051ms] 2048+0 records in
+2048+0 records out
+D0659
+sh-4.4# [168052ms] TX stty raw -echo; echo R0660 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0660 >/dev/ttyPS0
+[168097ms] R0660
+[168314ms] 2048+0 records in
+2048+0 records out
+D0660
+sh-4.4# [168315ms] TX stty raw -echo; echo R0661 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0661 >/dev/ttyPS0
+[168361ms] R0661
+[168593ms] 2048+0 records in
+2048+0 records out
+D0661
+sh-4.4# [168594ms] TX stty raw -echo; echo R0662 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0662 >/dev/ttyPS0
+[168641ms] R0662
+[168828ms] 2048+0 records in
+2048+0 records out
+D0662
+[168829ms] TX stty raw -echo; echo R0663 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0663 >/dev/ttyPS0
+[168876ms] sh-4.4# R0663
+[169110ms] 2048+0 records in
+2048+0 records out
+D0663
+sh-4.4# [169111ms] TX stty raw -echo; echo R0664 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0664 >/dev/ttyPS0
+[169171ms] R0664
+[169357ms] 2048+0 records in
+2048+0 records out
+D0664
+[169358ms] TX stty raw -echo; echo R0665 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0665 >/dev/ttyPS0
+[169405ms] sh-4.4# R0665
+[169592ms] 2048+0 records in
+2048+0 records out
+D0665
+[169593ms] TX stty raw -echo; echo R0666 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0666 >/dev/ttyPS0
+[169638ms] sh-4.4# R0666
+[169824ms] 2048+0 records in
+2048+0 records out
+D0666
+[169825ms] TX stty raw -echo; echo R0667 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0667 >/dev/ttyPS0
+[169872ms] sh-4.4# R0667
+[170089ms] 2048+0 records in
+2048+0 records out
+D0667
+sh-4.4# [170089ms] TX stty raw -echo; echo R0668 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0668 >/dev/ttyPS0
+[170136ms] R0668
+[170353ms] 2048+0 records in
+2048+0 records out
+D0668
+sh-4.4# [170353ms] TX stty raw -echo; echo R0669 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0669 >/dev/ttyPS0
+[170400ms] R0669
+[170619ms] 2048+0 records in
+2048+0 records out
+D0669
+sh-4.4# [170620ms] TX stty raw -echo; echo R0670 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0670 >/dev/ttyPS0
+[170665ms] R0670
+[170883ms] 2048+0 records in
+2048+0 records out
+D0670
+sh-4.4# [170883ms] TX stty raw -echo; echo R0671 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/alpine/libcrypto.so.3.gz; echo D0671 >/dev/ttyPS0
+[170930ms] R0671
+[171114ms] 2048+0 records in
+2048+0 records out
+D0671
+[171115ms] TX stty raw -echo; echo R0672 >/dev/ttyPS0; dd bs=1 count=548 >> /tmp/alpine/libcrypto.so.3.gz; echo D0672 >/dev/ttyPS0
+[171161ms] sh-4.4# R0672
+[171253ms] 548+0 records in
+548+0 records out
+D0672
+sh-4.4# 

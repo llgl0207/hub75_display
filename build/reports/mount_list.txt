@@ -1,0 +1,37 @@
+﻿mkdir -p /mnt/boot
+sh-4.4# 
+sh-4.4# mount -t vfat /dev/mmcblk0p1 /mnt/boot
+FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+sh-4.4# 
+sh-4.4# echo MARK_LS
+MARK_LS
+sh-4.4# 
+sh-4.4# ls /mnt/boot
+3dplay                     hub75_anim_balls           hub75_pattern_ocm4k
+BOOT.bin                   hub75_anim_heart           hub75_probe
+BOOT_hub75_backup.bin      hub75_anim_helix           hub75d
+System Volume Information  hub75_anim_spheres         image.ub
+breakout.conf              hub75_boot.frm             image_ub_orig.bin
+devicetree.dtb             hub75_diag                 image_wifi.ub
+e2fsck                     hub75_fx                   tunnel.conf
+fx_blackhole               hub75_game_breakout        uEnv.txt
+fx_fireworks               hub75_pattern              uImage
+fx_knot                    hub75_pattern_bram         uramdisk.image.gz
+fx_tunnel                  hub75_pattern_bram32       wifi
+fx_vortex                  hub75_pattern_ddr
+hub75.conf                 hub75_pattern_ocm
+sh-4.4# 
+sh-4.4# ls /mnt/boot/wifi
+brcmfmac.ko  brcmutil.ko  cfg80211.ko  hash20.bin   status9.bin
+sh-4.4# 
+sh-4.4# echo MARK_FIND
+MARK_FIND
+sh-4.4# 
+sh-4.4# find /mnt/boot -maxdepth 2 -iname "*brcmfmac*" -o -iname "*.txt" -o -inamme "*43430*" | head -20
+/mnt/boot/uEnv.txt
+/mnt/boot/wifi/brcmfmac.ko
+sh-4.4# 
+sh-4.4# echo MARK_LS_DONE
+MARK_LS_DONE
+sh-4.4# 
+sh-4.4# 

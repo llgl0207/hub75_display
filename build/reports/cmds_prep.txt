@@ -1,0 +1,9 @@
+echo MARK_PREP
+umount /tmp/demo 2>/dev/null
+rm -rf /tmp/demo /tmp/demo.ext2 /tmp/ramdisk.gz /tmp/wpa_supplicant /tmp/wpa_cli /tmp/hello.static /tmp/fw.bin /tmp/fw2019.bin
+mkdir -p /tmp/alpine/lib /tmp/alpine/usr/lib /tmp/alpine/sbin
+rm -rf /var/run/wpa_supplicant
+mkdir -p /var/run/wpa_supplicant
+free
+df -h /tmp
+echo MARK_PREP_DONE

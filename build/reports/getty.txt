@@ -1,0 +1,7 @@
+﻿echo MARK_GETTY
+MARK_GETTY
+sh-4.4# 
+sh-4.4# /sbin/getty -L 115200 ttyPS0 vt102
+getty: can't open '/dev/null': No such file or directory
+sh-4.4# 
+sh-4.4# 

@@ -1,0 +1,18 @@
+echo MARK_INT
+devmem 0xE0101030 32
+devmem 0xE0101034 32
+devmem 0xE0101038 32
+devmem 0xE0101028 32
+devmem 0xE010102C 32
+devmem 0xE0101040 32
+echo MARK_INT_REBIND
+echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/unbind
+sleep 1
+echo e0101000.mmc > /sys/bus/platform/drivers/sdhci-arasan/bind
+sleep 2
+echo ---INT_AFTER---
+devmem 0xE0101030 32
+devmem 0xE010102C 32
+devmem 0xE0101024 32
+dmesg | tail -6
+echo MARK_INT_DONE

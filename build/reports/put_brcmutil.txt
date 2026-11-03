@@ -1,0 +1,19 @@
+﻿RAWOK
+[1415ms] TX stty raw -echo; echo R0000 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmutil.ko; stty sane; echo D0000 >/dev/ttyPS0
+[1470ms] R0000
+[1701ms] D0000
+[1711ms] TX stty raw -echo; echo R0001 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmutil.ko; stty sane; echo D0001 >/dev/ttyPS0
+[1764ms] R0001
+[1995ms] D0001
+[1996ms] TX stty raw -echo; echo R0002 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmutil.ko; stty sane; echo D0002 >/dev/ttyPS0
+[2042ms] R0002
+[2272ms] D0002
+[2273ms] TX stty raw -echo; echo R0003 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmutil.ko; stty sane; echo D0003 >/dev/ttyPS0
+[2320ms] R0003
+[2509ms] D0003
+[2509ms] TX stty raw -echo; echo R0004 >/dev/ttyPS0; dd bs=1 count=2048 >> /run/media/mmcblk0p1/wifi/brcmutil.ko; stty sane; echo D0004 >/dev/ttyPS0
+[2557ms] R0004
+[2790ms] D0004
+[2790ms] TX stty raw -echo; echo R0005 >/dev/ttyPS0; dd bs=1 count=672 >> /run/media/mmcblk0p1/wifi/brcmutil.ko; stty sane; echo D0005 >/dev/ttyPS0
+[2837ms] R0005
+[2945ms] D0005

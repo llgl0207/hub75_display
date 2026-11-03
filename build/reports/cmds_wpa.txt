@@ -1,0 +1,10 @@
+dd if=/mnt/boot/uramdisk.image.gz of=/tmp/ramdisk.gz bs=64 skip=1
+gunzip -c /tmp/ramdisk.gz > /tmp/demo.ext2
+mkdir -p /tmp/demo
+mount -o loop -t ext2 /tmp/demo.ext2 /tmp/demo
+echo MARK_WPA
+ls -l /tmp/demo/sbin/wpa_supplicant /tmp/demo/sbin/wpa_cli
+grep -a -o "/lib/ld[^ ]*" /tmp/demo/sbin/wpa_supplicant | head -3
+ls /tmp/demo/lib | head -10
+ls /tmp/demo/lib/arm-linux-gnueabihf 2>/dev/null | head -10
+echo MARK_WPA_DONE

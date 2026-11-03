@@ -1,0 +1,8 @@
+﻿mount -t debugfs none /sys/kernel/debug 2>/dev/null; echo ---CLK--- >/dev/ttyPS0; grep -iE "sdi|sdio|mmc" /sys/kernel/debug/clk/clk_summary >/dev/ttyPS0 2>&1; echo ---APER--- >/dev/ttyPS0; devmem 0xF800012C 32 >/dev/ttyPS0 2>&1; devmem 0xF8000154 32 >/dev/ttyPS0 2>&1; devmem 0xF8000150 32 >/dev/ttyPS0 2>&1; echo CLK_DONE >/dev/ttyPS0
+---CLK---
+grep: /sys/kernel/debug/clk/clk_summary: No such file or directory
+---APER---
+0x017C0C4C
+0x00000A03
+0x00000A03
+CLK_DONE

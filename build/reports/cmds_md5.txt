@@ -1,0 +1,3 @@
+md5sum /tmp/fw.bin
+ls -l /tmp/fw.bin
+echo FW_MD5_DONE

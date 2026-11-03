@@ -1,0 +1,38 @@
+﻿sleep 8
+echo MARK_ST2
+
+/tmp/wc.sh -i wlan0 status
+
+/tmp/wc.sh -i wlan0 scan_results
+
+cat /tmp/wpa.log
+
+sh-4.4# 
+sh-4.4# echo MARK_ST2
+MARK_ST2
+sh-4.4# 
+sh-4.4# /tmp/wc.sh -i wlan0 status
+wpa_state=ASSOCIATING
+sh-4.4# 
+sh-4.4# /tmp/wc.sh -i wlan0 scan_results
+bssid / frequency / signal level / flags / ssid
+c8:bf:4c:bd:23:7c	2457	174	[WPA2-PSK-CCMP][ESS]	AllianceTeam2.4G
+06:b8:e6:06:97:46	2462	163	[ESS]	NJUST
+50:92:6a:17:96:78	2412	156	[WPA2-PSK-CCMP][ESS]	
+f2:c0:62:a3:dd:09	2412	159	[WPA2-PSK-CCMP][ESS]	NINO
+sh-4.4# 
+sh-4.4# cat /tmp/wpa.log
+sh-4.4# 
+sh-4.4# ifconfig wlan0
+wlan0     Link encap:Ethernet  HWaddr C0:F5:35:36:72:3E  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+sh-4.4# 
+sh-4.4# echo MARK_ST2_DONE
+MARK_ST2_DONE
+sh-4.4# 
+sh-4.4# 

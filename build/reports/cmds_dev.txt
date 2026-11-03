@@ -1,0 +1,3 @@
+mount -t devtmpfs dev /dev
+ls -l /dev/ttyPS0 /dev/null
+echo MARK_DEV_DONE

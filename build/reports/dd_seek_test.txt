@@ -1,0 +1,5 @@
+﻿cd /tmp; dd if=/dev/zero of=t.bin bs=100 count=1 2>/dev/null; printf "XXXXXXXXXX" > p.bin; dd if=p.bin of=t.bin bs=1 seek=50 >/dev/ttyPS0 2>&1; echo SIZE=$(wc -c < t.bin) >/dev/ttyPS0; echo DDTEST2DONE >/dev/ttyPS0
+10+0 records in
+10+0 records out
+SIZE=60
+DDTEST2DONE

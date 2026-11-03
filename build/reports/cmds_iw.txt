@@ -1,0 +1,6 @@
+kill 1174 2>/dev/null
+echo MARK_IW
+ls /tmp/demo/sbin | grep -iE "iw|wireless"
+ls /tmp/demo/usr/sbin | grep -iE "iw|wireless"
+ls /tmp/demo/usr/bin | grep -iE "iw|wireless"
+echo MARK_IW_DONE

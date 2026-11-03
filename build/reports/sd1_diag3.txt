@@ -1,0 +1,30 @@
+﻿root
+
+root
+
+echo MARK_START
+
+mount -t debugfs none /sys/kernel/debug 2>/dev/null
+
+echo ---IOS---
+
+cat /sys/kernel/debug/mmc1/ios
+
+echo ---STATE---
+
+cat /sys/kernel/debug/mmc1/state
+
+echo ---REGS---
+
+devmem 0xF8000154 32
+
+devmem 0xE010102C 16
+
+devmem 0xE0101024 32
+
+echo ---DMESG---
+
+dmesg | grep -iE "mmc1|sdhci|sdio" | tail -10
+
+echo MARK_END
+

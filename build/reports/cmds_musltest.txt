@@ -1,0 +1,18 @@
+cd /tmp/alpine
+gunzip -c ld-musl-armhf.so.1.gz > lib/ld-musl-armhf.so.1
+gunzip -c libcrypto.so.3.gz > lib/libcrypto.so.3
+gunzip -c libssl.so.3.gz > lib/libssl.so.3
+gunzip -c libnl-3.so.200.26.0.gz > usr/lib/libnl-3.so.200
+gunzip -c libnl-genl-3.so.200.26.0.gz > usr/lib/libnl-genl-3.so.200
+gunzip -c libdbus-1.so.3.32.4.gz > usr/lib/libdbus-1.so.3
+gunzip -c libpcsclite.so.1.gz > usr/lib/libpcsclite.so.1
+gunzip -c libpcsclite_real.so.1.gz > usr/lib/libpcsclite_real.so.1
+gunzip -c wpa_supplicant.gz > sbin/wpa_supplicant
+gunzip -c wpa_cli.gz > sbin/wpa_cli
+chmod +x sbin/wpa_supplicant sbin/wpa_cli
+ln -sf ld-musl-armhf.so.1 lib/libc.musl-armv7.so.1
+ls -l lib usr/lib sbin
+echo MARK_MUSLTEST
+LD_LIBRARY_PATH=/tmp/alpine/lib:/tmp/alpine/usr/lib /tmp/alpine/lib/ld-musl-armhf.so.1 /tmp/alpine/sbin/wpa_supplicant -v
+echo MUSL_EXIT=$?
+echo MARK_MUSLTEST_DONE

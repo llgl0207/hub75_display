@@ -1,0 +1,83 @@
+﻿mkdir -p /lib/firmware/brcm
+sh-4.4# 
+sh-4.4# cp /tmp/demo/etc/firmware/fw_bcm43438a0.bin /lib/firmware/brcm/brcmfmac433430-sdio.bin
+sh-4.4# 
+sh-4.4# cp /tmp/demo/etc/firmware/nvram.txt /lib/firmware/brcm/brcmfmac43430-sdioo.txt
+sh-4.4# 
+sh-4.4# ls -l /lib/firmware/brcm
+total 400
+-rwxr-xr-x    1 root     root        405428 Jan  1 00:09 brcmfmac43430-sdio.bin
+-rwxr-xr-x    1 root     root           979 Jan  1 00:09 brcmfmac43430-sdio.txt
+sh-4.4# 
+sh-4.4# echo MARK_INSMOD
+MARK_INSMOD
+sh-4.4# 
+sh-4.4# insmod /mnt/boot/wifi/cfg80211.ko
+cfg80211: loading out-of-tree module taints kernel.
+sh-4.4# 
+sh-4.4# insmod /mnt/boot/wifi/brcmutil.ko
+sh-4.4# 
+sh-4.4# insmod /mnt/boot/wifi/brcmfmac.ko
+brcmfmac: no symbol version for cfg80211_sched_scan_results
+sh-4.4# 
+brcmfmac: brcmf_fw_map_chip_to_name: using brcm/brcmfmac43430-sdio.bin for chip 0x00a9a6(43430) rev 0x000001
+sh-4.4# brcmfmac: brcmf_sdio_htclk: HT Avail timeout (1000000): clkctl 0x50
+brcmfmac: brcmf_sdio_htclk: HT Avail timeout (1000000): clkctl 0x50
+sleep 4
+brcmfmac: brcmf_sdio_htclk: HT Avail timeout (1000000): clkctl 0x50
+echo MARK_DMESG
+
+sh-4.4# 
+sh-4.4# echo MARK_DMESG
+MARK_DMESG
+sh-4.4# 
+sh-4.4# dmesg | tail -40
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+can: controller area network core (rev 201random: crng init done
+70425 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20170425)
+can: broadcast manager protocol (rev 20170425 t)
+can: netlink gateway (rev 20170425) max_hops=1
+Registering SWP/SWPB emulation handler
+hctosys: unable to open rtc device (rtc0)
+of_cfs_init
+of_cfs_init: OK
+clk: Not disabling unused clocks
+ALSA device list:
+  No soundcards found.
+Freeing unused kernel memory: 1024K
+mmc1: SDHCI controller on e0101000.mmc [e0101000.mmc] using ADMA
+sdhci-arasan e0101000.mmc: Unbalanced pm_runtime_enable!
+mmc1: SDHCI controller on e0101000.mmc [e0101000.mmc] using ADMA
+sdhci-arasan e0101000.mmc: Unbalanced pm_runtime_enable!
+mmc1: SDHCI controller on e0101000.mmc [e0101000.mmc] using ADMA
+sdhci-arasan e0101000.mmc: Unbalanced pm_runtime_enable!
+mmc1: SDHCI controller on e0101000.mmc [e0101000.mmc] using ADMA
+sdhci-arasan e0101000.mmc: Unbalanced pm_runtime_enable!
+mmc1: SDHCI controller on e0101000.mmc [e0101000.mmc] using ADMA
+sdhci-arasan e0101000.mmc: Unbalanced pm_runtime_enable!
+mmc1: SDHCI controller on e0101000.mmc [e0101000.mmc] using ADMA
+sdhci-arasan e0101000.mmc: Unbalanced pm_runtime_enable!
+mmc1: queuing unknown CIS tuple 0x80 (2 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (7 bytes)
+mmc1: queuing unknown CIS tuple 0x81 (9 bytes)
+mmc1: new high speed SDIO card at address 0001
+FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+cfg80211: loading out-of-tree module taints kernel.
+brcmfmac: no symbol version for cfg80211_sched_scan_results
+brcmfmac: brcmf_fw_map_chip_to_name: using brcm/brcmfmac43430-sdio.bin for chip 0x00a9a6(43430) rev 0x000001
+brcmfmac: brcmf_sdio_htclk: HT Avail timeout (1000000): clkctl 0x50
+brcmfmac: brcmf_sdio_htclk: HT Avail timeout (1000000): clkctl 0x50
+brcmfmac: brcmf_sdio_htclk: HT Avail timeout (1000000): clkctl 0x50
+sh-4.4# 
+sh-4.4# ls /sys/class/net
+eth0  lo    sit0
+sh-4.4# 
+sh-4.4# echo MARK_INSMOD_DONE
+MARK_INSMOD_DONE
+sh-4.4# 
+sh-4.4# 

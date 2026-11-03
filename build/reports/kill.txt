@@ -1,0 +1,72 @@
+﻿echo MARK_KILL
+MARK_KILL
+sh-4.4# 
+sh-4.4# kill -9 763 9248 2>/dev/null
+sh-4.4# 
+sh-4.4# sleep 2
+ps | grep wpa
+
+sh-4.4# 
+sh-4.4# ps | grep wpa
+ 9258 root       0:00 grep wpa
+sh-4.4# 
+sh-4.4# ifconfig wlan0 down
+sh-4.4# 
+sh-4.4# sleep 1
+sh-4.4# 
+sh-4.4# ifconfig wlan0 up
+IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+sh-4.4# 
+sh-4.4# rm -rf /var/run/wpa_supplicant
+sh-4.4# 
+sh-4.4# mkdir -p /var/run/wpa_supplicant
+sh-4.4# 
+sh-4.4# echo MARK_WPA3
+MARK_WPA3
+sh-4.4# 
+sh-4.4# LD_LIBRARY_PATH=/tmp/alpine/lib:/tmp/alpine/usr/lib /tmp/alpine/lib/ld-muusl-armhf.so.1 /tmp/alpine/sbin/wpa_supplicant -Dnl80211 -iwlan0 -c/tmp/wpa.conf  > /tmp/wpa3.log 2>&1 &
+[1] 9264
+sh-4.4# 
+sh-4.4# sleep 12
+cat /tmp/wpa3.log
+
+echo ---ST---
+
+LD_LIBRARY_PATH=/tmp/alpine/lib:/tmp/alpine/usr/lib /tmp/alpine/lib/ld-musl-armhf.so.1 /tmp/alpine/sbin/wpa_cli -i wlan0 status
+
+ps | grep wpa
+
+echo MARK_KILL_DONE
+
+sh-4.4# 
+sh-4.4# cat /tmp/wpa3.log
+Successfully initialized wpa_supplicant
+rfkill: Cannot open RFKILL control device
+rfkill: Cannot get wiphy information
+wlan0: Trying to associate with SSID 'AllianceTeam2.4G'
+wlan0: CTRL-EVENT-ASSOC-REJECT bssid=00:00:00:00:00:00 status_code=16
+wlan0: Trying to associate with SSID 'AllianceTeam2.4G'
+wlan0: CTRL-EVENT-ASSOC-REJECT bssid=00:00:00:00:00:00 status_code=16
+wlan0: Trying to associate with SSID 'AllianceTeam2.4G'
+wlan0: CTRL-EVENT-ASSOC-REJECT bssid=00:00:00:00:00:00 status_code=16
+wlan0: Trying to associate with SSID 'AllianceTeam2.4G'
+wlan0: CTRL-EVENT-ASSOC-REJECT bssid=00:00:00:00:00:00 status_code=16
+wlan0: CTRL-EVENT-SSID-TEMP-DISABLED id=0 ssid="AllianceTeam2.4G" auth_failures=1 duration=10 reason=CONN_FAILED
+sh-4.4# 
+sh-4.4# echo ---ST---
+---ST---
+sh-4.4# 
+sh-4.4# LD_LIBRARY_PATH=/tmp/alpine/lib:/tmp/alpine/usr/lib /tmp/alpine/lib/ld-muusl-armhf.so.1 /tmp/alpine/sbin/wpa_cli -i wlan0 status
+wpa_state=DISCONNECTED
+p2p_device_address=c2:f5:35:36:72:3e
+address=c0:f5:35:36:72:3e
+uuid=f6db73f7-1370-5cac-b581-2d24acbbb808
+sh-4.4# 
+sh-4.4# ps | grep wpa
+ 9264 root       0:00 /tmp/alpine/lib/ld-musl-armhf.so.1 /tmp/alpine/sbin/wpa_supplicant -Dnl80211 -iwlan0 -c/tmp/wpa.conf
+ 9271 root       0:00 grep wpa
+sh-4.4# 
+sh-4.4# echo MARK_KILL_DONE
+MARK_KILL_DONE
+sh-4.4# 
+sh-4.4# 

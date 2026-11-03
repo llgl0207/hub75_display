@@ -1,0 +1,13 @@
+﻿echo ---CLKCTL--- >/dev/ttyPS0; devmem 0xE010102C 32 >/dev/ttyPS0 2>&1; devmem 0xE0101024 32 >/dev/ttyPS0 2>&1; echo ---GPIOBACK--- >/dev/ttyPS0; devmem 0xE000A040 32 >/dev/ttyPS0 2>&1; devmem 0xE000A044 32 >/dev/ttyPS0 2>&1; devmem 0xE000A048 32 >/dev/ttyPS0 2>&1; echo ---MIO--- >/dev/ttyPS0; devmem 0xF8000700 32 >/dev/ttyPS0 2>&1; devmem 0xF8000708 32 >/dev/ttyPS0 2>&1; devmem 0xF8000724 32 >/dev/ttyPS0 2>&1; echo CLKCTL_DONE >/dev/ttyPS0
+---CLKCTL---
+0x00000000
+0x01F20000
+---GPIOBACK---
+0x00000233
+0x000CC000
+0x00000000
+---MIO---
+0x00001600
+0x00000600
+0x00001600
+CLKCTL_DONE

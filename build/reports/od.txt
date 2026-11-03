@@ -1,0 +1,11 @@
+﻿ls -l /mnt/boot/uramdisk.image.gz
+-rwxr-xr-x    1 root     root       6647885 Aug 26  2017 /mnt/boot/uramdisk.image.gz
+sh-4.4# 
+sh-4.4# od -A x -t x1 -N 16 /mnt/boot/uramdisk.image.gz
+000000 27 05 19 56 d9 94 7c 79 59 55 a4 93 00 65 70 0d
+000010
+sh-4.4# 
+sh-4.4# echo DONE_OD
+DONE_OD
+sh-4.4# 
+sh-4.4# 

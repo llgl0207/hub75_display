@@ -1,0 +1,10 @@
+﻿     usb 1-1: USB disconnect, device number 2
+    Public key portion is:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDtwpzBv6kArJBA4owKWmnZH6o+sBtv/1GrgYSmGt2b0eP/JT9OEc+r7vguG8+5RV6t+9U/smplmEDVJRyHGS/uHHHxz+qRywa/UO7T/Sy6CPb8Xj+3WlLSbFtLT3iGGab14YwHmtT5W+E5VzvBPuyAVdQmjgeBACfo49u1ya6EhTBlERBv8BIqlcj4AN8vfzMZuVyZT2Ej3k/b4EgxUB3x8emJSbL1Ax+9VTOTtue2XHAoy0H3+I7yMHfnB60pMWZKvaoGm3cPiA4k+2g8YSk4SehDJQoiwR4FgZDW3p700cWJhrxtEleA7Qk9b+z7td+N+5+HL94Z3JeMo2gZIWWR root@petalinux_boot_from_sd
+Fingerprint: md5 97:9f:3c:8a:9a:09:b7:f5:8b:de:b0:ef:ca:57:93:f3
+dropbear.
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Starting syslogd/klogd: done
+Starting tcf-agent: OK
+ hub75d: font 8x8 -> 16x8hub75d: submit_ms 150hub75d: pty selftest w=12 poll=1 n=12 mfd=4hub75d: pty [12]hub75d: submit 10000000 15ms st=470007a0 id=0hub75d: pty [8]hub75d: submit 10200000 6ms st=080126ed id=1                                                                      
+=== AUTOBOOT_NOT_STOPPED ===

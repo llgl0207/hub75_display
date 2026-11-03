@@ -1,0 +1,10 @@
+dd if=/mnt/boot/uramdisk.image.gz of=/tmp/ramdisk.gz bs=64 skip=1
+gunzip -c /tmp/ramdisk.gz > /tmp/demo.ext2
+ls -l /tmp/demo.ext2
+mount -o loop -t ext2 /tmp/demo.ext2 /tmp/demo
+echo MARK_DEMO2
+ls /tmp/demo
+ls -l /tmp/demo/sbin/wpa_supplicant /tmp/demo/sbin/wpa_cli
+ls -l /tmp/demo/etc/firmware
+file /tmp/demo/sbin/wpa_supplicant 2>/dev/null
+echo MARK_DEMO2_DONE

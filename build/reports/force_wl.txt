@@ -1,0 +1,7 @@
+﻿echo ---FORCEWL--- >/dev/ttyPS0; devmem 0xE000A200 32 0x00000100 >/dev/ttyPS0 2>&1; devmem 0xE000A000 32 0x01000100 >/dev/ttyPS0 2>&1; sleep 1; echo ---BACK--- >/dev/ttyPS0; devmem 0xE000A200 32 >/dev/ttyPS0 2>&1; devmem 0xE000A204 32 >/dev/ttyPS0 2>&1; devmem 0xE000A208 32 >/dev/ttyPS0 2>&1; echo FORCEWL_DONE >/dev/ttyPS0
+---FORCEWL---
+---BACK---
+0x00000100
+0x00000100
+0x00000100
+FORCEWL_DONE

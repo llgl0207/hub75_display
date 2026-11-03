@@ -1,0 +1,22 @@
+﻿echo ---SD0PINS--- >/dev/ttyPS0; for a in 0xF80007A0 0xF80007A4 0xF80007A8 0xF80007AC 0xF80007B0 0xF80007B4; do devmem $a 32 >/dev/ttyPS0 2>&1; done; echo ---SD1PINS--- >/dev/ttyPS0; for a in 0xF8000728 0xF800072C 0xF8000730 0xF8000734 0xF8000738 0xF800073C; do devmem $a 32 >/dev/ttyPS0 2>&1; done; echo ---MMC1--- >/dev/ttyPS0; ls /sys/class/mmc_host/mmc1 >/dev/ttyPS0 2>&1; ls -l /sys/bus/platform/devices/e0101000.mmc/driver >/dev/ttyPS0 2>&1; echo MIO_DONE >/dev/ttyPS0
+---SD0PINS---
+0x00001280
+0x00001280
+0x00001280
+0x00001280
+0x00001280
+0x00001280
+---SD1PINS---
+0x00001600
+0x00001600
+0x00001600
+0x00001600
+0x000016E1
+0x000016E0
+---MMC1---
+device
+power
+subsystem
+uevent
+lrwxrwxrwx    1 root     root             0 Mar  3 06:27 /sys/bus/platform/devices/e0101000.mmc/driver -> ../../../../bus/platform/drivers/sdhci-arasan
+MIO_DONE

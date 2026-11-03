@@ -1,0 +1,2037 @@
+﻿RAWOK
+sh-4.4# [1412ms] TX stty raw -echo; echo R0000 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0000 >/dev/ttyPS0
+[1481ms] R0000
+[1668ms] 2048+0 records in
+2048+0 records out
+D0000
+[1676ms] TX stty raw -echo; echo R0001 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0001 >/dev/ttyPS0
+[1730ms] sh-4.4# R0001
+[1918ms] 2048+0 records in
+2048+0 records out
+D0001
+[1918ms] TX stty raw -echo; echo R0002 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0002 >/dev/ttyPS0
+[1981ms] sh-4.4# R0002
+[2167ms] 2048+0 records in
+2048+0 records out
+D0002
+[2168ms] TX stty raw -echo; echo R0003 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0003 >/dev/ttyPS0
+[2229ms] sh-4.4# R0003
+[2415ms] 2048+0 records in
+2048+0 records out
+D0003
+[2416ms] TX stty raw -echo; echo R0004 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0004 >/dev/ttyPS0
+[2462ms] sh-4.4# R0004
+[2647ms] 2048+0 records in
+2048+0 records out
+D0004
+[2648ms] TX stty raw -echo; echo R0005 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0005 >/dev/ttyPS0
+[2693ms] sh-4.4# R0005
+[2912ms] 2048+0 records in
+2048+0 records out
+D0005
+sh-4.4# [2912ms] TX stty raw -echo; echo R0006 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0006 >/dev/ttyPS0
+[2959ms] R0006
+[3180ms] 2048+0 records in
+2048+0 records out
+D0006
+sh-4.4# [3180ms] TX stty raw -echo; echo R0007 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0007 >/dev/ttyPS0
+[3226ms] R0007
+[3410ms] 2048+0 records in
+2048+0 records out
+D0007
+[3411ms] TX stty raw -echo; echo R0008 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0008 >/dev/ttyPS0
+[3457ms] sh-4.4# R0008
+[3640ms] 2048+0 records in
+2048+0 records out
+D0008
+[3641ms] TX stty raw -echo; echo R0009 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0009 >/dev/ttyPS0
+[3686ms] sh-4.4# R0009
+[3903ms] 2048+0 records in
+2048+0 records out
+D0009
+sh-4.4# [3904ms] TX stty raw -echo; echo R0010 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0010 >/dev/ttyPS0
+[3952ms] R0010
+[4136ms] 2048+0 records in
+2048+0 records out
+D0010
+[4137ms] TX stty raw -echo; echo R0011 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0011 >/dev/ttyPS0
+[4199ms] sh-4.4# R0011
+[4419ms] 2048+0 records in
+2048+0 records out
+D0011
+sh-4.4# [4420ms] TX stty raw -echo; echo R0012 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0012 >/dev/ttyPS0
+[4481ms] R0012
+[4666ms] 2048+0 records in
+2048+0 records out
+D0012
+[4666ms] TX stty raw -echo; echo R0013 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0013 >/dev/ttyPS0
+[4712ms] sh-4.4# R0013
+[4896ms] 2048+0 records in
+2048+0 records out
+D0013
+[4897ms] TX stty raw -echo; echo R0014 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0014 >/dev/ttyPS0
+[4943ms] sh-4.4# R0014
+[5160ms] 2048+0 records in
+2048+0 records out
+D0014
+sh-4.4# [5161ms] TX stty raw -echo; echo R0015 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0015 >/dev/ttyPS0
+[5207ms] R0015
+[5425ms] 2048+0 records in
+2048+0 records out
+D0015
+sh-4.4# [5426ms] TX stty raw -echo; echo R0016 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0016 >/dev/ttyPS0
+[5472ms] R0016
+[5689ms] 2048+0 records in
+2048+0 records out
+D0016
+sh-4.4# [5689ms] TX stty raw -echo; echo R0017 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0017 >/dev/ttyPS0
+[5737ms] R0017
+[5955ms] 2048+0 records in
+2048+0 records out
+D0017
+sh-4.4# [5955ms] TX stty raw -echo; echo R0018 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0018 >/dev/ttyPS0
+[6000ms] R0018
+[6185ms] 2048+0 records in
+2048+0 records out
+D0018
+[6186ms] TX stty raw -echo; echo R0019 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0019 >/dev/ttyPS0
+[6233ms] sh-4.4# R0019
+[6417ms] 2048+0 records in
+2048+0 records out
+D0019
+[6418ms] TX stty raw -echo; echo R0020 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0020 >/dev/ttyPS0
+[6478ms] sh-4.4# R0020
+[6664ms] 2048+0 records in
+2048+0 records out
+D0020
+[6665ms] TX stty raw -echo; echo R0021 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0021 >/dev/ttyPS0
+[6711ms] sh-4.4# R0021
+[6898ms] 2048+0 records in
+2048+0 records out
+D0021
+[6899ms] TX stty raw -echo; echo R0022 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0022 >/dev/ttyPS0
+[6944ms] sh-4.4# R0022
+[7162ms] 2048+0 records in
+2048+0 records out
+D0022
+sh-4.4# [7163ms] TX stty raw -echo; echo R0023 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0023 >/dev/ttyPS0
+[7209ms] R0023
+[7427ms] 2048+0 records in
+2048+0 records out
+D0023
+sh-4.4# [7428ms] TX stty raw -echo; echo R0024 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0024 >/dev/ttyPS0
+[7473ms] R0024
+[7690ms] 2048+0 records in
+2048+0 records out
+D0024
+sh-4.4# [7691ms] TX stty raw -echo; echo R0025 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0025 >/dev/ttyPS0
+[7737ms] R0025
+[7957ms] 2048+0 records in
+2048+0 records out
+D0025
+sh-4.4# [7958ms] TX stty raw -echo; echo R0026 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0026 >/dev/ttyPS0
+[8004ms] R0026
+[8220ms] 2048+0 records in
+2048+0 records out
+D0026
+sh-4.4# [8221ms] TX stty raw -echo; echo R0027 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0027 >/dev/ttyPS0
+[8267ms] R0027
+[8485ms] 2048+0 records in
+2048+0 records out
+D0027
+sh-4.4# [8486ms] TX stty raw -echo; echo R0028 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0028 >/dev/ttyPS0
+[8533ms] R0028
+[8750ms] 2048+0 records in
+2048+0 records out
+D0028
+sh-4.4# [8751ms] TX stty raw -echo; echo R0029 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0029 >/dev/ttyPS0
+[8797ms] R0029
+[9017ms] 2048+0 records in
+2048+0 records out
+D0029
+sh-4.4# [9018ms] TX stty raw -echo; echo R0030 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0030 >/dev/ttyPS0
+[9064ms] R0030
+[9282ms] 2048+0 records in
+2048+0 records out
+D0030
+sh-4.4# [9283ms] TX stty raw -echo; echo R0031 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0031 >/dev/ttyPS0
+[9329ms] R0031
+[9546ms] 2048+0 records in
+2048+0 records out
+D0031
+sh-4.4# [9547ms] TX stty raw -echo; echo R0032 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0032 >/dev/ttyPS0
+[9593ms] R0032
+[9811ms] 2048+0 records in
+2048+0 records out
+D0032
+sh-4.4# [9812ms] TX stty raw -echo; echo R0033 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0033 >/dev/ttyPS0
+[9857ms] R0033
+[10076ms] 2048+0 records in
+2048+0 records out
+D0033
+sh-4.4# [10076ms] TX stty raw -echo; echo R0034 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0034 >/dev/ttyPS0
+[10122ms] R0034
+[10309ms] 2048+0 records in
+2048+0 records out
+D0034
+[10309ms] TX stty raw -echo; echo R0035 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0035 >/dev/ttyPS0
+[10371ms] sh-4.4# R0035
+[10559ms] 2048+0 records in
+2048+0 records out
+D0035
+[10559ms] TX stty raw -echo; echo R0036 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0036 >/dev/ttyPS0
+[10620ms] sh-4.4# R0036
+[10806ms] 2048+0 records in
+2048+0 records out
+D0036
+[10807ms] TX stty raw -echo; echo R0037 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0037 >/dev/ttyPS0
+[10853ms] sh-4.4# R0037
+[11043ms] 2048+0 records in
+2048+0 records out
+D0037
+[11043ms] TX stty raw -echo; echo R0038 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0038 >/dev/ttyPS0
+[11106ms] sh-4.4# R0038
+[11290ms] 2048+0 records in
+2048+0 records out
+D0038
+[11291ms] TX stty raw -echo; echo R0039 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0039 >/dev/ttyPS0
+[11335ms] sh-4.4# R0039
+[11552ms] 2048+0 records in
+2048+0 records out
+D0039
+sh-4.4# [11553ms] TX stty raw -echo; echo R0040 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0040 >/dev/ttyPS0
+[11599ms] R0040
+[11784ms] 2048+0 records in
+2048+0 records out
+D0040
+[11785ms] TX stty raw -echo; echo R0041 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0041 >/dev/ttyPS0
+[11831ms] sh-4.4# R0041
+[12051ms] 2048+0 records in
+2048+0 records out
+D0041
+sh-4.4# [12051ms] TX stty raw -echo; echo R0042 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0042 >/dev/ttyPS0
+[12095ms] R0042
+[12313ms] 2048+0 records in
+2048+0 records out
+D0042
+sh-4.4# [12314ms] TX stty raw -echo; echo R0043 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0043 >/dev/ttyPS0
+[12360ms] R0043
+[12577ms] 2048+0 records in
+2048+0 records out
+D0043
+sh-4.4# [12577ms] TX stty raw -echo; echo R0044 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0044 >/dev/ttyPS0
+[12624ms] R0044
+[12841ms] 2048+0 records in
+2048+0 records out
+D0044
+sh-4.4# [12841ms] TX stty raw -echo; echo R0045 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0045 >/dev/ttyPS0
+[12901ms] R0045
+[13089ms] 2048+0 records in
+2048+0 records out
+D0045
+[13090ms] TX stty raw -echo; echo R0046 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0046 >/dev/ttyPS0
+[13137ms] sh-4.4# R0046
+[13324ms] 2048+0 records in
+2048+0 records out
+D0046
+[13324ms] TX stty raw -echo; echo R0047 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0047 >/dev/ttyPS0
+[13370ms] sh-4.4# R0047
+[13556ms] 2048+0 records in
+2048+0 records out
+D0047
+[13556ms] TX stty raw -echo; echo R0048 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0048 >/dev/ttyPS0
+[13603ms] sh-4.4# R0048
+[13820ms] 2048+0 records in
+2048+0 records out
+D0048
+sh-4.4# [13821ms] TX stty raw -echo; echo R0049 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0049 >/dev/ttyPS0
+[13867ms] R0049
+[14085ms] 2048+0 records in
+2048+0 records out
+D0049
+sh-4.4# [14085ms] TX stty raw -echo; echo R0050 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0050 >/dev/ttyPS0
+[14131ms] R0050
+[14349ms] 2048+0 records in
+2048+0 records out
+D0050
+sh-4.4# [14349ms] TX stty raw -echo; echo R0051 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0051 >/dev/ttyPS0
+[14396ms] R0051
+[14616ms] 2048+0 records in
+2048+0 records out
+D0051
+sh-4.4# [14617ms] TX stty raw -echo; echo R0052 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0052 >/dev/ttyPS0
+[14664ms] R0052
+[14881ms] 2048+0 records in
+2048+0 records out
+D0052
+sh-4.4# [14882ms] TX stty raw -echo; echo R0053 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0053 >/dev/ttyPS0
+[14929ms] R0053
+[15146ms] 2048+0 records in
+2048+0 records out
+D0053
+sh-4.4# [15147ms] TX stty raw -echo; echo R0054 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0054 >/dev/ttyPS0
+[15192ms] R0054
+[15409ms] 2048+0 records in
+2048+0 records out
+D0054
+sh-4.4# [15410ms] TX stty raw -echo; echo R0055 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0055 >/dev/ttyPS0
+[15455ms] R0055
+[15675ms] 2048+0 records in
+2048+0 records out
+D0055
+sh-4.4# [15676ms] TX stty raw -echo; echo R0056 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0056 >/dev/ttyPS0
+[15723ms] R0056
+[15940ms] 2048+0 records in
+2048+0 records out
+D0056
+sh-4.4# [15941ms] TX stty raw -echo; echo R0057 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0057 >/dev/ttyPS0
+[15987ms] R0057
+[16203ms] 2048+0 records in
+2048+0 records out
+D0057
+sh-4.4# [16204ms] TX stty raw -echo; echo R0058 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0058 >/dev/ttyPS0
+[16250ms] R0058
+[16467ms] 2048+0 records in
+2048+0 records out
+D0058
+sh-4.4# [16468ms] TX stty raw -echo; echo R0059 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0059 >/dev/ttyPS0
+[16513ms] R0059
+[16733ms] 2048+0 records in
+2048+0 records out
+D0059
+sh-4.4# [16733ms] TX stty raw -echo; echo R0060 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0060 >/dev/ttyPS0
+[16778ms] R0060
+[16964ms] 2048+0 records in
+2048+0 records out
+D0060
+[16965ms] TX stty raw -echo; echo R0061 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0061 >/dev/ttyPS0
+[17025ms] sh-4.4# R0061
+[17214ms] 2048+0 records in
+2048+0 records out
+D0061
+[17214ms] TX stty raw -echo; echo R0062 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0062 >/dev/ttyPS0
+[17260ms] sh-4.4# R0062
+[17446ms] 2048+0 records in
+2048+0 records out
+D0062
+[17446ms] TX stty raw -echo; echo R0063 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0063 >/dev/ttyPS0
+[17492ms] sh-4.4# R0063
+[17711ms] 2048+0 records in
+2048+0 records out
+D0063
+sh-4.4# [17712ms] TX stty raw -echo; echo R0064 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0064 >/dev/ttyPS0
+[17759ms] R0064
+[17978ms] 2048+0 records in
+2048+0 records out
+D0064
+sh-4.4# [17979ms] TX stty raw -echo; echo R0065 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0065 >/dev/ttyPS0
+[18024ms] R0065
+[18242ms] 2048+0 records in
+2048+0 records out
+D0065
+sh-4.4# [18243ms] TX stty raw -echo; echo R0066 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0066 >/dev/ttyPS0
+[18287ms] R0066
+[18505ms] 2048+0 records in
+2048+0 records out
+D0066
+sh-4.4# [18505ms] TX stty raw -echo; echo R0067 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0067 >/dev/ttyPS0
+[18551ms] R0067
+[18736ms] 2048+0 records in
+2048+0 records out
+D0067
+[18737ms] TX stty raw -echo; echo R0068 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0068 >/dev/ttyPS0
+[18783ms] sh-4.4# R0068
+[19002ms] 2048+0 records in
+2048+0 records out
+D0068
+sh-4.4# [19003ms] TX stty raw -echo; echo R0069 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0069 >/dev/ttyPS0
+[19048ms] R0069
+[19267ms] 2048+0 records in
+2048+0 records out
+D0069
+sh-4.4# [19268ms] TX stty raw -echo; echo R0070 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0070 >/dev/ttyPS0
+[19313ms] R0070
+[19531ms] 2048+0 records in
+2048+0 records out
+D0070
+sh-4.4# [19531ms] TX stty raw -echo; echo R0071 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0071 >/dev/ttyPS0
+[19577ms] R0071
+[19795ms] 2048+0 records in
+2048+0 records out
+D0071
+sh-4.4# [19796ms] TX stty raw -echo; echo R0072 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0072 >/dev/ttyPS0
+[19841ms] R0072
+[20028ms] 2048+0 records in
+2048+0 records out
+D0072
+[20029ms] TX stty raw -echo; echo R0073 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0073 >/dev/ttyPS0
+[20089ms] sh-4.4# R0073
+[20276ms] 2048+0 records in
+2048+0 records out
+D0073
+[20277ms] TX stty raw -echo; echo R0074 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0074 >/dev/ttyPS0
+[20323ms] sh-4.4# R0074
+[20511ms] 2048+0 records in
+2048+0 records out
+D0074
+[20511ms] TX stty raw -echo; echo R0075 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0075 >/dev/ttyPS0
+[20557ms] sh-4.4# R0075
+[20745ms] 2048+0 records in
+2048+0 records out
+D0075
+[20745ms] TX stty raw -echo; echo R0076 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0076 >/dev/ttyPS0
+[20790ms] sh-4.4# R0076
+[20974ms] 2048+0 records in
+2048+0 records out
+D0076
+[20975ms] TX stty raw -echo; echo R0077 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0077 >/dev/ttyPS0
+[21021ms] sh-4.4# R0077
+[21239ms] 2048+0 records in
+2048+0 records out
+D0077
+sh-4.4# [21239ms] TX stty raw -echo; echo R0078 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0078 >/dev/ttyPS0
+[21284ms] R0078
+[21502ms] 2048+0 records in
+2048+0 records out
+D0078
+sh-4.4# [21503ms] TX stty raw -echo; echo R0079 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0079 >/dev/ttyPS0
+[21549ms] R0079
+[21769ms] 2048+0 records in
+2048+0 records out
+D0079
+sh-4.4# [21770ms] TX stty raw -echo; echo R0080 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0080 >/dev/ttyPS0
+[21816ms] R0080
+[22035ms] 2048+0 records in
+2048+0 records out
+D0080
+sh-4.4# [22037ms] TX stty raw -echo; echo R0081 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0081 >/dev/ttyPS0
+[22083ms] R0081
+[22266ms] 2048+0 records in
+2048+0 records out
+D0081
+[22267ms] TX stty raw -echo; echo R0082 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0082 >/dev/ttyPS0
+[22314ms] sh-4.4# R0082
+[22535ms] 2048+0 records in
+2048+0 records out
+D0082
+sh-4.4# [22536ms] TX stty raw -echo; echo R0083 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0083 >/dev/ttyPS0
+[22583ms] R0083
+[22802ms] 2048+0 records in
+2048+0 records out
+D0083
+sh-4.4# [22803ms] TX stty raw -echo; echo R0084 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0084 >/dev/ttyPS0
+[22850ms] R0084
+[23066ms] 2048+0 records in
+2048+0 records out
+D0084
+sh-4.4# [23066ms] TX stty raw -echo; echo R0085 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0085 >/dev/ttyPS0
+[23112ms] R0085
+[23330ms] 2048+0 records in
+2048+0 records out
+D0085
+sh-4.4# [23331ms] TX stty raw -echo; echo R0086 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0086 >/dev/ttyPS0
+[23376ms] R0086
+[23597ms] 2048+0 records in
+2048+0 records out
+D0086
+sh-4.4# [23598ms] TX stty raw -echo; echo R0087 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0087 >/dev/ttyPS0
+[23644ms] R0087
+[23828ms] 2048+0 records in
+2048+0 records out
+D0087
+[23829ms] TX stty raw -echo; echo R0088 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0088 >/dev/ttyPS0
+[23874ms] sh-4.4# R0088
+[24059ms] 2048+0 records in
+2048+0 records out
+D0088
+[24059ms] TX stty raw -echo; echo R0089 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0089 >/dev/ttyPS0
+[24119ms] sh-4.4# R0089
+[24304ms] 2048+0 records in
+2048+0 records out
+D0089
+[24305ms] TX stty raw -echo; echo R0090 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0090 >/dev/ttyPS0
+[24350ms] sh-4.4# R0090
+[24567ms] 2048+0 records in
+2048+0 records out
+D0090
+sh-4.4# [24568ms] TX stty raw -echo; echo R0091 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0091 >/dev/ttyPS0
+[24613ms] R0091
+[24797ms] 2048+0 records in
+2048+0 records out
+D0091
+[24797ms] TX stty raw -echo; echo R0092 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0092 >/dev/ttyPS0
+[24843ms] sh-4.4# R0092
+[25064ms] 2048+0 records in
+2048+0 records out
+D0092
+sh-4.4# [25064ms] TX stty raw -echo; echo R0093 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0093 >/dev/ttyPS0
+[25110ms] R0093
+[25340ms] 2048+0 records in
+2048+0 records out
+D0093
+sh-4.4# [25341ms] TX stty raw -echo; echo R0094 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0094 >/dev/ttyPS0
+[25387ms] R0094
+[25608ms] 2048+0 records in
+2048+0 records out
+D0094
+sh-4.4# [25608ms] TX stty raw -echo; echo R0095 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0095 >/dev/ttyPS0
+[25653ms] R0095
+[25872ms] 2048+0 records in
+2048+0 records out
+D0095
+sh-4.4# [25873ms] TX stty raw -echo; echo R0096 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0096 >/dev/ttyPS0
+[25920ms] R0096
+[26106ms] 2048+0 records in
+2048+0 records out
+D0096
+[26106ms] TX stty raw -echo; echo R0097 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0097 >/dev/ttyPS0
+[26154ms] sh-4.4# R0097
+[26339ms] 2048+0 records in
+2048+0 records out
+D0097
+[26340ms] TX stty raw -echo; echo R0098 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0098 >/dev/ttyPS0
+[26401ms] sh-4.4# R0098
+[26589ms] 2048+0 records in
+2048+0 records out
+D0098
+[26590ms] TX stty raw -echo; echo R0099 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0099 >/dev/ttyPS0
+[26652ms] sh-4.4# R0099
+[26839ms] 2048+0 records in
+2048+0 records out
+D0099
+[26840ms] TX stty raw -echo; echo R0100 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0100 >/dev/ttyPS0
+[26887ms] sh-4.4# R0100
+[27073ms] 2048+0 records in
+2048+0 records out
+D0100
+[27074ms] TX stty raw -echo; echo R0101 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0101 >/dev/ttyPS0
+[27136ms] sh-4.4# R0101
+[27326ms] 2048+0 records in
+2048+0 records out
+D0101
+[27326ms] TX stty raw -echo; echo R0102 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0102 >/dev/ttyPS0
+[27381ms] sh-4.4# R0102
+[27600ms] 2048+0 records in
+2048+0 records out
+D0102
+sh-4.4# [27600ms] TX stty raw -echo; echo R0103 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0103 >/dev/ttyPS0
+[27646ms] R0103
+[27863ms] 2048+0 records in
+2048+0 records out
+D0103
+sh-4.4# [27864ms] TX stty raw -echo; echo R0104 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0104 >/dev/ttyPS0
+[27909ms] R0104
+[28126ms] 2048+0 records in
+2048+0 records out
+D0104
+sh-4.4# [28127ms] TX stty raw -echo; echo R0105 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0105 >/dev/ttyPS0
+[28173ms] R0105
+[28356ms] 2048+0 records in
+2048+0 records out
+D0105
+[28357ms] TX stty raw -echo; echo R0106 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0106 >/dev/ttyPS0
+[28419ms] sh-4.4# R0106
+[28603ms] 2048+0 records in
+2048+0 records out
+D0106
+[28604ms] TX stty raw -echo; echo R0107 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0107 >/dev/ttyPS0
+[28650ms] sh-4.4# R0107
+[28836ms] 2048+0 records in
+2048+0 records out
+D0107
+[28837ms] TX stty raw -echo; echo R0108 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0108 >/dev/ttyPS0
+[28883ms] sh-4.4# R0108
+[29069ms] 2048+0 records in
+2048+0 records out
+D0108
+[29070ms] TX stty raw -echo; echo R0109 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0109 >/dev/ttyPS0
+[29116ms] sh-4.4# R0109
+[29335ms] 2048+0 records in
+2048+0 records out
+D0109
+sh-4.4# [29336ms] TX stty raw -echo; echo R0110 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0110 >/dev/ttyPS0
+[29382ms] R0110
+[29603ms] 2048+0 records in
+2048+0 records out
+D0110
+sh-4.4# [29603ms] TX stty raw -echo; echo R0111 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0111 >/dev/ttyPS0
+[29650ms] R0111
+[29835ms] 2048+0 records in
+2048+0 records out
+D0111
+[29835ms] TX stty raw -echo; echo R0112 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0112 >/dev/ttyPS0
+[29881ms] sh-4.4# R0112
+[30097ms] 2048+0 records in
+2048+0 records out
+D0112
+sh-4.4# [30098ms] TX stty raw -echo; echo R0113 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0113 >/dev/ttyPS0
+[30144ms] R0113
+[30361ms] 2048+0 records in
+2048+0 records out
+D0113
+sh-4.4# [30362ms] TX stty raw -echo; echo R0114 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0114 >/dev/ttyPS0
+[30407ms] R0114
+[30627ms] 2048+0 records in
+2048+0 records out
+D0114
+sh-4.4# [30628ms] TX stty raw -echo; echo R0115 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0115 >/dev/ttyPS0
+[30672ms] R0115
+[30888ms] 2048+0 records in
+2048+0 records out
+D0115
+sh-4.4# [30889ms] TX stty raw -echo; echo R0116 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0116 >/dev/ttyPS0
+[30936ms] R0116
+[31155ms] 2048+0 records in
+2048+0 records out
+D0116
+sh-4.4# [31155ms] TX stty raw -echo; echo R0117 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0117 >/dev/ttyPS0
+[31202ms] R0117
+[31387ms] 2048+0 records in
+2048+0 records out
+D0117
+[31388ms] TX stty raw -echo; echo R0118 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0118 >/dev/ttyPS0
+[31449ms] sh-4.4# R0118
+[31637ms] 2048+0 records in
+2048+0 records out
+D0118
+[31637ms] TX stty raw -echo; echo R0119 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0119 >/dev/ttyPS0
+[31699ms] sh-4.4# R0119
+[31885ms] 2048+0 records in
+2048+0 records out
+D0119
+[31886ms] TX stty raw -echo; echo R0120 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0120 >/dev/ttyPS0
+[31932ms] sh-4.4# R0120
+[32119ms] 2048+0 records in
+2048+0 records out
+D0120
+[32120ms] TX stty raw -echo; echo R0121 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0121 >/dev/ttyPS0
+[32167ms] sh-4.4# R0121
+[32353ms] 2048+0 records in
+2048+0 records out
+D0121
+[32354ms] TX stty raw -echo; echo R0122 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0122 >/dev/ttyPS0
+[32400ms] sh-4.4# R0122
+[32585ms] 2048+0 records in
+2048+0 records out
+D0122
+[32586ms] TX stty raw -echo; echo R0123 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0123 >/dev/ttyPS0
+[32631ms] sh-4.4# R0123
+[32849ms] 2048+0 records in
+2048+0 records out
+D0123
+sh-4.4# [32850ms] TX stty raw -echo; echo R0124 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0124 >/dev/ttyPS0
+[32897ms] R0124
+[33116ms] 2048+0 records in
+2048+0 records out
+D0124
+sh-4.4# [33116ms] TX stty raw -echo; echo R0125 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0125 >/dev/ttyPS0
+[33163ms] R0125
+[33347ms] 2048+0 records in
+2048+0 records out
+D0125
+[33348ms] TX stty raw -echo; echo R0126 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0126 >/dev/ttyPS0
+[33394ms] sh-4.4# R0126
+[33614ms] 2048+0 records in
+2048+0 records out
+D0126
+sh-4.4# [33614ms] TX stty raw -echo; echo R0127 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0127 >/dev/ttyPS0
+[33661ms] R0127
+[33844ms] 2048+0 records in
+2048+0 records out
+D0127
+[33844ms] TX stty raw -echo; echo R0128 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0128 >/dev/ttyPS0
+[33891ms] sh-4.4# R0128
+[34110ms] 2048+0 records in
+2048+0 records out
+D0128
+sh-4.4# [34111ms] TX stty raw -echo; echo R0129 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0129 >/dev/ttyPS0
+[34157ms] R0129
+[34377ms] 2048+0 records in
+2048+0 records out
+D0129
+sh-4.4# [34377ms] TX stty raw -echo; echo R0130 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0130 >/dev/ttyPS0
+[34424ms] R0130
+[34644ms] 2048+0 records in
+2048+0 records out
+D0130
+sh-4.4# [34644ms] TX stty raw -echo; echo R0131 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0131 >/dev/ttyPS0
+[34690ms] R0131
+[34908ms] 2048+0 records in
+2048+0 records out
+D0131
+sh-4.4# [34909ms] TX stty raw -echo; echo R0132 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0132 >/dev/ttyPS0
+[34955ms] R0132
+[35139ms] 2048+0 records in
+2048+0 records out
+D0132
+[35139ms] TX stty raw -echo; echo R0133 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0133 >/dev/ttyPS0
+[35185ms] sh-4.4# R0133
+[35405ms] 2048+0 records in
+2048+0 records out
+D0133
+sh-4.4# [35406ms] TX stty raw -echo; echo R0134 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0134 >/dev/ttyPS0
+[35453ms] R0134
+[35672ms] 2048+0 records in
+2048+0 records out
+D0134
+sh-4.4# [35673ms] TX stty raw -echo; echo R0135 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0135 >/dev/ttyPS0
+[35717ms] R0135
+[35937ms] 2048+0 records in
+2048+0 records out
+D0135
+sh-4.4# [35938ms] TX stty raw -echo; echo R0136 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0136 >/dev/ttyPS0
+[35985ms] R0136
+[36203ms] 2048+0 records in
+2048+0 records out
+D0136
+sh-4.4# [36204ms] TX stty raw -echo; echo R0137 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0137 >/dev/ttyPS0
+[36250ms] R0137
+[36468ms] 2048+0 records in
+2048+0 records out
+D0137
+sh-4.4# [36469ms] TX stty raw -echo; echo R0138 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0138 >/dev/ttyPS0
+[36515ms] R0138
+[36698ms] 2048+0 records in
+2048+0 records out
+D0138
+[36699ms] TX stty raw -echo; echo R0139 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0139 >/dev/ttyPS0
+[36745ms] sh-4.4# R0139
+[36931ms] 2048+0 records in
+2048+0 records out
+D0139
+[36932ms] TX stty raw -echo; echo R0140 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0140 >/dev/ttyPS0
+[36979ms] sh-4.4# R0140
+[37164ms] 2048+0 records in
+2048+0 records out
+D0140
+[37165ms] TX stty raw -echo; echo R0141 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0141 >/dev/ttyPS0
+[37211ms] sh-4.4# R0141
+[37393ms] 2048+0 records in
+2048+0 records out
+D0141
+[37394ms] TX stty raw -echo; echo R0142 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0142 >/dev/ttyPS0
+[37441ms] sh-4.4# R0142
+[37661ms] 2048+0 records in
+2048+0 records out
+D0142
+sh-4.4# [37661ms] TX stty raw -echo; echo R0143 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0143 >/dev/ttyPS0
+[37706ms] R0143
+[37925ms] 2048+0 records in
+2048+0 records out
+D0143
+sh-4.4# [37925ms] TX stty raw -echo; echo R0144 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0144 >/dev/ttyPS0
+[37971ms] R0144
+[38190ms] 2048+0 records in
+2048+0 records out
+D0144
+sh-4.4# [38191ms] TX stty raw -echo; echo R0145 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0145 >/dev/ttyPS0
+[38238ms] R0145
+[38422ms] 2048+0 records in
+2048+0 records out
+D0145
+[38423ms] TX stty raw -echo; echo R0146 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0146 >/dev/ttyPS0
+[38470ms] sh-4.4# R0146
+[38687ms] 2048+0 records in
+2048+0 records out
+D0146
+sh-4.4# [38688ms] TX stty raw -echo; echo R0147 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0147 >/dev/ttyPS0
+[38735ms] R0147
+[38952ms] 2048+0 records in
+2048+0 records out
+D0147
+sh-4.4# [38953ms] TX stty raw -echo; echo R0148 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0148 >/dev/ttyPS0
+[38999ms] R0148
+[39219ms] 2048+0 records in
+2048+0 records out
+D0148
+sh-4.4# [39220ms] TX stty raw -echo; echo R0149 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0149 >/dev/ttyPS0
+[39266ms] R0149
+[39483ms] 2048+0 records in
+2048+0 records out
+D0149
+sh-4.4# [39483ms] TX stty raw -echo; echo R0150 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0150 >/dev/ttyPS0
+[39530ms] R0150
+[39747ms] 2048+0 records in
+2048+0 records out
+D0150
+sh-4.4# [39747ms] TX stty raw -echo; echo R0151 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0151 >/dev/ttyPS0
+[39794ms] R0151
+[39980ms] 2048+0 records in
+2048+0 records out
+D0151
+[39980ms] TX stty raw -echo; echo R0152 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0152 >/dev/ttyPS0
+[40027ms] sh-4.4# R0152
+[40215ms] 2048+0 records in
+2048+0 records out
+D0152
+[40216ms] TX stty raw -echo; echo R0153 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0153 >/dev/ttyPS0
+[40276ms] sh-4.4# R0153
+[40461ms] 2048+0 records in
+2048+0 records out
+D0153
+[40461ms] TX stty raw -echo; echo R0154 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0154 >/dev/ttyPS0
+[40507ms] sh-4.4# R0154
+[40726ms] 2048+0 records in
+2048+0 records out
+D0154
+sh-4.4# [40727ms] TX stty raw -echo; echo R0155 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0155 >/dev/ttyPS0
+[40773ms] R0155
+[40992ms] 2048+0 records in
+2048+0 records out
+D0155
+sh-4.4# [40993ms] TX stty raw -echo; echo R0156 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0156 >/dev/ttyPS0
+[41039ms] R0156
+[41255ms] 2048+0 records in
+2048+0 records out
+D0156
+sh-4.4# [41256ms] TX stty raw -echo; echo R0157 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0157 >/dev/ttyPS0
+[41302ms] R0157
+[41521ms] 2048+0 records in
+2048+0 records out
+D0157
+sh-4.4# [41521ms] TX stty raw -echo; echo R0158 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0158 >/dev/ttyPS0
+[41565ms] R0158
+[41783ms] 2048+0 records in
+2048+0 records out
+D0158
+sh-4.4# [41784ms] TX stty raw -echo; echo R0159 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0159 >/dev/ttyPS0
+[41830ms] R0159
+[42047ms] 2048+0 records in
+2048+0 records out
+D0159
+sh-4.4# [42048ms] TX stty raw -echo; echo R0160 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0160 >/dev/ttyPS0
+[42093ms] R0160
+[42278ms] 2048+0 records in
+2048+0 records out
+D0160
+[42279ms] TX stty raw -echo; echo R0161 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0161 >/dev/ttyPS0
+[42340ms] sh-4.4# R0161
+[42560ms] 2048+0 records in
+2048+0 records out
+D0161
+sh-4.4# [42561ms] TX stty raw -echo; echo R0162 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0162 >/dev/ttyPS0
+[42607ms] R0162
+[42825ms] 2048+0 records in
+2048+0 records out
+D0162
+sh-4.4# [42826ms] TX stty raw -echo; echo R0163 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0163 >/dev/ttyPS0
+[42872ms] R0163
+[43058ms] 2048+0 records in
+2048+0 records out
+D0163
+[43059ms] TX stty raw -echo; echo R0164 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0164 >/dev/ttyPS0
+[43120ms] sh-4.4# R0164
+[43306ms] 2048+0 records in
+2048+0 records out
+D0164
+[43307ms] TX stty raw -echo; echo R0165 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0165 >/dev/ttyPS0
+[43352ms] sh-4.4# R0165
+[43570ms] 2048+0 records in
+2048+0 records out
+D0165
+sh-4.4# [43571ms] TX stty raw -echo; echo R0166 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0166 >/dev/ttyPS0
+[43618ms] R0166
+[43804ms] 2048+0 records in
+2048+0 records out
+D0166
+[43804ms] TX stty raw -echo; echo R0167 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0167 >/dev/ttyPS0
+[43850ms] sh-4.4# R0167
+[44067ms] 2048+0 records in
+2048+0 records out
+D0167
+sh-4.4# [44067ms] TX stty raw -echo; echo R0168 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0168 >/dev/ttyPS0
+[44113ms] R0168
+[44333ms] 2048+0 records in
+2048+0 records out
+D0168
+sh-4.4# [44334ms] TX stty raw -echo; echo R0169 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0169 >/dev/ttyPS0
+[44381ms] R0169
+[44601ms] 2048+0 records in
+2048+0 records out
+D0169
+sh-4.4# [44602ms] TX stty raw -echo; echo R0170 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0170 >/dev/ttyPS0
+[44648ms] R0170
+[44864ms] 2048+0 records in
+2048+0 records out
+D0170
+sh-4.4# [44865ms] TX stty raw -echo; echo R0171 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0171 >/dev/ttyPS0
+[44909ms] R0171
+[45128ms] 2048+0 records in
+2048+0 records out
+D0171
+sh-4.4# [45128ms] TX stty raw -echo; echo R0172 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0172 >/dev/ttyPS0
+[45175ms] R0172
+[45391ms] 2048+0 records in
+2048+0 records out
+D0172
+sh-4.4# [45392ms] TX stty raw -echo; echo R0173 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0173 >/dev/ttyPS0
+[45439ms] R0173
+[45625ms] 2048+0 records in
+2048+0 records out
+D0173
+[45626ms] TX stty raw -echo; echo R0174 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0174 >/dev/ttyPS0
+[45672ms] sh-4.4# R0174
+[45890ms] 2048+0 records in
+2048+0 records out
+D0174
+sh-4.4# [45890ms] TX stty raw -echo; echo R0175 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0175 >/dev/ttyPS0
+[45936ms] R0175
+[46153ms] 2048+0 records in
+2048+0 records out
+D0175
+sh-4.4# [46154ms] TX stty raw -echo; echo R0176 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0176 >/dev/ttyPS0
+[46201ms] R0176
+[46419ms] 2048+0 records in
+2048+0 records out
+D0176
+sh-4.4# [46420ms] TX stty raw -echo; echo R0177 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0177 >/dev/ttyPS0
+[46466ms] R0177
+[46649ms] 2048+0 records in
+2048+0 records out
+D0177
+[46650ms] TX stty raw -echo; echo R0178 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0178 >/dev/ttyPS0
+[46696ms] sh-4.4# R0178
+[46881ms] 2048+0 records in
+2048+0 records out
+D0178
+[46882ms] TX stty raw -echo; echo R0179 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0179 >/dev/ttyPS0
+[46927ms] sh-4.4# R0179
+[47146ms] 2048+0 records in
+2048+0 records out
+D0179
+sh-4.4# [47147ms] TX stty raw -echo; echo R0180 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0180 >/dev/ttyPS0
+[47193ms] R0180
+[47410ms] 2048+0 records in
+2048+0 records out
+D0180
+sh-4.4# [47411ms] TX stty raw -echo; echo R0181 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0181 >/dev/ttyPS0
+[47457ms] R0181
+[47676ms] 2048+0 records in
+2048+0 records out
+D0181
+sh-4.4# [47677ms] TX stty raw -echo; echo R0182 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0182 >/dev/ttyPS0
+[47724ms] R0182
+[47941ms] 2048+0 records in
+2048+0 records out
+D0182
+sh-4.4# [47942ms] TX stty raw -echo; echo R0183 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0183 >/dev/ttyPS0
+[47988ms] R0183
+[48207ms] 2048+0 records in
+2048+0 records out
+D0183
+sh-4.4# [48208ms] TX stty raw -echo; echo R0184 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0184 >/dev/ttyPS0
+[48254ms] R0184
+[48472ms] 2048+0 records in
+2048+0 records out
+D0184
+sh-4.4# [48473ms] TX stty raw -echo; echo R0185 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0185 >/dev/ttyPS0
+[48519ms] R0185
+[48737ms] 2048+0 records in
+2048+0 records out
+D0185
+sh-4.4# [48738ms] TX stty raw -echo; echo R0186 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0186 >/dev/ttyPS0
+[48784ms] R0186
+[49002ms] 2048+0 records in
+2048+0 records out
+D0186
+sh-4.4# [49003ms] TX stty raw -echo; echo R0187 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0187 >/dev/ttyPS0
+[49050ms] R0187
+[49268ms] 2048+0 records in
+2048+0 records out
+D0187
+sh-4.4# [49268ms] TX stty raw -echo; echo R0188 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0188 >/dev/ttyPS0
+[49316ms] R0188
+[49532ms] 2048+0 records in
+2048+0 records out
+D0188
+sh-4.4# [49533ms] TX stty raw -echo; echo R0189 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0189 >/dev/ttyPS0
+[49578ms] R0189
+[49796ms] 2048+0 records in
+2048+0 records out
+D0189
+sh-4.4# [49796ms] TX stty raw -echo; echo R0190 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0190 >/dev/ttyPS0
+[49842ms] R0190
+[50075ms] 2048+0 records in
+2048+0 records out
+D0190
+sh-4.4# [50075ms] TX stty raw -echo; echo R0191 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0191 >/dev/ttyPS0
+[50122ms] R0191
+[50342ms] 2048+0 records in
+2048+0 records out
+D0191
+sh-4.4# [50342ms] TX stty raw -echo; echo R0192 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0192 >/dev/ttyPS0
+[50389ms] R0192
+[50608ms] 2048+0 records in
+2048+0 records out
+D0192
+sh-4.4# [50609ms] TX stty raw -echo; echo R0193 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0193 >/dev/ttyPS0
+[50655ms] R0193
+[50875ms] 2048+0 records in
+2048+0 records out
+D0193
+sh-4.4# [50875ms] TX stty raw -echo; echo R0194 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0194 >/dev/ttyPS0
+[50922ms] R0194
+[51142ms] 2048+0 records in
+2048+0 records out
+D0194
+sh-4.4# [51142ms] TX stty raw -echo; echo R0195 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0195 >/dev/ttyPS0
+[51190ms] R0195
+[51406ms] 2048+0 records in
+2048+0 records out
+D0195
+sh-4.4# [51407ms] TX stty raw -echo; echo R0196 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0196 >/dev/ttyPS0
+[51453ms] R0196
+[51670ms] 2048+0 records in
+2048+0 records out
+D0196
+sh-4.4# [51670ms] TX stty raw -echo; echo R0197 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0197 >/dev/ttyPS0
+[51716ms] R0197
+[51935ms] 2048+0 records in
+2048+0 records out
+D0197
+sh-4.4# [51936ms] TX stty raw -echo; echo R0198 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0198 >/dev/ttyPS0
+[51981ms] R0198
+[52168ms] 2048+0 records in
+2048+0 records out
+D0198
+[52168ms] TX stty raw -echo; echo R0199 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0199 >/dev/ttyPS0
+[52230ms] sh-4.4# R0199
+[52416ms] 2048+0 records in
+2048+0 records out
+D0199
+[52417ms] TX stty raw -echo; echo R0200 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0200 >/dev/ttyPS0
+[52463ms] sh-4.4# R0200
+[52649ms] 2048+0 records in
+2048+0 records out
+D0200
+[52650ms] TX stty raw -echo; echo R0201 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0201 >/dev/ttyPS0
+[52696ms] sh-4.4# R0201
+[52882ms] 2048+0 records in
+2048+0 records out
+D0201
+[52883ms] TX stty raw -echo; echo R0202 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0202 >/dev/ttyPS0
+[52930ms] sh-4.4# R0202
+[53147ms] 2048+0 records in
+2048+0 records out
+D0202
+sh-4.4# [53148ms] TX stty raw -echo; echo R0203 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0203 >/dev/ttyPS0
+[53194ms] R0203
+[53379ms] 2048+0 records in
+2048+0 records out
+D0203
+[53380ms] TX stty raw -echo; echo R0204 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0204 >/dev/ttyPS0
+[53425ms] sh-4.4# R0204
+[53642ms] 2048+0 records in
+2048+0 records out
+D0204
+sh-4.4# [53642ms] TX stty raw -echo; echo R0205 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0205 >/dev/ttyPS0
+[53690ms] R0205
+[53909ms] 2048+0 records in
+2048+0 records out
+D0205
+sh-4.4# [53910ms] TX stty raw -echo; echo R0206 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0206 >/dev/ttyPS0
+[53955ms] R0206
+[54172ms] 2048+0 records in
+2048+0 records out
+D0206
+sh-4.4# [54173ms] TX stty raw -echo; echo R0207 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0207 >/dev/ttyPS0
+[54218ms] R0207
+[54438ms] 2048+0 records in
+2048+0 records out
+D0207
+sh-4.4# [54438ms] TX stty raw -echo; echo R0208 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0208 >/dev/ttyPS0
+[54483ms] R0208
+[54701ms] 2048+0 records in
+2048+0 records out
+D0208
+sh-4.4# [54702ms] TX stty raw -echo; echo R0209 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0209 >/dev/ttyPS0
+[54749ms] R0209
+[54968ms] 2048+0 records in
+2048+0 records out
+D0209
+sh-4.4# [54968ms] TX stty raw -echo; echo R0210 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0210 >/dev/ttyPS0
+[55015ms] R0210
+[55198ms] 2048+0 records in
+2048+0 records out
+D0210
+[55199ms] TX stty raw -echo; echo R0211 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0211 >/dev/ttyPS0
+[55246ms] sh-4.4# R0211
+[55434ms] 2048+0 records in
+2048+0 records out
+D0211
+[55435ms] TX stty raw -echo; echo R0212 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0212 >/dev/ttyPS0
+[55482ms] sh-4.4# R0212
+[55666ms] 2048+0 records in
+2048+0 records out
+D0212
+[55666ms] TX stty raw -echo; echo R0213 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0213 >/dev/ttyPS0
+[55713ms] sh-4.4# R0213
+[55901ms] 2048+0 records in
+2048+0 records out
+D0213
+[55901ms] TX stty raw -echo; echo R0214 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0214 >/dev/ttyPS0
+[55948ms] sh-4.4# R0214
+[56135ms] 2048+0 records in
+2048+0 records out
+D0214
+[56135ms] TX stty raw -echo; echo R0215 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0215 >/dev/ttyPS0
+[56181ms] sh-4.4# R0215
+[56368ms] 2048+0 records in
+2048+0 records out
+D0215
+[56369ms] TX stty raw -echo; echo R0216 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0216 >/dev/ttyPS0
+[56416ms] sh-4.4# R0216
+[56602ms] 2048+0 records in
+2048+0 records out
+D0216
+[56603ms] TX stty raw -echo; echo R0217 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0217 >/dev/ttyPS0
+[56648ms] sh-4.4# R0217
+[56866ms] 2048+0 records in
+2048+0 records out
+D0217
+sh-4.4# [56867ms] TX stty raw -echo; echo R0218 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0218 >/dev/ttyPS0
+[56913ms] R0218
+[57132ms] 2048+0 records in
+2048+0 records out
+D0218
+sh-4.4# [57132ms] TX stty raw -echo; echo R0219 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0219 >/dev/ttyPS0
+[57179ms] R0219
+[57396ms] 2048+0 records in
+2048+0 records out
+D0219
+sh-4.4# [57397ms] TX stty raw -echo; echo R0220 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0220 >/dev/ttyPS0
+[57443ms] R0220
+[57665ms] 2048+0 records in
+2048+0 records out
+D0220
+sh-4.4# [57666ms] TX stty raw -echo; echo R0221 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0221 >/dev/ttyPS0
+[57711ms] R0221
+[57895ms] 2048+0 records in
+2048+0 records out
+D0221
+[57896ms] TX stty raw -echo; echo R0222 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0222 >/dev/ttyPS0
+[57942ms] sh-4.4# R0222
+[58161ms] 2048+0 records in
+2048+0 records out
+D0222
+sh-4.4# [58162ms] TX stty raw -echo; echo R0223 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0223 >/dev/ttyPS0
+[58209ms] R0223
+[58427ms] 2048+0 records in
+2048+0 records out
+D0223
+sh-4.4# [58428ms] TX stty raw -echo; echo R0224 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0224 >/dev/ttyPS0
+[58474ms] R0224
+[58691ms] 2048+0 records in
+2048+0 records out
+D0224
+sh-4.4# [58691ms] TX stty raw -echo; echo R0225 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0225 >/dev/ttyPS0
+[58736ms] R0225
+[58954ms] 2048+0 records in
+2048+0 records out
+D0225
+sh-4.4# [58955ms] TX stty raw -echo; echo R0226 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0226 >/dev/ttyPS0
+[59001ms] R0226
+[59220ms] 2048+0 records in
+2048+0 records out
+D0226
+sh-4.4# [59221ms] TX stty raw -echo; echo R0227 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0227 >/dev/ttyPS0
+[59267ms] R0227
+[59484ms] 2048+0 records in
+2048+0 records out
+D0227
+sh-4.4# [59484ms] TX stty raw -echo; echo R0228 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0228 >/dev/ttyPS0
+[59531ms] R0228
+[59751ms] 2048+0 records in
+2048+0 records out
+D0228
+sh-4.4# [59751ms] TX stty raw -echo; echo R0229 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0229 >/dev/ttyPS0
+[59797ms] R0229
+[60015ms] 2048+0 records in
+2048+0 records out
+D0229
+sh-4.4# [60016ms] TX stty raw -echo; echo R0230 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0230 >/dev/ttyPS0
+[60062ms] R0230
+[60279ms] 2048+0 records in
+2048+0 records out
+D0230
+sh-4.4# [60279ms] TX stty raw -echo; echo R0231 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0231 >/dev/ttyPS0
+[60340ms] R0231
+[60527ms] 2048+0 records in
+2048+0 records out
+D0231
+[60527ms] TX stty raw -echo; echo R0232 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0232 >/dev/ttyPS0
+[60573ms] sh-4.4# R0232
+[60762ms] 2048+0 records in
+2048+0 records out
+D0232
+[60762ms] TX stty raw -echo; echo R0233 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0233 >/dev/ttyPS0
+[60824ms] sh-4.4# R0233
+[61009ms] 2048+0 records in
+2048+0 records out
+D0233
+[61009ms] TX stty raw -echo; echo R0234 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0234 >/dev/ttyPS0
+[61053ms] sh-4.4# R0234
+[61270ms] 2048+0 records in
+2048+0 records out
+D0234
+sh-4.4# [61271ms] TX stty raw -echo; echo R0235 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0235 >/dev/ttyPS0
+[61317ms] R0235
+[61536ms] 2048+0 records in
+2048+0 records out
+D0235
+sh-4.4# [61536ms] TX stty raw -echo; echo R0236 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0236 >/dev/ttyPS0
+[61583ms] R0236
+[61768ms] 2048+0 records in
+2048+0 records out
+D0236
+[61769ms] TX stty raw -echo; echo R0237 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0237 >/dev/ttyPS0
+[61816ms] sh-4.4# R0237
+[62034ms] 2048+0 records in
+2048+0 records out
+D0237
+sh-4.4# [62035ms] TX stty raw -echo; echo R0238 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0238 >/dev/ttyPS0
+[62081ms] R0238
+[62299ms] 2048+0 records in
+2048+0 records out
+D0238
+sh-4.4# [62299ms] TX stty raw -echo; echo R0239 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0239 >/dev/ttyPS0
+[62346ms] R0239
+[62567ms] 2048+0 records in
+2048+0 records out
+D0239
+sh-4.4# [62567ms] TX stty raw -echo; echo R0240 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0240 >/dev/ttyPS0
+[62611ms] R0240
+[62830ms] 2048+0 records in
+2048+0 records out
+D0240
+sh-4.4# [62831ms] TX stty raw -echo; echo R0241 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0241 >/dev/ttyPS0
+[62876ms] R0241
+[63060ms] 2048+0 records in
+2048+0 records out
+D0241
+[63061ms] TX stty raw -echo; echo R0242 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0242 >/dev/ttyPS0
+[63107ms] sh-4.4# R0242
+[63328ms] 2048+0 records in
+2048+0 records out
+D0242
+sh-4.4# [63328ms] TX stty raw -echo; echo R0243 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0243 >/dev/ttyPS0
+[63375ms] R0243
+[63558ms] 2048+0 records in
+2048+0 records out
+D0243
+[63558ms] TX stty raw -echo; echo R0244 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0244 >/dev/ttyPS0
+[63605ms] sh-4.4# R0244
+[63793ms] 2048+0 records in
+2048+0 records out
+D0244
+[63794ms] TX stty raw -echo; echo R0245 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0245 >/dev/ttyPS0
+[63840ms] sh-4.4# R0245
+[64059ms] 2048+0 records in
+2048+0 records out
+D0245
+sh-4.4# [64060ms] TX stty raw -echo; echo R0246 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0246 >/dev/ttyPS0
+[64121ms] R0246
+[64308ms] 2048+0 records in
+2048+0 records out
+D0246
+[64308ms] TX stty raw -echo; echo R0247 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0247 >/dev/ttyPS0
+[64354ms] sh-4.4# R0247
+[64541ms] 2048+0 records in
+2048+0 records out
+D0247
+[64541ms] TX stty raw -echo; echo R0248 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0248 >/dev/ttyPS0
+[64587ms] sh-4.4# R0248
+[64773ms] 2048+0 records in
+2048+0 records out
+D0248
+[64774ms] TX stty raw -echo; echo R0249 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0249 >/dev/ttyPS0
+[64819ms] sh-4.4# R0249
+[65037ms] 2048+0 records in
+2048+0 records out
+D0249
+sh-4.4# [65038ms] TX stty raw -echo; echo R0250 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0250 >/dev/ttyPS0
+[65083ms] R0250
+[65303ms] 2048+0 records in
+2048+0 records out
+D0250
+sh-4.4# [65304ms] TX stty raw -echo; echo R0251 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0251 >/dev/ttyPS0
+[65351ms] R0251
+[65569ms] 2048+0 records in
+2048+0 records out
+D0251
+sh-4.4# [65569ms] TX stty raw -echo; echo R0252 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0252 >/dev/ttyPS0
+[65616ms] R0252
+[65800ms] 2048+0 records in
+2048+0 records out
+D0252
+[65801ms] TX stty raw -echo; echo R0253 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0253 >/dev/ttyPS0
+[65847ms] sh-4.4# R0253
+[66065ms] 2048+0 records in
+2048+0 records out
+D0253
+sh-4.4# [66066ms] TX stty raw -echo; echo R0254 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0254 >/dev/ttyPS0
+[66112ms] R0254
+[66330ms] 2048+0 records in
+2048+0 records out
+D0254
+sh-4.4# [66331ms] TX stty raw -echo; echo R0255 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0255 >/dev/ttyPS0
+[66378ms] R0255
+[66596ms] 2048+0 records in
+2048+0 records out
+D0255
+sh-4.4# [66597ms] TX stty raw -echo; echo R0256 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0256 >/dev/ttyPS0
+[66642ms] R0256
+[66861ms] 2048+0 records in
+2048+0 records out
+D0256
+sh-4.4# [66861ms] TX stty raw -echo; echo R0257 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0257 >/dev/ttyPS0
+[66907ms] R0257
+[67127ms] 2048+0 records in
+2048+0 records out
+D0257
+sh-4.4# [67127ms] TX stty raw -echo; echo R0258 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0258 >/dev/ttyPS0
+[67175ms] R0258
+[67392ms] 2048+0 records in
+2048+0 records out
+D0258
+sh-4.4# [67393ms] TX stty raw -echo; echo R0259 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0259 >/dev/ttyPS0
+[67438ms] R0259
+[67656ms] 2048+0 records in
+2048+0 records out
+D0259
+sh-4.4# [67657ms] TX stty raw -echo; echo R0260 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0260 >/dev/ttyPS0
+[67702ms] R0260
+[67886ms] 2048+0 records in
+2048+0 records out
+D0260
+[67887ms] TX stty raw -echo; echo R0261 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0261 >/dev/ttyPS0
+[67935ms] sh-4.4# R0261
+[68153ms] 2048+0 records in
+2048+0 records out
+D0261
+sh-4.4# [68154ms] TX stty raw -echo; echo R0262 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0262 >/dev/ttyPS0
+[68200ms] R0262
+[68386ms] 2048+0 records in
+2048+0 records out
+D0262
+[68387ms] TX stty raw -echo; echo R0263 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0263 >/dev/ttyPS0
+[68433ms] sh-4.4# R0263
+[68620ms] 2048+0 records in
+2048+0 records out
+D0263
+[68621ms] TX stty raw -echo; echo R0264 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0264 >/dev/ttyPS0
+[68668ms] sh-4.4# R0264
+[68856ms] 2048+0 records in
+2048+0 records out
+D0264
+[68857ms] TX stty raw -echo; echo R0265 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0265 >/dev/ttyPS0
+[68903ms] sh-4.4# R0265
+[69089ms] 2048+0 records in
+2048+0 records out
+D0265
+[69089ms] TX stty raw -echo; echo R0266 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0266 >/dev/ttyPS0
+[69136ms] sh-4.4# R0266
+[69325ms] 2048+0 records in
+2048+0 records out
+D0266
+[69326ms] TX stty raw -echo; echo R0267 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0267 >/dev/ttyPS0
+[69386ms] sh-4.4# R0267
+[69621ms] 2048+0 records in
+2048+0 records out
+D0267
+sh-4.4# [69621ms] TX stty raw -echo; echo R0268 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0268 >/dev/ttyPS0
+[69669ms] R0268
+[69887ms] 2048+0 records in
+2048+0 records out
+D0268
+sh-4.4# [69888ms] TX stty raw -echo; echo R0269 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0269 >/dev/ttyPS0
+[69948ms] R0269
+[70134ms] 2048+0 records in
+2048+0 records out
+D0269
+[70135ms] TX stty raw -echo; echo R0270 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0270 >/dev/ttyPS0
+[70180ms] sh-4.4# R0270
+[70367ms] 2048+0 records in
+2048+0 records out
+D0270
+[70368ms] TX stty raw -echo; echo R0271 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0271 >/dev/ttyPS0
+[70415ms] sh-4.4# R0271
+[70604ms] 2048+0 records in
+2048+0 records out
+D0271
+[70605ms] TX stty raw -echo; echo R0272 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0272 >/dev/ttyPS0
+[70651ms] sh-4.4# R0272
+[70838ms] 2048+0 records in
+2048+0 records out
+D0272
+[70838ms] TX stty raw -echo; echo R0273 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0273 >/dev/ttyPS0
+[70886ms] sh-4.4# R0273
+[71072ms] 2048+0 records in
+2048+0 records out
+D0273
+[71072ms] TX stty raw -echo; echo R0274 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0274 >/dev/ttyPS0
+[71118ms] sh-4.4# R0274
+[71304ms] 2048+0 records in
+2048+0 records out
+D0274
+[71305ms] TX stty raw -echo; echo R0275 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0275 >/dev/ttyPS0
+[71350ms] sh-4.4# R0275
+[71570ms] 2048+0 records in
+2048+0 records out
+D0275
+sh-4.4# [71570ms] TX stty raw -echo; echo R0276 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0276 >/dev/ttyPS0
+[71618ms] R0276
+[71804ms] 2048+0 records in
+2048+0 records out
+D0276
+[71805ms] TX stty raw -echo; echo R0277 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0277 >/dev/ttyPS0
+[71851ms] sh-4.4# R0277
+[72070ms] 2048+0 records in
+2048+0 records out
+D0277
+sh-4.4# [72071ms] TX stty raw -echo; echo R0278 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0278 >/dev/ttyPS0
+[72116ms] R0278
+[72333ms] 2048+0 records in
+2048+0 records out
+D0278
+sh-4.4# [72333ms] TX stty raw -echo; echo R0279 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0279 >/dev/ttyPS0
+[72380ms] R0279
+[72598ms] 2048+0 records in
+2048+0 records out
+D0279
+sh-4.4# [72598ms] TX stty raw -echo; echo R0280 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0280 >/dev/ttyPS0
+[72643ms] R0280
+[72862ms] 2048+0 records in
+2048+0 records out
+D0280
+sh-4.4# [72863ms] TX stty raw -echo; echo R0281 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0281 >/dev/ttyPS0
+[72908ms] R0281
+[73127ms] 2048+0 records in
+2048+0 records out
+D0281
+sh-4.4# [73128ms] TX stty raw -echo; echo R0282 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0282 >/dev/ttyPS0
+[73172ms] R0282
+[73389ms] 2048+0 records in
+2048+0 records out
+D0282
+sh-4.4# [73390ms] TX stty raw -echo; echo R0283 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0283 >/dev/ttyPS0
+[73436ms] R0283
+[73654ms] 2048+0 records in
+2048+0 records out
+D0283
+sh-4.4# [73655ms] TX stty raw -echo; echo R0284 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0284 >/dev/ttyPS0
+[73701ms] R0284
+[73887ms] 2048+0 records in
+2048+0 records out
+D0284
+[73888ms] TX stty raw -echo; echo R0285 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0285 >/dev/ttyPS0
+[73950ms] sh-4.4# R0285
+[74138ms] 2048+0 records in
+2048+0 records out
+D0285
+[74138ms] TX stty raw -echo; echo R0286 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0286 >/dev/ttyPS0
+[74185ms] sh-4.4# R0286
+[74418ms] 2048+0 records in
+2048+0 records out
+D0286
+sh-4.4# [74419ms] TX stty raw -echo; echo R0287 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0287 >/dev/ttyPS0
+[74466ms] R0287
+[74653ms] 2048+0 records in
+2048+0 records out
+D0287
+[74654ms] TX stty raw -echo; echo R0288 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0288 >/dev/ttyPS0
+[74700ms] sh-4.4# R0288
+[74886ms] 2048+0 records in
+2048+0 records out
+D0288
+[74887ms] TX stty raw -echo; echo R0289 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0289 >/dev/ttyPS0
+[74934ms] sh-4.4# R0289
+[75119ms] 2048+0 records in
+2048+0 records out
+D0289
+[75120ms] TX stty raw -echo; echo R0290 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0290 >/dev/ttyPS0
+[75165ms] sh-4.4# R0290
+[75350ms] 2048+0 records in
+2048+0 records out
+D0290
+[75351ms] TX stty raw -echo; echo R0291 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0291 >/dev/ttyPS0
+[75398ms] sh-4.4# R0291
+[75614ms] 2048+0 records in
+2048+0 records out
+D0291
+sh-4.4# [75614ms] TX stty raw -echo; echo R0292 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0292 >/dev/ttyPS0
+[75661ms] R0292
+[75880ms] 2048+0 records in
+2048+0 records out
+D0292
+sh-4.4# [75881ms] TX stty raw -echo; echo R0293 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0293 >/dev/ttyPS0
+[75927ms] R0293
+[76148ms] 2048+0 records in
+2048+0 records out
+D0293
+sh-4.4# [76148ms] TX stty raw -echo; echo R0294 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0294 >/dev/ttyPS0
+[76193ms] R0294
+[76411ms] 2048+0 records in
+2048+0 records out
+D0294
+sh-4.4# [76412ms] TX stty raw -echo; echo R0295 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0295 >/dev/ttyPS0
+[76457ms] R0295
+[76676ms] 2048+0 records in
+2048+0 records out
+D0295
+sh-4.4# [76677ms] TX stty raw -echo; echo R0296 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0296 >/dev/ttyPS0
+[76722ms] R0296
+[76942ms] 2048+0 records in
+2048+0 records out
+D0296
+sh-4.4# [76943ms] TX stty raw -echo; echo R0297 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0297 >/dev/ttyPS0
+[76990ms] R0297
+[77174ms] 2048+0 records in
+2048+0 records out
+D0297
+[77175ms] TX stty raw -echo; echo R0298 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0298 >/dev/ttyPS0
+[77220ms] sh-4.4# R0298
+[77437ms] 2048+0 records in
+2048+0 records out
+D0298
+sh-4.4# [77438ms] TX stty raw -echo; echo R0299 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0299 >/dev/ttyPS0
+[77483ms] R0299
+[77668ms] 2048+0 records in
+2048+0 records out
+D0299
+[77668ms] TX stty raw -echo; echo R0300 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0300 >/dev/ttyPS0
+[77714ms] sh-4.4# R0300
+[77900ms] 2048+0 records in
+2048+0 records out
+D0300
+[77901ms] TX stty raw -echo; echo R0301 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0301 >/dev/ttyPS0
+[77948ms] sh-4.4# R0301
+[78137ms] 2048+0 records in
+2048+0 records out
+D0301
+[78137ms] TX stty raw -echo; echo R0302 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0302 >/dev/ttyPS0
+[78199ms] sh-4.4# R0302
+[78420ms] 2048+0 records in
+2048+0 records out
+D0302
+sh-4.4# [78421ms] TX stty raw -echo; echo R0303 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0303 >/dev/ttyPS0
+[78466ms] R0303
+[78699ms] 2048+0 records in
+2048+0 records out
+D0303
+sh-4.4# [78700ms] TX stty raw -echo; echo R0304 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0304 >/dev/ttyPS0
+[78761ms] R0304
+[78982ms] 2048+0 records in
+2048+0 records out
+D0304
+sh-4.4# [78982ms] TX stty raw -echo; echo R0305 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0305 >/dev/ttyPS0
+[79042ms] R0305
+[79228ms] 2048+0 records in
+2048+0 records out
+D0305
+[79229ms] TX stty raw -echo; echo R0306 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0306 >/dev/ttyPS0
+[79275ms] sh-4.4# R0306
+[79458ms] 2048+0 records in
+2048+0 records out
+D0306
+[79458ms] TX stty raw -echo; echo R0307 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0307 >/dev/ttyPS0
+[79504ms] sh-4.4# R0307
+[79723ms] 2048+0 records in
+2048+0 records out
+D0307
+sh-4.4# [79724ms] TX stty raw -echo; echo R0308 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0308 >/dev/ttyPS0
+[79768ms] R0308
+[79987ms] 2048+0 records in
+2048+0 records out
+D0308
+sh-4.4# [79988ms] TX stty raw -echo; echo R0309 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0309 >/dev/ttyPS0
+[80033ms] R0309
+[80252ms] 2048+0 records in
+2048+0 records out
+D0309
+sh-4.4# [80253ms] TX stty raw -echo; echo R0310 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0310 >/dev/ttyPS0
+[80298ms] R0310
+[80517ms] 2048+0 records in
+2048+0 records out
+D0310
+sh-4.4# [80517ms] TX stty raw -echo; echo R0311 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0311 >/dev/ttyPS0
+[80563ms] R0311
+[80781ms] 2048+0 records in
+2048+0 records out
+D0311
+sh-4.4# [80782ms] TX stty raw -echo; echo R0312 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0312 >/dev/ttyPS0
+[80829ms] R0312
+[81047ms] 2048+0 records in
+2048+0 records out
+D0312
+sh-4.4# [81048ms] TX stty raw -echo; echo R0313 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0313 >/dev/ttyPS0
+[81094ms] R0313
+[81313ms] 2048+0 records in
+2048+0 records out
+D0313
+sh-4.4# [81314ms] TX stty raw -echo; echo R0314 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0314 >/dev/ttyPS0
+[81359ms] R0314
+[81576ms] 2048+0 records in
+2048+0 records out
+D0314
+sh-4.4# [81577ms] TX stty raw -echo; echo R0315 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0315 >/dev/ttyPS0
+[81623ms] R0315
+[81808ms] 2048+0 records in
+2048+0 records out
+D0315
+[81808ms] TX stty raw -echo; echo R0316 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0316 >/dev/ttyPS0
+[81869ms] sh-4.4# R0316
+[82057ms] 2048+0 records in
+2048+0 records out
+D0316
+[82057ms] TX stty raw -echo; echo R0317 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0317 >/dev/ttyPS0
+[82104ms] sh-4.4# R0317
+[82293ms] 2048+0 records in
+2048+0 records out
+D0317
+[82293ms] TX stty raw -echo; echo R0318 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0318 >/dev/ttyPS0
+[82339ms] sh-4.4# R0318
+[82525ms] 2048+0 records in
+2048+0 records out
+D0318
+[82525ms] TX stty raw -echo; echo R0319 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0319 >/dev/ttyPS0
+[82573ms] sh-4.4# R0319
+[82759ms] 2048+0 records in
+2048+0 records out
+D0319
+[82760ms] TX stty raw -echo; echo R0320 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0320 >/dev/ttyPS0
+[82806ms] sh-4.4# R0320
+[82993ms] 2048+0 records in
+2048+0 records out
+D0320
+[82994ms] TX stty raw -echo; echo R0321 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0321 >/dev/ttyPS0
+[83040ms] sh-4.4# R0321
+[83225ms] 2048+0 records in
+2048+0 records out
+D0321
+[83225ms] TX stty raw -echo; echo R0322 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0322 >/dev/ttyPS0
+[83272ms] sh-4.4# R0322
+[83456ms] 2048+0 records in
+2048+0 records out
+D0322
+[83457ms] TX stty raw -echo; echo R0323 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0323 >/dev/ttyPS0
+[83502ms] sh-4.4# R0323
+[83722ms] 2048+0 records in
+2048+0 records out
+D0323
+sh-4.4# [83723ms] TX stty raw -echo; echo R0324 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0324 >/dev/ttyPS0
+[83769ms] R0324
+[83987ms] 2048+0 records in
+2048+0 records out
+D0324
+sh-4.4# [83987ms] TX stty raw -echo; echo R0325 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0325 >/dev/ttyPS0
+[84034ms] R0325
+[84251ms] 2048+0 records in
+2048+0 records out
+D0325
+sh-4.4# [84251ms] TX stty raw -echo; echo R0326 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0326 >/dev/ttyPS0
+[84296ms] R0326
+[84516ms] 2048+0 records in
+2048+0 records out
+D0326
+sh-4.4# [84517ms] TX stty raw -echo; echo R0327 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0327 >/dev/ttyPS0
+[84562ms] R0327
+[84791ms] 2048+0 records in
+2048+0 records out
+D0327
+sh-4.4# [84792ms] TX stty raw -echo; echo R0328 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0328 >/dev/ttyPS0
+[84838ms] R0328
+[85026ms] 2048+0 records in
+2048+0 records out
+D0328
+[85026ms] TX stty raw -echo; echo R0329 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0329 >/dev/ttyPS0
+[85071ms] sh-4.4# R0329
+[85257ms] 2048+0 records in
+2048+0 records out
+D0329
+[85257ms] TX stty raw -echo; echo R0330 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0330 >/dev/ttyPS0
+[85303ms] sh-4.4# R0330
+[85522ms] 2048+0 records in
+2048+0 records out
+D0330
+sh-4.4# [85523ms] TX stty raw -echo; echo R0331 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0331 >/dev/ttyPS0
+[85568ms] R0331
+[85788ms] 2048+0 records in
+2048+0 records out
+D0331
+sh-4.4# [85788ms] TX stty raw -echo; echo R0332 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0332 >/dev/ttyPS0
+[85835ms] R0332
+[86053ms] 2048+0 records in
+2048+0 records out
+D0332
+sh-4.4# [86053ms] TX stty raw -echo; echo R0333 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0333 >/dev/ttyPS0
+[86100ms] R0333
+[86319ms] 2048+0 records in
+2048+0 records out
+D0333
+sh-4.4# [86320ms] TX stty raw -echo; echo R0334 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0334 >/dev/ttyPS0
+[86366ms] R0334
+[86583ms] 2048+0 records in
+2048+0 records out
+D0334
+sh-4.4# [86583ms] TX stty raw -echo; echo R0335 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0335 >/dev/ttyPS0
+[86629ms] R0335
+[86849ms] 2048+0 records in
+2048+0 records out
+D0335
+sh-4.4# [86849ms] TX stty raw -echo; echo R0336 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0336 >/dev/ttyPS0
+[86896ms] R0336
+[87113ms] 2048+0 records in
+2048+0 records out
+D0336
+sh-4.4# [87114ms] TX stty raw -echo; echo R0337 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0337 >/dev/ttyPS0
+[87161ms] R0337
+[87378ms] 2048+0 records in
+2048+0 records out
+D0337
+sh-4.4# [87379ms] TX stty raw -echo; echo R0338 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0338 >/dev/ttyPS0
+[87426ms] R0338
+[87644ms] 2048+0 records in
+2048+0 records out
+D0338
+sh-4.4# [87645ms] TX stty raw -echo; echo R0339 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0339 >/dev/ttyPS0
+[87691ms] R0339
+[87908ms] 2048+0 records in
+2048+0 records out
+D0339
+sh-4.4# [87909ms] TX stty raw -echo; echo R0340 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0340 >/dev/ttyPS0
+[87956ms] R0340
+[88174ms] 2048+0 records in
+2048+0 records out
+D0340
+sh-4.4# [88175ms] TX stty raw -echo; echo R0341 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0341 >/dev/ttyPS0
+[88221ms] R0341
+[88438ms] 2048+0 records in
+2048+0 records out
+D0341
+sh-4.4# [88438ms] TX stty raw -echo; echo R0342 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0342 >/dev/ttyPS0
+[88484ms] R0342
+[88701ms] 2048+0 records in
+2048+0 records out
+D0342
+sh-4.4# [88701ms] TX stty raw -echo; echo R0343 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0343 >/dev/ttyPS0
+[88747ms] R0343
+[88966ms] 2048+0 records in
+2048+0 records out
+D0343
+sh-4.4# [88967ms] TX stty raw -echo; echo R0344 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0344 >/dev/ttyPS0
+[89027ms] R0344
+[89214ms] 2048+0 records in
+2048+0 records out
+D0344
+[89214ms] TX stty raw -echo; echo R0345 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0345 >/dev/ttyPS0
+[89261ms] sh-4.4# R0345
+[89446ms] 2048+0 records in
+2048+0 records out
+D0345
+[89447ms] TX stty raw -echo; echo R0346 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0346 >/dev/ttyPS0
+[89492ms] sh-4.4# R0346
+[89710ms] 2048+0 records in
+2048+0 records out
+D0346
+sh-4.4# [89711ms] TX stty raw -echo; echo R0347 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0347 >/dev/ttyPS0
+[89756ms] R0347
+[89975ms] 2048+0 records in
+2048+0 records out
+D0347
+sh-4.4# [89976ms] TX stty raw -echo; echo R0348 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0348 >/dev/ttyPS0
+[90023ms] R0348
+[90239ms] 2048+0 records in
+2048+0 records out
+D0348
+sh-4.4# [90240ms] TX stty raw -echo; echo R0349 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0349 >/dev/ttyPS0
+[90284ms] R0349
+[90501ms] 2048+0 records in
+2048+0 records out
+D0349
+sh-4.4# [90502ms] TX stty raw -echo; echo R0350 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0350 >/dev/ttyPS0
+[90547ms] R0350
+[90767ms] 2048+0 records in
+2048+0 records out
+D0350
+sh-4.4# [90767ms] TX stty raw -echo; echo R0351 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0351 >/dev/ttyPS0
+[90812ms] R0351
+[91040ms] 2048+0 records in
+2048+0 records out
+D0351
+sh-4.4# [91041ms] TX stty raw -echo; echo R0352 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0352 >/dev/ttyPS0
+[91086ms] R0352
+[91270ms] 2048+0 records in
+2048+0 records out
+D0352
+[91271ms] TX stty raw -echo; echo R0353 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0353 >/dev/ttyPS0
+[91317ms] sh-4.4# R0353
+[91534ms] 2048+0 records in
+2048+0 records out
+D0353
+sh-4.4# [91535ms] TX stty raw -echo; echo R0354 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0354 >/dev/ttyPS0
+[91582ms] R0354
+[91800ms] 2048+0 records in
+2048+0 records out
+D0354
+sh-4.4# [91801ms] TX stty raw -echo; echo R0355 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0355 >/dev/ttyPS0
+[91847ms] R0355
+[92064ms] 2048+0 records in
+2048+0 records out
+D0355
+sh-4.4# [92065ms] TX stty raw -echo; echo R0356 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0356 >/dev/ttyPS0
+[92111ms] R0356
+[92330ms] 2048+0 records in
+2048+0 records out
+D0356
+sh-4.4# [92331ms] TX stty raw -echo; echo R0357 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0357 >/dev/ttyPS0
+[92377ms] R0357
+[92595ms] 2048+0 records in
+2048+0 records out
+D0357
+sh-4.4# [92596ms] TX stty raw -echo; echo R0358 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0358 >/dev/ttyPS0
+[92643ms] R0358
+[92860ms] 2048+0 records in
+2048+0 records out
+D0358
+sh-4.4# [92861ms] TX stty raw -echo; echo R0359 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0359 >/dev/ttyPS0
+[92907ms] R0359
+[93124ms] 2048+0 records in
+2048+0 records out
+D0359
+sh-4.4# [93125ms] TX stty raw -echo; echo R0360 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0360 >/dev/ttyPS0
+[93171ms] R0360
+[93400ms] 2048+0 records in
+2048+0 records out
+D0360
+sh-4.4# [93401ms] TX stty raw -echo; echo R0361 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0361 >/dev/ttyPS0
+[93447ms] R0361
+[93634ms] 2048+0 records in
+2048+0 records out
+D0361
+[93635ms] TX stty raw -echo; echo R0362 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0362 >/dev/ttyPS0
+[93680ms] sh-4.4# R0362
+[93866ms] 2048+0 records in
+2048+0 records out
+D0362
+[93867ms] TX stty raw -echo; echo R0363 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0363 >/dev/ttyPS0
+[93913ms] sh-4.4# R0363
+[94131ms] 2048+0 records in
+2048+0 records out
+D0363
+sh-4.4# [94132ms] TX stty raw -echo; echo R0364 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0364 >/dev/ttyPS0
+[94178ms] R0364
+[94396ms] 2048+0 records in
+2048+0 records out
+D0364
+sh-4.4# [94397ms] TX stty raw -echo; echo R0365 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0365 >/dev/ttyPS0
+[94444ms] R0365
+[94660ms] 2048+0 records in
+2048+0 records out
+D0365
+sh-4.4# [94661ms] TX stty raw -echo; echo R0366 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0366 >/dev/ttyPS0
+[94707ms] R0366
+[94927ms] 2048+0 records in
+2048+0 records out
+D0366
+sh-4.4# [94928ms] TX stty raw -echo; echo R0367 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0367 >/dev/ttyPS0
+[94974ms] R0367
+[95192ms] 2048+0 records in
+2048+0 records out
+D0367
+sh-4.4# [95193ms] TX stty raw -echo; echo R0368 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0368 >/dev/ttyPS0
+[95238ms] R0368
+[95455ms] 2048+0 records in
+2048+0 records out
+D0368
+sh-4.4# [95456ms] TX stty raw -echo; echo R0369 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0369 >/dev/ttyPS0
+[95503ms] R0369
+[95723ms] 2048+0 records in
+2048+0 records out
+D0369
+sh-4.4# [95723ms] TX stty raw -echo; echo R0370 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0370 >/dev/ttyPS0
+[95769ms] R0370
+[95986ms] 2048+0 records in
+2048+0 records out
+D0370
+sh-4.4# [95987ms] TX stty raw -echo; echo R0371 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0371 >/dev/ttyPS0
+[96034ms] R0371
+[96219ms] 2048+0 records in
+2048+0 records out
+D0371
+[96220ms] TX stty raw -echo; echo R0372 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0372 >/dev/ttyPS0
+[96265ms] sh-4.4# R0372
+[96484ms] 2048+0 records in
+2048+0 records out
+D0372
+sh-4.4# [96484ms] TX stty raw -echo; echo R0373 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0373 >/dev/ttyPS0
+[96532ms] R0373
+[96750ms] 2048+0 records in
+2048+0 records out
+D0373
+sh-4.4# [96751ms] TX stty raw -echo; echo R0374 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0374 >/dev/ttyPS0
+[96796ms] R0374
+[97014ms] 2048+0 records in
+2048+0 records out
+D0374
+sh-4.4# [97015ms] TX stty raw -echo; echo R0375 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0375 >/dev/ttyPS0
+[97061ms] R0375
+[97280ms] 2048+0 records in
+2048+0 records out
+D0375
+sh-4.4# [97281ms] TX stty raw -echo; echo R0376 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0376 >/dev/ttyPS0
+[97327ms] R0376
+[97546ms] 2048+0 records in
+2048+0 records out
+D0376
+sh-4.4# [97547ms] TX stty raw -echo; echo R0377 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0377 >/dev/ttyPS0
+[97593ms] R0377
+[97812ms] 2048+0 records in
+2048+0 records out
+D0377
+sh-4.4# [97813ms] TX stty raw -echo; echo R0378 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0378 >/dev/ttyPS0
+[97860ms] R0378
+[98077ms] 2048+0 records in
+2048+0 records out
+D0378
+sh-4.4# [98078ms] TX stty raw -echo; echo R0379 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0379 >/dev/ttyPS0
+[98123ms] R0379
+[98343ms] 2048+0 records in
+2048+0 records out
+D0379
+sh-4.4# [98344ms] TX stty raw -echo; echo R0380 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0380 >/dev/ttyPS0
+[98389ms] R0380
+[98574ms] 2048+0 records in
+2048+0 records out
+D0380
+[98576ms] TX stty raw -echo; echo R0381 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0381 >/dev/ttyPS0
+[98637ms] sh-4.4# R0381
+[98857ms] 2048+0 records in
+2048+0 records out
+D0381
+sh-4.4# [98857ms] TX stty raw -echo; echo R0382 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0382 >/dev/ttyPS0
+[98905ms] R0382
+[99090ms] 2048+0 records in
+2048+0 records out
+D0382
+[99090ms] TX stty raw -echo; echo R0383 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0383 >/dev/ttyPS0
+[99138ms] sh-4.4# R0383
+[99358ms] 2048+0 records in
+2048+0 records out
+D0383
+sh-4.4# [99359ms] TX stty raw -echo; echo R0384 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0384 >/dev/ttyPS0
+[99404ms] R0384
+[99589ms] 2048+0 records in
+2048+0 records out
+D0384
+[99590ms] TX stty raw -echo; echo R0385 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0385 >/dev/ttyPS0
+[99637ms] sh-4.4# R0385
+[99823ms] 2048+0 records in
+2048+0 records out
+D0385
+[99823ms] TX stty raw -echo; echo R0386 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0386 >/dev/ttyPS0
+[99871ms] sh-4.4# R0386
+[100057ms] 2048+0 records in
+2048+0 records out
+D0386
+[100058ms] TX stty raw -echo; echo R0387 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0387 >/dev/ttyPS0
+[100103ms] sh-4.4# R0387
+[100287ms] 2048+0 records in
+2048+0 records out
+D0387
+[100288ms] TX stty raw -echo; echo R0388 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0388 >/dev/ttyPS0
+[100335ms] sh-4.4# R0388
+[100550ms] 2048+0 records in
+2048+0 records out
+D0388
+sh-4.4# [100550ms] TX stty raw -echo; echo R0389 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0389 >/dev/ttyPS0
+[100597ms] R0389
+[100814ms] 2048+0 records in
+2048+0 records out
+D0389
+sh-4.4# [100815ms] TX stty raw -echo; echo R0390 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0390 >/dev/ttyPS0
+[100861ms] R0390
+[101080ms] 2048+0 records in
+2048+0 records out
+D0390
+sh-4.4# [101080ms] TX stty raw -echo; echo R0391 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0391 >/dev/ttyPS0
+[101126ms] R0391
+[101343ms] 2048+0 records in
+2048+0 records out
+D0391
+sh-4.4# [101343ms] TX stty raw -echo; echo R0392 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0392 >/dev/ttyPS0
+[101391ms] R0392
+[101609ms] 2048+0 records in
+2048+0 records out
+D0392
+sh-4.4# [101610ms] TX stty raw -echo; echo R0393 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0393 >/dev/ttyPS0
+[101656ms] R0393
+[101873ms] 2048+0 records in
+2048+0 records out
+D0393
+sh-4.4# [101874ms] TX stty raw -echo; echo R0394 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0394 >/dev/ttyPS0
+[101919ms] R0394
+[102105ms] 2048+0 records in
+2048+0 records out
+D0394
+[102105ms] TX stty raw -echo; echo R0395 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0395 >/dev/ttyPS0
+[102152ms] sh-4.4# R0395
+[102338ms] 2048+0 records in
+2048+0 records out
+D0395
+[102339ms] TX stty raw -echo; echo R0396 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0396 >/dev/ttyPS0
+[102385ms] sh-4.4# R0396
+[102572ms] 2048+0 records in
+2048+0 records out
+D0396
+[102573ms] TX stty raw -echo; echo R0397 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0397 >/dev/ttyPS0
+[102618ms] sh-4.4# R0397
+[102803ms] 2048+0 records in
+2048+0 records out
+D0397
+[102804ms] TX stty raw -echo; echo R0398 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0398 >/dev/ttyPS0
+[102848ms] sh-4.4# R0398
+[103067ms] 2048+0 records in
+2048+0 records out
+D0398
+sh-4.4# [103068ms] TX stty raw -echo; echo R0399 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0399 >/dev/ttyPS0
+[103113ms] R0399
+[103332ms] 2048+0 records in
+2048+0 records out
+D0399
+sh-4.4# [103333ms] TX stty raw -echo; echo R0400 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0400 >/dev/ttyPS0
+[103378ms] R0400
+[103596ms] 2048+0 records in
+2048+0 records out
+D0400
+sh-4.4# [103597ms] TX stty raw -echo; echo R0401 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0401 >/dev/ttyPS0
+[103644ms] R0401
+[103862ms] 2048+0 records in
+2048+0 records out
+D0401
+sh-4.4# [103863ms] TX stty raw -echo; echo R0402 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0402 >/dev/ttyPS0
+[103909ms] R0402
+[104128ms] 2048+0 records in
+2048+0 records out
+D0402
+sh-4.4# [104129ms] TX stty raw -echo; echo R0403 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0403 >/dev/ttyPS0
+[104174ms] R0403
+[104392ms] 2048+0 records in
+2048+0 records out
+D0403
+sh-4.4# [104393ms] TX stty raw -echo; echo R0404 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0404 >/dev/ttyPS0
+[104439ms] R0404
+[104657ms] 2048+0 records in
+2048+0 records out
+D0404
+sh-4.4# [104658ms] TX stty raw -echo; echo R0405 >/dev/ttyPS0; dd bs=1 count=2048 >> /tmp/wpa_cli; echo D0405 >/dev/ttyPS0
+[104702ms] R0405
+[104921ms] 2048+0 records in
+2048+0 records out
+D0405
+sh-4.4# [104922ms] TX stty raw -echo; echo R0406 >/dev/ttyPS0; dd bs=1 count=56 >> /tmp/wpa_cli; echo D0406 >/dev/ttyPS0
+[104968ms] R0406
+[105014ms] 56+0 records in
+56+0 records out
+D0406
+sh-4.4# 

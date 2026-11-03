@@ -1,0 +1,8 @@
+﻿cd /run/media/mmcblk0p1; echo ---CHK--- >/dev/ttyPS0; ls -l image.ub image_ub_orig.bin image_new.ub >/dev/ttyPS0 2>&1; md5sum image.ub image_ub_orig.bin >/dev/ttyPS0 2>&1; echo CHK_DONE >/dev/ttyPS0
+---CHK---
+ls: image_new.ub: No such file or directory
+-rwxrwx---    1 root     disk       9995016 Mar  3 06:38 image.ub
+-rwxrwx---    1 root     disk       9995016 Mar  3 06:39 image_ub_orig.bin
+6f6d15fd5be8433c82d6e54466f192a7  image.ub
+37b5525c2517a6ee5000316d4f0d8787  image_ub_orig.bin
+CHK_DONE
