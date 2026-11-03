@@ -1,0 +1,2 @@
+﻿EOF
+root@petalinux_boot_from_sd:~# 

@@ -1,0 +1,3 @@
+﻿echo SHELL_OK
+SHELL_OK
+root@petalinux_boot_from_sd:~# 

@@ -1,0 +1,2 @@
+﻿(echo CMDLINE; cat /proc/cmdline; echo APER_BEFOREE; devmem 0xF800012C; devmem 0xF800012C 32 0x017C044D; echo APER_AFTER; devmem 0xxF800012C) > /tmp/diag6.txt 2>&1
+root@petalinux_boot_from_sd:~# 

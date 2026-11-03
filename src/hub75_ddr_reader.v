@@ -46,8 +46,8 @@ module hub75_ddr_reader #(
     // channels arrive out of order) would make the reader issue an AXI read
     // to an unmapped address, which wedges the GP0 fabric and stalls the PS
     // until the watchdog resets it. Reject such submits instead.
-    parameter [31:0] FRAME_BASE_MIN = 32'h4200_0000,
-    parameter [31:0] FRAME_BASE_MAX = 32'h4207_FFFF
+    parameter [31:0] FRAME_BASE_MIN = 32'h0000_0000,
+    parameter [31:0] FRAME_BASE_MAX = 32'h1FFF_FFFF
 ) (
     input  wire                   clk,
     input  wire                   rst,          // active high, synchronized to clk

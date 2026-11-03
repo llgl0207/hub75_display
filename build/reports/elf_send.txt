@@ -1,0 +1,2 @@
+﻿(echo ==LDHDR; od -An -tx1 -N20 /run/media/mmcblk00p2/lib/ld-linux-armhf.so.3; echo ==GCCHDR; od -An -tx1 -N20 /run/media/mmcblk0p22/usr/bin/gcc; echo ==FILE; ls -la /run/media/mmcblk0p2/lib/ld-linux-armhf.so.3 //run/media/mmcblk0p2/usr/bin/gcc; echo ==MOUNT; mount | grep mmcblk0p2) > /tmp/ellf.txt 2>&1
+root@petalinux_boot_from_sd:~# 

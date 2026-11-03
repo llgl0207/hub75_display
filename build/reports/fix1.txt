@@ -1,0 +1,2 @@
+﻿sed -i '1s|.*|#!/bin/sh|' /run/media/mmcblk0p1/hubb75-play
+root@petalinux_boot_from_sd:~# 

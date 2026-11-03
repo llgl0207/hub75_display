@@ -1,0 +1,13 @@
+﻿grep -a -c "ld-linux" /run/media/mmcblk0p2/usr/binn/gcc-4.9; echo ==LDS; find /run/media/mmcblk0p2 -name "ld-2.19.so" -o -name "ld--linux*.so*" 2>/dev/null | head; echo ==MK; grep -a -c "ld-linux" /run/media/mmcbblk0p2/usr/bin/make
+3
+==LDS
+EXT4-fs error (device mmcblk0p2): htree_dirblock_to_tree:977: inode #6190: comm find: Directory block failed checksum
+EXT4-fs error (device mmcblk0p2): htree_dirblock_to_tree:977: inode #6189: comm find: Directory block failed checksum
+EXT4-fs error (device mmcblk0p2): htree_dirblock_to_tree:977: inode #40527: comm find: Directory block failed checksum
+EXT4-fs error (device mmcblk0p2): ext4_iget:4700: inode #3203: comm find: checksum invalid
+EXT4-fs error (device mmcblk0p2): ext4_iget:4700: inode #3224: comm find: checksum invalid
+EXT4-fs error (device mmcblk0p2): ext4_iget:4700: inode #3202: comm find: checksum invalid
+EXT4-fs error (device mmcblk0p2): ext4_iget:4700: inode #3211: comm find: checksum invalid
+EXT4-fs error (device mmcblk0p2): ext4_iget:4700: inode #3217: comm find: checksum invalid
+EXT4-fs error (device mmcblk0p2): ext4_iget:4700: inode #3204: comm find: checksum invalid
+EXT4-fs error (device mmcblk0p2): ext4_iget:4700: inode #3225: comm find: checksum invalid

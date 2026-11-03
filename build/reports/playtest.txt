@@ -1,0 +1,4 @@
+﻿hub75-play heart; sleep 1; hub75-play stop; echo PPLAY_TEST_DONE
+playing /run/media/mmcblk0p1/hub75_anim_heart
+PLAY_TEST_DONE
+root@petalinux_boot_from_sd:~# 

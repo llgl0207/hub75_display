@@ -1,0 +1,8 @@
+﻿cat /tmp/diag6.txt
+CMDLINE
+console=ttyPS0,115200 earlyprintk mem=256M clk_ignore_unused cpuidle.off=1 idle=poll maxcpus=1
+APER_BEFORE
+0x013C044C
+APER_AFTER
+0x017C044D
+root@petalinux_boot_from_sd:~# 

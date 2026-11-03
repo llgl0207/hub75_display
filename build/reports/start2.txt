@@ -1,0 +1,3 @@
+﻿sh /run/media/mmcblk0p1/hub75-play heart
+playing /run/media/mmcblk0p1/hub75_anim_heart
+root@petalinux_boot_from_sd:~# 

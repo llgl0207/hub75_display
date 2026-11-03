@@ -1,0 +1,26 @@
+﻿cat /tmp/diag3.txt
+MIO46
+0x00001200
+APER
+0x013C044C
+GPIODATA1
+0x00000000
+DIRM1
+0x00000000
+OEN1
+0x00000000
+ULPIVP
+0x48030000
+ULPIID
+0x00000000
+BIND
+bind
+e0002000.usb_phy
+uevent
+unbind
+CI
+bind
+e0002000.usb
+uevent
+unbind
+root@petalinux_boot_from_sd:~# 

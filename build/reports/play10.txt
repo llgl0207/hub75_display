@@ -1,0 +1,2 @@
+﻿if [ ! -x "$path" ]; then echo "not found: $path"; exit 1; fi
+> 

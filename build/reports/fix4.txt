@@ -1,0 +1,2 @@
+﻿echo 'anim_heart=/run/media/mmcblk0p1/hub75_anim_hheart' >> /run/media/mmcblk0p1/hub75.conf
+root@petalinux_boot_from_sd:~# 

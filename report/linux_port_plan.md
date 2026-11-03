@@ -463,3 +463,268 @@ U-Boot/Linux 起不来；同一张卡有时又能正常启动。属于 SD 卡/�
 
 > 注意：所有板上计时/等待程序不要用 `clock_gettime`/`select`/`usleep`；
 > 用全局定时器 + `poll` + `sched_yield`。提交帧必须用物理基址且留 ≥2 ms 让基址先到。
+
+### 14.5 开机自启（2026-11-04）：initramfs 重打包
+
+关键发现：厂商 Linux 的**根文件系统是 initramfs（ramfs，在内存里）**，ext4 分区只是数据盘
+（`/proc/mounts` 里 root 是 `rootfs`，`mmcblk0p2` 挂在 `/run/media/mmcblk0p2`）。
+所以在板上改 `/etc` 重启即丢——开机自启必须改 `image.ub` 里的 initramfs。
+
+做法（`build/patch_initramfs_autostart.py`）：
+
+1. 从 `image.ub` 的 FIT 里解出 `ramdisk@1`（gzip cpio），解压后按 newc 逐条解析
+   （保留每条 header 的 mode/uid/gid/mtime/dev 字段）；
+2. 改 `etc/inittab`：`PS0:12345:respawn:/usr/bin/hub75-console`；
+3. 新增 `usr/bin/hub75-console`（可执行，mode 0100755）：
+   ```sh
+   #!/bin/sh
+   mkdir -p /run/media/mmcblk0p1
+   mount -t vfat /dev/mmcblk0p1 /run/media/mmcblk0p1 2>/dev/null
+   if [ -x /run/media/mmcblk0p1/hub75d ]; then
+     printf 'shell=/bin/sh\n' > /etc/hub75.conf
+     /run/media/mmcblk0p1/hub75d
+   fi
+   exec /bin/start_getty 115200 ttyPS0 vt102   # fallback：daemon 退出则回登录
+   ```
+4. 重新打包 cpio → gzip → 替换 FIT `ramdisk@1` 的 `data` 和 `sha1`；
+5. 输出 `build/work/vendor_linux/image_autostart.ub`（9,998,820 B），刷到卡上 `image.ub`。
+
+**实测**：上电后自动出现 `hub75d: pty selftest w=12 poll=1 n=12`、`pty [12]`/`pty [8]`、
+`submit ... id=0/1`；在串口输入 `echo AUTO_BOOT_OK` → `pty [43]` + 新帧 `id=2`。
+即：**开机自动把控制台变成面板 shell 的键盘，面板显示 shell 输出**；daemon 退出自动回退 getty。
+原始 `image.ub` 备份在 `build/work/sd_backup/image_before_autostart.ub`。
+
+## 15. USB 键盘 + 持久配置（2026-11-03，**已完成**，任务暂告一段落）
+
+> 状态：USB-A 无线键盘上板可用（用户确认“键盘能用”，含 CapsLock）；
+> 冷启动自动恢复逻辑已内置 hub75d。本节记录完整根因与复现步骤，
+> 后续如需再动 USB 从这里开始。
+
+目标（用户原话）：板上 USB-A 口接无线键盘直接操作 shell；Linux 里带文本编辑器。
+busybox 已内置 `vi`（`/bin/vi`），所以只差 USB 主机链路和持久配置。
+
+### 15.1 PS7/BD：USB0 + 必须保留的 SD0/ENET0
+
+- USB0：`PCW_USB0_PERIPHERAL_ENABLE=1`、`PCW_USB0_USB0_IO {MIO 28 .. 39}`、
+  `PCW_USB0_RESET_IO {MIO 46}`、`PCW_USB0_PERIPHERAL_FREQMHZ {60}`（PYNQ 官方 PS7 配置同款）。
+- **教训**：HP0 基线取自老提交 `f8388e0` 时，`build/create_ps_bd.tcl` 里 SD0（MIO40..45）
+  和 ENET0（MIO16..27 + MDIO52..53）都是关闭的。SD0 关闭则我们的 FSBL 读不了 SD；
+  ENET0 关闭则厂商 U-Boot 在 `Net: ZYNQ GEM` 卡死。已在工作区文件补回，构建前务必核对。
+- 新 HP0+USB bitstream/XSA：`board/output/hub75_ps_stage1.bit/.xsa`（2026-11-03 06:43 构建成功）。
+  reader 基址窗口按 Linux DDR 放宽为 `0x0000_0000–0x1FFF_FFFF`，`ARCACHE=4'b0010`。
+- 观察：Vivado 本次出现一次子进程偶发 `ERROR: Failed to create directory 'C'`
+  （IP OOC synth 启动时），同批另一个 run 出现同样报错但自行恢复；重跑后成功。
+  遇到时先重跑整个构建。
+
+### 15.2 FSBL 重建（Linux 启动链）
+
+启动链仍是：**我们的 FSBL（ps7_init 提供 SD0/ENET0/GP0/HP0/FCLK0/USB0）+ 我们的 bitstream +
+厂商 `u-boot.elf`**，U-Boot 再加载厂商 `image.ub`。
+
+- `build/rebuild_fsbl.py` + `build/run_rebuild_fsbl.bat`：从新 XSA 建 Vitis 平台、
+  `ps7_uart_1` 作为 FSBL stdout，只构建平台/FSBL（不建 app）。
+- FSBL 输出：`build/work/vitis_sd/hub75_sd_platform/export/hub75_sd_platform/sw/boot/fsbl.elf`，
+  `build/work/vendor_linux/hub75_linux.bif` 正好引用该路径，随后用 bootgen 打包。
+- 注意 Vitis 2026.1 的 XSCT 不可用，脚本走 `vitis.bat -s` 的 Python client。
+
+### 15.3 DTB：打开 USB0（`build/patch_dtb_usb.py`）
+
+厂商 DTB 里 `usb@e0002000` 是 `status="disabled"`、`phy_type="ulpi"`。厂商自己的
+`system-user.dtsi` 叠加层写法是：
+
+```dts
+usb_phy0: usb_phy@0 {
+    compatible = "ulpi-phy";
+    #phy-cells = <0>;
+    reg = <0xe0002000 0x1000>;
+    view-port = <0x170>;
+    drv-vbus;
+};
+&usb0 { dr_mode = "host"; usb-phy = <&usb_phy0>; };
+```
+
+`patch_dtb_usb.py` 在 FIT 里做同样的事：usb0 → `okay`/`host`/`usb-phy` 句柄，
+根节点下新增 `usb_phy@0`，更新 fdt hash。结构对比确认只有该节点变化、
+其余 46 个节点/属性不变；DTB 13217→9219 B 是原厂 DTB 的结构块填充被压紧，不是丢节点。
+内核侧已确认厂商 config 内置 `CONFIG_USB=y`、`USB_CHIPIDEA_HOST=y`、`USB_ULPI=y`、
+`USB_HID=y`、`INPUT_EVDEV=y`（`vendor_kernel.config`），且 vmlinux 含
+`xlnx,zynq-usb-2.20a`、`chipidea,usb2`、`ulpi-phy`、`drv-vbus` 字符串，无需模块。
+
+输出：`build/work/vendor_linux/image_usb_autostart.ub`（在自启版基础上加 USB 补丁）。
+
+### 15.4 hub75d v3（`sw/linux/hub75d.c`）
+
+- **USB 键盘**：扫描 `/dev/input/event*`，用 `EVIOCGBIT` 找带 `KEY_A` 的键盘；
+  `poll` 多路复用；热插拔每 2 s 重扫。按 US 布局映射字母/数字/符号、Shift/Caps/Ctrl、
+  方向键/Home/End/Delete/PgUp/PgDn（VT100 序列）、Enter=CR、Backspace=0x7f。
+  - **关键**：Vitis 静态 glibc 是 64-bit time_t，头文件里的 `struct input_event`
+    与 4.14 内核 16 字节记录不一致；代码自己按 16 字节记录解析（sec/usec/type/code/value）。
+  - 动画播放中按任意键自动切回 console（杀动画进程并重绘 shell）。
+- **持久配置**：优先读 `/run/media/mmcblk0p1/hub75.conf`（FAT，重启不丢），
+  再回退 `/etc/hub75.conf`（initramfs，重启即丢）。支持 `anim=`、`shell=`；
+  `kill -HUP $(pidof hub75d)` 重载。用户可用 `vi /run/media/mmcblk0p1/hub75.conf` 直接编辑。
+- 仍遵守板上约束：不用 `clock_gettime`/`usleep`/`select`，用全局定时器 + `poll` + `sched_yield`；
+  提交用物理基址并留 ≥2 ms。
+
+### 15.4.1 上板实测（2026-11-03）：USB PHY 初始化失败的根因与修复
+
+第一次上板：`/dev/input/` 不存在，`/sys/bus/usb/devices/` 为空，
+`dmesg` 报：
+
+```
+chipidea-usb2 e0002000.usb: e0002000.usb supply vbus not found, using dummy regulator
+ci_hdrc ci_hdrc.0: unable to init phy: -110
+ci_hdrc: probe of ci_hdrc.0 failed with error -110
+```
+
+逐层定位：
+
+1. DTB 补丁已生效：`/proc/device-tree/amba/usb@e0002000/status` = `okay`、
+   `dr_mode` = `host`，根节点有 `usb_phy@0`；`ulpi-phy` 与 `chipidea-usb2` 驱动都已绑定。
+2. 读 `SLCR.APER_CLK_CTRL`(0xF800012C)：实际 `0x013C044C`，而 ps7_init 写入的是
+   `0x017C044D`——**GPIO 的 APER 时钟（bit22）在启动后被内核关掉了**
+   （`clk_ignore_unused` 已传但没保住它，DMA bit0 也被关）。
+3. 因此 MIO46 的 GPIO 寄存器读写恒为 0：`DIRM_1/OEN_1/DATA_1` 全 0（地址
+   `0xE000A20C/0xE000A210/0xE000A044`，bank1 bit14 = MIO46）。
+4. ps7_init 把 MIO46 配成 GPIO（`MIO_PIN_46=0x1200`）但**从不写输出值**，
+   内核也没人驱动它 → USB PHY 一直处于复位（RESETB 低）→ ULPI viewport 访问超时
+   `-110`。
+
+手动验证：`devmem 0xF800012C 32 0x017C044D`（恢复 GPIO 时钟）→ 写
+`0xE000A20C/0xE000A210/0xE000A044 = 0x4000`（MIO46 输出高）→ sysfs 重绑
+`chipidea-usb2`。PHY 初始化不再报 -110，但随即出现 **中断风暴**
+（`unexpected IRQ trap at vector 00` 刷屏，CPU 被占满）。判断是“失败探测后重新
+probe”留下的控制器状态问题，不适合作为产品方案。
+
+**最终方案：DTB gpio-hog。** `patch_dtb_usb.py` 在 `gpio@e000a000` 下加：
+
+```dts
+usb0-phy-reset {
+    gpio-hog;
+    gpios = <46 0>;       /* MIO46, active high */
+    output-high;
+    line-name = "usb0-phy-reset";
+};
+```
+
+gpiochip 注册时（device_initcall，早于 USB 驱动探测）就把 MIO46 拉高；
+之后 APER 时钟被关也不影响已锁存的引脚输出。产物：
+`image_usb_autostart.ub` MD5 `35289e87…`。
+
+上板验证判据：`dmesg | grep -i ci_hdrc` 无 -110；`/sys/kernel/debug/gpio`
+能看到 `usb0-phy-reset` 为 output-high；插键盘后 `/dev/input/event*` 出现，
+hub75d 日志出现 `hub75d: kbd /dev/input/eventN`。
+
+**实测进阶（2026-11-03）**：
+
+- 加 gpio-hog 后**仍偶发** `-110`：同镜像两次冷启动，一次失败、一次成功
+  （成功时 dmesg 有 `ULPI transceiver vendor/product ID 0x0424/0x0007`、
+  `Found SMSC USB3320 ULPI transceiver`、`ULPI integrity check: passed`，
+  随后 `hub 1-0:1.0`、低速键盘枚举）。
+- 原理图/手册确认板载 **Microchip USB3320C**，`OTG_nRST = PS_MIO46`
+  （手册表格里 MIO8 是笔误），USB-A(J3)/micro(J4) 共用该 PHY；MIO46 有 4.7K 上拉。
+- 根因判断：gpiochip 注册（hog 拉高复位）到 chipidea 探测之间间隔太短，
+  PHY 复位释放后尚未稳定，`ulpi_viewport_wait()` 2000 µs 轮询超时 → `-110`；
+  冷启动时晶振/时钟建立时间存在批次差异。
+- **修复：U-Boot 预置。** 厂商 U-Boot 启动脚本支持 `uenvcmd`（在导入 uEnv.txt 后、
+  加载内核前执行），且带 `mw` 命令。`uEnv.txt` 增加：
+
+  ```
+  uenvcmd=mw.l 0xE000A20C 0x4000; mw.l 0xE000A210 0x4000; mw.l 0xE000A044 0x4000
+  ```
+
+  即把 MIO46（GPIO bank1 bit14）设为输出高（GPIO 时钟由 FSBL ps7_init 开启），
+  比内核探测早数百毫秒到数秒释放 PHY 复位。gpio-hog 保留作兜底。
+- 注意：`uEnv.txt` 现由 `build/flash_usb_boot.ps1` 覆盖管理（含 `maxcpus=1`、
+  `uenvcmd`）；`hub75.conf` 仍保留用户已有内容。
+
+**最终根因（2026-11-03 晚，板上寄存器实证）**：
+
+- 即使 U-Boot 提前数百 ms 释放 MIO46，冷启动内核探测仍会 `-110`；而同一镜像下一次
+  启动又正常——所以不是单纯的复位释放时序。
+- 手动读 ULPI viewport（`0xE0002170`）：
+  - 写 WAKEUP(bit31) 后 bit31 能清零；
+  - 但任何 READ/WRITE 事务的 RUN(bit30) **永不清零**；
+  - bit27 = `ULPI_SYNC_STATE` = 1（PHY 处于正常同步状态）。
+  说明**开机第一次 ULPI 访问就把控制器卡死在 RUN 状态**，之后所有事务都排不进去。
+- 写 `USBCMD.RST`（`0xE0002140` bit1）控制器软复位后，viewpoint 立即恢复：
+  读 ULPI 寄存器 0 返回 `0x24`（USB3320 VID 低字节 0x0424 的低 8 位），
+  再 unbind/bind `chipidea-usb2` → `ULPI transceiver vendor/product ID 0x0424/0x0007`、
+  `ULPI integrity check: passed`、hub + 键盘完整枚举。此路径无中断风暴
+  （此前的中断风暴是“控制器已卡死还强行 probe”的次生现象）。
+- **修复：hub75d v3 内置 `usb_recover()`**：启动时若
+  `/sys/bus/usb/devices/usb1` 不存在，则通过 `/dev/mem` 写 `USBCMD.RST`，
+  再写 `unbind`/`bind` 重绑 `chipidea-usb2` 一次，然后扫描键盘。
+  即使内核冷启动探测失败，daemon 也会自动把 USB 救回来。
+- 实测：daemon 日志 `hub75d: kbd /dev/input/event0`，用户确认面板键盘输入
+  （字母/CapsLock 等）可用。
+
+### 15.5 待上板验证
+
+（USB 部分已按上述完成；以下为历史清单，保留备查。）
+
+1. SD 卡 FAT 根：新 `BOOT.bin`（新 FSBL+bit+vendor U-Boot）、`image.ub`（USB 补丁版）、
+   `uEnv.txt`（`mem=256M ...`）、`hub75d` v3、`hub75.conf` 示例、`hub75_anim_heart`。
+2. 上电：COM11 应出现 FSBL/U-Boot/Linux；面板自动出现 shell。
+3. 插 USB-A 无线键盘（接收器）：串口日志出现 `hub75d: kbd /dev/input/eventN`；
+   面板上打字应回显、`ls`/`vi` 可用。
+4. `vi /run/media/mmcblk0p1/hub75.conf` 改 `anim=` 后 `kill -HUP $(pidof hub75d)` 或重启验证持久性。
+
+## 16. 显示：可配置字体大小（2026-11-03）
+
+面板固定 128×64；文字网格由字体决定：
+
+| 配置 | 网格 | 内容量 |
+|---|---|---|
+| `font=8x16` | 16 列 × 4 行 | 64 字符（原有） |
+| `font=8x8`（新默认） | 16 列 × 8 行 | 128 字符（翻倍） |
+
+- `hub75.conf` 新增 `font=`；`/etc/hub75.conf` 回退。
+  `kill -HUP $(pidof hub75d)` 重载时若字体变化，daemon 会 `TIOCSWINSZ`
+  更新 PTY 尺寸并清屏，shell/vi 按新行列工作。
+- 8×8 字库 `sw/linux/hub75_font8x8.h`（95 字形 × 8 字节）由
+  `build/gen_font8x8.py` 从厂商内核 `lib/fonts/font_8x8.c` 机械提取
+  ASCII 32..126：经典 VGA/CP437 控制台字形（IBM PC BIOS 公有领域字形），
+  bit7 = 最左像素，与现有渲染器一致。
+- 渲染器改造：`g_cols/g_rows/g_char_h/g_font` 运行时变量；文本缓冲
+  `[MAX_ROWS=8][MAX_COLS+1=17]`；VT100 光标/清行/Tab 等全部按运行时行列；
+  光标块高度随字体。
+- 使用：面板上 `vi /run/media/mmcblk0p1/hub75.conf`，把 `font=8x8` 写进去，
+  重启或 `kill -HUP $(pidof hub75d)`。
+- 待上板验证：刷入新 hub75d（MD5 `ec3fbac4…`）与含 `font=8x8` 的配置，
+  确认 16×8 文字、光标和 vi 正常。
+
+## 17. 简单播放接口 `hub75-play`（2026-11-03，已在板上验证）
+
+- 卡 FAT 根新增脚本 `hub75-play`（可执行）：
+  - `hub75-play heart`：按 `hub75.conf` 里的 `anim_heart=<路径>` 解析后播放；
+  - `hub75-play <路径>`：直接播放该可执行文件；
+  - `hub75-play stop`：写 `mode console` 回控制台。
+- `hub75.conf` 中的动画映射：
+  ```
+  anim_heart=/run/media/mmcblk0p1/hub75_anim_heart
+  ```
+  新增动画 = 把可执行文件放 FAT + 加一行 `anim_<名字>=<路径>` + `hub75-play <名字>`。
+- 当前会话用 `ln -sf /run/media/mmcblk0p1/hub75-play /usr/bin/hub75-play`
+  让裸命令可用（ramfs，重启丢失；下次重打 image.ub 时把该 ln 加进
+  `/usr/bin/hub75-console` 启动脚本即可持久）。
+- 板上实测：`hub75-play heart` → daemon 日志 `anim mode -> ...`；
+  `hub75-play stop` → `console mode` + 控制台帧提交。
+
+### 17.1 板载编译环境调查（暂不可用）
+
+- 卡上 ext4 分区 `/dev/mmcblk0p2`（挂载 `/run/media/mmcblk0p2`）其实是完整 rootfs，
+  带 `gcc-4.9`、`g++`、`make`、`perl`、`python3`、`bash`。
+- 但该 ext4 文件系统有错误（内核每次挂载都警告 `mounting fs with errors`，
+  `ext4_find_entry ... checksumming directory block`），且动态加载器
+  `/lib/arm-linux-gnueabihf/ld-2.19.so` 文件头损坏：
+  `7f 41 6c 46`（正常 `7f 45 4c 46`），运行报 `Exec format error`。
+- 修复加载器需要向该文件写回 2 字节（被安全策略拦截，需用户明确同意）；
+  且 `e2fsck` 在 initramfs 里不存在，无法在板上完整修复文件系统。
+- 结论：暂时继续 **PC 交叉编译 + SD 卡传输**；板载 gcc 待文件系统修复后再启用。
+- 上板确认（2026-11-03）：`font=8x8` 生效，面板 16×8。
+- **`clear` 不全屏清的修复**：busybox `clear` 输出 `ESC[H` + `ESC[J`（不带参数的
+  ED），旧解析器只在 `ESC[2J` 时清屏，`ESC[J` 被忽略 → 只光标回左上、旧内容残留。
+  已补全 ED/EL 参数：`J` 0/无参=光标到屏尾、1=屏首到光标、2/3=整屏；
+  `K` 0=光标到行尾、1=行首到光标、2=整行；并处理 `ESC c`（RIS）整屏复位。
+  （不是 PS 写显存的问题。）新 hub75d MD5 `8ff60441…`，待刷入验证。

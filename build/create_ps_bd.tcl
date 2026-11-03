@@ -14,11 +14,6 @@
 #   UART1 MIO48/49 output was received on the CP2102 COM port, UART0 MIO14/15
 #   was silent). Both UARTs are enabled here; the renderer console uses UART1.
 #
-#   SD boot: SD0 is enabled on MIO40..45 (the standard Zynq SD0 mapping; SD1
-#   would collide with UART1 on MIO48/49). Card detect, write protect and power
-#   are not connected. The BOOT.BIN (FSBL + bitstream + ELF) is built by
-#   build/build_sd_boot.py and written to a FAT32 microSD; SW4 selects SD boot.
-#
 # The DDR part is not in the Xilinx preset list for this board. MT41K256M16RE-125
 # is used as the closest 4Gb x16 Micron equivalent; its 1066 timings match the
 # hynix part. Start at 400 MHz and raise to 533.333 after memtest passes.
@@ -52,7 +47,10 @@ set_property -dict [list \
     CONFIG.PCW_ENET0_GRP_MDIO_IO {MIO 52 .. 53} \
     CONFIG.PCW_ENET0_PERIPHERAL_FREQMHZ {1000} \
     CONFIG.PCW_ENET1_PERIPHERAL_ENABLE {0} \
-    CONFIG.PCW_USB0_PERIPHERAL_ENABLE {0} \
+    CONFIG.PCW_USB0_PERIPHERAL_ENABLE {1} \
+    CONFIG.PCW_USB0_PERIPHERAL_FREQMHZ {60} \
+    CONFIG.PCW_USB0_RESET_IO {MIO 46} \
+    CONFIG.PCW_USB0_USB0_IO {MIO 28 .. 39} \
     CONFIG.PCW_USB1_PERIPHERAL_ENABLE {0} \
     CONFIG.PCW_GPIO_MIO_GPIO_ENABLE {1} \
     CONFIG.PCW_UIPARAM_DDR_ENABLE {1} \
@@ -94,34 +92,15 @@ connect_bd_intf_net [get_bd_intf_pins processing_system7_0/FIXED_IO] [get_bd_int
 if {$stage != 0} {
     set_property -dict [list \
         CONFIG.PCW_USE_M_AXI_GP0 {1} \
-        CONFIG.PCW_USE_S_AXI_HP0 {0} \
+        CONFIG.PCW_USE_S_AXI_HP0 {1} \
+        CONFIG.PCW_S_AXI_HP0_DATA_WIDTH {64} \
+        CONFIG.PCW_S_AXI_HP0_ID_WIDTH {6} \
     ] $ps7
 
     set axi_ic [create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_0]
-    set_property -dict [list CONFIG.NUM_MI {3} CONFIG.NUM_SI {2}] $axi_ic
+    set_property -dict [list CONFIG.NUM_MI {2} CONFIG.NUM_SI {1}] $axi_ic
     connect_bd_intf_net [get_bd_intf_pins processing_system7_0/M_AXI_GP0] \
                         [get_bd_intf_pins axi_interconnect_0/S00_AXI]
-
-    # The PL frame reader is the second AXI master. It reads the frame BRAM
-    # through this interconnect; the PS writes that BRAM through GP0.
-    create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 M_AXI_READER
-    set_property -dict [list \
-        CONFIG.PROTOCOL {AXI3} \
-        CONFIG.FREQ_HZ {50000000} \
-        CONFIG.ADDR_WIDTH {32} \
-        CONFIG.DATA_WIDTH {64} \
-        CONFIG.ID_WIDTH {6} \
-        CONFIG.HAS_BURST {1} \
-        CONFIG.HAS_LOCK {1} \
-        CONFIG.HAS_CACHE {1} \
-        CONFIG.HAS_PROT {1} \
-        CONFIG.HAS_QOS {1} \
-        CONFIG.HAS_REGION {0} \
-        CONFIG.SUPPORTS_NARROW_BURST {0} \
-        CONFIG.MAX_BURST_LENGTH {16} \
-    ] [get_bd_intf_ports M_AXI_READER]
-    connect_bd_intf_net [get_bd_intf_pins axi_interconnect_0/S01_AXI] \
-                        [get_bd_intf_ports M_AXI_READER]
 
     set gpio_ctrl [create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_ctrl]
     set_property -dict [list CONFIG.C_GPIO_WIDTH {32} CONFIG.C_GPIO2_WIDTH {32} \
@@ -145,48 +124,35 @@ if {$stage != 0} {
     create_bd_port -dir I -from 31 -to 0 period
     connect_bd_net [get_bd_ports period] [get_bd_pins axi_gpio_status/gpio2_io_i]
 
-    # 2 x 192 KiB frame BRAM at 0x42000000. The PS writes frames through GP0;
-    # the PL reader reads them through its own AXI master port.
-    set bram_ctrl [create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.1 axi_bram_ctrl_0]
-    # 512 KiB = 131072 32-bit words. Match the PS GP0 data width (32 bits) so
-    # the PS's frame writes are native full-width transfers, not narrow bursts
-    # into a 64-bit slave (that path hung the PS in the 64-bit build). The PL
-    # reader stays 64-bit; the interconnect downsizes its reads.
+    # HP0 is exposed as an external slave; the PL reader is its AXI master.
+    # The PS7 HP ports are AXI3; the interface port defaults to AXI4, so the
+    # protocol and widths must be set before connecting or BD validation fails.
+    create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 S_AXI_HP0
     set_property -dict [list \
-        CONFIG.SINGLE_PORT_BRAM {1} \
-        CONFIG.DATA_WIDTH {32} \
-        CONFIG.MEM_DEPTH {131072} \
-    ] $bram_ctrl
-    set frame_bram [create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0]
-    set_property -dict [list \
-        CONFIG.Memory_Type {Single_Port_RAM} \
-        CONFIG.use_bram_block {BRAM_Controller} \
-        CONFIG.Write_Width_A {32} \
-        CONFIG.Read_Width_A {32} \
-        CONFIG.Write_Depth_A {131072} \
-        CONFIG.Register_PortA_Output_of_Memory_Primitives {false} \
-    ] $frame_bram
-    connect_bd_intf_net [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTA] \
-                        [get_bd_intf_pins blk_mem_gen_0/BRAM_PORTA]
-    connect_bd_intf_net [get_bd_intf_pins axi_interconnect_0/M02_AXI] \
-                        [get_bd_intf_pins axi_bram_ctrl_0/S_AXI]
-    assign_bd_address -offset 0x42000000 -range 0x80000 \
-        [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0]
-    catch {
-        assign_bd_address -target_address_space [get_bd_addr_spaces M_AXI_READER] \
-                          -offset 0x42000000 -range 0x80000 \
-                          [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0]
-    }
+        CONFIG.PROTOCOL {AXI3} \
+        CONFIG.FREQ_HZ {50000000} \
+        CONFIG.ADDR_WIDTH {32} \
+        CONFIG.DATA_WIDTH {64} \
+        CONFIG.ID_WIDTH {6} \
+        CONFIG.HAS_BURST {1} \
+        CONFIG.HAS_LOCK {1} \
+        CONFIG.HAS_CACHE {1} \
+        CONFIG.HAS_PROT {1} \
+        CONFIG.HAS_QOS {0} \
+        CONFIG.HAS_REGION {0} \
+        CONFIG.SUPPORTS_NARROW_BURST {0} \
+        CONFIG.MAX_BURST_LENGTH {16} \
+    ] [get_bd_intf_ports S_AXI_HP0]
+    connect_bd_intf_net [get_bd_intf_pins processing_system7_0/S_AXI_HP0] \
+                        [get_bd_intf_ports S_AXI_HP0]
 
     connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK0] \
         [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] \
+        [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] \
         [get_bd_pins axi_interconnect_0/ACLK] \
         [get_bd_pins axi_interconnect_0/S00_ACLK] \
-        [get_bd_pins axi_interconnect_0/S01_ACLK] \
         [get_bd_pins axi_interconnect_0/M00_ACLK] \
         [get_bd_pins axi_interconnect_0/M01_ACLK] \
-        [get_bd_pins axi_interconnect_0/M02_ACLK] \
-        [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] \
         [get_bd_pins axi_gpio_ctrl/s_axi_aclk] \
         [get_bd_pins axi_gpio_status/s_axi_aclk]
 
@@ -222,11 +188,8 @@ if {$stage != 0} {
     connect_bd_net [get_bd_pins proc_sys_reset_0/peripheral_aresetn] \
         [get_bd_pins axi_interconnect_0/ARESETN] \
         [get_bd_pins axi_interconnect_0/S00_ARESETN] \
-        [get_bd_pins axi_interconnect_0/S01_ARESETN] \
         [get_bd_pins axi_interconnect_0/M00_ARESETN] \
         [get_bd_pins axi_interconnect_0/M01_ARESETN] \
-        [get_bd_pins axi_interconnect_0/M02_ARESETN] \
-        [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] \
         [get_bd_pins axi_gpio_ctrl/s_axi_aresetn] \
         [get_bd_pins axi_gpio_status/s_axi_aresetn]
 

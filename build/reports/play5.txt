@@ -1,0 +1,2 @@
+﻿if [ -z "$1" ]; then echo "usage: hub75-play <name|stop>"; exit 1; fi
+> 

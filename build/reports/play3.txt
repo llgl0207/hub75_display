@@ -1,0 +1,2 @@
+﻿CFG=C:/Program Files/Git/run/media/mmcblk0p1/hub75.conf
+> 

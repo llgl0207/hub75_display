@@ -1,0 +1,3 @@
+﻿cat /tmp/fsck.txt 2>/dev/null; echo FSCK_DONE
+FSCK_DONE
+root@petalinux_boot_from_sd:~# 

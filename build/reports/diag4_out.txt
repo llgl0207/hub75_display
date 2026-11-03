@@ -1,0 +1,10 @@
+﻿cat /tmp/diag4.txt
+DIRM
+0x00000000
+OEN
+0x00000000
+DATA
+0x00000000
+VP
+0x48030000
+root@petalinux_boot_from_sd:~# 

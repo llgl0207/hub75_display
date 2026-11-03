@@ -1,0 +1,1 @@
+﻿stty raw -echo; dd bs=1 count=443760 of=/tmp/hub75_anim_spheres 2>/tmp/dd.log; stty sane; md5sum /tmp/hub75_anim_spheres; cp /tmp/hub75_anim_spheres /run/media/mmcblk0p1/; chmod +x /run/media/mmcblk0p1/hub75_anim_spheres; echo ANIM_SPHERES_INSTALLED

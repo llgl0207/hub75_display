@@ -1,0 +1,2 @@
+﻿echo "mode anim $path" > /run/hub75.cmd
+> 

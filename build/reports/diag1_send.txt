@@ -1,0 +1,2 @@
+﻿(echo ==INPUT; ls -l /dev/input/; echo ==DEVICES;  cat /proc/bus/input/devices; echo ==USBDEV; ls /sys/bus/usb/devices/; echo ==DT;; ls /proc/device-tree/ | grep -i usb; cat /proc/device-tree/amba/usb@e0002000/sttatus; echo; cat /proc/device-tree/amba/usb@e0002000/dr_mode; echo) > /tmp/diag1..txt 2>&1
+root@petalinux_boot_from_sd:~# 

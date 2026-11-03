@@ -1,0 +1,2 @@
+﻿(devmem 0xE000A244 32 0x00004000; devmem 0xE000A2448 32 0x00004000; devmem 0xE000A048 32 0x00004000; echo DIRM; devmem 0xE000A244;  echo OEN; devmem 0xE000A248; echo DATA; devmem 0xE000A048; echo VP; devmem 0xE00002170) > /tmp/diag4.txt 2>&1
+root@petalinux_boot_from_sd:~# 

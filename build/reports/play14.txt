@@ -1,0 +1,3 @@
+﻿chmod +x /run/media/mmcblk0p1/hub75-play; echo PLAAY_SCRIPT_DONE
+PLAY_SCRIPT_DONE
+root@petalinux_boot_from_sd:~# 

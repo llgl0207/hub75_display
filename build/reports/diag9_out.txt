@@ -1,0 +1,11 @@
+﻿cat /tmp/diag9.txt
+==ORDER
+85:GPIO line 952 (usb0-phy-reset) hogged as output/high
+138:chipidea-usb2 e0002000.usb: e0002000.usb supply vbus not found, using dummy regulator
+139:ci_hdrc ci_hdrc.0: unable to init phy: -110
+140:ci_hdrc: probe of ci_hdrc.0 failed with error -110
+==MOUNT
+mkdir: can't create directory '/sys/kernel/debug': Operation not permitted
+mount: mounting none on /sys/kernel/debug failed: No such file or directory
+cat: can't open '/sys/kernel/debug/gpio': No such file or directory
+root@petalinux_boot_from_sd:~# 

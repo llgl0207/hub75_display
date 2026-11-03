@@ -1,0 +1,2 @@
+﻿cat /tmp/hubd.log
+hub75d: pty selftest w=12 poll=1 n=12 mfd=4hub75d: kbd /dev/input/event0hub75d: pty [45]hub75d: submit 10000000 7ms st=18031ded id=3root@petalinux_boot_from_sd:~# 

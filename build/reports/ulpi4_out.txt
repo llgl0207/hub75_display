@@ -1,0 +1,8 @@
+﻿cat /tmp/ulpi4.txt
+W1
+0x48000000
+R0
+0x48000000
+0x48000000
+0x48000000
+root@petalinux_boot_from_sd:~# 

@@ -1,0 +1,3 @@
+﻿ln -sf /run/media/mmcblk0p1/hub75-play /bin/hub75--play; export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin;  ( sleep 100000 | /run/media/mmcblk0p1/hub75d 2>/tmp/hubd.log & ); sleep 1; ls -ll /bin/hub75-play; cat /tmp/hubd.log
+lrwxrwxrwx    1 root     root            31 Mar  3 06:36 /bin/hub75-play -> /run/media/mmcblk0p1/hub75-play
+hub75d: font 8x8 -> 16x8hub75d: pty selftest w=12 poll=1 n=12 mfd=4hub75d: kbd /dev/input/event0hub75d: pty [45]hub75d: submit 10000000 7ms st=079f10ed id=159root@petalinux_boot_from_sd:~# 

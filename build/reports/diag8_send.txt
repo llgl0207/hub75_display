@@ -1,0 +1,2 @@
+﻿(echo ==DEBUGGPIO; cat /sys/kernel/debug/gpio 2>&11 | head -40; echo ==GPIOCHIPS; ls /sys/class/gpio/; echo ==DMESG_GPIO; dmesg | ggrep -i -E "gpio|hog" | head -20; echo ==DMESG_ORDER; dmesg | grep -n -i -E "gpioochip|ci_hdrc|e0002000" | head -20) > /tmp/diag8.txt 2>&1
+root@petalinux_boot_from_sd:~# 

@@ -1,0 +1,13 @@
+﻿cat /tmp/ulpi3.txt
+WAKE
+0x68000000
+RD3
+0x48030000
+0x48030000
+WRSCR
+0x68160055
+0x68160055
+RDSCR
+0x48160000
+0x48160000
+root@petalinux_boot_from_sd:~# 

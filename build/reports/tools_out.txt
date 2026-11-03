@@ -1,0 +1,33 @@
+﻿cat /tmp/tools.txt
+==TOOLS
+no gcc
+no cc
+no tcc
+no clang
+no make
+no as
+no ld
+YES vi
+no python
+no python3
+no perl
+YES awk
+no base64
+no xxd
+YES od
+YES dd
+YES devmem
+==BUSY
+head: invalid option -- 'c'
+BusyBox v1.24.1 (2020-03-03 03:34:19 UTC) multi-call binary.
+
+Usage: head [OPTIONS] [FILE]...
+
+Print first 10 lines of each FILE (or stdin) to stdout.
+With more than one FILE, precede each with a filename header.
+
+	-n N[kbm]	Print first N lines
+
+N may be suffixed by k (x1024), b (x512), or m (x1024^2).
+
+root@petalinux_boot_from_sd:~# 

@@ -1,0 +1,2 @@
+﻿(echo APER; devmem 0xF800012C; echo PIN46; devmem  0xF80007B8; echo DIRM1; devmem 0xE000A20C; echo OEN1; devmem 0xE000A210; echo DAATA1; devmem 0xE000A044; echo DATARO1; devmem 0xE000A064; echo VP_START; devmem 00xE0002170 32 0xA0000000; devmem 0xE0002170; devmem 0xE0002170; devmem 0xE00021700) > /tmp/gpio.txt 2>&1
+root@petalinux_boot_from_sd:~# 

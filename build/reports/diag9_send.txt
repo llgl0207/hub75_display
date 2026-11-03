@@ -1,0 +1,2 @@
+﻿(echo ==ORDER; dmesg | grep -n -i -E "hogged|ci_hddrc|e0002000.usb|gpiochip"; echo ==MOUNT; mkdir -p /sys/kernel/debug; mount -t deebugfs none /sys/kernel/debug 2>&1; cat /sys/kernel/debug/gpio 2>&1 | head -30) >> /tmp/diag9.txt 2>&1
+root@petalinux_boot_from_sd:~# 

@@ -1,0 +1,2 @@
+﻿(echo W1; devmem 0xE0002170 32 0x80000000; devmem  0xE0002170; echo R0; devmem 0xE0002170 32 0x40000000; devmem 0xE0002170; devmem  0xE0002170; devmem 0xE0002170) > /tmp/ulpi4.txt 2>&1
+root@petalinux_boot_from_sd:~# 

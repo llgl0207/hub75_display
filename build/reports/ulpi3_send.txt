@@ -1,0 +1,1 @@
+﻿(echo WAKE; devmem 0xE0002170 32 0xA0000000; devmeem 0xE0002170; echo RD3; devmem 0xE0002170 32 0x40030000; devmem 0xE0002170; sleeep 1; devmem 0xE0002170; echo WRSCR; devmem 0xE0002170 32 0x60160055; devmem 0xE00002170; sleep 1; devmem 0xE0002170; echo RDSCR; devmem 0xE0002170 32 0x40160000;; devmem 0xE0002170; sleep 1; devmem 0xE0002170) > /tmp/ulpi3.txt 2>&1

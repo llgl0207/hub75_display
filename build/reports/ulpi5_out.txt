@@ -1,0 +1,14 @@
+﻿cat /tmp/ulpi5.txt
+CMD0
+0x00080000
+RST
+0x00080000
+VP
+0x08000000
+WAKE
+0x08000000
+READ0
+0x08002400
+0x08002400
+0x08002400
+root@petalinux_boot_from_sd:~# 

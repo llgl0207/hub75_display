@@ -1,0 +1,17 @@
+﻿cat /run/media/mmcblk0p1/hub75-play; echo ==CONF;  tail -3 /run/media/mmcblk0p1/hub75.conf
+#!/bin/sh
+CFG=/run/media/mmcblk0p1/hub75.conf
+if [ "$1" = "stop" ]; then echo "mode console" > /run/hub75.cmd; exit 0; fi
+if [ -z "$1" ]; then echo "usage: hub75-play <name|stop>"; exit 1; fi
+case "$1" in
+  */*) path="$1" ;;
+  *) line=$(grep "^anim_$1=" "$CFG" 2>/dev/null | tail -1); if [ -n "$line" ]; then path=${line#*=}; else path=/run/media/mmcblk0p1/hub75_anim_$1; fi ;;
+esac
+if [ ! -x "$path" ]; then echo "not found: $path"; exit 1; fi
+echo "mode anim $path" > /run/hub75.cmd
+echo "playing $path"
+==CONF
+# Any keyboard key press returns to the shell console.
+#anim=/run/media/mmcblk0p1/hub75_anim_heart
+anim_heart=/run/media/mmcblk0p1/hub75_anim_heart
+root@petalinux_boot_from_sd:~# 

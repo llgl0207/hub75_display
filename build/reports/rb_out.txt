@@ -1,0 +1,33 @@
+﻿cat /tmp/rb.txt
+udevd[705]: starting eudev-3.2.2
+EXT4-fs (mmcblk0p2): warning: mounting fs with errors, running e2fsck is recommended
+EXT4-fs (mmcblk0p2): recovery complete
+FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+chipidea-usb2 e0002000.usb: e0002000.usb supply vbus not found, using dummy regulator
+ULPI transceiver vendor/product ID 0x0424/0x0007
+Found SMSC USB3320 ULPI transceiver.
+ULPI integrity check: passed.
+ci_hdrc ci_hdrc.0: EHCI Host Controller
+ci_hdrc ci_hdrc.0: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.0: USB 2.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+usb 1-1: new low-speed USB device number 2 using ci_hdrc
+input: USB USB Keyboard as /devices/soc0/amba/e0002000.usb/ci_hdrc.0/usb1/1-1/1-1:1.0/0003:1A2C:2C27.0001/input/input0
+hid-generic 0003:1A2C:2C27.0001: input: USB HID v1.10 Keyboard [USB USB Keyboard] on usb-ci_hdrc.0-1/input0
+input: USB USB Keyboard as /devices/soc0/amba/e0002000.usb/ci_hdrc.0/usb1/1-1/1-1:1.1/0003:1A2C:2C27.0002/input/input1
+hid-generic 0003:1A2C:2C27.0002: input: USB HID v1.10 Device [USB USB Keyboard] on usb-ci_hdrc.0-1/input1
+INPUT
+by-id
+by-path
+event0
+event1
+USBDEV
+1-0:1.0
+1-1
+1-1:1.0
+1-1:1.1
+usb1
+root@petalinux_boot_from_sd:~# 

@@ -1,0 +1,9 @@
+﻿Public key portion is:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDgL3Asr+sxETeqxoDhyTWhsb+EBhrpk4IWPz/7VidZ8bH92Z+3alL1yTjE/kU4b8Mwg+EFYMdA1/KbBMvEe7uyQebUxib0YmS5e4eonrNQ/GNhp+GO7aYKiRR5i/YxIf5XRvGpHC/nCsBG0rsgR8k3hNWZ6BpIHZGyJuVpUCVEt6cRCABfmjPPcyP2GXhNiMsNFCCMmCX99r6xtyIVmvHJ/NFqdsj5Tti4FqgKSrsUTiQE0c2r/P10T4VyK0IX1vAi36LCBNZLDir+usjM1KybIbalsDZeleXAHtqh36e4HFedznExOHM59qmpADPyyRBRZ1Prko0rEnhByg6QiVWP root@petalinux_boot_from_sd
+Fingerprint: md5 46:89:0c:e9:7c:49:54:e6:63:58:25:3d:40:13:9b:83
+dropbear.
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Starting syslogd/klogd: done
+Starting tcf-agent: OK
+hub75d: pty selftest w=12 poll=1 n=12 mfd=4hub75d: kbd /dev/input/event0hub75d: pty [20]hub75d: submit 10000000 7ms st=680016a0 id=0random: crng init done
+hub75d: pty [10]hub75d: submit 10200000 7ms st=100118ed id=1hub75d: pty [10]hub75d: submit 10000000 7ms st=540227e4 id=2hub75d: pty [10]hub75d: submit 10200000 6ms st=1a0308ed id=3hub75d: pty [10]hub75d: submit 10000000 6ms st=5e042ce4 id=4hub75d: pty [10]hub75d: submit 10200000 6ms st=24051ded id=5hub75d: pty [10]hub75d: pty [10]

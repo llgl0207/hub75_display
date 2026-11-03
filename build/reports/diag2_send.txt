@@ -1,0 +1,2 @@
+﻿(echo ==DMESG; dmesg | grep -i -E "usb|chipidea|ullpi|ci_hdrc|phy" | tail -40; echo ==DRV; ls -l /sys/bus/platform/drivers/ | grep  -i -E "ci_hdrc|chipidea|ulpi"; echo ==PDEV; ls /sys/bus/platform/devices/ | grepp -i -E "usb|phy"; echo ==BIND; ls /sys/bus/platform/drivers/ci_hdrc/ 2>/dev/nulll; echo ==IRQ; grep -i usb /proc/interrupts) > /tmp/diag2.txt 2>&1
+root@petalinux_boot_from_sd:~# 

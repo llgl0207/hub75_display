@@ -1,0 +1,42 @@
+﻿cat /tmp/p2.txt
+==P2
+cc
+g++
+g++-4.9
+gcc
+gcc-4.9
+gcc-ar
+gcc-ar-4.9
+gcc-nm
+gcc-nm-4.9
+gcc-ranlib
+gcc-ranlib-4.9
+make
+make-first-existing-target
+perl
+perl5.20.2
+perlbug
+perldoc
+perlivp
+perlthanks
+python3
+==P2BIN
+bash
+bunzip2
+bzcat
+bzcmp
+bzdiff
+bzegrep
+bzexe
+bzfgrep
+bzgrep
+bzip2
+==MOUNT
+/dev/mmcblk0p2 on /run/media/mmcblk0p2 type ext4 (rw,relatime,data=ordered)
+==SSH
+/usr/bin/scp
+/usr/sbin/dropbear
+==IF
+2: eth0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc pfifo_fast state DOWN group default qlen 1000
+    link/ether 00:0a:35:00:1e:53 brd ff:ff:ff:ff:ff:ff
+root@petalinux_boot_from_sd:~# 

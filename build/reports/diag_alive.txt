@@ -1,0 +1,3 @@
+﻿echo DIAG_ALIVE
+DIAG_ALIVE
+root@petalinux_boot_from_sd:~# 

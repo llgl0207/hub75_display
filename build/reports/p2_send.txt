@@ -1,0 +1,2 @@
+﻿(echo ==P2; ls /run/media/mmcblk0p2/usr/bin/ 2>/deev/null | grep -E "^(gcc|cc|g\+\+|python|perl|make|opkg)" | head -20; echo ==P2BIIN; ls /run/media/mmcblk0p2/bin 2>/dev/null | head; echo ==MOUNT; mount | grep mmmcblk0p2; echo ==SSH; ls /usr/sbin/dropbear /usr/bin/scp 2>/dev/null; echo ==IF;  ip addr show eth0 2>/dev/null | head -8) > /tmp/p2.txt 2>&1
+root@petalinux_boot_from_sd:~# 

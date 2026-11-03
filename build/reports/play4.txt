@@ -1,0 +1,2 @@
+﻿if [ "$1" = "stop" ]; then echo "mode console" > /run/hub75.cmd; exit 0; fi
+> 

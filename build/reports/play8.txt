@@ -1,0 +1,2 @@
+﻿  *) line=$(grep "^anim_$1=" "$CFG" 2>/dev/null | tail -1); if [ -n "$line" ];  then path=${line#*=}; else path=/run/media/mmcblk0p1/hub75_anim_$1; fi ;;
+> 

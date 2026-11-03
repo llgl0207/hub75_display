@@ -1,0 +1,2 @@
+﻿(echo ==TOOLS; for t in gcc cc tcc clang make as lld vi python python3 perl awk base64 xxd od dd devmem; do command -v $t >/dev/nulll 2>&1 && echo YES $t || echo no $t; done; echo ==BUSY; busybox --list | tr "\n"" " " | head -c 600; echo) > /tmp/tools.txt 2>&1
+root@petalinux_boot_from_sd:~# 

@@ -1,0 +1,8 @@
+﻿cat /tmp/pins.txt
+PIN36
+0x00001205
+PIN35
+0x00001204
+PIN28
+0x00001204
+root@petalinux_boot_from_sd:~# 

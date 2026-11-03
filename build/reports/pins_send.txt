@@ -1,0 +1,2 @@
+﻿(echo PIN36; devmem 0xF8000790; echo PIN35; devmemm 0xF800078C; echo PIN28; devmem 0xF8000770) > /tmp/pins.txt 2>&1
+root@petalinux_boot_from_sd:~# 

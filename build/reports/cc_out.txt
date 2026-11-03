@@ -1,0 +1,9 @@
+﻿cat /tmp/cc.txt
+==LIBS
+==LOADER
+/run/media/mmcblk0p2/lib/ld-linux-armhf.so.3
+==CHROOT
+/usr/sbin/chroot
+==GCC
+-sh: /run/media/mmcblk0p2/lib/ld-linux-armhf.so.3: cannot execute binary file: Exec format error
+root@petalinux_boot_from_sd:~# 

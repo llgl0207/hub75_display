@@ -4,3 +4,7 @@ import vitis
 client = vitis.create_client()
 client.set_workspace(path="hub75_display")
 
+client.delete_component(name="hub75_sd_platform")
+
+client.delete_component(name="hub75_renderer")
+

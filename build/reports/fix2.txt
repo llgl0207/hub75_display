@@ -1,0 +1,2 @@
+﻿sed -i '2s|.*|CFG=/run/media/mmcblk0p1/hub75.conf||' /run/media/mmcblk0p1/hub75-play
+root@petalinux_boot_from_sd:~# 

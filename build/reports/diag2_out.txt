@@ -1,0 +1,29 @@
+﻿cat /tmp/diag2.txt
+==DMESG
+Booting Linux on physical CPU 0x0
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+libphy: Fixed MDIO Bus: probed
+libphy: MACB_mii_bus: probed
+RTL8211E Gigabit Ethernet e000b000.ethernet-ffffffff:00: attached PHY driver [RTL8211E Gigabit Ethernet] (mii_bus:phy_addr=e000b000.ethernet-ffffffff:00, irq=POLL)
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+usbcore: registered new interface driver usb-storage
+chipidea-usb2 e0002000.usb: e0002000.usb supply vbus not found, using dummy regulator
+ci_hdrc ci_hdrc.0: unable to init phy: -110
+ci_hdrc: probe of ci_hdrc.0 failed with error -110
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+==DRV
+drwxr-xr-x    2 root     root             0 Mar  3 06:29 chipidea-usb2
+drwxr-xr-x    2 root     root             0 Mar  3 06:29 ci_hdrc
+drwxr-xr-x    2 root     root             0 Mar  3 06:29 ulpi-phy
+==PDEV
+e0002000.usb
+e0002000.usb_phy
+==BIND
+bind
+uevent
+unbind
+==IRQ
+root@petalinux_boot_from_sd:~# 

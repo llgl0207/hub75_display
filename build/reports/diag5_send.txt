@@ -1,0 +1,2 @@
+﻿(echo BEFORE; devmem 0xE000A20C; devmem 0xE000A2100; devmem 0xE000A044; devmem 0xE000A20C 32 0x00004000; devmem 0xE000A210 32 0x000004000; devmem 0xE000A044 32 0x00004000; echo AFTER; devmem 0xE000A20C; devmem 0xxE000A210; devmem 0xE000A044) > /tmp/diag5.txt 2>&1
+root@petalinux_boot_from_sd:~# 

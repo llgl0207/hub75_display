@@ -1,0 +1,2 @@
+﻿(echo CMD0; devmem 0xE0002140; echo RST; devmem 0xxE0002140 32 0x00000002; sleep 1; devmem 0xE0002140; echo VP; devmem 0xE0002170;  echo WAKE; devmem 0xE0002170 32 0x80000000; devmem 0xE0002170; echo READ0; devmeem 0xE0002170 32 0x40000000; devmem 0xE0002170; devmem 0xE0002170; devmem 0xE00022170) > /tmp/ulpi5.txt 2>&1
+root@petalinux_boot_from_sd:~# 

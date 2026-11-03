@@ -1,0 +1,4 @@
+﻿(echo ==LIBS; ls /run/media/mmcblk0p2/usr/lib/arm--linux-gnueabihf/libc.a /run/media/mmcblk0p2/usr/lib/libc.a 2>/dev/null; echo ==LLOADER; ls /run/media/mmcblk0p2/lib/ld-linux* 2>/dev/null; echo ==CHROOT; commandd -v chroot; echo ==GCC; /run/media/mmcblk0p2/lib/ld-linux-armhf.so.3 --library-ppath /run/media/mmcblk0p2/lib:/run/media/mmcblk0p2/usr/lib:/run/media/mmcblk0p2/uusr/lib/arm-linux-gnueabihf /run/media/mmcblk0p2/usr/bin/gcc --version 2>&1 | heaad -3) > /tmp/cc.txt 2>&1
+EXT4-fs error (device mmcblk0p2): ext4_find_entry:1443: inode #40690: comm ls: checksumming directory block 0
+EXT4-fs error (device mmcblk0p2): ext4_find_entry:1443: inode #40690: comm ls: checksumming directory block 0
+root@petalinux_boot_from_sd:~# 

@@ -1,0 +1,2 @@
+﻿(echo MIO46; devmem 0xF80007B8; echo APER; devmem  0xF800012C; echo GPIODATA1; devmem 0xE000A048; echo DIRM1; devmem 0xE000A244; eccho OEN1; devmem 0xE000A248; echo ULPIVP; devmem 0xE0002170; echo ULPIID; devmem  0xE0002174; echo BIND; ls /sys/bus/platform/drivers/ulpi-phy/; echo CI; ls /sys//bus/platform/drivers/chipidea-usb2/) > /tmp/diag3.txt 2>&1
+root@petalinux_boot_from_sd:~# 

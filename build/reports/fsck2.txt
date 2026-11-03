@@ -1,0 +1,12 @@
+﻿mount /dev/mmcblk0p2 /run/media/mmcblk0p2; busyboxx --list | grep -i -E "fsck|e2fs|tune2|dumpe2" ; echo ==LDS; ls -la /run/media/mmmcblk0p2/lib/arm-linux-gnueabihf/ld-2.19.so /run/media/mmcblk0p2/usr/lib/arm-linuux-gnueabihf/ 2>/dev/null | head -8; echo ==LDBYTES; od -An -tx1 -N8 /run/media/mmmcblk0p2/lib/arm-linux-gnueabihf/ld-2.19.so; echo ==LIBBYTES; od -An -tx1 -N8 /rrun/media/mmcblk0p2/lib/arm-linux-gnueabihf/libc.so.6
+EXT4-fs (mmcblk0p2): warning: mounting fs with errors, running e2fsck is recommended
+EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+fsck
+==LDS
+EXT4-fs error (device mmcblk0p2): ext4_find_entry:1443: inode #40690: comm ls: checksumming directory block 0
+-rwxr-xr-x    1 root     root        101692 Jul 21  2022 /run/media/mmcblk0p2/lib/arm-linux-gnueabihf/ld-2.19.so
+==LDBYTES
+ 7f 41 6c 46 01 01 01 00
+==LIBBYTES
+ 7f 45 4c 46 01 01 01 03
+root@petalinux_boot_from_sd:~# 

@@ -1,0 +1,10 @@
+﻿cat /tmp/diag5.txt
+BEFORE
+0x00000000
+0x00000000
+0x00000000
+AFTER
+0x00000000
+0x00000000
+0x00000000
+root@petalinux_boot_from_sd:~# 

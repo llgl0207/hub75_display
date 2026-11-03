@@ -1,0 +1,6 @@
+﻿kill $(pidof hub75d)
+/usr/bin/hub75-console: line 7:  1160 Terminated              /run/media/mmcblk0p1/hub75d
+
+PetaLinux 2018.3 petalinux_boot_from_sd /dev/ttyPS0
+
+petalinux_boot_from_sd login: 

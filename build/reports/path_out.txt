@@ -1,0 +1,11 @@
+﻿ls -l /usr/bin/hub75-play 2>&1; echo ==INITENV; trr "\0" "\n" < /proc/1/environ | grep -E "^(PATH|HOME)="; echo ==PROFILE; grep -n  PATH /etc/profile 2>/dev/null | head -3; echo ==SHENV; echo PATH=$PATH
+lrwxrwxrwx    1 root     root            31 Mar  3 06:25 /usr/bin/hub75-play -> /run/media/mmcblk0p1/hub75-play
+==INITENV
+HOME=/
+==PROFILE
+4:PATH="/usr/local/bin:/usr/bin:/bin"
+8:# Add /sbin & co to $PATH for the root user
+9:[ "$HOME" != "/home/root" ] || PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin
+==SHENV
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
+root@petalinux_boot_from_sd:~# 

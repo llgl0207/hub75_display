@@ -1,0 +1,2 @@
+﻿echo AUTO_BOOT_OK
+hub75d: pty [43]hub75d: submit 10000000 6ms st=4a022be4 id=2

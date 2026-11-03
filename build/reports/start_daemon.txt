@@ -1,0 +1,3 @@
+﻿(cp /run/media/mmcblk0p1/hub75d /tmp/hub75d 2>/devv/null; /run/media/mmcblk0p1/hub75d 2>/tmp/hubd.log & echo DAEMON_STARTED)
+DAEMON_STARTED
+root@petalinux_boot_from_sd:~# 
