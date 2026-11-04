@@ -8,7 +8,8 @@
 //     arrives, so the scan never reads the initial empty buffer;
 //   - buf_ready only asserts after both buffers hold data.
 module tb_hub75_ddr_reader;
-    localparam [31:0] FRAME_BASE = 32'h4200_0000;  // must be inside the frame BRAM window
+    localparam [31:0] FRAME_BASE = 32'h1000_0000;  // frame A: inside the 0x0000_0000..0x1FFF_FFFF window
+    localparam [31:0] BAD_FRAME_BASE = 32'h3000_0000;  // above FRAME_BASE_MAX
     localparam integer SLICE_BYTES = 3072;
     localparam integer NSLICES = 3;
 
@@ -241,10 +242,10 @@ module tb_hub75_ddr_reader;
         if (frame_id !== 8'd2)
             $fatal(1, "bench fallback latch incremented frame_id to %0d", frame_id);
 
-        // A submit whose frame_base is outside the frame BRAM window must be
+        // A submit whose frame_base is outside the frame window must be
         // ignored: latching it would make the reader read an unmapped GP0
         // address and wedge the AXI fabric.
-        frame_base <= 32'd0;
+        frame_base <= BAD_FRAME_BASE;
         @(negedge clk);
         submit_toggle <= ~submit_toggle;
         repeat (5) @(negedge clk);

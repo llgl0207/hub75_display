@@ -1,192 +1,181 @@
-# Rotating Volumetric HUB75 Display
+# 基于 Zynq-7000 的旋转体积（3D）显示器
 
-> Competition submission status: **in progress**. The verified PL-only closed-loop HUB75 scan is the board-tested baseline. A separate PS+DDR build (Zynq PS7 + AXI GPIO + S_AXI_HP0 + slice RAM + AXI reader) compiles, passes RTL simulation, runs on board with a UART1 console, `DDR PASS`, advancing frame handshake and `buf_ready=1`, and now **boots standalone from a microSD card** (`BOOT.BIN`, no JTAG). The stationary animation is visible on the panel. The renderer's default app now renders a **3D heart** (64 angular slices; red body, magenta top lobes, thin white rim; one static frame submitted once). The two-ball volume remains as a compile-time fallback. The PL holds OE off for the physical first row of each slot, removing the previous top-edge ghost of row 31; the same row address is the lower-half seam row, so one seam row is blank while the upper row 31 is preserved. The heart bitstream/app has been rebuilt and loaded over JTAG (COM11: `render 3D heart ...`, `id 1`); on-panel visual confirmation is pending.
+> 一块**正在旋转**的 HUB75 全彩面板，把 2D 图像扫描成悬在空中、可环绕观看的 3D 体素图像。
+> 128×64、1/32 扫描的面板绕竖直轴自转；**PL 独占全部实时路径**（红外零位 → 周期估计 → 切片调度 →
+> DDR 取帧 → 切片乒乓 → HUB75 波形），**PS 只负责渲染与提交帧**——像主机喂显卡一样。
 
-## Competition Metadata
+*A 128×64 HUB75 panel spinning on a vertical axis turns flat frames into voxels in mid-air.
+The PL owns the entire hard-real-time chain, the PS only renders and submits — the same split
+as a host feeding a GPU. Verified on Zynq XC7Z020 with Vivado/Vitis 2026.1.*
 
-| Field | Value |
+---
+
+## 作品速览
+
+| 项目 | 内容 |
 |---|---|
-| Competition | National College Student Embedded Chip and System Design Competition 2026, FPGA Innovation Design, Open Topic, Beginner Group |
-| Project title | TBD by team |
-| Application scenario | TBD by team; rotating volumetric HUB75 display is the current engineering direction |
-| Board and exact device | Reported board: MIZAR R7; current Vivado target: XC7Z020CLG400-2. Exact board revision/silkscreen confirmation: TBD |
-| Tool version | AMD Vivado 2026.1 (Windows), confirmed from local build logs |
-| Implementation | Verilog RTL in PL plus a bare-metal Vitis renderer source under `sw/`. The PL-only board-test image (`build_board_test.tcl`) and the PS+DDR build (`build_ps_system.tcl`) are separate; the PS build runs on board (UART1 console, DDR memtest, frame handshake and `buf_ready` verified). |
-| Software/hardware split | Intended: PL owns complete real-time display, DDR reads, scan and buffer handoff; PS/Linux renders DDR frames and submits completed buffers |
-| License | MIT (`LICENSE`) |
+| 目标器件 | Zynq-7000 `XC7Z020CLG400-2`（Mizar-Z7 开发板） |
+| 显示面 | HUB75 全彩面板，128×64 像素，1/32 扫描，320 mm × 160 mm |
+| 成像方式 | 单面板绕**竖直轴**自转扫描；面板中心与转轴重合（非偏心），配重只用于消除残余不平衡 |
+| 实时路径 | 全部在 PL，单时钟域 50 MHz；像素时钟 10 MHz（50 MHz ÷ 5） |
+| 角度时基 | 每圈一次红外零位；2 级同步 + 1 ms 消抖 + 1 ms 闭锁 + 五次间隔滑动平均 |
+| 角度分辨率 | 64 切片/圈，每切片 32 个行地址，每切片 3072 B |
+| 帧缓冲 | DDR3 双缓冲 A/B，各 192 KB；帧基址只在换圈瞬间生效，PS 等 `frame_done` 才复用 |
+| 运行方式 | JTAG 下载 / **microSD 脱机启动**（`BOOT.BIN` = FSBL + bitstream + ELF） |
+| 工具链 | AMD Vivado / Vitis 2026.1（BASIC 许可证，**无 ILA**） |
+| 许可证 | MIT（见 `LICENSE`） |
 
-## Current Verified Increment
+## 关键指标
 
-The current bitstream is a **bring-up image**, not the competition-final function:
+下表数字全部可在本仓库 `data/logs/` 的 Vivado 原始报告里复核。
 
-- 128x64 HUB75 1/32 scan driven one slot at a time: `hub75_sched` turns the averaged revolution period into 64 slots per revolution and 32 row budgets per slot, and restarts slice 0 on every infrared trigger.
-- Synchronized IR edge capture with a fixed 1 ms debounce window and 1 ms hold-off window, selectable rising/falling edge, and rolling average of the last five complete revolution intervals.
-- A PL-generated bring-up pattern (slice 0 full white as the angular anchor, other slices a moving red bar) so the rotational time base can be checked before any DDR path exists.
-- Fixed 1800 RPM equivalent fallback until five intervals have been measured, so the panel scans while stationary.
-- Active-low diagnostic LEDs and optional 115200 8N1 UART interval reporting.
-- No ILA core: the local Vivado BASIC license rejected `create_debug_core`.
-- The `hub75_ir_test.bit` image itself has no DDR reader, volumetric slice storage or frame-submit protocol. Those exist only in the separate PS+DDR build described next.
+| 指标 | 数值 | 出处 |
+|---|---|---|
+| 资源占用（完整系统 `system_top`） | **2236 LUT（4.20%）、2746 FF、2 × BRAM36、0 DSP** | `data/logs/ps_stage1/utilization.rpt` |
+| 时序（50 MHz） | **WNS +5.857 ns、WHS +0.044 ns，DRC 0 违例** | `data/logs/ps_stage1/timing.rpt`、`drc.rpt` |
+| PL-only 板测镜像 | 959 LUT / 678 FF | `data/logs/pl_board_test/utilization.rpt` |
+| 红外子系统独立综合 | WNS +9.207 ns | `data/logs/ir_standalone/timing.rpt` |
+| 整场扫描上限 | 2280 次/秒（对应约 2138 RPM） | 面板与排线限制，设计输入 |
+| 启动镜像 | `BOOT.BIN` 4,195,624 B | `board/output/BOOT.BIN` |
+| RTL 回归 | 7 / 7 通过 | `sim/run_regression.tcl` |
+| **未实测** | 实际转速、亮度、DDR 带宽、连续运行时长 | 一律标 **TBD**，不以估算值代替 |
 
-### PS+DDR increment (board-verified at the control/DDR level; panel photo TBD)
+## 系统架构
 
-This is a separate build; it does not change `hub75_ir_test.bit`:
+```text
+                    ┌──────────────────────────── PS（双核 Cortex-A9）────────────────────────────┐
+                    │ Linux hub75d 用户态终端 / 裸机 Vitis 渲染器                                │
+                    │ 只做一件事：把一帧体积数据写进 DDR，然后翻转 submit 位                     │
+                    └───────────────────────────────┬────────────────────────────────────────────┘
+                                                    │ AXI GPIO：frame_base / submit / enable / slices
+                                     ┌──────────────▼──────────────┐
+                                     │  DDR3 双缓冲  帧A / 帧B      │  各 64 片 × 3072 B = 192 KB
+                                     └──────────────┬──────────────┘
+                                                    │ AXI3 HP0（16×64 bit × 24 突发/片）
+   ┌────────────────────────────────────────────────▼───────────────────────────────────────────────┐
+   │ PL：完整实时显示链路（50 MHz 单时钟域）                                                        │
+   │  ① 红外零位同步、消抖、五间隔均值 → period_ticks                                                │
+   │  ② 切片调度：一圈 64 切片 × 32 行，行预算随实测转速自适应                                        │
+   │  ③ DDR 取帧：每切片预取 slice_index+1，写入切片 RAM 乒乓                                        │
+   │  ④ HUB75 波形：128 像素时钟 × 32 行地址，移位开销 643 周期                                       │
+   └────────────────────────────────────────────────┬───────────────────────────────────────────────┘
+                                                    │ RGB1/RGB2、CLK、LAT、OE、ADDR[4:0]
+                                          ┌─────────▼─────────┐
+                                          │ 旋转体：HUB75 面板 │  775 电机竖直轴驱动，滑环 8 路供电
+                                          └───────────────────┘
+```
 
-- `build/build_ps_system.tcl` creates the Zynq PS7 block design (UART0 on MIO14/15 and UART1 on MIO48/49, DDR3 1 GB, FCLK_CLK0 50 MHz, AXI GP0 control/status GPIOs, S_AXI_HP0), plus `hub75_ddr_reader`, `hub75_slice_ram`, `hub75_ps_top` and `system_top`. The onboard CP2102 is wired to UART1, not UART0.
-- The reader prefetches one 3072-byte slice per display slot over 16-beat AXI3 bursts, unpacks the packed 6-bit pixels into two 4096x6 BRAM36 buffers, and switches buffers only at slot boundaries when the requested slice and frame epoch match.
-- The PS frame base is accepted as pending and latched only at `revolution_start`; the PS waits for a frame-done toggle before reusing a buffer.
-- First-version geometry is 64 slices/frame, frame A at `0x10000000` and frame B at `0x10200000`; 400-slice storage, 76 slots/revolution and second-half mirroring remain future work.
-- Vitis renderer source is under `sw/`; `build/build_ps_system.tcl -tclargs 1` builds the hardware. The renderer runs on board: `HUB75 PS renderer`, `DDR PASS`, `frame ...` lines at about 20 fps in the stationary-animation app, `status` bit2 (`buf_ready`) asserts after the first revolution, and `frame_id`/`frame_done` advance. The ping-pong handoff prefetches `slice_index+1` every slot; the earlier conditional prefetch deadlocked start-up and left the scan reading an empty BRAM (black panel). It also boots standalone from a microSD card via `build/run_build_sd_boot.bat` (FSBL + bitstream + ELF in `BOOT.BIN`). The renderer's default `HUB75_VOLUMETRIC_TEST=1` app renders two spheres at `x = -24` (red) and `x = +24` (green), radius 12, as 64 angular slices; it submits the static frame once and the PL re-reads it every revolution. The two balls have been displayed on the rotating panel; the upper/lower data and normal row mapping were confirmed with an upper-green/lower-red diagnostic. A single-row ghost of row 31 at the panel's top edge remains and is left for now. `HUB75_VOLUMETRIC_TEST=0` keeps the stationary 2D animation.
+三条不可违反的架构边界：
 
-The 1 ms windows exist because the board showed several edges from one illumination. They are synthesis parameters (`IR_DEBOUNCE_US`, `IR_HOLDOFF_US` in `src/hub75_top.v`); changing them requires a rebuild. A pulse narrower than the debounce window is discarded, so the illuminated pulse at full speed must stay wider than 1 ms.
+1. **PS 不在实时路径上**。PS 从不产生像素时钟，也不参与任何逐切片事件；主机调度抖动进不了扫描。
+2. **帧切换只发生在换圈边界**。`frame_base` 只被"登记为 pending"，由 PL 在 `revolution_start` 采样；
+   一圈内基址不变。
+3. **一次物理照射只产生一个 `revolution_start`**。输入调理是固定的 1 ms 消抖 + 1 ms 闭锁，
+   不做自适应滤波、不做离群剔除。
 
-Scan geometry is set by `SLOT_LOG2=6` (64 slots per revolution), `ROW_LOG2=5` and `FALLBACK_RPM=1800`; `PATTERN_MODE=1` selects the bring-up pattern and `PATTERN_MODE=0` restores the verified colour bars. At 1800 RPM this gives 1920 full-panel scans per second, below the reported 2280 ceiling. See the status ledger in `report/design_report.md` and the live-board checklist in `board/board_test_procedure.md`.
+帧格式（PS 与 PL 之间的唯一契约，详见 `sw/PS_DEVELOPER_GUIDE.md`）：
 
-The **PS+DDR product build** (`src/hub75_ps_top.v`, used by the Linux/bitstream chain) now defaults to `FALLBACK_RPM=600` (100 ms per revolution, 64 slots → 1.5625 ms per slot) so the no-IR stationary/fallback scan matches the 600 RPM demo speed; the PL-only board-test image keeps 1800 via the generic in `build/build_board_test.tcl`.
+```text
+一帧 = 64 个切片 × 3072 B
+一个切片 = 32 个行地址 × 128 列 × 6 bit
+6 bit 字：[2:0] = RGB1（上半屏），[5:3] = RGB2（下半屏），LSB-first 打包
+帧 A = 0x1000_0000    帧 B = 0x1020_0000
+```
 
-## Repository Layout
+## 目录结构
 
 ```text
 hub75_display/
-  hub75_display.xpr       Vivado project entry point
-  src/                    synthesizable RTL (PL-only top and PS+DDR top)
-  sim/                    testbenches and regression scripts
-  build/                  reproducible Tcl, PS7 BD builder, generated reports/work
-  board/                  constraints, bitstreams, XSAs and board-test procedure
-  sw/                     Vitis bare-metal renderer sources; PS_DEVELOPER_GUIDE.md is the PS control/API guide
-  data/                   measured data and reference captures; currently TBD
-  report/                 design report, PS development log and AI collaboration log
-  skill/                  skill package extraction; intentionally deferred until project completion
+  src/         可综合 RTL：hub75_top（PL-only）、hub75_ps_top / hub75_system / system_top（PS+DDR）、
+               hub75_sched / hub75_scan / hub75_ddr_reader / hub75_slice_ram / ir_revolution_sync / ir_debug_uart
+  sim/         7 个 testbench + 回归 runner（run_regression.tcl，按 PASS 行判定）
+  build/       可复现的构建驱动：Tcl 建工程/建 BD、Vitis Python 出 BOOT.BIN、JTAG 下载与读回
+  board/       XDC 约束、bitstream / XSA / BOOT.BIN、上板测试流程
+  sw/          PS 侧源码：baremetal / common（帧与寄存器定义）/ linux（hub75d 与 5 种特效）/ renderer
+  tools/       字体表生成器（tools/font）与主机侧内容预览器（tools/preview）
+  data/        实测数据：Vivado 报告快照、上板记录表、体积内容预览图
+  report/      设计报告与工程日志（含长版中文设计报告 design_report_cn.md）
+  skill/       从本项目提炼的 4 个可复用技能包
 ```
 
-Generated Vivado cache/run outputs are not source. See `.gitignore`.
+被 `.gitignore` 排除的是**生成物**：`hub75_display.runs/.cache/.hw/`、`platform/`、`hub75_renderer/`、
+`_ide/`、`build/reports/`、`*.dcp`、`*.exe`、工具日志。它们都能由 `board/output/*.xsa` 与
+`build/` 下脚本重新生成。
 
-## Reproduce
+## 快速开始
 
-### Prerequisites
-
-- Windows host with Vivado 2026.1 and XC7Z020 device support installed.
-- Confirm exact MIZAR board revision and I/O-bank voltage before connecting signals.
-- The current project targets `xc7z020clg400-2`; change only after verifying the actual device speed grade.
-
-### Run RTL regression
-
-If `vivado` is not on `PATH`, use the wrapper, which finds the installation itself:
+前置：Windows + Vivado/Vitis 2026.1（含 XC7Z020）、Mizar-Z7 板卡、HUB75 面板与转台机构。
+`vivado` 不必在 `PATH` 上——`build/vivado.ps1` 会自己找（`-VivadoBin` → `VIVADO_BIN` → `PATH` → 常见安装根目录）。
 
 ```powershell
+# 1) RTL 回归（7 个 testbench，无需硬件）
 .\build\vivado.ps1 sim\run_regression.tcl
-```
+#    期望最后打印 REGRESSION_COMPLETE，且每个 tb 都有 PASS: <tb> 行
 
-Otherwise, from the repository root in a Vivado 2026.1 Tcl shell:
-
-```powershell
-vivado -mode batch -source sim/run_regression.tcl
-```
-
-Expected terminal markers include `PASS: tb_hub75_scan`, `PASS: tb_hub75_scan_mem`, `PASS: tb_hub75_ddr_reader`, `PASS: tb_hub75_sched`, `PASS: tb_ir_revolution_sync`, `PASS: tb_ir_debounce`, `PASS: tb_ir_debug_uart` and finally `REGRESSION_COMPLETE`. The runner calls `xvlog`/`xelab`/`xsim` by absolute path and reads each simulation transcript; it fails with a non-zero exit when a testbench prints no PASS line or trips a `$fatal`/`$error`. A quiet `run all` is not success.
-
-### Validate the Vivado GUI project file list
-
-```powershell
-vivado -mode batch -source build/check_project.tcl
-```
-
-Expected marker: `PROJECT_PATHS_VALIDATED`. The check sources `build/add_sources.tcl` first, so any source added to `src/` is picked up before validation; run the same script from the Tcl Console after opening `hub75_display.xpr` if you work in the GUI, and save the project so the file list persists.
-
-### Build a board-test bitstream and reports
-
-```powershell
-vivado -mode batch -source build/build_board_test.tcl
-```
-
-Expected marker: `BOARD_TEST_BUILD_COMPLETE`. Output locations:
-
-- `board/output/hub75_ir_test.bit`
-- `build/reports/timing.rpt`
-- `build/reports/utilization.rpt`
-- `build/reports/drc.rpt`
-- `build/reports/cdc.rpt`
-- `build/reports/io.rpt`
-
-A successful internal timing report does not sign off HUB75 cable/panel timing. The PL-only project can retain a `ZPS7-1` DRC warning because it intentionally has no PS7 block; no PS boot image is generated.
-
-### Build the PS+DDR system
-
-Stage 0 proves PS boot, UART0 and DDR without any PL logic:
-
-```powershell
-.\build\vivado.ps1 build\build_ps_system.tcl
-```
-
-Stage 1 adds the AXI GPIO control/status, S_AXI_HP0 reader, slice RAM and HUB75 top:
-
-```powershell
+# 2) 构建完整硬件（PS7 + HP0 + 切片 RAM + HUB75），报告落到 build/reports/
 .\build\vivado.ps1 build\build_ps_system.tcl -TclArgs 1
+#    期望打印 PS_SYSTEM_BUILD_COMPLETE stage=1
+
+# 3) 出 SD 脱机启动镜像（platform + FSBL + app + bootgen）
+.\build\run_build_sd_boot.bat
+#    产物：board/output/BOOT.BIN
+
+# 4) 写卡（只写 FAT/FAT32 根目录，先备份卡上的 BOOT.bin）
+.\build\copy_boot_to_sd.ps1 -Drive F:
 ```
 
-Expected marker: `PS_SYSTEM_BUILD_COMPLETE stage=0|1`. Outputs:
+插卡后把 SW4 拨到 SD 行并**断电上电**（boot mode 只在 POR 采样，按复位键不保证重新采样）。
+UART1（板上 CP2102，MIO48/49）是控制台，115200 8N1。
 
-- `board/output/hub75_ps_stage0.bit` / `.xsa` (PS only)
-- `board/output/hub75_ps_stage1.bit` / `.xsa` (PS + DDR reader + HUB75)
-- `build/reports/ps_stage0/` and `build/reports/ps_stage1/` (timing, utilization, DRC, CDC, IO)
-
-The XSA is exported without a bitstream because the script uses the explicit
-opt/place/route flow; select the matching `.bit` in the Vitis Run Configuration.
-Stage 1 timing is WNS +6.401 ns / WHS +0.035 ns at 50 MHz, DRC 0 errors, and the
-slice RAM maps to 2 BRAM36. See `report/ps_development.md` for the PS7 config,
-frame format, AXI GPIO contract and the remaining board checks.
-
-Vitis 2026.1 has XSCT disabled; create the platform/application in the GUI using
-`board/output/hub75_ps_stage1.xsa`, add `sw/renderer/main.c` and `sw/common/*`,
-and run with Program FPGA + Reset entire system. Full steps and troubleshooting
-are in `sw/README.md`; the PS control interface, frame format, submit protocol
-and rendering examples are in `sw/PS_DEVELOPER_GUIDE.md`.
-
-### Build a standalone SD boot image (bare metal)
+只做 PL 侧板测镜像（不带 PS/DDR）时：
 
 ```powershell
-.\build\run_build_sd_boot.bat            # platform + FSBL + app -> board/output/BOOT.BIN
-.\build\copy_boot_to_sd.ps1 -Drive F:    # FAT/FAT32 removable drive, BOOT.BIN only
+.\build\vivado.ps1 build\build_board_test.tcl     # -> board/output/hub75_ir_test.bit
+.\build\vivado.ps1 build\probe_hw.tcl             # 只读枚举 JTAG 链
+.\build\vivado.ps1 build\program_board.tcl        # 下载，按 DONE/EOS 判定
+.\build\vivado.ps1 build\verify_bitstream.tcl     # 读回 USERCODE 0x48554237 自证来源
+.\build\capture_uart.ps1 -Port COM11 -Seconds 8   # 解析 UART 帧 -> data/uart_measurements.csv
 ```
 
-Insert the microSD, set **SW4 to the SD row** of the manual's BOOTMODE diagram,
-and power-cycle; the boot mode is sampled at POR. SD0 is on MIO40..45 (the Zynq
-BootROM's fixed SD0 mapping; SD1 would collide with UART1 on MIO48/49). UART1
-MIO48/49 remains the console (COM11). Back up any existing `BOOT.bin` first; the
-Linux image originally on the test card is preserved at
-`build/work/sd_backup/BOOT.bin.original`.
+本机没有 ILA（BASIC 许可证拒绝 `create_debug_core`），因此观测手段是**配置状态寄存器 + USERCODE
+读回 + 板载 LED + RTL 自带 UART + 面板可见现象**，这套证据链的用法见
+[`skill/zynq_bringup_evidence_kit/`](skill/zynq_bringup_evidence_kit/SKILL.md)。
 
-### Program and test the board (scripted)
+## 文档索引
 
-There is no on-chip debug core: the local Vivado BASIC license rejects `create_debug_core`, so no ILA/VIO and no `.ltx` exist. Observation uses four board LEDs plus a small RTL UART. Programming and capture are scripted so the run is reproducible:
+| 文档 | 内容 |
+|---|---|
+| [`report/design_report_cn.md`](report/design_report_cn.md) | **长版中文设计报告**：原理、推导、资源时序、实测记录、AI 协作过程 |
+| [`report/design_report.md`](report/design_report.md) | 设计状态台账与关键决策记录 |
+| [`report/ps_development.md`](report/ps_development.md) | PS7 配置、帧格式、AXI GPIO 契约、构建与仿真结果 |
+| [`report/linux_port_plan.md`](report/linux_port_plan.md) | Linux 路线、用户态 `hub75d`、已知问题与结论 |
+| [`report/hub75_panel_reference_cn.md`](report/hub75_panel_reference_cn.md) | HUB75 面板时序与接线参考 |
+| [`report/ir_development_and_test.md`](report/ir_development_and_test.md) | 红外子系统开发与测试记录 |
+| [`report/ai_collaboration.md`](report/ai_collaboration.md) | 大模型协作记录（摘要）：提示词、工具失败与纠正 |
+| [`report/ai_sessions/README.md`](report/ai_sessions/README.md) | **大模型协作原始记录**：15 个会话 / 468 条提示词（脱敏版），含合并索引与提示词汇编 |
+| [`report/handover.md`](report/handover.md) | 交接文档：项目状态、已确认事实、13 条已验证的工具结论 |
+| [`sw/PS_DEVELOPER_GUIDE.md`](sw/PS_DEVELOPER_GUIDE.md) | PS 侧开发指南（渲染、提交、寄存器映射） |
+| [`board/board_test_procedure.md`](board/board_test_procedure.md) | 上板测试流程与期望现象 |
+| [`skill/`](skill/README.md) | 4 个可复用技能包 |
 
-```powershell
-.\build\vivado.ps1 build\probe_hw.tcl          # read-only JTAG target check
-.\build\vivado.ps1 build\program_board.tcl     # program PL, read back DONE/EOS
-.\build\vivado.ps1 build\verify_bitstream.tcl  # read back USERCODE 0x48554237
-.\build\capture_uart.ps1 -Port COM7 -Seconds 8  # decode UART frames into RPM/CSV
-```
+## 技能包
 
-`build/vivado.ps1` resolves `vivado.bat` from `-VivadoBin`, `$env:VIVADO_BIN`, `PATH`, then the usual `AMD`/`AMDDesignTools`/`Xilinx` install roots, so no PATH setup is required. This machine's install is `E:\AMD\2026.1\Vivado\bin`; the wrapper matches `AMD\*\Vivado\bin` and also puts that directory on the child PATH for XSim.
+本项目把踩过的坑提炼成 4 个技能包（结构统一：适用范围 / 步骤 / 失败模式表 / 验证证据 / 边界）：
 
-With the GUI already open, the same download can be run from the Tcl Console without a shell: `source <repo>/board/tcl/gui_program.tcl`. Rebuilds still belong in a separate shell, because `build_board_test.tcl` creates its own project.
+| 技能包 | 一句话 |
+|---|---|
+| [`vivado_batch_build`](skill/vivado_batch_build/SKILL.md) | 无 GUI 的批处理构建与回归；`Spawn failed` 时改绝对路径调 `xvlog/xelab/xsim` |
+| [`zynq_ps7_axi3_hp0`](skill/zynq_ps7_axi3_hp0/SKILL.md) | HP0 是 AXI3、`aux_reset_in` 默认低有效、HP 口非一致——三个坑三种症状 |
+| [`vitis_2026_headless_sd_boot`](skill/vitis_2026_headless_sd_boot/SKILL.md) | 无 XSCT 的 Vitis 脚本化；中文 Windows 的 UTF-8 崩溃；BOOT.BIN 合成与启动模式 |
+| [`zynq_bringup_evidence_kit`](skill/zynq_bringup_evidence_kit/SKILL.md) | 没有 ILA 时，用 DONE/EOS + USERCODE 读回 + LED/UART 证明"跑的是这一版" |
 
-`capture_uart.ps1` writes `data/uart_measurements.csv` and `data/uart_raw.log`. These must come from a real capture; never replace missing readings with estimates. `build/check_scripts.tcl` syntax-checks every Tcl driver without touching hardware.
+## 已知限制
 
-Manual GUI procedure and the LED/UART expectations are in `board/board_test_procedure.md`. The image is loaded through JTAG into volatile PL configuration; do not program QSPI/SD boot media with it.
+- **无 ILA**：BASIC 许可证下 `create_debug_core` 不可用，内部波形无法抓取。
+- **板级时序未测**：19 个 HUB75 输出没有 `set_output_delay`，线缆与驱动器时序未用示波器测量。
+- **顶部 row31 残影**：疑似面板首行导光行为；PL 已对 `row_addr=0` 保持 OE 关闭，接缝行会空一行。
+- **未实现**：半周镜像复用（400 片存储）、零度缺片补偿、无线投屏；均在路线图内，不在当前镜像里。
 
-## Key Architecture Decisions
+## 许可证
 
-- One IR reference trigger per mechanical revolution; default rising edge is a synthesis parameter.
-- Use the latest five complete trigger intervals, with no outlier filtering or missed-trigger recovery; the only input conditioning is the fixed 1 ms debounce plus 1 ms hold-off window.
-- Interval timestamps are taken at the accepted edge, so the debounce window does not bias the measured period; the 1 ms acceptance delay is a constant phase offset left for later calibration.
-- PL owns the rotational time base: the measured period becomes 64 slots per revolution by shifting, the scan engine only renders one slot at a time, and every trigger restarts slice 0 on the next safe clock edge.
-- Intended volume data: at most 400 complete 128x64 packed RGB slices for a half revolution; the second half reuses slices with mirrored BRAM-column readout.
-- The 30 fps target and user-reported 2280 full-panel scans/s are design inputs, not achieved hardware results.
-- PS+DDR split: PS renders only; PL owns IR capture, scheduling, DDR reads, slice BRAM ping-pong and every HUB75 waveform. The PS never originates a pixel clock or a per-slice event.
-- PS console is UART1 on MIO48/49: on this board the onboard CP2102 is wired there, while UART0 on MIO14/15 (the vendor table's pins) is silent in both directions. Both UARTs are enabled in the PS7; the renderer initializes UART1 itself so it works even with an XSA that predates the BD change. DDR3 is two 4 Gb x16 Hynix parts; the PS7 uses the equivalent MT41K256M16 timing at 400 MHz first, 1066 MT/s later.
-- First PS+DDR frame format: 64 slices, 3072 B/slice, 6-bit words packed LSB-first, A/B buffers at `0x10000000`/`0x10200000`; the PS base is latched only at a revolution boundary and the old buffer is reused only after the frame-done toggle.
-- PS control/status uses AXI GPIO (not a custom AXI-Lite block); the DDR reader is a PL AXI3 master on S_AXI_HP0 with 16-beat bursts, because AXI3 HP ports cap bursts at 16 beats.
-- Bare-metal Vitis first; Linux/PetaLinux is deferred. Vitis 2026.1 disables XSCT, so the supported path is the GUI platform/application flow in `sw/README.md`.
-- Catch-up playback near angular zero is a future feature; it is not implemented in the current image.
-
-See `report/design_report.md` for design rationale and `report/ai_collaboration.md` for prompts, assistant summaries, tool failures and corrections.
+MIT，见 [`LICENSE`](LICENSE)。
